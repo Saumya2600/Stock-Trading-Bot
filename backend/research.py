@@ -6,7 +6,7 @@ import pandas as pd
 from datetime import datetime
 import time
 
-from config import GEMINI_API_KEYS, ALPACA_API_KEY, ALPACA_SECRET_KEY
+from config import GEMINI_API_KEYS, RESEARCH_GEMINI_KEY, ALPACA_API_KEY, ALPACA_SECRET_KEY
 from utils import safe_print, is_market_open, seconds_until_market_open, simple_sma, simple_rsi
 from data import fetch_reddit_trending, fetch_52_week_lows, fetch_fmp_data, fetch_earnings_surprises, fetch_upcoming_earnings, fetch_rvol_breakouts
 import state
@@ -20,20 +20,30 @@ _all_keys_exhausted = False
 
 def configure_gemini():
     global model, CURRENT_GEMINI_KEY_INDEX
-    if not GEMINI_API_KEYS:
-        safe_print("[GEMINI] ⚠️  NO GEMINI API KEYS FOUND — all analysis will use local fallback! Check GOOGLE_API_KEY in .env")
-        model = None
-        return
+    
+    # Use dedicated research key if available, else rotate
+    if RESEARCH_GEMINI_KEY:
+        key = RESEARCH_GEMINI_KEY
+        safe_print(f"[GEMINI] 🧪 Using dedicated RESEARCH_GEMINI_KEY")
+    else:
+        if not GEMINI_API_KEYS:
+            safe_print("[GEMINI] ⚠️  NO GEMINI API KEYS FOUND — all analysis will use local fallback! Check GOOGLE_API_KEY in .env")
+            model = None
+            return
+        key = GEMINI_API_KEYS[CURRENT_GEMINI_KEY_INDEX]
+        safe_print(f"[GEMINI] ✅ Using rotated key index: {CURRENT_GEMINI_KEY_INDEX} ({key[:8]}...)")
+        
     try:
-        genai.configure(api_key=GEMINI_API_KEYS[CURRENT_GEMINI_KEY_INDEX])
+        genai.configure(api_key=key)
         model = genai.GenerativeModel('gemini-1.5-flash')
-        safe_print(f"[GEMINI] ✅ Using model: gemini-1.5-flash (key: {GEMINI_API_KEYS[CURRENT_GEMINI_KEY_INDEX][:8]}...)")
     except Exception as e:
         safe_print(f"[GEMINI CONFIG ERROR] {type(e).__name__}: {e}")
         model = None
 
 def switch_gemini_key():
     global CURRENT_GEMINI_KEY_INDEX, model, _all_keys_exhausted
+    if RESEARCH_GEMINI_KEY:
+        return False
     if CURRENT_GEMINI_KEY_INDEX < len(GEMINI_API_KEYS) - 1:
         CURRENT_GEMINI_KEY_INDEX += 1
         safe_print(f"[GEMINI] Switching to key index {CURRENT_GEMINI_KEY_INDEX}...")
@@ -129,23 +139,22 @@ def get_gemini_analysis(symbol, name, news_headlines, current_price, technicals,
         safe_print(f"[GEMINI] ⚠️  Skipping AI for {symbol} — {reason}. Using local fallback.")
         return local_fallback_analysis(symbol, name, news_headlines, current_price, technicals, fundamentals)
     prompt = f"""
-You are a senior institutional equity analyst at a top-tier hedge fund. Your job is to produce a deep, multi-step, chain-of-thought research report for {symbol} ({name}).
+You are an elite quantitative analyst specializing in explosive short-term breakouts (1-2 day timeframes).
+Your goal: Identify if {symbol} ({name}) will skyrocket within 48 hours based on technical momentum, volume surge, and news FOMO.
 
-1. **Technical Analysis**: 
-   - SMA(9), SMA(21), RSI(14), volume trends, recent price action.
-   - Is there a golden/death cross? Overbought/oversold? Unusual volume?
-2. **Fundamentals**: 
-   - Sector/industry, P/E, PEG, debt/equity, business model, recent earnings.
-3. **Sector Rotation & Macro**: 
-   - Is this sector in/out of favor? Any macro headwinds/tailwinds?
-4. **Catalysts**: 
-   - Identify key upcoming events, news, or triggers.
-5. **Risk Factors**: 
-   - What could go wrong? What is the bear case?
-6. **Conviction Scoring**: 
-   - Assign a 0-100 grade based on all evidence.
+1. **Breakout Indicators**:
+   - Is there a 'Golden Cross' (SMA9 crossing above SMA21)?
+   - Is RSI rising but not yet over 75 (buying momentum)?
+   - Is there a volume spike or "unusual volume" (RVOL)?
+2. **FOMO & News**:
+   - Analyze headlines for 'Earnings Beat', 'Short Squeeze', 'FDA Approval', 'Partnership', or 'New Product'.
+   - Is social sentiment (Reddit/Twitter) exploding?
+3. **Risk/Reward**:
+   - Tight stop-losses for high-velocity trades.
+4. **Verdict**:
+   - Assign a grade (85+ = Massive Breakout Potential).
 
-**Chain-of-thought reasoning**: Write at least 100 words, step by step, referencing the above.
+**Step-by-step reasoning**: Be aggressive and thorough.
 
 **Output ONLY valid JSON** with these fields:
 {{
