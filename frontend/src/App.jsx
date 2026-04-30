@@ -49,17 +49,19 @@ function App() {
     'accept': 'application/json'
   };
 
+  const API_BASE = import.meta.env.VITE_API_BASE_URL || '';
+
   // Poll the Python Bot API
   useEffect(() => {
     const fetchBotData = async () => {
       try {
         const [resSignals, resResearch, resPerf, resPositions, resStatus, resTrades] = await Promise.all([
-          fetch('/signals'),
-          fetch('/research'),
-          fetch('/performance'),
-          fetch('/positions'),
-          fetch('/research_status'),
-          fetch('/trade_history')
+          fetch(`${API_BASE}/signals`),
+          fetch(`${API_BASE}/research`),
+          fetch(`${API_BASE}/performance`),
+          fetch(`${API_BASE}/positions`),
+          fetch(`${API_BASE}/research_status`),
+          fetch(`${API_BASE}/trade_history`)
         ]);
         
         if (resSignals.ok) setBotSignals(await resSignals.json());
@@ -290,7 +292,7 @@ function App() {
                 setManualResearchLoading(true);
                 setResearchReports({});
                 try {
-                  await fetch('/trigger_research', { method: 'POST' });
+                  await fetch(`${API_BASE}/trigger_research`, { method: 'POST' });
                 } catch (e) {
                   console.error('Manual research failed', e);
                 }
@@ -307,7 +309,7 @@ function App() {
                 setResearchClearing(true);
                 setResearchReports({});
                 try {
-                  await fetch('/clear_research', { method: 'POST' });
+                  await fetch(`${API_BASE}/clear_research`, { method: 'POST' });
                 } catch (e) {
                   console.error('Clear research failed', e);
                 }
