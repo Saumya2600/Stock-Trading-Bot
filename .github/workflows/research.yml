@@ -45,6 +45,6 @@ jobs:
         run: |
           git config --global user.name "GitHub Action Bot"
           git config --global user.email "actions@github.com"
-          git add backend/reports.json backend/reddit_cache.json backend/low_cache.json
+          git add --force backend/reports.json backend/reddit_cache.json backend/low_cache.json
           git commit -m "Automated Research Update: $(date)" || echo "No changes to commit"
           git push origin main
