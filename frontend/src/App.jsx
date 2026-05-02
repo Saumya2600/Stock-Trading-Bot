@@ -51,27 +51,56 @@ function App() {
 
   const API_BASE = import.meta.env.VITE_API_BASE_URL || '';
 
-  // Poll the Python Bot API
+  // Poll the Python Bot API (Serverless via GitHub)
   useEffect(() => {
     const fetchBotData = async () => {
       try {
-        const [resSignals, resResearch, resPerf, resPositions, resStatus, resTrades] = await Promise.all([
-          fetch(`${API_BASE}/signals`),
-          fetch(`${API_BASE}/research`),
-          fetch(`${API_BASE}/performance`),
-          fetch(`${API_BASE}/positions`),
-          fetch(`${API_BASE}/research_status`),
-          fetch(`${API_BASE}/trade_history`)
-        ]);
+        const isServerless = API_BASE.includes("githubusercontent.com");
         
-        if (resSignals.ok) setBotSignals(await resSignals.json());
-        if (resResearch.ok) setResearchReports(await resResearch.json());
-        if (resPerf.ok) setPerformance(await resPerf.json());
-        if (resPositions.ok) setPositions(await resPositions.json());
-        if (resStatus.ok) setResearchStatus(await resStatus.json());
-        if (resTrades.ok) setTradeHistory((await resTrades.json()).history || []);
-        
-        setBotOnline(resSignals.ok);
+        if (isServerless) {
+          // Fetch raw JSON from GitHub repository directly
+          const cacheBuster = `?t=${Date.now()}`;
+          const [resReports, resState] = await Promise.all([
+            fetch(`${API_BASE}/reports.json${cacheBuster}`),
+            fetch(`${API_BASE}/app_state.json${cacheBuster}`)
+          ]);
+
+          if (resReports.ok) {
+            const reportsData = await resReports.json();
+            setBotSignals({ signals: Object.keys(reportsData) });
+            setResearchReports(reportsData);
+            setResearchStatus({ status: "idle" });
+          }
+
+          if (resState.ok) {
+            const stateData = await resState.json();
+            setPerformance(stateData.portfolio_performance || {});
+            setTradeHistory(stateData.trade_history || []);
+          }
+          
+          setBotOnline(resReports.ok && resState.ok);
+          // Note: In Serverless mode, live positions are fetched directly from Alpaca in fetchAlpacaData below.
+          setPositions({ positions: [] }); 
+        } else {
+          // Fallback to active backend server
+          const [resSignals, resResearch, resPerf, resPositions, resStatus, resTrades] = await Promise.all([
+            fetch(`${API_BASE}/signals`),
+            fetch(`${API_BASE}/research`),
+            fetch(`${API_BASE}/performance`),
+            fetch(`${API_BASE}/positions`),
+            fetch(`${API_BASE}/research_status`),
+            fetch(`${API_BASE}/trade_history`)
+          ]);
+          
+          if (resSignals.ok) setBotSignals(await resSignals.json());
+          if (resResearch.ok) setResearchReports(await resResearch.json());
+          if (resPerf.ok) setPerformance(await resPerf.json());
+          if (resPositions.ok) setPositions(await resPositions.json());
+          if (resStatus.ok) setResearchStatus(await resStatus.json());
+          if (resTrades.ok) setTradeHistory((await resTrades.json()).history || []);
+          
+          setBotOnline(resSignals.ok);
+        }
       } catch (e) {
         setBotOnline(false);
       }
@@ -80,7 +109,7 @@ function App() {
     fetchBotData();
     const interval = setInterval(fetchBotData, 5000); // Poll every 5s
     return () => clearInterval(interval);
-  }, []);
+  }, [API_BASE]);
 
   useEffect(() => {
     fetchAlpacaData();
