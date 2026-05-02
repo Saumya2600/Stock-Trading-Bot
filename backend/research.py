@@ -164,6 +164,7 @@ Your goal: Identify if {symbol} ({name}) will skyrocket within 48 hours based on
    - Assign a grade (85+ = Massive Breakout Potential).
 
 **Step-by-step reasoning**: Be aggressive and thorough.
+**MANDATORY**: You MUST state the P/E ratio, PEG, Debt-to-Equity, and Sector from the Fundamentals data in your reasoning. Explain how they impact the trade.
 
 **Output ONLY valid JSON** with these fields:
 {{
