@@ -35,7 +35,16 @@ def configure_gemini():
         
     try:
         genai.configure(api_key=key)
-        model = genai.GenerativeModel('gemini-1.5-flash')
+        all_models = list(genai.list_models())
+        candidates = [m.name for m in all_models if hasattr(m, 'supported_generation_methods') and 'generateContent' in m.supported_generation_methods]
+        preferred = [m for m in candidates if "flash" in m.lower()]
+        selected = preferred[0] if preferred else (candidates[0] if candidates else None)
+        if selected:
+            model = genai.GenerativeModel(selected)
+            safe_print(f"[GEMINI] ✅ Connected to model: {selected}")
+        else:
+            model = None
+            safe_print("[GEMINI] ❌ No valid text generation models found for this API key.")
     except Exception as e:
         safe_print(f"[GEMINI CONFIG ERROR] {type(e).__name__}: {e}")
         model = None
@@ -293,7 +302,7 @@ def run_research_cycle(force=False, manual_reason=None):
     sym_str = ",".join(all_targets)
     all_bars = {}
     for _ in range(3): # 3 retries for Alpaca rate limit
-        res = requests.get(f"https://data.alpaca.markets/v2/stocks/bars?symbols={sym_str}&timeframe=1Day&limit=30", headers=headers)
+        res = requests.get(f"https://data.alpaca.markets/v2/stocks/bars?symbols={sym_str}&timeframe=1Day&limit=30", headers=headers, timeout=10)
         if res.status_code == 200:
             all_bars = res.json().get('bars', {})
             break
@@ -307,12 +316,12 @@ def run_research_cycle(force=False, manual_reason=None):
             name = symbol
             try:
                 asset_url = f"https://api.alpaca.markets/v2/assets/{symbol}"
-                asset_res = requests.get(asset_url, headers=headers).json()
+                asset_res = requests.get(asset_url, headers=headers, timeout=10).json()
                 name = asset_res.get('name', symbol)
                 time.sleep(0.5) # Pace for Alpaca rate limit
             except: pass
             news_url = f"https://data.alpaca.markets/v1beta1/news?symbols={symbol}&limit=8"
-            news_res = requests.get(news_url, headers=headers).json()
+            news_res = requests.get(news_url, headers=headers, timeout=10).json()
             headlines = [n['headline'] for n in news_res.get('news', [])]
             
             bars = all_bars.get(symbol, [])

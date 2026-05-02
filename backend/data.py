@@ -56,7 +56,7 @@ def fetch_52_week_lows():
             try:
                 sym_str = ",".join(chunk)
                 url = f"https://data.alpaca.markets/v2/stocks/bars?symbols={sym_str}&timeframe=1Day&limit=252"
-                res = requests.get(url, headers=headers).json()
+                res = requests.get(url, headers=headers, timeout=10).json()
                 bars_dict = res.get('bars', {})
                 
                 for symbol, bars in bars_dict.items():
