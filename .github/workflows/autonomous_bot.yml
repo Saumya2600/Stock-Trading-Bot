@@ -48,22 +48,16 @@ jobs:
           FINNHUB_KEY: ${{ secrets.FINNHUB_KEY }}
         run: |
           cd backend
-          # If it's a research time (20 or 10 past the hour at specific hours), run research
-          # Otherwise run trading. Or just run both if needed.
-          
-          # Logic: If minute is 20 and hour is 13, OR minute is 10 and hour is 20 -> RESEARCH
-          # Else -> TRADE
-          
-          CURRENT_MIN=$(date +%M)
           CURRENT_HOUR=$(date +%H)
           
-          if [[ ("$CURRENT_MIN" == "20" && "$CURRENT_HOUR" == "13") || ("$CURRENT_MIN" == "10" && "$CURRENT_HOUR" == "20") ]]; then
-            echo "Running DEEP RESEARCH cycle..."
+          # Run research 10m before open (13 UTC) or after close (20 UTC)
+          if [[ "$CURRENT_HOUR" == "13" || "$CURRENT_HOUR" == "20" ]]; then
+            echo "Research window detected (Hour $CURRENT_HOUR). Running RESEARCH..."
             python run_research.py
-          else
-            echo "Running TRADING cycle..."
-            python run_trades.py
           fi
+          
+          echo "Running TRADING cycle..."
+          python run_trades.py
 
       - name: Commit and Push Results
         run: |
