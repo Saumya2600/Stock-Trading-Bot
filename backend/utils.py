@@ -48,3 +48,15 @@ def seconds_until_market_open(now=None):
     else:
         return 0
     return int((next_open - now).total_seconds())
+
+def is_research_window(now=None):
+    """Allow research to run 1 hour before market open until close."""
+    eastern = pytz.timezone("US/Eastern")
+    now = now or datetime.now(tz=pytz.utc).astimezone(eastern)
+    if now.weekday() >= 5:
+        return False
+    # Start research at 8:30 AM ET
+    research_start = now.replace(hour=8, minute=30, second=0, microsecond=0)
+    market_close = now.replace(hour=16, minute=0, second=0, microsecond=0)
+    return research_start <= now < market_close
+

@@ -12,6 +12,25 @@ const SECTOR_MAP = {
   Industrial: ['CAT', 'GE', 'UNP', 'HON', 'BA', 'LMT', 'DE', 'UPS', 'RTX', 'MMM', 'CSX', 'ETN']
 };
 
+const GlassFilter = () => (
+  <svg style={{ display: "none" }}>
+    <filter id="glass-distortion" x="0%" y="0%" width="100%" height="100%" filterUnits="objectBoundingBox">
+      <feTurbulence type="fractalNoise" baseFrequency="0.001 0.005" numOctaves="1" seed="17" result="turbulence" />
+      <feComponentTransfer in="turbulence" result="mapped">
+        <feFuncR type="gamma" amplitude="1" exponent="10" offset="0.5" />
+        <feFuncG type="gamma" amplitude="0" exponent="1" offset="0" />
+        <feFuncB type="gamma" amplitude="0" exponent="1" offset="0.5" />
+      </feComponentTransfer>
+      <feGaussianBlur in="turbulence" stdDeviation="3" result="softMap" />
+      <feSpecularLighting in="softMap" surfaceScale="5" specularConstant="1" specularExponent="100" lightingColor="white" result="specLight">
+        <fePointLight x="-200" y="-200" z="300" />
+      </feSpecularLighting>
+      <feComposite in="specLight" operator="arithmetic" k1="0" k2="1" k3="1" k4="0" result="litImage" />
+      <feDisplacementMap in="SourceGraphic" in2="softMap" scale="200" xChannelSelector="R" yChannelSelector="G" />
+    </filter>
+  </svg>
+);
+
 function App() {
   const [momentumStocks, setMomentumStocks] = useState([]);
   const [activeStocks, setActiveStocks] = useState([]);
@@ -42,6 +61,16 @@ function App() {
   const [manualResearchLoading, setManualResearchLoading] = useState(false);
   const [researchClearing, setResearchClearing] = useState(false);
   const [botOnline, setBotOnline] = useState(false);
+  const [sidebarOpen, setSidebarOpen] = useState(window.innerWidth > 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 768) setSidebarOpen(false);
+      else setSidebarOpen(true);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const headers = {
     'APCA-API-KEY-ID': apiKey || '',
@@ -49,14 +78,14 @@ function App() {
     'accept': 'application/json'
   };
 
-  const API_BASE = import.meta.env.VITE_API_BASE_URL || '';
+  const API_BASE_RAW = import.meta.env.VITE_API_BASE_URL || '';
+  const isServerless = API_BASE_RAW.includes("githubusercontent.com");
+  const API_BASE = (isServerless || !API_BASE_RAW) ? API_BASE_RAW : "";
 
   // Poll the Python Bot API (Serverless via GitHub)
   useEffect(() => {
     const fetchBotData = async () => {
       try {
-        const isServerless = API_BASE.includes("githubusercontent.com");
-        
         if (isServerless) {
           // Fetch raw JSON from GitHub repository directly
           const cacheBuster = `?t=${Date.now()}`;
@@ -95,7 +124,12 @@ function App() {
           if (resSignals.ok) setBotSignals(await resSignals.json());
           if (resResearch.ok) setResearchReports(await resResearch.json());
           if (resPerf.ok) setPerformance(await resPerf.json());
-          if (resPositions.ok) setPositions(await resPositions.json());
+          if (resPositions.ok) {
+            const posData = await resPositions.json();
+            if (posData && posData.positions && posData.positions.length > 0) {
+              setPositions(prev => ({ ...posData, is_live_alpaca: false }));
+            }
+          }
           if (resStatus.ok) setResearchStatus(await resStatus.json());
           if (resTrades.ok) setTradeHistory((await resTrades.json()).history || []);
           
@@ -125,34 +159,32 @@ function App() {
     setError(null);
 
     try {
-      // 1. Fetch Movers (top 50 so sectors actually catch something, 50 is max limit)
-      const resMovers = await fetch('https://data.alpaca.markets/v1beta1/screener/stocks/movers?top=50', { headers });
-      if (!resMovers.ok) throw new Error(`Alpaca API Error: ${resMovers.status} ${resMovers.statusText}`);
-      const dataMovers = await resMovers.json();
-      
-      const allMovers = [...(dataMovers.gainers || []), ...(dataMovers.losers || [])];
-      allMovers.sort((a, b) => b.percent_change - a.percent_change); 
-      setMomentumStocks(allMovers);
-
-      // 2. Fetch Most Actives (top 50)
-      const resActives = await fetch('https://data.alpaca.markets/v1beta1/screener/stocks/most-actives?by=volume&top=50', { headers });
-      const dataActives = await resActives.json();
-      
-      if (dataActives.most_actives && dataActives.most_actives.length > 0) {
-        const symbols = dataActives.most_actives.map(s => s.symbol).join(',');
-        const resSnaps = await fetch(`https://data.alpaca.markets/v2/stocks/snapshots?symbols=${symbols}`, { headers });
-        const dataSnaps = await resSnaps.json();
+      // 1. Fetch Live Positions (Direct from Alpaca)
+      const resPositions = await fetch('https://paper-api.alpaca.markets/v2/positions', { headers });
+      if (resPositions.ok) {
+        const dataPos = await resPositions.json();
+        const mappedPositions = dataPos.map(p => ({
+          symbol: p.symbol,
+          quantity: p.qty,
+          avg_price: parseFloat(p.avg_entry_price),
+          current_price: parseFloat(p.current_price),
+          unrealized_pnl: parseFloat(p.unrealized_intraday_pl),
+          unrealized_pnl_pct: parseFloat(p.unrealized_intraday_plpc) * 100,
+          invested: parseFloat(p.cost_basis),
+          value: parseFloat(p.market_value)
+        }));
         
-        const mappedActives = dataActives.most_actives.map(s => {
-          const snap = dataSnaps[s.symbol];
-          return {
-            symbol: s.symbol,
-            volume: s.volume,
-            price: snap?.latestTrade?.p || snap?.dailyBar?.c || 0,
-            percent_change: snap && snap.prevDailyBar && snap.dailyBar ? ((snap.dailyBar.c - snap.prevDailyBar.c) / snap.prevDailyBar.c) * 100 : 0
-          };
+        // Fetch Account for Total Value
+        const resAccount = await fetch('https://paper-api.alpaca.markets/v2/account', { headers });
+        const dataAcc = await resAccount.json();
+
+        setPositions({
+          positions: mappedPositions,
+          total_invested: parseFloat(dataAcc.cash) + parseFloat(dataAcc.portfolio_value), // Rough estimate or just use portfolio_value
+          total_value: parseFloat(dataAcc.portfolio_value),
+          total_unrealized_pnl: parseFloat(dataAcc.equity) - parseFloat(dataAcc.last_equity),
+          is_live_alpaca: true
         });
-        setActiveStocks(mappedActives);
       }
     } catch (err) {
       console.error("Error fetching Alpaca data:", err);
@@ -524,7 +556,7 @@ function App() {
   };
 
   const renderPerformanceChart = () => {
-    if (!performance) return null;
+    if (!performance || performance.bot_roi == null || performance.spy_roi == null) return null;
     const isWinning = performance.bot_roi > performance.spy_roi;
 
     return (
@@ -583,7 +615,7 @@ function App() {
           <div>
             <h3 className="headline-sm">Bot Portfolio Positions</h3>
             <p className="label-md" style={{ color: 'var(--on-surface-variant)' }}>
-              Current holdings and sell targets to beat SPY
+              {positions.is_live_alpaca ? "LIVE FROM ALPACA" : "Current holdings and sell targets to beat SPY"}
             </p>
           </div>
           <div style={{ textAlign: 'right' }}>
@@ -599,7 +631,7 @@ function App() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1rem' }}>
           {positions.positions.map((position) => {
             const isPositive = position.unrealized_pnl >= 0;
-            const sellTargetMet = position.current_price >= position.sell_target_price;
+            const sellTargetMet = position.sell_target_price ? position.current_price >= position.sell_target_price : false;
             
             return (
               <div 
@@ -650,15 +682,15 @@ function App() {
                   </div>
                   <div>
                     <div className="label-sm" style={{ color: 'var(--on-surface-variant)' }}>Avg Price</div>
-                    <div className="headline-sm">${position.avg_price.toFixed(2)}</div>
+                    <div className="headline-sm">${(position.avg_price || 0).toFixed(2)}</div>
                   </div>
                   <div>
                     <div className="label-sm" style={{ color: 'var(--on-surface-variant)' }}>Current</div>
-                    <div className="headline-sm">${position.current_price.toFixed(2)}</div>
+                    <div className="headline-sm">${(position.current_price || 0).toFixed(2)}</div>
                   </div>
                   <div>
                     <div className="label-sm" style={{ color: 'var(--on-surface-variant)' }}>Invested</div>
-                    <div className="headline-sm">${position.invested.toFixed(2)}</div>
+                    <div className="headline-sm">${(position.invested || 0).toFixed(2)}</div>
                   </div>
                 </div>
 
@@ -666,13 +698,15 @@ function App() {
                   <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                     <div>
                       <div className="label-sm" style={{ color: 'var(--on-surface-variant)' }}>Sell Target (Beat SPY)</div>
-                      <div className="headline-sm" style={{ color: sellTargetMet ? '#3fff8b' : '#ff716c' }}>
-                        ${position.sell_target_price.toFixed(2)}
+                      <div className="headline-sm" style={{ color: sellTargetMet ? '#3fff8b' : 'var(--on-surface-variant)' }}>
+                        {position.sell_target_price ? `$${position.sell_target_price.toFixed(2)}` : 'N/A'}
                       </div>
                     </div>
                     <div style={{ textAlign: 'right' }}>
                       <div className="label-sm" style={{ color: 'var(--on-surface-variant)' }}>SPY ROI</div>
-                      <div className="label-md">{position.spy_roi >= 0 ? '+' : ''}{position.spy_roi.toFixed(2)}%</div>
+                      <div className="label-md">
+                        {position.spy_roi != null ? `${position.spy_roi >= 0 ? '+' : ''}${position.spy_roi.toFixed(2)}%` : 'N/A'}
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -681,7 +715,7 @@ function App() {
                   <div className="label-sm" style={{ color: 'var(--on-surface-variant)' }}>
                     AI Grade: {position.ai_grade}/100 • {position.risk_level} Risk
                   </div>
-                  {!sellTargetMet && (
+                  {position.sell_target_pct && !sellTargetMet && (
                     <div className="label-sm" style={{ color: '#ff716c' }}>
                       Need +{position.sell_target_pct.toFixed(2)}% to sell
                     </div>
@@ -945,16 +979,19 @@ function App() {
     </div>
   );
 
-  const Sidebar = () => {
+  const Sidebar = ({ isOpen, onClose }) => {
     const location = useLocation();
     const navigate = useNavigate();
 
     return (
-      <nav className="sidebar">
-        <div style={{ padding: '1rem 0', marginBottom: '1rem' }}>
+      <nav className={`sidebar ${isOpen ? 'open' : ''}`}>
+        <div style={{ padding: '1rem 0', marginBottom: '1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <h1 style={{ fontSize: '1.5rem', fontWeight: '800', background: 'linear-gradient(90deg, #fff, #3fff8b)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
             DEEP TECH
           </h1>
+          <button className="mobile-close" onClick={onClose} style={{ background: 'none', border: 'none', color: '#fff', cursor: 'pointer', display: 'none' }}>
+            <X size={20} />
+          </button>
         </div>
 
         {/* Global Search Box */}
@@ -983,9 +1020,9 @@ function App() {
           <Link to="/" className={`nav-item ${location.pathname === '/' ? 'active' : ''}`}>
              <Brain size={18} /> Intelligence Hub
           </Link>
-          <Link to="/market" className={`nav-item ${location.pathname === '/market' ? 'active' : ''}`}>
+          {/* <Link to="/market" className={`nav-item ${location.pathname === '/market' ? 'active' : ''}`}>
              <LayoutDashboard size={18} /> Global Market
-          </Link>
+          </Link> */}
           <Link to="/settings" className={`nav-item ${location.pathname === '/settings' ? 'active' : ''}`}>
              <Settings size={18} /> Settings
           </Link>
@@ -1006,8 +1043,13 @@ function App() {
 
   return (
     <Router>
-      <div className="app-container">
-        <Sidebar />
+      <div className={`app-container ${!sidebarOpen ? 'sidebar-collapsed' : ''}`}>
+        <GlassFilter />
+        <button className="mobile-menu-btn" onClick={() => setSidebarOpen(true)}>
+          <Search size={20} color="#fff" />
+        </button>
+        
+        <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
         
         <main className="main-content">
           <Routes>
@@ -1017,7 +1059,6 @@ function App() {
           </Routes>
         </main>
 
-        {/* Render Modal Overlay securely above everything */}
         {renderStockModal()}
       </div>
     </Router>

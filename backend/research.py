@@ -7,7 +7,7 @@ from datetime import datetime
 import time
 
 from config import GEMINI_API_KEYS, RESEARCH_GEMINI_KEY, ALPACA_API_KEY, ALPACA_SECRET_KEY
-from utils import safe_print, is_market_open, seconds_until_market_open, simple_sma, simple_rsi
+from utils import safe_print, is_market_open, is_research_window, seconds_until_market_open, simple_sma, simple_rsi
 from data import fetch_reddit_trending, fetch_52_week_lows, fetch_fmp_data, fetch_earnings_surprises, fetch_upcoming_earnings, fetch_rvol_breakouts
 import state
 
@@ -238,8 +238,8 @@ Return ONLY valid JSON, no prose, no markdown.
 def run_research_cycle(force=False, manual_reason=None):
     global _all_keys_exhausted
     _all_keys_exhausted = False
-    if not force and not is_market_open():
-        safe_print("[RESEARCH] Market closed. Skipping research (use force=True to override).")
+    if not force and not is_research_window():
+        safe_print("[RESEARCH] Outside research window (8:30am-4pm ET). Skipping.")
         return
     now = datetime.now()
     last_run = state.research_reports.get("_last_run")
@@ -395,9 +395,14 @@ def run_research_cycle(force=False, manual_reason=None):
     safe_print("[RESEARCH] Deep research cycle complete.")
 
 def research_scheduler():
-    safe_print("[SCHEDULER] Manual mode active. Waiting for button trigger.")
+    safe_print("[SCHEDULER] Research scheduler starting (Automatic Mode).")
     while True:
-        # User requested manual button trigger only.
-        # We still keep the thread alive for background tasks if needed,
-        # but skip the auto-run research.
-        time.sleep(3600)
+        try:
+            if is_research_window():
+                run_research_cycle()
+            else:
+                safe_print("[SCHEDULER] Outside research window. Sleeping.")
+                time.sleep(600)  # Check every 10 mins
+        except Exception as e:
+            safe_print(f"[SCHEDULER ERROR] {e}")
+        time.sleep(600)  # Standard poll interval: 10 minutes
