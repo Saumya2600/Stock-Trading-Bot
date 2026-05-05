@@ -2,14 +2,11 @@ name: Autonomous Bot (Research & Trade)
 
 on:
   schedule:
-    # --- RESEARCH WINDOWS ---
-    # 9:20 AM ET (10 mins before open) - UTC: 13:20
-    - cron: '20 13 * * 1-5'
-    # 4:10 PM ET (10 mins after close) - UTC: 20:10
-    - cron: '10 20 * * 1-5'
+    # --- RESEARCH START (10 AM ADT / 9 AM ET / 13:00 UTC) ---
+    - cron: '0 13 * * 1-5'
     
-    # --- TRADING CYCLES (Every 5 mins during market) ---
-    # 13:30 to 20:00 UTC (9:30 to 16:00 ET)
+    # --- TRADING CYCLES (Every 5 mins during market: 9:30 AM - 4:00 PM ET) ---
+    # 13:30 to 20:00 UTC
     - cron: '*/5 13-20 * * 1-5'
     
   workflow_dispatch: # Allow manual trigger
