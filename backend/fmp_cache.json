@@ -1,24 +1,90 @@
 {
-    "C": {
+    "SLB": {
         "data": {
-            "sector": "Financial Services",
-            "industry": "Banks - Diversified",
-            "pe": 15.75,
-            "peg": 0.71,
-            "debt_to_equity": 0,
-            "description": "Citigroup Inc., a diversified financial service holding company, provides various financial products and services to consumers, corporations, governments, and institutions. It operates through five se..."
+            "sector": "Energy",
+            "industry": "Oil & Gas Equipment & Services",
+            "pe": 24.67,
+            "peg": 1.91,
+            "debt_to_equity": 0.43,
+            "description": "SLB N.V. engages in the provision of technology for the energy industry worldwide. The company operates through four divisions: Digital & Integration, Reservoir Performance, Well Construction, and Pro..."
         },
-        "updated_at": "2026-05-01T23:57:46.937145"
+        "updated_at": "2026-05-05T20:47:37.485056"
     },
-    "WYNN": {
+    "U": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Software - Application",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 0.66,
+            "description": "Unity Software Inc. operates a platform to develop, deploy, and grow games and interactive experiences for mobile phones, PCs, consoles, and extended reality devices in the United States, China, Hong ..."
+        },
+        "updated_at": "2026-05-05T20:48:21.957679"
+    },
+    "EBAY": {
         "data": {
             "sector": "Consumer Cyclical",
-            "industry": "Resorts & Casinos",
-            "pe": 33.75,
-            "peg": 0.71,
-            "debt_to_equity": 0,
-            "description": "Wynn Resorts, Limited designs, develops, and operates integrated resorts. It operates in four segments: Wynn Palace, Wynn Macau, Las Vegas Operations, and Encore Boston Harbor. The Wynn Palace segment..."
+            "industry": "Internet Retail",
+            "pe": 24.31,
+            "peg": 1.71,
+            "debt_to_equity": 1.63,
+            "description": "eBay Inc., together with its subsidiaries, operates marketplace platforms that connect buyers and sellers in the United States, the United Kingdom, China, Germany, and internationally. Its marketplace..."
         },
-        "updated_at": "2026-05-01T23:58:14.031556"
+        "updated_at": "2026-05-05T20:48:35.373060"
+    },
+    "GOOG": {
+        "data": {
+            "sector": "Communication Services",
+            "industry": "Internet Content & Information",
+            "pe": 29.33,
+            "peg": 1.76,
+            "debt_to_equity": 0.2,
+            "description": "Alphabet Inc. offers various products and platforms in the United States, Europe, the Middle East, Africa, the Asia-Pacific, Canada, and Latin America. It operates through Google Services, Google Clou..."
+        },
+        "updated_at": "2026-05-05T20:48:41.319535"
+    },
+    "NOK": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Communication Equipment",
+            "pe": 83.88,
+            "peg": 1.13,
+            "debt_to_equity": 0.16,
+            "description": "Nokia Oyj, together with its subsidiaries, provides mobile, fixed, and cloud network solutions in North and Latin America, Greater China, India, Asia Pacific, Europe, the Middle East, and Africa. It o..."
+        },
+        "updated_at": "2026-05-05T20:49:06.509298"
+    },
+    "AMD": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Semiconductors",
+            "pe": 136.64,
+            "peg": 1.07,
+            "debt_to_equity": 0.06,
+            "description": "Advanced Micro Devices, Inc. operates as a semiconductor company internationally. It operates in three segments: Data Center, Client and Gaming, and Embedded. The company offers artificial intelligenc..."
+        },
+        "updated_at": "2026-05-05T20:49:14.247106"
+    },
+    "NOW": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Software - Application",
+            "pe": 54.77,
+            "peg": 0.89,
+            "debt_to_equity": 0.21,
+            "description": "ServiceNow, Inc. provides cloud-based solution for digital workflows in the North America, Europe, the Middle East and Africa, Asia Pacific, and internationally. The company provides asset management,..."
+        },
+        "updated_at": "2026-05-05T20:49:21.161775"
+    },
+    "NKE": {
+        "data": {
+            "sector": "Consumer Cyclical",
+            "industry": "Footwear & Accessories",
+            "pe": 28.33,
+            "peg": 1.33,
+            "debt_to_equity": 0.79,
+            "description": "NIKE, Inc., together with its subsidiaries, designs, develops, markets, and sells athletic and casual footwear, apparel, equipment, accessories, and services for men, women, and kids in North America,..."
+        },
+        "updated_at": "2026-05-05T20:49:27.102351"
     }
 }

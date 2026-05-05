@@ -1,57 +1,219 @@
 {
-    "C": {
-        "symbol": "C",
-        "name": "C",
-        "price": 127.44,
+    "SLB": {
+        "symbol": "SLB",
+        "name": "SLB",
+        "price": 56.0,
         "ai_grade": 92,
-        "reasoning": "As an elite quantitative analyst specializing in explosive short-term breakouts, my analysis of C (Citigroup) reveals massive breakout potential within the next 48 hours, driven primarily by overwhelming news FOMO and strong institutional catalysts, despite a critical lack of specific technical indicator values in the provided dataset. \n\n**Technical Indicators (Data Deficiency):** The provided technical data for 'sma_fast', 'sma_slow', 'rsi', and 'volume_trend' are all 0.0. This prevents a direct, quantitative assessment of a Golden Cross, current RSI momentum, or unusual volume spikes from the given numbers. This is a significant limitation for a purely technical breakout confirmation. However, an aggressive short-term analyst must weigh available strong signals heavily.\n\n**FOMO & News (Explosive Catalysts):** The news flow is exceptionally bullish and directly indicative of impending FOMO:\n1.  **Analyst Upgrades & Price Targets:** JPMorgan maintains 'Overweight' and raises its price target to $135.5. More critically, Wells Fargo also maintains 'Overweight' and raises its target to an ambitious $162. These are massive, immediate catalysts. Two major institutions raising targets significantly above the current price ($127.44) generates immense buying pressure and signals strong institutional confidence, driving retail and institutional FOMO.\n2.  **Innovation:** 'Citi moves into agentic AI' is a forward-looking, positive headline, positioning Citigroup as innovative and tech-savvy, which can attract growth-oriented investors.\n3.  **Institutional Activity:** '9 Financials Stocks Whale Activity/Alerts In Today's Session' strongly suggests significant institutional or 'smart money' buying interest, often a precursor to explosive moves.\n4.  **Minor Headwind:** The 'Banks Rejected By Supreme Court in Muni Bond Price-Fixing Case' is a negative legal development, but for a company the size of Citigroup, it is likely already priced in or overshadowed by the overwhelmingly positive analyst sentiment and forward-looking news. For a 48-hour breakout, its impact is likely minimal compared to the price target raises.\n\n**ValueScan:** The 'ValueScan: True' further supports a potentially undervalued thesis, adding fundamental backing to the bullish sentiment.\n\n**Conclusion:** While the absence of live technical indicator values (SMA, RSI, Volume) from the provided data is a drawback, the strength and confluence of institutional analyst upgrades with significantly raised price targets, coupled with innovation news and 'whale activity', create an extremely compelling case for an explosive, news-driven breakout. The market will react swiftly to these high-impact catalysts, likely generating substantial momentum and FOMO within the 48-hour window. The risk is high due to reliance on news momentum and the missing technical confirmation, but the reward potential is substantial.",
-        "entry_price": 128.5,
-        "target_price": 135.0,
-        "stop_loss": 125.0,
-        "risk_level": "High",
-        "key_catalysts": "Institutional analyst upgrades (JPMorgan, Wells Fargo) with significantly raised price targets ($135.5, $162); 'agentic AI' initiative; institutional 'whale' activity/interest.",
-        "bear_case": "The absence of direct technical confirmation (SMA cross, RSI, volume) in the provided data means the trade is highly reliant on news-driven momentum; 'buy the rumor, sell the news' phenomenon post-upgrade; broader market downturn impacting the financial sector; Supreme Court ruling gaining unexpected negative traction causing profit-taking.",
-        "bull_case": "Massive institutional buying pressure propelling the stock towards new price targets; short squeeze potential as new buying forces out short sellers; increased investor confidence in Citi's strategic direction and valuation; overall market enthusiasm for financial stocks following positive analyst coverage.",
+        "reasoning": "As an elite quantitative analyst focused on explosive short-term breakouts, my analysis of SLB points towards a high-conviction momentum trade. While the provided technical data for SMA, RSI, and volume trend is unfortunately null (0.0), severely limiting direct technical momentum assessment, the overwhelming news catalyst overrides this data void for a 48-hour outlook. The news flow is saturated with analyst upgrades and significantly raised price targets from multiple Tier-1 institutions: Citigroup to $68, UBS to $69, JP Morgan to $61, Susquehanna to $65, and TD Cowen to $66. This barrage of positive re-ratings is a powerful signal. The collective sentiment indicates strong institutional conviction and will undoubtedly ignite 'Fear Of Missing Out' (FOMO) among retail and institutional investors, leading to aggressive buying pressure. This kind of widespread analyst bullishness often precedes a rapid price appreciation, triggering a short-squeeze scenario even if not explicitly stated. \n\nFrom a fundamental perspective, SLB operates in the 'Energy' sector, specifically 'Oil & Gas Equipment & Services,' which is currently experiencing renewed interest. Its P/E ratio of 24.67 suggests the market has growth expectations, which the analyst upgrades reinforce. While the PEG ratio of 1.91 is slightly elevated, indicating growth may be somewhat priced in, the new catalysts provide justification for further upside. Crucially, the Debt-to-Equity ratio of 0.43 is excellent, showcasing a robust balance sheet and low financial risk, providing a solid underpinning for any short-term momentum play. This strong financial health allows investors to focus purely on the potential for price appreciation driven by market sentiment and less on underlying solvency. The confluence of overwhelming positive sentiment from major financial institutions, coupled with a fundamentally sound company, sets the stage for a rapid ascent within the next 48 hours.",
+        "entry_price": 56.0,
+        "target_price": 61.5,
+        "stop_loss": 54.5,
+        "risk_level": "Medium-High",
+        "key_catalysts": "Multiple analyst upgrades with significantly raised price targets from Citigroup, UBS, JP Morgan, Susquehanna, and TD Cowen; potential for institutional buying and retail FOMO; strong underlying balance sheet (low D/E).",
+        "bear_case": "Despite the strong analyst sentiment, the absence of direct, real-time technical indicators (SMA, RSI, Volume) introduces uncertainty regarding current momentum. A broader market downturn, unexpected geopolitical event impacting the energy sector, or a lack of follow-through buying from the upgrades could prevent the breakout.",
+        "bull_case": "The unprecedented cluster of analyst price target raises generates massive FOMO, propelling SLB shares quickly past initial resistance. Institutional investors enter to front-run future upgrades or align with current recommendations, creating a self-fulfilling prophecy of rapid price appreciation towards the lower end of the new price targets ($61-$62) or even higher within 48 hours.",
         "price_history": [
             {
-                "c": 127.44,
-                "h": 130.48,
-                "l": 126.86,
-                "n": 123436,
-                "o": 128.64,
-                "t": "2026-05-01T04:00:00Z",
-                "v": 10618345,
-                "vw": 127.897631
+                "c": 56,
+                "h": 56.385,
+                "l": 55.45,
+                "n": 78842,
+                "o": 55.72,
+                "t": "2026-05-05T04:00:00Z",
+                "v": 7542492,
+                "vw": 56.057896
             }
         ],
-        "updated_at": "2026-05-01T23:56:41.639858"
+        "updated_at": "2026-05-05T20:47:28.544453"
     },
-    "WYNN": {
-        "symbol": "WYNN",
-        "name": "WYNN",
-        "price": 105.98,
-        "ai_grade": 72,
-        "reasoning": "My analysis for WYNN is severely hampered by a critical lack of technical data; all provided values for SMA9, SMA21, RSI, and Volume Trend are 0.0, rendering a quantitative technical assessment of a 'Golden Cross,' 'RSI rising,' or 'volume spike' impossible. This is a major red flag for a purely technical breakout strategy. However, despite this significant technical blind spot, the qualitative news flow presents compelling short-term FOMO potential. The most impactful catalyst is Jim Lebenthal's public announcement on CNBC about buying more WYNN Resorts, a classic celebrity endorsement that can ignite retail and even institutional interest. This is further supported by multiple news mentions of 'Whale Activity' in Consumer Discretionary stocks, indicating significant institutional money moving into the sector, and potentially WYNN specifically. The confirmation of Wynn Al Marjan Island construction resuming is also a positive development, signaling future growth prospects. While analysts like Susquehanna and Wells Fargo have maintained 'Positive' or 'Overweight' ratings, they also lowered their price targets, which acts as a minor dampener. Given the immediate, highly visible FOMO-inducing news from Lebenthal and the 'whale activity,' a speculative short-term pop is plausible. The grade reflects the high potential from news-driven FOMO balanced against the extreme risk of flying blind on technicals.",
-        "entry_price": 105.98,
-        "target_price": 111.5,
-        "stop_loss": 104.0,
-        "risk_level": "High",
-        "key_catalysts": "Jim Lebenthal's public endorsement/buying on CNBC; Reported 'Whale Activity' in Consumer Discretionary sector; Wynn Al Marjan Island construction resuming.",
-        "bear_case": "The complete absence of verifiable technical indicators means any move is purely speculative and news-driven. A general market downturn (e.g., Iran jitters mentioned in news) could drag WYNN down regardless of individual catalysts. Analyst price target reductions, even with positive ratings, could cap upside. Any negative news from Macau or UAE regulations would be detrimental.",
-        "bull_case": "Jim Lebenthal's CNBC mention sparks significant retail and institutional FOMO, driving aggressive short-term buying. The 'whale activity' translates into sustained institutional accumulation, pushing price higher. A short squeeze could be triggered if momentum accelerates quickly, given the potential for increased buying pressure. Positive news on the UAE project or strong casino foot traffic could provide further tailwinds.",
+    "U": {
+        "symbol": "U",
+        "name": "U",
+        "price": 27.34,
+        "ai_grade": 55,
+        "reasoning": "Local fallback: Low debt",
+        "entry_price": 27.34,
+        "target_price": 28.0235,
+        "stop_loss": 25.4262,
+        "risk_level": "Medium",
+        "key_catalysts": "N/A",
+        "bear_case": "N/A",
+        "bull_case": "N/A",
         "price_history": [
             {
-                "c": 105.98,
-                "h": 108.79,
-                "l": 105.44,
-                "n": 32458,
-                "o": 107,
-                "t": "2026-05-01T04:00:00Z",
-                "v": 1466551,
-                "vw": 106.25396
+                "c": 27.34,
+                "h": 28.1499,
+                "l": 27,
+                "n": 87044,
+                "o": 27.99,
+                "t": "2026-05-05T04:00:00Z",
+                "v": 8204799,
+                "vw": 27.53396
             }
         ],
-        "updated_at": "2026-05-01T23:56:41.639858"
+        "updated_at": "2026-05-05T20:47:28.544453"
     },
-    "_last_run": "2026-05-01T23:56:41.639858"
+    "EBAY": {
+        "symbol": "EBAY",
+        "name": "EBAY",
+        "price": 105.26,
+        "ai_grade": 50,
+        "reasoning": "Local fallback: No signals (Gemini down, data limited)",
+        "entry_price": 105.26,
+        "target_price": 105.26,
+        "stop_loss": 97.8918,
+        "risk_level": "Medium",
+        "key_catalysts": "N/A",
+        "bear_case": "N/A",
+        "bull_case": "N/A",
+        "price_history": [
+            {
+                "c": 105.26,
+                "h": 108.06,
+                "l": 104.595,
+                "n": 90922,
+                "o": 107.5,
+                "t": "2026-05-05T04:00:00Z",
+                "v": 7308778,
+                "vw": 105.627404
+            }
+        ],
+        "updated_at": "2026-05-05T20:47:28.544453"
+    },
+    "GOOG": {
+        "symbol": "GOOG",
+        "name": "GOOG",
+        "price": 384.27,
+        "ai_grade": 55,
+        "reasoning": "Local fallback: Low debt",
+        "entry_price": 384.27,
+        "target_price": 393.87674999999996,
+        "stop_loss": 357.3711,
+        "risk_level": "Medium",
+        "key_catalysts": "N/A",
+        "bear_case": "N/A",
+        "bull_case": "N/A",
+        "price_history": [
+            {
+                "c": 384.27,
+                "h": 388.96,
+                "l": 380.35,
+                "n": 358855,
+                "o": 381.87,
+                "t": "2026-05-05T04:00:00Z",
+                "v": 14174131,
+                "vw": 383.919484
+            }
+        ],
+        "updated_at": "2026-05-05T20:47:28.544453"
+    },
+    "NOK": {
+        "symbol": "NOK",
+        "name": "NOK",
+        "price": 13.42,
+        "ai_grade": 50,
+        "reasoning": "Local fallback: High P/E, Low debt",
+        "entry_price": 13.42,
+        "target_price": 13.42,
+        "stop_loss": 12.4806,
+        "risk_level": "Medium",
+        "key_catalysts": "N/A",
+        "bear_case": "N/A",
+        "bull_case": "N/A",
+        "price_history": [
+            {
+                "c": 13.42,
+                "h": 13.98,
+                "l": 13.23,
+                "n": 228336,
+                "o": 13.63,
+                "t": "2026-05-05T04:00:00Z",
+                "v": 92691073,
+                "vw": 13.532564
+            }
+        ],
+        "updated_at": "2026-05-05T20:47:28.544453"
+    },
+    "AMD": {
+        "symbol": "AMD",
+        "name": "AMD",
+        "price": 355.26,
+        "ai_grade": 54,
+        "reasoning": "Local fallback: High P/E, Low debt, Positive news",
+        "entry_price": 355.26,
+        "target_price": 362.3652,
+        "stop_loss": 330.3918,
+        "risk_level": "Medium",
+        "key_catalysts": "N/A",
+        "bear_case": "N/A",
+        "bull_case": "N/A",
+        "price_history": [
+            {
+                "c": 355.26,
+                "h": 359.5716,
+                "l": 344.88,
+                "n": 841519,
+                "o": 351.51,
+                "t": "2026-05-05T04:00:00Z",
+                "v": 51988961,
+                "vw": 353.275675
+            }
+        ],
+        "updated_at": "2026-05-05T20:47:28.544453"
+    },
+    "NOW": {
+        "symbol": "NOW",
+        "name": "NOW",
+        "price": 92.01,
+        "ai_grade": 50,
+        "reasoning": "Local fallback: High P/E, Low debt",
+        "entry_price": 92.01,
+        "target_price": 92.01,
+        "stop_loss": 85.56930000000001,
+        "risk_level": "Medium",
+        "key_catalysts": "N/A",
+        "bear_case": "N/A",
+        "bull_case": "N/A",
+        "price_history": [
+            {
+                "c": 92.01,
+                "h": 92.8877,
+                "l": 89.14,
+                "n": 294821,
+                "o": 92.25,
+                "t": "2026-05-05T04:00:00Z",
+                "v": 22554623,
+                "vw": 91.284071
+            }
+        ],
+        "updated_at": "2026-05-05T20:47:28.544453"
+    },
+    "NKE": {
+        "symbol": "NKE",
+        "name": "NKE",
+        "price": 43.06,
+        "ai_grade": 51,
+        "reasoning": "Local fallback: Low debt, Negative news",
+        "entry_price": 43.06,
+        "target_price": 43.275299999999994,
+        "stop_loss": 40.04580000000001,
+        "risk_level": "Medium",
+        "key_catalysts": "N/A",
+        "bear_case": "N/A",
+        "bull_case": "N/A",
+        "price_history": [
+            {
+                "c": 43.06,
+                "h": 43.3,
+                "l": 42.65,
+                "n": 155106,
+                "o": 43.04,
+                "t": "2026-05-05T04:00:00Z",
+                "v": 18446622,
+                "vw": 42.969069
+            }
+        ],
+        "updated_at": "2026-05-05T20:47:28.544453"
+    },
+    "_last_run": "2026-05-05T20:47:28.544453"
 }
