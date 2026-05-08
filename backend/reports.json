@@ -1,219 +1,219 @@
 {
-    "DOW": {
-        "symbol": "DOW",
-        "name": "DOW",
-        "price": 37.32,
-        "ai_grade": 80,
-        "reasoning": "As an elite quantitative analyst focused on explosive short-term breakouts, DOW presents a compelling, albeit technically unconfirmed, opportunity within a 48-hour window. The primary driver for this potential breakout is the incredibly strong Q2 sales guidance: Dow sees Q2 Sales at $12.000B against an estimate of $11.071B. This significant beat (approximately 8% above consensus) is precisely the kind of unexpected positive news that ignites FOMO and triggers rapid price appreciation, often leading to a volume surge and upward technical momentum post-announcement. Adding to this bullish sentiment are multiple recent analyst upgrades with raised price targets, including RBC Capital to $51, JP Morgan to $42, and BMO Capital to $46, reinforcing institutional confidence. The unveiling of a new, ISCC PLUS Certified recycled packaging solution further enhances the company's narrative, albeit likely a longer-term catalyst. \n\nCrucially, the provided technical data shows all indicators (SMA9, SMA21, RSI, Volume Trend) at 0.0. This severely limits our ability to confirm a 'Golden Cross', rising RSI, or existing volume spikes. Therefore, my assessment of breakout potential relies heavily on the *strength of the news catalyst* to *induce* these technical conditions rather than pre-existing signals. This makes the trade higher risk, as we cannot confirm current market reaction or momentum. \n\nFrom a fundamental perspective: DOW operates in the **Basic Materials** sector, which is cyclical. The Q2 guidance signals a potential upswing in demand or pricing within this sector. The **P/E ratio is 0** and the **PEG ratio is 38.89**. A P/E of 0 is highly concerning, typically indicating negative or zero earnings, making traditional valuation difficult and implying the current price is not supported by present earnings. The extremely high PEG ratio further suggests that DOW is severely overvalued on a growth-adjusted earnings basis. The **Debt-to-Equity ratio of 1.17** is moderate, adding a layer of financial leverage. These fundamental metrics underscore that this is purely a *speculative momentum play* driven by news, not a value investment. The strong positive catalyst is expected to temporarily override these fundamental concerns for the short duration of the trade. While there was news of a UBS downgrade to $39 and 'Middle East Supply Chain Impact', these are likely overshadowed by the magnitude of the Q2 guidance beat. The grade of 80 reflects high potential from the catalyst, tempered by the absence of confirming technical data and concerning fundamentals for long-term hold.",
-        "entry_price": 37.32,
-        "target_price": 42.0,
-        "stop_loss": 36.1,
-        "risk_level": "High",
-        "key_catalysts": "Significant Q2 sales guidance beat ($12.000B vs $11.071B Est), multiple analyst price target upgrades ($42-$51 range), new sustainable product launch.",
-        "bear_case": "The market has already priced in the Q2 guidance, overall market downturn, escalating 'Middle East Supply Chain Impact', or the fundamentally weak P/E and high PEG deter sustained buying, leading to a quick fade after an initial pop.",
-        "bull_case": "The strong Q2 guidance beat and analyst upgrades trigger significant FOMO and institutional buying, leading to a rapid short-term price surge as momentum traders pile in, driving the stock towards the $42-$46 analyst targets within 48 hours.",
-        "price_history": [
-            {
-                "c": 37.32,
-                "h": 37.76,
-                "l": 36.86,
-                "n": 150010,
-                "o": 37.55,
-                "t": "2026-05-07T04:00:00Z",
-                "v": 16647015,
-                "vw": 37.325971
-            }
-        ],
-        "updated_at": "2026-05-07T20:20:09.726890"
-    },
-    "FSLY": {
-        "symbol": "FSLY",
-        "name": "FSLY",
-        "price": 19.5,
-        "ai_grade": 15,
-        "reasoning": "As an elite quantitative analyst focused on explosive short-term breakouts, my analysis of FSLY for a 1-2 day 'skyrocket' potential is severely hampered by the provided technical data. The crucial breakout indicators\u2014SMA9 crossing above SMA21 for a Golden Cross, RSI rising but below 75, and a discernible volume spike (RVOL)\u2014are all presented as 0.0, rendering them undeterminable. This absence of critical technical momentum data is a major red flag for any aggressive breakout call.\n\nMoving to FOMO and News, the primary headline 'Fastly Stock Crashes 35% Thursday: What's Driving The Move?' is overwhelmingly bearish and directly contradicts any 'skyrocket' thesis within a 48-hour timeframe. While Keybanc maintained an Overweight rating and raised its price target to $27, this positive sentiment is largely overshadowed by the massive recent sell-off. RBC Capital, conversely, lowered its price target to $18, which is below the current price, indicating further potential downside. There is no news of an 'Earnings Beat,' 'Short Squeeze,' 'FDA Approval,' 'Partnership,' or 'New Product' that could ignite a rapid surge. Social sentiment data is not provided, so it cannot be factored in.\n\nFrom a fundamental perspective, FSLY operates in the Technology sector. Its P/E ratio is 0 and PEG ratio is 0, indicating the company is not currently profitable (based on trailing twelve months earnings). This makes FSLY a highly speculative, growth-dependent stock susceptible to significant volatility, which has just been demonstrated by the 35% crash. While its Debt-to-Equity ratio of 0.46 is manageable and not a concern, the lack of profitability amplifies the inherent risk, especially when considering a short-term, high-velocity trade. The current landscape is one of extreme recent downside momentum, not an impending breakout.\n\nConsidering the lack of actionable technical signals, the profoundly negative recent news of a 35% crash, and the underlying fundamental unprofitability, the probability of FSLY experiencing a 'skyrocket' breakout within 48 hours is exceedingly low. Any upward movement would be a highly speculative 'dead cat bounce' rather than a strong, conviction-driven breakout based on the provided data.",
-        "entry_price": 19.5,
-        "target_price": 21.5,
-        "stop_loss": 18.7,
-        "risk_level": "High",
-        "key_catalysts": "Extreme short-term oversold bounce (dead cat bounce) after the 35% crash, unexpected truly positive company announcement not currently in news, or a broader market tech rally creating a temporary lift. Keybanc's raised PT to $27 (though likely a longer-term view) might attract some speculative dip buyers.",
-        "bear_case": "Continued selling pressure following the 35% crash, failure to establish a stable support level, further analyst downgrades (RBC already lowered to $18), confirmation of underlying negative business developments that triggered the crash, or general market weakness impacting speculative tech stocks. The stock could easily retest or break below the $18 mark.",
-        "bull_case": "A rapid, short-term technical rebound driven by aggressive dip buyers stepping in after the massive sell-off, potentially fueled by the stock being significantly oversold (though not confirmable by provided RSI). A quick move towards the $21-$22 resistance level could materialize if market sentiment shifts or if the 35% drop is perceived as an overreaction by some investors.",
-        "price_history": [
-            {
-                "c": 19.5,
-                "h": 22.89,
-                "l": 18.53,
-                "n": 327121,
-                "o": 22.8,
-                "t": "2026-05-07T04:00:00Z",
-                "v": 46872033,
-                "vw": 19.745259
-            }
-        ],
-        "updated_at": "2026-05-07T20:20:09.726890"
-    },
-    "EU": {
-        "symbol": "EU",
-        "name": "EU",
-        "price": 1.87,
+    "T": {
+        "symbol": "T",
+        "name": "T",
+        "price": 25.16,
         "ai_grade": 65,
-        "reasoning": "As an elite quantitative analyst specializing in explosive short-term breakouts, my analysis of EU (enCore Energy Corp.) reveals a complex scenario driven by strong macro and company-specific news, severely hampered by critical missing technical data. \n\n**Fundamentals Review**: \n*   **Sector**: Energy, specifically the Uranium industry. This is crucial as the broader nuclear energy landscape is experiencing significant positive momentum. \n*   **P/E Ratio**: 0. This indicates enCore Energy is not currently profitable or has negative earnings. For a growth-oriented, speculative uranium explorer/developer, a P/E of 0 is common; investors are betting on future potential rather than current income. This aligns with a speculative short-term play where news and sentiment drive price.\n*   **PEG Ratio**: 0. Similar to P/E, a PEG of 0 reinforces the pre-profitability or negative growth status. It confirms this is not a value play, but a high-risk, high-reward growth prospect.\n*   **Debt-to-Equity**: 0.44. This is a relatively healthy and manageable debt level. A lower D/E ratio signals financial stability, allowing the company to fund operations and growth without excessive leverage, which is a positive underlying factor even for a short-term trade.\n\n**Breakout Indicators Analysis**: \nThis is where the analysis hits a major roadblock. The provided technical data for 'sma_fast', 'sma_slow', 'rsi', and 'volume_trend' are all 0.0. This means I have **no quantifiable data** to assess for a 'Golden Cross', rising RSI momentum (or overbought conditions), or a volume spike/unusual volume (RVOL). For an 'explosive short-term breakout' that relies heavily on technical confirmation of momentum and volume, this is a critical deficiency. Without this data, I cannot confirm technical validation for an immediate, aggressive move.\n\n**FOMO & News Analysis**: \nDespite the technical data void, the news flow is exceptionally strong and points towards significant FOMO potential:\n1.  **Earnings Beat**: 'enCore Energy FY EPS $(0.30) Beats $(0.35) Estimate'. This is a direct, positive company-specific catalyst.\n2.  **Sector-Wide Catalysts**: Multiple headlines reinforce a bullish narrative for the nuclear/uranium sector:\n    *   'Bill Gates-Backed TerraPower Wins US Approval For Advanced Nuclear Reactor'\n    *   'U.S. Seeks Input From U.S. States Interested In Hosting Sites For Storing Nuclear Waste...'\n    *   'Trump Champions Atomic Energy At Davos\u2014Nuclear Stocks Climb'\nThese headlines create powerful tailwinds and significantly increase the likelihood of sector-wide capital rotation and investor interest into uranium stocks like EU. The FOMO generated by these broad positive developments, combined with a company-specific earnings beat, is undeniable.\n\n**Social Sentiment**: No data provided for Reddit/Twitter sentiment, preventing this aspect of FOMO analysis.\n\n**Conclusion**: The convergence of a company-specific earnings beat with multiple, highly significant positive catalysts for the broader nuclear/uranium sector creates immense FOMO potential. However, the absolute lack of technical momentum and volume data (SMA crossovers, RSI, RVOL) is a severe limitation for quantitatively confirming an 'explosive breakout'. An elite quantitative analyst demands both strong fundamental/news drivers *and* technical validation. While the news strongly suggests a breakout *should* occur, the missing technicals prevent a high-conviction grade. This trade, therefore, becomes highly speculative, banking purely on news-driven sentiment to overcome the data gap. The P/E and PEG of 0, while typical for the industry, underscore this speculative nature, while the healthy D/E provides a sounder fundamental base than many peers.\n\nMy grade reflects the high potential from news balanced against the significant risk from missing crucial technical indicators for validation.",
-        "entry_price": 1.87,
-        "target_price": 2.2,
-        "stop_loss": 1.76,
-        "risk_level": "High",
-        "key_catalysts": "Company-specific earnings beat; strong sector tailwinds from Bill Gates-backed TerraPower reactor approval, US nuclear waste initiatives, and political support for atomic energy.",
-        "bear_case": "The primary bear case is the lack of technical confirmation. Without verifiable SMA crossovers, RSI momentum, or a volume surge, the news-driven FOMO might not translate into a sustained 'explosive' breakout. Market skepticism, unforeseen negative news, or broader market weakness could also dampen enthusiasm. The P/E and PEG of 0 could deter fundamental investors if the initial pop doesn't materialize into concrete profitability.",
-        "bull_case": "The bull case is compelling based on the news. The confluence of a direct earnings beat with multiple powerful, sector-wide catalysts for nuclear energy creates a high probability of significant FOMO and upward price movement. If technicals *were* confirming (e.g., a volume surge did occur on the back of this news), the current price presents an attractive entry point for an explosive short-term breakout. The healthy debt-to-equity ratio provides underlying financial stability.",
+        "reasoning": "As an elite quantitative analyst focused on explosive short-term breakouts, my assessment for T (AT&T) within a 48-hour timeframe is driven by a critical analysis of the provided data, with significant limitations acknowledged. The primary bullish catalyst is the recent news headline: 'AT&T Earnings Top Views'. An earnings beat can often trigger immediate upward price action and generate FOMO, especially for a large-cap stock like AT&T. This is a fundamental positive that could attract buyers. \n\nHowever, a severe impediment to a high-conviction breakout call is the complete absence of actionable technical data. The `technicals` provided show `sma_fast: 0.0`, `sma_slow: 0.0`, `rsi: 0.0`, and `volume_trend: 0.0`. This means I cannot confirm a 'Golden Cross' (SMA9 crossing SMA21), assess if RSI is rising but not over 75, or identify any 'unusual volume' or 'volume spike' (RVOL). These are cornerstone indicators for identifying explosive short-term breakouts. Without them, the prediction relies heavily on the news catalyst alone, making it more speculative for a *technical* breakout trader. Social sentiment data for Reddit/Twitter FOMO is also missing. \n\nFrom a fundamental perspective, AT&T operates in the **Communication Services** sector. Its **P/E ratio of 8.28** is remarkably low, suggesting potential undervaluation or market skepticism about its growth. A strong earnings beat could lead to a P/E expansion, driving the price up. The **PEG ratio of 1.79** is moderate for a mature company, indicating that while growth isn't explosive, the current valuation might not be excessively high relative to it. The **Debt-to-Equity ratio of 1.25** indicates significant leverage, a common characteristic in the capital-intensive telecom industry. While a long-term concern, it might be momentarily overlooked if the earnings beat signals improved cash flow or financial stability. Analyst price target reductions from BNP Paribas ($26) and Scotiabank ($31), even if above the current price, introduce a note of caution, suggesting analysts aren't expecting massive upside despite the beat. \n\nGiven the potent earnings beat as the sole strong catalyst, but severely hampered by the lack of technical confirmation for momentum and volume, I assign a moderate-to-good grade. The risk is elevated due to the missing technicals required for my specialty.",
+        "entry_price": 25.16,
+        "target_price": 26.5,
+        "stop_loss": 24.7,
+        "risk_level": "Medium-High",
+        "key_catalysts": "Q1 Earnings Beat ('AT&T Earnings Top Views').",
+        "bear_case": "The lack of confirming technical indicators (SMA cross, RSI momentum, volume spike) could lead to a 'sell the news' event or a muted reaction to the earnings beat. High debt-to-equity and cautious analyst sentiment (despite above-current PTs) could cap any upward movement. Without true technical momentum, the stock may fizzle.",
+        "bull_case": "The strong Q1 earnings beat could ignite immediate institutional and retail buying interest. Given AT&T's low P/E, a positive earnings surprise might trigger a re-rating by the market, driving the stock towards or beyond the analyst price targets within the 48-hour window, despite the missing technical signals.",
         "price_history": [
             {
-                "c": 1.87,
-                "h": 1.975,
-                "l": 1.85,
-                "n": 7143,
-                "o": 1.95,
-                "t": "2026-05-07T04:00:00Z",
-                "v": 2063719,
-                "vw": 1.902405
+                "c": 25.16,
+                "h": 25.395,
+                "l": 25.115,
+                "n": 143298,
+                "o": 25.225,
+                "t": "2026-05-08T04:00:00Z",
+                "v": 34413081,
+                "vw": 25.233867
             }
         ],
-        "updated_at": "2026-05-07T20:20:09.726890"
+        "updated_at": "2026-05-08T20:06:35.848330"
     },
-    "KO": {
-        "symbol": "KO",
-        "name": "KO",
-        "price": 78.43,
+    "CRWV": {
+        "symbol": "CRWV",
+        "name": "CRWV",
+        "price": 114.15,
+        "ai_grade": 72,
+        "reasoning": "My analysis indicates CRWV presents a high-conviction news-driven opportunity, though it lacks critical technical confirmation. The most significant catalyst is the reported 'Strongest' Bookings in the company's history following its Q1 earnings, which fundamentally shifts the narrative towards explosive growth. This is further reinforced by multiple analysts raising price targets (JP Morgan to $105, Truist to $131, Wells Fargo to $155), signaling institutional bullishness and potential for a significant re-rating. These factors are powerful drivers for FOMO and could trigger a short-term surge within 48 hours. \n\nHowever, a crucial limitation is the provided technical data, where SMA_fast, SMA_slow, RSI, and volume_trend are all reported as 0.0. This makes it impossible to confirm a 'Golden Cross,' assess true RSI momentum, or identify an 'unusual volume' spike, which are core components of identifying a technical breakout. Without this technical validation, the trade relies heavily on news-driven sentiment rather than confirmed price action momentum.\n\nFrom a fundamental perspective, CRWV operates in the high-growth 'Technology' sector, specifically 'Software - Infrastructure,' a hot area for cloud services. The P/E ratio of 0 and PEG ratio of 0 indicate the company is currently unprofitable or very early-stage, which is common for aggressive growth tech companies prioritizing market share. This means valuation is primarily based on future growth potential, making the 'strongest bookings' news incredibly impactful but also inherently speculative. The extremely high Debt-to-Equity ratio of 8.94 is a significant red flag, indicating heavy reliance on debt financing. While this can fuel rapid expansion, it introduces substantial financial risk and makes the company highly sensitive to market sentiment and interest rate changes. This fundamental leverage amplifies both potential gains and losses. The combined lack of technical confirmation and high fundamental risk prevents a higher 'Massive Breakout Potential' grade, but the strong news catalyst is undeniable for a short-term move.",
+        "entry_price": 114.15,
+        "target_price": 128.0,
+        "stop_loss": 109.0,
+        "risk_level": "High",
+        "key_catalysts": "Q1 Earnings report with 'Strongest Bookings In Company History', multiple analyst price target upgrades (Wells Fargo to $155), and CoreWeave's position in the high-growth cloud infrastructure sector.",
+        "bear_case": "The extremely high Debt-to-Equity ratio (8.94) and unprofitability (P/E=0) make CRWV fundamentally risky. Without technical confirmation (due to missing data), any news-driven rally could be volatile and quickly reversed by profit-taking or broader market weakness, especially if the high debt becomes a concern. The 'Analyst Warns CoreWeave Stock Could Stay 'Lumpy, Volatile'' and 'Why Is CoreWeave Stock Falling Friday?' headlines suggest inherent instability and vulnerability to pullbacks.",
+        "bull_case": "The 'Strongest Bookings In Company History' indicates robust demand and future revenue growth, which could trigger substantial FOMO. The significant analyst price target increases provide institutional validation and suggest considerable upside. As a cloud infrastructure player, CRWV is strategically positioned in a high-growth tech sector, potentially leading to a rapid short-term re-rating as investors digest the strong operational news, driving the stock towards or beyond the highest analyst targets.",
+        "price_history": [
+            {
+                "c": 114.15,
+                "h": 123.75,
+                "l": 110.5501,
+                "n": 564900,
+                "o": 118.46,
+                "t": "2026-05-08T04:00:00Z",
+                "v": 47832933,
+                "vw": 114.368806
+            }
+        ],
+        "updated_at": "2026-05-08T20:06:35.848330"
+    },
+    "TSLA": {
+        "symbol": "TSLA",
+        "name": "TSLA",
+        "price": 428.35,
+        "ai_grade": 75,
+        "reasoning": "As an elite quantitative analyst, I observe TSLA at a price of 428.35, positioning it as a high-velocity, high-volatility target. Crucially, the provided technical data for 'sma_fast', 'sma_slow', 'rsi', and 'volume_trend' are all reported as 0.0. This is a critical data gap, rendering traditional technical breakout indicators like a 'Golden Cross', rising RSI, or a volume spike unconfirmable from this dataset. This absence significantly elevates the speculative nature of any breakout prediction based purely on technicals. \n\nHowever, the 'News' feed presents a potent catalyst: 'Tesla China Sales Jump 36% In April'. This is a massive, immediate positive driver for sentiment and potential FOMO, especially for a growth stock like TSLA. The 'New Roadster Trademark' also signals future product development, adding to bullish sentiment, albeit less immediately impactful. Other news items are either tangential or represent competitive pressures, which are overshadowed by the strong sales data.\n\nFrom a fundamental perspective, TSLA operates in the 'Consumer Cyclical' sector, making it highly sensitive to economic sentiment and consumer spending, which strong China sales positively affirm. The P/E ratio is an astronomical 400.33, and the PEG ratio is 5.49. These sky-high multiples indicate immense growth expectations are already priced into the stock. This makes TSLA incredibly susceptible to corrections if growth falters, but simultaneously, it means any significant positive news can trigger an explosive, 'skyrocketing' rally as investors bid up an already premium valuation. The low Debt-to-Equity of 0.19 is a fundamental strength, providing financial flexibility and reducing balance sheet risk, which is a positive underlying factor.\n\nWhile technical confirmation is regrettably absent from the provided data, the powerful 'Tesla China Sales' headline, combined with TSLA's historical volatility and sensitivity to news-driven FOMO, presents a highly aggressive, speculative short-term breakout opportunity within 48 hours. The high valuation means the upside potential on positive news can be parabolic, but the downside is equally significant if momentum fails or broader market sentiment shifts. The 'ValueScan: True' indicator suggests an underlying positive assessment that might be related to fundamental strength not fully captured in other metrics or a proprietary technical setup.",
+        "entry_price": 428.35,
+        "target_price": 453.0,
+        "stop_loss": 415.5,
+        "risk_level": "High",
+        "key_catalysts": "Tesla China Sales Jump 36% in April; Elon Musk-related FOMO; Potential short squeeze if upward momentum ignites.",
+        "bear_case": "Lack of technical confirmation leads to a false breakout; general market weakness or profit-taking; increased competition from Bezos-backed Slate Auto; failure to sustain China sales momentum.",
+        "bull_case": "Aggressive market reaction to strong China sales ignites significant FOMO and a short squeeze, propelling TSLA past key resistance levels; broader market rally supporting growth stocks; positive analyst upgrades follow sales data.",
+        "price_history": [
+            {
+                "c": 428.35,
+                "h": 431.2,
+                "l": 416.39,
+                "n": 1602037,
+                "o": 416.475,
+                "t": "2026-05-08T04:00:00Z",
+                "v": 64590728,
+                "vw": 426.449682
+            }
+        ],
+        "updated_at": "2026-05-08T20:06:35.848330"
+    },
+    "LUNR": {
+        "symbol": "LUNR",
+        "name": "LUNR",
+        "price": 28.97,
         "ai_grade": 88,
-        "reasoning": "ALERT: KO is flashing massive short-term breakout potential within the next 48 hours, driven almost entirely by a powerful confluence of positive analyst sentiment and fundamental strength, despite the critical absence of real-time technical momentum indicators in the provided data. \n\n**Technical Indicators (Acknowledged Limitation):** It's imperative to state that the provided technical data (SMA9, SMA21, RSI, Volume Trend) is all zero. This is a significant handicap. For a true 'Golden Cross' or RSI signal, actual data is required. However, for an elite quant analyst, strong fundamental catalysts often *precede* and *create* the technical momentum. I'm operating under the aggressive assumption that the overwhelming positive news will generate the necessary buying pressure, which would likely manifest as a rising RSI (below 75) and a volume spike. \n\n**FOMO & News Analysis (CRITICAL DRIVER):** The news feed is a goldmine for short-term upside for KO. We have *multiple* major institutions (Barclays, JP Morgan, TD Cowen, Citigroup) *simultaneously* maintaining 'Overweight' or 'Buy' ratings and *raising price targets* to $85-$90. This is not just an isolated upgrade; it's a chorus of conviction from big players. This collective re-rating is a powerful catalyst for institutional buying and retail FOMO. Furthermore, headlines like 'Coca-Cola Stock's Quality Rank Reflects Strong Q1 Operational Efficiency Amid 13% YTD Gain' and 'Warren Buffett's Coca-Cola Bet Just Got $3.4 Billion Sweeter' reinforce a strong, positive narrative. While there's no direct 'Earnings Beat' or 'New Product' news, the analyst upgrades are reacting to perceived underlying strength and future potential, often fueled by recent operational performance. Social sentiment is highly likely to follow this institutional conviction.\n\n**Fundamentals Impact:** KO operates in the **Consumer Defensive** sector, known for stability rather than explosive growth. This means a move of 8-15% in 48 hours would indeed be 'skyrocketing' for this type of stock. The **P/E ratio of 24.67** suggests investors are already paying a premium for its stability and brand equity. However, the **PEG ratio of 4.06** is a significant red flag for long-term value, indicating the stock is richly valued relative to its expected earnings growth. This high PEG implies that the current price already bakes in substantial optimism, and any sustained breakout would require even stronger growth or re-rating. This will be a headwind for *sustained* appreciation beyond the immediate PT, but for a 48-hour pop, the analyst upgrades can temporarily override this. The **Debt-to-Equity of 1.25** is manageable for KO and doesn't pose an immediate threat or catalyst; it's within expected ranges for a mature company leveraging its assets. The fundamental profile suggests a higher bar for 'explosive' moves, yet the unprecedented analyst consensus provides that impetus.\n\n**Conclusion:** The lack of technicals forces an inference, but the sheer volume and consistency of analyst upgrades with significantly higher price targets are a potent catalyst for KO. This institutional conviction is highly likely to translate into significant buying pressure, pushing the stock towards those new targets in the very short term. The move would be highly explosive for a defensive stock like KO, justifying a high-grade conviction for a short-term breakout.",
-        "entry_price": 78.43,
-        "target_price": 85.0,
-        "stop_loss": 76.86,
+        "reasoning": "LUNR presents a compelling, albeit high-risk, opportunity for an explosive short-term breakout driven almost entirely by overwhelming news-flow and sector-wide FOMO. While the provided technical data for SMA, RSI, and volume trend are reported as 0.0, rendering direct technical confirmation impossible, the news headlines explicitly state the stock is 'Rallies,' 'Rises,' and 'Moving Higher.' This strongly implies robust underlying buying momentum and increased volume, suggesting that had the technical data been populated, they would likely be confirming an uptrend (rising RSI, increasing volume). The 'Industrials' sector, specifically 'Aerospace & Defense,' is experiencing significant tailwinds, fueled by 'SpaceX IPO Fever Grows,' 'Launch Constraints Drive Space Sector Bid,' and 'The Launch Squeeze Is Real.' This sector-wide enthusiasm is a primary catalyst. Keybanc maintaining an 'Overweight' rating and raising its price target, alongside Jim Cramer labeling it a 'Winner,' further amplifies positive sentiment. The P/E ratio of 0 indicates the company is not currently profitable. While a significant long-term red flag, for a short-term momentum play, this can be temporarily overlooked by market participants if the narrative is compelling enough and speculative interest is high. The PEG ratio of 0 similarly suggests a lack of earnings growth, reinforcing the idea that current price action is driven by speculation and future potential rather than current financial performance. A Debt-to-Equity ratio of 1.83 is relatively high, signifying substantial leverage and introducing financial risk. In a high-velocity, short-term trade, these fundamental weaknesses might be temporarily ignored but contribute to the overall high-risk profile. The confluence of extreme positive news sentiment, strong sector tailwinds, and implied momentum, despite unconfirmed technical indicators, points to a strong likelihood of continued upward pressure within the next 48 hours.",
+        "entry_price": 28.97,
+        "target_price": 33.5,
+        "stop_loss": 26.9,
+        "risk_level": "High",
+        "key_catalysts": "SpaceX IPO fever; launch constraints driving sector bid; analyst upgrades and positive sentiment from financial commentators; broader 'space race' narrative.",
+        "bear_case": "The primary risk stems from the complete absence of confirming technical data; if the implied momentum is not sustained, a sharp reversal could occur. High debt and lack of profitability make the company fundamentally weak, vulnerable to profit-taking or a shift in market sentiment. Any negative news regarding the space sector or LUNR's operations could trigger a rapid decline.",
+        "bull_case": "The pervasive FOMO around the space sector and LUNR's specific positive news could ignite a short squeeze or significant retail buying interest, propelling the stock well beyond analyst targets. Continued 'SpaceX IPO fever' or further positive developments in the aerospace industry could create a self-reinforcing upward spiral, leading to a parabolic move in the very short term.",
+        "price_history": [
+            {
+                "c": 28.97,
+                "h": 29.38,
+                "l": 24.665,
+                "n": 138466,
+                "o": 25.05,
+                "t": "2026-05-08T04:00:00Z",
+                "v": 16097807,
+                "vw": 27.822466
+            }
+        ],
+        "updated_at": "2026-05-08T20:06:35.848330"
+    },
+    "UAL": {
+        "symbol": "UAL",
+        "name": "UAL",
+        "price": 99.58,
+        "ai_grade": 72,
+        "reasoning": "As an elite quantitative analyst, my objective is to identify explosive short-term breakouts within 48 hours. For UAL, the technical data provided (SMA, RSI, Volume Trend) is entirely zero, making a crucial part of my analysis impossible. This is a significant limitation and prevents me from confirming a technical momentum-driven breakout with high conviction.\n\nHowever, I must analyze the available data aggressively. The news flow for UAL is a mix of strong positives and notable negatives. The most compelling bullish catalyst is the reported collapse of Spirit Airlines and UAL's immediate, tactical response to launch special fares and employee pass travel to capture market share. This demonstrates agility and direct benefit from a competitor's distress, potentially leading to increased passenger volume and revenue in the short term. Additionally, the mention of United CEO's 'merger idea' showing 'bold vision' can spark speculative FOMO, although it's a nascent concept. The 'ValueScan: True' also suggests some underlying algorithmic attractiveness.\n\nOn the bearish side, significant headwinds are evident: 'US Airlines Spent $5 Billion On Fuel In March Alone As Energy Crisis Deepens' and 'Iran War To Weigh On Airline Profits'. These factors directly impact profitability for the entire airline sector, including UAL.\n\nFrom a fundamental perspective, UAL operates in the Industrials sector, specifically Airlines. Its P/E ratio is 8.91, which appears low on the surface, potentially suggesting undervaluation. However, the PEG ratio of 6.5 is extremely high, indicating that its current growth rate does not justify even this low P/E, or perhaps that recent earnings growth has been very poor. This is a red flag for sustained long-term appreciation and suggests any breakout would be primarily speculative and not fundamentally driven. The Debt-to-Equity ratio of 1.95 is high, typical for capital-intensive airlines, but it increases financial risk, especially in an environment of rising interest rates or economic uncertainty. These fundamental weaknesses, combined with sector-specific headwinds (fuel costs, geopolitical risk), could cap any significant upward momentum generated by positive news.\n\nGiven the strong positive news catalyst (Spirit collapse benefit) against significant technical data gaps and fundamental weaknesses (high PEG, high D/E, fuel costs, geopolitical risk), I cannot confidently assign an '85+' grade for a 'massive breakout potential'. The potential for a short-term pop is there due to news-driven FOMO, but the underlying lack of technical confirmation and fundamental resilience make it a higher-risk play for explosive upside. The immediate market share grab from Spirit is a compelling short-term narrative, but its sustainability is questionable without technical follow-through or stronger underlying financials. Social sentiment data is unavailable, so that cannot be factored in.\n\nTherefore, a moderate grade is appropriate, acknowledging the compelling news while tempering expectations due to missing technicals and fundamental headwinds.",
+        "entry_price": 99.6,
+        "target_price": 103.5,
+        "stop_loss": 97.5,
         "risk_level": "Medium",
-        "key_catalysts": "Massive analyst price target upgrades (to $85-$90) from multiple top-tier institutions, strong Q1 operational efficiency, positive institutional sentiment.",
-        "bear_case": "Despite strong analyst sentiment, the lack of immediate technical confirmation (RSI, volume spike) could mean the rally fizzles. The high PEG ratio (4.06) might discourage broader market participation beyond institutional rebalancing. General market weakness could also dampen enthusiasm for even defensive stocks.",
-        "bull_case": "The overwhelming chorus of analyst upgrades acts as a powerful magnet, pulling KO shares aggressively towards the $85-$90 price targets. Institutional buying, coupled with retail FOMO, creates a swift, high-volume surge, delivering a significant breakout within 48 hours for this typically stable stock.",
+        "key_catalysts": "UAL's proactive response to Spirit Airlines' collapse by offering rescue fares and employee travel, positioning UAL to capture significant market share; speculative FOMO from United CEO's 'bold vision' merger idea.",
+        "bear_case": "Rising fuel costs due to the 'Energy Crisis' and geopolitical tensions (Iran War) will erode airline profits, offsetting any gains from market share. The high PEG ratio and Debt-to-Equity ratio expose UAL to significant fundamental risk. Lack of technical momentum (missing SMA, RSI, Volume data) suggests no organic buying pressure beyond news-driven speculation.",
+        "bull_case": "UAL's swift and strategic move to capitalize on Spirit Airlines' operational shutdown immediately captures distressed passengers and staff, boosting short-term revenue and passenger volume. This news, combined with the speculative 'merger idea,' could ignite significant short-term buying interest and FOMO, pushing the stock higher within 48 hours despite underlying fundamental concerns.",
         "price_history": [
             {
-                "c": 78.43,
-                "h": 79.145,
-                "l": 78.095,
-                "n": 250931,
-                "o": 78.79,
-                "t": "2026-05-07T04:00:00Z",
-                "v": 16606505,
-                "vw": 78.564746
+                "c": 99.58,
+                "h": 101.145,
+                "l": 98.64,
+                "n": 55029,
+                "o": 100,
+                "t": "2026-05-08T04:00:00Z",
+                "v": 3851097,
+                "vw": 99.91271
             }
         ],
-        "updated_at": "2026-05-07T20:20:09.726890"
+        "updated_at": "2026-05-08T20:06:35.848330"
     },
-    "LOT": {
-        "symbol": "LOT",
-        "name": "LOT",
-        "price": 1.21,
-        "ai_grade": 45,
-        "reasoning": "As an elite quantitative analyst, my assessment of LOT for an explosive short-term breakout within 48 hours is severely hampered by critical data deficiencies. All provided technical momentum indicators \u2013 SMA9 (sma_fast), SMA21 (sma_slow), RSI, and volume trend (RVOL) \u2013 are reported as 0.0. This makes it impossible to determine if a 'Golden Cross' is imminent, if RSI is rising (or even valid), or if a significant volume spike is occurring. Without this fundamental technical data, confirming momentum for a 'skyrocket' scenario based on technical indicators is purely speculative and against sound quantitative principles. \n\nTurning to the news, there's a mixed but potent bag. Positively, Lotus Technology delivered a Q4 EPS beat ($(0.14) vs $(0.16) estimate) and a sales beat ($163.340M vs $154.000M estimate). The company also launched new products (All-Electric Eletre in Canada, Eletre X in China), which are strong catalysts for future growth and potential investor FOMO. However, a significant bearish headline indicates 'House Lawmakers Urge Trump to Prohibit China's Automakers From Building Cars in the U.S.', which is a massive geopolitical and regulatory headwind for a company owned by Geely (China). While the company is 'Narrows Losses', the lingering concerns and unprofitability remain. Social sentiment, while not explicitly provided, is likely to be highly polarized given these conflicting strong signals.\n\nFrom a fundamental perspective, LOT operates in the 'Consumer Cyclical' sector, specifically 'Auto Manufacturers'. The provided P/E ratio is 0 and PEG is 0, which confirms the news of 'narrows losses' \u2013 the company is currently unprofitable, a high-risk characteristic for a short-term breakout play, especially in a capital-intensive industry. The Debt-to-Equity is also 0, which could indicate either a strong balance sheet with no debt or incomplete data, but in conjunction with unprofitability, it raises questions about its financial structure and funding for growth. Unprofitability combined with significant geopolitical risks adds layers of uncertainty.\n\nConsidering the absolute lack of technical momentum data to justify an 'explosive breakout' and the severe geopolitical risk offsetting otherwise positive earnings and product launch news, the potential for a 'skyrocket' move within 48 hours is low. The trade would be based almost entirely on hoping the positive earnings news can overcome the severe geopolitical threat without any technical confirmation or support. This constitutes a high-risk gamble rather than a data-driven breakout opportunity.",
-        "entry_price": 1.21,
-        "target_price": 1.35,
-        "stop_loss": 1.15,
+    "JPM": {
+        "symbol": "JPM",
+        "name": "JPM",
+        "price": 302.1,
+        "ai_grade": 20,
+        "reasoning": "As an elite quantitative analyst focused on explosive short-term breakouts, my analysis of JPM reveals a critical deficiency in actionable data, severely limiting the potential for a 'skyrocket' call within 48 hours. The provided technicals for SMA9, SMA21, RSI, and volume trend are all reported as 0.0. This renders any technical momentum analysis impossible. Without a 'Golden Cross' confirmation, a rising RSI (ideally between 40-75), or a clear volume spike (RVOL), the foundational technical indicators for an imminent breakout are entirely absent from the dataset. This immediate lack of technical signals means we cannot confirm buying momentum or unusual interest from smart money. Therefore, from a purely technical perspective, there is no signal for an explosive move. \n\nTurning to FOMO and news catalysts, a thorough scan of recent headlines yields no 'Earnings Beat,' 'Short Squeeze,' 'FDA Approval,' 'Partnership,' or 'New Product' announcements for JPM that would trigger a massive short-term surge. Instead, we observe headlines detailing lawsuits ('JPMorgan, Citi Sued for Frozen Payments to Sanctioned China Firm,' 'JPMorgan Reportedly Offered Chirayu Rana $1 Million To Bury Viral Lawsuit'), which introduce significant negative sentiment and reputational risk, acting as potential headwinds rather than catalysts. While JPM's involvement in an NBA expansion bid is positive business, it's not breakout-level news. Social sentiment data for Reddit/Twitter is also unavailable, preventing an assessment of retail FOMO.\n\nFrom a fundamental perspective, JPM operates in the **Financial Services** sector, typically characterized by more stable, less volatile movements compared to growth sectors. The **P/E ratio of 14.46** is reasonable for a mature bank, not suggesting deep undervaluation for a quick pop. The **PEG ratio of 1.67** indicates that JPM's P/E might be slightly elevated relative to its projected earnings growth, which is not conducive to an 'explosive breakout' scenario driven by growth expectations. Most notably, the **Debt-to-Equity ratio of 0** is highly anomalous and likely a data error, as banks inherently utilize significant leverage. If taken literally, it contradicts the operational model of a financial institution and raises questions about data integrity. Assuming it's an error, a typical bank's leverage profile doesn't inherently support a sudden price explosion unless tied to specific, high-impact news, which is absent.\n\nGiven the complete absence of bullish technical indicators, the presence of negative news, and the lack of strong fundamental catalysts for a short-term pop, JPM does not exhibit the characteristics of an 'explosive short-term breakout' candidate based on the provided data. The risk of entry without any supporting data is exceptionally high for a high-velocity trade.",
+        "entry_price": 302.1,
+        "target_price": 303.5,
+        "stop_loss": 299.08,
         "risk_level": "High",
-        "key_catalysts": "Q4 EPS and Sales Beat, Launch of All-Electric Eletre in Canada and Eletre X in China.",
-        "bear_case": "Escalation of U.S. restrictions on Chinese automakers; broader market downturn affecting consumer cyclicals; continued unprofitability and lingering financial concerns; lack of technical support leading to rapid price erosion.",
-        "bull_case": "Positive investor reaction to earnings and new product launches overshadows geopolitical risks; strong initial sales of new Eletre models; short interest (if any) is squeezed on positive news, leading to a rapid, albeit unsupported, price spike.",
+        "key_catalysts": "None identified in the provided data. Negative news regarding lawsuits acts as a potential headwind.",
+        "bear_case": "The ongoing lawsuits escalate, leading to significant financial penalties or reputational damage. General market weakness or adverse macroeconomic news (e.g., US Debt Bomb concerns) puts pressure on the financial sector. Without any positive technical or news catalysts, JPM could easily retest lower support levels. The lack of supporting data makes any bullish thesis highly speculative and vulnerable.",
+        "bull_case": "Despite the current data, JPM is a robust financial institution. A surprise positive announcement not captured in the news, or a broader market rally that lifts all boats, could provide modest upside. However, without concrete bullish signals, any upward movement would be speculative and not qualify as an 'explosive breakout' based on this analysis.",
         "price_history": [
             {
-                "c": 1.21,
-                "h": 1.2833,
-                "l": 1.21,
-                "n": 227,
-                "o": 1.23,
-                "t": "2026-05-07T04:00:00Z",
-                "v": 45330,
-                "vw": 1.227651
+                "c": 302.1,
+                "h": 308.99,
+                "l": 300.5,
+                "n": 168658,
+                "o": 308.25,
+                "t": "2026-05-08T04:00:00Z",
+                "v": 8562358,
+                "vw": 302.83837
             }
         ],
-        "updated_at": "2026-05-07T20:20:09.726890"
+        "updated_at": "2026-05-08T20:06:35.848330"
     },
-    "HOOD": {
-        "symbol": "HOOD",
-        "name": "HOOD",
-        "price": 76.28,
-        "ai_grade": 80,
-        "reasoning": "As an elite quantitative analyst focused on explosive short-term breakouts, I approach HOOD with an aggressive yet data-driven mindset. Immediately, I must flag a critical limitation: the provided technical data for SMA, RSI, and Volume Trend are all 0.0. This makes a definitive technical analysis impossible and significantly increases the risk profile of any short-term projection. I cannot confirm a 'Golden Cross,' rising RSI, or a volume spike directly from the given technicals. However, the prompt demands an aggressive assessment, so I must rely heavily on other potent indicators.\n\nMoving to the 'FOMO & News' drivers, we see several highly impactful catalysts. Cathie Wood's Ark Invest comparing Robinhood's Gold Tier to 'the next Amazon Prime' is an exceptionally strong bullish signal, likely to generate significant investor excitement and FOMO, especially among growth-focused traders. The news of Trump accounts being custodied with Robinhood also provides immense media visibility and potential for new user acquisition, directly impacting the 'profitable for US' statement. Furthermore, the interest in Nancy Pelosi's Databricks bet indicates a surge in retail investor appetite for high-upside opportunities, a core driver for HOOD's platform. Crucially, the headline 'Robinhood Stock Is Climbing Monday' provides a direct confirmation of existing positive price momentum, serving as a proxy for the missing technical indicators.\n\nFrom a fundamental perspective, HOOD operates in the **Financial Services** sector, specifically **Capital Markets**, an area known for high volatility and sensitivity to news, making it fertile ground for rapid breakouts. Its **P/E ratio of 37.03** is elevated, typical for growth companies where future earnings are anticipated to justify current valuations. The strong news catalysts could fuel this narrative. The **PEG ratio of 0** is problematic, suggesting either negative earnings or unavailable growth data, making a precise growth valuation difficult from this metric. However, the qualitative news suggests strong growth potential. The **Debt-to-Equity ratio of 1.4** indicates a moderate reliance on debt; while not ideal, it's not immediately disqualifying for a short-term momentum play if catalysts are strong. Given the confluence of powerful, sentiment-driving news, despite the technical data vacuum, the short-term breakout potential is high, albeit extremely risky. The lack of technical confirmation prevents a grade above 85, but the FOMO potential is undeniable.",
-        "entry_price": 76.28,
-        "target_price": 85.5,
-        "stop_loss": 73.0,
+    "NKE": {
+        "symbol": "NKE",
+        "name": "NKE",
+        "price": 44.14,
+        "ai_grade": 15,
+        "reasoning": "Our aggressive quantitative scan for NKE indicates an extremely low probability of a short-term breakout or 'skyrocket' within the next 48 hours. The technical indicators provided are critically absent (SMA9/SMA21, RSI, Volume Trend all at 0.0), making it impossible to confirm any bullish momentum or unusual volume spikes that typically precede an explosive move. This data deficiency alone is a massive red flag, suggesting no immediate technical impetus for a breakout. \n\nCompounding this, the news flow is overwhelmingly negative. We see a significant downgrade from Wells Fargo, lowering their price target to $45 and assigning an 'Equal-Weight' rating, directly contradicting breakout potential. Even more impactful are reports of 'Nike Cuts 1,400 Roles In Second Round Of Layoffs This Year' from CNBC, which signals internal struggles, cost-cutting measures, and potentially weakening demand, eroding investor confidence and consumer sentiment. There are absolutely no positive catalysts such as 'Earnings Beat', 'Short Squeeze', 'FDA Approval', 'Partnership', or 'New Product' news to ignite FOMO.\n\nFrom a fundamental perspective: NKE operates in the 'Consumer Cyclical' sector, making it highly sensitive to economic downturns and consumer spending, which layoffs often portend. Its P/E ratio stands at 29.05, which is relatively high for a mature company facing headwinds, suggesting it's not undervalued. The PEG ratio of 1.36 further supports this, indicating growth might not fully justify the current valuation. While the Debt-to-Equity ratio of 0.79 is healthy, showing a sound balance sheet, it does not counteract the immediate negative operational and analyst sentiment.\n\nGiven the complete absence of positive technical signals, coupled with severe negative news and a lack of FOMO catalysts, NKE is highly unlikely to skyrocket. Any long position would be exceptionally speculative with significant downside risk.",
+        "entry_price": 44.14,
+        "target_price": 44.5,
+        "stop_loss": 43.7,
         "risk_level": "High",
-        "key_catalysts": "Cathie Wood's Ark Invest comparing Gold Tier to 'next Amazon Prime'; Trump accounts custody generating high media visibility and potential user growth; Retail investor interest in high-upside opportunities (Pelosi bet); Confirmation of 'Robinhood Stock Is Climbing Monday'.",
-        "bear_case": "Significant competition from Morgan Stanley undercutting fees on crypto trading could erode revenue; Regulatory scrutiny concerning prediction markets; The complete absence of confirmed positive technical indicators (SMA, RSI, Volume) makes this trade highly speculative and vulnerable to rapid reversals; High P/E could lead to sharp pullbacks if sentiment shifts.",
-        "bull_case": "Powerful news catalysts generate immense retail FOMO, leading to rapid price appreciation; Increased user adoption and engagement driven by high-profile accounts and new product offerings (Gold Tier); The volatile nature of the Financial Services sector amplifies upward movements on positive news; A short squeeze could be triggered if institutional shorts are caught off guard by the surge in retail interest.",
+        "key_catalysts": "None present. Overwhelmingly negative news (layoffs, analyst downgrade). No technical indicators of upward momentum or volume spikes.",
+        "bear_case": "Continued sell-off due to poor market sentiment stemming from layoffs and analyst downgrades. Potential for further price target reductions or even more negative news, pushing NKE below recent support levels. Weak consumer spending impacting future sales.",
+        "bull_case": "Highly improbable based on current data. A significant, unexpected market-wide rally could provide a minor uplift, or an unforeseen positive corporate announcement (not indicated by current news) could trigger a bounce. However, none of the provided data supports a 'skyrocket' scenario for NKE specifically.",
         "price_history": [
             {
-                "c": 76.28,
-                "h": 79.23,
-                "l": 75.46,
-                "n": 265903,
-                "o": 78.955,
-                "t": "2026-05-07T04:00:00Z",
-                "v": 21630567,
-                "vw": 76.87585
+                "c": 44.14,
+                "h": 44.66,
+                "l": 43.8,
+                "n": 162610,
+                "o": 44.26,
+                "t": "2026-05-08T04:00:00Z",
+                "v": 17260065,
+                "vw": 44.182519
             }
         ],
-        "updated_at": "2026-05-07T20:20:09.726890"
+        "updated_at": "2026-05-08T20:06:35.848330"
     },
-    "PFE": {
-        "symbol": "PFE",
-        "name": "PFE",
-        "price": 26.48,
-        "ai_grade": 78,
-        "reasoning": "As an elite quantitative analyst focused on explosive short-term breakouts, my assessment of PFE for a 48-hour 'skyrocket' potential hinges critically on the news catalyst. The provided technical data for SMA9, SMA21, RSI, and Volume Trend are all explicitly stated as 0.0, which means I cannot directly confirm a Golden Cross, rising RSI, or a volume spike from the raw data. This introduces a significant limitation to a purely quantitative technical analysis, preventing a top-tier grade above 85.\n\nHowever, the 'Dow Jumps Over 300 Points; Pfizer Posts Upbeat Earnings' headline is a powerful and direct catalyst. An 'upbeat earnings' report is precisely the kind of fundamental news that ignites short-term breakouts and FOMO. While I lack the real-time technicals, it is highly probable that such news is already driving or will soon drive a significant increase in trading volume and upward price momentum, leading to a rising RSI and potentially a Golden Cross if the rally sustains. My conviction stems from the direct news impact, which often precedes the measurable technicals.\n\nFrom a fundamental perspective, PFE operates in the **Healthcare** sector, a traditionally defensive industry but capable of strong moves on company-specific news. Its **P/E ratio of 20.21** is moderate, and an earnings beat could make it appear more attractive going forward. The **Debt-to-Equity of 0.72** is healthy, indicating financial stability. However, the **PEG ratio of 13.77** is exceptionally high, suggesting that, from a long-term growth perspective, the stock is significantly overvalued relative to its expected earnings growth. For a short-term, momentum-driven trade, this high PEG is often overlooked by the market in favor of the immediate catalyst, but it does flag a lack of underlying growth to sustain a long rally, increasing the risk for a quick reversal.\n\nNews FOMO is driven by the earnings beat and the generally positive market sentiment indicated by 'S&P 500 Hits New High'. While social sentiment data is not provided, an earnings beat for a major pharma company often generates significant buzz. The 'Vyndamax Drug Patent Settlement' news, while post-2028, adds a layer of positive long-term revenue visibility.\n\nConsidering the direct and powerful earnings catalyst, despite the critical absence of current technical data, the probability of a short-term pop is elevated. The inability to confirm technicals definitively reduces the grade from 'massive' potential, but the news is strong enough to warrant a high-risk, high-reward entry.",
-        "entry_price": 26.48,
-        "target_price": 27.75,
-        "stop_loss": 25.9,
+    "ARM": {
+        "symbol": "ARM",
+        "name": "ARM",
+        "price": 213.27,
+        "ai_grade": 88,
+        "reasoning": "ARM is poised for an explosive short-term breakout within 48 hours, despite some technical data limitations. The underlying fundamental demand, coupled with aggressive analyst price target increases, creates a potent cocktail for a significant price surge. The provided technical indicators ('sma_fast': 0.0, 'sma_slow': 0.0, 'rsi': 0.0, 'volume_trend': 0.0) prevent a direct assessment of Golden Cross formation, RSI momentum, or explicit volume spikes. However, the news flow strongly implies burgeoning momentum and unusual interest. Multiple major investment banks (Barclays, TD Cowen, RBC Capital, Wells Fargo) have recently *raised* their price targets significantly above the current price, indicating a strong positive shift in sentiment from institutional players. While 'Arm's AI Party Hits A Supply Wall, Stock Falls' suggests recent profit-taking or short-term apprehension regarding supply, the subsequent *raised* price targets suggest analysts view this as a temporary bottleneck rather than a fundamental flaw. The headline 'Arm's Server Chip Demand Is No Longer The Question \u2014 Supply Is' is a massive bull signal for underlying demand. This market narrative often precedes FOMO-driven rallies as investors pile in to capitalize on perceived 'can't-miss' growth. Given the context, it's highly probable that RSI is currently rising from recent lows and volume is spiking or above average, indicative of renewed buying interest. The high P/E ratio of 250.91 and PEG of 2.86 highlight that ARM is a high-growth, high-expectation stock within the 'Technology' sector (specifically 'Semiconductors'). This valuation makes it susceptible to rapid price movements on news, both positive and negative, but in this case, the positive catalysts are dominant. The extremely low Debt-to-Equity of 0.05 provides a robust financial foundation, mitigating balance sheet risk and allowing the company to focus entirely on capitalizing on its growth opportunities. This combination of strong demand, analyst upgrades, and solid financials despite temporary supply concerns signals an imminent push higher as FOMO takes hold.",
+        "entry_price": 213.27,
+        "target_price": 238.0,
+        "stop_loss": 200.0,
         "risk_level": "High",
-        "key_catalysts": "Upbeat Earnings report for Pfizer; broader positive market sentiment ('S&P 500 Hits New High'); potential for short-term FOMO as traders react to the news; Vyndamax drug patent settlement offering long-term revenue clarity.",
-        "bear_case": "Lack of follow-through on earnings if the 'upbeat' was not sufficiently impressive to institutional investors; broader market downturn despite current highs; profit-taking pressure due to the stock's elevated PEG ratio; failure of assumed technical indicators (RSI, volume) to materialize post-earnings or even turn negative.",
-        "bull_case": "Strong momentum build-up fueled by the earnings beat, validating the 'upbeat' sentiment; widespread FOMO driving retail and institutional buying, causing a significant price surge; potential for a short squeeze if shorts are caught off guard by the positive news; PFE recaptures recent highs and tests resistance levels quickly within the 48-hour window, surpassing the target.",
+        "key_catalysts": "Multiple analyst upgrades with significantly raised price targets (avg. $250+), overwhelming underlying demand for ARM's IP in AI/server markets, potential for positive news regarding supply chain mitigation, renewed institutional buying post-supply concern dip.",
+        "bear_case": "Inability to resolve supply chain constraints could cap revenue growth and disappoint high expectations, leading to a significant valuation reset. The high P/E and PEG make ARM extremely sensitive to any perceived growth slowdown. Goldman Sachs' 'Sell' rating and lower price target ($150) represent a material counter-perspective that could gain traction if the bullish narrative falters.",
+        "bull_case": "Continued confirmation of robust demand for ARM's architecture, especially in the booming AI and server segments, leading to further price target increases and broad market FOMO. A successful announcement or indication of supply chain improvements could trigger an immediate, massive upside move. The stock could approach analyst price targets quickly as investors re-rate its near-term potential.",
         "price_history": [
             {
-                "c": 26.48,
-                "h": 26.72,
-                "l": 26.16,
-                "n": 175271,
-                "o": 26.51,
-                "t": "2026-05-07T04:00:00Z",
-                "v": 47052629,
-                "vw": 26.381214
+                "c": 213.27,
+                "h": 222,
+                "l": 211,
+                "n": 173600,
+                "o": 216.96,
+                "t": "2026-05-08T04:00:00Z",
+                "v": 11372355,
+                "vw": 215.42396
             }
         ],
-        "updated_at": "2026-05-07T20:20:09.726890"
+        "updated_at": "2026-05-08T20:06:35.848330"
     },
-    "AXP": {
-        "symbol": "AXP",
-        "name": "AXP",
-        "price": 318.69,
-        "ai_grade": 50,
-        "reasoning": "Local fallback: No signals (Gemini down, data limited)",
-        "entry_price": 318.69,
-        "target_price": 318.69,
-        "stop_loss": 296.3817,
-        "risk_level": "Medium",
-        "key_catalysts": "N/A",
-        "bear_case": "N/A",
-        "bull_case": "N/A",
-        "price_history": [
-            {
-                "c": 318.69,
-                "h": 324.535,
-                "l": 316.8,
-                "n": 90594,
-                "o": 322.33,
-                "t": "2026-05-07T04:00:00Z",
-                "v": 3353358,
-                "vw": 319.518154
-            }
-        ],
-        "updated_at": "2026-05-07T20:20:09.726890"
-    },
-    "_last_run": "2026-05-07T20:20:09.726890"
+    "_last_run": "2026-05-08T20:06:35.848330"
 }
