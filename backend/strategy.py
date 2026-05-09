@@ -63,7 +63,9 @@ class DeepResearchBot(Strategy):
                 ai_grade = report.get("ai_grade", 50)
                 last_price = report.get("price", 0)
                 stop_loss = report.get("stop_loss", last_price * 0.93)
+                self.log_message(f"[EVAL] {symbol}: grade={ai_grade}, price={last_price}, stop={stop_loss:.2f}")
                 if last_price <= 0:
+                    self.log_message(f"[SKIP] {symbol}: price=0")
                     continue
 
                 signal_data = state.latest_signals.get(symbol, {})
@@ -79,8 +81,8 @@ class DeepResearchBot(Strategy):
                 if ai_grade >= 55:  # Aggressive: Buy anything with positive AI conviction
                     if not existing_pos and quantity > 0:
                         current_price = self.get_last_price(symbol)
-                        if current_price > last_price * 1.02:
-                            self.log_message(f"⏭️ SKIPPING {symbol}: Price pumped to ${current_price:.2f} (Research: ${last_price:.2f})")
+                        if current_price > last_price * 1.05:
+                            self.log_message(f"⏭️ SKIPPING {symbol}: Price pumped >5% — current=${current_price:.2f} vs research=${last_price:.2f}")
                             for o in self.get_orders():
                                 if o.asset.symbol == symbol and o.side == "buy":
                                     self.cancel_order(o)

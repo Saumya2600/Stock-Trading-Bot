@@ -1,50 +1,61 @@
 import os
 import sys
 from datetime import datetime
-import pytz
 
 # Add current directory to path
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
-from lumibot.brokers import Alpaca
-from lumibot.traders import Trader
-from bot import DeepResearchBot, ALPACA_CREDS, load_app_state, load_reports
-from utils import safe_print
+from utils import safe_print, is_market_open
+import state
 
-def is_market_open():
-    eastern = pytz.timezone("US/Eastern")
-    now = datetime.now(tz=pytz.utc).astimezone(eastern)
-    if now.weekday() >= 5: return False
-    open_time = now.replace(hour=9, minute=30, second=0, microsecond=0)
-    close_time = now.replace(hour=16, minute=0, second=0, microsecond=0)
-    return open_time <= now < close_time
-
-if __name__ == "__main__":
+def main():
     if not is_market_open():
-        safe_print(f"[{datetime.now()}] GITHUB ACTION: Market closed. Skipping trade cycle.")
+        safe_print(f"[{datetime.now()}] TRADE RUNNER: Market closed. Skipping trade cycle.")
         sys.exit(0)
 
-    safe_print(f"[{datetime.now()}] GITHUB ACTION: Starting trading cycle...")
-    
-    # Load state from disk (committed by research or previous trade run)
-    load_app_state()
-    load_reports()
+    safe_print(f"[{datetime.now()}] TRADE RUNNER: Market open. Loading state...")
+
+    # Load persisted research reports and app state from disk
+    state.load_reports()
+    state.load_app_state()
+
+    if not state.research_reports:
+        safe_print(f"[{datetime.now()}] TRADE RUNNER: No research reports found. Run research first. Exiting.")
+        sys.exit(0)
+
+    # Log what we have
+    report_symbols = [k for k in state.research_reports if not k.startswith("_")]
+    safe_print(f"[{datetime.now()}] TRADE RUNNER: Loaded {len(report_symbols)} research reports: {report_symbols}")
+    high_conviction = [(s, state.research_reports[s].get('ai_grade', 0)) for s in report_symbols if state.research_reports[s].get('ai_grade', 0) >= 55]
+    safe_print(f"[{datetime.now()}] TRADE RUNNER: High-conviction (grade>=55): {high_conviction}")
 
     try:
+        from config import ALPACA_CREDS
+        from lumibot.brokers import Alpaca
+        from lumibot.traders import Trader
+        from strategy import DeepResearchBot
+
         broker = Alpaca(ALPACA_CREDS)
-        strategy = DeepResearchBot(broker=broker)
-        
-        # We manually call the iteration once for a serverless-style execution
-        # Lumibot strategies need some internal setup which Trader.run_bot normally does
-        # But for a single run, we can trigger the core logic.
-        
-        # Note: We need to ensure strategy has its internal objects
-        strategy.initialize()
-        strategy.on_trading_iteration()
-        
-        safe_print(f"[{datetime.now()}] GITHUB ACTION: Trading cycle completed.")
+        strategy = DeepResearchBot(
+            name="Autonomous_Alpha_v1",
+            broker=broker,
+        )
+        state.strategy_instance = strategy
+
+        trader = Trader()
+        trader.add_strategy(strategy)
+
+        safe_print(f"[{datetime.now()}] TRADE RUNNER: Starting Lumibot trader (single cycle)...")
+        # run_all blocks — for GitHub Actions we rely on sleeptime="1M" then a fast exit
+        # The strategy's on_trading_iteration will fire once then we let it finish naturally
+        trader.run_all()
+
+        safe_print(f"[{datetime.now()}] TRADE RUNNER: Trading cycle completed.")
     except Exception as e:
-        safe_print(f"[{datetime.now()}] GITHUB ACTION ERROR: {e}")
+        safe_print(f"[{datetime.now()}] TRADE RUNNER ERROR: {e}")
         import traceback
         traceback.print_exc()
         sys.exit(1)
+
+if __name__ == "__main__":
+    main()
