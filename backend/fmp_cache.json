@@ -1,90 +1,90 @@
 {
-    "SOXL": {
+    "MAR": {
         "data": {
-            "sector": "Unknown",
-            "industry": "Unknown",
-            "pe": 133.19,
-            "peg": 0,
+            "sector": "Consumer Cyclical",
+            "industry": "Lodging",
+            "pe": 37.04,
+            "peg": 2.14,
             "debt_to_equity": 0,
-            "description": "The fund invests at least 80% of its net assets in financial instruments, such as swap agreements, securities of the index, and ETFs that track the index, that, in combination, provide 3X daily levera..."
+            "description": "Marriott International, Inc. engages in the operation, franchise, and licensing of hotel, residential, timeshare, and other lodging properties in the U.S. & Canada, Europe, Middle East & Africa, Great..."
         },
-        "updated_at": "2026-05-09T15:37:15.809967"
+        "updated_at": "2026-05-11T20:57:44.532038"
     },
-    "MSFT": {
+    "HBM": {
+        "data": {
+            "sector": "Basic Materials",
+            "industry": "Copper",
+            "pe": 15.27,
+            "peg": 0,
+            "debt_to_equity": 0.29,
+            "description": "Hudbay Minerals Inc., a diversified mining company, focuses on the exploration, development, operation, and optimization of properties in North and South America. It primarily explores for copper conc..."
+        },
+        "updated_at": "2026-05-11T20:58:09.699966"
+    },
+    "CVX": {
+        "data": {
+            "sector": "Energy",
+            "industry": "Oil & Gas Integrated",
+            "pe": 32.18,
+            "peg": 0.84,
+            "debt_to_equity": 0.24,
+            "description": "Chevron Corporation, through its subsidiaries, engages in the integrated energy and chemicals operations in the United States and internationally. It operates through Upstream, Downstream, and All Oth..."
+        },
+        "updated_at": "2026-05-11T20:58:33.791500"
+    },
+    "ANET": {
         "data": {
             "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 24.75,
-            "peg": 1.29,
-            "debt_to_equity": 0.3,
-            "description": "Microsoft Corporation develops and supports software, services, devices, and solutions worldwide. The Productivity and Business Processes segment offers Microsoft 365 commercial, enterprise mobility +..."
+            "industry": "Computer Hardware",
+            "pe": 46.88,
+            "peg": 1.82,
+            "debt_to_equity": 0,
+            "description": "Arista Networks, Inc. engages in the development, marketing, and sale of data-driven, client to cloud networking solutions for AI, data center, campus, and routing environments in the Americas, Europe..."
         },
-        "updated_at": "2026-05-09T15:37:40.381808"
+        "updated_at": "2026-05-11T20:58:57.118909"
     },
-    "TSM": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Semiconductors",
-            "pe": 35.22,
-            "peg": 1.31,
-            "debt_to_equity": 0.17,
-            "description": "Taiwan Semiconductor Manufacturing Company Limited, together with its subsidiaries, manufactures, packages, tests, and sells integrated circuits and other semiconductor devices in Taiwan, China, Europ..."
-        },
-        "updated_at": "2026-05-09T15:38:00.094921"
-    },
-    "IT": {
+    "PENG": {
         "data": {
             "sector": "Technology",
             "industry": "Information Technology Services",
-            "pe": 15.68,
-            "peg": 0.82,
-            "debt_to_equity": 52.93,
-            "description": "Gartner, Inc. provides business and technology insights for decisions and performance on an organization's mission-critical priorities in the United States, Canada, Europe, the Middle East, Africa, an..."
+            "pe": 62.2,
+            "peg": 0,
+            "debt_to_equity": 0.83,
+            "description": "Penguin Solutions, Inc. designs, builds, deploys and manages enterprise solutions worldwide. The company operates through three segments: Advanced Computing, Integrated Memory, and Optimized LED. It o..."
         },
-        "updated_at": "2026-05-09T15:38:23.001485"
+        "updated_at": "2026-05-11T20:59:16.681284"
     },
-    "RKLB": {
+    "VZ": {
+        "data": {
+            "sector": "Communication Services",
+            "industry": "Telecom Services",
+            "pe": 11.52,
+            "peg": 0.89,
+            "debt_to_equity": 1.92,
+            "description": "Verizon Communications Inc., through its subsidiaries, engages in the provision of communications, technology, information, and streaming products and services to consumers, businesses, and government..."
+        },
+        "updated_at": "2026-05-11T20:59:41.877393"
+    },
+    "GE": {
         "data": {
             "sector": "Industrials",
             "industry": "Aerospace & Defense",
+            "pe": 37.36,
+            "peg": 7.15,
+            "debt_to_equity": 1.17,
+            "description": "General Electric Company, doing business as GE Aerospace, designs and produces commercial and defense aircraft engines, integrated engine components, electric power, and aircraft systems. The company ..."
+        },
+        "updated_at": "2026-05-11T21:00:08.832569"
+    },
+    "ASTS": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Communication Equipment",
             "pe": 0,
             "peg": 0,
-            "debt_to_equity": 0.06,
-            "description": "Rocket Lab Corporation, a space company, provides launch services and space systems solutions in the United States, Canada, Japan, and internationally. The company operates through launch services and..."
+            "debt_to_equity": 0.94,
+            "description": "AST SpaceMobile, Inc., together with its subsidiaries, designs and develops the constellation of BlueBird satellites in the United States. The company provides a cellular broadband network in space to..."
         },
-        "updated_at": "2026-05-09T15:38:52.641608"
-    },
-    "QCOM": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Semiconductors",
-            "pe": 23.58,
-            "peg": 0.94,
-            "debt_to_equity": 0.56,
-            "description": "QUALCOMM Incorporated engages in the development and commercialization of foundational technologies for the wireless industry worldwide. It operates through three segments: Qualcomm CDMA Technologies ..."
-        },
-        "updated_at": "2026-05-09T15:39:15.458303"
-    },
-    "NVDA": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Semiconductors",
-            "pe": 43.83,
-            "peg": 0.68,
-            "debt_to_equity": 0.07,
-            "description": "NVIDIA Corporation operates as a data center scale AI infrastructure company. The company operates through two segments, Compute & Networking, and Graphics segments. The Compute & Networking segment p..."
-        },
-        "updated_at": "2026-05-09T15:39:41.417719"
-    },
-    "CAR": {
-        "data": {
-            "sector": "Industrials",
-            "industry": "Rental & Leasing Services",
-            "pe": 0,
-            "peg": 0.17,
-            "debt_to_equity": 0,
-            "description": "Avis Budget Group, Inc., together with its subsidiaries, provides car and truck rentals, car sharing, and ancillary products and services to businesses and consumers in the Americas, Europe, the Middl..."
-        },
-        "updated_at": "2026-05-09T15:40:00.569797"
+        "updated_at": "2026-05-11T21:00:35.434930"
     }
 }
