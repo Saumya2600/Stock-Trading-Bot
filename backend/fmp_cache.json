@@ -1,90 +1,90 @@
 {
-    "MAR": {
+    "MSFT": {
         "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Lodging",
-            "pe": 37.04,
-            "peg": 2.14,
-            "debt_to_equity": 0,
-            "description": "Marriott International, Inc. engages in the operation, franchise, and licensing of hotel, residential, timeshare, and other lodging properties in the U.S. & Canada, Europe, Middle East & Africa, Great..."
+            "sector": "Technology",
+            "industry": "Software - Infrastructure",
+            "pe": 24.27,
+            "peg": 1.29,
+            "debt_to_equity": 0.3,
+            "description": "Microsoft Corporation develops and supports software, services, devices, and solutions worldwide. The Productivity and Business Processes segment offers Microsoft 365 commercial, enterprise mobility +..."
         },
-        "updated_at": "2026-05-11T20:57:44.532038"
+        "updated_at": "2026-05-12T20:55:15.003361"
     },
-    "HBM": {
+    "VTI": {
         "data": {
-            "sector": "Basic Materials",
-            "industry": "Copper",
-            "pe": 15.27,
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 28.38,
             "peg": 0,
-            "debt_to_equity": 0.29,
-            "description": "Hudbay Minerals Inc., a diversified mining company, focuses on the exploration, development, operation, and optimization of properties in North and South America. It primarily explores for copper conc..."
-        },
-        "updated_at": "2026-05-11T20:58:09.699966"
-    },
-    "CVX": {
-        "data": {
-            "sector": "Energy",
-            "industry": "Oil & Gas Integrated",
-            "pe": 32.18,
-            "peg": 0.84,
-            "debt_to_equity": 0.24,
-            "description": "Chevron Corporation, through its subsidiaries, engages in the integrated energy and chemicals operations in the United States and internationally. It operates through Upstream, Downstream, and All Oth..."
-        },
-        "updated_at": "2026-05-11T20:58:33.791500"
-    },
-    "ANET": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Computer Hardware",
-            "pe": 46.88,
-            "peg": 1.82,
             "debt_to_equity": 0,
-            "description": "Arista Networks, Inc. engages in the development, marketing, and sale of data-driven, client to cloud networking solutions for AI, data center, campus, and routing environments in the Americas, Europe..."
+            "description": "The fund manager employs an indexing investment approach designed to track the performance of the CRSP U.S. Total Market Index (the \u201cTarget Index\u201d), which represents 100% of the investable U.S. stock ..."
         },
-        "updated_at": "2026-05-11T20:58:57.118909"
+        "updated_at": "2026-05-12T20:55:37.340321"
     },
-    "PENG": {
+    "BX": {
         "data": {
-            "sector": "Technology",
-            "industry": "Information Technology Services",
-            "pe": 62.2,
+            "sector": "Financial Services",
+            "industry": "Asset Management",
+            "pe": 31.48,
+            "peg": 1.81,
+            "debt_to_equity": 0.72,
+            "description": "Blackstone Inc. is an alternative asset management firm specializing in private equity, venture capital, real estate, hedge fund solutions, credit, secondary funds of funds, public debt and equity and..."
+        },
+        "updated_at": "2026-05-12T20:56:01.747224"
+    },
+    "C": {
+        "data": {
+            "sector": "Financial Services",
+            "industry": "Banks - Diversified",
+            "pe": 15.63,
+            "peg": 0.7,
+            "debt_to_equity": 0,
+            "description": "Citigroup Inc., a diversified financial service holding company, provides various financial products and services to consumers, corporations, governments, and institutions. It operates through five se..."
+        },
+        "updated_at": "2026-05-12T20:56:33.978735"
+    },
+    "QQQ": {
+        "data": {
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 34.5,
             "peg": 0,
-            "debt_to_equity": 0.83,
-            "description": "Penguin Solutions, Inc. designs, builds, deploys and manages enterprise solutions worldwide. The company operates through three segments: Advanced Computing, Integrated Memory, and Optimized LED. It o..."
+            "debt_to_equity": 0,
+            "description": "To maintain the correspondence between the composition and weights of the securities in the trust (the \"securities\") and the stocks in the NASDAQ-100 Index\u00ae, the adviser adjusts the securities from ti..."
         },
-        "updated_at": "2026-05-11T20:59:16.681284"
+        "updated_at": "2026-05-12T20:56:59.419944"
     },
-    "VZ": {
+    "SLS": {
         "data": {
-            "sector": "Communication Services",
-            "industry": "Telecom Services",
-            "pe": 11.52,
-            "peg": 0.89,
-            "debt_to_equity": 1.92,
-            "description": "Verizon Communications Inc., through its subsidiaries, engages in the provision of communications, technology, information, and streaming products and services to consumers, businesses, and government..."
-        },
-        "updated_at": "2026-05-11T20:59:41.877393"
-    },
-    "GE": {
-        "data": {
-            "sector": "Industrials",
-            "industry": "Aerospace & Defense",
-            "pe": 37.36,
-            "peg": 7.15,
-            "debt_to_equity": 1.17,
-            "description": "General Electric Company, doing business as GE Aerospace, designs and produces commercial and defense aircraft engines, integrated engine components, electric power, and aircraft systems. The company ..."
-        },
-        "updated_at": "2026-05-11T21:00:08.832569"
-    },
-    "ASTS": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Communication Equipment",
+            "sector": "Healthcare",
+            "industry": "Biotechnology",
             "pe": 0,
             "peg": 0,
-            "debt_to_equity": 0.94,
-            "description": "AST SpaceMobile, Inc., together with its subsidiaries, designs and develops the constellation of BlueBird satellites in the United States. The company provides a cellular broadband network in space to..."
+            "debt_to_equity": 0.01,
+            "description": "SELLAS Life Sciences Group, Inc., a late-stage clinical biopharmaceutical company, focuses on the development of novel therapeutics for various cancer indications in the United States. The company's l..."
         },
-        "updated_at": "2026-05-11T21:00:35.434930"
+        "updated_at": "2026-05-12T20:57:27.748476"
+    },
+    "ES": {
+        "data": {
+            "sector": "Utilities",
+            "industry": "Utilities - Regulated Electric",
+            "pe": 14.72,
+            "peg": 2.38,
+            "debt_to_equity": 1.82,
+            "description": "Eversource Energy, a public utility holding company, engages in the energy delivery business. The company operates through Electric Distribution, Electric Transmission, Natural Gas Distribution, and W..."
+        },
+        "updated_at": "2026-05-12T20:57:47.146175"
+    },
+    "AAPL": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Consumer Electronics",
+            "pe": 35.73,
+            "peg": 2.57,
+            "debt_to_equity": 0.8,
+            "description": "Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide. The company offers iPhone, a line of smartphones; Mac, a line of personal ..."
+        },
+        "updated_at": "2026-05-12T20:58:12.212044"
     }
 }
