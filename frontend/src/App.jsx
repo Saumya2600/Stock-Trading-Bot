@@ -758,44 +758,6 @@ function App() {
     );
   };
 
-  const renderTradeTimeline = () => {
-    if (!tradeHistory || tradeHistory.length === 0) return null;
-    
-    return (
-      <div className="glass-card" style={{ marginBottom: '3rem', padding: '2rem' }}>
-        <h3 className="headline-sm" style={{ marginBottom: '1.5rem' }}>Bot Trade History</h3>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-          {tradeHistory.slice().reverse().map((trade, i) => (
-            <div key={i} style={{ 
-              display: 'flex', justifyContent: 'space-between', alignItems: 'center', 
-              padding: '1rem', background: 'rgba(255, 255, 255, 0.02)', 
-              borderLeft: `4px solid ${trade.side === 'BUY' ? '#3fff8b' : '#ff716c'}`,
-              borderRadius: '0 8px 8px 0'
-            }}>
-              <div>
-                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
-                  <span className="headline-md">{trade.symbol}</span>
-                  <span className="label-sm" style={{ 
-                    padding: '2px 6px', borderRadius: '4px', 
-                    background: trade.side === 'BUY' ? 'rgba(63, 255, 139, 0.1)' : 'rgba(255, 113, 108, 0.1)',
-                    color: trade.side === 'BUY' ? '#3fff8b' : '#ff716c'
-                  }}>{trade.side}</span>
-                </div>
-                <div className="label-sm" style={{ color: 'var(--on-surface-variant)', marginTop: '0.25rem' }}>
-                  {new Date(trade.timestamp).toLocaleString()}
-                </div>
-              </div>
-              <div style={{ textAlign: 'right' }}>
-                <div className="headline-sm">{trade.quantity} shares</div>
-                <div className="label-md" style={{ color: 'var(--on-surface-variant)' }}>@ ${trade.price.toFixed(2)}</div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    );
-  };
-
   const HubPage = () => (
     <>
       <header style={{ marginBottom: '2rem' }}>
