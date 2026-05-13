@@ -40,10 +40,15 @@ def load_json(path, default):
     return default
 
 def save_app_state():
-    save_json({
+    data = {
         "trade_history": trade_history,
         "portfolio_performance": portfolio_performance
-    }, STATE_FILE)
+    }
+    save_json(data, STATE_FILE)
+    # Also save to frontend public for local dev
+    public_path = os.path.join("..", "frontend", "public", STATE_FILE)
+    if os.path.exists(os.path.dirname(public_path)):
+        save_json(data, public_path)
 
 def load_app_state():
     global trade_history, portfolio_performance
@@ -64,6 +69,10 @@ def load_fmp_cache():
 
 def save_reports():
     save_json(research_reports, REPORTS_FILE)
+    # Also save to frontend public for local dev
+    public_path = os.path.join("..", "frontend", "public", REPORTS_FILE)
+    if os.path.exists(os.path.dirname(public_path)):
+        save_json(research_reports, public_path)
 
 def load_reports():
     global research_reports

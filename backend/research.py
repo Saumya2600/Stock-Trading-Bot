@@ -13,6 +13,14 @@ import state
 
 BLACKLIST = ["MSTR", "SGOV", "TLT", "SHY", "IEI"]
 
+# Combine all keys, putting RESEARCH_GEMINI_KEY first if it exists
+ALL_KEYS = []
+if RESEARCH_GEMINI_KEY:
+    ALL_KEYS.append(RESEARCH_GEMINI_KEY)
+for k in GEMINI_API_KEYS:
+    if k and k not in ALL_KEYS:
+        ALL_KEYS.append(k)
+
 CURRENT_GEMINI_KEY_INDEX = 0
 model = None
 # Set to True when ALL keys are quota-exhausted this cycle; reset each research cycle
@@ -21,17 +29,13 @@ _all_keys_exhausted = False
 def configure_gemini():
     global model, CURRENT_GEMINI_KEY_INDEX
     
-    # Use dedicated research key if available, else rotate
-    if RESEARCH_GEMINI_KEY:
-        key = RESEARCH_GEMINI_KEY
-        safe_print(f"[GEMINI] 🧪 Using dedicated RESEARCH_GEMINI_KEY")
-    else:
-        if not GEMINI_API_KEYS:
-            safe_print("[GEMINI] ⚠️  NO GEMINI API KEYS FOUND — all analysis will use local fallback! Check GOOGLE_API_KEY in .env")
-            model = None
-            return
-        key = GEMINI_API_KEYS[CURRENT_GEMINI_KEY_INDEX]
-        safe_print(f"[GEMINI] ✅ Using rotated key index: {CURRENT_GEMINI_KEY_INDEX} ({key[:8]}...)")
+    if not ALL_KEYS:
+        safe_print("[GEMINI] ⚠️  NO GEMINI API KEYS FOUND — all analysis will use local fallback! Check .env")
+        model = None
+        return
+        
+    key = ALL_KEYS[CURRENT_GEMINI_KEY_INDEX]
+    safe_print(f"[GEMINI] ✅ Using rotated key index: {CURRENT_GEMINI_KEY_INDEX} ({key[:8]}...)")
         
     try:
         genai.configure(api_key=key)
@@ -51,9 +55,7 @@ def configure_gemini():
 
 def switch_gemini_key():
     global CURRENT_GEMINI_KEY_INDEX, model, _all_keys_exhausted
-    if RESEARCH_GEMINI_KEY:
-        return False
-    if CURRENT_GEMINI_KEY_INDEX < len(GEMINI_API_KEYS) - 1:
+    if CURRENT_GEMINI_KEY_INDEX < len(ALL_KEYS) - 1:
         CURRENT_GEMINI_KEY_INDEX += 1
         safe_print(f"[GEMINI] Switching to key index {CURRENT_GEMINI_KEY_INDEX}...")
         configure_gemini()
@@ -182,7 +184,7 @@ Your goal: Identify if {symbol} ({name}) will skyrocket within 48 hours based on
 **Data**:
 - Symbol: {symbol}
 - Name: {name}
-- Price: {current_price}
+- Price: {current_price} (CRITICAL: All entry/target/stop prices MUST be relative to this actual market price).
 - Technicals: {technicals}
 - Fundamentals: {fundamentals}
 - News: {news_headlines}
@@ -302,12 +304,20 @@ def run_research_cycle(force=False, manual_reason=None):
 
     sym_str = ",".join(all_targets)
     all_bars = {}
+    all_snapshots = {}
     for _ in range(3): # 3 retries for Alpaca rate limit
-        res = requests.get(f"https://data.alpaca.markets/v2/stocks/bars?symbols={sym_str}&timeframe=1Day&limit=30", headers=headers, timeout=10)
-        if res.status_code == 200:
-            all_bars = res.json().get('bars', {})
-            break
-        elif res.status_code == 429:
+        # Get Snapshots for latest price
+        s_res = requests.get(f"https://data.alpaca.markets/v2/stocks/snapshots?symbols={sym_str}", headers=headers, timeout=10)
+        if s_res.status_code == 200:
+            all_snapshots = s_res.json()
+            
+        # Get Bars for technicals
+        b_res = requests.get(f"https://data.alpaca.markets/v2/stocks/bars?symbols={sym_str}&timeframe=1Day&limit=30", headers=headers, timeout=10)
+        if b_res.status_code == 200:
+            all_bars = b_res.json().get('bars', {})
+            if all_bars or all_snapshots:
+                break
+        elif b_res.status_code == 429:
             time.sleep(2.0)
         else:
             break
@@ -326,9 +336,18 @@ def run_research_cycle(force=False, manual_reason=None):
             headlines = [n['headline'] for n in news_res.get('news', [])]
             
             bars = all_bars.get(symbol, [])
+            snap = all_snapshots.get(symbol, {})
+            last_price = 0
+            
+            # 1. Get latest price from Snapshot
+            if snap:
+                # Use latest trade or daily bar close
+                last_price = snap.get('latestTrade', {}).get('p') or snap.get('dailyBar', {}).get('c') or 0
+                
             if bars:
                 df_tech = pd.DataFrame(bars)
-                last_price = df_tech['c'].iloc[-1]
+                if last_price == 0:
+                    last_price = df_tech['c'].iloc[-1]
                 sma_fast = simple_sma(df_tech['c'], 9).iloc[-1]
                 sma_slow = simple_sma(df_tech['c'], 21).iloc[-1]
                 rsi = simple_rsi(df_tech['c'], 14).iloc[-1]
@@ -339,8 +358,12 @@ def run_research_cycle(force=False, manual_reason=None):
                     "rsi": safe_float(rsi),
                     "volume_trend": safe_float(volume_trend)
                 }
+            elif snap and snap.get('dailyBar'):
+                # Minimal technicals if only snapshot available
+                last_price = snap['dailyBar']['c']
+                technicals = {"sma_fast": 0.0, "sma_slow": 0.0, "rsi": 0.0, "volume_trend": snap['dailyBar']['v']}
             else:
-                safe_print(f"[RESEARCH] ⚠️  {symbol}: bars fetch empty/failed. Response: {str(bars)[:200]}")
+                safe_print(f"[RESEARCH] ⚠️  {symbol}: No bars or snapshot data found.")
                 last_price = 0
                 technicals = {}
             fundamentals = fetch_fmp_data(symbol)
@@ -366,7 +389,8 @@ def run_research_cycle(force=False, manual_reason=None):
                 "bear_case": analysis.get("bear_case", ""),
                 "bull_case": analysis.get("bull_case", ""),
                 "price_history": bars if isinstance(bars, list) else [],
-                "updated_at": now.isoformat()
+                "updated_at": now.isoformat(),
+                "fundamentals": fundamentals
             }
             temp_signals[symbol] = {
                 "symbol": symbol,

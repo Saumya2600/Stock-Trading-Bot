@@ -1,90 +1,90 @@
 {
-    "SOXL": {
+    "SPY": {
         "data": {
             "sector": "Unknown",
             "industry": "Unknown",
-            "pe": 133.19,
+            "pe": 27.7,
             "peg": 0,
             "debt_to_equity": 0,
-            "description": "The fund invests at least 80% of its net assets in financial instruments, such as swap agreements, securities of the index, and ETFs that track the index, that, in combination, provide 3X daily levera..."
+            "description": "The trust seeks to achieve its investment objective by holding a portfolio of the common stocks that are included in the index (the \u201cPortfolio\u201d), with the weight of each stock in the Portfolio substan..."
         },
-        "updated_at": "2026-05-09T15:37:15.809967"
+        "updated_at": "2026-05-09T19:57:22.698587"
     },
-    "MSFT": {
+    "HBM": {
+        "data": {
+            "sector": "Basic Materials",
+            "industry": "Copper",
+            "pe": 14.98,
+            "peg": 0,
+            "debt_to_equity": 0.29,
+            "description": "Hudbay Minerals Inc., a diversified mining company, focuses on the exploration, development, operation, and optimization of properties in North and South America. It primarily explores for copper conc..."
+        },
+        "updated_at": "2026-05-09T19:57:47.729013"
+    },
+    "ORCL": {
         "data": {
             "sector": "Technology",
             "industry": "Software - Infrastructure",
-            "pe": 24.75,
-            "peg": 1.29,
-            "debt_to_equity": 0.3,
-            "description": "Microsoft Corporation develops and supports software, services, devices, and solutions worldwide. The Productivity and Business Processes segment offers Microsoft 365 commercial, enterprise mobility +..."
+            "pe": 35.24,
+            "peg": 1.24,
+            "debt_to_equity": 4.15,
+            "description": "Oracle Corporation offers products and services that address enterprise information technology environments worldwide. Its Oracle cloud software as a service offering include various cloud software ap..."
         },
-        "updated_at": "2026-05-09T15:37:40.381808"
+        "updated_at": "2026-05-09T19:58:20.259016"
     },
-    "TSM": {
+    "OKLO": {
         "data": {
-            "sector": "Technology",
-            "industry": "Semiconductors",
-            "pe": 35.22,
-            "peg": 1.31,
-            "debt_to_equity": 0.17,
-            "description": "Taiwan Semiconductor Manufacturing Company Limited, together with its subsidiaries, manufactures, packages, tests, and sells integrated circuits and other semiconductor devices in Taiwan, China, Europ..."
-        },
-        "updated_at": "2026-05-09T15:38:00.094921"
-    },
-    "IT": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Information Technology Services",
-            "pe": 15.68,
-            "peg": 0.82,
-            "debt_to_equity": 52.93,
-            "description": "Gartner, Inc. provides business and technology insights for decisions and performance on an organization's mission-critical priorities in the United States, Canada, Europe, the Middle East, Africa, an..."
-        },
-        "updated_at": "2026-05-09T15:38:23.001485"
-    },
-    "RKLB": {
-        "data": {
-            "sector": "Industrials",
-            "industry": "Aerospace & Defense",
+            "sector": "Utilities",
+            "industry": "Utilities - Independent Power Producers",
             "pe": 0,
             "peg": 0,
-            "debt_to_equity": 0.06,
-            "description": "Rocket Lab Corporation, a space company, provides launch services and space systems solutions in the United States, Canada, Japan, and internationally. The company operates through launch services and..."
+            "debt_to_equity": 0.0,
+            "description": "Oklo Inc. develops fission power plants to provide energy at scale to customers in the United States. The company offers Aurora Powerhouse, which is designed to produce between 15 and up to 75 megawat..."
         },
-        "updated_at": "2026-05-09T15:38:52.641608"
+        "updated_at": "2026-05-09T19:58:44.393241"
     },
-    "QCOM": {
+    "GOOG": {
         "data": {
-            "sector": "Technology",
-            "industry": "Semiconductors",
-            "pe": 23.58,
-            "peg": 0.94,
-            "debt_to_equity": 0.56,
-            "description": "QUALCOMM Incorporated engages in the development and commercialization of foundational technologies for the wireless industry worldwide. It operates through three segments: Qualcomm CDMA Technologies ..."
+            "sector": "Communication Services",
+            "industry": "Internet Content & Information",
+            "pe": 30.31,
+            "peg": 1.56,
+            "debt_to_equity": 0.2,
+            "description": "Alphabet Inc. offers various products and platforms in the United States, Europe, the Middle East, Africa, the Asia-Pacific, Canada, and Latin America. It operates through Google Services, Google Clou..."
         },
-        "updated_at": "2026-05-09T15:39:15.458303"
+        "updated_at": "2026-05-09T19:59:10.237064"
     },
-    "NVDA": {
+    "SMH": {
         "data": {
-            "sector": "Technology",
-            "industry": "Semiconductors",
-            "pe": 43.83,
-            "peg": 0.68,
-            "debt_to_equity": 0.07,
-            "description": "NVIDIA Corporation operates as a data center scale AI infrastructure company. The company operates through two segments, Compute & Networking, and Graphics segments. The Compute & Networking segment p..."
-        },
-        "updated_at": "2026-05-09T15:39:41.417719"
-    },
-    "CAR": {
-        "data": {
-            "sector": "Industrials",
-            "industry": "Rental & Leasing Services",
-            "pe": 0,
-            "peg": 0.17,
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 46.62,
+            "peg": 0,
             "debt_to_equity": 0,
-            "description": "Avis Budget Group, Inc., together with its subsidiaries, provides car and truck rentals, car sharing, and ancillary products and services to businesses and consumers in the Americas, Europe, the Middl..."
+            "description": "The fund normally invests at least 80% of its total assets in securities that comprise the fund's benchmark index. The index includes common stocks and depositary receipts of U.S. exchange-listed comp..."
         },
-        "updated_at": "2026-05-09T15:40:00.569797"
+        "updated_at": "2026-05-09T19:59:36.501514"
+    },
+    "MU": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Semiconductors",
+            "pe": 35.21,
+            "peg": 0.26,
+            "debt_to_equity": 0.15,
+            "description": "Micron Technology, Inc. designs, develops, manufactures, and sells memory and storage products in the United States, Taiwan, Japan, Mainland China, Hong Kong, Europe, and internationally. It operates ..."
+        },
+        "updated_at": "2026-05-09T20:00:01.111316"
+    },
+    "NBIS": {
+        "data": {
+            "sector": "Communication Services",
+            "industry": "Internet Content & Information",
+            "pe": 4426.25,
+            "peg": 0.63,
+            "debt_to_equity": 1.08,
+            "description": "Nebius Group N.V., a technology company, engages in building full-stack infrastructure to service the global AI industry in the United States, the United Kingdom, and internationally. It offers Nebius..."
+        },
+        "updated_at": "2026-05-09T20:00:52.710100"
     }
 }

@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation, useNavigate } from 'react-router-dom';
-import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer, CartesianGrid } from 'recharts';
-import { X, Search, LayoutDashboard, LineChart as ChartIcon, Settings, Brain } from 'lucide-react';
+import ExpandableReportCards from '@/components/ExpandableReportCards';
+import { X, Search, LayoutDashboard, LineChart as ChartIcon, Settings, Brain, FileText } from 'lucide-react';
 
 const SECTOR_MAP = {
   Technology: ['AAPL', 'MSFT', 'NVDA', 'AVGO', 'ORCL', 'ADBE', 'CRM', 'AMD', 'QCOM', 'INTC', 'TSM', 'ASML', 'CSCO', 'IBM', 'TXN', 'NOW', 'INTU', 'AMAT', 'MU', 'LRCX', 'PANW'],
@@ -82,23 +82,26 @@ function App() {
   const isServerless = API_BASE_RAW.includes("githubusercontent.com");
   const API_BASE = (isServerless || !API_BASE_RAW) ? API_BASE_RAW : "";
 
-  // Poll the Python Bot API (Serverless via GitHub)
+  // Poll the Python Bot API (Serverless via GitHub or Local JSON)
   useEffect(() => {
     const fetchBotData = async () => {
       try {
-        if (isServerless) {
-          // Fetch raw JSON from GitHub repository directly
-          const cacheBuster = `?t=${Date.now()}`;
+        const cacheBuster = `?t=${Date.now()}`;
+        
+        // Strategy: If API_BASE is empty or includes githubusercontent, we are in "static/serverless" mode.
+        // In this mode, we fetch reports.json and app_state.json directly.
+        if (isServerless || !API_BASE_RAW) {
           const [resReports, resState] = await Promise.all([
-            fetch(`${API_BASE}/reports.json${cacheBuster}`),
-            fetch(`${API_BASE}/app_state.json${cacheBuster}`)
+            fetch(`${API_BASE}/reports.json${cacheBuster}`).catch(() => ({ ok: false })),
+            fetch(`${API_BASE}/app_state.json${cacheBuster}`).catch(() => ({ ok: false }))
           ]);
 
           if (resReports.ok) {
             const reportsData = await resReports.json();
-            setBotSignals({ signals: Object.keys(reportsData) });
+            setBotSignals({ signals: Object.keys(reportsData).filter(k => !k.startsWith('_')) });
             setResearchReports(reportsData);
             setResearchStatus({ status: "idle" });
+            setBotOnline(true);
           }
 
           if (resState.ok) {
@@ -107,11 +110,10 @@ function App() {
             setTradeHistory(stateData.trade_history || []);
           }
           
-          setBotOnline(resReports.ok && resState.ok);
-          // Note: In Serverless mode, live positions are fetched directly from Alpaca in fetchAlpacaData below.
-          setPositions({ positions: [] }); 
+          // In Serverless mode, live positions are fetched directly from Alpaca in fetchAlpacaData below.
+          setPositions(prev => prev || { positions: [] }); 
         } else {
-          // Fallback to active backend server
+          // Fallback to active backend server (FastAPI)
           const [resSignals, resResearch, resPerf, resPositions, resStatus, resTrades] = await Promise.all([
             fetch(`${API_BASE}/signals`),
             fetch(`${API_BASE}/research`),
@@ -119,23 +121,27 @@ function App() {
             fetch(`${API_BASE}/positions`),
             fetch(`${API_BASE}/research_status`),
             fetch(`${API_BASE}/trade_history`)
-          ]);
+          ].map(p => p.catch(() => ({ ok: false }))));
           
           if (resSignals.ok) setBotSignals(await resSignals.json());
           if (resResearch.ok) setResearchReports(await resResearch.json());
           if (resPerf.ok) setPerformance(await resPerf.json());
           if (resPositions.ok) {
             const posData = await resPositions.json();
-            if (posData && posData.positions && posData.positions.length > 0) {
+            if (posData && posData.positions) {
               setPositions(prev => ({ ...posData, is_live_alpaca: false }));
             }
           }
           if (resStatus.ok) setResearchStatus(await resStatus.json());
-          if (resTrades.ok) setTradeHistory((await resTrades.json()).history || []);
+          if (resTrades.ok) {
+            const historyData = await resTrades.json();
+            setTradeHistory(historyData.history || []);
+          }
           
           setBotOnline(resSignals.ok);
         }
       } catch (e) {
+        console.error("Bot Data Fetch Error:", e);
         setBotOnline(false);
       }
     };
@@ -143,7 +149,7 @@ function App() {
     fetchBotData();
     const interval = setInterval(fetchBotData, 5000); // Poll every 5s
     return () => clearInterval(interval);
-  }, [API_BASE]);
+  }, [API_BASE, isServerless, API_BASE_RAW]);
 
   useEffect(() => {
     fetchAlpacaData();
@@ -1020,9 +1026,9 @@ function App() {
           <Link to="/" className={`nav-item ${location.pathname === '/' ? 'active' : ''}`}>
              <Brain size={18} /> Intelligence Hub
           </Link>
-          {/* <Link to="/market" className={`nav-item ${location.pathname === '/market' ? 'active' : ''}`}>
-             <LayoutDashboard size={18} /> Global Market
-          </Link> */}
+          <Link to="/reports" className={`nav-item ${location.pathname === '/reports' ? 'active' : ''}`}>
+             <FileText size={18} /> Deep Research
+          </Link>
           <Link to="/settings" className={`nav-item ${location.pathname === '/settings' ? 'active' : ''}`}>
              <Settings size={18} /> Settings
           </Link>
@@ -1054,6 +1060,7 @@ function App() {
         <main className="main-content">
           <Routes>
             <Route path="/" element={<HubPage />} />
+            <Route path="/reports" element={<ExpandableReportCards reports={researchReports} />} />
             <Route path="/market" element={<MarketPage />} />
             <Route path="/settings" element={renderSettings()} />
           </Routes>

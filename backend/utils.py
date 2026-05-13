@@ -5,13 +5,16 @@ from datetime import datetime, timedelta
 def safe_print(s: str):
     try:
         sys.stdout.write(s + "\n")
+        sys.stdout.flush()
     except Exception:
         enc = sys.stdout.encoding or 'utf-8'
         try:
             out = s.encode(enc, errors='replace').decode(enc)
             sys.stdout.write(out + "\n")
+            sys.stdout.flush()
         except Exception:
             sys.stdout.write(s.encode('utf-8', errors='replace').decode('utf-8') + "\n")
+            sys.stdout.flush()
 
 def simple_sma(series, length):
     return series.rolling(length).mean()
