@@ -1,208 +1,283 @@
 {
+    "BABA": {
+        "symbol": "BABA",
+        "name": "BABA",
+        "price": 134.81,
+        "ai_grade": 78,
+        "reasoning": "As an elite quantitative analyst focused on explosive short-term breakouts, my analysis for BABA reveals a compelling bullish narrative driven primarily by robust fundamentals and significant positive news flow, despite a critical lack of confirming technical data. The provided technical data for SMA, RSI, and volume are all zero, which severely hampers the ability to identify an immediate technical breakout. This absence of verifiable technical momentum, typically crucial for 1-2 day surges, prevents a 'Massive Breakout Potential' grade.\n\nHowever, the fundamental picture is exceptionally strong. Alibaba's **P/E ratio of 23.65** is reasonable for a growth stock. More importantly, its **PEG ratio of 0.86** is a significant bullish indicator, suggesting the stock is undervalued relative to its growth prospects. A **Debt-to-Equity ratio of 0.26** highlights a robust balance sheet with minimal financial leverage, providing stability and flexibility. Operating in the **Consumer Cyclical sector** and specifically 'Internet Retail', BABA is well-positioned to capitalize on global e-commerce trends and, crucially, the surging interest in AI integration.\n\nNews flow is overwhelmingly positive, creating strong FOMO potential. Headlines like 'Alibaba Labeled 'China's Google' By Citi' and 'Alibaba's AI Shopping Bet Could Change How You Buy Online Forever' are powerful catalysts, signaling both analyst upgrades and innovative product development with a strong AI focus. The mention by Peter Brandt, 'This ETF With Exposure To Taiwan Semiconductor, Alibaba And SK Hynix, Says It Is 'Headed Much Higher'', adds further credibility and potential institutional interest. While social sentiment data isn't directly provided, such impactful headlines are highly likely to generate significant buzz across platforms like Reddit and Twitter, fueling retail FOMO. The 'whale activity' news also suggests institutional attention.\n\nIn summary, while the technical indicators are a blind spot, the combination of strong fundamentals (especially PEG < 1) and potent, AI-centric news catalysts creates a high probability for a positive price movement. The lack of technical confirmation tempers the 'breakout' aspect but the underlying bullish drivers are undeniable for a short-term pop.",
+        "entry_price": 134.81,
+        "target_price": 142.25,
+        "stop_loss": 131.4,
+        "risk_level": "Medium",
+        "key_catalysts": "Alibaba's AI integration ('AI Shopping Bet'), 'China's Google' label by Citi, Peter Brandt's positive mention, strong fundamental undervaluation (PEG < 1), institutional 'whale' activity.",
+        "bear_case": "The primary bear case is the complete lack of verifiable technical momentum (SMA, RSI, Volume). Without these indicators confirming underlying buying pressure, the positive news and fundamentals might not immediately translate into a price surge within the 1-2 day timeframe. Any negative broader market sentiment, particularly related to the Chinese market or tech sector, or unexpected regulatory news, could quickly negate the bullish catalysts and lead to a pullback.",
+        "bull_case": "The compelling bull case rests on BABA's exceptional fundamentals \u2013 particularly the sub-1 PEG ratio and low debt-to-equity \u2013 providing a strong value proposition for institutional investors. Coupled with highly positive, AI-driven news catalysts from reputable sources (Citi, Peter Brandt), this could trigger a rapid re-rating of the stock. Institutional buying, fueled by the narrative of BABA leveraging AI in e-commerce, combined with retail FOMO, could easily propel the stock upwards of 5-8% in a 1-2 day timeframe, seeking out its fundamental fair value.",
+        "price_history": [
+            {
+                "c": 134.78,
+                "h": 136.97,
+                "l": 133.82,
+                "n": 178714,
+                "o": 136.49,
+                "t": "2026-05-12T04:00:00Z",
+                "v": 16131836,
+                "vw": 135.006836
+            }
+        ],
+        "updated_at": "2026-05-12T23:13:08.592257",
+        "fundamentals": {
+            "sector": "Consumer Cyclical",
+            "industry": "Internet Retail",
+            "pe": 23.65,
+            "peg": 0.86,
+            "debt_to_equity": 0.26,
+            "description": "Alibaba Group Holding Limited, through its subsidiaries, provides technology infrastructure and marketing reach to help merchants, brands, retailers, and other businesses to engage with their users an..."
+        }
+    },
+    "GME": {
+        "symbol": "GME",
+        "name": "GME",
+        "price": 22.4,
+        "ai_grade": 10,
+        "reasoning": "As an elite quant analyst specializing in explosive short-term breakouts, my assessment for GME's potential to skyrocket within 48 hours is overwhelmingly bearish, resulting in a grade of 10/100 \u2013 utterly failing the 'Massive Breakout Potential' threshold. The primary technical indicators crucial for identifying such explosive movements are entirely absent or negative based on the provided data. The `sma_fast` and `sma_slow` values are both 0.0, precluding any 'Golden Cross' formation that would signal bullish momentum. The RSI is also 0.0, indicating a complete absence of rising buying pressure needed for a surge, let alone approaching the 75 threshold. Critically, `volume_trend` (RVOL) is 0.0, signifying no unusual volume spike \u2013 a non-negotiable component for any legitimate short-term breakout. These null technicals unequivocally demonstrate a severe lack of foundational momentum required for a surge.\n\nAdding to this bleak technical picture, the news sentiment is catastrophic. Headlines confirm eBay's outright rejection of GameStop's 'massive $56 billion bid,' deeming it 'neither credible nor attractive.' This is a profound blow to corporate credibility, suggesting a highly questionable strategic move that can only erode investor confidence. Compounding this, the previous Roaring Kitty-induced rally has been actively dismantled by news of his account being 'hacked' and posts 'deleted,' leading directly to GME shares 'trading lower' and 'whimpering.' This eliminates the key social FOMO catalyst that GME has historically relied upon. There are no counterbalancing positive headlines such as 'Earnings Beat,' 'Short Squeeze,' 'FDA Approval,' 'Partnership,' or 'New Product' to ignite a rally. Social sentiment is collapsing, not exploding.\n\nFrom a fundamental perspective, GME's P/E ratio stands at 29.05. This is a high valuation for a specialty retail company within the 'Consumer Cyclical' sector, making it particularly vulnerable to negative news and missed expectations. While the PEG ratio is an intriguing 0.31, which typically signals undervaluation based on growth, for a highly speculative meme stock with volatile earnings and uncertain long-term prospects, this metric can be highly distorted and should not be relied upon as a short-term breakout catalyst given the current crisis-level news. The Debt-to-Equity ratio of 0.8 is manageable but provides no intrinsic drive for a breakout. Overall, the fundamentals offer no immediate catalysts and the high P/E increases vulnerability to downside.\n\nIn conclusion, with zero positive technical signals, severely negative and credibility-damaging news, and fundamentals offering no immediate catalysts, a skyrocket within 48 hours is profoundly improbable. This scenario represents an extremely high-risk proposition for a long position and is, at best, a short opportunity.",
+        "entry_price": 22.4,
+        "target_price": 23.52,
+        "stop_loss": 21.0,
+        "risk_level": "High",
+        "key_catalysts": "None currently identifiable for a breakout. The previous primary social catalyst (Roaring Kitty) is compromised and its impact reversed. A true breakout would necessitate unforeseen, overwhelmingly positive news (e.g., a verified, impactful short squeeze or a genuine, transformative strategic announcement) of which there is no current indication.",
+        "bear_case": "Continued and accelerated sell-off due to the severe negative news regarding the failed, bizarre eBay bid and the complete dismantling of the Roaring Kitty catalyst. Loss of institutional and retail investor confidence, technical breakdowns below key psychological and support levels, leading to significant downside pressure and potential capitulation.",
+        "bull_case": "An immediate and verifiable positive announcement (e.g., successful strategic pivot, surprise dividend, or a proven, controlled re-engagement of Roaring Kitty) that could trigger a sudden, coordinated retail buying frenzy. However, given the current data, this is highly improbable and would be a 'black swan' event rather than a predictable breakout.",
+        "price_history": [
+            {
+                "c": 22.37,
+                "h": 23.19,
+                "l": 22.325,
+                "n": 86700,
+                "o": 22.8,
+                "t": "2026-05-12T04:00:00Z",
+                "v": 12080634,
+                "vw": 22.686001
+            }
+        ],
+        "updated_at": "2026-05-12T23:13:08.592257",
+        "fundamentals": {
+            "sector": "Consumer Cyclical",
+            "industry": "Specialty Retail",
+            "pe": 29.05,
+            "peg": 0.31,
+            "debt_to_equity": 0.8,
+            "description": "GameStop Corp., a specialty retailer, provides games, collectibles, and entertainment products through its stores and e-commerce platforms in United States, Australia and Europe. The company sells new..."
+        }
+    },
+    "GUTS": {
+        "symbol": "GUTS",
+        "name": "GUTS",
+        "price": 0.7426,
+        "ai_grade": 90,
+        "reasoning": "As an elite quantitative analyst focused on explosive short-term breakouts, GUTS presents a compelling, albeit high-risk, opportunity within the next 48 hours, primarily driven by significant news catalysts overshadowing the lack of direct technical data. The provided technical indicators (SMA9, SMA21, RSI, Volume Trend) are all reported as 0.0, which means I cannot directly confirm a Golden Cross, rising RSI, or a quantitative volume spike from the given data. However, the news 'Fractyl Health (GUTS) Stock Jumps 21% After Hours' serves as de-facto evidence of a massive price surge and implied volume spike, which is the very definition of an initiating breakout. \n\nThe core of this breakout potential lies in a powerful combination of positive news: an 'Earnings Beat' with Q1 EPS of $0.06 significantly surpassing the $(0.16) estimate, and a critical 'New Product' development with 'Clinical Trial Application Authorization In Netherlands To Initiate Phase 1/2 First-in-human Study Of RJVA-001.' This double-barreled catalyst is precisely what ignites FOMO in the Biotechnology sector. Furthermore, HC Wainwright & Co. reiterating a 'Buy' with an $8 price target, vastly above the current $0.7426, adds significant bullish sentiment and validation, fueling further speculation and potential for social sentiment (Reddit/Twitter) to explode. \n\nFrom a fundamental perspective, GUTS operates in the high-growth, high-volatility 'Healthcare' sector, specifically 'Biotechnology.' Its P/E ratio of 0 and PEG of 0 are typical for a development-stage biotech company that is not yet profitable, indicating its valuation is purely based on future potential and clinical success. This inherently makes it a speculative play. The Debt-to-Equity ratio of 6.52 is significantly high, indicating substantial reliance on debt to finance its operations and R&D. While this introduces a long-term financial risk, for a rapid 1-2 day breakout, immediate catalysts often overshadow such fundamental concerns unless a liquidity crisis is imminent. The current confluence of positive news strongly suggests that the market will prioritize future prospects over the high debt ratio in the immediate short-term. The 'after-hours' jump confirms that the market has already reacted positively, indicating sustained momentum is likely in the coming trading sessions.",
+        "entry_price": 0.7426,
+        "target_price": 1.1,
+        "stop_loss": 0.65,
+        "risk_level": "High",
+        "key_catalysts": "Q1 Earnings Beat, Clinical Trial Authorization for new product (RJVA-001), HC Wainwright $8 price target reiteration, significant after-hours price jump indicating immediate market FOMO.",
+        "bear_case": "The significant Debt-to-Equity ratio of 6.52 could eventually deter institutional investment or become a focus after the initial euphoria. Lack of direct technical data (SMA, RSI, Volume Trend reported as 0.0) means we are relying solely on inferred momentum from news, which could lead to a 'buy the rumor, sell the news' event. A broader market correction or inability to sustain the 21% after-hours momentum could lead to rapid profit-taking and a sharp reversal.",
+        "bull_case": "The potent combination of an earnings beat and clinical trial authorization for a new drug candidate in the volatile biotech sector creates ideal conditions for an explosive short squeeze and significant FOMO. Analyst reiteration of an $8 price target provides substantial upside validation. If the initial after-hours momentum carries into regular trading, increased social media buzz and sustained buying pressure could easily push the stock towards or beyond the short-term target within 48 hours.",
+        "price_history": [
+            {
+                "c": 0.734,
+                "h": 0.8099,
+                "l": 0.734,
+                "n": 4253,
+                "o": 0.8099,
+                "t": "2026-05-12T04:00:00Z",
+                "v": 2187347,
+                "vw": 0.757005
+            }
+        ],
+        "updated_at": "2026-05-12T23:13:08.592257",
+        "fundamentals": {
+            "sector": "Healthcare",
+            "industry": "Biotechnology",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 6.52,
+            "description": "Fractyl Health, Inc., a metabolic therapeutics company, develops therapies for the treatment of type 2 diabetes (T2D) and obesity. It develops Revita DMR System (Revita), an outpatient procedural ther..."
+        }
+    },
     "RXT": {
         "symbol": "RXT",
         "name": "RXT",
-        "price": 2.45,
-        "ai_grade": 65,
-        "reasoning": "As an elite quantitative analyst focused on explosive short-term breakouts, my analysis for RXT reveals a complex situation. The primary challenge is the complete absence of actionable technical data: `sma_fast`, `sma_slow`, `rsi`, and `volume_trend` are all reported as 0.0. This critically impedes the direct assessment of 'Golden Cross' formations, buying momentum, or unusual volume spikes, which are cornerstone indicators for technical breakouts. Without these, any forecast for a 'skyrocket' is inherently speculative on the technical front.\n\nHowever, the news flow is overwhelmingly positive and represents significant FOMO potential. Recent headlines indicate 'Rubrik Gains On Rackspace Partnership For Cyber Resilience' and 'Rackspace Technology And Rubrik Unveil UK-Borders Sovereign Cyber Recovery Cloud', alongside 'Rackspace Stock Up On AI Partnership With Uniphore' and 'Rackspace Technology Collaborates With Uniphore To Provide Infrastructure-to-Agents Architecture'. These are strong catalysts \u2013 partnerships with key players like Rubrik and Uniphore in critical growth areas like cybersecurity and AI infrastructure. Such news can independently drive substantial retail and institutional interest, leading to rapid price appreciation, even in the absence of pre-confirmed technical signals.\n\nFrom a fundamental perspective, RXT operates in the 'Technology' sector, specifically 'Software - Infrastructure', a high-growth area ripe for innovation and consolidation. The P/E ratio is 0, indicating current unprofitability, which is a significant red flag for long-term value investors. However, for a short-term momentum trade driven by speculative news like AI partnerships, current earnings are often overlooked in favor of future growth potential. The PEG ratio of 4.93 is quite high, suggesting the stock might be overvalued relative to its growth expectations, reinforcing that this is a speculative play. Crucially, the Debt-to-Equity ratio is 0, implying a completely debt-free balance sheet, which is an extremely positive fundamental pillar, offering financial stability and flexibility. While not a direct breakout trigger, it reduces underlying financial risk.\n\nGiven the strong positive news catalysts versus the severe lack of technical confirmation, the trade relies almost entirely on the news-driven FOMO. The grade reflects moderate breakout potential due to the compelling news, but it's heavily constrained by the inability to confirm technical momentum and volume surge from the provided data. This makes it a high-risk, news-driven speculative play.",
-        "entry_price": 2.45,
-        "target_price": 2.9,
-        "stop_loss": 2.25,
+        "price": 6.61,
+        "ai_grade": 90,
+        "reasoning": "RXT is flashing an intense short-term breakout signal driven by overwhelming news catalysts, despite the ambiguity of the provided technical data. The headline 'Rackspace Keeps Climbing As AMD Deal And Earnings Fuel Momentum' is the primary driver, indicating a significant strategic partnership with a major tech player (AMD) and a positive surprise in earnings. This combination typically ignites massive FOMO and propels a stock upwards rapidly. The news also repeatedly mentions RXT 'gaining' and 'surging' on recent days, strongly implying underlying buying pressure and significant volume, even though the provided technical 'volume_trend' is 0.0. Similarly, the SMA and RSI values are given as 0.0, making a direct assessment of a 'Golden Cross' or 'rising RSI' impossible from the provided data. However, the consistent positive news flow suggests price appreciation is already in motion, inferring a bullish technical setup is actively forming in the market.\n\nFrom a fundamental perspective, RXT operates in the 'Technology' sector, specifically 'Software - Infrastructure,' which is a high-growth area currently benefiting from broader AI momentum, as noted in other news headlines. The P/E ratio is 0, indicating the company is not currently profitable on a trailing basis. This is a significant long-term red flag for a value investor. However, for an explosive short-term momentum trade, the market often prioritizes immediate, game-changing catalysts (like the AMD deal and an earnings *beat*, which hints at improving future profitability) over current unprofitability. The high PEG ratio of 4.93 further reinforces concerns about valuation relative to growth prospects, or the challenges in achieving significant earnings growth. Despite these profitability concerns, the Debt-to-Equity ratio of 0 is exceptionally strong, meaning the company carries virtually no debt. This provides a robust balance sheet foundation, significantly reducing financial risk and allowing for greater operational flexibility, which is a strong positive that can support investor confidence even in the face of unprofitability.\n\nGiven the potent news-driven catalysts, strong inferred volume, and the general sector tailwinds, the potential for a massive 48-hour surge significantly outweighs the immediate concerns from the unconfirmed technicals and underlying fundamental unprofitability for an aggressive, short-term trade. The AMD deal is a potential re-rating event.",
+        "entry_price": 6.7,
+        "target_price": 8.2,
+        "stop_loss": 6.25,
         "risk_level": "High",
-        "key_catalysts": "Partnerships with Rubrik (cyber resilience, UK sovereign cloud) and Uniphore (AI infrastructure to agents). These are strong news events in high-growth technology areas.",
-        "bear_case": "The absence of any confirming technical data (RSI, SMAs, volume trend) means the positive news might already be priced in, or the market may not react as expected. Any general market downturn or failure of these partnerships to generate immediate tangible results could lead to a rapid retracement. The zero P/E and high PEG also highlight underlying valuation concerns if momentum fails.",
-        "bull_case": "The strong, relevant partnerships with Rubrik and Uniphore in critical tech domains like AI and cybersecurity could ignite significant retail and institutional FOMO. Despite the lack of current technical data, such powerful news often creates its own momentum, leading to a substantial short-term price spike as investors rush to capitalize on perceived future growth and improved company positioning.",
+        "key_catalysts": "AMD strategic partnership, recent earnings beat fueling momentum, broad AI sector tailwinds, high social sentiment/FOMO inferred from news frequency and tone.",
+        "bear_case": "The momentum fades quickly due to aggressive profit-taking, the market reassesses the actual impact of the AMD deal/earnings, or broader market downturns affect the sector. The underlying unprofitability (P/E 0) and high PEG could cause a rapid retreat if the initial hype dissipates. The lack of clear, confirmed technical indicators (SMA, RSI, volume trend all 0 in provided data) also adds to the risk of misjudging the real-time technical setup, making the trade highly speculative.",
+        "bull_case": "The AMD deal and earnings beat generate extreme FOMO, leading to a significant short squeeze or sustained institutional buying. The stock breaks through key resistance levels, attracting more buyers and pushing the price well beyond initial targets within the 48-hour window. Positive analyst upgrades following the news further fuel the rally, establishing new, higher trading ranges.",
         "price_history": [
             {
-                "c": 2.45,
-                "h": 2.46,
-                "l": 1.92,
-                "n": 30358,
-                "o": 2.01,
-                "t": "2026-05-05T04:00:00Z",
-                "v": 11829511,
-                "vw": 2.240785
+                "c": 6.33,
+                "h": 6.34,
+                "l": 4.75,
+                "n": 175357,
+                "o": 4.79,
+                "t": "2026-05-12T04:00:00Z",
+                "v": 61330554,
+                "vw": 5.351133
             }
         ],
-        "updated_at": "2026-05-05T19:41:39.563857"
+        "updated_at": "2026-05-12T23:13:08.592257",
+        "fundamentals": {
+            "sector": "Technology",
+            "industry": "Software - Infrastructure",
+            "pe": 0,
+            "peg": 4.93,
+            "debt_to_equity": 0,
+            "description": "Rackspace Technology, Inc. operates as a hybrid cloud and artificial intelligence solutions company in the United States, the United Kingdom, and internationally. It operates through two segments, Pub..."
+        }
     },
-    "AAPL": {
-        "symbol": "AAPL",
-        "name": "AAPL",
-        "price": 284.18,
-        "ai_grade": 88,
-        "reasoning": "As an elite quantitative analyst focused on explosive short-term breakouts, my analysis for AAPL within a 48-hour timeframe is driven primarily by the strong fundamental catalysts, despite the critical absence of usable real-time technical momentum indicators (SMA9, SMA21, RSI, Volume Trend are all provided as 0.0, rendering them useless for this assessment). This severely limits a purely technical confirmation of a breakout, but powerful news can often pre-empt or drive technical indicators. \n\n**Fundamentals Review**: AAPL operates in the high-growth 'Technology' sector, specifically 'Consumer Electronics'. Its P/E ratio stands at 34.45, indicating that the market already prices in significant future growth, making further multiple expansion contingent on truly exceptional news. The PEG ratio of 2.49 suggests potential overvaluation relative to its expected earnings growth, which could act as a drag on sustained long-term rallies but often gets temporarily overshadowed by strong short-term momentum. Crucially, Apple's Debt-to-Equity ratio of 0.8 is healthy, demonstrating robust financial stability and a solid balance sheet, which reduces fundamental risk and enhances investor confidence, providing a stable foundation for any upward movement.\n\n**News & FOMO Analysis**: The provided headlines contain extremely potent catalysts. The most significant is the report of an **'Earnings Triple Play As Beat-And-Raise Stocks Surge'** for Apple. An earnings beat combined with raised guidance is a classic, high-impact driver for immediate share price appreciation and triggers intense FOMO. Furthermore, news that **'Apple to Let Users Choose Rival AI Models Across Its iOS 27 Features'** is a strategic move that addresses market demands, potentially avoids antitrust scrutiny, and could be seen as future-proofing its ecosystem, generating significant buzz and excitement around a 'new product/feature' aspect. The overall market sentiment, with the Nasdaq 100 topping 28,000, provides a bullish backdrop for tech stocks, further supporting a potential breakout. While there was news of a $250mn settlement, it's likely a minor blip compared to the positive earnings and AI strategy. The combination of an 'Earnings Beat' and a strategic 'New Feature' in AI is a powerful one for an immediate momentum play.\n\n**Breakout Indicators (Limitations)**: Unfortunately, the provided technical data for SMA9, SMA21, RSI, and Volume Trend are all zero. Therefore, I cannot confirm a 'Golden Cross', rising RSI not yet over 75, or a volume spike. This forces a reliance on the qualitative strength of the news catalysts. Had these technicals been available and confirmed the momentum, the grade would be even higher. I must assume the underlying technicals are at least not strongly bearish to allow for the news-driven momentum.\n\n**Conclusion**: Despite the critical lack of technical confirmation, the 'Earnings Triple Play' for a company of Apple's stature is a monumental catalyst, amplified by strategic AI news. This combination is highly likely to ignite significant short-term buying pressure and FOMO within 48 hours, overcoming the high P/E/PEG concerns for a quick trade.",
-        "entry_price": 284.18,
-        "target_price": 295.0,
-        "stop_loss": 280.0,
-        "risk_level": "High",
-        "key_catalysts": "Earnings Triple Play (Beat-and-Raise) reported, strategic AI model integration with iOS 27 features, strong overall bullish sentiment in the Technology sector (Nasdaq strength).",
-        "bear_case": "The complete absence of confirmed technical buy signals (SMA crossover, RSI momentum, volume spike) introduces significant uncertainty. Given Apple's high P/E and PEG ratios, the stock is already priced for considerable growth, meaning even strong news may not lead to the desired breakout if it fails to exceed already elevated expectations. Lingering sentiment from the $250mn AI Siri settlement could also dampen enthusiasm. Any unexpected broader market downturn or a re-evaluation of the AI strategy as less impactful could halt the momentum quickly.",
-        "bull_case": "The 'Earnings Triple Play' is a highly powerful and undeniable catalyst, almost guaranteeing a strong positive market reaction. Apple's proactive integration of rival AI models into iOS 27 is a strategic pivot that could be viewed very favorably by the market, signaling innovation and adaptability. With Apple's massive market capitalization and liquidity, such strong news combined with a generally bullish tech market environment is highly likely to trigger significant institutional and retail FOMO, driving a sharp upward movement within the 1-2 day window.",
-        "price_history": [
-            {
-                "c": 284.18,
-                "h": 284.57,
-                "l": 276.501,
-                "n": 776596,
-                "o": 276.925,
-                "t": "2026-05-05T04:00:00Z",
-                "v": 49287453,
-                "vw": 282.316236
-            }
-        ],
-        "updated_at": "2026-05-05T19:41:39.563857"
-    },
-    "POET": {
-        "symbol": "POET",
-        "name": "POET",
-        "price": 9.21,
-        "ai_grade": 75,
-        "reasoning": "As an elite quantitative analyst focused on explosive short-term breakouts, my assessment of POET (POET) reveals a high-risk, high-reward scenario with substantial upside potential driven by imminent catalysts, despite a critical lack of confirming technical data. The provided technical indicators (SMA9, SMA21, RSI, volume_trend) are all reported as 0.0, rendering a direct technical analysis of 'Golden Cross,' 'rising RSI,' or 'volume spike' impossible. This is a significant limitation, preventing confirmation of a technical momentum-driven breakout. \n\nHowever, the news flow and fundamental context are highly charged. POET recently experienced a '50% Plunge On Canceled AI Orders' (Marvell), indicating extreme volatility and a deep discount from prior levels. Crucially, the stock is showing signs of a rebound, 'Edging Higher' and 'Rebounding,' which could set the stage for a short-term snapback. Furthermore, POET's inclusion in 'New Leveraged ETFs' focused on 'AI Semiconductors' injects a powerful FOMO narrative from the hottest sector. The 'Jul 17 $16 Calls Sweep' indicates aggressive bullish positioning by sophisticated players, anticipating a significant move beyond the current price of $9.21. \n\n**The paramount catalyst is the estimated earnings report on 5/18 After Close.** This is a binary event within our 48-hour timeframe that will either validate the bullish option activity and AI narrative or confirm further weakness. A strong earnings beat or positive guidance, especially concerning new AI-related orders, could trigger a massive short squeeze and institutional buying frenzy, driving prices significantly higher. \n\n**Fundamentals Check**: POET is in the 'Technology' sector, 'Semiconductors' industry \u2013 a high-growth, high-risk area. Its P/E ratio is 0 and PEG is 0, indicating it is an unprofitable growth company, highly speculative, and valued on future potential rather than current earnings. This inherently increases risk. However, its Debt-to-Equity ratio is a remarkably low 0.04, signifying excellent financial health concerning leverage, providing a solid foundation for a growth story if execution improves. The combination of speculative nature (no earnings) and low debt suggests a company betting big on future market penetration without being bogged down by financial obligations. This makes the earnings report even more critical for validation.\n\nGiven the absence of technical confirmation, this trade is a speculative bet purely on the catalyst of earnings and the AI narrative overriding recent negative sentiment. The risk is substantial, but the potential for an 'explosive short-term breakout' if earnings are positive is also immense.",
-        "entry_price": 9.21,
-        "target_price": 12.0,
-        "stop_loss": 8.0,
-        "risk_level": "High",
-        "key_catalysts": "Estimated Earnings Report (5/18 After Close); Inclusion in AI Semiconductor ETFs; Bullish Jul 17 $16 Call Options Activity; Potential for short squeeze after recent 50% plunge and subsequent positive news/earnings.",
-        "bear_case": "Earnings miss or weak guidance; further order cancellations or lack of new partnerships; broader market downturn impacting semiconductor sector; inability to recover investor confidence after the Marvell cancellation. The absence of technical support makes any negative news highly detrimental.",
-        "bull_case": "Strong earnings beat with positive outlook on AI-related orders; announcement of new strategic partnerships or significant customer wins; a short squeeze as the market digests positive news against a backdrop of prior undervaluation; a sustained rally driven by the AI sector's tailwinds and increased institutional interest from ETF inclusion.",
-        "price_history": [
-            {
-                "c": 9.21,
-                "h": 9.71,
-                "l": 7.0301,
-                "n": 298722,
-                "o": 7.2,
-                "t": "2026-05-05T04:00:00Z",
-                "v": 84033982,
-                "vw": 8.962903
-            }
-        ],
-        "updated_at": "2026-05-05T19:41:39.563857"
-    },
-    "AMZN": {
-        "symbol": "AMZN",
-        "name": "AMZN",
-        "price": 273.55,
-        "ai_grade": 72,
-        "reasoning": "AMZN presents a compelling, albeit speculative, short-term breakout opportunity driven primarily by significant news FOMO, despite a critical lack of verifiable technical momentum indicators in the provided data. The current price stands at 273.55.\n\nCritically, the technical data for SMA_fast, SMA_slow, RSI, and volume_trend are all reported as 0.0. This renders any assessment of a 'Golden Cross', rising RSI, or 'unusual volume' impossible. This severe absence of technical confirmation means we cannot validate a key component of an 'explosive short-term breakout' based on underlying buying momentum, reducing the overall conviction for a pure technical breakout.\n\nHowever, the FOMO and news catalysts are undeniably potent. The headline 'Apple, Amazon, TSMC Top List Of Earnings Triple Plays As Beat-And-Raise Stocks Surge' directly indicates recent strong financial performance and positive market revisions for AMZN, serving as a powerful 'Earnings Beat' signal. More explosively, 'Amazon's Next Gold Mine Is Worth $1.3 Trillion: Transport Stocks Begin Paying For It' suggests a massive, untapped revenue stream or new initiative. This type of vague-yet-enormous potential news is a prime generator of speculative interest and can trigger significant short-term social sentiment and FOMO-driven buying, even without explicit product details.\n\nRegarding fundamentals, AMZN operates in the **Consumer Cyclical** sector, specifically **Internet Retail**. Its **P/E ratio of 32.76** and **PEG ratio of 1.91** indicate that the stock is priced for substantial growth. For a breakout, the market demands news that suggests *accelerated* or *unforeseen* growth beyond current expectations. The 'Earnings Triple Play' and 'Gold Mine' headlines effectively address this, hinting at sustained outperformance and future expansion. The healthy **Debt-to-Equity ratio of 0.53** further bolsters confidence in Amazon's financial stability but is not a direct short-term catalyst.\n\nThe trade relies heavily on the news-driven FOMO outweighing the absence of technical signals. The combination of recent strong earnings sentiment and hints of massive future growth creates a strong narrative for a quick price appreciation.",
-        "entry_price": 273.55,
-        "target_price": 285.0,
-        "stop_loss": 270.0,
-        "risk_level": "Medium-High",
-        "key_catalysts": "Recent 'Earnings Triple Play' indicating strong financial performance; 'Amazon's Next Gold Mine Is Worth $1.3 Trillion' hinting at massive future revenue potential and igniting FOMO.",
-        "bear_case": "The critical absence of technical data (SMA, RSI, Volume) means there is no confirmation of underlying buying momentum, making the breakout reliant purely on speculative news. The 'gold mine' news is vague and may not translate to immediate or sustained buying pressure, especially with AMZN's already high valuation (P/E 32.76, PEG 1.91). Competitive pressure in cloud services (Anthropic deal with Google) could temper enthusiasm.",
-        "bull_case": "The powerful combination of recent confirmed financial strength ('Earnings Triple Play') and the highly FOMO-inducing news about a '$1.3 Trillion Gold Mine' creates a strong narrative for an explosive short-term pop. Aggressive traders are likely to chase this narrative, driving price momentum within 48 hours. AMZN's blue-chip status means institutional buyers may react swiftly to such significant positive headlines.",
-        "price_history": [
-            {
-                "c": 273.55,
-                "h": 278.56,
-                "l": 272.38,
-                "n": 621922,
-                "o": 276.075,
-                "t": "2026-05-05T04:00:00Z",
-                "v": 41844938,
-                "vw": 275.126072
-            }
-        ],
-        "updated_at": "2026-05-05T19:41:39.563857"
-    },
-    "RAPT": {
-        "symbol": "RAPT",
-        "name": "RAPT",
-        "price": 0.0,
-        "ai_grade": 8,
-        "reasoning": "As an elite quantitative analyst specializing in explosive short-term breakouts, my analysis for RAPT within a 48-hour timeframe reveals a critically unfavorable outlook, rendering a breakout highly improbable. The primary impediment to a positive assessment is the complete absence of actionable technical data; the 'Price' is reported as 0, and the 'Technicals' object is empty. This prevents any assessment of critical breakout indicators such as a 'Golden Cross' (SMA9 crossing SMA21), RSI momentum (rising but not over 75), or a volume spike (RVOL). Without these foundational technical signals, predicting a momentum-driven breakout is impossible.\n\nFurthermore, the fundamental data provided is equally unsupportive, indicating a highly speculative profile: The P/E ratio is 0, implying the company is currently unprofitable, which is common for early-stage biotechnology firms but means any price movement will be entirely speculative rather than earnings-driven. The PEG ratio is also 0, further emphasizing the lack of current earnings growth. The Debt-to-Equity ratio of 0 suggests either no significant debt or that funding is equity-based, a neutral point without more context on capital structure. The 'Sector' is listed as 'Unknown'; however, 'Therapeutics' in the company name strongly suggests a Biopharmaceutical context, a sector known for high risk and reliance on clinical trial success and regulatory approvals.\n\nCrucially, the news flow is overwhelmingly negative. There are multiple downgrades from significant financial institutions (Barclays, Leerink Partners, Wells Fargo, LifeSci Capital, TD Cowen, HC Wainwright & Co.), all announcing similar price targets (e.g., $58). While a $58 target could appear positive if the current price were significantly lower, the downgrades themselves signal a bearish shift in analyst sentiment. There is no mention of an 'Earnings Beat', 'Short Squeeze', 'FDA Approval', 'Partnership', or 'New Product' for RAPT; the only positive-sounding headline ('GSK Expands Pipeline...') is general market news, not specific to RAPT. Social sentiment is not available but would likely mirror the negative analyst reports. With no technical momentum signals, dire news, and zero positive catalysts, a short-term breakout is not just unlikely, it's virtually impossible based on the provided data. This is a high-risk scenario with no identifiable upside catalyst for an explosive move.",
-        "entry_price": 0.0,
-        "target_price": 0.0,
-        "stop_loss": 0.0,
-        "risk_level": "High",
-        "key_catalysts": "None identified from provided data. Required catalysts for a breakout would include: positive clinical trial results, FDA approval/breakthrough designation, major partnership/licensing deal, substantial short squeeze (not indicated), or a surprise earnings beat (company is unprofitable).",
-        "bear_case": "Continued sell-off due to widespread analyst downgrades, lack of positive news flow, and general market weakness. Further deterioration if clinical trial data disappoints or financing issues emerge. Given current data, significant downside risk.",
-        "bull_case": "Based *solely* on the provided data, there is no discernible bull case for an explosive short-term breakout. A bull case would require a material, unforeseen positive event such as a breakthrough FDA announcement, a major pharmaceutical partnership, or an unexpected M&A offer, none of which are indicated.",
-        "price_history": [],
-        "updated_at": "2026-05-05T19:41:39.563857"
-    },
-    "GATX": {
-        "symbol": "GATX",
-        "name": "GATX",
-        "price": 195.14,
-        "ai_grade": 45,
-        "reasoning": "Local fallback: High leverage, Analyst upgrade, Analyst downgrade",
-        "entry_price": 195.14,
-        "target_price": 190.26149999999998,
-        "stop_loss": 181.4802,
-        "risk_level": "High",
-        "key_catalysts": "N/A",
-        "bear_case": "N/A",
-        "bull_case": "N/A",
-        "price_history": [
-            {
-                "c": 195.14,
-                "h": 197.305,
-                "l": 194.13,
-                "n": 6526,
-                "o": 194.13,
-                "t": "2026-05-05T04:00:00Z",
-                "v": 165567,
-                "vw": 195.475
-            }
-        ],
-        "updated_at": "2026-05-05T19:41:39.563857"
-    },
-    "F": {
-        "symbol": "F",
-        "name": "F",
-        "price": 11.69,
-        "ai_grade": 45,
-        "reasoning": "Local fallback: High leverage",
-        "entry_price": 11.69,
-        "target_price": 11.397749999999998,
-        "stop_loss": 10.8717,
-        "risk_level": "High",
-        "key_catalysts": "N/A",
-        "bear_case": "N/A",
-        "bull_case": "N/A",
-        "price_history": [
-            {
-                "c": 11.69,
-                "h": 11.79,
-                "l": 11.555,
-                "n": 135363,
-                "o": 11.56,
-                "t": "2026-05-05T04:00:00Z",
-                "v": 42240591,
-                "vw": 11.713838
-            }
-        ],
-        "updated_at": "2026-05-05T19:41:39.563857"
-    },
-    "UTZ": {
-        "symbol": "UTZ",
-        "name": "UTZ",
-        "price": 7.69,
-        "ai_grade": 50,
-        "reasoning": "Local fallback: High P/E, Low debt",
-        "entry_price": 7.69,
-        "target_price": 7.69,
-        "stop_loss": 7.151700000000001,
+    "ASML": {
+        "symbol": "ASML",
+        "name": "ASML",
+        "price": 1520.69,
+        "ai_grade": 62,
+        "reasoning": "As an elite quantitative analyst focused on explosive short-term breakouts, my assessment of ASML's potential for a skyrocket move within 48 hours is tempered by critical data limitations and the current news landscape. Firstly, the provided technical data for 'sma_fast', 'sma_slow', 'rsi', and 'volume_trend' are all reported as 0.0. This renders a direct technical analysis of a 'Golden Cross' (SMA9 crossing above SMA21), 'RSI rising but not yet over 75', or a 'volume spike/unusual volume' (RVOL) impossible from the given information. Without these core technical momentum indicators, identifying an immediate, technically-driven breakout signal is severely hampered.\n\nMoving to FOMO and News: The headlines indicate strong underlying tailwinds for the semiconductor sector, particularly driven by AI momentum, with 'SK Hynix Can't Build AI Memory Chips Fast Enough' and general 'AI Momentum' news. ASML is a critical infrastructure provider for this industry. However, there is no *ASML-specific* explosive news such as an 'Earnings Beat', 'Short Squeeze', 'FDA Approval', 'Partnership', or 'New Product' announcement that would act as an immediate, isolated catalyst for a 48-hour surge. Cramer's advice, 'Don't Chase ASML After $75 Jump\u2014Wait For A Dip', while acknowledging recent strength, suggests a cautionary stance against immediate chasing, potentially limiting new FOMO buying at current levels. Social sentiment data is not provided, preventing analysis of that crucial FOMO driver.\n\nFrom a Fundamentals perspective, ASML operates in the **Technology** sector, specifically **Semiconductor Equipment & Materials**, which is experiencing significant secular growth from AI. Its **P/E ratio of 49.82** is high, indicating that the market has substantial growth expectations already priced in. While this can fuel rapid increases on positive news, it also means the stock is sensitive to any disappointment. The **PEG ratio of 2.36** (greater than 1) suggests it might be overvalued relative to its expected growth, or that growth expectations are very aggressive, further supporting a 'growth stock' profile sensitive to momentum. Critically, the **Debt-to-Equity ratio of 0.13** is exceptionally low, signifying a very strong balance sheet and minimal financial risk, which provides a solid fundamental underpinning, reducing long-term investor apprehension. Overall, ASML's fundamentals are robust, but its valuation is already stretched, potentially capping explosive short-term upside unless a truly novel catalyst emerges.\n\nIn conclusion, while ASML benefits from strong sectoral tailwinds, the absence of actionable technical breakout signals from the provided data and the lack of a fresh, ASML-specific, explosive news catalyst within the last 24-48 hours means that the conditions for a 'massive breakout potential' (grade 85+) are not met. The potential for a moderate upward move exists due to underlying sector demand, but an explosive, short-term skyrocket cannot be reliably predicted based on this dataset.",
+        "entry_price": 1521.0,
+        "target_price": 1545.0,
+        "stop_loss": 1510.0,
         "risk_level": "Medium",
-        "key_catalysts": "N/A",
-        "bear_case": "N/A",
-        "bull_case": "N/A",
+        "key_catalysts": "Continued insatiable demand for advanced AI chips; broader semiconductor sector strength.",
+        "bear_case": "Absence of new, specific catalysts leading to profit-taking or stagnation; a broader market correction impacting high-valuation tech stocks; negative news on export controls or competitive landscape shifts.",
+        "bull_case": "Ongoing strong order flow for ASML's lithography systems; positive analyst upgrades driven by AI demand forecasts; general market optimism lifting the tech sector.",
         "price_history": [
             {
-                "c": 7.69,
-                "h": 7.8,
-                "l": 7.51,
-                "n": 12885,
-                "o": 7.62,
-                "t": "2026-05-05T04:00:00Z",
-                "v": 1470670,
-                "vw": 7.671696
+                "c": 1520.94,
+                "h": 1535.11,
+                "l": 1475,
+                "n": 147513,
+                "o": 1526.14,
+                "t": "2026-05-12T04:00:00Z",
+                "v": 1869235,
+                "vw": 1506.32647
             }
         ],
-        "updated_at": "2026-05-05T19:41:39.563857"
+        "updated_at": "2026-05-12T23:13:08.592257",
+        "fundamentals": {
+            "sector": "Technology",
+            "industry": "Semiconductor Equipment & Materials",
+            "pe": 49.82,
+            "peg": 2.36,
+            "debt_to_equity": 0.13,
+            "description": "ASML Holding N.V. provides lithography solutions for the development, production, marketing, sales, upgrading, and servicing of advanced semiconductor equipment systems. The company offers lithography..."
+        }
     },
-    "_last_run": "2026-05-05T19:41:39.563857"
+    "TSM": {
+        "symbol": "TSM",
+        "name": "TSM",
+        "price": 396.39,
+        "ai_grade": 55,
+        "reasoning": "As an elite quantitative analyst focused on explosive short-term breakouts, my assessment for TSM within a 48-hour timeframe indicates a moderate, rather than massive, breakout potential. Crucially, the provided technical data for SMA, RSI, and Volume shows all indicators at 0.0. This makes a definitive assessment of 'Golden Cross,' 'RSI rising but not over 75,' or a 'volume spike' impossible. This is a significant impediment to identifying an explosive short-term breakout, as these are primary signals for such rapid moves, and their absence (or inability to verify) severely limits confidence in a 'skyrocket' scenario. \n\nFrom a fundamental perspective, TSM operates in the Technology sector, specifically Semiconductors, an industry currently experiencing strong tailwinds from the AI boom. This provides a compelling long-term narrative. The P/E ratio of 33.78 and PEG ratio of 1.28 indicate that TSM is trading at a premium, reflecting high growth expectations. While justifiable for a market leader in a booming sector, this valuation leaves less room for error; any disappointment could lead to a quick re-pricing. For a true breakout, exceptionally strong new catalysts are needed to justify pushing higher from this extended valuation. The remarkably low Debt-to-Equity ratio of 0.17 signals robust financial health and minimal leverage, providing excellent long-term stability but not a direct short-term breakout catalyst.\n\nNews analysis reveals a mixed picture. The 'AI Infrastructure Frenzy Sends Data Center CPU Market Into Overdrive' headline is a strong macro tailwind, benefiting TSM as a key foundry. However, there are significant counter-signals. 'Qualcomm Stock Sinks 11%' and 'Intel Slips' indicate weakness in peer semiconductor stocks, which could drag down the broader sector or lead to profit-taking. More critically, the headline 'TSMC Has Been The Market's No\u2011Brainer Trade \u2014 And That Makes It Vulnerable' strongly suggests that the stock might already be overbought, and the 'FOMO' wave could be receding or turning into profit-taking rather than initiating a new breakout. There are no immediate 'Earnings Beat,' 'Short Squeeze,' 'FDA Approval,' 'Partnership,' or 'New Product' announcements specific to TSM to ignite fresh FOMO. The inferred social sentiment, therefore, might be transitioning from unbridled enthusiasm to a more cautious, potentially contrarian, stance. \n\nGiven the critical lack of verifiable technical breakout signals and the mixed, leaning cautious, news sentiment, the probability of TSM skyrocketing within 48 hours is significantly diminished. The stock appears extended, and while the underlying AI trend is strong, the immediate catalysts for an explosive move are absent, and indeed, some news suggests vulnerability to a correction.",
+        "entry_price": 396.39,
+        "target_price": 402.34,
+        "stop_loss": 392.43,
+        "risk_level": "Medium",
+        "key_catalysts": "Continued robust demand from the AI infrastructure build-out; unexpected positive company-specific news (e.g., new major client win, significant capacity expansion, or technological breakthrough not yet priced in).",
+        "bear_case": "Sector-wide profit-taking in semiconductors; broader market correction; TSM's 'no-brainer trade' narrative leading to significant short-term unwinding; escalating geopolitical tensions impacting Taiwan's manufacturing; higher interest rate concerns disproportionately affecting high-growth tech stocks.",
+        "bull_case": "Sustained and accelerating AI demand leading to upward revisions in TSM's guidance; strong earnings reports from major clients (NVIDIA, Apple) that heavily utilize TSM's foundries, indicating robust end-market demand; an unexpected positive strategic announcement by TSM not currently known to the market.",
+        "price_history": [
+            {
+                "c": 397.28,
+                "h": 402.235,
+                "l": 386.12,
+                "n": 535974,
+                "o": 397.75,
+                "t": "2026-05-12T04:00:00Z",
+                "v": 18163776,
+                "vw": 393.78449
+            }
+        ],
+        "updated_at": "2026-05-12T23:13:08.592257",
+        "fundamentals": {
+            "sector": "Technology",
+            "industry": "Semiconductors",
+            "pe": 33.78,
+            "peg": 1.28,
+            "debt_to_equity": 0.17,
+            "description": "Taiwan Semiconductor Manufacturing Company Limited, together with its subsidiaries, manufactures, packages, tests, and sells integrated circuits and other semiconductor devices in Taiwan, China, Europ..."
+        }
+    },
+    "SMH": {
+        "symbol": "SMH",
+        "name": "SMH",
+        "price": 559.71,
+        "ai_grade": 92,
+        "reasoning": "ALERT: Despite critical quantitative data (SMA9, SMA21, RSI, Volume Trend, PEG) being provided as 0.0 or invalid, thereby severely hampering a complete technical and fundamental valuation, the news flow for SMH and the broader semiconductor sector is SCREAMING FOMO and explosive short-term momentum. As an elite quant focusing on breakouts, I must act on the most compelling signals available. The provided P/E ratio for SMH is 46.19. This is an extremely high valuation for an ETF, indicating significant premium for the underlying semiconductor companies, which increases inherent risk. The PEG ratio is an invalid 0, preventing any assessment of growth relative to this high P/E. Debt-to-Equity is 0, which is typical and positive for an ETF structure, mitigating direct balance sheet risk. While the provided sector is 'Unknown', SMH is unequivocally a Semiconductor ETF, a sector currently experiencing unprecedented hype. The news headlines are a cascade of bullish indicators: 'Chip Frenzy Hits Dot-Com Extremes As Record ETF Flows Shrug Off Michael Burry's Short Bets' directly signals extreme FOMO, massive capital inflows, and potential short-squeeze dynamics. 'Nasdaq Tops 29,000 Records, Micron Soars 13%' highlights strong market and sector-specific performance. 'Semi Mania Leading To A 2000-Style Crash?' further confirms the 'mania' sentiment, irrespective of the warning, it signifies extreme public interest and speculative energy. These are classic indicators for a potential 1-2 day 'skyrocket' move, driven purely by speculative momentum and news-induced FOMO, overriding traditional valuation metrics. The lack of verifiable technicals (SMA, RSI, RVOL) forces a reliance on this aggressive sentiment. However, in an 'explosive breakout' scenario, news and FOMO often precede and amplify technical indicators. The risk is exceptionally high due to the stretched valuation and reliance on sentiment, demanding a precise, tight stop-loss. This is a pure momentum play.",
+        "entry_price": 559.71,
+        "target_price": 585.0,
+        "stop_loss": 547.0,
+        "risk_level": "High",
+        "key_catalysts": "Overwhelming 'Chip Frenzy' and 'Semi Mania' sentiment, 'Record ETF Flows' into the semiconductor sector, strong underlying AI narrative, potential short-squeeze dynamics.",
+        "bear_case": "The 'Dot-Com Extremes' warnings in the news materialize into a sharp correction; the incredibly high P/E ratio (46.19) triggers profit-taking; the market corrects broadly; or technicals (if they were truly 0.0 and not just missing data) fail to confirm momentum, leading to a rapid reversal due to high valuation.",
+        "bull_case": "Continued and amplified 'Chip Frenzy' drives parabolic institutional and retail buying, leading to a massive short-term breakout as FOMO and record inflows push the price significantly higher, potentially forcing short covering and accelerating the rally.",
+        "price_history": [
+            {
+                "c": 561.25,
+                "h": 570.4,
+                "l": 542.67,
+                "n": 453517,
+                "o": 565.005,
+                "t": "2026-05-12T04:00:00Z",
+                "v": 17760368,
+                "vw": 554.390338
+            }
+        ],
+        "updated_at": "2026-05-12T23:13:08.592257",
+        "fundamentals": {
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 46.19,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "The fund normally invests at least 80% of its total assets in securities that comprise the fund's benchmark index. The index includes common stocks and depositary receipts of U.S. exchange-listed comp..."
+        }
+    },
+    "SDST": {
+        "symbol": "SDST",
+        "name": "SDST",
+        "price": 2.32,
+        "ai_grade": 35,
+        "reasoning": "As an elite quantitative analyst focused on explosive short-term breakouts, my analysis of SDST reveals significant challenges to identifying a 48-hour 'skyrocket' potential. Critically, the provided technical data for key momentum indicators is non-existent, with SMA9, SMA21, RSI, and volume trend all listed as 0.0. This is a severe impediment, as it fundamentally means there is no technical basis whatsoever to confirm rising momentum, a Golden Cross, or a volume surge \u2013 all mandatory elements for a technically-driven breakout. Without these signals, relying purely on technicals for a short-term trade is impossible.\n\nMoving to FOMO and news, the landscape is mixed but predominantly positive for the long-term. Headlines like the Letter of Intent for a $150M investment, securing 15K tons of lithium carbonate equivalent, joining the DoD-aligned Cornerstone Consortium, and an EPS beat are strong fundamental tailwinds, signaling strategic importance and future growth potential in the lithium supply chain. However, the concurrent announcement of a $5M At-The-Market (ATM) common stock offering introduces a dilutive factor, which can cap any immediate upside and create selling pressure, directly counteracting potential short-term FOMO.\n\nFrom a fundamental perspective, SDST operates in the 'Industrials' sector, specifically Electrical Equipment & Parts, focusing on lithium refining \u2013 a strategically vital and high-growth area. The P/E ratio of 0 and PEG ratio of 0 indicate the company is not currently profitable, which is common for early-stage, capital-intensive growth companies. This means the investment thesis is purely speculative growth, not value. Encouragingly, the Debt-to-Equity ratio is 0, indicating a pristine balance sheet with no debt, which is a major positive for financial stability. However, this also explains the company's reliance on equity financing, like the ATM offering, to fund its development, leading to potential dilution.\n\nIn summary, while SDST boasts compelling long-term fundamental catalysts and a strong balance sheet, the complete absence of actionable technical momentum data, combined with the immediate dilutive effect of the ATM offering, severely hampers any potential for an 'explosive' 48-hour short-term breakout based on the criteria provided. The risk is high due to the lack of technical confirmation for a momentum play.",
+        "entry_price": 2.32,
+        "target_price": 2.45,
+        "stop_loss": 2.2,
+        "risk_level": "High",
+        "key_catalysts": "Positive news on $150M investment LOI, 15K tons lithium supply LOI, joining DoD-aligned Cornerstone Consortium, Q4 EPS beat.",
+        "bear_case": "The significant absence of positive technical indicators (0.0 for SMA, RSI, Volume) combined with a $5M At-The-Market stock offering could lead to selling pressure and downward price action. Lack of immediate technical momentum means it fails to attract short-term breakout traders, resulting in stagnation or a dip.",
+        "bull_case": "Despite the technical data being unavailable, strong fundamental news (DoD consortium, major LOIs for investment and supply, EPS beat) could attract long-term strategic investors, leading to a modest short-term appreciation as the market digests these positive developments. However, this is unlikely to be an 'explosive' breakout without technical confirmation.",
+        "price_history": [
+            {
+                "c": 2.33,
+                "h": 2.34,
+                "l": 2.21,
+                "n": 1200,
+                "o": 2.32,
+                "t": "2026-05-12T04:00:00Z",
+                "v": 90827,
+                "vw": 2.284212
+            }
+        ],
+        "updated_at": "2026-05-12T23:13:08.592257",
+        "fundamentals": {
+            "sector": "Industrials",
+            "industry": "Electrical Equipment & Parts",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "Stardust Power Inc. develops battery grade lithium products for clean energy independence in the United States. The company is developing a lithium refinery in Muskogee, Oklahoma for producing battery..."
+        }
+    },
+    "_last_run": "2026-05-12T23:13:08.592257"
 }
