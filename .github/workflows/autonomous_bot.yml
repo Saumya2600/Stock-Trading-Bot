@@ -43,6 +43,7 @@ jobs:
           RESEARCH_GEMINI_KEY: ${{ secrets.RESEARCH_GEMINI_KEY }}
           fmp: ${{ secrets.FMP_API_KEY }}
           FINNHUB_KEY: ${{ secrets.FINNHUB_KEY }}
+        timeout-minutes: 10
         run: |
           cd backend
           CURRENT_HOUR=$(date +%H)
@@ -54,12 +55,23 @@ jobs:
           fi
           
           echo "Running TRADING cycle..."
-          python run_trades.py
+          # Use timeout 5m as a double-safety for Lumibot
+          timeout 300 python run_trades.py || echo "Trade cycle timed out or finished"
 
-      - name: Commit and Push Results
+      - name: Sync and Push Results
         run: |
           git config --global user.name "GitHub Action Bot"
           git config --global user.email "actions@github.com"
-          git add --force backend/*.json
+          
+          # Sync backend results to root and frontend public for Vercel/GitHub pages
+          cp backend/reports.json ./reports.json || true
+          cp backend/app_state.json ./app_state.json || true
+          cp backend/reports.json frontend/public/reports.json || true
+          cp backend/app_state.json frontend/public/app_state.json || true
+          
+          git add backend/*.json
+          git add frontend/public/*.json
+          git add *.json
+          
           git commit -m "Automated Bot Sync: $(date)" || echo "No changes to commit"
           git push origin main

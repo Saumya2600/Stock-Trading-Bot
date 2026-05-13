@@ -39,6 +39,7 @@ def main():
         strategy = DeepResearchBot(
             name="Autonomous_Alpha_v1",
             broker=broker,
+            parameters={"one_shot": True}
         )
         state.strategy_instance = strategy
 

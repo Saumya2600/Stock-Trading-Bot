@@ -5,12 +5,14 @@ from utils import safe_print, is_market_open, seconds_until_market_open
 import state
 
 class DeepResearchBot(Strategy):
-    def initialize(self):
+    def initialize(self, one_shot=False):
         self.sleeptime = "3M"
         self.fast_period = 9
         self.slow_period = 21
         self.symbols = []
         self.benchmark_initialized = False
+        self.one_shot = one_shot
+        self.iterations = 0
 
     def on_filled_order(self, position, order, price, quantity, multiplier):
         symbol = order.asset.symbol
@@ -132,3 +134,11 @@ class DeepResearchBot(Strategy):
             self.log_message(f"[STATS] ALPHA PULSE | Bot: {bot_roi:+.2f}% | SPY: {spy_roi:+.2f}% | Alpha: {bot_roi - spy_roi:+.2f}% | Trades: {state.portfolio_performance['trades_count']}")
         except Exception as e:
             self.log_message(f"[ROI ERROR] {e}")
+
+        self.iterations += 1
+        if self.one_shot and self.iterations >= 1:
+            self.log_message("[ONE-SHOT] Trading cycle complete. Exiting...")
+            self.stop_strategy()
+            # Wait a bit for pending orders/logs
+            time.sleep(5)
+            os._exit(0)
