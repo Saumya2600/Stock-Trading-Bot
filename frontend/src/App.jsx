@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Link, useLocation, useNavigate } from 'react-router-dom';
 import ExpandableReportCards from '@/components/ExpandableReportCards';
 import { X, Search, LayoutDashboard, LineChart as ChartIcon, Settings, Brain, FileText } from 'lucide-react';
+import { AdvancedRealTimeChart } from "react-ts-tradingview-widgets";
 
 const SECTOR_MAP = {
   Technology: ['AAPL', 'MSFT', 'NVDA', 'AVGO', 'ORCL', 'ADBE', 'CRM', 'AMD', 'QCOM', 'INTC', 'TSM', 'ASML', 'CSCO', 'IBM', 'TXN', 'NOW', 'INTU', 'AMAT', 'MU', 'LRCX', 'PANW'],
@@ -757,6 +758,44 @@ function App() {
     );
   };
 
+  const renderTradeTimeline = () => {
+    if (!tradeHistory || tradeHistory.length === 0) return null;
+    
+    return (
+      <div className="glass-card" style={{ marginBottom: '3rem', padding: '2rem' }}>
+        <h3 className="headline-sm" style={{ marginBottom: '1.5rem' }}>Bot Trade History</h3>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+          {tradeHistory.slice().reverse().map((trade, i) => (
+            <div key={i} style={{ 
+              display: 'flex', justifyContent: 'space-between', alignItems: 'center', 
+              padding: '1rem', background: 'rgba(255, 255, 255, 0.02)', 
+              borderLeft: `4px solid ${trade.side === 'BUY' ? '#3fff8b' : '#ff716c'}`,
+              borderRadius: '0 8px 8px 0'
+            }}>
+              <div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                  <span className="headline-md">{trade.symbol}</span>
+                  <span className="label-sm" style={{ 
+                    padding: '2px 6px', borderRadius: '4px', 
+                    background: trade.side === 'BUY' ? 'rgba(63, 255, 139, 0.1)' : 'rgba(255, 113, 108, 0.1)',
+                    color: trade.side === 'BUY' ? '#3fff8b' : '#ff716c'
+                  }}>{trade.side}</span>
+                </div>
+                <div className="label-sm" style={{ color: 'var(--on-surface-variant)', marginTop: '0.25rem' }}>
+                  {new Date(trade.timestamp).toLocaleString()}
+                </div>
+              </div>
+              <div style={{ textAlign: 'right' }}>
+                <div className="headline-sm">{trade.quantity} shares</div>
+                <div className="label-md" style={{ color: 'var(--on-surface-variant)' }}>@ ${trade.price.toFixed(2)}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  };
+
   const HubPage = () => (
     <>
       <header style={{ marginBottom: '2rem' }}>
@@ -904,26 +943,17 @@ function App() {
             </div>
           </div>
 
-          <div style={{ width: '100%', height: '350px', marginBottom: '2rem' }}>
-            {loadingChart ? (
-              <div className="loading" style={{ height: '100%' }}>Fetching {chartRange} Data...</div>
-            ) : chartData.length > 0 ? (
-              <ResponsiveContainer width="100%" height="100%">
-                <LineChart data={chartData}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.1)" vertical={false} />
-                  <XAxis dataKey="name" stroke="var(--on-surface-variant)" tick={{ fill: 'var(--on-surface-variant)' }} axisLine={false} tickLine={false} dy={10} minTickGap={30} />
-                  <YAxis domain={['auto', 'auto']} stroke="var(--on-surface-variant)" tick={{ fill: 'var(--on-surface-variant)' }} axisLine={false} tickLine={false} tickFormatter={(val) => `$${val}`} dx={-10} />
-                  <Tooltip 
-                    contentStyle={{ backgroundColor: 'var(--surface-container-highest)', borderColor: 'rgba(255,255,255,0.1)', borderRadius: '12px', backdropFilter: 'blur(20px)' }}
-                    itemStyle={{ color: 'var(--on-surface)' }}
-                    labelStyle={{ color: 'var(--on-surface-variant)', marginBottom: '4px' }}
-                  />
-                  <Line type="monotone" dataKey="Price" stroke={strokeColor} strokeWidth={3} dot={false} activeDot={{ r: 6, fill: strokeColor, stroke: 'var(--surface)', strokeWidth: 2 }} />
-                </LineChart>
-              </ResponsiveContainer>
-            ) : (
-              <div className="loading" style={{ height: '100%' }}>No historical data available.</div>
-            )}
+          <div style={{ width: '100%', height: '400px', marginBottom: '2rem' }}>
+            <AdvancedRealTimeChart 
+              theme="dark" 
+              symbol={selectedStock.symbol} 
+              width="100%" 
+              height="100%" 
+              allow_symbol_change={false} 
+              hide_side_toolbar={true}
+              timezone="America/New_York"
+              style="1"
+            />
           </div>
 
           {/* New Intelligence Section */}
