@@ -1,90 +1,90 @@
 {
-    "GE": {
+    "INTC": {
         "data": {
-            "sector": "Industrials",
-            "industry": "Aerospace & Defense",
-            "pe": 36.22,
-            "peg": 7.16,
-            "debt_to_equity": 1.17,
-            "description": "General Electric Company, doing business as GE Aerospace, designs and produces commercial and defense aircraft engines, integrated engine components, electric power, and aircraft systems. The company ..."
-        },
-        "updated_at": "2026-05-14T20:43:41.838921"
-    },
-    "VG": {
-        "data": {
-            "sector": "Energy",
-            "industry": "Oil & Gas Midstream",
-            "pe": 13.55,
-            "peg": 1.32,
-            "debt_to_equity": 2.94,
-            "description": "Venture Global, Inc., a liquefied natural gas (LNG) company, engages in the ownership, development, construction, and operation of LNG production facilities and associated infrastructure in the United..."
-        },
-        "updated_at": "2026-05-14T20:44:06.167329"
-    },
-    "META": {
-        "data": {
-            "sector": "Communication Services",
-            "industry": "Internet Content & Information",
-            "pe": 22.49,
-            "peg": 0.88,
+            "sector": "Technology",
+            "industry": "Semiconductors",
+            "pe": 0,
+            "peg": 1.36,
             "debt_to_equity": 0.36,
-            "description": "Meta Platforms, Inc. engages in the development of products that enable people to connect and share with friends and family through mobile devices, personal computers, virtual reality (VR) headsets, a..."
+            "description": "Intel Corporation designs, develops, manufactures, markets, sells, and services computing and related end products and services in the United States, Ireland, Israel, and internationally. It operates ..."
         },
-        "updated_at": "2026-05-14T20:44:26.627896"
+        "updated_at": "2026-05-16T14:04:17.671831"
     },
     "QQQ": {
         "data": {
             "sector": "Unknown",
             "industry": "Unknown",
-            "pe": 35.11,
+            "pe": 34.58,
             "peg": 0,
             "debt_to_equity": 0,
             "description": "To maintain the correspondence between the composition and weights of the securities in the trust (the \"securities\") and the stocks in the NASDAQ-100 Index\u00ae, the adviser adjusts the securities from ti..."
         },
-        "updated_at": "2026-05-14T20:44:47.720693"
+        "updated_at": "2026-05-16T14:05:16.160700"
     },
-    "NCLH": {
+    "USO": {
         "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Travel Services",
-            "pe": 12.85,
-            "peg": 0.73,
-            "debt_to_equity": 6.61,
-            "description": "Norwegian Cruise Line Holdings Ltd., together with its subsidiaries, operates as a cruise company in North America, Europe, the Asia-Pacific, and internationally. It offers itineraries to destinations..."
-        },
-        "updated_at": "2026-05-14T20:45:15.304794"
-    },
-    "WFC": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Banks - Diversified",
-            "pe": 11.4,
-            "peg": 1.33,
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 44.85,
+            "peg": 0,
             "debt_to_equity": 0,
-            "description": "Wells Fargo & Company, a financial services company, provides diversified banking, investment, mortgage, and consumer and commercial finance products and services in the United States and internationa..."
+            "description": "USO seeks to achieve its investment objective by investing primarily in futures contracts for light, sweet crude oil, other types of crude oil, diesel-heating oil, gasoline, natural gas, and other pet..."
         },
-        "updated_at": "2026-05-14T20:46:17.935884"
+        "updated_at": "2026-05-16T14:05:47.119051"
     },
-    "PYPL": {
+    "IT": {
         "data": {
-            "sector": "Financial Services",
-            "industry": "Credit Services",
-            "pe": 8.45,
-            "peg": 0.83,
-            "debt_to_equity": 0.58,
-            "description": "PayPal Holdings, Inc. operates a technology platform that enables digital payments for merchants and consumers worldwide. The company operates a two-sided network at scale that connects merchants and ..."
+            "sector": "Technology",
+            "industry": "Information Technology Services",
+            "pe": 14.45,
+            "peg": 0.73,
+            "debt_to_equity": 52.93,
+            "description": "Gartner, Inc. provides business and technology insights for decisions and performance on an organization's mission-critical priorities in the United States, Canada, Europe, the Middle East, Africa, an..."
         },
-        "updated_at": "2026-05-14T20:46:38.967458"
+        "updated_at": "2026-05-16T14:06:21.490927"
     },
-    "MGM": {
+    "VOO": {
+        "data": {
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 29.33,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "The fund manager employs an indexing investment approach designed to track the performance of the Standard & Poor's 500 Index, a widely recognized benchmark of U.S. stock market performance that is do..."
+        },
+        "updated_at": "2026-05-16T14:06:53.960184"
+    },
+    "TSLA": {
         "data": {
             "sector": "Consumer Cyclical",
-            "industry": "Resorts & Casinos",
-            "pe": 50.42,
-            "peg": 1.05,
-            "debt_to_equity": 9.51,
-            "description": "MGM Resorts International, through its subsidiaries, operates as a gaming and entertainment company in the United States, China, and internationally. It operates through four segments: Las Vegas Strip..."
+            "industry": "Auto Manufacturers",
+            "pe": 383.85,
+            "peg": 6.1,
+            "debt_to_equity": 0.19,
+            "description": "Tesla, Inc. designs, develops, manufactures, leases, and sells electric vehicles, and energy generation and storage systems in the United States, China, and internationally. The company operates in tw..."
         },
-        "updated_at": "2026-05-14T20:47:05.445942"
+        "updated_at": "2026-05-16T14:07:23.187692"
+    },
+    "SLV": {
+        "data": {
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "The Trust seeks to reflect such performance before payment of the Trust's expenses and liabilities. It is not actively managed. The Trust does not engage in any activities designed to obtain a profit ..."
+        },
+        "updated_at": "2026-05-16T14:07:51.147218"
+    },
+    "AM": {
+        "data": {
+            "sector": "Energy",
+            "industry": "Oil & Gas Midstream",
+            "pe": 25.56,
+            "peg": 0,
+            "debt_to_equity": 1.92,
+            "description": "Antero Midstream Corporation owns, operates, and develops midstream energy assets in the Appalachian Basin. It operates in two segments, Gathering and Processing, and Water Handling. The gathering and..."
+        },
+        "updated_at": "2026-05-16T14:08:16.676674"
     }
 }

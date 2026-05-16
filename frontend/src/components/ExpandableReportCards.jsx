@@ -84,14 +84,14 @@ const ReportCard = ({ symbol, data }) => {
 
       {/* Expanded Details */}
       <div style={{ 
-        maxHeight: isExpanded ? '1500px' : '0', 
+        maxHeight: isExpanded ? '2500px' : '0', 
         opacity: isExpanded ? 1 : 0,
         transition: 'all 0.5s ease-in-out',
         marginTop: isExpanded ? '2rem' : '0',
         borderTop: isExpanded ? '1px solid rgba(255,255,255,0.05)' : 'none',
         paddingTop: isExpanded ? '2rem' : '0'
       }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr', gap: '2rem' }}>
+        <div className="responsive-grid" style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr', gap: '2rem' }}>
           
           {/* Left Column: Analysis */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
@@ -104,7 +104,7 @@ const ReportCard = ({ symbol, data }) => {
               </p>
             </section>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+            <div className="responsive-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
               <div className="glass-card" style={{ background: 'rgba(63, 255, 139, 0.03)', border: '1px solid rgba(63, 255, 139, 0.1)' }}>
                 <h4 className="label-sm" style={{ color: 'var(--primary)', marginBottom: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
                   <TrendingUp size={12} /> Bull Thesis
@@ -126,7 +126,7 @@ const ReportCard = ({ symbol, data }) => {
             {data.fundamentals && (
               <div className="glass-card" style={{ background: 'rgba(255,255,255,0.03)' }}>
                 <h4 className="label-md" style={{ marginBottom: '1.25rem', color: 'var(--on-surface)' }}>Fundamental Ledger</h4>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                <div className="responsive-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
                   <div>
                     <div className="label-sm" style={{ opacity: 0.5 }}>P/E Ratio</div>
                     <div className="headline-sm">{data.fundamentals.pe || 'N/A'}</div>
@@ -220,13 +220,13 @@ const ExpandableReportCards = ({ reports = {} }) => {
 
   return (
     <div style={{ animation: 'fadeIn 0.8s ease-out' }}>
-      <header style={{ marginBottom: '3rem', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
+      <header className="responsive-grid" style={{ marginBottom: '3rem', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: '1.5rem' }}>
         <div>
           <div className="label-md" style={{ color: 'var(--primary)', marginBottom: '0.5rem' }}>Market Intelligence</div>
-          <h2 className="display-lg" style={{ fontSize: '2.5rem' }}>Neural Research Reports</h2>
+          <h2 className="display-lg" style={{ lineHeight: 1.1 }}>Neural Research Reports</h2>
           <p className="headline-sm" style={{ marginTop: '0.5rem', opacity: 0.7 }}>Autonomous multi-factor discovery and risk assessment</p>
         </div>
-        <div style={{ textAlign: 'right' }}>
+        <div style={{ textAlign: 'right', minWidth: 'fit-content' }}>
            <div className="label-sm">Total Reports</div>
            <div className="headline-md" style={{ fontSize: '1.5rem' }}>{symbols.length}</div>
         </div>

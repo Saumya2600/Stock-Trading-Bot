@@ -581,7 +581,7 @@ function App() {
           </div>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
+        <div className="responsive-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
            <div style={{ padding: '1.5rem', background: 'rgba(63, 255, 139, 0.05)', borderRadius: '12px', border: '1px solid rgba(63, 255, 139, 0.1)' }}>
               <div className="label-md" style={{ color: '#3fff8b' }}>AI BOT ROI</div>
               <div className="headline-md" style={{ marginTop: '0.5rem' }}>{performance.bot_roi.toFixed(2)}%</div>
@@ -635,7 +635,7 @@ function App() {
           </div>
         </div>
 
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1rem' }}>
+        <div className="responsive-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1rem' }}>
           {positions.positions.map((position) => {
             const isPositive = position.unrealized_pnl >= 0;
             const sellTargetMet = position.sell_target_price ? position.current_price >= position.sell_target_price : false;
@@ -682,7 +682,7 @@ function App() {
                   </div>
                 </div>
 
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1rem' }}>
+                <div className="responsive-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1rem' }}>
                   <div>
                     <div className="label-sm" style={{ color: 'var(--on-surface-variant)' }}>Quantity</div>
                     <div className="headline-sm">{position.quantity}</div>
@@ -733,10 +733,10 @@ function App() {
           })}
         </div>
 
-        <div style={{ marginTop: '2rem', padding: '1rem', background: 'rgba(255, 255, 255, 0.02)', borderRadius: '8px' }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <div style={{ marginTop: '2rem', padding: '1.5rem', background: 'rgba(255, 255, 255, 0.02)', borderRadius: '12px' }}>
+          <div className="responsive-grid" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1.5rem' }}>
             <div className="label-md">Portfolio Summary</div>
-            <div style={{ display: 'flex', gap: '2rem' }}>
+            <div className="responsive-grid" style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap' }}>
               <div>
                 <div className="label-sm" style={{ color: 'var(--on-surface-variant)' }}>Total Invested</div>
                 <div className="headline-sm">${totalInvested.toFixed(2)}</div>
@@ -919,7 +919,7 @@ function App() {
           </div>
 
           {/* New Intelligence Section */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '2rem' }}>
+          <div className="responsive-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '2rem' }}>
              <div className="glass-card" style={{ background: 'rgba(63, 255, 139, 0.05)', border: '1px solid rgba(63, 255, 139, 0.1)' }}>
                 <h4 className="label-md" style={{ color: '#3fff8b', marginBottom: '1rem' }}>AI PRICE TARGETS</h4>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
@@ -981,7 +981,7 @@ function App() {
         </header>
 
         {/* Stats Row */}
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', marginBottom: '2rem' }}>
+        <div className="responsive-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', marginBottom: '2rem' }}>
           <div className="glass-card" style={{ padding: '1.25rem', textAlign: 'center' }}>
             <div className="label-sm" style={{ color: 'var(--on-surface-variant)' }}>Total Trades</div>
             <div className="display-lg" style={{ fontSize: '2.5rem', marginTop: '0.25rem' }}>{tradeHistory.length}</div>
@@ -1147,7 +1147,7 @@ function App() {
       <div className={`app-container ${!sidebarOpen ? 'sidebar-collapsed' : ''}`}>
         <GlassFilter />
         <button className="mobile-menu-btn" onClick={() => setSidebarOpen(true)}>
-          <Search size={20} color="#fff" />
+          <LayoutDashboard size={20} color="#fff" />
         </button>
         
         <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />

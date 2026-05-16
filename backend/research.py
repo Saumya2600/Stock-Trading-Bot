@@ -1,4 +1,5 @@
-import google.generativeai as genai
+from google import genai
+from google.genai import types
 import json
 import random
 import requests
@@ -22,39 +23,36 @@ for k in GEMINI_API_KEYS:
         ALL_KEYS.append(k)
 
 CURRENT_GEMINI_KEY_INDEX = 0
-model = None
+client = None
+SELECTED_MODEL = "gemini-2.5-flash"
 # Set to True when ALL keys are quota-exhausted this cycle; reset each research cycle
 _all_keys_exhausted = False
 
 def configure_gemini():
-    global model, CURRENT_GEMINI_KEY_INDEX
+    global client, CURRENT_GEMINI_KEY_INDEX, SELECTED_MODEL
     
     if not ALL_KEYS:
         safe_print("[GEMINI] ⚠️  NO GEMINI API KEYS FOUND — all analysis will use local fallback! Check .env")
-        model = None
+        client = None
         return
         
     key = ALL_KEYS[CURRENT_GEMINI_KEY_INDEX]
     safe_print(f"[GEMINI] ✅ Using rotated key index: {CURRENT_GEMINI_KEY_INDEX} ({key[:8]}...)")
         
     try:
-        genai.configure(api_key=key)
-        all_models = list(genai.list_models())
-        candidates = [m.name for m in all_models if hasattr(m, 'supported_generation_methods') and 'generateContent' in m.supported_generation_methods]
+        client = genai.Client(api_key=key)
+        # Discover best available flash model
+        all_models = client.models.list()
+        candidates = [m.name for m in all_models if "generateContent" in (m.supported_actions or [])]
         preferred = [m for m in candidates if "flash" in m.lower()]
-        selected = preferred[0] if preferred else (candidates[0] if candidates else None)
-        if selected:
-            model = genai.GenerativeModel(selected)
-            safe_print(f"[GEMINI] ✅ Connected to model: {selected}")
-        else:
-            model = None
-            safe_print("[GEMINI] ❌ No valid text generation models found for this API key.")
+        SELECTED_MODEL = preferred[0] if preferred else (candidates[0] if candidates else "gemini-2.5-flash")
+        safe_print(f"[GEMINI] ✅ Connected. Model: {SELECTED_MODEL}")
     except Exception as e:
         safe_print(f"[GEMINI CONFIG ERROR] {type(e).__name__}: {e}")
-        model = None
+        client = None
 
 def switch_gemini_key():
-    global CURRENT_GEMINI_KEY_INDEX, model, _all_keys_exhausted
+    global CURRENT_GEMINI_KEY_INDEX, client, _all_keys_exhausted
     if CURRENT_GEMINI_KEY_INDEX < len(ALL_KEYS) - 1:
         CURRENT_GEMINI_KEY_INDEX += 1
         safe_print(f"[GEMINI] Switching to key index {CURRENT_GEMINI_KEY_INDEX}...")
@@ -144,9 +142,9 @@ def local_fallback_analysis(symbol, name, news_headlines, current_price, technic
     }
 
 def get_gemini_analysis(symbol, name, news_headlines, news_sentiment, current_price, technicals, is_value_scan=False, fundamentals=None, _retry=0):
-    global model, _all_keys_exhausted
-    if not model or _all_keys_exhausted:
-        reason = "no model configured" if not model else "all keys quota-exhausted"
+    global client, _all_keys_exhausted
+    if not client or _all_keys_exhausted:
+        reason = "no client configured" if not client else "all keys quota-exhausted"
         safe_print(f"[GEMINI] ⚠️  Skipping AI for {symbol} — {reason}. Using local fallback.")
         return local_fallback_analysis(symbol, name, news_headlines, current_price, technicals, fundamentals)
     prompt = f"""
@@ -196,7 +194,7 @@ Return ONLY valid JSON, no prose, no markdown.
 """
     MAX_RETRIES = 2
     try:
-        response = model.generate_content(prompt)
+        response = client.models.generate_content(model=SELECTED_MODEL, contents=prompt)
         text = response.text.strip()
         if text.startswith("```json"):
             text = text[7:]
