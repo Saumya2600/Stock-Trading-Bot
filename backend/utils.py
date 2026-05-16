@@ -16,6 +16,8 @@ def safe_print(s: str):
             sys.stdout.write(s.encode('utf-8', errors='replace').decode('utf-8') + "\n")
             sys.stdout.flush()
 
+import pandas as pd
+
 def simple_sma(series, length):
     return series.rolling(length).mean()
 
@@ -27,6 +29,29 @@ def simple_rsi(series, length=14):
     avg_loss = loss.rolling(length, min_periods=length).mean()
     rs = avg_gain / avg_loss
     return 100 - (100 / (1 + rs))
+
+def simple_macd(series, fast=12, slow=26, signal=9):
+    ema_fast = series.ewm(span=fast, adjust=False).mean()
+    ema_slow = series.ewm(span=slow, adjust=False).mean()
+    macd = ema_fast - ema_slow
+    macd_signal = macd.ewm(span=signal, adjust=False).mean()
+    macd_hist = macd - macd_signal
+    return macd, macd_signal, macd_hist
+
+def simple_atr(high, low, close, length=14):
+    tr1 = high - low
+    tr2 = (high - close.shift()).abs()
+    tr3 = (low - close.shift()).abs()
+    tr = pd.concat([tr1, tr2, tr3], axis=1).max(axis=1)
+    atr = tr.rolling(length).mean()
+    return atr
+
+def simple_bollinger_bands(series, length=20, std=2):
+    sma = series.rolling(length).mean()
+    rolling_std = series.rolling(length).std()
+    upper = sma + (rolling_std * std)
+    lower = sma - (rolling_std * std)
+    return upper, sma, lower
 
 def is_market_open(now=None):
     eastern = pytz.timezone("US/Eastern")

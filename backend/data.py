@@ -134,6 +134,19 @@ def fetch_fmp_data(symbol):
         print(f"FMP Fetch Error ({symbol}): {e}")
     return None
 
+def fetch_news_sentiment(symbol):
+    if not FINNHUB_KEY: return None
+    try:
+        url = f"https://finnhub.io/api/v1/news-sentiment?symbol={symbol}"
+        headers = {"X-Finnhub-Token": FINNHUB_KEY}
+        res = requests.get(url, headers=headers, timeout=8).json()
+        if "sentiment" in res:
+            # Finnhub sentiment typically has bear/bull percentages
+            return res["sentiment"]
+    except Exception as e:
+        safe_print(f"Finnhub sentiment error for {symbol}: {e}")
+    return None
+
 
 # ---------------------------------------------------------------------------
 # SCANNER 1: Earnings Surprise — stocks that beat EPS in last 7 days

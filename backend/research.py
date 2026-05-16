@@ -7,8 +7,8 @@ from datetime import datetime
 import time
 
 from config import GEMINI_API_KEYS, RESEARCH_GEMINI_KEY, ALPACA_API_KEY, ALPACA_SECRET_KEY
-from utils import safe_print, is_market_open, is_research_window, seconds_until_market_open, simple_sma, simple_rsi
-from data import fetch_reddit_trending, fetch_52_week_lows, fetch_fmp_data, fetch_earnings_surprises, fetch_upcoming_earnings, fetch_rvol_breakouts
+from utils import safe_print, is_market_open, is_research_window, seconds_until_market_open, simple_sma, simple_rsi, simple_macd, simple_atr, simple_bollinger_bands
+from data import fetch_reddit_trending, fetch_52_week_lows, fetch_fmp_data, fetch_earnings_surprises, fetch_upcoming_earnings, fetch_rvol_breakouts, fetch_news_sentiment
 import state
 
 BLACKLIST = ["MSTR", "SGOV", "TLT", "SHY", "IEI"]
@@ -143,7 +143,7 @@ def local_fallback_analysis(symbol, name, news_headlines, current_price, technic
         "bull_case": "N/A"
     }
 
-def get_gemini_analysis(symbol, name, news_headlines, current_price, technicals, is_value_scan=False, fundamentals=None, _retry=0):
+def get_gemini_analysis(symbol, name, news_headlines, news_sentiment, current_price, technicals, is_value_scan=False, fundamentals=None, _retry=0):
     global model, _all_keys_exhausted
     if not model or _all_keys_exhausted:
         reason = "no model configured" if not model else "all keys quota-exhausted"
@@ -154,16 +154,16 @@ You are an elite quantitative analyst specializing in explosive short-term break
 Your goal: Identify if {symbol} ({name}) will skyrocket within 48 hours based on technical momentum, volume surge, and news FOMO.
 
 1. **Breakout Indicators**:
+   - Technicals include MACD, ATR, Bollinger Bands, and SMA.
    - Is there a 'Golden Cross' (SMA9 crossing above SMA21)?
-   - Is RSI rising but not yet over 75 (buying momentum)?
+   - Is MACD bullish? Are we breaking Bollinger Bands?
    - Is there a volume spike or "unusual volume" (RVOL)?
 2. **FOMO & News**:
-   - Analyze headlines for 'Earnings Beat', 'Short Squeeze', 'FDA Approval', 'Partnership', or 'New Product'.
-   - Is social sentiment (Reddit/Twitter) exploding?
-3. **Risk/Reward**:
-   - Tight stop-losses for high-velocity trades.
-4. **Verdict**:
-   - Assign a grade (85+ = Massive Breakout Potential).
+   - Analyze headlines. Is sentiment highly positive?
+   - News Sentiment Score: {news_sentiment} (Contains Bullish/Bearish % if available).
+3. **Risk/Reward & Support/Resistance**:
+   - Determine precise Support and Resistance levels from the price history and technicals.
+   - Set Stop Loss using ATR (Average True Range) for dynamic volatility-based risk.
 
 **Step-by-step reasoning**: Be aggressive and thorough.
 **MANDATORY**: You MUST state the P/E ratio, PEG, Debt-to-Equity, and Sector from the Fundamentals data in your reasoning. Explain how they impact the trade.
@@ -175,6 +175,8 @@ Your goal: Identify if {symbol} ({name}) will skyrocket within 48 hours based on
   "entry_price": float,
   "target_price": float,
   "stop_loss": float,
+  "support_level": float,
+  "resistance_level": float,
   "risk_level": "Low/Medium/High",
   "key_catalysts": "...",
   "bear_case": "...",
@@ -216,7 +218,7 @@ Return ONLY valid JSON, no prose, no markdown.
         if _retry < MAX_RETRIES:
             safe_print(f"[GEMINI] Retrying {symbol} (attempt {_retry + 1}/{MAX_RETRIES})...")
             time.sleep(2 ** _retry)  # exponential backoff: 1s, 2s
-            return get_gemini_analysis(symbol, name, news_headlines, current_price, technicals, is_value_scan, fundamentals, _retry + 1)
+            return get_gemini_analysis(symbol, name, news_headlines, news_sentiment, current_price, technicals, is_value_scan, fundamentals, _retry + 1)
         return local_fallback_analysis(symbol, name, news_headlines, current_price, technicals, fundamentals)
     except Exception as e:
         err_str = str(e)
@@ -229,12 +231,12 @@ Return ONLY valid JSON, no prose, no markdown.
             time.sleep(2)  # brief pause before key switch
             if switch_gemini_key():
                 time.sleep(3)  # pause after switch before retry
-                return get_gemini_analysis(symbol, name, news_headlines, current_price, technicals, is_value_scan, fundamentals, 0)
+                return get_gemini_analysis(symbol, name, news_headlines, news_sentiment, current_price, technicals, is_value_scan, fundamentals, 0)
         elif is_transient and _retry < MAX_RETRIES:
             wait = 5 * (2 ** _retry)
             safe_print(f"[GEMINI] Transient error for {symbol}. Waiting {wait}s then retrying (attempt {_retry + 1}/{MAX_RETRIES})...")
             time.sleep(wait)
-            return get_gemini_analysis(symbol, name, news_headlines, current_price, technicals, is_value_scan, fundamentals, _retry + 1)
+            return get_gemini_analysis(symbol, name, news_headlines, news_sentiment, current_price, technicals, is_value_scan, fundamentals, _retry + 1)
         return local_fallback_analysis(symbol, name, news_headlines, current_price, technicals, fundamentals)
 
 def run_research_cycle(force=False, manual_reason=None):
@@ -351,26 +353,37 @@ def run_research_cycle(force=False, manual_reason=None):
                 sma_fast = simple_sma(df_tech['c'], 9).iloc[-1]
                 sma_slow = simple_sma(df_tech['c'], 21).iloc[-1]
                 rsi = simple_rsi(df_tech['c'], 14).iloc[-1]
+                macd, macd_signal, macd_hist = simple_macd(df_tech['c'])
+                atr = simple_atr(df_tech['h'], df_tech['l'], df_tech['c'])
+                upper, mid, lower = simple_bollinger_bands(df_tech['c'])
                 volume_trend = df_tech['v'].rolling(5).mean().iloc[-1]
                 technicals = {
                     "sma_fast": safe_float(sma_fast),
                     "sma_slow": safe_float(sma_slow),
                     "rsi": safe_float(rsi),
+                    "macd": safe_float(macd.iloc[-1]),
+                    "macd_hist": safe_float(macd_hist.iloc[-1]),
+                    "atr": safe_float(atr.iloc[-1]),
+                    "bb_upper": safe_float(upper.iloc[-1]),
+                    "bb_lower": safe_float(lower.iloc[-1]),
                     "volume_trend": safe_float(volume_trend)
                 }
             elif snap and snap.get('dailyBar'):
                 # Minimal technicals if only snapshot available
                 last_price = snap['dailyBar']['c']
-                technicals = {"sma_fast": 0.0, "sma_slow": 0.0, "rsi": 0.0, "volume_trend": snap['dailyBar']['v']}
+                technicals = {"sma_fast": 0.0, "sma_slow": 0.0, "rsi": 0.0, "macd": 0.0, "atr": 0.0, "bb_upper": 0.0, "bb_lower": 0.0, "volume_trend": snap['dailyBar']['v']}
             else:
                 safe_print(f"[RESEARCH] ⚠️  {symbol}: No bars or snapshot data found.")
                 last_price = 0
                 technicals = {}
+            
             fundamentals = fetch_fmp_data(symbol)
+            news_sentiment = fetch_news_sentiment(symbol)
+            
             meta = target_meta.get(symbol, {})
             safe_print(f"[RESEARCH] {symbol}: price={last_price}, technicals={'ok' if technicals else 'EMPTY'}, fundamentals={'ok' if fundamentals else 'None'}, source={meta.get('source','?')}")
             analysis = get_gemini_analysis(
-                symbol, name, headlines, last_price, technicals,
+                symbol, name, headlines, news_sentiment, last_price, technicals,
                 meta.get("is_value_scan", False), fundamentals
             )
             if not _all_keys_exhausted:
@@ -384,6 +397,8 @@ def run_research_cycle(force=False, manual_reason=None):
                 "entry_price": analysis.get("entry_price", float(last_price)),
                 "target_price": analysis.get("target_price", float(last_price) * 1.2),
                 "stop_loss": analysis.get("stop_loss", float(last_price) * 0.93),
+                "support_level": analysis.get("support_level", float(last_price) * 0.95),
+                "resistance_level": analysis.get("resistance_level", float(last_price) * 1.05),
                 "risk_level": analysis.get("risk_level", "Medium"),
                 "key_catalysts": analysis.get("key_catalysts", ""),
                 "bear_case": analysis.get("bear_case", ""),
