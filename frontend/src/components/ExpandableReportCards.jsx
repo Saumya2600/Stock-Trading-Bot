@@ -165,10 +165,23 @@ const ReportCard = ({ symbol, data }) => {
                   <div className="headline-md" style={{ marginTop: '0.25rem' }}>${price.toFixed(2)}</div>
                </div>
                <div style={{ padding: '1rem', background: 'rgba(255,255,255,0.02)', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
-                  <div className="label-sm">Stop Loss</div>
+                  <div className="label-sm">Stop Loss (ATR)</div>
                   <div className="headline-md" style={{ marginTop: '0.25rem', color: 'var(--secondary)' }}>${stopLoss.toFixed(2)}</div>
                </div>
             </div>
+
+            {(data.support_level || data.resistance_level) && (
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                <div style={{ padding: '1rem', background: 'rgba(63,255,139,0.04)', borderRadius: '12px', border: '1px solid rgba(63,255,139,0.12)' }}>
+                  <div className="label-sm" style={{ color: '#3fff8b' }}>Support Level</div>
+                  <div className="headline-md" style={{ marginTop: '0.25rem', color: '#3fff8b' }}>${(data.support_level || 0).toFixed(2)}</div>
+                </div>
+                <div style={{ padding: '1rem', background: 'rgba(255,113,108,0.04)', borderRadius: '12px', border: '1px solid rgba(255,113,108,0.12)' }}>
+                  <div className="label-sm" style={{ color: '#ff716c' }}>Resistance Level</div>
+                  <div className="headline-md" style={{ marginTop: '0.25rem', color: '#ff716c' }}>${(data.resistance_level || 0).toFixed(2)}</div>
+                </div>
+              </div>
+            )}
 
             <div style={{ 
               marginTop: 'auto', padding: '1.5rem', 
