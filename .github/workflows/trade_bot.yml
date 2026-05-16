@@ -1,0 +1,58 @@
+name: Trading Bot (Live Execution)
+
+on:
+  schedule:
+    # --- TRADING CYCLES (Every 5 mins during market: 9:30 AM - 4:00 PM ET) ---
+    # 13:30 to 20:00 UTC
+    - cron: '*/5 13-20 * * 1-5'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  trade-cycle:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install Dependencies
+        run: |
+          cd backend
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Trades
+        env:
+          VITE_ALPACA_API_KEY: ${{ secrets.VITE_ALPACA_API_KEY }}
+          VITE_ALPACA_SECRET_KEY: ${{ secrets.VITE_ALPACA_SECRET_KEY }}
+        timeout-minutes: 10
+        run: |
+          cd backend
+          echo "Running TRADING cycle..."
+          # Use timeout 5m as a double-safety for Lumibot
+          timeout 300 python run_trades.py || echo "Trade cycle timed out or finished"
+
+      - name: Sync and Push App State
+        run: |
+          git config --global user.name "GitHub Action Bot"
+          git config --global user.email "actions@github.com"
+          
+          # Sync backend app_state to root and frontend public
+          cp backend/app_state.json ./app_state.json || true
+          cp backend/app_state.json frontend/public/app_state.json || true
+          
+          git add backend/app_state.json
+          git add frontend/public/app_state.json
+          git add app_state.json
+          
+          git commit -m "Automated Trade Sync: $(date)" || echo "No changes to commit"
+          git push origin main
