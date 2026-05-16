@@ -35,10 +35,16 @@ class DeepResearchBot(Strategy):
 
     def on_trading_iteration(self):
         if not is_market_open():
-            safe_print("[BOT] Market closed. Sleeping until open.")
-            sleep_sec = max(60, seconds_until_market_open())
-            time.sleep(sleep_sec)
-            return
+            safe_print("[BOT] Market closed.")
+            if self.one_shot:
+                safe_print("[BOT] One-shot mode active during closed market. Exiting.")
+                import os
+                os._exit(0)
+            else:
+                safe_print("[BOT] Sleeping until open.")
+                sleep_sec = max(60, seconds_until_market_open())
+                time.sleep(sleep_sec)
+                return
 
         if not self.benchmark_initialized:
             try:
@@ -78,6 +84,11 @@ class DeepResearchBot(Strategy):
                 max_risk = current_value * risk_per_trade
                 risk_per_share = max(last_price - stop_loss, 0.01)
                 quantity = int(max_risk / risk_per_share)
+                
+                # Cap position size to 20% of portfolio to avoid 'insufficient buying power' rejections
+                max_position_cost = current_value * 0.20
+                if quantity * last_price > max_position_cost:
+                    quantity = int(max_position_cost / last_price)
 
                 existing_pos = self.get_position(symbol)
                 if ai_grade >= 55:  # Aggressive: Buy anything with positive AI conviction
