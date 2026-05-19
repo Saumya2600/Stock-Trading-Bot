@@ -2,7 +2,7 @@ name: Research Bot (Morning Scan)
 
 on:
   schedule:
-    # --- RESEARCH START (10 AM ADT / 9 AM ET / 13:00 UTC) ---
+    # Research before market open: 9:00 AM EDT / 10:00 AM ADT = 13:00 UTC
     - cron: '0 13 * * 1-5'
   workflow_dispatch:
 
@@ -48,14 +48,14 @@ jobs:
         run: |
           git config --global user.name "GitHub Action Bot"
           git config --global user.email "actions@github.com"
-          
+
           # Sync backend results
           cp backend/reports.json ./reports.json || true
           cp backend/reports.json frontend/public/reports.json || true
-          
+
           git add backend/*.json
           git add frontend/public/*.json
           git add *.json
-          
+
           git commit -m "Automated Research Sync: $(date)" || echo "No changes to commit"
           git push origin main
