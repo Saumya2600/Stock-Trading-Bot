@@ -34,8 +34,10 @@ jobs:
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
           GOOGLE_API_KEY_FALLBACK: ${{ secrets.GOOGLE_API_KEY_FALLBACK }}
           RESEARCH_GEMINI_KEY: ${{ secrets.RESEARCH_GEMINI_KEY }}
-          fmp: ${{ secrets.FMP_API_KEY }}
+          FMP_API_KEY: ${{ secrets.FMP_API_KEY }}
           FINNHUB_KEY: ${{ secrets.FINNHUB_KEY }}
+          VITE_ALPACA_API_KEY: ${{ secrets.VITE_ALPACA_API_KEY }}
+          VITE_ALPACA_SECRET_KEY: ${{ secrets.VITE_ALPACA_SECRET_KEY }}
         timeout-minutes: 15
         run: |
           cd backend
