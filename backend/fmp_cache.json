@@ -1,13 +1,90 @@
 {
-    "AMD": {
+    "ON": {
         "data": {
             "sector": "Technology",
             "industry": "Semiconductors",
-            "pe": 139.86,
-            "peg": 1.02,
-            "debt_to_equity": 0.06,
-            "description": "Advanced Micro Devices, Inc. operates as a semiconductor company internationally. It operates in three segments: Data Center, Client and Gaming, and Embedded. The company offers artificial intelligenc..."
+            "pe": 78.65,
+            "peg": 0.36,
+            "debt_to_equity": 0.44,
+            "description": "ON Semiconductor Corporation provides intelligent sensing and power solutions in Hong Kong, Singapore, the United Kingdom, the United States, and internationally. It operates through three segments: P..."
         },
-        "updated_at": "2026-05-18T22:56:26.799979"
+        "updated_at": "2026-05-19T16:17:31.954282"
+    },
+    "MS": {
+        "data": {
+            "sector": "Financial Services",
+            "industry": "Capital Markets",
+            "pe": 17.31,
+            "peg": 2.32,
+            "debt_to_equity": 5.02,
+            "description": "Morgan Stanley, a financial holding company, provides various financial products and services to corporations, governments, financial institutions, and individuals in the Americas, Asia, Europe, the M..."
+        },
+        "updated_at": "2026-05-19T16:18:03.791007"
+    },
+    "WFC": {
+        "data": {
+            "sector": "Financial Services",
+            "industry": "Banks - Diversified",
+            "pe": 11.59,
+            "peg": 1.32,
+            "debt_to_equity": 0,
+            "description": "Wells Fargo & Company, a financial services company, provides diversified banking, investment, mortgage, and consumer and commercial finance products and services in the United States and internationa..."
+        },
+        "updated_at": "2026-05-19T16:18:29.731394"
+    },
+    "BAC": {
+        "data": {
+            "sector": "Financial Services",
+            "industry": "Banks - Diversified",
+            "pe": 12.66,
+            "peg": 0.91,
+            "debt_to_equity": 0,
+            "description": "Bank of America Corporation, through its subsidiaries, provides various financial products and services for individual consumers, small and middle-market businesses, institutional investors, large cor..."
+        },
+        "updated_at": "2026-05-19T16:19:03.765386"
+    },
+    "TSLA": {
+        "data": {
+            "sector": "Consumer Cyclical",
+            "industry": "Auto Manufacturers",
+            "pe": 357.48,
+            "peg": 5.65,
+            "debt_to_equity": 0.19,
+            "description": "Tesla, Inc. designs, develops, manufactures, leases, and sells electric vehicles, and energy generation and storage systems in the United States, China, and internationally. The company operates in tw..."
+        },
+        "updated_at": "2026-05-19T16:19:24.436544"
+    },
+    "POET": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Semiconductors",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 0.04,
+            "description": "POET Technologies Inc., together with its subsidiaries, designs, develops, manufactures, and sells semiconductor products and services for commercial applications in the United States, Canada, the res..."
+        },
+        "updated_at": "2026-05-19T16:19:46.817831"
+    },
+    "CCL": {
+        "data": {
+            "sector": "Consumer Cyclical",
+            "industry": "Travel Services",
+            "pe": 10.54,
+            "peg": 1.08,
+            "debt_to_equity": 2.04,
+            "description": "Carnival Corporation Ltd., a cruise company, provides leisure travel services in North America, Australia, Europe, and internationally. The company operates through four segments: North America Cruise..."
+        },
+        "updated_at": "2026-05-19T16:20:10.581902"
+    },
+    "SPY": {
+        "data": {
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 27.56,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "The trust seeks to achieve its investment objective by holding a portfolio of the common stocks that are included in the index (the \u201cPortfolio\u201d), with the weight of each stock in the Portfolio substan..."
+        },
+        "updated_at": "2026-05-19T16:20:36.916101"
     }
 }
