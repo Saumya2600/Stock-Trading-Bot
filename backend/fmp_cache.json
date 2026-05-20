@@ -1,59 +1,4 @@
 {
-    "ON": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Semiconductors",
-            "pe": 78.65,
-            "peg": 0.36,
-            "debt_to_equity": 0.44,
-            "description": "ON Semiconductor Corporation provides intelligent sensing and power solutions in Hong Kong, Singapore, the United Kingdom, the United States, and internationally. It operates through three segments: P..."
-        },
-        "updated_at": "2026-05-19T16:17:31.954282"
-    },
-    "MS": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Capital Markets",
-            "pe": 17.31,
-            "peg": 2.32,
-            "debt_to_equity": 5.02,
-            "description": "Morgan Stanley, a financial holding company, provides various financial products and services to corporations, governments, financial institutions, and individuals in the Americas, Asia, Europe, the M..."
-        },
-        "updated_at": "2026-05-19T16:18:03.791007"
-    },
-    "WFC": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Banks - Diversified",
-            "pe": 11.59,
-            "peg": 1.32,
-            "debt_to_equity": 0,
-            "description": "Wells Fargo & Company, a financial services company, provides diversified banking, investment, mortgage, and consumer and commercial finance products and services in the United States and internationa..."
-        },
-        "updated_at": "2026-05-19T16:18:29.731394"
-    },
-    "BAC": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Banks - Diversified",
-            "pe": 12.66,
-            "peg": 0.91,
-            "debt_to_equity": 0,
-            "description": "Bank of America Corporation, through its subsidiaries, provides various financial products and services for individual consumers, small and middle-market businesses, institutional investors, large cor..."
-        },
-        "updated_at": "2026-05-19T16:19:03.765386"
-    },
-    "TSLA": {
-        "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Auto Manufacturers",
-            "pe": 357.48,
-            "peg": 5.65,
-            "debt_to_equity": 0.19,
-            "description": "Tesla, Inc. designs, develops, manufactures, leases, and sells electric vehicles, and energy generation and storage systems in the United States, China, and internationally. The company operates in tw..."
-        },
-        "updated_at": "2026-05-19T16:19:24.436544"
-    },
     "POET": {
         "data": {
             "sector": "Technology",
@@ -63,28 +8,83 @@
             "debt_to_equity": 0.04,
             "description": "POET Technologies Inc., together with its subsidiaries, designs, develops, manufactures, and sells semiconductor products and services for commercial applications in the United States, Canada, the res..."
         },
-        "updated_at": "2026-05-19T16:19:46.817831"
+        "updated_at": "2026-05-20T16:23:47.822704"
     },
-    "CCL": {
+    "NFLX": {
         "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Travel Services",
-            "pe": 10.54,
-            "peg": 1.08,
-            "debt_to_equity": 2.04,
-            "description": "Carnival Corporation Ltd., a cruise company, provides leisure travel services in North America, Australia, Europe, and internationally. The company operates through four segments: North America Cruise..."
+            "sector": "Communication Services",
+            "industry": "Entertainment",
+            "pe": 28.44,
+            "peg": 1.3,
+            "debt_to_equity": 0.54,
+            "description": "Netflix, Inc. provides entertainment services worldwide. The company offers television (TV) series, documentaries, feature films, games, and live programming across various genres and languages. It al..."
         },
-        "updated_at": "2026-05-19T16:20:10.581902"
+        "updated_at": "2026-05-20T16:24:13.958361"
+    },
+    "PFE": {
+        "data": {
+            "sector": "Healthcare",
+            "industry": "Drug Manufacturers - General",
+            "pe": 19.63,
+            "peg": 13.77,
+            "debt_to_equity": 0.72,
+            "description": "Pfizer Inc. discovers, develops, manufactures, markets, distributes, and sells biopharmaceutical products in the United States and internationally. It operates in three segments: Biopharma, PC1, and P..."
+        },
+        "updated_at": "2026-05-20T16:24:50.491371"
+    },
+    "GOOG": {
+        "data": {
+            "sector": "Communication Services",
+            "industry": "Internet Content & Information",
+            "pe": 29.09,
+            "peg": 1.55,
+            "debt_to_equity": 0.2,
+            "description": "Alphabet Inc. offers various products and platforms in the United States, Europe, the Middle East, Africa, the Asia-Pacific, Canada, and Latin America. It operates through Google Services, Google Clou..."
+        },
+        "updated_at": "2026-05-20T16:25:14.757967"
+    },
+    "CSCO": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Communication Equipment",
+            "pe": 38.58,
+            "peg": 1.7,
+            "debt_to_equity": 0.64,
+            "description": "Cisco Systems, Inc. designs, develops, and sells technologies that help to power, secure, and draw insights from the internet in the Americas, Europe, the Middle East, Africa, the Asia Pacific, Japan,..."
+        },
+        "updated_at": "2026-05-20T16:25:41.179618"
+    },
+    "QQQ": {
+        "data": {
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 34.59,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "To maintain the correspondence between the composition and weights of the securities in the trust (the \"securities\") and the stocks in the NASDAQ-100 Index\u00ae, the adviser adjusts the securities from ti..."
+        },
+        "updated_at": "2026-05-20T16:26:07.408704"
     },
     "SPY": {
         "data": {
             "sector": "Unknown",
             "industry": "Unknown",
-            "pe": 27.56,
+            "pe": 27.75,
             "peg": 0,
             "debt_to_equity": 0,
             "description": "The trust seeks to achieve its investment objective by holding a portfolio of the common stocks that are included in the index (the \u201cPortfolio\u201d), with the weight of each stock in the Portfolio substan..."
         },
-        "updated_at": "2026-05-19T16:20:36.916101"
+        "updated_at": "2026-05-20T16:26:41.491947"
+    },
+    "F": {
+        "data": {
+            "sector": "Consumer Cyclical",
+            "industry": "Auto Manufacturers",
+            "pe": 0,
+            "peg": 8.48,
+            "debt_to_equity": 4.26,
+            "description": "Ford Motor Company develops, delivers, and services Ford trucks, sport utility vehicles, commercial vans and cars, and Lincoln luxury vehicles in the United States, Canada, the United Kingdom, Mexico,..."
+        },
+        "updated_at": "2026-05-20T16:27:10.690373"
     }
 }
