@@ -1,90 +1,68 @@
 {
-    "KO": {
-        "data": {
-            "sector": "Consumer Defensive",
-            "industry": "Beverages - Non-Alcoholic",
-            "pe": 25.54,
-            "peg": 4.18,
-            "debt_to_equity": 1.25,
-            "description": "The Coca-Cola Company, a beverage company, manufactures and sells various nonalcoholic beverages in the United States and internationally. The company provides Trademark Coca-Cola, sparkling soft drin..."
-        },
-        "updated_at": "2026-05-22T15:47:55.650346"
-    },
-    "C": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Banks - Diversified",
-            "pe": 15.49,
-            "peg": 0.69,
-            "debt_to_equity": 0,
-            "description": "Citigroup Inc., a diversified financial service holding company, provides various financial products and services to consumers, corporations, governments, and institutions. It operates through five se..."
-        },
-        "updated_at": "2026-05-22T15:49:17.837586"
-    },
-    "IREN": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Capital Markets",
-            "pe": 74.83,
-            "peg": 3.11,
-            "debt_to_equity": 1.49,
-            "description": "IREN Limited operates in the vertically integrated data center business in Australia and Canada. The company owns and operates computing hardware, as well as electrical infrastructure and data centers..."
-        },
-        "updated_at": "2026-05-22T15:49:41.823234"
-    },
-    "SNDK": {
+    "BB": {
         "data": {
             "sector": "Technology",
-            "industry": "Computer Hardware",
-            "pe": 51.25,
-            "peg": 0,
-            "debt_to_equity": 0.02,
-            "description": "Sandisk Corporation develops, manufactures, and sells data storage devices and solutions using NAND flash technology in the United States, Europe, the Middle East, Africa, Asia, and internationally. T..."
+            "industry": "Software - Infrastructure",
+            "pe": 87.89,
+            "peg": 1.69,
+            "debt_to_equity": 0.3,
+            "description": "BlackBerry Limited provides intelligent software and services to enterprises and governments worldwide. The company operates through three segments: Secure Communications, QNX, and Licensing. The comp..."
         },
-        "updated_at": "2026-05-22T15:50:04.296877"
-    },
-    "BULL": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Application",
-            "pe": 0,
-            "peg": 0,
-            "debt_to_equity": 0.08,
-            "description": "Webull Corporation operates as a digital investment platform. Its platform enables retail investors to trade securities through its licensed broker dealer in the United States, Canada, the United King..."
-        },
-        "updated_at": "2026-05-22T15:51:19.877922"
+        "updated_at": "2026-05-25T15:47:51.832970"
     },
     "DTE": {
         "data": {
             "sector": "Utilities",
             "industry": "Utilities - Regulated Electric",
-            "pe": 23.85,
-            "peg": 1.99,
+            "pe": 23.94,
+            "peg": 2.02,
             "debt_to_equity": 2.19,
             "description": "DTE Energy Company engages in energy-related businesses and services. The company operates through four segments: Electric, Gas, DTE Vantage, and Energy Trading.The company's Electric segment generate..."
         },
-        "updated_at": "2026-05-22T15:52:14.152687"
+        "updated_at": "2026-05-25T15:48:11.192275"
     },
-    "DVN": {
+    "POET": {
         "data": {
-            "sector": "Energy",
-            "industry": "Oil & Gas E&P",
-            "pe": 13.23,
-            "peg": 2.92,
-            "debt_to_equity": 0.56,
-            "description": "Devon Energy Corporation, an independent energy company, engages in the exploration, development, and production of oil, natural gas, and natural gas liquids in the United States. The company operates..."
+            "sector": "Technology",
+            "industry": "Semiconductors",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 0.04,
+            "description": "POET Technologies Inc., together with its subsidiaries, designs, develops, manufactures, and sells semiconductor products and services for commercial applications in the United States, Canada, the res..."
         },
-        "updated_at": "2026-05-22T15:52:43.748642"
+        "updated_at": "2026-05-25T15:48:39.925381"
     },
-    "CCL": {
+    "ALL": {
         "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Travel Services",
-            "pe": 11.5,
-            "peg": 1.08,
-            "debt_to_equity": 2.04,
-            "description": "Carnival Corporation Ltd., a cruise company, provides leisure travel services in North America, Australia, Europe, and internationally. The company operates through four segments: North America Cruise..."
+            "sector": "Financial Services",
+            "industry": "Insurance - Property & Casualty",
+            "pe": 4.79,
+            "peg": 2.6,
+            "debt_to_equity": 0.24,
+            "description": "The Allstate Corporation, together with its subsidiaries, provides property and casualty, and other insurance products in the United States and Canada. It operates in four segments: Allstate Protectio..."
         },
-        "updated_at": "2026-05-22T15:53:02.819327"
+        "updated_at": "2026-05-25T15:49:03.558151"
+    },
+    "SPCX": {
+        "data": {
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "..."
+        },
+        "updated_at": "2026-05-25T15:49:26.273220"
+    },
+    "CC": {
+        "data": {
+            "sector": "Basic Materials",
+            "industry": "Specialty Chemicals",
+            "pe": 0,
+            "peg": 1.6,
+            "debt_to_equity": 20.34,
+            "description": "The Chemours Company provides performance chemicals in North America, the Asia Pacific, Europe, the Middle East, Africa, and Latin America. The company operates through three segments: Thermal & Speci..."
+        },
+        "updated_at": "2026-05-25T15:49:52.693647"
     }
 }
