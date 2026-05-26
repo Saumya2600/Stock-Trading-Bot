@@ -1,68 +1,79 @@
 {
-    "BB": {
+    "RDDT": {
         "data": {
-            "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 87.89,
-            "peg": 1.69,
-            "debt_to_equity": 0.3,
-            "description": "BlackBerry Limited provides intelligent software and services to enterprises and governments worldwide. The company operates through three segments: Secure Communications, QNX, and Licensing. The comp..."
+            "sector": "Communication Services",
+            "industry": "Internet Content & Information",
+            "pe": 41.22,
+            "peg": 1.01,
+            "debt_to_equity": 0.01,
+            "description": "Reddit, Inc. operates a digital community in the United States and internationally. The company's platform enables user to engage in conversations, explore passions, research new hobbies, exchange goo..."
         },
-        "updated_at": "2026-05-25T15:47:51.832970"
+        "updated_at": "2026-05-26T16:39:11.909869"
     },
-    "DTE": {
+    "PL": {
         "data": {
-            "sector": "Utilities",
-            "industry": "Utilities - Regulated Electric",
-            "pe": 23.94,
-            "peg": 2.02,
-            "debt_to_equity": 2.19,
-            "description": "DTE Energy Company engages in energy-related businesses and services. The company operates through four segments: Electric, Gas, DTE Vantage, and Energy Trading.The company's Electric segment generate..."
+            "sector": "Industrials",
+            "industry": "Aerospace & Defense",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 2.45,
+            "description": "Planet Labs PBC engages in the design, construction, and launch of constellations of satellites with the intent of providing high-cadence geospatial data delivered to customers through an online platf..."
         },
-        "updated_at": "2026-05-25T15:48:11.192275"
+        "updated_at": "2026-05-26T16:39:42.138663"
     },
-    "POET": {
+    "TSM": {
         "data": {
             "sector": "Technology",
             "industry": "Semiconductors",
-            "pe": 0,
-            "peg": 0,
-            "debt_to_equity": 0.04,
-            "description": "POET Technologies Inc., together with its subsidiaries, designs, develops, manufactures, and sells semiconductor products and services for commercial applications in the United States, Canada, the res..."
+            "pe": 35.3,
+            "peg": 1.26,
+            "debt_to_equity": 0.18,
+            "description": "Taiwan Semiconductor Manufacturing Company Limited, together with its subsidiaries, manufactures, packages, tests, and sells integrated circuits and other semiconductor devices in Taiwan, China, Europ..."
         },
-        "updated_at": "2026-05-25T15:48:39.925381"
+        "updated_at": "2026-05-26T16:40:09.838036"
     },
-    "ALL": {
+    "DIS": {
+        "data": {
+            "sector": "Communication Services",
+            "industry": "Entertainment",
+            "pe": 16.5,
+            "peg": 2.61,
+            "debt_to_equity": 0.41,
+            "description": "The Walt Disney Company operates as an entertainment company in Americas, Europe, and the Asia Pacific. It operates in three segments: Entertainment, Sports, and Experiences. The company produces and ..."
+        },
+        "updated_at": "2026-05-26T16:40:36.223861"
+    },
+    "IQ": {
+        "data": {
+            "sector": "Communication Services",
+            "industry": "Entertainment",
+            "pe": 0,
+            "peg": 2.48,
+            "debt_to_equity": 1.09,
+            "description": "iQIYI, Inc. provides online entertainment video services in the People's Republic of China. The company operates a platform that provides a collection of internet video content, such as professionally..."
+        },
+        "updated_at": "2026-05-26T16:41:15.404009"
+    },
+    "AXP": {
         "data": {
             "sector": "Financial Services",
-            "industry": "Insurance - Property & Casualty",
-            "pe": 4.79,
-            "peg": 2.6,
-            "debt_to_equity": 0.24,
-            "description": "The Allstate Corporation, together with its subsidiaries, provides property and casualty, and other insurance products in the United States and Canada. It operates in four segments: Allstate Protectio..."
+            "industry": "Credit Services",
+            "pe": 19.42,
+            "peg": 1.53,
+            "debt_to_equity": 1.78,
+            "description": "American Express Company, together with its subsidiaries, operates as an integrated payments company in the United States, Europe, the Middle East and Africa, the Asia Pacific, Australia, New Zealand,..."
         },
-        "updated_at": "2026-05-25T15:49:03.558151"
+        "updated_at": "2026-05-26T16:41:41.640119"
     },
-    "SPCX": {
+    "IBM": {
         "data": {
-            "sector": "Unknown",
-            "industry": "Unknown",
-            "pe": 0,
-            "peg": 0,
-            "debt_to_equity": 0,
-            "description": "..."
+            "sector": "Technology",
+            "industry": "Information Technology Services",
+            "pe": 22.2,
+            "peg": 2.38,
+            "debt_to_equity": 2.11,
+            "description": "International Business Machines Corporation, together with its subsidiaries, provides integrated solutions and services in the Americas, Europe, the Middle East, Africa, and the Asia Pacific. It opera..."
         },
-        "updated_at": "2026-05-25T15:49:26.273220"
-    },
-    "CC": {
-        "data": {
-            "sector": "Basic Materials",
-            "industry": "Specialty Chemicals",
-            "pe": 0,
-            "peg": 1.6,
-            "debt_to_equity": 20.34,
-            "description": "The Chemours Company provides performance chemicals in North America, the Asia Pacific, Europe, the Middle East, Africa, and Latin America. The company operates through three segments: Thermal & Speci..."
-        },
-        "updated_at": "2026-05-25T15:49:52.693647"
+        "updated_at": "2026-05-26T16:42:06.467288"
     }
 }
