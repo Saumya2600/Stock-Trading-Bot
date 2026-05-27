@@ -1,79 +1,90 @@
 {
-    "RDDT": {
+    "USO": {
         "data": {
-            "sector": "Communication Services",
-            "industry": "Internet Content & Information",
-            "pe": 41.22,
-            "peg": 1.01,
-            "debt_to_equity": 0.01,
-            "description": "Reddit, Inc. operates a digital community in the United States and internationally. The company's platform enables user to engage in conversations, explore passions, research new hobbies, exchange goo..."
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 39.84,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "USO seeks to achieve its investment objective by investing primarily in futures contracts for light, sweet crude oil, other types of crude oil, diesel-heating oil, gasoline, natural gas, and other pet..."
         },
-        "updated_at": "2026-05-26T16:39:11.909869"
+        "updated_at": "2026-05-27T16:36:05.665770"
     },
-    "PL": {
+    "AAPL": {
         "data": {
-            "sector": "Industrials",
-            "industry": "Aerospace & Defense",
+            "sector": "Technology",
+            "industry": "Consumer Electronics",
+            "pe": 37.69,
+            "peg": 2.68,
+            "debt_to_equity": 0.8,
+            "description": "Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide. The company offers iPhone, a line of smartphones; Mac, a line of personal ..."
+        },
+        "updated_at": "2026-05-27T16:36:40.658183"
+    },
+    "CRM": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Software - Application",
+            "pe": 23.01,
+            "peg": 0.97,
+            "debt_to_equity": 0.3,
+            "description": "Salesforce, Inc. provides customer relationship management technology services that connect companies and customers together in the United States, Europe, and the Asia Pacific. The company offers Agen..."
+        },
+        "updated_at": "2026-05-27T16:37:15.146237"
+    },
+    "OPEN": {
+        "data": {
+            "sector": "Real Estate",
+            "industry": "Real Estate Services",
             "pe": 0,
             "peg": 0,
-            "debt_to_equity": 2.45,
-            "description": "Planet Labs PBC engages in the design, construction, and launch of constellations of satellites with the intent of providing high-cadence geospatial data delivered to customers through an online platf..."
+            "debt_to_equity": 1.4,
+            "description": "Opendoor Technologies Inc. operates a digital platform for residential real estate transactions in the United States. It buys and sells homes through online e-commerce platform. The company also resel..."
         },
-        "updated_at": "2026-05-26T16:39:42.138663"
+        "updated_at": "2026-05-27T16:37:54.029857"
     },
-    "TSM": {
+    "AM": {
+        "data": {
+            "sector": "Energy",
+            "industry": "Oil & Gas Midstream",
+            "pe": 25.02,
+            "peg": 0,
+            "debt_to_equity": 1.92,
+            "description": "Antero Midstream Corporation owns, operates, and develops midstream energy assets in the Appalachian Basin. It operates in two segments, Gathering and Processing, and Water Handling. The gathering and..."
+        },
+        "updated_at": "2026-05-27T16:38:24.724874"
+    },
+    "NVDA": {
         "data": {
             "sector": "Technology",
             "industry": "Semiconductors",
-            "pe": 35.3,
-            "peg": 1.26,
-            "debt_to_equity": 0.18,
-            "description": "Taiwan Semiconductor Manufacturing Company Limited, together with its subsidiaries, manufactures, packages, tests, and sells integrated circuits and other semiconductor devices in Taiwan, China, Europ..."
+            "pe": 32.3,
+            "peg": 0.66,
+            "debt_to_equity": 0.07,
+            "description": "NVIDIA Corporation operates as a data center scale AI infrastructure company. The company operates through two segments, Compute & Networking, and Graphics segments. The Compute & Networking segment p..."
         },
-        "updated_at": "2026-05-26T16:40:09.838036"
+        "updated_at": "2026-05-27T16:38:55.886243"
     },
-    "DIS": {
-        "data": {
-            "sector": "Communication Services",
-            "industry": "Entertainment",
-            "pe": 16.5,
-            "peg": 2.61,
-            "debt_to_equity": 0.41,
-            "description": "The Walt Disney Company operates as an entertainment company in Americas, Europe, and the Asia Pacific. It operates in three segments: Entertainment, Sports, and Experiences. The company produces and ..."
-        },
-        "updated_at": "2026-05-26T16:40:36.223861"
-    },
-    "IQ": {
-        "data": {
-            "sector": "Communication Services",
-            "industry": "Entertainment",
-            "pe": 0,
-            "peg": 2.48,
-            "debt_to_equity": 1.09,
-            "description": "iQIYI, Inc. provides online entertainment video services in the People's Republic of China. The company operates a platform that provides a collection of internet video content, such as professionally..."
-        },
-        "updated_at": "2026-05-26T16:41:15.404009"
-    },
-    "AXP": {
+    "JPM": {
         "data": {
             "sector": "Financial Services",
-            "industry": "Credit Services",
-            "pe": 19.42,
-            "peg": 1.53,
-            "debt_to_equity": 1.78,
-            "description": "American Express Company, together with its subsidiaries, operates as an integrated payments company in the United States, Europe, the Middle East and Africa, the Asia Pacific, Australia, New Zealand,..."
+            "industry": "Banks - Diversified",
+            "pe": 14.24,
+            "peg": 1.63,
+            "debt_to_equity": 0,
+            "description": "JPMorgan Chase & Co. operates as a bank and financial holding company in the United States, rest of North America, Europe, the Middle East, Africa, the Asia Pacific, Latin America, and the Caribbean. ..."
         },
-        "updated_at": "2026-05-26T16:41:41.640119"
+        "updated_at": "2026-05-27T16:39:31.429468"
     },
-    "IBM": {
+    "META": {
         "data": {
-            "sector": "Technology",
-            "industry": "Information Technology Services",
-            "pe": 22.2,
-            "peg": 2.38,
-            "debt_to_equity": 2.11,
-            "description": "International Business Machines Corporation, together with its subsidiaries, provides integrated solutions and services in the Americas, Europe, the Middle East, Africa, and the Asia Pacific. It opera..."
+            "sector": "Communication Services",
+            "industry": "Internet Content & Information",
+            "pe": 22.33,
+            "peg": 0.88,
+            "debt_to_equity": 0.36,
+            "description": "Meta Platforms, Inc. engages in the development of products that enable people to connect and share with friends and family through mobile devices, personal computers, virtual reality (VR) headsets, a..."
         },
-        "updated_at": "2026-05-26T16:42:06.467288"
+        "updated_at": "2026-05-27T16:39:58.300780"
     }
 }
