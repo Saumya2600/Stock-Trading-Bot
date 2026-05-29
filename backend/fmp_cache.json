@@ -1,90 +1,90 @@
 {
-    "SNOW": {
+    "EU": {
+        "data": {
+            "sector": "Energy",
+            "industry": "Uranium",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 0.4,
+            "description": "enCore Energy Corp., together with its subsidiaries, engages in the acquisition, exploration, development, and extraction of uranium resource properties in the United States. The company is headquarte..."
+        },
+        "updated_at": "2026-05-29T16:41:40.868100"
+    },
+    "MX": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Semiconductors",
+            "pe": 0,
+            "peg": 1.13,
+            "debt_to_equity": 0.19,
+            "description": "Magnachip Semiconductor Corporation, together with its subsidiaries, designs, manufactures, and supplies analog and mixed-signal semiconductor platform solutions for communications, the Internet of Th..."
+        },
+        "updated_at": "2026-05-29T16:42:09.545319"
+    },
+    "CRM": {
         "data": {
             "sector": "Technology",
             "industry": "Software - Application",
-            "pe": 0,
-            "peg": 4.97,
-            "debt_to_equity": 1.42,
-            "description": "Snowflake Inc. provides a cloud-based data platform for various organizations in the United States and internationally. The company's platform includes artificial intelligence (AI) Data Cloud, which e..."
+            "pe": 22.36,
+            "peg": 0.96,
+            "debt_to_equity": 1.24,
+            "description": "Salesforce, Inc. provides customer relationship management technology services that connect companies and customers together in the United States, Europe, and the Asia Pacific. The company offers Agen..."
         },
-        "updated_at": "2026-05-28T16:52:22.326373"
+        "updated_at": "2026-05-29T16:42:48.678756"
     },
-    "DIS": {
+    "MDB": {
         "data": {
-            "sector": "Communication Services",
-            "industry": "Entertainment",
-            "pe": 16.62,
-            "peg": 2.62,
-            "debt_to_equity": 0.41,
-            "description": "The Walt Disney Company operates as an entertainment company in Americas, Europe, and the Asia Pacific. It operates in three segments: Entertainment, Sports, and Experiences. The company produces and ..."
-        },
-        "updated_at": "2026-05-28T16:52:47.994321"
-    },
-    "SPCE": {
-        "data": {
-            "sector": "Industrials",
-            "industry": "Aerospace & Defense",
+            "sector": "Technology",
+            "industry": "Software - Infrastructure",
             "pe": 0,
+            "peg": 1.67,
+            "debt_to_equity": 0.02,
+            "description": "MongoDB, Inc., together with its subsidiaries, provides general purpose database platform worldwide. The company offers MongoDB Atlas, a hosted multi-cloud database-as-a-service solution; MongoDB Ente..."
+        },
+        "updated_at": "2026-05-29T16:43:29.582560"
+    },
+    "IGV": {
+        "data": {
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 38.69,
             "peg": 0,
-            "debt_to_equity": 1.43,
-            "description": "Virgin Galactic Holdings, Inc., an aerospace and space travel company, focuses on the development, manufacture, and operation of spaceships and related technologies. It engages in the design and devel..."
+            "debt_to_equity": 0,
+            "description": "The fund generally will invest at least 80% of its assets in the component securities of its underlying index and in investments that have economic characteristics that are substantially identical to ..."
         },
-        "updated_at": "2026-05-28T16:53:13.507454"
+        "updated_at": "2026-05-29T16:44:17.512900"
     },
-    "GM": {
+    "QCOM": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Semiconductors",
+            "pe": 27.11,
+            "peg": 1.04,
+            "debt_to_equity": 0.56,
+            "description": "QUALCOMM Incorporated engages in the development and commercialization of foundational technologies for the wireless industry worldwide. It operates through three segments: Qualcomm CDMA Technologies ..."
+        },
+        "updated_at": "2026-05-29T16:44:42.720637"
+    },
+    "SBUX": {
         "data": {
             "sector": "Consumer Cyclical",
-            "industry": "Auto Manufacturers",
-            "pe": 30.99,
-            "peg": 0.35,
-            "debt_to_equity": 1.99,
-            "description": "General Motors Company designs, builds, and sells trucks, crossovers, cars, and automobile parts worldwide. It operates through GM North America, GM International, and GM Financial segments. The compa..."
-        },
-        "updated_at": "2026-05-28T16:53:37.746454"
-    },
-    "NFLX": {
-        "data": {
-            "sector": "Communication Services",
-            "industry": "Entertainment",
-            "pe": 27.79,
-            "peg": 1.72,
-            "debt_to_equity": 0.54,
-            "description": "Netflix, Inc. provides entertainment services worldwide. The company offers television (TV) series, documentaries, feature films, games, and live programming across various genres and languages. It al..."
-        },
-        "updated_at": "2026-05-28T16:54:05.151423"
-    },
-    "IBKR": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Capital Markets",
-            "pe": 34.78,
-            "peg": 2.24,
-            "debt_to_equity": 1.52,
-            "description": "Interactive Brokers Group, Inc. operates as an automated electronic broker in the United States and internationally. The company engages in the execution, clearance, and settlement of trades in stocks..."
-        },
-        "updated_at": "2026-05-28T16:54:29.831782"
-    },
-    "WFC": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Banks - Diversified",
-            "pe": 11.77,
-            "peg": 1.38,
+            "industry": "Restaurants",
+            "pe": 75.44,
+            "peg": 1.7,
             "debt_to_equity": 0,
-            "description": "Wells Fargo & Company, a financial services company, provides diversified banking, investment, mortgage, and consumer and commercial finance products and services in the United States and internationa..."
+            "description": "Starbucks Corporation, together with its subsidiaries, operates as a roaster, marketer, and retailer of coffee internationally. The company operates through three segments: North America, Internationa..."
         },
-        "updated_at": "2026-05-28T16:54:58.181786"
+        "updated_at": "2026-05-29T16:45:33.764445"
     },
-    "T": {
+    "AMZN": {
         "data": {
-            "sector": "Communication Services",
-            "industry": "Telecom Services",
-            "pe": 8.18,
-            "peg": 1.75,
-            "debt_to_equity": 1.25,
-            "description": "AT&T Inc. provides telecommunications and technology services worldwide. It operates through two segments, Communications and Latin America. The Communications segment offers wireless voice and data c..."
+            "sector": "Consumer Cyclical",
+            "industry": "Internet Retail",
+            "pe": 31.42,
+            "peg": 1.83,
+            "debt_to_equity": 0.53,
+            "description": "Amazon.com, Inc. engages in the retail sale of consumer products, advertising, and subscriptions service through online and physical stores in North America and internationally. The company operates t..."
         },
-        "updated_at": "2026-05-28T16:55:36.804840"
+        "updated_at": "2026-05-29T16:46:08.999929"
     }
 }
