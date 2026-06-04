@@ -1,90 +1,90 @@
 {
-    "GOOGL": {
-        "data": {
-            "sector": "Communication Services",
-            "industry": "Internet Content & Information",
-            "pe": 27.52,
-            "peg": 1.5,
-            "debt_to_equity": 0.2,
-            "description": "Alphabet Inc. offers various products and platforms in the United States, Europe, the Middle East, Africa, the Asia-Pacific, Canada, and Latin America. It operates through Google Services, Google Clou..."
-        },
-        "updated_at": "2026-06-03T17:59:50.947605"
-    },
-    "TSLA": {
-        "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Auto Manufacturers",
-            "pe": 384.14,
-            "peg": 5.73,
-            "debt_to_equity": 0.19,
-            "description": "Tesla, Inc. designs, develops, manufactures, leases, and sells electric vehicles, and energy generation and storage systems in the United States, China, and internationally. The company operates in tw..."
-        },
-        "updated_at": "2026-06-03T18:00:12.256526"
-    },
-    "CRM": {
+    "AVGO": {
         "data": {
             "sector": "Technology",
-            "industry": "Software - Application",
-            "pe": 22.11,
-            "peg": 0.93,
-            "debt_to_equity": 1.24,
-            "description": "Salesforce, Inc. provides customer relationship management technology services that connect companies and customers together in the United States, Europe, and the Asia Pacific. The company offers Agen..."
+            "industry": "Semiconductors",
+            "pe": 68.38,
+            "peg": 1.05,
+            "debt_to_equity": 0.83,
+            "description": "Broadcom Inc. designs, develops, and supplies various semiconductor devices and infrastructure software solutions internationally. The company operates in two segments: Semiconductor Solutions and Inf..."
         },
-        "updated_at": "2026-06-03T18:00:41.540998"
+        "updated_at": "2026-06-04T16:20:17.004565"
     },
-    "AXP": {
+    "ASTS": {
         "data": {
-            "sector": "Financial Services",
-            "industry": "Credit Services",
-            "pe": 18.98,
-            "peg": 1.54,
-            "debt_to_equity": 1.78,
-            "description": "American Express Company, together with its subsidiaries, operates as an integrated payments company in the United States, Europe, the Middle East and Africa, the Asia Pacific, Australia, New Zealand,..."
+            "sector": "Technology",
+            "industry": "Communication Equipment",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 1.12,
+            "description": "AST SpaceMobile, Inc., together with its subsidiaries, designs and develops the constellation of BlueBird satellites in the United States. The company provides a cellular broadband network in space to..."
         },
-        "updated_at": "2026-06-03T18:01:10.519202"
+        "updated_at": "2026-06-04T16:21:14.076438"
+    },
+    "LITE": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Communication Equipment",
+            "pe": 159.83,
+            "peg": 0.63,
+            "debt_to_equity": 1.11,
+            "description": "Lumentum Holdings Inc. manufactures and sells optical and photonic products in the Americas, the Asia-Pacific, Europe, the Middle East, and Africa. It operates through two segments, Cloud & Networking..."
+        },
+        "updated_at": "2026-06-04T16:21:45.575323"
     },
     "SNOW": {
         "data": {
             "sector": "Technology",
             "industry": "Software - Application",
             "pe": 0,
-            "peg": 7.24,
+            "peg": 6.23,
             "debt_to_equity": 1.43,
             "description": "Snowflake Inc. provides a cloud-based data platform for various organizations in the United States and internationally. The company's platform includes artificial intelligence (AI) Data Cloud, which e..."
         },
-        "updated_at": "2026-06-03T18:01:34.793800"
+        "updated_at": "2026-06-04T16:22:11.534882"
     },
-    "NVDA": {
+    "MDB": {
         "data": {
             "sector": "Technology",
-            "industry": "Semiconductors",
-            "pe": 33.0,
-            "peg": 0.69,
-            "debt_to_equity": 0.07,
-            "description": "NVIDIA Corporation operates as a data center scale AI infrastructure company. The company operates through two segments, Compute & Networking, and Graphics segments. The Compute & Networking segment p..."
+            "industry": "Software - Infrastructure",
+            "pe": 0,
+            "peg": 1.67,
+            "debt_to_equity": 0.02,
+            "description": "MongoDB, Inc., together with its subsidiaries, provides general purpose database platform worldwide. The company offers MongoDB Atlas, a hosted multi-cloud database-as-a-service solution; MongoDB Ente..."
         },
-        "updated_at": "2026-06-03T18:01:59.787261"
+        "updated_at": "2026-06-04T16:22:34.139262"
     },
-    "COIN": {
+    "SLB": {
         "data": {
-            "sector": "Financial Services",
-            "industry": "Financial Data & Stock Exchanges",
-            "pe": 61.11,
-            "peg": 1.01,
-            "debt_to_equity": 0.59,
-            "description": "Coinbase Global, Inc. operates platform for crypto assets in the United States and internationally. It provides the primary financial account in the crypto economy for consumers; a brokerage platform ..."
+            "sector": "Energy",
+            "industry": "Oil & Gas Equipment & Services",
+            "pe": 25.4,
+            "peg": 1.95,
+            "debt_to_equity": 0.43,
+            "description": "SLB N.V. engages in the provision of technology for the energy industry worldwide. The company operates through four divisions: Digital & Integration, Reservoir Performance, Well Construction, and Pro..."
         },
-        "updated_at": "2026-06-03T18:03:02.617575"
+        "updated_at": "2026-06-04T16:22:57.035730"
     },
-    "BX": {
+    "BLK": {
         "data": {
             "sector": "Financial Services",
             "industry": "Asset Management",
-            "pe": 27.85,
-            "peg": 1.96,
-            "debt_to_equity": 0.72,
-            "description": "Blackstone Inc. is an alternative asset management firm specializing in private equity, venture capital, real estate, hedge fund solutions, credit, secondary funds of funds, public debt and equity and..."
+            "pe": 25.62,
+            "peg": 1.29,
+            "debt_to_equity": 0.24,
+            "description": "BlackRock, Inc. is a publicly owned investment manager. The firm primarily provides its services to institutional, intermediary, and individual investors including corporate, public, union, and indust..."
         },
-        "updated_at": "2026-06-03T18:03:32.285494"
+        "updated_at": "2026-06-04T16:23:18.491232"
+    },
+    "DAL": {
+        "data": {
+            "sector": "Industrials",
+            "industry": "Airlines",
+            "pe": 11.62,
+            "peg": 0.21,
+            "debt_to_equity": 1.05,
+            "description": "Delta Air Lines, Inc. provides scheduled air transportation for passengers and cargo in the United States and internationally. The company operates through two segments, Airline and Refinery. Its dome..."
+        },
+        "updated_at": "2026-06-04T16:23:44.464210"
     }
 }
