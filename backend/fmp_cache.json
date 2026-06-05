@@ -1,47 +1,36 @@
 {
-    "AVGO": {
+    "CAT": {
         "data": {
-            "sector": "Technology",
-            "industry": "Semiconductors",
-            "pe": 68.38,
-            "peg": 1.05,
-            "debt_to_equity": 0.83,
-            "description": "Broadcom Inc. designs, develops, and supplies various semiconductor devices and infrastructure software solutions internationally. The company operates in two segments: Semiconductor Solutions and Inf..."
+            "sector": "Industrials",
+            "industry": "Farm & Heavy Construction Machinery",
+            "pe": 45.69,
+            "peg": 2.2,
+            "debt_to_equity": 2.31,
+            "description": "Caterpillar Inc. provides construction and mining equipment, off-highway diesel and natural gas engines, industrial gas turbines, and diesel-electric locomotives in the United States and international..."
         },
-        "updated_at": "2026-06-04T16:20:17.004565"
+        "updated_at": "2026-06-05T15:51:21.336570"
     },
-    "ASTS": {
+    "GM": {
         "data": {
-            "sector": "Technology",
-            "industry": "Communication Equipment",
-            "pe": 0,
-            "peg": 0,
-            "debt_to_equity": 1.12,
-            "description": "AST SpaceMobile, Inc., together with its subsidiaries, designs and develops the constellation of BlueBird satellites in the United States. The company provides a cellular broadband network in space to..."
+            "sector": "Consumer Cyclical",
+            "industry": "Auto Manufacturers",
+            "pe": 30.03,
+            "peg": 0.36,
+            "debt_to_equity": 1.99,
+            "description": "General Motors Company designs, builds, and sells trucks, crossovers, cars, and automobile parts worldwide. It operates through GM North America, GM International, and GM Financial segments. The compa..."
         },
-        "updated_at": "2026-06-04T16:21:14.076438"
+        "updated_at": "2026-06-05T15:51:52.696360"
     },
-    "LITE": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Communication Equipment",
-            "pe": 159.83,
-            "peg": 0.63,
-            "debt_to_equity": 1.11,
-            "description": "Lumentum Holdings Inc. manufactures and sells optical and photonic products in the Americas, the Asia-Pacific, Europe, the Middle East, and Africa. It operates through two segments, Cloud & Networking..."
-        },
-        "updated_at": "2026-06-04T16:21:45.575323"
-    },
-    "SNOW": {
+    "CRM": {
         "data": {
             "sector": "Technology",
             "industry": "Software - Application",
-            "pe": 0,
-            "peg": 6.23,
-            "debt_to_equity": 1.43,
-            "description": "Snowflake Inc. provides a cloud-based data platform for various organizations in the United States and internationally. The company's platform includes artificial intelligence (AI) Data Cloud, which e..."
+            "pe": 21.5,
+            "peg": 0.98,
+            "debt_to_equity": 1.24,
+            "description": "Salesforce, Inc. provides customer relationship management technology services that connect companies and customers together in the United States, Europe, and the Asia Pacific. The company offers Agen..."
         },
-        "updated_at": "2026-06-04T16:22:11.534882"
+        "updated_at": "2026-06-05T15:52:45.074642"
     },
     "MDB": {
         "data": {
@@ -52,39 +41,50 @@
             "debt_to_equity": 0.02,
             "description": "MongoDB, Inc., together with its subsidiaries, provides general purpose database platform worldwide. The company offers MongoDB Atlas, a hosted multi-cloud database-as-a-service solution; MongoDB Ente..."
         },
-        "updated_at": "2026-06-04T16:22:34.139262"
+        "updated_at": "2026-06-05T15:53:09.736854"
     },
-    "SLB": {
+    "GOOGL": {
         "data": {
-            "sector": "Energy",
-            "industry": "Oil & Gas Equipment & Services",
-            "pe": 25.4,
-            "peg": 1.95,
-            "debt_to_equity": 0.43,
-            "description": "SLB N.V. engages in the provision of technology for the energy industry worldwide. The company operates through four divisions: Digital & Integration, Reservoir Performance, Well Construction, and Pro..."
+            "sector": "Communication Services",
+            "industry": "Internet Content & Information",
+            "pe": 28.22,
+            "peg": 1.42,
+            "debt_to_equity": 0.2,
+            "description": "Alphabet Inc. offers various products and platforms in the United States, Europe, the Middle East, Africa, the Asia-Pacific, Canada, and Latin America. It operates through Google Services, Google Clou..."
         },
-        "updated_at": "2026-06-04T16:22:57.035730"
+        "updated_at": "2026-06-05T15:53:42.001472"
     },
-    "BLK": {
+    "BX": {
         "data": {
             "sector": "Financial Services",
             "industry": "Asset Management",
-            "pe": 25.62,
-            "peg": 1.29,
-            "debt_to_equity": 0.24,
-            "description": "BlackRock, Inc. is a publicly owned investment manager. The firm primarily provides its services to institutional, intermediary, and individual investors including corporate, public, union, and indust..."
+            "pe": 29.59,
+            "peg": 1.85,
+            "debt_to_equity": 0.72,
+            "description": "Blackstone Inc. is an alternative asset management firm specializing in private equity, venture capital, real estate, hedge fund solutions, credit, secondary funds of funds, public debt and equity and..."
         },
-        "updated_at": "2026-06-04T16:23:18.491232"
+        "updated_at": "2026-06-05T15:54:35.497345"
     },
-    "DAL": {
+    "GS": {
         "data": {
-            "sector": "Industrials",
-            "industry": "Airlines",
-            "pe": 11.62,
-            "peg": 0.21,
-            "debt_to_equity": 1.05,
-            "description": "Delta Air Lines, Inc. provides scheduled air transportation for passengers and cargo in the United States and internationally. The company operates through two segments, Airline and Refinery. Its dome..."
+            "sector": "Financial Services",
+            "industry": "Capital Markets",
+            "pe": 19.45,
+            "peg": 1.64,
+            "debt_to_equity": 6.79,
+            "description": "The Goldman Sachs Group, Inc., a financial institution, provides a range of financial services for corporations, financial institutions, governments, and individuals in the Americas, Europe, the Middl..."
         },
-        "updated_at": "2026-06-04T16:23:44.464210"
+        "updated_at": "2026-06-05T15:55:05.400082"
+    },
+    "AI": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Software - Infrastructure",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 0.08,
+            "description": "C3.ai, Inc. operates as an enterprise artificial intelligence application software company. The company offers C3 agentic AI platform, an application development and runtime environment that enables c..."
+        },
+        "updated_at": "2026-06-05T15:55:52.675373"
     }
 }
