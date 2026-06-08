@@ -1,36 +1,69 @@
 {
-    "CAT": {
-        "data": {
-            "sector": "Industrials",
-            "industry": "Farm & Heavy Construction Machinery",
-            "pe": 45.69,
-            "peg": 2.2,
-            "debt_to_equity": 2.31,
-            "description": "Caterpillar Inc. provides construction and mining equipment, off-highway diesel and natural gas engines, industrial gas turbines, and diesel-electric locomotives in the United States and international..."
-        },
-        "updated_at": "2026-06-05T15:51:21.336570"
-    },
-    "GM": {
-        "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Auto Manufacturers",
-            "pe": 30.03,
-            "peg": 0.36,
-            "debt_to_equity": 1.99,
-            "description": "General Motors Company designs, builds, and sells trucks, crossovers, cars, and automobile parts worldwide. It operates through GM North America, GM International, and GM Financial segments. The compa..."
-        },
-        "updated_at": "2026-06-05T15:51:52.696360"
-    },
-    "CRM": {
+    "CRWV": {
         "data": {
             "sector": "Technology",
-            "industry": "Software - Application",
-            "pe": 21.5,
-            "peg": 0.98,
-            "debt_to_equity": 1.24,
-            "description": "Salesforce, Inc. provides customer relationship management technology services that connect companies and customers together in the United States, Europe, and the Asia Pacific. The company offers Agen..."
+            "industry": "Software - Infrastructure",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 7.39,
+            "description": "CoreWeave, Inc. operates as a cloud infrastructure technology company in the United States. The company offers CoreWeave Cloud platform that comprises proprietary software and cloud services that deli..."
         },
-        "updated_at": "2026-06-05T15:52:45.074642"
+        "updated_at": "2026-06-08T16:46:37.312190"
+    },
+    "ET": {
+        "data": {
+            "sector": "Energy",
+            "industry": "Oil & Gas Midstream",
+            "pe": 16.12,
+            "peg": 0.58,
+            "debt_to_equity": 1.42,
+            "description": "Energy Transfer LP, together with its subsidiaries, provides energy-related services in the United States. It operates through Intrastate Transportation and Storage; Interstate Transportation and Stor..."
+        },
+        "updated_at": "2026-06-08T16:47:04.490226"
+    },
+    "NBIS": {
+        "data": {
+            "sector": "Communication Services",
+            "industry": "Internet Content & Information",
+            "pe": 87.29,
+            "peg": 0.63,
+            "debt_to_equity": 1.32,
+            "description": "Nebius Group N.V., a technology company, engages in building full-stack infrastructure to service the global AI industry in the United States, the United Kingdom, and internationally. It offers Nebius..."
+        },
+        "updated_at": "2026-06-08T16:47:29.942832"
+    },
+    "KO": {
+        "data": {
+            "sector": "Consumer Defensive",
+            "industry": "Beverages - Non-Alcoholic",
+            "pe": 24.99,
+            "peg": 4.07,
+            "debt_to_equity": 1.25,
+            "description": "The Coca-Cola Company, a beverage company, manufactures and sells various nonalcoholic beverages in the United States and internationally. The company provides Trademark Coca-Cola, sparkling soft drin..."
+        },
+        "updated_at": "2026-06-08T16:47:54.938871"
+    },
+    "DTE": {
+        "data": {
+            "sector": "Utilities",
+            "industry": "Utilities - Regulated Electric",
+            "pe": 23.65,
+            "peg": 2.02,
+            "debt_to_equity": 2.19,
+            "description": "DTE Energy Company engages in energy-related businesses and services. The company operates through four segments: Electric, Gas, DTE Vantage, and Energy Trading.The company's Electric segment generate..."
+        },
+        "updated_at": "2026-06-08T16:48:15.824731"
+    },
+    "GTLB": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Software - Infrastructure",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "GitLab Inc., together with its subsidiaries, develops software for the software development lifecycle in the United States, Europe, and the Asia Pacific. The company provides GitLab, an intelligent or..."
+        },
+        "updated_at": "2026-06-08T16:49:05.880802"
     },
     "MDB": {
         "data": {
@@ -41,50 +74,17 @@
             "debt_to_equity": 0.02,
             "description": "MongoDB, Inc., together with its subsidiaries, provides general purpose database platform worldwide. The company offers MongoDB Atlas, a hosted multi-cloud database-as-a-service solution; MongoDB Ente..."
         },
-        "updated_at": "2026-06-05T15:53:09.736854"
+        "updated_at": "2026-06-08T16:49:29.939795"
     },
-    "GOOGL": {
+    "SOXX": {
         "data": {
-            "sector": "Communication Services",
-            "industry": "Internet Content & Information",
-            "pe": 28.22,
-            "peg": 1.42,
-            "debt_to_equity": 0.2,
-            "description": "Alphabet Inc. offers various products and platforms in the United States, Europe, the Middle East, Africa, the Asia-Pacific, Canada, and Latin America. It operates through Google Services, Google Clou..."
-        },
-        "updated_at": "2026-06-05T15:53:42.001472"
-    },
-    "BX": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Asset Management",
-            "pe": 29.59,
-            "peg": 1.85,
-            "debt_to_equity": 0.72,
-            "description": "Blackstone Inc. is an alternative asset management firm specializing in private equity, venture capital, real estate, hedge fund solutions, credit, secondary funds of funds, public debt and equity and..."
-        },
-        "updated_at": "2026-06-05T15:54:35.497345"
-    },
-    "GS": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Capital Markets",
-            "pe": 19.45,
-            "peg": 1.64,
-            "debt_to_equity": 6.79,
-            "description": "The Goldman Sachs Group, Inc., a financial institution, provides a range of financial services for corporations, financial institutions, governments, and individuals in the Americas, Europe, the Middl..."
-        },
-        "updated_at": "2026-06-05T15:55:05.400082"
-    },
-    "AI": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 0,
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 41.23,
             "peg": 0,
-            "debt_to_equity": 0.08,
-            "description": "C3.ai, Inc. operates as an enterprise artificial intelligence application software company. The company offers C3 agentic AI platform, an application development and runtime environment that enables c..."
+            "debt_to_equity": 0,
+            "description": "The fund generally will invest at least 80% of its assets in the component securities of its index and in investments that have economic characteristics that are substantially identical to the compone..."
         },
-        "updated_at": "2026-06-05T15:55:52.675373"
+        "updated_at": "2026-06-08T16:49:56.810945"
     }
 }
