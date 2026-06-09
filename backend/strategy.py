@@ -61,8 +61,11 @@ class DeepResearchBot(Strategy):
             return
 
         current_value = self.get_portfolio_value()
+        available_cash = self.get_cash()
         risk_per_trade = 0.05  # High risk: 5% of portfolio per trade
         traded_this_cycle = 0
+        all_positions = self.get_positions()
+        self.log_message(f"[PORTFOLIO] value=${current_value:.2f} | cash=${available_cash:.2f} | positions={len(all_positions)}")
 
         for symbol, report in list(state.research_reports.items()):
             if symbol.startswith("_"):
@@ -90,7 +93,7 @@ class DeepResearchBot(Strategy):
                 quantity = int(max_risk / risk_per_share)
 
                 # Cap position size using AVAILABLE CASH (not portfolio %) to avoid quantity=0 on high-price stocks
-                cash = self.get_cash()
+                cash = available_cash  # use pre-fetched cash (avoids repeated broker calls)
                 max_spend = cash * 0.95  # never spend more than 95% of cash in one order
                 current_px = self.get_last_price(symbol) or last_price
                 if current_px > 0 and quantity * current_px > max_spend:
@@ -100,6 +103,14 @@ class DeepResearchBot(Strategy):
                     quantity = 1
 
                 existing_pos = self.get_position(symbol)
+                # Sanitize ghost positions: Lumibot may track positions with 0 quantity (state desync)
+                if existing_pos is not None:
+                    pos_qty = float(getattr(existing_pos, 'quantity', 0) or 0)
+                    if pos_qty <= 0:
+                        self.log_message(f"[GHOST POS] {symbol}: Lumibot thinks pos exists but qty={pos_qty} — treating as empty")
+                        existing_pos = None
+
+                self.log_message(f"[DEBUG] {symbol}: cash=${cash:.2f}, qty_calc={quantity}, existing_pos={existing_pos is not None}, current_px={current_px:.2f}")
                 if ai_grade >= 55:  # Aggressive: Buy anything with positive AI conviction
                     if not existing_pos and quantity > 0:
                         current_price = self.get_last_price(symbol)
