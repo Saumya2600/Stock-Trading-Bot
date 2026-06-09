@@ -61,7 +61,18 @@ class DeepResearchBot(Strategy):
             return
 
         current_value = self.get_portfolio_value()
-        available_cash = self.get_cash()
+        # Lumibot get_cash() can return negative values due to order-history replay desync.
+        # Bypass it: query Alpaca paper API directly for real cash balance.
+        try:
+            import requests as _req
+            from config import ALPACA_API_KEY, ALPACA_SECRET_KEY
+            _headers = {"Apca-Api-Key-Id": ALPACA_API_KEY, "Apca-Api-Secret-Key": ALPACA_SECRET_KEY}
+            _acct = _req.get("https://paper-api.alpaca.markets/v2/account", headers=_headers, timeout=5).json()
+            available_cash = float(_acct.get("cash", 0))
+            self.log_message(f"[CASH] Alpaca real cash=${available_cash:.2f} (buying_power=${float(_acct.get('buying_power', 0)):.2f})")
+        except Exception as _e:
+            available_cash = max(0.0, self.get_cash())
+            self.log_message(f"[CASH FALLBACK] get_cash()=${available_cash:.2f} (direct query failed: {_e})")
         risk_per_trade = 0.05  # High risk: 5% of portfolio per trade
         traded_this_cycle = 0
         all_positions = self.get_positions()
