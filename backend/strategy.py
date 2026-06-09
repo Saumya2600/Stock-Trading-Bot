@@ -68,7 +68,11 @@ class DeepResearchBot(Strategy):
             if symbol.startswith("_"):
                 continue
             try:
-                ai_grade = report.get("ai_grade", 50)
+                ai_grade = report.get("ai_grade", report.get("grade", 50))
+                try:
+                    ai_grade = int(ai_grade)
+                except Exception:
+                    ai_grade = 50
                 last_price = report.get("price", 0)
                 stop_loss = report.get("stop_loss", last_price * 0.93)
                 self.log_message(f"[EVAL] {symbol}: grade={ai_grade}, price={last_price}, stop={stop_loss:.2f}")
@@ -84,11 +88,16 @@ class DeepResearchBot(Strategy):
                 max_risk = current_value * risk_per_trade
                 risk_per_share = max(last_price - stop_loss, 0.01)
                 quantity = int(max_risk / risk_per_share)
-                
-                # Cap position size to 20% of portfolio to avoid 'insufficient buying power' rejections
-                max_position_cost = current_value * 0.20
-                if quantity * last_price > max_position_cost:
-                    quantity = int(max_position_cost / last_price)
+
+                # Cap position size using AVAILABLE CASH (not portfolio %) to avoid quantity=0 on high-price stocks
+                cash = self.get_cash()
+                max_spend = cash * 0.95  # never spend more than 95% of cash in one order
+                current_px = self.get_last_price(symbol) or last_price
+                if current_px > 0 and quantity * current_px > max_spend:
+                    quantity = int(max_spend / current_px)
+                # Ensure at least 1 share if we can afford it (fixes quantity=0 for expensive stocks)
+                if quantity == 0 and current_px > 0 and cash >= current_px:
+                    quantity = 1
 
                 existing_pos = self.get_position(symbol)
                 if ai_grade >= 55:  # Aggressive: Buy anything with positive AI conviction
@@ -101,10 +110,13 @@ class DeepResearchBot(Strategy):
                                     self.cancel_order(o)
                             continue
 
-                        cash = self.get_cash()
+                        # Re-check quantity against live price (already computed above, but re-clamp to be safe)
                         cost = quantity * current_price
-                        if cost > cash * 0.95:
-                            quantity = int((cash * 0.95) / current_price)
+                        available = self.get_cash() * 0.95
+                        if cost > available:
+                            quantity = int(available / current_price)
+                        if quantity == 0 and self.get_cash() >= current_price:
+                            quantity = 1
                         
                         pending_match = False
                         for o in self.get_orders():
