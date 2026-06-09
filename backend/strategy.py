@@ -161,7 +161,7 @@ class DeepResearchBot(Strategy):
         self.iterations += 1
         if self.one_shot and self.iterations >= 1:
             self.log_message("[ONE-SHOT] Trading cycle complete. Exiting...")
-            self.stop_strategy()
-            # Wait a bit for pending orders/logs
+            # stop_strategy() removed in Lumibot v4+ — sleep to flush orders then hard exit
             time.sleep(5)
-            os._exit(0)
+            import os as _os
+            _os._exit(0)
