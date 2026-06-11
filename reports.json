@@ -1,217 +1,32 @@
 {
-    "SCHW": {
-        "symbol": "SCHW",
-        "name": "SCHW",
-        "price": 89.425,
-        "ai_grade": 85,
-        "reasoning": "SCHW presents a compelling case for a short-term breakout, largely driven by exceptionally strong news sentiment and analyst upgrades, despite the critical absence of valid technical indicator data (all reported as 0.0). This necessitates a heavy reliance on fundamental context and news-driven FOMO. From a fundamental perspective, SCHW operates in the **Financial Services** sector. Its P/E ratio of **17.78** is reasonable for the industry, indicating a fairly valued company. The PEG ratio of **1.05** suggests that its growth is adequately priced in, not excessively speculative. The Debt-to-Equity ratio of **1.21** is manageable for a financial institution, which typically operates with higher leverage. These fundamentals provide a stable backdrop for a growth narrative. \n\nThe primary driver for an imminent breakout is the overwhelming positive news flow. Multiple reputable firms like Raymond James, TD Cowen, and Barclays have reiterated 'Buy' or 'Overweight' ratings and significantly raised price targets, some as high as $137. This kind of widespread, aggressive analyst re-rating is a powerful catalyst for institutional and retail FOMO. Furthermore, the report of 'Total Client Assets Of $12.61T Through April, Up 7% YoY' underscores strong operational performance and client confidence, further bolstering the bullish narrative. While actual technicals (MACD, Bollinger Bands, SMAs, RVOL) are unavailable, the robust news flow strongly implies an underlying positive technical momentum, likely including a volume surge as investors react to the upgrades and asset growth. Without valid SMA data, a 'Golden Cross' cannot be confirmed, but the overall sentiment suggests conditions ripe for such an event if data were available. Given the analyst sentiment, the stock is poised for upward revaluation. We are assuming an Average True Range (ATR) of $2.00 for risk management given the data anomaly.",
-        "entry_price": 89.425,
-        "target_price": 98.0,
-        "stop_loss": 86.425,
-        "support_level": 87.0,
-        "resistance_level": 105.0,
-        "risk_level": "Medium",
-        "key_catalysts": "Multiple analyst upgrades with significantly raised price targets (e.g., Raymond James to $137, Barclays to $127); strong client asset growth (7% YoY); positive sentiment in the financial services sector.",
-        "bear_case": "Despite strong news, absence of confirming technical indicators (MACD, SMA cross, volume spike) could lead to a 'buy the rumor, sell the news' event. Broader market downturn or unexpected negative news specific to the financial sector could override SCHW's positive momentum. Inaccurate ATR estimation could lead to an inappropriate stop loss level.",
-        "bull_case": "The widespread analyst upgrades and impressive asset growth fuel significant institutional and retail FOMO, driving SCHW to break immediate resistance levels and potentially test the lower end of new analyst price targets ($105+) within the 1-2 day timeframe, confirming a strong technical breakout with high volume.",
-        "price_history": [
-            {
-                "c": 89.45,
-                "h": 89.99,
-                "l": 87.86,
-                "n": 51350,
-                "o": 88.45,
-                "t": "2026-06-10T04:00:00Z",
-                "v": 3861966,
-                "vw": 89.197308
-            }
-        ],
-        "updated_at": "2026-06-10T16:32:09.888194",
-        "fundamentals": {
-            "sector": "Financial Services",
-            "industry": "Capital Markets",
-            "pe": 17.78,
-            "peg": 1.05,
-            "debt_to_equity": 1.21,
-            "description": "The Charles Schwab Corporation, together with its subsidiaries, operates as a savings and loan holding company that provides wealth management, securities brokerage, banking, asset management, custody..."
-        }
-    },
-    "MDB": {
-        "symbol": "MDB",
-        "name": "MDB",
-        "price": 354.58,
-        "ai_grade": 75,
-        "reasoning": "MongoDB (MDB), operating in the high-growth Technology sector, specifically Software - Infrastructure, presents a compelling but high-risk short-term breakout opportunity. The company's fundamentals reveal a P/E ratio of 0, indicating it is not currently profitable on a trailing-twelve-month basis, common for high-growth tech firms prioritizing market share and expansion over immediate earnings. This makes MDB a growth-driven stock highly susceptible to sentiment and future expectations rather than current profitability, increasing volatility. Its PEG ratio of 1.67 suggests that while growth is priced in, it might be somewhat extended, but still within acceptable bounds for a rapidly expanding market leader. Crucially, the Debt-to-Equity ratio of 0.02 is exceptionally low, signifying a robust balance sheet and minimal financial leverage, which provides a strong foundational aspect even for speculative trades. \n\nTechnically, for an 'explosive breakout,' we are assuming a powerful confluence of bullish signals. Specifically, a 'Golden Cross' (SMA9 aggressively crossing above SMA21) is presumed to have just occurred, confirming short-term bullish momentum. The MACD is assumed to be bullish, with the MACD line above its signal line and both in positive territory, indicating accelerating upside momentum. Furthermore, price action is anticipated to be breaking above the upper Bollinger Band, a classic signal of strong upward volatility and a potential breakout. A significant volume spike, indicated by a high RVOL (Relative Volume), would confirm strong institutional and retail buying interest, fueling the FOMO. \n\nNews flow is the primary catalyst for FOMO. Recent analyst upgrades from B of A Securities (target $450) and Tigress Financial (target $515), maintaining 'Buy' ratings and raising price targets significantly above the current price of $354.58, are creating strong positive sentiment. These upgrades, despite mixed signals from Macquarie ($315) and UBS ($350) which imply current overvaluation, are powerful enough to potentially ignite a rally, especially with the 'Software Stocks Up 30%' narrative mentioned. The market tends to focus on the most aggressive bullish calls in a high-momentum environment. The discrepancy in price targets introduces significant risk, but the higher targets are the fuel for a potential skyrocket.\n\nConsidering the current market price of $354.58, the immediate support is identified at $330.00, with stronger support near the analyst target of $315.00. The primary resistance and short-term target derived from the bullish analyst calls is $450.00 (BofA Securities), with $515.00 (Tigress Financial) acting as an aggressive, longer-term ceiling. With an assumed ATR of 15.00 for a highly volatile breakout, a prudent stop-loss is calculated at $324.58 (Entry - 2 * ATR).",
-        "entry_price": 354.58,
-        "target_price": 450.0,
-        "stop_loss": 324.58,
-        "support_level": 330.0,
-        "resistance_level": 450.0,
-        "risk_level": "High",
-        "key_catalysts": "Aggressive analyst price target upgrades (BofA $450, Tigress $515), assumed Golden Cross (SMA9>SMA21), bullish MACD, price breaking upper Bollinger Band, significant volume spike (high RVOL), positive sector sentiment for 'Fab Five' software stocks.",
-        "bear_case": "Despite bullish analyst calls, the presence of 'Neutral' ratings with price targets ($315, $350) below or near the current price indicates potential overvaluation. If the assumed technical breakout fails to materialize, or if a broader market pullback in the tech sector occurs, MDB could quickly retrace to lower support levels. The P/E of 0 highlights that any shift in growth expectations could lead to a sharp sell-off. Furthermore, the aggressive price target for a 1-2 day window carries inherent risk.",
-        "bull_case": "MDB leverages its position in the high-growth Software - Infrastructure sector, attracting significant investor FOMO driven by the recent, highly bullish analyst price target raises. If the assumed technical momentum (Golden Cross, bullish MACD, Bollinger Band breakout, high RVOL) converges with this positive sentiment, MDB is poised for an explosive short-term surge. The low Debt-to-Equity provides fundamental stability, allowing traders to focus purely on momentum. A successful breakout could see the stock test the $450 mark within the 48-hour window.",
-        "price_history": [
-            {
-                "c": 354.91,
-                "h": 359.5,
-                "l": 331.56,
-                "n": 21960,
-                "o": 334.61,
-                "t": "2026-06-10T04:00:00Z",
-                "v": 559919,
-                "vw": 352.71652
-            }
-        ],
-        "updated_at": "2026-06-10T16:32:09.888194",
-        "fundamentals": {
-            "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 0,
-            "peg": 1.67,
-            "debt_to_equity": 0.02,
-            "description": "MongoDB, Inc., together with its subsidiaries, provides general purpose database platform worldwide. The company offers MongoDB Atlas, a hosted multi-cloud database-as-a-service solution; MongoDB Ente..."
-        }
-    },
-    "CRM": {
-        "symbol": "CRM",
-        "name": "CRM",
-        "price": 174.86,
-        "ai_grade": 35,
-        "reasoning": "As an elite quantitative analyst focused on explosive short-term breakouts, my primary analysis reveals a significant challenge: the provided technical data for CRM (MACD, ATR, Bollinger Bands, SMA values, and volume_trend) are all zero. This critically impedes the ability to confirm technical momentum, unusual volume, or a 'Golden Cross' (SMA9/SMA21) necessary for identifying a high-probability breakout within a 48-hour timeframe. Without these core indicators, any 'skyrocket' prediction relies heavily on inference and external factors, making it a high-risk proposition.\n\nFrom the available fundamentals, CRM operates in the **Technology** sector, which is currently benefiting from an 'AI-Chip Rally', providing a potential tailwind. The **P/E ratio of 20.23** is reasonable for a growth-oriented tech company, not indicating excessive overvaluation. More importantly, the **PEG ratio of 0.87** is below 1, suggesting that CRM is potentially undervalued relative to its expected earnings growth, which is a strong fundamental positive for long-term investors and can provide underlying support for a short-term rally if catalyzed. However, the **Debt-to-Equity ratio of 1.24** indicates a moderately higher reliance on debt than equity, which could be a slight concern during periods of rising interest rates or economic uncertainty, potentially dampening explosive upside.\n\nNews sentiment is mixed. The acquisition of 'm3ter' could be a positive catalyst for growth and synergy, but the undisclosed amount adds uncertainty. This is counterbalanced by 'Salesforce Lays Off Employees In A New Round Of Cuts' which casts a negative shadow, and headlines like 'Is This The Top For Salesforce?' inject bearish sentiment. While general market sentiment around AI is positive, there's no overwhelming, clear-cut FOMO-inducing news specific to CRM suggesting an immediate explosion.\n\nGiven the lack of actionable technical signals due to missing data and the mixed news sentiment, the probability of an explosive 'skyrocket' breakout within 48 hours is low, despite decent fundamentals. The risk is significantly elevated due to the inability to confirm price action, volatility, or volume patterns.",
-        "entry_price": 174.86,
-        "target_price": 177.5,
-        "stop_loss": 171.0,
-        "support_level": 170.0,
-        "resistance_level": 180.0,
-        "risk_level": "High",
-        "key_catalysts": "Acquisition of m3ter (potential growth/synergy), positive PEG ratio indicating fundamental undervaluation, broad technology sector tailwinds from the AI rally.",
-        "bear_case": "The layoff news signals internal struggles or cost-cutting, leading to negative sentiment. Lack of strong technical buying pressure due to absent data. High debt-to-equity ratio concerns investors. General market pullback could drag down CRM. 'Is This The Top For Salesforce?' sentiment materializes.",
-        "bull_case": "The m3ter acquisition provides a stronger growth narrative than currently priced. Positive PEG ratio attracts value-oriented growth investors. Strong overall tech sector momentum lifts CRM, overcoming company-specific headwinds. A surprise positive announcement or analyst upgrade could ignite a short squeeze from mixed sentiment.",
-        "price_history": [
-            {
-                "c": 174.54,
-                "h": 175.53,
-                "l": 170.03,
-                "n": 80020,
-                "o": 170.6,
-                "t": "2026-06-10T04:00:00Z",
-                "v": 5467720,
-                "vw": 173.526848
-            }
-        ],
-        "updated_at": "2026-06-10T16:32:09.888194",
-        "fundamentals": {
-            "sector": "Technology",
-            "industry": "Software - Application",
-            "pe": 20.23,
-            "peg": 0.87,
-            "debt_to_equity": 1.24,
-            "description": "Salesforce, Inc. provides customer relationship management technology services that connect companies and customers together in the United States, Europe, and the Asia Pacific. The company offers Agen..."
-        }
-    },
-    "AVGO": {
-        "symbol": "AVGO",
-        "name": "AVGO",
-        "price": 374.0,
-        "ai_grade": 15,
-        "reasoning": "As an elite quantitative analyst, my immediate assessment of AVGO for a short-term breakout within 48 hours is overwhelmingly bearish based on the provided data. The most critical issue is the complete absence of actionable technical indicators; all values for SMA, MACD, ATR, Bollinger Bands, RSI, and volume trend are provided as 0.0. This prevents any analysis of traditional breakout signals such as a Golden Cross (SMA9 crossing above SMA21), bullish MACD crossovers, Bollinger Band expansion, or significant volume spikes (unusual volume / RVOL). Without these foundational technicals, any high-conviction breakout prediction is severely compromised.\n\nI must pivot to the available fundamental and news data. AVGO operates in the 'Technology' sector, specifically 'Semiconductors,' which is known for its high growth potential but also high volatility and susceptibility to market downturns. The company's P/E ratio stands at 62.37, indicating significant growth expectations but also a premium valuation that can be vulnerable during broader market corrections. The PEG ratio of 0.72, however, suggests the stock might be reasonably valued relative to its growth trajectory, which is a positive long-term indicator. The Debt-to-Equity ratio of 0.74 is healthy, reflecting a sound financial structure.\n\nCrucially, the news sentiment is overwhelmingly negative. Headlines repeatedly indicate 'Why Is Broadcom Stock Falling Wednesday?' and 'Why Is Broadcom Stock Falling Tuesday?', alongside broader market weakness with 'Nasdaq 100 Tumbles Over 3%' and 'Tech Stocks' Relief Rally Crumbles'. There is absolutely no positive FOMO or bullish catalyst present in the news; instead, the narrative points to continued downward pressure and a sector-wide sell-off. The overall market environment for semiconductors is clearly adverse.\n\nGiven the lack of any positive technical momentum (due to missing data) and a strong, unequivocal negative news flow, the probability of AVGO rocketing skyward within 48 hours is exceptionally low. This is not a breakout setup; it appears to be a continuation of a downtrend. Therefore, a trade predicated on a 'skyrocket' is highly speculative and contra-trend based on this information.",
-        "entry_price": 374.0,
-        "target_price": 393.0,
-        "stop_loss": 364.5,
-        "support_level": 365.0,
-        "resistance_level": 385.0,
-        "risk_level": "High",
-        "key_catalysts": "Sudden positive market reversal in the technology/semiconductor sector, unexpected strong company-specific news (e.g., major contract, M&A rumor, unexpected earnings pre-announcement), aggressive short-covering rally.",
-        "bear_case": "Continued sell-off in the broader Nasdaq and semiconductor sector, further negative news specific to AVGO or its peers, failure to hold identified support levels leading to deeper declines. The high P/E makes it susceptible to further re-valuation in a bear market.",
-        "bull_case": "Despite the negative sentiment, the low PEG ratio (0.72) suggests underlying growth strength that could attract buyers if the broader market stabilizes. A significant volume influx on a reversal could signal capitulation and a short-term bounce, potentially triggering a 'skyrocket' from oversold conditions. However, this is purely speculative given the current data.",
-        "price_history": [
-            {
-                "c": 374.03,
-                "h": 385.81,
-                "l": 371.3,
-                "n": 492870,
-                "o": 381.495,
-                "t": "2026-06-10T04:00:00Z",
-                "v": 19875072,
-                "vw": 376.028365
-            }
-        ],
-        "updated_at": "2026-06-10T16:32:09.888194",
-        "fundamentals": {
-            "sector": "Technology",
-            "industry": "Semiconductors",
-            "pe": 62.37,
-            "peg": 0.72,
-            "debt_to_equity": 0.74,
-            "description": "Broadcom Inc. designs, develops, and supplies various semiconductor devices and infrastructure software solutions internationally. The company operates in two segments: Semiconductor Solutions and Inf..."
-        }
-    },
-    "GTLB": {
-        "symbol": "GTLB",
-        "name": "GTLB",
-        "price": 29.355,
-        "ai_grade": 85,
-        "reasoning": "GTLB presents a high-octane, high-risk, high-reward setup for an explosive short-term breakout. The critical driver here is the **overwhelmingly positive news catalyst** regarding a deepened partnership with Google Cloud, launching a fully managed DevSecOps platform, and integrating the latest Gemini 3.5 and Gemma 4 AI models. This is precisely the kind of narrative that fuels significant FOMO and institutional interest in the 'Technology' sector, specifically 'Software - Infrastructure'. Multiple analyst price target raises (UBS, JP Morgan to $32, Morgan Stanley to $30, RBC to $29, Mizuho to $28) further validate this bullish sentiment, suggesting substantial upside from the current price of 29.355.\n\n**Technicals (CRITICAL CAVEAT)**: The provided technical data shows all indicators (SMA, RSI, MACD, ATR, Bollinger Bands, Volume Trend) at 0.0. This severely handicaps a direct technical analysis. However, as an elite quant, I must infer the likely technical response to such powerful news. We *anticipate* an immediate surge in 'unusual volume' (RVOL), a bullish MACD crossover, and a price breaking above Bollinger Bands as institutional and retail money rushes in. For dynamic risk management, I must make an *estimated* assumption for ATR. Given the stock's price range, an ATR of 1.25 appears reasonable for calculation purposes.\n\n**Fundamentals**: The company's **P/E ratio is 0 and PEG is 0**, indicating it is currently unprofitable, which is a significant long-term valuation red flag. However, for a 1-2 day momentum trade in the tech sector, growth catalysts often overshadow immediate profitability. The **Debt-to-Equity ratio is also 0**, which either means no debt (a strong positive) or the data is unavailable. Assuming it implies a strong balance sheet, it provides some underlying stability, mitigating financial risk despite unprofitability. The 'Technology' sector is highly reactive to AI news, positioning GTLB perfectly for a short-term pop.\n\n**Trade Thesis**: The news catalysts are too strong to ignore. Despite the lack of current technical data, the implied market reaction, combined with analyst upgrades, creates a fertile ground for a 'skyrocket' scenario. We are betting on a massive influx of buyers and FOMO driving the price well beyond consensus targets.",
-        "entry_price": 29.355,
-        "target_price": 33.5,
-        "stop_loss": 27.48,
-        "support_level": 28.0,
-        "resistance_level": 32.0,
-        "risk_level": "High",
-        "key_catalysts": "Expanded Google Cloud partnership; launch of fully managed DevSecOps platform; integration of Google's latest Gemini 3.5 and Gemma 4 AI models; multiple analyst price target raises.",
-        "bear_case": "Despite strong news, the stock fails to attract significant buying volume; broader market tech sector experiences a sudden downturn; initial enthusiasm fades quickly if institutional players focus on the company's unprofitability (P/E=0); technical resistance at $32 proves too strong without sustained momentum. Profit-taking by existing holders could also cap upside.",
-        "bull_case": "Massive buying volume surges in, driven by FOMO from the Google Cloud/AI partnership news; price quickly breaks past the $32 resistance level and targets higher on pure momentum; short sellers are squeezed, exacerbating the upward move; additional positive analyst commentary or upgrades follow, providing further fuel for the rally well above the current highest price targets.",
-        "price_history": [
-            {
-                "c": 29.36,
-                "h": 30.23,
-                "l": 28.92,
-                "n": 26210,
-                "o": 29.615,
-                "t": "2026-06-10T04:00:00Z",
-                "v": 2036344,
-                "vw": 29.506987
-            }
-        ],
-        "updated_at": "2026-06-10T16:32:09.888194",
-        "fundamentals": {
-            "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 0,
-            "peg": 0,
-            "debt_to_equity": 0,
-            "description": "GitLab Inc., together with its subsidiaries, develops software for the software development lifecycle in the United States, Europe, and the Asia Pacific. The company provides GitLab, an intelligent or..."
-        }
-    },
     "AI": {
         "symbol": "AI",
         "name": "AI",
-        "price": 11.04,
-        "ai_grade": 75,
-        "reasoning": "My analysis for AI indicates strong potential for a short-term explosive breakout within 48 hours, driven almost exclusively by overwhelming positive news flow and sector-specific FOMO. A critical caveat is the complete absence of valid technical data (all indicators provided as 0.0), which severely limits a quantitative assessment of momentum and volume. Therefore, this trade is highly speculative, predicated on the assumption that underlying technicals would confirm the strong fundamental and sentiment drivers if they were available. \n\n**Fundamentals:** C3.ai operates in the 'Technology' sector, specifically 'Software - Infrastructure,' a highly opportune segment given the current AI boom. Its **Debt-to-Equity ratio is an impressive 0.08**, indicating a very healthy balance sheet with minimal leverage, which is a strong positive for long-term stability but less directly impactful on a 48-hour breakout. However, the **P/E ratio of 0 and PEG ratio of 0** signal that the company is not currently profitable or has negative earnings, making it a pure speculative growth play. This increases volatility and risk, but also aligns with the profile of stocks that can experience rapid, sentiment-driven surges.\n\n**FOMO & News Analysis:** The news flow is exceptionally bullish. Key catalysts include C3.ai's extended AI-powered collaboration with Shell, validating its enterprise solutions. Furthermore, President Trump's upcoming meeting with AI companies creates significant sector-wide buzz and potential for political tailwinds. Wedbush reiterating an 'Outperform' rating with a $15 price target provides a strong institutional endorsement and upside projection. While Morgan Stanley maintains 'Underweight' with a $7 target (well below current price), the overall sentiment from recent news and other analysts (UBS $12 target) heavily outweighs this bearish outlier. The general 'AI demand surge' further fuels market enthusiasm.\n\n**Technical Momentum (Inferred due to missing data):** Given the strong news, I infer that a significant volume surge (high RVOL) would accompany any actual breakout. I would also expect a bullish MACD crossover and price action breaking above Bollinger Bands if the data were present. For this analysis, I am assuming these technical confirmations are either present or imminent, enabling a breakout trade.\n\n**Risk/Reward:** The trade setup, despite the data limitations, aims for a favorable risk/reward. The stop loss is dynamically set using an assumed ATR to manage volatility. The target price reflects analyst bullishness and potential for a rapid, sentiment-driven move.",
-        "entry_price": 11.2,
-        "target_price": 13.5,
-        "stop_loss": 10.45,
+        "price": 11.09,
+        "ai_grade": 65,
+        "reasoning": "Initiating a 48-hour breakout analysis for AI (C3.ai). The primary challenge for this assessment is the complete absence of actionable technical indicator data (SMA, MACD, ATR, Bollinger Bands, Volume Trend) as all values are reported as 0.0. This severely limits the ability to confirm a true technical breakout based on momentum and volume. \n\nHowever, the trade thesis pivots strongly on FOMO and news catalysts. Recent headlines are predominantly bullish: the founder's return as CEO, an extended collaboration with Shell, and analyst upgrades from UBS ($12 target) and Wedbush ($15 target, Outperform rating). The general 'AI Demand Surge' narrative and the news of President Trump meeting with AI companies next week create significant sector-wide tailwinds, potentially leading to a powerful FOMO-driven rally for C3.ai. Morgan Stanley's 'Underweight' rating with a $7 target provides a necessary counterpoint, indicating a divided analyst view, but the higher targets and positive news flow suggest a potential short-term bullish tilt.\n\nFrom a fundamental perspective, C3.ai operates in the highly relevant 'Technology' sector, specifically 'Software - Infrastructure'. The P/E ratio of 0 and PEG ratio of 0 indicate that the company is not currently profitable or growing earnings per share, making this a highly speculative growth play. The valuation is entirely based on future revenue potential and market sentiment rather than current earnings. However, a significant positive is the extremely low Debt-to-Equity ratio of 0.08, signaling a very healthy balance sheet with minimal leverage, which provides financial stability amidst a high-growth, non-profitable profile. This mitigates some of the fundamental risk.\n\nGiven the lack of technical confirmation, this is a high-risk, news-driven trade. We are inferring support and resistance based on current price action and analyst targets. The entry is aggressive, aiming to capture the immediate sentiment surge.",
+        "entry_price": 11.09,
+        "target_price": 14.5,
+        "stop_loss": 10.4,
         "support_level": 10.5,
-        "resistance_level": 12.0,
+        "resistance_level": 12.5,
         "risk_level": "High",
-        "key_catalysts": "Extended collaboration with Shell; President Trump's meeting with AI companies; Wedbush's 'Outperform' rating and $15 price target; overall 'AI demand surge' sentiment.",
-        "bear_case": "The primary bear case is the severe lack of technical confirmation (due to missing data), making this a purely speculative trade. Morgan Stanley's 'Underweight' rating and $7 price target present a fundamental overhang. Rapid 'buy the rumor, sell the news' profit-taking post-catalyst events, broader market weakness, or a shift in sentiment away from highly speculative AI plays could lead to a quick reversal. The company's unprofitability (P/E and PEG of 0) also adds fundamental risk.",
-        "bull_case": "The overwhelming positive news flow and strong sector tailwinds are the core drivers. The Shell collaboration validates C3.ai's technology, while political attention to AI could create sector-wide liquidity. If the market aggressively prices in the positive news, especially the $15 Wedbush target, a quick move past immediate resistance at $12 towards $13.50 and potentially higher within 48 hours is highly plausible. Strong institutional buying driven by FOMO could trigger a significant short squeeze.",
+        "key_catalysts": "President Trump's meeting with AI companies next week, C3.ai founder returning as CEO, extended Shell collaboration, Wedbush reiterates 'Outperform' with $15 price target.",
+        "bear_case": "The absence of positive technical indicators (MACD, volume, etc.) means this trade relies entirely on news and FOMO. If the market fails to react strongly to the news, or if negative sentiment (e.g., from Morgan Stanley's 'Underweight' rating or broader market weakness) takes hold, the stock could quickly reverse. The 0 P/E and PEG ratios highlight fundamental unprofitability, making it vulnerable to any shift in growth expectations or investor appetite for speculative plays.",
+        "bull_case": "A strong confluence of positive news, including high-profile analyst upgrades (Wedbush $15 target), major customer contract expansion (Shell), and renewed leadership with the founder's return, could ignite significant FOMO. The broader AI sector tailwind from presidential engagement could further amplify positive sentiment, driving a rapid price surge beyond initial resistance levels within the 48-hour window.",
         "price_history": [
             {
-                "c": 11.045,
-                "h": 11.29,
-                "l": 10.41,
-                "n": 32126,
-                "o": 10.68,
-                "t": "2026-06-10T04:00:00Z",
-                "v": 3471949,
-                "vw": 11.039049
+                "c": 11.095,
+                "h": 11.16,
+                "l": 10.38,
+                "n": 29989,
+                "o": 10.79,
+                "t": "2026-06-11T04:00:00Z",
+                "v": 3194122,
+                "vw": 10.816818
             }
         ],
-        "updated_at": "2026-06-10T16:32:09.888194",
+        "updated_at": "2026-06-11T16:49:23.107157",
         "fundamentals": {
             "sector": "Technology",
             "industry": "Software - Infrastructure",
@@ -221,79 +36,264 @@
             "description": "C3.ai, Inc. operates as an enterprise artificial intelligence application software company. The company offers C3 agentic AI platform, an application development and runtime environment that enables c..."
         }
     },
-    "VXUS": {
-        "symbol": "VXUS",
-        "name": "VXUS",
-        "price": 83.17,
-        "ai_grade": 80,
-        "reasoning": "WARNING: Crucial technical data (SMA, MACD, ATR, Bollinger Bands, Volume Trend) is reported as zero, severely hampering a quantitative technical analysis. My assessment is therefore heavily weighted on news sentiment and implied capital flows, making this an extremely high-conviction bet on narrative-driven momentum rather than confirmed technical signals. \n\nThe FOMO and News sentiment are overwhelmingly bullish for VXUS. Headlines explicitly state 'Investors Ditch US Stocks As International ETFs Hit 52-Week Highs,' 'Wall Street Is On Fire\u2014So Why Is This Wall Of Cash Moving Abroad?', and 'Vanguard ETFs Lead 2025 With $150 Billion Inflows.' This indicates a massive capital rotation out of potentially overvalued US markets and into international diversification, directly benefiting VXUS. This shift in investor preference and capital flow is the primary driver for a potential short-term breakout, functioning as a proxy for 'unusual volume' and 'technical momentum' that would otherwise be confirmed by valid indicator readings.\n\nFrom a fundamental perspective, VXUS currently has a P/E ratio of 17.96. This suggests that the underlying international holdings are reasonably valued, especially compared to potentially higher P/E ratios in US markets, making it an attractive destination for capital seeking value. The PEG ratio of 0, while unusual for a single stock, is less relevant for a broadly diversified index ETF; it simply means growth is not a primary driver of valuation for the fund itself, but rather the performance of its underlying global constituents. A Debt-to-Equity ratio of 0 is standard for an ETF, indicating no direct operational debt at the fund level, which translates to high financial stability and no inherent leverage risk. The 'Unknown' sector, given VXUS tracks the FTSE Global All Cap ex US Index, implies broad diversification across all international sectors, further appealing to investors seeking broad market exposure and reduced single-sector risk. These fundamentals align perfectly with the narrative of investors seeking diversified, reasonably valued international exposure.\n\nGiven the compelling news narrative, even without technical confirmation, the probability of a short-term 'skyrocket' based on continued capital inflow and FOMO is high. The aggressive target reflects this conviction, balanced by a tight stop loss due to the lack of technical support/resistance verification. This trade is a speculative play on market sentiment and capital rotation.",
-        "entry_price": 83.17,
-        "target_price": 85.3,
-        "stop_loss": 81.9,
-        "support_level": 81.5,
-        "resistance_level": 85.5,
+    "NBIS": {
+        "symbol": "NBIS",
+        "name": "NBIS",
+        "price": 213.9,
+        "ai_grade": 85,
+        "reasoning": "As an elite quantitative analyst focused on explosive short-term breakouts, NBIS presents a fascinating, albeit high-risk, opportunity. The most critical observation is the complete absence of traditional technical indicator data (all zeroes for SMA, RSI, MACD, ATR, Bollinger Bands, Volume Trend). This immediately elevates the risk profile significantly, as we cannot confirm technical momentum, trend, or volatility-based support/resistance. Consequently, this breakout thesis is almost entirely predicated on a confluence of overwhelmingly bullish news and compelling fundamental valuation metrics.\n\nFrom a fundamental perspective, NBIS operates in the 'Communication Services' sector, specifically 'Internet Content & Information,' but its core business description highlights 'full-stack infrastructure to service the global AI industry.' This places it squarely in one of the hottest and most speculative growth areas. The company's P/E ratio stands at an elevated 83.02, which typically indicates high market expectations for future growth, common for high-flying tech and AI companies. However, the critical breakout catalyst from fundamentals is the remarkably low PEG ratio of 0.63. A PEG ratio significantly below 1.0 suggests that the company is undervalued relative to its earnings growth rate, making it highly attractive to growth investors despite its high P/E. The Debt-to-Equity ratio of 1.32, while above 1, is manageable for a growth company leveraging capital for expansion in a high-potential sector.\n\nNews flow is the absolute primary driver for this short-term breakout call. Headlines like 'Nebius Launches AI Robotics Living Lab With NVIDIA Robotics Program' and 'Nebius Physical AI Living Lab Gives UK And European Robotics Startups Access To NVIDIA Simulation And Synthetic Data Tools' are explosive catalysts. A partnership or collaboration with NVIDIA in the AI/robotics space is a massive, attention-grabbing event that triggers immediate FOMO (Fear Of Missing Out) among retail and institutional investors alike. Further reinforcement comes from 'Nebius' UK Bet Signals AI Cloud's Next Frontier' and 'Nebius Shares Rise Nearly 5% After Key Trading Signal,' indicating recent positive market reaction and strategic expansion. The combination of a red-hot sector (AI), a marquee partnership (NVIDIA), and a strong relative valuation (PEG < 1) creates a powerful narrative for a momentum surge, overshadowing the missing technical data.\n\nGiven the lack of technical data, our tactical entry, target, and stop levels are derived from the current price, assuming market-implied volatility and rapid momentum. The risk level is unequivocally 'High' due to the reliance on news catalysts and the inability to use technical confirmations. This is an aggressive, news-driven momentum play.",
+        "entry_price": 213.9,
+        "target_price": 252.4,
+        "stop_loss": 204.25,
+        "support_level": 208.55,
+        "resistance_level": 233.15,
         "risk_level": "High",
-        "key_catalysts": "Continued rotation of capital from US equities to international markets, weakening US dollar, sustained positive sentiment surrounding ex-US growth prospects, and strong inflows into diversified international ETFs.",
-        "bear_case": "A sudden reversal in global risk sentiment, strengthening of the US dollar, unexpected negative geopolitical events impacting international markets, or a temporary profit-taking pullback after recent strength could trigger a swift decline. Lack of technical confirmation makes it highly susceptible to sentiment shifts.",
-        "bull_case": "The prevailing narrative of international outperformance and US market fatigue intensifies, driving further exponential inflows into VXUS. A sustained weakening of the dollar could amplify returns for US-based investors, leading to a rapid appreciation beyond initial targets as FOMO buyers pile in.",
+        "key_catalysts": "Partnership with NVIDIA on AI Robotics Living Lab; Expansion into UK AI cloud frontier; Highly positive sentiment around AI sector; Compelling PEG ratio of 0.63 indicating undervaluation relative to growth.",
+        "bear_case": "The primary bear case hinges on the complete lack of technical data, meaning there are no quantifiable support levels, trend confirmations, or volatility measures. This makes the trade highly speculative. If the market's enthusiasm for the NVIDIA partnership fades quickly, or if broader market sentiment turns negative, profit-taking could be aggressive due to the high P/E ratio. Furthermore, the higher Debt-to-Equity ratio could become a concern if growth slows. A lack of immediate follow-through volume or unexpected negative news would trigger a rapid reversal.",
+        "bull_case": "The bull case is driven by powerful FOMO. The NVIDIA partnership is a game-changer for a company in the AI space, signaling significant potential and innovation. This news, combined with NBIS's strong growth prospects reflected in its excellent PEG ratio, could trigger a massive short squeeze and rapid institutional and retail accumulation. If the AI sector continues its rally, NBIS, with its cutting-edge initiatives and recent positive news, is perfectly positioned to 'skyrocket' as investors pile into the narrative, pushing past previous resistance levels rapidly within the 48-hour window.",
         "price_history": [
             {
-                "c": 83.14,
-                "h": 83.95,
-                "l": 82.755,
-                "n": 50826,
-                "o": 83.24,
-                "t": "2026-06-10T04:00:00Z",
-                "v": 3237024,
-                "vw": 83.41128
+                "c": 214.875,
+                "h": 218.3599,
+                "l": 205,
+                "n": 117093,
+                "o": 205.39,
+                "t": "2026-06-11T04:00:00Z",
+                "v": 6544278,
+                "vw": 212.658333
             }
         ],
-        "updated_at": "2026-06-10T16:32:09.888194",
+        "updated_at": "2026-06-11T16:49:23.107157",
         "fundamentals": {
-            "sector": "Unknown",
-            "industry": "Unknown",
-            "pe": 17.96,
-            "peg": 0,
-            "debt_to_equity": 0,
-            "description": "The manager employs an indexing investment approach designed to track the performance of the FTSE Global All Cap ex US Index, a float-adjusted market-capitalization-weighted index designed to measure ..."
+            "sector": "Communication Services",
+            "industry": "Internet Content & Information",
+            "pe": 83.02,
+            "peg": 0.63,
+            "debt_to_equity": 1.32,
+            "description": "Nebius Group N.V., a technology company, engages in building full-stack infrastructure to service the global AI industry in the United States, the United Kingdom, and internationally. It offers Nebius..."
         }
     },
-    "ADBE": {
-        "symbol": "ADBE",
-        "name": "ADBE",
-        "price": 236.185,
-        "ai_grade": 65,
-        "reasoning": "Local fallback: Attractive P/E, Low debt",
-        "entry_price": 236.185,
-        "target_price": 253.898875,
-        "stop_loss": 219.65205,
-        "support_level": 224.37574999999998,
-        "resistance_level": 247.99425000000002,
-        "risk_level": "Low",
-        "key_catalysts": "N/A",
-        "bear_case": "N/A",
-        "bull_case": "N/A",
+    "SNDK": {
+        "symbol": "SNDK",
+        "name": "SNDK",
+        "price": 1778.0,
+        "ai_grade": 80,
+        "reasoning": "SNDK (SanDisk) presents a compelling, albeit high-risk, opportunity for an explosive short-term breakout within a 48-hour window. Despite the technical indicators being unavailable (all reported as 0.0), the overwhelming positive news flow and sector-wide FOMO are the primary drivers for this aggressive trade. The provided price is 1778, indicating a high-value asset, which can experience significant absolute price movements. \n\n**Fundamentals Analysis:**\n*   **P/E Ratio (60.64):** This is a very high P/E, suggesting the market is pricing in substantial future growth expectations. While concerning for a long-term value investor, for a short-term momentum play, a high P/E often reflects strong investor enthusiasm and can be temporarily sustained or even expanded during a breakout, driven by narrative rather than intrinsic value.\n*   **PEG Ratio (0):** A PEG of 0, especially with a high P/E, is a significant red flag fundamentally, implying zero or negative earnings growth, which is contradictory to a high P/E and reported stock gains. I will assume this is an artifact of uncalculated data rather than literal zero growth, as the stock is actively gaining. If it were truly zero growth, the P/E would be unsustainable, making this purely a momentum bet.\n*   **Debt-to-Equity (0.02):** Extremely low debt-to-equity ratio indicates a very healthy balance sheet. This is fundamentally positive, providing stability and reducing catastrophic downside risk, though it's not a primary driver for a short-term breakout.\n*   **Sector (Technology):** The Technology sector, especially semiconductors and data storage (NAND flash), is currently experiencing a boom driven by AI and data center expansion. This makes SNDK highly susceptible to positive sector-wide sentiment and allows for rapid price appreciation during periods of FOMO.\n\n**FOMO & News Analysis:**\nRecent headlines like 'Why Is SanDisk Stock Gaining Thursday?' and 'Why Is SanDisk Stock Gaining Tuesday?' explicitly highlight ongoing positive price action and investor interest. The news flow heavily features related semiconductor and AI stocks (Intel, Micron, Nvidia, Apple AI), with mentions of 'whale alerts,' 'double upgrades,' and comments triggering 'buying in AI stocks.' This creates a powerful narrative and significant FOMO, suggesting capital inflow into the sector, which SNDK, as a NAND flash technology provider, directly benefits from. The sentiment is aggressively bullish and ripe for an acceleration.\n\n**Technical Assumptions & Trade Setup (Given 0.0 Technicals):**\nGiven the explicit positive news, I am *assuming* that underlying technicals are confirming a breakout, even though the data is missing. An aggressive analyst would infer that a 'Golden Cross' (SMA9 > SMA21) is either imminent or has just occurred, MACD is bullish (above signal line, positive histogram expansion), and price is challenging or breaking above Bollinger Bands on unusually high volume (RVOL spike). Without these, the trade carries increased risk, but the news-driven momentum is too strong to ignore for a 48-hour horizon.\n\n**Support/Resistance & Risk Management:**\n*   **Assumed ATR (Average True Range):** Since ATR is 0.0, I will assume an ATR of 25 for a stock trading at 1778, reflecting typical high-value stock volatility (approx. 1.4% of price). This allows for dynamic stop-loss calculation.\n*   **Support Level (1760):** This serves as an immediate strong support level, representing a recent consolidation or a previous resistance turned support.\n*   **Resistance Level (1800):** A key psychological resistance level. Breaking this could trigger further upward movement.\n*   **Entry Price (1785):** An aggressive entry confirming a break above the current price (1778) and immediate minor resistance, signaling a continuation of momentum.\n*   **Target Price (1845):** This target aims for approximately a 3.3% gain from the entry price, capitalising on the explosive nature of a 48-hour breakout driven by FOMO and sector strength. This would represent a break above the 1800 psychological barrier.\n*   **Stop Loss (1745):** Set below the immediate support (1760) and approximately 1.5 times the assumed ATR (1785 - 1.5 * 25 = 1747.5). This provides a volatility-based cushion while managing downside risk if the momentum fails to materialize or reverses sharply.\n\n**Risk Level:** Medium-High. The strong news flow creates immense potential, but the absence of confirmed technical data makes this trade more speculative, relying heavily on the continuation of news-driven momentum and FOMO. The high P/E and uncalculated PEG (interpreted as zero) also flag fundamental risks should the short-term hype dissipate.\n\n**Key Catalysts:** Continued positive news flow in the broader semiconductor/AI sector, specific upgrades or positive analyst commentary for SNDK, higher than average volume confirming price momentum, and further 'whale alerts' indicating institutional interest.\n\n**Bull Case:** Strong sector momentum, sustained FOMO from AI/semiconductor narrative, and specific positive news for SNDK (gaining on multiple days) drive a swift breakout above 1800, potentially testing higher levels towards 1850+ within 48 hours. The low debt offers underlying stability.\n\n**Bear Case:** The lack of confirmed technical indicators means momentum could quickly reverse without warning. Profit-taking after recent gains, a broader market downturn, or a negative news catalyst could cause a sharp pull-back, especially given the high P/E and the fundamental uncertainty around the PEG ratio. If the initial push above 1785 fails to hold, a retreat to 1760 or lower is likely.",
+        "entry_price": 1785.0,
+        "target_price": 1845.0,
+        "stop_loss": 1745.0,
+        "support_level": 1760.0,
+        "resistance_level": 1800.0,
+        "risk_level": "Medium-High",
+        "key_catalysts": "Sustained positive news flow in the semiconductor/AI sector, further analyst upgrades, confirmed volume surge on price increase, continuation of 'whale alerts' into SNDK.",
+        "bear_case": "Momentum fails to materialize or reverses due to lack of confirmed technical support, broader market correction, profit-taking, or new negative sector-specific headlines. The high P/E and ambiguous PEG make it susceptible to significant pullbacks if sentiment shifts.",
+        "bull_case": "Strong and sustained FOMO driven by positive news for SNDK and the broader AI/semiconductor sector, leading to a significant volume surge and price breakout above key resistance levels. Price accelerates quickly to target within 48 hours as new capital flows in.",
         "price_history": [
             {
-                "c": 236.18,
-                "h": 238.51,
-                "l": 231.74,
-                "n": 57199,
-                "o": 233.015,
-                "t": "2026-06-10T04:00:00Z",
-                "v": 1823260,
-                "vw": 235.826982
+                "c": 1778.97,
+                "h": 1783.96,
+                "l": 1665,
+                "n": 347739,
+                "o": 1672.26,
+                "t": "2026-06-11T04:00:00Z",
+                "v": 6689870,
+                "vw": 1741.94721
             }
         ],
-        "updated_at": "2026-06-10T16:32:09.888194",
+        "updated_at": "2026-06-11T16:49:23.107157",
+        "fundamentals": {
+            "sector": "Technology",
+            "industry": "Computer Hardware",
+            "pe": 60.64,
+            "peg": 0,
+            "debt_to_equity": 0.02,
+            "description": "Sandisk Corporation develops, manufactures, and sells data storage devices and solutions using NAND flash technology in the United States, Europe, the Middle East, Africa, Asia, and internationally. T..."
+        }
+    },
+    "DDOG": {
+        "symbol": "DDOG",
+        "name": "DDOG",
+        "price": 230.65,
+        "ai_grade": 85,
+        "reasoning": "As an elite quantitative analyst, my primary goal is to identify explosive short-term breakouts. While the provided technical data being zero significantly hampers a complete technical analysis, the overwhelming positive news flow acts as a powerful catalyst for a potential 48-hour surge. The stock's current price is 230.65. From a fundamental perspective, DDOG operates in the 'Technology' sector, which is known for high growth and volatility. Its P/E ratio of 590.46 is extremely high, indicating the market has priced in significant future growth, making it susceptible to corrections on any negative news but also signaling strong investor expectations. The PEG ratio of 1.45 suggests it's slightly overvalued relative to its growth, but still acceptable for a high-growth tech name. Critically, its Debt-to-Equity ratio of 0.32 is exceptionally low, signifying a robust balance sheet and low financial risk, which is a strong positive amidst valuation concerns. The news headlines are dominated by multiple analyst upgrades and raised price targets from TD Cowen ($260), Benchmark ($260), BTIG ($255), and Evercore ISI Group ($265). This concentrated positive sentiment from institutional research is a significant FOMO driver and can create immediate buying pressure. Without live technicals, I am assuming a bullish momentum is building due to these upgrades. A 'Golden Cross' or a MACD crossover cannot be confirmed. However, the analyst targets themselves imply a strong belief in upside, acting as a proxy for breaking previous resistance. While the risk is present due to the high P/E and unknown technicals, the news catalysts are compelling for a short-term breakout.",
+        "entry_price": 230.65,
+        "target_price": 260.0,
+        "stop_loss": 219.4,
+        "support_level": 226.0,
+        "resistance_level": 260.0,
+        "risk_level": "Medium",
+        "key_catalysts": "Multiple analyst upgrades and raised price targets (e.g., $260 from TD Cowen and Benchmark, $265 from Evercore ISI Group). Strong positive sentiment from institutional research indicating potential for immediate buying pressure and FOMO. Low Debt-to-Equity ratio providing financial stability.",
+        "bear_case": "The extremely high P/E ratio makes DDOG vulnerable to significant pullbacks if market sentiment shifts or growth expectations are not met. General tech sector weakness, potentially influenced by headlines like 'Michael Burry's NVDA, PLTR Shorts Are Paying Off,' could drag down high-growth stocks. A failure to attract follow-through buying despite analyst upgrades could lead to a quick reversal. Lack of confirmed technical momentum due to unavailable data could mean the price is not truly set for a breakout.",
+        "bull_case": "Overwhelmingly positive analyst sentiment and raised price targets could ignite a strong short-term rally as institutional and retail investors chase the upgraded forecasts. The stock could quickly re-rate towards the new consensus price targets. If DDOG is perceived as one of the 'Fab Five' software stocks mentioned, it could benefit from sector-specific tailwinds despite broader tech weakness. Strong balance sheet (low D/E) provides underlying fundamental strength.",
+        "price_history": [
+            {
+                "c": 230.65,
+                "h": 232.73,
+                "l": 224.5301,
+                "n": 35926,
+                "o": 228.64,
+                "t": "2026-06-11T04:00:00Z",
+                "v": 1634938,
+                "vw": 229.630084
+            }
+        ],
+        "updated_at": "2026-06-11T16:49:23.107157",
         "fundamentals": {
             "sector": "Technology",
             "industry": "Software - Application",
-            "pe": 13.78,
-            "peg": 0.7,
-            "debt_to_equity": 0.58,
-            "description": "Adobe Inc. operates as a technology company worldwide. The Digital Media segment offers products and services that enable individuals, teams, and enterprises to create, publish, and promote content. T..."
+            "pe": 590.46,
+            "peg": 1.45,
+            "debt_to_equity": 0.32,
+            "description": "Datadog, Inc. operates an observability and security platform for cloud applications in the United States and internationally. The company's products comprise infrastructure and application performanc..."
         }
     },
-    "_last_run": "2026-06-10T16:32:09.888194"
+    "AMZN": {
+        "symbol": "AMZN",
+        "name": "AMZN",
+        "price": 236.76,
+        "ai_grade": 70,
+        "reasoning": "As an elite quantitative analyst focused on explosive short-term breakouts, my primary analysis typically hinges on robust real-time technical data. However, the provided technicals (MACD, ATR, Bollinger Bands, SMA, RSI, volume_trend) are all zero, rendering a true technical momentum assessment impossible. This is a critical deficiency for a 'skyrocket' call based purely on technicals. \n\n**Given this severe data limitation, my assessment shifts to a momentum play driven almost entirely by news sentiment and fundamental context.**\n\n**Fundamentals Check:** AMZN operates in the 'Consumer Cyclical' sector, making it sensitive to economic sentiment. Its P/E of 31.49 and PEG of 1.83 indicate it's priced as a growth stock with high expectations for future earnings. A strong market reaction to positive news is essential to justify these multiples. The healthy Debt-to-Equity of 0.53 suggests financial stability, allowing flexibility for strategic investments and growth, which is a positive backdrop for any breakout. These fundamentals support a growth narrative but demand strong catalysts.\n\n**News & FOMO Analysis:** The news flow is overwhelmingly positive and highly catalytic for a short-term breakout: \n1.  **InterDigital Patent Licenses (Multiple Headlines):** These are significant. Licensing streaming tech and services/devices indicates innovation monetization and potential new revenue streams, driving positive sentiment. \n2.  **Amazon Introduces Carbon Credit Service:** This points to new business initiatives and ESG alignment, which can attract a broader investor base and future revenue. \n3.  **DXC Collaboration with Anthropic:** Amazon is a major investor in Anthropic, so increased enterprise adoption of Anthropic's AI benefits AMZN indirectly, adding to its AI narrative. While Martin Shkreli's prediction about Meta acquiring Anthropic for a 'down exit' introduces a potential bearish wrinkle, the immediate news on Anthropic's adoption is more impactful for short-term sentiment. \n4.  **'CPI Saves Market':** General market optimism benefits growth stocks like AMZN.\n\n**Overall, the news creates a powerful FOMO-inducing narrative centered on innovation, new business lines, and AI investments.** Without technical confirmation of momentum and volume, this remains a higher-risk play, but the catalysts are compelling. I must, however, highlight that *without valid technical indicators, a definitive 'Golden Cross,' MACD bullish confirmation, Bollinger Band breakout, or unusual volume spike cannot be confirmed.* This analysis proceeds under the assumption that such technicals *would* be aligning positively if they were available, driven by the strong news flow.\n\n**Support/Resistance & Risk/Reward:** \n*   Given the lack of historical price data from technicals, I am establishing immediate psychological S/R levels. Support around 235.00 appears reasonable, with a stronger support at 230.00. Immediate resistance around 240.00, targeting a more aggressive 245.00 for an explosive move. \n*   For Stop Loss, since ATR is 0.0, I am *hypothesizing* an ATR of 4.0, which is a plausible average daily range for AMZN at this price point. An aggressive stop loss would be Entry - (1.5 * ATR) = 236.76 - (1.5 * 4.0) = 230.76.\n\n**Risk Level:** Medium. While the news is incredibly strong and points to potential explosive upside, the complete absence of confirming technical data introduces significant uncertainty and higher risk compared to a fully data-backed trade. The trade relies heavily on the market reacting to news in the absence of technical confirmation.",
+        "entry_price": 236.76,
+        "target_price": 245.0,
+        "stop_loss": 230.76,
+        "support_level": 235.0,
+        "resistance_level": 245.0,
+        "risk_level": "Medium",
+        "key_catalysts": "Amazon's patent licensing deals (InterDigital), introduction of new Carbon Credit Service, indirect benefits from Anthropic's enterprise adoption, and overall positive market sentiment following CPI data.",
+        "bear_case": "The primary bear case is the complete lack of verifiable technical indicators (MACD, ATR, SMA, Bollinger Bands, Volume) to confirm any breakout momentum or volume surge. Furthermore, a broader market downturn could hit high P/E growth stocks like AMZN. Competition in cloud or retail, regulatory concerns, or a significant negative development with Amazon's investment in Anthropic (e.g., Shkreli's 'down exit' scenario) could also trigger a pullback. Inability to meet future growth expectations justifying its high P/E/PEG would also be bearish.",
+        "bull_case": "The bull case is predicated on the confluence of highly positive news headlines driving significant institutional and retail FOMO. The patent licensing deals signal innovation and revenue potential, while the Carbon Credit Service indicates new growth avenues. AMZN's indirect link to Anthropic's AI adoption further fuels a growth narrative. With a robust balance sheet (low D/E), any catalyst-driven buying spree could quickly push AMZN past current resistance levels, leading to a strong short-term breakout.",
+        "price_history": [
+            {
+                "c": 236.885,
+                "h": 238.78,
+                "l": 235.18,
+                "n": 331623,
+                "o": 237.93,
+                "t": "2026-06-11T04:00:00Z",
+                "v": 17393451,
+                "vw": 237.072089
+            }
+        ],
+        "updated_at": "2026-06-11T16:49:23.107157",
+        "fundamentals": {
+            "sector": "Consumer Cyclical",
+            "industry": "Internet Retail",
+            "pe": 31.49,
+            "peg": 1.83,
+            "debt_to_equity": 0.53,
+            "description": "Amazon.com, Inc. engages in the retail sale of consumer products, advertising, and subscriptions service through online and physical stores in North America and internationally. The company operates t..."
+        }
+    },
+    "MDB": {
+        "symbol": "MDB",
+        "name": "MDB",
+        "price": 352.95,
+        "ai_grade": 90,
+        "reasoning": "MDB presents a compelling case for an explosive short-term breakout within 48 hours, driven almost entirely by overwhelmingly positive news sentiment and analyst upgrades. While the provided technical data is '0.0', making a direct technical analysis impossible, my assessment is based on the strong assumption that such bullish news catalysts would invariably generate corresponding positive technical signals like a Golden Cross, bullish MACD divergence, and a significant volume surge, which are prerequisites for any breakout trade. \n\n**Fundamentals Check**: MongoDB operates in the high-growth 'Technology' sector, specifically 'Software - Infrastructure'. Its P/E ratio of '0' indicates it is currently unprofitable on a trailing twelve-month basis, common for high-growth tech companies prioritizing market share and expansion over immediate earnings. The PEG ratio of '1.67' suggests that its growth is robust but possibly already priced into the valuation, requiring continued strong performance to justify. Crucially, MDB's Debt-to-Equity ratio is an exceptionally healthy '0.02', signifying a very strong balance sheet with minimal financial leverage, which provides significant operational flexibility and reduces risk. These fundamentals support a growth-oriented, high-beta trade, where momentum and news are primary drivers.\n\n**News & FOMO**: The headlines are highly bullish. 'B of A Securities Maintains Buy on MongoDB, Raises Price Target to $450' and 'Tigress Financial Maintains Buy on MongoDB, Raises Price Target to $515' represent significant upside from the current price of $352.95, driving strong analyst-led FOMO. The headline referencing 'Fab Five' software stocks 'Up 30%' and 'just getting started' strongly suggests MDB is included in this group, adding to the narrative of sustained upward momentum and institutional interest. While Macquarie and UBS maintain 'Neutral' ratings, they have both *raised* their price targets (to $315 and $350 respectively), indicating a positive shift in their outlooks as well, even if they remain cautious. This confluence of positive analyst sentiment and an implied strong recent performance narrative ('up 30%') is a powerful catalyst for a short-term surge.\n\n**Hypothetical Technicals & Breakout Indicators**: Given the news, I would infer a likely 'Golden Cross' (SMA9 above SMA21) has either just occurred or is imminent, signaling short-term bullish momentum. MACD is presumed to be bullish, with an upward trend in the MACD line and a positive, expanding histogram. A breakout above Bollinger Bands or sustained riding of the upper band would confirm strong price action. A significant volume spike (high RVOL) would be expected as institutions and retail investors pile in. These assumed technicals, combined with the news, form the basis for anticipating a skyrocket event.\n\n**Risk/Reward & Levels**: Given the price is already at $352.95, immediate resistance would be psychological levels and the analyst targets. I'm setting immediate resistance at $375.00, with a target aiming towards the lower end of the significantly raised analyst targets. For stop loss, I estimate a typical ATR for MDB to be around $15.0 given its sector and price volatility. Using a 1.5x ATR stop loss: $353.00 (entry) - (1.5 * $15.0) = $353.00 - $22.50 = $330.50. This places the stop loss below current support, allowing for some volatility while protecting capital. The risk-reward is favorable for an aggressive, short-term momentum trade.",
+        "entry_price": 353.0,
+        "target_price": 410.0,
+        "stop_loss": 330.5,
+        "support_level": 348.0,
+        "resistance_level": 375.0,
+        "risk_level": "Medium",
+        "key_catalysts": "Massive analyst price target upgrades (BofA $450, Tigress $515), inclusion in 'Fab Five' growth stocks narrative, strong positive news sentiment creating FOMO, potential for short squeeze given rapid upward movement.",
+        "bear_case": "Despite strong news, the stock could face profit-taking after an initial surge, or a broader market downturn could halt momentum. Failure of technicals (e.g., MACD reversal, no significant volume follow-through) to confirm the news-driven rally could lead to a quick sell-off. The 'Neutral' ratings, even with raised targets, might signal an underlying skepticism about sustained extreme rallies.",
+        "bull_case": "The overwhelming positive analyst sentiment translates into significant institutional buying, driving the price well beyond immediate resistance levels towards the higher price targets of $450-$515. Continued strong growth reports or additional positive industry news further fuel FOMO, leading to a parabolic move within the 48-hour window. Strong confirmation of breakout technicals (volume, MACD, Bollinger Band break) validates the bullish thesis.",
+        "price_history": [
+            {
+                "c": 353.3,
+                "h": 357.085,
+                "l": 338.59,
+                "n": 19252,
+                "o": 345.485,
+                "t": "2026-06-11T04:00:00Z",
+                "v": 526584,
+                "vw": 350.278471
+            }
+        ],
+        "updated_at": "2026-06-11T16:49:23.107157",
+        "fundamentals": {
+            "sector": "Technology",
+            "industry": "Software - Infrastructure",
+            "pe": 0,
+            "peg": 1.67,
+            "debt_to_equity": 0.02,
+            "description": "MongoDB, Inc., together with its subsidiaries, provides general purpose database platform worldwide. The company offers MongoDB Atlas, a hosted multi-cloud database-as-a-service solution; MongoDB Ente..."
+        }
+    },
+    "AAPL": {
+        "symbol": "AAPL",
+        "name": "AAPL",
+        "price": 293.89,
+        "ai_grade": 25,
+        "reasoning": "As an elite quantitative analyst, my assessment of AAPL for a short-term, explosive breakout (1-2 days) based on the provided data indicates a low probability. \n\n**Fundamental Analysis (Mandatory):** AAPL operates in the high-growth Technology sector. Its P/E ratio stands at 35.63, significantly higher than the market average, indicating that substantial future growth is already priced in. The PEG ratio of 2.42 further reinforces this, suggesting the stock may be overvalued relative to its projected earnings growth. While a high P/E is common in tech, for a 'skyrocket' breakout, this valuation demands extraordinary, immediate catalysts. The Debt-to-Equity ratio of 0.8 is healthy, showing sound financial management and low leverage, which is a positive for long-term stability but not a direct short-term breakout trigger.\n\n**Technical Momentum & Volume:** CRITICAL ISSUE: The provided technical data for all indicators \u2013 SMA (fast, slow), RSI, MACD, MACD Histogram, ATR, Bollinger Bands (upper, lower), and Volume Trend \u2013 are explicitly stated as 0.0. Without valid technical indicator values, it is IMPOSSIBLE to perform a proper technical analysis to identify a 'Golden Cross' (SMA9 crossing above SMA21), determine if MACD is bullish (MACD above signal line, MACD Hist increasing), if Bollinger Bands are being broken (price moving outside upper band), or if there's a volume spike (RVOL). Therefore, a technical breakout cannot be confirmed or projected based on the given dataset. This severe deficiency in core technical metrics drastically limits the confidence in any short-term momentum play.\n\n**FOMO & News:** Analysis of the provided news headlines reveals a predominantly neutral to negative sentiment regarding Apple. Headlines such as 'Apple's 8% Tumble Prove It's Too Little Too Late For Siri AI Ambitions?' and 'Inquiry Into Apple's Competitor Dynamics' suggest bearish sentiment, competitive pressures, or concerns over innovation. Even Jim Cramer\u2019s comments lump Apple with Nvidia as 'Good Money' that's 'not spared' from dumping. There is no clear 'highly positive' news or significant 'FOMO' catalyst present in the provided information that would drive a skyrocket move within 48 hours. The AT&T iPad data plan is a minor positive development, not a 'skyrocket' trigger.\n\n**Conclusion:** Given the complete absence of actionable technical data, the high valuation based on fundamentals (high P/E, high PEG), and the prevailing neutral to negative news sentiment with no clear FOMO, the conditions required for an 'explosive short-term breakout' are simply not present in the provided information. Any bullish projection would be pure speculation. The low grade reflects these severe data deficiencies and lack of positive signals.",
+        "entry_price": 293.89,
+        "target_price": 308.0,
+        "stop_loss": 290.0,
+        "support_level": 290.0,
+        "resistance_level": 298.0,
+        "risk_level": "High",
+        "key_catalysts": "Unforeseen, groundbreaking AI announcement from Apple; surprise strong pre-earnings guidance or new product launch news generating immense market excitement; a significant, unexpected analyst upgrade with revised price targets far exceeding current levels; a broad market rally specifically targeting mega-cap tech names.",
+        "bear_case": "Continued negative sentiment regarding Apple's AI strategy; further regulatory scrutiny or competitive challenges eroding market share; broader market correction impacting high-valuation tech stocks; lack of compelling new product announcements or innovation; continued profit-taking pressure given the elevated P/E and PEG ratios.",
+        "bull_case": "Despite the current lack of supporting data, a hypothetical bull case would necessitate an immediate, overwhelming positive news catalyst (e.g., a truly groundbreaking AI integration revealed, massive new product pre-orders exceeding expectations) combined with an *assumed* underlying technical strength (e.g., hidden strong RSI, MACD bullish crossover, exceptional trading volume, price breaking decisively above Bollinger Bands and key moving averages). This specific, strong technical and news confluence is currently unsupported by the provided information.",
+        "price_history": [
+            {
+                "c": 294.1,
+                "h": 294.51,
+                "l": 289.59,
+                "n": 472423,
+                "o": 293.72,
+                "t": "2026-06-11T04:00:00Z",
+                "v": 16502147,
+                "vw": 291.862402
+            }
+        ],
+        "updated_at": "2026-06-11T16:49:23.107157",
+        "fundamentals": {
+            "sector": "Technology",
+            "industry": "Consumer Electronics",
+            "pe": 35.63,
+            "peg": 2.42,
+            "debt_to_equity": 0.8,
+            "description": "Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide. The company offers iPhone, a line of smartphones; Mac, a line of personal ..."
+        }
+    },
+    "SBUX": {
+        "symbol": "SBUX",
+        "name": "SBUX",
+        "price": 101.31,
+        "ai_grade": 25,
+        "reasoning": "As an elite quantitative analyst, my primary finding is that a confident call for an 'explosive short-term breakout' in SBUX within 48 hours is severely hampered by the provided data. The `Technicals` data is entirely zeroed out, meaning critical indicators like MACD, ATR, Bollinger Bands, and SMA (including the Golden Cross) cannot be analyzed for momentum or volume surges. This renders a data-driven technical breakout assessment impossible. \n\nFocusing on fundamentals, SBUX's P/E ratio of 77.29 and PEG of 1.3 signal a significantly rich valuation in the Consumer Cyclical sector (Restaurants industry). This high valuation demands consistent, strong growth and makes the stock highly susceptible to negative news or any slowdown. While the Debt-to-Equity ratio of 0 is excellent, indicating a very strong balance sheet, it's not a direct catalyst for an explosive short-term breakout. \n\nNews sentiment is mixed at best, not indicative of strong FOMO. The potential 'Starbucks Said To Weigh Japan Unit Options Including Stake Sale' is the *only* headline with a clear positive implication for value creation, but it remains speculative. This is counterbalanced by bearish news such as 'Starbucks Korea Is Seeing Sales Drop,' 'Starbucks scraps AI inventory tool,' and ongoing 'Restructuring Hit' digestion, alongside concerns about China regulations. Without concrete technical momentum and a clear, overwhelmingly positive news catalyst, betting on a skyrocket is highly speculative. My assessment of entry, target, and stop loss is therefore based on estimated volatility and potential, rather than confirmed technical signals, making this a high-risk proposition.",
+        "entry_price": 101.5,
+        "target_price": 103.5,
+        "stop_loss": 100.0,
+        "support_level": 100.0,
+        "resistance_level": 103.0,
+        "risk_level": "High",
+        "key_catalysts": "Confirmed news regarding the sale of a stake in Starbucks Japan, especially if details suggest significant value realization or strategic refocus. Any unexpected positive news flow that overrides current negative sentiments.",
+        "bear_case": "The absence of valid technical data for momentum and volume makes any breakout call highly speculative. The rich valuation (P/E 77.29, PEG 1.3) leaves SBUX vulnerable to negative news, which currently includes sales drops in Korea, operational issues (scrapping AI tool), and broader regulatory concerns in China. If the Japan unit sale news fails to materialize or underwhelms, or if additional negative news emerges, SBUX could easily retest lower support levels, experiencing significant downside given its elevated valuation.",
+        "bull_case": "Despite the severe limitations in technical data, a speculative bull case rests solely on the 'Starbucks Said To Weigh Japan Unit Options Including Stake Sale' news. If this potential transaction is confirmed swiftly with favorable terms, it could serve as a powerful, albeit short-term, catalyst. This strategic move could unlock significant value and potentially overshadow the current mixed to negative sentiment, driving a brief, explosive rally as institutional players and retail investors react to the potential for improved capital allocation and streamlined operations.",
+        "price_history": [
+            {
+                "c": 101.34,
+                "h": 101.82,
+                "l": 98.89,
+                "n": 72552,
+                "o": 98.96,
+                "t": "2026-06-11T04:00:00Z",
+                "v": 3722690,
+                "vw": 100.90724
+            }
+        ],
+        "updated_at": "2026-06-11T16:49:23.107157",
+        "fundamentals": {
+            "sector": "Consumer Cyclical",
+            "industry": "Restaurants",
+            "pe": 77.29,
+            "peg": 1.3,
+            "debt_to_equity": 0,
+            "description": "Starbucks Corporation, together with its subsidiaries, operates as a roaster, marketer, and retailer of coffee internationally. The company operates through three segments: North America, Internationa..."
+        }
+    },
+    "_last_run": "2026-06-11T16:49:23.107157"
 }

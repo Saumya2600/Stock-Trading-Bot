@@ -1,14 +1,58 @@
 {
-    "SCHW": {
+    "AI": {
         "data": {
-            "sector": "Financial Services",
-            "industry": "Capital Markets",
-            "pe": 17.78,
-            "peg": 1.05,
-            "debt_to_equity": 1.21,
-            "description": "The Charles Schwab Corporation, together with its subsidiaries, operates as a savings and loan holding company that provides wealth management, securities brokerage, banking, asset management, custody..."
+            "sector": "Technology",
+            "industry": "Software - Infrastructure",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 0.08,
+            "description": "C3.ai, Inc. operates as an enterprise artificial intelligence application software company. The company offers C3 agentic AI platform, an application development and runtime environment that enables c..."
         },
-        "updated_at": "2026-06-10T16:32:22.212178"
+        "updated_at": "2026-06-11T16:49:37.716479"
+    },
+    "NBIS": {
+        "data": {
+            "sector": "Communication Services",
+            "industry": "Internet Content & Information",
+            "pe": 83.02,
+            "peg": 0.63,
+            "debt_to_equity": 1.32,
+            "description": "Nebius Group N.V., a technology company, engages in building full-stack infrastructure to service the global AI industry in the United States, the United Kingdom, and internationally. It offers Nebius..."
+        },
+        "updated_at": "2026-06-11T16:50:04.258824"
+    },
+    "SNDK": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Computer Hardware",
+            "pe": 60.64,
+            "peg": 0,
+            "debt_to_equity": 0.02,
+            "description": "Sandisk Corporation develops, manufactures, and sells data storage devices and solutions using NAND flash technology in the United States, Europe, the Middle East, Africa, Asia, and internationally. T..."
+        },
+        "updated_at": "2026-06-11T16:50:27.641962"
+    },
+    "DDOG": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Software - Application",
+            "pe": 590.46,
+            "peg": 1.45,
+            "debt_to_equity": 0.32,
+            "description": "Datadog, Inc. operates an observability and security platform for cloud applications in the United States and internationally. The company's products comprise infrastructure and application performanc..."
+        },
+        "updated_at": "2026-06-11T16:50:55.626056"
+    },
+    "AMZN": {
+        "data": {
+            "sector": "Consumer Cyclical",
+            "industry": "Internet Retail",
+            "pe": 31.49,
+            "peg": 1.83,
+            "debt_to_equity": 0.53,
+            "description": "Amazon.com, Inc. engages in the retail sale of consumer products, advertising, and subscriptions service through online and physical stores in North America and internationally. The company operates t..."
+        },
+        "updated_at": "2026-06-11T16:51:15.175352"
     },
     "MDB": {
         "data": {
@@ -19,72 +63,28 @@
             "debt_to_equity": 0.02,
             "description": "MongoDB, Inc., together with its subsidiaries, provides general purpose database platform worldwide. The company offers MongoDB Atlas, a hosted multi-cloud database-as-a-service solution; MongoDB Ente..."
         },
-        "updated_at": "2026-06-10T16:32:44.409289"
+        "updated_at": "2026-06-11T16:51:59.974867"
     },
-    "CRM": {
+    "AAPL": {
         "data": {
             "sector": "Technology",
-            "industry": "Software - Application",
-            "pe": 20.23,
-            "peg": 0.87,
-            "debt_to_equity": 1.24,
-            "description": "Salesforce, Inc. provides customer relationship management technology services that connect companies and customers together in the United States, Europe, and the Asia Pacific. The company offers Agen..."
+            "industry": "Consumer Electronics",
+            "pe": 35.63,
+            "peg": 2.42,
+            "debt_to_equity": 0.8,
+            "description": "Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide. The company offers iPhone, a line of smartphones; Mac, a line of personal ..."
         },
-        "updated_at": "2026-06-10T16:33:33.646137"
+        "updated_at": "2026-06-11T16:52:23.990464"
     },
-    "AVGO": {
+    "SBUX": {
         "data": {
-            "sector": "Technology",
-            "industry": "Semiconductors",
-            "pe": 62.37,
-            "peg": 0.72,
-            "debt_to_equity": 0.74,
-            "description": "Broadcom Inc. designs, develops, and supplies various semiconductor devices and infrastructure software solutions internationally. The company operates in two segments: Semiconductor Solutions and Inf..."
-        },
-        "updated_at": "2026-06-10T16:33:57.541561"
-    },
-    "GTLB": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 0,
-            "peg": 0,
+            "sector": "Consumer Cyclical",
+            "industry": "Restaurants",
+            "pe": 77.29,
+            "peg": 1.3,
             "debt_to_equity": 0,
-            "description": "GitLab Inc., together with its subsidiaries, develops software for the software development lifecycle in the United States, Europe, and the Asia Pacific. The company provides GitLab, an intelligent or..."
+            "description": "Starbucks Corporation, together with its subsidiaries, operates as a roaster, marketer, and retailer of coffee internationally. The company operates through three segments: North America, Internationa..."
         },
-        "updated_at": "2026-06-10T16:34:23.111985"
-    },
-    "AI": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 0,
-            "peg": 0,
-            "debt_to_equity": 0.08,
-            "description": "C3.ai, Inc. operates as an enterprise artificial intelligence application software company. The company offers C3 agentic AI platform, an application development and runtime environment that enables c..."
-        },
-        "updated_at": "2026-06-10T16:34:45.462867"
-    },
-    "VXUS": {
-        "data": {
-            "sector": "Unknown",
-            "industry": "Unknown",
-            "pe": 17.96,
-            "peg": 0,
-            "debt_to_equity": 0,
-            "description": "The manager employs an indexing investment approach designed to track the performance of the FTSE Global All Cap ex US Index, a float-adjusted market-capitalization-weighted index designed to measure ..."
-        },
-        "updated_at": "2026-06-10T16:35:37.617262"
-    },
-    "ADBE": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Application",
-            "pe": 13.78,
-            "peg": 0.7,
-            "debt_to_equity": 0.58,
-            "description": "Adobe Inc. operates as a technology company worldwide. The Digital Media segment offers products and services that enable individuals, teams, and enterprises to create, publish, and promote content. T..."
-        },
-        "updated_at": "2026-06-10T16:35:59.872238"
+        "updated_at": "2026-06-11T16:52:56.918964"
     }
 }
