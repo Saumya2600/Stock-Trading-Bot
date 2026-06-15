@@ -1,90 +1,90 @@
 {
-    "IT": {
+    "SNOW": {
         "data": {
             "sector": "Technology",
-            "industry": "Information Technology Services",
-            "pe": 14.51,
-            "peg": 0.63,
-            "debt_to_equity": 52.93,
-            "description": "Gartner, Inc. provides business and technology insights for decisions and performance on an organization's mission-critical priorities in the United States, Canada, Europe, the Middle East, Africa, an..."
+            "industry": "Software - Application",
+            "pe": 0,
+            "peg": 6.02,
+            "debt_to_equity": 1.43,
+            "description": "Snowflake Inc. provides a cloud-based data platform for various organizations in the United States and internationally. The company's platform includes artificial intelligence (AI) Data Cloud, which e..."
         },
-        "updated_at": "2026-06-12T16:15:17.565006"
+        "updated_at": "2026-06-15T17:52:16.610896"
     },
-    "GTLB": {
+    "MSFT": {
         "data": {
             "sector": "Technology",
             "industry": "Software - Infrastructure",
-            "pe": 0,
-            "peg": 0,
-            "debt_to_equity": 0,
-            "description": "GitLab Inc., together with its subsidiaries, develops software for the software development lifecycle in the United States, Europe, and the Asia Pacific. The company provides GitLab, an intelligent or..."
+            "pe": 23.79,
+            "peg": 1.2,
+            "debt_to_equity": 0.3,
+            "description": "Microsoft Corporation develops and supports software, services, devices, and solutions worldwide. The Productivity and Business Processes segment offers Microsoft 365 commercial, enterprise mobility +..."
         },
-        "updated_at": "2026-06-12T16:15:41.853719"
+        "updated_at": "2026-06-15T17:52:41.862941"
     },
-    "ET": {
+    "DIS": {
         "data": {
-            "sector": "Energy",
-            "industry": "Oil & Gas Midstream",
-            "pe": 15.86,
-            "peg": 0.57,
-            "debt_to_equity": 1.42,
-            "description": "Energy Transfer LP, together with its subsidiaries, provides energy-related services in the United States. It operates through Intrastate Transportation and Storage; Interstate Transportation and Stor..."
+            "sector": "Communication Services",
+            "industry": "Entertainment",
+            "pe": 16.24,
+            "peg": 2.32,
+            "debt_to_equity": 0.41,
+            "description": "The Walt Disney Company operates as an entertainment company in Americas, Europe, and the Asia Pacific. It operates in three segments: Entertainment, Sports, and Experiences. The company produces and ..."
         },
-        "updated_at": "2026-06-12T16:16:06.314611"
+        "updated_at": "2026-06-15T17:53:00.789080"
     },
-    "INTC": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Semiconductors",
-            "pe": 0,
-            "peg": 1.36,
-            "debt_to_equity": 0.36,
-            "description": "Intel Corporation designs, develops, manufactures, markets, sells, and services computing and related end products and services in the United States, Ireland, Israel, and internationally. It operates ..."
-        },
-        "updated_at": "2026-06-12T16:16:32.834849"
-    },
-    "HOOD": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Capital Markets",
-            "pe": 45.22,
-            "peg": 2.59,
-            "debt_to_equity": 1.4,
-            "description": "Robinhood Markets, Inc. operates financial services platform in the United States. The company's platform allows users to invest in stocks, exchange-traded funds (ETFs), and American depository receip..."
-        },
-        "updated_at": "2026-06-12T16:17:01.013074"
-    },
-    "META": {
+    "GOOG": {
         "data": {
             "sector": "Communication Services",
             "industry": "Internet Content & Information",
-            "pe": 20.78,
-            "peg": 0.83,
-            "debt_to_equity": 0.36,
-            "description": "Meta Platforms, Inc. engages in the development of products that enable people to connect and share with friends and family through mobile devices, personal computers, virtual reality (VR) headsets, a..."
+            "pe": 28.18,
+            "peg": 1.41,
+            "debt_to_equity": 0.2,
+            "description": "Alphabet Inc. offers various products and platforms in the United States, Europe, the Middle East, Africa, the Asia-Pacific, Canada, and Latin America. It operates through Google Services, Google Clou..."
         },
-        "updated_at": "2026-06-12T16:17:28.482260"
+        "updated_at": "2026-06-15T17:53:24.342719"
+    },
+    "MRVL": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Semiconductors",
+            "pe": 105.18,
+            "peg": 1.58,
+            "debt_to_equity": 0.29,
+            "description": "Marvell Technology, Inc., together with its subsidiaries, provides data infrastructure semiconductor solutions and spanning the data center core to network edge in the United States, Argentina, China,..."
+        },
+        "updated_at": "2026-06-15T17:53:44.885839"
+    },
+    "NCLH": {
+        "data": {
+            "sector": "Consumer Cyclical",
+            "industry": "Travel Services",
+            "pe": 16.23,
+            "peg": 0.92,
+            "debt_to_equity": 6.61,
+            "description": "Norwegian Cruise Line Holdings Ltd., together with its subsidiaries, operates as a cruise company in North America, Europe, the Asia-Pacific, and internationally. It offers itineraries to destinations..."
+        },
+        "updated_at": "2026-06-15T17:54:08.248552"
+    },
+    "RDDT": {
+        "data": {
+            "sector": "Communication Services",
+            "industry": "Internet Content & Information",
+            "pe": 50.64,
+            "peg": 1.16,
+            "debt_to_equity": 0.01,
+            "description": "Reddit, Inc. operates a digital community in the United States and internationally. The company's platform enables user to engage in conversations, explore passions, research new hobbies, exchange goo..."
+        },
+        "updated_at": "2026-06-15T17:54:28.017624"
     },
     "CRM": {
         "data": {
             "sector": "Technology",
             "industry": "Software - Application",
-            "pe": 19.14,
-            "peg": 0.82,
+            "pe": 19.19,
+            "peg": 0.79,
             "debt_to_equity": 1.24,
             "description": "Salesforce, Inc. provides customer relationship management technology services that connect companies and customers together in the United States, Europe, and the Asia Pacific. The company offers Agen..."
         },
-        "updated_at": "2026-06-12T16:17:58.199910"
-    },
-    "IQ": {
-        "data": {
-            "sector": "Communication Services",
-            "industry": "Entertainment",
-            "pe": 0,
-            "peg": 2.48,
-            "debt_to_equity": 1.09,
-            "description": "iQIYI, Inc. provides online entertainment video services in the People's Republic of China. The company operates a platform that provides a collection of internet video content, such as professionally..."
-        },
-        "updated_at": "2026-06-12T16:18:19.724765"
+        "updated_at": "2026-06-15T17:54:52.037615"
     }
 }
