@@ -1,90 +1,90 @@
 {
-    "SNOW": {
+    "AI": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Software - Infrastructure",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 0.08,
+            "description": "C3.ai, Inc. operates as an enterprise artificial intelligence application software company. The company offers C3 agentic AI platform, an application development and runtime environment that enables c..."
+        },
+        "updated_at": "2026-06-16T18:01:00.486050"
+    },
+    "CC": {
+        "data": {
+            "sector": "Basic Materials",
+            "industry": "Specialty Chemicals",
+            "pe": 0,
+            "peg": 1.6,
+            "debt_to_equity": 20.34,
+            "description": "The Chemours Company provides performance chemicals in North America, the Asia Pacific, Europe, the Middle East, Africa, and Latin America. The company operates through three segments: Thermal & Speci..."
+        },
+        "updated_at": "2026-06-16T18:01:24.206275"
+    },
+    "CXAI": {
         "data": {
             "sector": "Technology",
             "industry": "Software - Application",
             "pe": 0,
-            "peg": 6.02,
-            "debt_to_equity": 1.43,
-            "description": "Snowflake Inc. provides a cloud-based data platform for various organizations in the United States and internationally. The company's platform includes artificial intelligence (AI) Data Cloud, which e..."
+            "peg": 0,
+            "debt_to_equity": 0.69,
+            "description": "CXApp Inc. provides experience solutions and delivering enterprise-grade software in the United States, Canada, and the Philippines. It offers CXAI Platform, which provides a comprehensive suite of to..."
         },
-        "updated_at": "2026-06-15T17:52:16.610896"
+        "updated_at": "2026-06-16T18:01:51.717463"
     },
-    "MSFT": {
+    "BX": {
         "data": {
-            "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 23.79,
-            "peg": 1.2,
-            "debt_to_equity": 0.3,
-            "description": "Microsoft Corporation develops and supports software, services, devices, and solutions worldwide. The Productivity and Business Processes segment offers Microsoft 365 commercial, enterprise mobility +..."
+            "sector": "Financial Services",
+            "industry": "Asset Management",
+            "pe": 32.82,
+            "peg": 2.08,
+            "debt_to_equity": 0.72,
+            "description": "Blackstone Inc. is an alternative asset management firm specializing in private equity, venture capital, real estate, hedge fund solutions, credit, secondary funds of funds, public debt and equity and..."
         },
-        "updated_at": "2026-06-15T17:52:41.862941"
+        "updated_at": "2026-06-16T18:02:25.235122"
     },
-    "DIS": {
-        "data": {
-            "sector": "Communication Services",
-            "industry": "Entertainment",
-            "pe": 16.24,
-            "peg": 2.32,
-            "debt_to_equity": 0.41,
-            "description": "The Walt Disney Company operates as an entertainment company in Americas, Europe, and the Asia Pacific. It operates in three segments: Entertainment, Sports, and Experiences. The company produces and ..."
-        },
-        "updated_at": "2026-06-15T17:53:00.789080"
-    },
-    "GOOG": {
+    "GOOGL": {
         "data": {
             "sector": "Communication Services",
             "industry": "Internet Content & Information",
-            "pe": 28.18,
-            "peg": 1.41,
+            "pe": 28.31,
+            "peg": 1.42,
             "debt_to_equity": 0.2,
             "description": "Alphabet Inc. offers various products and platforms in the United States, Europe, the Middle East, Africa, the Asia-Pacific, Canada, and Latin America. It operates through Google Services, Google Clou..."
         },
-        "updated_at": "2026-06-15T17:53:24.342719"
+        "updated_at": "2026-06-16T18:02:50.845829"
     },
-    "MRVL": {
+    "INTC": {
         "data": {
             "sector": "Technology",
             "industry": "Semiconductors",
-            "pe": 105.18,
-            "peg": 1.58,
-            "debt_to_equity": 0.29,
-            "description": "Marvell Technology, Inc., together with its subsidiaries, provides data infrastructure semiconductor solutions and spanning the data center core to network edge in the United States, Argentina, China,..."
+            "pe": 0,
+            "peg": 1.36,
+            "debt_to_equity": 0.36,
+            "description": "Intel Corporation designs, develops, manufactures, markets, sells, and services computing and related end products and services in the United States, Ireland, Israel, and internationally. It operates ..."
         },
-        "updated_at": "2026-06-15T17:53:44.885839"
+        "updated_at": "2026-06-16T18:03:17.344931"
     },
-    "NCLH": {
+    "VT": {
         "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Travel Services",
-            "pe": 16.23,
-            "peg": 0.92,
-            "debt_to_equity": 6.61,
-            "description": "Norwegian Cruise Line Holdings Ltd., together with its subsidiaries, operates as a cruise company in North America, Europe, the Asia-Pacific, and internationally. It offers itineraries to destinations..."
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 23.44,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "The fund employs an indexing investment approach designed to track the performance of the FTSE Global All Cap Index. It invests by sampling the target index, meaning that it holds a range of securitie..."
         },
-        "updated_at": "2026-06-15T17:54:08.248552"
+        "updated_at": "2026-06-16T18:03:47.925973"
     },
-    "RDDT": {
-        "data": {
-            "sector": "Communication Services",
-            "industry": "Internet Content & Information",
-            "pe": 50.64,
-            "peg": 1.16,
-            "debt_to_equity": 0.01,
-            "description": "Reddit, Inc. operates a digital community in the United States and internationally. The company's platform enables user to engage in conversations, explore passions, research new hobbies, exchange goo..."
-        },
-        "updated_at": "2026-06-15T17:54:28.017624"
-    },
-    "CRM": {
+    "NOK": {
         "data": {
             "sector": "Technology",
-            "industry": "Software - Application",
-            "pe": 19.19,
-            "peg": 0.79,
-            "debt_to_equity": 1.24,
-            "description": "Salesforce, Inc. provides customer relationship management technology services that connect companies and customers together in the United States, Europe, and the Asia Pacific. The company offers Agen..."
+            "industry": "Communication Equipment",
+            "pe": 86.72,
+            "peg": 1.43,
+            "debt_to_equity": 0.16,
+            "description": "Nokia Oyj, together with its subsidiaries, provides mobile, fixed, and cloud network solutions in North and Latin America, Greater China, India, Asia Pacific, Europe, the Middle East, and Africa. It o..."
         },
-        "updated_at": "2026-06-15T17:54:52.037615"
+        "updated_at": "2026-06-16T18:04:10.850218"
     }
 }
