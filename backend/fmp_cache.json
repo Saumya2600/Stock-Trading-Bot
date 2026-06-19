@@ -1,25 +1,69 @@
 {
-    "CVX": {
+    "GOOGL": {
         "data": {
-            "sector": "Energy",
-            "industry": "Oil & Gas Integrated",
-            "pe": 30.1,
-            "peg": 0.73,
-            "debt_to_equity": 0.24,
-            "description": "Chevron Corporation, through its subsidiaries, engages in the integrated energy and chemicals operations in the United States and internationally. It operates through Upstream, Downstream, and All Oth..."
+            "sector": "Communication Services",
+            "industry": "Internet Content & Information",
+            "pe": 28.09,
+            "peg": 1.45,
+            "debt_to_equity": 0.2,
+            "description": "Alphabet Inc. offers various products and platforms in the United States, Europe, the Middle East, Africa, the Asia-Pacific, Canada, and Latin America. It operates through Google Services, Google Clou..."
         },
-        "updated_at": "2026-06-18T16:24:59.668894"
+        "updated_at": "2026-06-19T16:00:12.212456"
+    },
+    "QQQ": {
+        "data": {
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 34.0,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "To maintain the correspondence between the composition and weights of the securities in the trust (the \"securities\") and the stocks in the NASDAQ-100 Index\u00ae, the adviser adjusts the securities from ti..."
+        },
+        "updated_at": "2026-06-19T16:00:55.139008"
+    },
+    "AMD": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Semiconductors",
+            "pe": 179.72,
+            "peg": 1.29,
+            "debt_to_equity": 0.06,
+            "description": "Advanced Micro Devices, Inc. operates as a semiconductor company internationally. It operates in three segments: Data Center, Client and Gaming, and Embedded. The company offers artificial intelligenc..."
+        },
+        "updated_at": "2026-06-19T16:02:21.840420"
+    },
+    "SNOW": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Software - Application",
+            "pe": 0,
+            "peg": 6.0,
+            "debt_to_equity": 1.43,
+            "description": "Snowflake Inc. provides a cloud-based data platform for various organizations in the United States and internationally. The company's platform includes artificial intelligence (AI) Data Cloud, which e..."
+        },
+        "updated_at": "2026-06-19T16:03:05.967159"
     },
     "AVGO": {
         "data": {
             "sector": "Technology",
             "industry": "Semiconductors",
-            "pe": 67.83,
-            "peg": 0.68,
+            "pe": 68.22,
+            "peg": 0.75,
             "debt_to_equity": 0.74,
             "description": "Broadcom Inc. designs, develops, and supplies various semiconductor devices and infrastructure software solutions internationally. The company operates in two segments: Semiconductor Solutions and Inf..."
         },
-        "updated_at": "2026-06-18T16:25:25.970737"
+        "updated_at": "2026-06-19T16:03:37.913601"
+    },
+    "SNAP": {
+        "data": {
+            "sector": "Communication Services",
+            "industry": "Internet Content & Information",
+            "pe": 0,
+            "peg": 508.87,
+            "debt_to_equity": 2.02,
+            "description": "Snap Inc. operates as a technology company in North America, Europe, and internationally. The company offers Snapchat, a visual messaging application with various tabs, such as camera, visual messagin..."
+        },
+        "updated_at": "2026-06-19T16:04:06.998554"
     },
     "MDB": {
         "data": {
@@ -30,61 +74,17 @@
             "debt_to_equity": 0.02,
             "description": "MongoDB, Inc., together with its subsidiaries, provides general purpose database platform worldwide. The company offers MongoDB Atlas, a hosted multi-cloud database-as-a-service solution; MongoDB Ente..."
         },
-        "updated_at": "2026-06-18T16:25:46.177520"
+        "updated_at": "2026-06-19T16:04:47.138620"
     },
-    "IP": {
-        "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Packaging & Containers",
-            "pe": 0,
-            "peg": 1.58,
-            "debt_to_equity": 0.66,
-            "description": "International Paper Company produces and sells renewable fiber-based packaging in North America, Latin America, Europe, South America, and North Africa. It operates through two segments, Packaging Sol..."
-        },
-        "updated_at": "2026-06-18T16:26:10.940069"
-    },
-    "IREN": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Capital Markets",
-            "pe": 78.01,
-            "peg": 3.11,
-            "debt_to_equity": 1.49,
-            "description": "IREN Limited operates in the vertically integrated data center business in Australia and Canada. The company owns and operates computing hardware, as well as electrical infrastructure and data centers..."
-        },
-        "updated_at": "2026-06-18T16:26:32.818860"
-    },
-    "AI": {
+    "CRM": {
         "data": {
             "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 0,
-            "peg": 0,
-            "debt_to_equity": 0.08,
-            "description": "C3.ai, Inc. operates as an enterprise artificial intelligence application software company. The company offers C3 agentic AI platform, an application development and runtime environment that enables c..."
+            "industry": "Software - Application",
+            "pe": 17.57,
+            "peg": 0.72,
+            "debt_to_equity": 1.24,
+            "description": "Salesforce, Inc. provides customer relationship management technology services that connect companies and customers together in the United States, Europe, and the Asia Pacific. The company offers Agen..."
         },
-        "updated_at": "2026-06-18T16:27:04.813212"
-    },
-    "COIN": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Financial Data & Stock Exchanges",
-            "pe": 60.27,
-            "peg": 1.01,
-            "debt_to_equity": 0.59,
-            "description": "Coinbase Global, Inc. operates platform for crypto assets in the United States and internationally. It provides the primary financial account in the crypto economy for consumers; a brokerage platform ..."
-        },
-        "updated_at": "2026-06-18T16:27:33.686513"
-    },
-    "AXP": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Credit Services",
-            "pe": 21.28,
-            "peg": 1.62,
-            "debt_to_equity": 1.78,
-            "description": "American Express Company, together with its subsidiaries, operates as an integrated payments company in the United States, Europe, the Middle East and Africa, the Asia Pacific, Australia, New Zealand,..."
-        },
-        "updated_at": "2026-06-18T16:27:57.746065"
+        "updated_at": "2026-06-19T16:05:13.788170"
     }
 }
