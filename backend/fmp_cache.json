@@ -1,36 +1,36 @@
 {
-    "GOOGL": {
-        "data": {
-            "sector": "Communication Services",
-            "industry": "Internet Content & Information",
-            "pe": 28.09,
-            "peg": 1.45,
-            "debt_to_equity": 0.2,
-            "description": "Alphabet Inc. offers various products and platforms in the United States, Europe, the Middle East, Africa, the Asia-Pacific, Canada, and Latin America. It operates through Google Services, Google Clou..."
-        },
-        "updated_at": "2026-06-19T16:00:12.212456"
-    },
-    "QQQ": {
-        "data": {
-            "sector": "Unknown",
-            "industry": "Unknown",
-            "pe": 34.0,
-            "peg": 0,
-            "debt_to_equity": 0,
-            "description": "To maintain the correspondence between the composition and weights of the securities in the trust (the \"securities\") and the stocks in the NASDAQ-100 Index\u00ae, the adviser adjusts the securities from ti..."
-        },
-        "updated_at": "2026-06-19T16:00:55.139008"
-    },
-    "AMD": {
+    "CRM": {
         "data": {
             "sector": "Technology",
-            "industry": "Semiconductors",
-            "pe": 179.72,
-            "peg": 1.29,
-            "debt_to_equity": 0.06,
-            "description": "Advanced Micro Devices, Inc. operates as a semiconductor company internationally. It operates in three segments: Data Center, Client and Gaming, and Embedded. The company offers artificial intelligenc..."
+            "industry": "Software - Application",
+            "pe": 17.11,
+            "peg": 0.72,
+            "debt_to_equity": 1.24,
+            "description": "Salesforce, Inc. provides customer relationship management technology services that connect companies and customers together in the United States, Europe, and the Asia Pacific. The company offers Agen..."
         },
-        "updated_at": "2026-06-19T16:02:21.840420"
+        "updated_at": "2026-06-22T17:28:38.552786"
+    },
+    "BLK": {
+        "data": {
+            "sector": "Financial Services",
+            "industry": "Asset Management",
+            "pe": 26.58,
+            "peg": 1.33,
+            "debt_to_equity": 0.24,
+            "description": "BlackRock, Inc. is a publicly owned investment manager. The firm primarily provides its services to institutional, intermediary, and individual investors including corporate, public, union, and indust..."
+        },
+        "updated_at": "2026-06-22T17:29:03.258553"
+    },
+    "NKE": {
+        "data": {
+            "sector": "Consumer Cyclical",
+            "industry": "Footwear & Accessories",
+            "pe": 28.47,
+            "peg": 1.58,
+            "debt_to_equity": 0.79,
+            "description": "NIKE, Inc., together with its subsidiaries, designs, develops, markets, and sells athletic and casual footwear, apparel, equipment, accessories, and services for men, women, and kids in North America,..."
+        },
+        "updated_at": "2026-06-22T17:29:31.056035"
     },
     "SNOW": {
         "data": {
@@ -41,50 +41,50 @@
             "debt_to_equity": 1.43,
             "description": "Snowflake Inc. provides a cloud-based data platform for various organizations in the United States and internationally. The company's platform includes artificial intelligence (AI) Data Cloud, which e..."
         },
-        "updated_at": "2026-06-19T16:03:05.967159"
+        "updated_at": "2026-06-22T17:30:02.752473"
     },
-    "AVGO": {
+    "GS": {
+        "data": {
+            "sector": "Financial Services",
+            "industry": "Capital Markets",
+            "pe": 20.13,
+            "peg": 1.69,
+            "debt_to_equity": 6.79,
+            "description": "The Goldman Sachs Group, Inc., a financial institution, provides a range of financial services for corporations, financial institutions, governments, and individuals in the Americas, Europe, the Middl..."
+        },
+        "updated_at": "2026-06-22T17:30:35.888389"
+    },
+    "AAPL": {
         "data": {
             "sector": "Technology",
-            "industry": "Semiconductors",
-            "pe": 68.22,
-            "peg": 0.75,
-            "debt_to_equity": 0.74,
-            "description": "Broadcom Inc. designs, develops, and supplies various semiconductor devices and infrastructure software solutions internationally. The company operates in two segments: Semiconductor Solutions and Inf..."
+            "industry": "Consumer Electronics",
+            "pe": 36.34,
+            "peg": 2.41,
+            "debt_to_equity": 0.8,
+            "description": "Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide. The company offers iPhone, a line of smartphones; Mac, a line of personal ..."
         },
-        "updated_at": "2026-06-19T16:03:37.913601"
+        "updated_at": "2026-06-22T17:30:58.081367"
     },
-    "SNAP": {
+    "PFE": {
         "data": {
-            "sector": "Communication Services",
-            "industry": "Internet Content & Information",
-            "pe": 0,
-            "peg": 508.87,
-            "debt_to_equity": 2.02,
-            "description": "Snap Inc. operates as a technology company in North America, Europe, and internationally. The company offers Snapchat, a visual messaging application with various tabs, such as camera, visual messagin..."
+            "sector": "Healthcare",
+            "industry": "Drug Manufacturers - General",
+            "pe": 19.16,
+            "peg": 13.77,
+            "debt_to_equity": 0.72,
+            "description": "Pfizer Inc. discovers, develops, manufactures, markets, distributes, and sells biopharmaceutical products in the United States and internationally. It operates in three segments: Biopharma, PC1, and P..."
         },
-        "updated_at": "2026-06-19T16:04:06.998554"
+        "updated_at": "2026-06-22T17:31:21.256223"
     },
-    "MDB": {
+    "SNDK": {
         "data": {
             "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 0,
-            "peg": 1.67,
+            "industry": "Computer Hardware",
+            "pe": 79.31,
+            "peg": 0,
             "debt_to_equity": 0.02,
-            "description": "MongoDB, Inc., together with its subsidiaries, provides general purpose database platform worldwide. The company offers MongoDB Atlas, a hosted multi-cloud database-as-a-service solution; MongoDB Ente..."
+            "description": "Sandisk Corporation develops, manufactures, and sells data storage devices and solutions using NAND flash technology in the United States, Europe, the Middle East, Africa, Asia, and internationally. T..."
         },
-        "updated_at": "2026-06-19T16:04:47.138620"
-    },
-    "CRM": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Application",
-            "pe": 17.57,
-            "peg": 0.72,
-            "debt_to_equity": 1.24,
-            "description": "Salesforce, Inc. provides customer relationship management technology services that connect companies and customers together in the United States, Europe, and the Asia Pacific. The company offers Agen..."
-        },
-        "updated_at": "2026-06-19T16:05:13.788170"
+        "updated_at": "2026-06-22T17:31:54.780391"
     }
 }
