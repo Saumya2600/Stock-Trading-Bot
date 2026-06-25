@@ -1,59 +1,4 @@
 {
-    "SNOW": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Application",
-            "pe": 0,
-            "peg": 5.86,
-            "debt_to_equity": 1.43,
-            "description": "Snowflake Inc. provides a cloud-based data platform for various organizations in the United States and internationally. The company's platform includes artificial intelligence (AI) Data Cloud, which e..."
-        },
-        "updated_at": "2026-06-24T15:32:01.883318"
-    },
-    "GLD": {
-        "data": {
-            "sector": "Unknown",
-            "industry": "Unknown",
-            "pe": 0,
-            "peg": 0,
-            "debt_to_equity": 0,
-            "description": "The Trust holds gold bars and from time to time, issues Baskets in exchange for deposits of gold and distributes gold in connection with redemptions of Baskets. The investment objective of the Trust i..."
-        },
-        "updated_at": "2026-06-24T15:32:36.491173"
-    },
-    "BA": {
-        "data": {
-            "sector": "Industrials",
-            "industry": "Aerospace & Defense",
-            "pe": 87.23,
-            "peg": 23.93,
-            "debt_to_equity": 8.29,
-            "description": "The Boeing Company, together with its subsidiaries, designs, develops, manufactures, sells, services, and supports commercial jetliners, military aircraft, satellites, missile defense, human space fli..."
-        },
-        "updated_at": "2026-06-24T15:33:02.345717"
-    },
-    "AAOI": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Communication Equipment",
-            "pe": 0,
-            "peg": 0.78,
-            "debt_to_equity": 0.25,
-            "description": "Applied Optoelectronics, Inc. engages in the design, manufacture, and sale of fiber-optic networking products in the United States, Taiwan, and China. The company offers optical modules, optical filte..."
-        },
-        "updated_at": "2026-06-24T15:34:10.488336"
-    },
-    "PEP": {
-        "data": {
-            "sector": "Consumer Defensive",
-            "industry": "Beverages - Non-Alcoholic",
-            "pe": 22.57,
-            "peg": 1.52,
-            "debt_to_equity": 2.45,
-            "description": "PepsiCo, Inc. engages in the manufacture, marketing, distribution, and sale of various beverages and convenient foods worldwide. The company operates through six segments: PepsiCo Foods North America;..."
-        },
-        "updated_at": "2026-06-24T15:34:34.616678"
-    },
     "MDB": {
         "data": {
             "sector": "Technology",
@@ -63,28 +8,83 @@
             "debt_to_equity": 0.02,
             "description": "MongoDB, Inc., together with its subsidiaries, provides general purpose database platform worldwide. The company offers MongoDB Atlas, a hosted multi-cloud database-as-a-service solution; MongoDB Ente..."
         },
-        "updated_at": "2026-06-24T15:34:57.907515"
+        "updated_at": "2026-06-25T15:39:01.093613"
     },
-    "SOXX": {
+    "GTLB": {
         "data": {
-            "sector": "Unknown",
-            "industry": "Unknown",
-            "pe": 43.1,
+            "sector": "Technology",
+            "industry": "Software - Infrastructure",
+            "pe": 0,
             "peg": 0,
             "debt_to_equity": 0,
-            "description": "The fund generally will invest at least 80% of its assets in the component securities of its index and in investments that have economic characteristics that are substantially identical to the compone..."
+            "description": "GitLab Inc., together with its subsidiaries, develops software for the software development lifecycle in the United States, Europe, and the Asia Pacific. The company provides GitLab, an intelligent or..."
         },
-        "updated_at": "2026-06-24T15:35:19.499193"
+        "updated_at": "2026-06-25T15:39:35.300631"
     },
-    "WFC": {
+    "T": {
         "data": {
-            "sector": "Financial Services",
-            "industry": "Banks - Diversified",
-            "pe": 13.0,
-            "peg": 1.48,
-            "debt_to_equity": 0,
-            "description": "Wells Fargo & Company, a financial services company, provides diversified banking, investment, mortgage, and consumer and commercial finance products and services in the United States and internationa..."
+            "sector": "Communication Services",
+            "industry": "Telecom Services",
+            "pe": 7.39,
+            "peg": 1.56,
+            "debt_to_equity": 1.25,
+            "description": "AT&T Inc. provides telecommunications and technology services worldwide. It operates through two segments, Communications and Latin America. The Communications segment offers wireless voice and data c..."
         },
-        "updated_at": "2026-06-24T15:35:40.837008"
+        "updated_at": "2026-06-25T15:39:56.291739"
+    },
+    "AI": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Software - Infrastructure",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 0.08,
+            "description": "C3.ai, Inc. operates as an enterprise artificial intelligence application software company in North America, Europe, the Middle East, Africa, the Asia Pacific, and internationally. It offers C3 agenti..."
+        },
+        "updated_at": "2026-06-25T15:40:29.071781"
+    },
+    "TTWO": {
+        "data": {
+            "sector": "Communication Services",
+            "industry": "Electronic Gaming & Multimedia",
+            "pe": 0,
+            "peg": 3.29,
+            "debt_to_equity": 0.84,
+            "description": "Take-Two Interactive Software, Inc. develops, publishes, and markets interactive entertainment solutions for consumers worldwide. The company develops and publishes action/adventure products under the..."
+        },
+        "updated_at": "2026-06-25T15:41:03.190032"
+    },
+    "AGI": {
+        "data": {
+            "sector": "Basic Materials",
+            "industry": "Gold",
+            "pe": 12.33,
+            "peg": 0,
+            "debt_to_equity": 0.05,
+            "description": "Alamos Gold Inc. operates as a gold producer in Canada and Mexico. It primarily explores for gold deposits. The company was founded in 2003 and is based in Toronto, Canada...."
+        },
+        "updated_at": "2026-06-25T15:41:32.952041"
+    },
+    "APA": {
+        "data": {
+            "sector": "Energy",
+            "industry": "Oil & Gas E&P",
+            "pe": 7.8,
+            "peg": 0.56,
+            "debt_to_equity": 0.61,
+            "description": "APA Corporation, an independent energy company, explores for, develops, and produces natural gas, crude oil, and natural gas liquids. The company has oil and gas operations in the United States, Egypt..."
+        },
+        "updated_at": "2026-06-25T15:41:59.475986"
+    },
+    "PLTR": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Software - Infrastructure",
+            "pe": 120.85,
+            "peg": 1.63,
+            "debt_to_equity": 0.02,
+            "description": "Palantir Technologies Inc. builds and deploys software platforms for the intelligence community to assist in counterterrorism investigations and operations in the United States, the United Kingdom, an..."
+        },
+        "updated_at": "2026-06-25T15:42:24.441818"
     }
 }
