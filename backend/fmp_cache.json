@@ -1,37 +1,4 @@
 {
-    "CRM": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Application",
-            "pe": 19.1,
-            "peg": 0.75,
-            "debt_to_equity": 1.24,
-            "description": "Salesforce, Inc. provides customer relationship management technology services that connect companies and customers together in the United States, Europe, and the Asia Pacific. The company offers Agen..."
-        },
-        "updated_at": "2026-07-02T15:11:15.141779"
-    },
-    "MSFT": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 23.11,
-            "peg": 1.15,
-            "debt_to_equity": 0.3,
-            "description": "Microsoft Corporation develops and supports software, services, devices, and solutions worldwide. The Productivity and Business Processes segment offers Microsoft 365 commercial, enterprise mobility +..."
-        },
-        "updated_at": "2026-07-02T15:11:51.484898"
-    },
-    "NET": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 0,
-            "peg": 2.38,
-            "debt_to_equity": 2.31,
-            "description": "Cloudflare, Inc. operates as a cloud services provider that delivers a range of services to businesses worldwide. The company provides a cloud-based security solution to secure a range of combination ..."
-        },
-        "updated_at": "2026-07-02T15:12:17.383329"
-    },
     "SNOW": {
         "data": {
             "sector": "Technology",
@@ -41,50 +8,83 @@
             "debt_to_equity": 1.43,
             "description": "Snowflake Inc. provides a cloud-based data platform for various organizations in the United States and internationally. The company's platform includes artificial intelligence (AI) Data Cloud, which e..."
         },
-        "updated_at": "2026-07-02T15:13:05.476987"
+        "updated_at": "2026-07-03T15:06:54.889474"
     },
-    "DTE": {
+    "ES": {
         "data": {
             "sector": "Utilities",
             "industry": "Utilities - Regulated Electric",
-            "pe": 25.07,
-            "peg": 2.11,
-            "debt_to_equity": 2.19,
-            "description": "DTE Energy Company engages in energy-related businesses and services. The company operates through four segments: Electric, Gas, DTE Vantage, and Energy Trading.The company's Electric segment generate..."
+            "pe": 15.94,
+            "peg": 3.05,
+            "debt_to_equity": 1.82,
+            "description": "Eversource Energy, a public utility holding company, engages in the energy delivery business. The company operates through Electric Distribution, Electric Transmission, Natural Gas Distribution, and W..."
         },
-        "updated_at": "2026-07-02T15:13:56.097282"
+        "updated_at": "2026-07-03T15:07:33.686576"
     },
-    "TSM": {
+    "SPY": {
+        "data": {
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 26.67,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "The trust seeks to achieve its investment objective by holding a portfolio of the common stocks that are included in the index (the \u201cPortfolio\u201d), with the weight of each stock in the Portfolio substan..."
+        },
+        "updated_at": "2026-07-03T15:07:55.312140"
+    },
+    "GTLB": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Software - Infrastructure",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "GitLab Inc., together with its subsidiaries, develops software for the software development lifecycle in the United States, Europe, and the Asia Pacific. The company provides GitLab, an intelligent or..."
+        },
+        "updated_at": "2026-07-03T15:08:42.907874"
+    },
+    "MRVL": {
         "data": {
             "sector": "Technology",
             "industry": "Semiconductors",
-            "pe": 38.62,
-            "peg": 1.4,
-            "debt_to_equity": 0.18,
-            "description": "Taiwan Semiconductor Manufacturing Company Limited, together with its subsidiaries, manufactures, packages, tests, and sells integrated circuits and other semiconductor devices in Taiwan, China, Europ..."
+            "pe": 84.0,
+            "peg": 1.68,
+            "debt_to_equity": 0.29,
+            "description": "Marvell Technology, Inc., together with its subsidiaries, provides data infrastructure semiconductor solutions and spanning the data center core to network edge in the United States, Argentina, China,..."
         },
-        "updated_at": "2026-07-02T15:14:21.145965"
+        "updated_at": "2026-07-03T15:09:11.201086"
     },
-    "META": {
+    "AM": {
         "data": {
-            "sector": "Communication Services",
-            "industry": "Internet Content & Information",
-            "pe": 21.39,
-            "peg": 0.81,
-            "debt_to_equity": 0.36,
-            "description": "Meta Platforms, Inc. engages in the development of products that enable people to connect and share with friends and family through mobile devices, personal computers, virtual reality (VR) headsets, a..."
+            "sector": "Energy",
+            "industry": "Oil & Gas Midstream",
+            "pe": 26.12,
+            "peg": 0,
+            "debt_to_equity": 1.92,
+            "description": "Antero Midstream Corporation owns, operates, and develops midstream energy assets in the Appalachian Basin. It operates in two segments, Gathering and Processing, and Water Handling. The gathering and..."
         },
-        "updated_at": "2026-07-02T15:15:09.373967"
+        "updated_at": "2026-07-03T15:09:38.474398"
     },
-    "T": {
+    "LINK": {
         "data": {
-            "sector": "Communication Services",
-            "industry": "Telecom Services",
-            "pe": 6.91,
-            "peg": 1.45,
-            "debt_to_equity": 1.25,
-            "description": "AT&T Inc. provides telecommunications and technology services worldwide. It operates through two segments, Communications and Latin America. The Communications segment offers wireless voice and data c..."
+            "sector": "Technology",
+            "industry": "Electronic Components",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 0.08,
+            "description": "Interlink Electronics, Inc. provides sensors and printed electronics for use in human-machine interface (HMI) devices and internet-of-things solutions in the United States, Asia, the Middle East, Euro..."
         },
-        "updated_at": "2026-07-02T15:15:54.483567"
+        "updated_at": "2026-07-03T15:10:02.931855"
+    },
+    "AAPL": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Consumer Electronics",
+            "pe": 37.32,
+            "peg": 2.34,
+            "debt_to_equity": 0.8,
+            "description": "Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide. The company offers iPhone, a line of smartphones; Mac, a line of personal ..."
+        },
+        "updated_at": "2026-07-03T15:10:22.916815"
     }
 }
