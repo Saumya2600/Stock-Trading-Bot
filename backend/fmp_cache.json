@@ -1,90 +1,90 @@
 {
-    "SNOW": {
+    "USO": {
         "data": {
-            "sector": "Technology",
-            "industry": "Software - Application",
-            "pe": 0,
-            "peg": 6.72,
-            "debt_to_equity": 1.43,
-            "description": "Snowflake Inc. provides a cloud-based data platform for various organizations in the United States and internationally. The company's platform includes artificial intelligence (AI) Data Cloud, which e..."
-        },
-        "updated_at": "2026-07-07T15:43:25.774646"
-    },
-    "JPM": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Banks - Diversified",
-            "pe": 16.22,
-            "peg": 1.77,
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 34.68,
+            "peg": 0,
             "debt_to_equity": 0,
-            "description": "JPMorgan Chase & Co. operates as a bank and financial holding company in the United States, rest of North America, Europe, the Middle East, Africa, the Asia Pacific, Latin America, and the Caribbean. ..."
+            "description": "USO seeks to achieve its investment objective by investing primarily in futures contracts for light, sweet crude oil, other types of crude oil, diesel-heating oil, gasoline, natural gas, and other pet..."
         },
-        "updated_at": "2026-07-07T15:43:58.238365"
+        "updated_at": "2026-07-08T15:17:27.160781"
     },
-    "MU": {
+    "HBM": {
         "data": {
-            "sector": "Technology",
-            "industry": "Semiconductors",
-            "pe": 20.56,
-            "peg": 0.14,
-            "debt_to_equity": 0.06,
-            "description": "Micron Technology, Inc. designs, develops, manufactures, and sells memory and storage products in the United States, Taiwan, Japan, Mainland China, Hong Kong, Europe, and internationally. It operates ..."
-        },
-        "updated_at": "2026-07-07T15:44:21.650384"
-    },
-    "SLS": {
-        "data": {
-            "sector": "Healthcare",
-            "industry": "Biotechnology",
-            "pe": 0,
+            "sector": "Basic Materials",
+            "industry": "Copper",
+            "pe": 11.87,
             "peg": 0,
-            "debt_to_equity": 0.01,
-            "description": "SELLAS Life Sciences Group, Inc., a late-stage clinical biopharmaceutical company, focuses on the development of novel therapeutics for various cancer indications in the United States. The company's l..."
+            "debt_to_equity": 0.29,
+            "description": "Hudbay Minerals Inc., a diversified mining company, focuses on the exploration, development, operation, and optimization of properties in North and South America. It primarily explores for copper conc..."
         },
-        "updated_at": "2026-07-07T15:44:43.914557"
+        "updated_at": "2026-07-08T15:17:51.077360"
     },
-    "PEP": {
+    "ET": {
         "data": {
-            "sector": "Consumer Defensive",
-            "industry": "Beverages - Non-Alcoholic",
-            "pe": 23.02,
-            "peg": 1.55,
-            "debt_to_equity": 2.45,
-            "description": "PepsiCo, Inc. engages in the manufacture, marketing, distribution, and sale of various beverages and convenient foods worldwide. The company operates through six segments: PepsiCo Foods North America;..."
+            "sector": "Energy",
+            "industry": "Oil & Gas Midstream",
+            "pe": 16.63,
+            "peg": 0.58,
+            "debt_to_equity": 1.42,
+            "description": "Energy Transfer LP, together with its subsidiaries, provides energy-related services in the United States. It operates through Intrastate Transportation and Storage; Interstate Transportation and Stor..."
         },
-        "updated_at": "2026-07-07T15:45:11.874884"
+        "updated_at": "2026-07-08T15:18:36.713398"
     },
-    "AI": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 0,
-            "peg": 0,
-            "debt_to_equity": 0.09,
-            "description": "C3.ai, Inc. operates as an enterprise artificial intelligence application software company in North America, Europe, the Middle East, Africa, the Asia Pacific, and internationally. It offers C3 agenti..."
-        },
-        "updated_at": "2026-07-07T15:45:41.442027"
-    },
-    "CRM": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Application",
-            "pe": 19.84,
-            "peg": 0.79,
-            "debt_to_equity": 1.24,
-            "description": "Salesforce, Inc. provides customer relationship management technology services that connect companies and customers together in the United States, Europe, and the Asia Pacific. The company offers Agen..."
-        },
-        "updated_at": "2026-07-07T15:46:03.173002"
-    },
-    "AMZN": {
+    "LVS": {
         "data": {
             "sector": "Consumer Cyclical",
-            "industry": "Internet Retail",
-            "pe": 31.47,
-            "peg": 1.83,
-            "debt_to_equity": 0.53,
-            "description": "Amazon.com, Inc. engages in the retail sale of consumer products, advertising, and subscriptions service through online and physical stores in North America and internationally. The company operates t..."
+            "industry": "Resorts & Casinos",
+            "pe": 17.07,
+            "peg": 0.95,
+            "debt_to_equity": 9.81,
+            "description": "Las Vegas Sands Corp., together with its subsidiaries, owns, develops, and operates integrated resorts in Macao and Singapore. It owns and operates The Venetian Macao Resort Hotel, The Londoner Macao,..."
         },
-        "updated_at": "2026-07-07T15:46:21.627542"
+        "updated_at": "2026-07-08T15:19:28.448693"
+    },
+    "DDOG": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Software - Application",
+            "pe": 655.83,
+            "peg": 1.59,
+            "debt_to_equity": 0.32,
+            "description": "Datadog, Inc. operates an observability and security platform for cloud applications in the United States and internationally. The company's products comprise infrastructure and application performanc..."
+        },
+        "updated_at": "2026-07-08T15:19:56.208270"
+    },
+    "XOM": {
+        "data": {
+            "sector": "Energy",
+            "industry": "Oil & Gas Integrated",
+            "pe": 24.12,
+            "peg": 1.13,
+            "debt_to_equity": 0.18,
+            "description": "ExxonMobil Holdings Corporation engages in the exploration and production of crude oil and natural gas in the United States, Canada, and internationally. The company operates through Upstream, Energy ..."
+        },
+        "updated_at": "2026-07-08T15:20:22.411604"
+    },
+    "AAPL": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Consumer Electronics",
+            "pe": 37.6,
+            "peg": 2.53,
+            "debt_to_equity": 0.8,
+            "description": "Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide. The company offers iPhone, a line of smartphones; Mac, a line of personal ..."
+        },
+        "updated_at": "2026-07-08T15:20:46.015624"
+    },
+    "ASTS": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Communication Equipment",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 1.12,
+            "description": "AST SpaceMobile, Inc., together with its subsidiaries, designs and develops the constellation of BlueBird satellites in the United States. The company provides a cellular broadband network in space to..."
+        },
+        "updated_at": "2026-07-08T15:21:09.941309"
     }
 }
