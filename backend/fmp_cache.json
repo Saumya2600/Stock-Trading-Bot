@@ -1,90 +1,90 @@
 {
-    "HAL": {
+    "MAR": {
         "data": {
-            "sector": "Energy",
-            "industry": "Oil & Gas Equipment & Services",
-            "pe": 19.57,
-            "peg": 0.9,
-            "debt_to_equity": 0.75,
-            "description": "Halliburton Company provides products and services to the energy industry worldwide. It operates in two segments, Completion and Production, and Drilling and Evaluation. The Completion and Production ..."
-        },
-        "updated_at": "2026-07-13T15:43:06.533052"
-    },
-    "UAL": {
-        "data": {
-            "sector": "Industrials",
-            "industry": "Airlines",
-            "pe": 11.01,
-            "peg": 6.5,
-            "debt_to_equity": 1.95,
-            "description": "United Airlines Holdings, Inc., through its subsidiaries, provides air transportation services in the United States, Canada, Atlantic, the Pacific, and Latin America. It transports people and cargo th..."
-        },
-        "updated_at": "2026-07-13T15:43:30.973946"
-    },
-    "GOOGL": {
-        "data": {
-            "sector": "Communication Services",
-            "industry": "Internet Content & Information",
-            "pe": 27.1,
-            "peg": 1.41,
-            "debt_to_equity": 0.2,
-            "description": "Alphabet Inc. offers various products and platforms in the United States, Europe, the Middle East, Africa, the Asia-Pacific, Canada, and Latin America. It operates through Google Services, Google Clou..."
-        },
-        "updated_at": "2026-07-13T15:43:55.417487"
-    },
-    "AAL": {
-        "data": {
-            "sector": "Industrials",
-            "industry": "Airlines",
-            "pe": 53.21,
-            "peg": 0.65,
+            "sector": "Consumer Cyclical",
+            "industry": "Lodging",
+            "pe": 37.72,
+            "peg": 2.23,
             "debt_to_equity": 0,
-            "description": "American Airlines Group Inc., through its subsidiaries, operates as a network air carrier in the United States, Latin America, Atlantic, and Pacific. The company provides scheduled air transportation ..."
+            "description": "Marriott International, Inc. engages in the operation, franchising, and licensing of hotel, residential, timeshare, and other lodging properties in the United States, Canada, Europe, the Middle East, ..."
         },
-        "updated_at": "2026-07-13T15:44:16.866745"
+        "updated_at": "2026-07-14T14:48:34.665829"
     },
-    "ET": {
+    "AAPL": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Consumer Electronics",
+            "pe": 38.13,
+            "peg": 2.55,
+            "debt_to_equity": 0.8,
+            "description": "Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide. The company offers iPhone, a line of smartphones; Mac, a line of personal ..."
+        },
+        "updated_at": "2026-07-14T14:48:59.808107"
+    },
+    "WMT": {
+        "data": {
+            "sector": "Consumer Defensive",
+            "industry": "Discount Stores",
+            "pe": 40.59,
+            "peg": 4.33,
+            "debt_to_equity": 0.75,
+            "description": "Walmart Inc. engages in the operation of retail and wholesale stores and clubs, ecommerce websites, and mobile applications worldwide. The company operates through three segments: Walmart U.S., Walmar..."
+        },
+        "updated_at": "2026-07-14T14:49:25.273311"
+    },
+    "JNJ": {
+        "data": {
+            "sector": "Healthcare",
+            "industry": "Drug Manufacturers - General",
+            "pe": 29.28,
+            "peg": 4.94,
+            "debt_to_equity": 0.68,
+            "description": "Johnson & Johnson, together with its subsidiaries, engages in the research and development, manufacture, and sale of a range of products in the healthcare field worldwide. It operates in two segments,..."
+        },
+        "updated_at": "2026-07-14T14:49:55.873981"
+    },
+    "OKLO": {
+        "data": {
+            "sector": "Utilities",
+            "industry": "Utilities - Independent Power Producers",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 0.0,
+            "description": "Oklo Inc. develops fission power plants to provide energy at scale to customers in the United States. The company offers Aurora Powerhouse, which is designed to produce between 15 and up to 75 megawat..."
+        },
+        "updated_at": "2026-07-14T14:50:19.297587"
+    },
+    "SOXL": {
+        "data": {
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 29.58,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "The fund invests at least 80% of its net assets in financial instruments, such as swap agreements, securities of the index, and ETFs that track the index, that, in combination, provide 3X daily levera..."
+        },
+        "updated_at": "2026-07-14T14:50:42.028874"
+    },
+    "CC": {
+        "data": {
+            "sector": "Basic Materials",
+            "industry": "Specialty Chemicals",
+            "pe": 0,
+            "peg": 1.6,
+            "debt_to_equity": 20.34,
+            "description": "The Chemours Company provides performance chemicals in North America, the Asia Pacific, Europe, the Middle East, Africa, and Latin America. The company operates through three segments: Thermal & Speci..."
+        },
+        "updated_at": "2026-07-14T14:51:06.724367"
+    },
+    "AM": {
         "data": {
             "sector": "Energy",
             "industry": "Oil & Gas Midstream",
-            "pe": 16.7,
-            "peg": 0.59,
-            "debt_to_equity": 1.42,
-            "description": "Energy Transfer LP, together with its subsidiaries, provides energy-related services in the United States. It operates through Intrastate Transportation and Storage; Interstate Transportation and Stor..."
+            "pe": 26.15,
+            "peg": 0,
+            "debt_to_equity": 1.92,
+            "description": "Antero Midstream Corporation owns, operates, and develops midstream energy assets in the Appalachian Basin. It operates in two segments, Gathering and Processing, and Water Handling. The gathering and..."
         },
-        "updated_at": "2026-07-13T15:44:46.832985"
-    },
-    "ORCL": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 23.26,
-            "peg": 0.79,
-            "debt_to_equity": 3.89,
-            "description": "Oracle Corporation offers products and services that build, run and support enterprise information technology frameworks worldwide. Its Oracle cloud software as a service offering includes various clo..."
-        },
-        "updated_at": "2026-07-13T15:45:22.168835"
-    },
-    "MRVL": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Semiconductors",
-            "pe": 76.67,
-            "peg": 1.33,
-            "debt_to_equity": 0.29,
-            "description": "Marvell Technology, Inc., together with its subsidiaries, provides data infrastructure semiconductor solutions and spanning the data center core to network edge in the United States, Argentina, China,..."
-        },
-        "updated_at": "2026-07-13T15:45:49.073690"
-    },
-    "MS": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Capital Markets",
-            "pe": 19.9,
-            "peg": 2.64,
-            "debt_to_equity": 5.02,
-            "description": "Morgan Stanley, a financial holding company, provides various financial products and services to corporations, governments, financial institutions, and individuals in the Americas, Asia, Europe, the M..."
-        },
-        "updated_at": "2026-07-13T15:46:19.706079"
+        "updated_at": "2026-07-14T14:51:54.619899"
     }
 }
