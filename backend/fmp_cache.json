@@ -1,90 +1,90 @@
 {
-    "SPY": {
+    "PEP": {
         "data": {
-            "sector": "Unknown",
-            "industry": "Unknown",
-            "pe": 27.12,
-            "peg": 0,
-            "debt_to_equity": 0,
-            "description": "The trust seeks to achieve its investment objective by holding a portfolio of the common stocks that are included in the index (the \u201cPortfolio\u201d), with the weight of each stock in the Portfolio substan..."
+            "sector": "Consumer Defensive",
+            "industry": "Beverages - Non-Alcoholic",
+            "pe": 18.25,
+            "peg": 1.46,
+            "debt_to_equity": 2.39,
+            "description": "PepsiCo, Inc. engages in the manufacture, marketing, distribution, and sale of various beverages and convenient foods worldwide. The company operates through six segments: PepsiCo Foods North America;..."
         },
-        "updated_at": "2026-07-16T14:59:09.922157"
+        "updated_at": "2026-07-17T14:31:22.001739"
     },
-    "WEN": {
-        "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Restaurants",
-            "pe": 9.81,
-            "peg": 1.28,
-            "debt_to_equity": 35.63,
-            "description": "The Wendy's Company, together with its subsidiaries, engages in the operation, development, and franchising of a system of quick-service restaurants in the United States and internationally. The compa..."
-        },
-        "updated_at": "2026-07-16T15:00:02.715033"
-    },
-    "WDC": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Computer Hardware",
-            "pe": 29.05,
-            "peg": 0.5,
-            "debt_to_equity": 0.18,
-            "description": "Western Digital Corporation develops, manufactures, and sells data storage devices and solutions based on hard disk drive (HDD) technology in the United States, Asia, Europe, the Middle East, and Afri..."
-        },
-        "updated_at": "2026-07-16T15:00:46.631079"
-    },
-    "WYNN": {
-        "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Resorts & Casinos",
-            "pe": 28.26,
-            "peg": 1.61,
-            "debt_to_equity": 0,
-            "description": "Wynn Resorts, Limited designs, develops, and operates integrated resorts. It operates in four segments: Wynn Palace, Wynn Macau, Las Vegas Operations, and Encore Boston Harbor. The Wynn Palace segment..."
-        },
-        "updated_at": "2026-07-16T15:01:19.465409"
-    },
-    "AM": {
-        "data": {
-            "sector": "Energy",
-            "industry": "Oil & Gas Midstream",
-            "pe": 26.4,
-            "peg": 0,
-            "debt_to_equity": 1.92,
-            "description": "Antero Midstream Corporation owns, operates, and develops midstream energy assets in the Appalachian Basin. It operates in two segments, Gathering and Processing, and Water Handling. The gathering and..."
-        },
-        "updated_at": "2026-07-16T15:01:57.023430"
-    },
-    "NCLH": {
-        "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Travel Services",
-            "pe": 15.79,
-            "peg": 0.96,
-            "debt_to_equity": 6.61,
-            "description": "Norwegian Cruise Line Holdings Ltd., together with its subsidiaries, operates as a cruise company in North America, Europe, the Asia-Pacific, and internationally. It offers itineraries to destinations..."
-        },
-        "updated_at": "2026-07-16T15:02:29.869496"
-    },
-    "MS": {
+    "BX": {
         "data": {
             "sector": "Financial Services",
-            "industry": "Capital Markets",
-            "pe": 17.86,
-            "peg": 2.7,
-            "debt_to_equity": 5.02,
-            "description": "Morgan Stanley, a financial holding company, provides various financial products and services to corporations, governments, financial institutions, and individuals in the Americas, Asia, Europe, the M..."
+            "industry": "Asset Management",
+            "pe": 33.04,
+            "peg": 1.46,
+            "debt_to_equity": 0.72,
+            "description": "Blackstone Inc. is an alternative asset management firm specializing in private equity, venture capital, real estate, hedge fund solutions, credit, secondary funds of funds, public debt and equity and..."
         },
-        "updated_at": "2026-07-16T15:02:52.959668"
+        "updated_at": "2026-07-17T14:31:48.159452"
     },
-    "MRVL": {
+    "PYPL": {
+        "data": {
+            "sector": "Financial Services",
+            "industry": "Credit Services",
+            "pe": 10.53,
+            "peg": 0.85,
+            "debt_to_equity": 0.58,
+            "description": "PayPal Holdings, Inc. operates a technology platform that enables digital payments for merchants and consumers worldwide. The company operates a two-sided network at scale that connects merchants and ..."
+        },
+        "updated_at": "2026-07-17T14:32:12.820168"
+    },
+    "APLD": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Information Technology Services",
+            "pe": 0,
+            "peg": 1.83,
+            "debt_to_equity": 1.1,
+            "description": "Applied Digital Corporation designs, develops, and operates digital infrastructure solutions to high-performance computing (HPC) and artificial intelligence industries in North America. It operates th..."
+        },
+        "updated_at": "2026-07-17T14:32:37.576825"
+    },
+    "INTC": {
         "data": {
             "sector": "Technology",
             "industry": "Semiconductors",
-            "pe": 66.37,
-            "peg": 1.26,
-            "debt_to_equity": 0.29,
-            "description": "Marvell Technology, Inc., together with its subsidiaries, provides data infrastructure semiconductor solutions and spanning the data center core to network edge in the United States, Argentina, China,..."
+            "pe": 0,
+            "peg": 1.36,
+            "debt_to_equity": 0.36,
+            "description": "Intel Corporation designs, develops, manufactures, markets, sells, and services computing and related end products and services in the United States, Ireland, Israel, and internationally. It operates ..."
         },
-        "updated_at": "2026-07-16T15:03:18.346259"
+        "updated_at": "2026-07-17T14:33:11.650039"
+    },
+    "DTE": {
+        "data": {
+            "sector": "Utilities",
+            "industry": "Utilities - Regulated Electric",
+            "pe": 24.69,
+            "peg": 2.07,
+            "debt_to_equity": 2.19,
+            "description": "DTE Energy Company engages in energy-related businesses and services. The company operates through four segments: Electric, Gas, DTE Vantage, and Energy Trading.The company's Electric segment generate..."
+        },
+        "updated_at": "2026-07-17T14:33:36.641996"
+    },
+    "U": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Software - Application",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 0.72,
+            "description": "Unity Software Inc. operates a platform to develop, deploy, and grow games and interactive experiences for mobile phones, PCs, consoles, and extended reality devices in the United States, China, Hong ..."
+        },
+        "updated_at": "2026-07-17T14:34:26.431369"
+    },
+    "LINK": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Electronic Components",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 0.08,
+            "description": "Interlink Electronics, Inc. provides sensors and printed electronics for use in human-machine interface (HMI) devices and internet-of-things solutions in the United States, Asia, the Middle East, Euro..."
+        },
+        "updated_at": "2026-07-17T14:34:52.442982"
     }
 }
