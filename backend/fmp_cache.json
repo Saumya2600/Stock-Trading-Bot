@@ -1,90 +1,90 @@
 {
-    "SPY": {
+    "HOOD": {
         "data": {
-            "sector": "Unknown",
-            "industry": "Unknown",
-            "pe": 26.81,
-            "peg": 0,
-            "debt_to_equity": 0,
-            "description": "The trust seeks to achieve its investment objective by holding a portfolio of the common stocks that are included in the index (the \u201cPortfolio\u201d), with the weight of each stock in the Portfolio substan..."
+            "sector": "Financial Services",
+            "industry": "Capital Markets",
+            "pe": 51.64,
+            "peg": 2.71,
+            "debt_to_equity": 1.4,
+            "description": "Robinhood Markets, Inc. operates financial services platform in the United States. The company's platform allows users to invest in stocks, exchange-traded funds (ETFs), and American depository receip..."
         },
-        "updated_at": "2026-07-20T15:10:01.349001"
+        "updated_at": "2026-07-21T15:04:36.333770"
     },
-    "ORCL": {
+    "SLB": {
         "data": {
-            "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 20.86,
-            "peg": 0.71,
-            "debt_to_equity": 3.89,
-            "description": "Oracle Corporation offers products and services that build, run and support enterprise information technology frameworks worldwide. Its Oracle cloud software as a service offering includes various clo..."
+            "sector": "Energy",
+            "industry": "Oil & Gas Equipment & Services",
+            "pe": 20.26,
+            "peg": 1.62,
+            "debt_to_equity": 0.43,
+            "description": "SLB N.V. engages in the provision of technology for the energy industry worldwide. The company operates through four divisions: Digital & Integration, Reservoir Performance, Well Construction, and Pro..."
         },
-        "updated_at": "2026-07-20T15:10:29.387767"
+        "updated_at": "2026-07-21T15:05:07.156374"
     },
     "OXY": {
         "data": {
             "sector": "Energy",
             "industry": "Oil & Gas E&P",
-            "pe": 74.26,
+            "pe": 75.82,
             "peg": 1.16,
             "debt_to_equity": 0.42,
             "description": "Occidental Petroleum Corporation, together with its subsidiaries, engages in the acquisition, exploration, and development of oil and gas properties in the United States and internationally. It operat..."
         },
-        "updated_at": "2026-07-20T15:10:58.453345"
+        "updated_at": "2026-07-21T15:05:31.006485"
     },
-    "PEP": {
-        "data": {
-            "sector": "Consumer Defensive",
-            "industry": "Beverages - Non-Alcoholic",
-            "pe": 17.85,
-            "peg": 1.48,
-            "debt_to_equity": 2.39,
-            "description": "PepsiCo, Inc. engages in the manufacture, marketing, distribution, and sale of various beverages and convenient foods worldwide. The company operates through six segments: PepsiCo Foods North America;..."
-        },
-        "updated_at": "2026-07-20T15:11:20.512708"
-    },
-    "DIS": {
-        "data": {
-            "sector": "Communication Services",
-            "industry": "Entertainment",
-            "pe": 15.49,
-            "peg": 2.27,
-            "debt_to_equity": 0.41,
-            "description": "The Walt Disney Company operates as an entertainment company in Americas, Europe, and the Asia Pacific. It operates in three segments: Entertainment, Sports, and Experiences. The company produces and ..."
-        },
-        "updated_at": "2026-07-20T15:11:48.525482"
-    },
-    "NVDA": {
+    "AAPL": {
         "data": {
             "sector": "Technology",
-            "industry": "Semiconductors",
-            "pe": 31.55,
-            "peg": 0.56,
-            "debt_to_equity": 0.07,
-            "description": "NVIDIA Corporation operates as a data center scale AI infrastructure company in the United States, Taiwan, China, Hong Kong, Europe, and internationally. It operates through Compute & Networking, and ..."
+            "industry": "Consumer Electronics",
+            "pe": 39.5,
+            "peg": 2.69,
+            "debt_to_equity": 0.8,
+            "description": "Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide. The company offers iPhone, a line of smartphones; Mac, a line of personal ..."
         },
-        "updated_at": "2026-07-20T15:12:16.296621"
+        "updated_at": "2026-07-21T15:05:53.429158"
     },
-    "GOOG": {
+    "BA": {
         "data": {
-            "sector": "Communication Services",
-            "industry": "Internet Content & Information",
-            "pe": 27.19,
-            "peg": 1.36,
-            "debt_to_equity": 0.2,
-            "description": "Alphabet Inc. offers various products and platforms in the United States, Europe, the Middle East, Africa, the Asia-Pacific, Canada, and Latin America. It operates through Google Services, Google Clou..."
+            "sector": "Industrials",
+            "industry": "Aerospace & Defense",
+            "pe": 82.87,
+            "peg": 23.19,
+            "debt_to_equity": 8.29,
+            "description": "The Boeing Company, together with its subsidiaries, designs, develops, manufactures, sells, services, and supports commercial jetliners, military aircraft, satellites, missile defense, human space fli..."
         },
-        "updated_at": "2026-07-20T15:12:45.071952"
+        "updated_at": "2026-07-21T15:06:35.394560"
     },
-    "SCHW": {
+    "AXP": {
         "data": {
             "sector": "Financial Services",
-            "industry": "Capital Markets",
-            "pe": 20.09,
-            "peg": 1.21,
-            "debt_to_equity": 1.21,
-            "description": "The Charles Schwab Corporation, together with its subsidiaries, operates as a savings and loan holding company that provides wealth management, securities brokerage, banking, asset management, custody..."
+            "industry": "Credit Services",
+            "pe": 21.87,
+            "peg": 1.7,
+            "debt_to_equity": 1.78,
+            "description": "American Express Company, together with its subsidiaries, operates as an integrated payments company in the United States, Europe, the Middle East and Africa, the Asia Pacific, Australia, New Zealand,..."
         },
-        "updated_at": "2026-07-20T15:13:17.296398"
+        "updated_at": "2026-07-21T15:07:04.381021"
+    },
+    "YOU": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Software - Application",
+            "pe": 45.14,
+            "peg": 0,
+            "debt_to_equity": 0.52,
+            "description": "Clear Secure, Inc. operates a secure identity platform under the CLEAR brand name primarily in the United States. It provides secure identity platform, a multi-layered infrastructure consisting of fro..."
+        },
+        "updated_at": "2026-07-21T15:07:32.835204"
+    },
+    "IT": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Information Technology Services",
+            "pe": 13.6,
+            "peg": 0.57,
+            "debt_to_equity": 52.93,
+            "description": "Gartner, Inc. provides business and technology insights to support decision-making and performance on an organization's mission-critical priorities in the United States, Canada, Europe, the Middle Eas..."
+        },
+        "updated_at": "2026-07-21T15:08:03.408691"
     }
 }
