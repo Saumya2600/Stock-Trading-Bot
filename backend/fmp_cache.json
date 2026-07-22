@@ -1,90 +1,90 @@
 {
-    "HOOD": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Capital Markets",
-            "pe": 51.64,
-            "peg": 2.71,
-            "debt_to_equity": 1.4,
-            "description": "Robinhood Markets, Inc. operates financial services platform in the United States. The company's platform allows users to invest in stocks, exchange-traded funds (ETFs), and American depository receip..."
-        },
-        "updated_at": "2026-07-21T15:04:36.333770"
-    },
-    "SLB": {
-        "data": {
-            "sector": "Energy",
-            "industry": "Oil & Gas Equipment & Services",
-            "pe": 20.26,
-            "peg": 1.62,
-            "debt_to_equity": 0.43,
-            "description": "SLB N.V. engages in the provision of technology for the energy industry worldwide. The company operates through four divisions: Digital & Integration, Reservoir Performance, Well Construction, and Pro..."
-        },
-        "updated_at": "2026-07-21T15:05:07.156374"
-    },
-    "OXY": {
-        "data": {
-            "sector": "Energy",
-            "industry": "Oil & Gas E&P",
-            "pe": 75.82,
-            "peg": 1.16,
-            "debt_to_equity": 0.42,
-            "description": "Occidental Petroleum Corporation, together with its subsidiaries, engages in the acquisition, exploration, and development of oil and gas properties in the United States and internationally. It operat..."
-        },
-        "updated_at": "2026-07-21T15:05:31.006485"
-    },
-    "AAPL": {
+    "CSCO": {
         "data": {
             "sector": "Technology",
-            "industry": "Consumer Electronics",
-            "pe": 39.5,
-            "peg": 2.69,
-            "debt_to_equity": 0.8,
-            "description": "Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide. The company offers iPhone, a line of smartphones; Mac, a line of personal ..."
+            "industry": "Communication Equipment",
+            "pe": 37.62,
+            "peg": 1.56,
+            "debt_to_equity": 0.68,
+            "description": "Cisco Systems, Inc. designs, develops, and sells technologies that help to power, secure, and draw insights from the internet in the Americas, Europe, the Middle East, Africa, the Asia Pacific, Japan,..."
         },
-        "updated_at": "2026-07-21T15:05:53.429158"
+        "updated_at": "2026-07-22T15:04:39.191026"
     },
-    "BA": {
+    "WMT": {
         "data": {
-            "sector": "Industrials",
-            "industry": "Aerospace & Defense",
-            "pe": 82.87,
-            "peg": 23.19,
-            "debt_to_equity": 8.29,
-            "description": "The Boeing Company, together with its subsidiaries, designs, develops, manufactures, sells, services, and supports commercial jetliners, military aircraft, satellites, missile defense, human space fli..."
+            "sector": "Consumer Defensive",
+            "industry": "Discount Stores",
+            "pe": 38.48,
+            "peg": 4.2,
+            "debt_to_equity": 0.75,
+            "description": "Walmart Inc. engages in the operation of retail and wholesale stores and clubs, ecommerce websites, and mobile applications worldwide. The company operates through three segments: Walmart U.S., Walmar..."
         },
-        "updated_at": "2026-07-21T15:06:35.394560"
+        "updated_at": "2026-07-22T15:05:10.848340"
     },
-    "AXP": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Credit Services",
-            "pe": 21.87,
-            "peg": 1.7,
-            "debt_to_equity": 1.78,
-            "description": "American Express Company, together with its subsidiaries, operates as an integrated payments company in the United States, Europe, the Middle East and Africa, the Asia Pacific, Australia, New Zealand,..."
-        },
-        "updated_at": "2026-07-21T15:07:04.381021"
-    },
-    "YOU": {
+    "MSFT": {
         "data": {
             "sector": "Technology",
-            "industry": "Software - Application",
-            "pe": 45.14,
-            "peg": 0,
-            "debt_to_equity": 0.52,
-            "description": "Clear Secure, Inc. operates a secure identity platform under the CLEAR brand name primarily in the United States. It provides secure identity platform, a multi-layered infrastructure consisting of fro..."
+            "industry": "Software - Infrastructure",
+            "pe": 23.21,
+            "peg": 1.23,
+            "debt_to_equity": 0.3,
+            "description": "Microsoft Corporation develops and supports software, services, devices, and solutions worldwide. The Productivity and Business Processes segment offers Microsoft 365 commercial, enterprise mobility +..."
         },
-        "updated_at": "2026-07-21T15:07:32.835204"
+        "updated_at": "2026-07-22T15:05:56.386504"
     },
-    "IT": {
+    "IBM": {
         "data": {
             "sector": "Technology",
             "industry": "Information Technology Services",
-            "pe": 13.6,
-            "peg": 0.57,
-            "debt_to_equity": 52.93,
-            "description": "Gartner, Inc. provides business and technology insights to support decision-making and performance on an organization's mission-critical priorities in the United States, Canada, Europe, the Middle Eas..."
+            "pe": 18.59,
+            "peg": 2.05,
+            "debt_to_equity": 2.11,
+            "description": "International Business Machines Corporation, together with its subsidiaries, provides integrated solutions and services in the Americas, Europe, the Middle East, Africa, and the Asia Pacific. It opera..."
         },
-        "updated_at": "2026-07-21T15:08:03.408691"
+        "updated_at": "2026-07-22T15:06:17.683878"
+    },
+    "BATL": {
+        "data": {
+            "sector": "Energy",
+            "industry": "Oil & Gas E&P",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 1.01,
+            "description": "Battalion Oil Corporation, an independent energy company, engages in the acquisition, production, exploration, and development of onshore oil and natural gas assets in the United States. The company h..."
+        },
+        "updated_at": "2026-07-22T15:06:43.227112"
+    },
+    "NBIS": {
+        "data": {
+            "sector": "Communication Services",
+            "industry": "Internet Content & Information",
+            "pe": 85.93,
+            "peg": 0.63,
+            "debt_to_equity": 1.32,
+            "description": "Nebius Group N.V., a technology company, engages in building full-stack infrastructure to service the global AI industry in the United States, the United Kingdom, and internationally. It offers Nebius..."
+        },
+        "updated_at": "2026-07-22T15:07:13.387279"
+    },
+    "SELF": {
+        "data": {
+            "sector": "Real Estate",
+            "industry": "REIT - Specialty",
+            "pe": 30.09,
+            "peg": 0,
+            "debt_to_equity": 0.34,
+            "description": "Global Self Storage, Inc. is a self-administered and self-managed REIT that owns, operates, manages, acquires, and redevelops self-storage properties. Its self-storage properties are designed to offer..."
+        },
+        "updated_at": "2026-07-22T15:07:35.953128"
+    },
+    "JNJ": {
+        "data": {
+            "sector": "Healthcare",
+            "industry": "Drug Manufacturers - General",
+            "pe": 29.57,
+            "peg": 4.14,
+            "debt_to_equity": 0.68,
+            "description": "Johnson & Johnson, together with its subsidiaries, engages in the research and development, manufacture, and sale of a range of products in the healthcare field worldwide. It operates in two segments,..."
+        },
+        "updated_at": "2026-07-22T15:07:58.111741"
     }
 }
