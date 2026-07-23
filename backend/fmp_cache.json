@@ -1,90 +1,90 @@
 {
-    "CSCO": {
+    "AMZN": {
         "data": {
-            "sector": "Technology",
-            "industry": "Communication Equipment",
-            "pe": 37.62,
-            "peg": 1.56,
-            "debt_to_equity": 0.68,
-            "description": "Cisco Systems, Inc. designs, develops, and sells technologies that help to power, secure, and draw insights from the internet in the Americas, Europe, the Middle East, Africa, the Asia Pacific, Japan,..."
+            "sector": "Consumer Cyclical",
+            "industry": "Internet Retail",
+            "pe": 27.9,
+            "peg": 1.3,
+            "debt_to_equity": 0.53,
+            "description": "Amazon.com, Inc. engages in the retail sale of consumer products, advertising, and subscriptions service through online and physical stores in North America and internationally. The company operates t..."
         },
-        "updated_at": "2026-07-22T15:04:39.191026"
+        "updated_at": "2026-07-23T15:08:05.172540"
     },
-    "WMT": {
-        "data": {
-            "sector": "Consumer Defensive",
-            "industry": "Discount Stores",
-            "pe": 38.48,
-            "peg": 4.2,
-            "debt_to_equity": 0.75,
-            "description": "Walmart Inc. engages in the operation of retail and wholesale stores and clubs, ecommerce websites, and mobile applications worldwide. The company operates through three segments: Walmart U.S., Walmar..."
-        },
-        "updated_at": "2026-07-22T15:05:10.848340"
-    },
-    "MSFT": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 23.21,
-            "peg": 1.23,
-            "debt_to_equity": 0.3,
-            "description": "Microsoft Corporation develops and supports software, services, devices, and solutions worldwide. The Productivity and Business Processes segment offers Microsoft 365 commercial, enterprise mobility +..."
-        },
-        "updated_at": "2026-07-22T15:05:56.386504"
-    },
-    "IBM": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Information Technology Services",
-            "pe": 18.59,
-            "peg": 2.05,
-            "debt_to_equity": 2.11,
-            "description": "International Business Machines Corporation, together with its subsidiaries, provides integrated solutions and services in the Americas, Europe, the Middle East, Africa, and the Asia Pacific. It opera..."
-        },
-        "updated_at": "2026-07-22T15:06:17.683878"
-    },
-    "BATL": {
-        "data": {
-            "sector": "Energy",
-            "industry": "Oil & Gas E&P",
-            "pe": 0,
-            "peg": 0,
-            "debt_to_equity": 1.01,
-            "description": "Battalion Oil Corporation, an independent energy company, engages in the acquisition, production, exploration, and development of onshore oil and natural gas assets in the United States. The company h..."
-        },
-        "updated_at": "2026-07-22T15:06:43.227112"
-    },
-    "NBIS": {
+    "RDDT": {
         "data": {
             "sector": "Communication Services",
             "industry": "Internet Content & Information",
-            "pe": 85.93,
-            "peg": 0.63,
-            "debt_to_equity": 1.32,
-            "description": "Nebius Group N.V., a technology company, engages in building full-stack infrastructure to service the global AI industry in the United States, the United Kingdom, and internationally. It offers Nebius..."
+            "pe": 48.65,
+            "peg": 1.33,
+            "debt_to_equity": 0.01,
+            "description": "Reddit, Inc. operates a digital community in the United States and internationally. The company's platform enables user to engage in conversations, explore passions, research new hobbies, exchange goo..."
         },
-        "updated_at": "2026-07-22T15:07:13.387279"
+        "updated_at": "2026-07-23T15:09:09.855316"
     },
-    "SELF": {
+    "WFC": {
         "data": {
-            "sector": "Real Estate",
-            "industry": "REIT - Specialty",
-            "pe": 30.09,
+            "sector": "Financial Services",
+            "industry": "Banks - Diversified",
+            "pe": 12.53,
+            "peg": 1.66,
+            "debt_to_equity": 0,
+            "description": "Wells Fargo & Company, a financial services company, provides diversified banking, investment, mortgage, and consumer and commercial finance products and services in the United States and internationa..."
+        },
+        "updated_at": "2026-07-23T15:09:51.231209"
+    },
+    "USO": {
+        "data": {
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 42.51,
             "peg": 0,
-            "debt_to_equity": 0.34,
-            "description": "Global Self Storage, Inc. is a self-administered and self-managed REIT that owns, operates, manages, acquires, and redevelops self-storage properties. Its self-storage properties are designed to offer..."
+            "debt_to_equity": 0,
+            "description": "USO seeks to achieve its investment objective by investing primarily in futures contracts for light, sweet crude oil, other types of crude oil, diesel-heating oil, gasoline, natural gas, and other pet..."
         },
-        "updated_at": "2026-07-22T15:07:35.953128"
+        "updated_at": "2026-07-23T15:10:17.434147"
     },
-    "JNJ": {
+    "GEV": {
         "data": {
-            "sector": "Healthcare",
-            "industry": "Drug Manufacturers - General",
-            "pe": 29.57,
-            "peg": 4.14,
-            "debt_to_equity": 0.68,
-            "description": "Johnson & Johnson, together with its subsidiaries, engages in the research and development, manufacture, and sale of a range of products in the healthcare field worldwide. It operates in two segments,..."
+            "sector": "Industrials",
+            "industry": "Specialty Industrial Machinery",
+            "pe": 28.79,
+            "peg": 1.86,
+            "debt_to_equity": 0.25,
+            "description": "GE Vernova Inc., an energy company, engages in the provision of various products and services that generate, transfer, orchestrate, convert, and store electricity in the United States, Europe, Asia, t..."
         },
-        "updated_at": "2026-07-22T15:07:58.111741"
+        "updated_at": "2026-07-23T15:10:44.447113"
+    },
+    "ES": {
+        "data": {
+            "sector": "Utilities",
+            "industry": "Utilities - Regulated Electric",
+            "pe": 16.02,
+            "peg": 3.09,
+            "debt_to_equity": 1.82,
+            "description": "Eversource Energy, a public utility holding company, engages in the energy delivery business. The company operates through Electric Distribution, Electric Transmission, Natural Gas Distribution, and W..."
+        },
+        "updated_at": "2026-07-23T15:11:11.493533"
+    },
+    "TSLA": {
+        "data": {
+            "sector": "Consumer Cyclical",
+            "industry": "Auto Manufacturers",
+            "pe": 298.06,
+            "peg": 4.75,
+            "debt_to_equity": 0.11,
+            "description": "Tesla, Inc. designs, develops, manufactures, leases, and sells electric vehicles, and energy generation and storage systems in the United States, China, and internationally. The company operates in tw..."
+        },
+        "updated_at": "2026-07-23T15:11:43.018224"
+    },
+    "UP": {
+        "data": {
+            "sector": "Industrials",
+            "industry": "Airports & Air Services",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "Wheels Up Experience Inc. provides on-demand private aviation services in the United States and internationally. The company offers Wheels Up Membership program that consists of a simplified on-ramp t..."
+        },
+        "updated_at": "2026-07-23T15:12:12.674153"
     }
 }
