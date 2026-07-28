@@ -1,90 +1,90 @@
 {
-    "PEP": {
+    "OXY": {
+        "data": {
+            "sector": "Energy",
+            "industry": "Oil & Gas E&P",
+            "pe": 73.7,
+            "peg": 1.21,
+            "debt_to_equity": 0.42,
+            "description": "Occidental Petroleum Corporation, together with its subsidiaries, engages in the acquisition, exploration, and development of oil and gas properties in the United States and internationally. It operat..."
+        },
+        "updated_at": "2026-07-28T15:16:56.775952"
+    },
+    "SOXL": {
+        "data": {
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 18.21,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "The fund invests at least 80% of its net assets in financial instruments, such as swap agreements, securities of the index, and ETFs that track the index, that, in combination, provide 3X daily levera..."
+        },
+        "updated_at": "2026-07-28T15:17:20.009202"
+    },
+    "QQQ": {
+        "data": {
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 29.93,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "To maintain the correspondence between the composition and weights of the securities in the trust (the \"securities\") and the stocks in the NASDAQ-100 Index\u00ae, the adviser adjusts the securities from ti..."
+        },
+        "updated_at": "2026-07-28T15:17:49.499475"
+    },
+    "KO": {
         "data": {
             "sector": "Consumer Defensive",
             "industry": "Beverages - Non-Alcoholic",
-            "pe": 18.37,
-            "peg": 1.48,
-            "debt_to_equity": 2.39,
-            "description": "PepsiCo, Inc. engages in the manufacture, marketing, distribution, and sale of various beverages and convenient foods worldwide. The company operates through six segments: PepsiCo Foods North America;..."
+            "pe": 28.22,
+            "peg": 4.11,
+            "debt_to_equity": 1.25,
+            "description": "The Coca-Cola Company, a beverage company, manufactures and sells various nonalcoholic beverages in the United States and internationally. The company provides Trademark Coca-Cola, sparkling soft drin..."
         },
-        "updated_at": "2026-07-27T15:41:37.196193"
+        "updated_at": "2026-07-28T15:18:20.747874"
     },
-    "DAL": {
+    "BE": {
         "data": {
             "sector": "Industrials",
-            "industry": "Airlines",
-            "pe": 14.3,
-            "peg": 0.21,
-            "debt_to_equity": 0.97,
-            "description": "Delta Air Lines, Inc. provides scheduled air transportation for passengers and cargo in the United States and internationally. The company operates through two segments, Airline and Refinery. Its dome..."
+            "industry": "Electrical Equipment & Parts",
+            "pe": 0,
+            "peg": 0.9,
+            "debt_to_equity": 3.11,
+            "description": "Bloom Energy Corporation designs, manufactures, sells, and installs solid oxide fuel cell systems for on-site power generation in the United States and internationally. It offers Bloom Energy Server, ..."
         },
-        "updated_at": "2026-07-27T15:42:02.886576"
+        "updated_at": "2026-07-28T15:18:47.632816"
     },
-    "AAPL": {
+    "AMKR": {
         "data": {
             "sector": "Technology",
-            "industry": "Consumer Electronics",
-            "pe": 40.88,
-            "peg": 2.68,
-            "debt_to_equity": 0.8,
-            "description": "Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide. The company offers iPhone, a line of smartphones; Mac, a line of personal ..."
+            "industry": "Semiconductor Equipment & Materials",
+            "pe": 26.58,
+            "peg": 0.76,
+            "debt_to_equity": 0.54,
+            "description": "Amkor Technology, Inc. provides outsourced semiconductor packaging and test services in the United States, Japan, Europe, and the Asia Pacific. It offers turnkey packaging and test services, including..."
         },
-        "updated_at": "2026-07-27T15:42:25.770201"
+        "updated_at": "2026-07-28T15:19:10.064146"
     },
-    "RR": {
+    "UPS": {
         "data": {
             "sector": "Industrials",
-            "industry": "Specialty Industrial Machinery",
-            "pe": 0,
-            "peg": 0,
-            "debt_to_equity": 0.0,
-            "description": "Richtech Robotics Inc. develops, manufactures, deploys, and sells robotic solutions for automation in the service industry in the United States. The company offers commercial robotic products, includi..."
+            "industry": "Integrated Freight & Logistics",
+            "pe": 17.58,
+            "peg": 1.78,
+            "debt_to_equity": 1.82,
+            "description": "United Parcel Service, Inc., a package delivery and logistics provider, offers transportation and delivery services. It operates through two segments, U.S. Domestic Package and International Package. ..."
         },
-        "updated_at": "2026-07-27T15:42:55.544062"
+        "updated_at": "2026-07-28T15:19:38.347787"
     },
-    "NVDA": {
+    "JPM": {
         "data": {
-            "sector": "Technology",
-            "industry": "Semiconductors",
-            "pe": 30.08,
-            "peg": 0.57,
-            "debt_to_equity": 0.07,
-            "description": "NVIDIA Corporation operates as a data center scale AI infrastructure company in the United States, Taiwan, China, Hong Kong, Europe, and internationally. It operates through Compute & Networking, and ..."
+            "sector": "Financial Services",
+            "industry": "Banks - Diversified",
+            "pe": 15.27,
+            "peg": 1.77,
+            "debt_to_equity": 0,
+            "description": "JPMorgan Chase & Co. operates as a bank and financial holding company in the United States, rest of North America, Europe, the Middle East, Africa, the Asia Pacific, Latin America, and the Caribbean. ..."
         },
-        "updated_at": "2026-07-27T15:43:22.895240"
-    },
-    "NOW": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Application",
-            "pe": 65.22,
-            "peg": 0.87,
-            "debt_to_equity": 0.68,
-            "description": "ServiceNow, Inc. provides cloud-based solution for digital workflows in the North America, Europe, the Middle East and Africa, Asia Pacific, and internationally. The company provides asset management,..."
-        },
-        "updated_at": "2026-07-27T15:43:53.313372"
-    },
-    "U": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Application",
-            "pe": 0,
-            "peg": 0,
-            "debt_to_equity": 0.72,
-            "description": "Unity Software Inc. operates a platform to develop, deploy, and grow games and interactive experiences for mobile phones, PCs, consoles, and extended reality devices in the United States, China, Hong ..."
-        },
-        "updated_at": "2026-07-27T15:44:20.873514"
-    },
-    "AMZN": {
-        "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Internet Retail",
-            "pe": 27.81,
-            "peg": 1.25,
-            "debt_to_equity": 0.53,
-            "description": "Amazon.com, Inc. engages in the retail sale of consumer products, advertising, and subscriptions service through online and physical stores in North America and internationally. The company operates t..."
-        },
-        "updated_at": "2026-07-27T15:44:43.121632"
+        "updated_at": "2026-07-28T15:20:02.026232"
     }
 }
