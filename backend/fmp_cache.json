@@ -1,90 +1,90 @@
 {
-    "CAT": {
-        "data": {
-            "sector": "Industrials",
-            "industry": "Farm & Heavy Construction Machinery",
-            "pe": 39.24,
-            "peg": 2.05,
-            "debt_to_equity": 2.31,
-            "description": "Caterpillar Inc. provides construction and mining equipment, off-highway diesel and natural gas engines, industrial gas turbines, and diesel-electric locomotives in the United States and international..."
-        },
-        "updated_at": "2026-07-29T15:07:34.946685"
-    },
-    "WMT": {
-        "data": {
-            "sector": "Consumer Defensive",
-            "industry": "Discount Stores",
-            "pe": 39.75,
-            "peg": 4.26,
-            "debt_to_equity": 0.75,
-            "description": "Walmart Inc. engages in the operation of retail and wholesale stores and clubs, ecommerce websites, and mobile applications worldwide. The company operates through three segments: Walmart U.S., Walmar..."
-        },
-        "updated_at": "2026-07-29T15:07:57.723706"
-    },
-    "KLAC": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Semiconductor Equipment & Materials",
-            "pe": 51.08,
-            "peg": 2.09,
-            "debt_to_equity": 1.05,
-            "description": "KLA Corporation, together with its subsidiaries, designs, manufactures, and markets process control, process-enabling, and yield management solutions for the semiconductor and related electronics indu..."
-        },
-        "updated_at": "2026-07-29T15:08:24.568183"
-    },
-    "PYPL": {
+    "FCF": {
         "data": {
             "sector": "Financial Services",
-            "industry": "Credit Services",
-            "pe": 10.99,
-            "peg": 1.01,
-            "debt_to_equity": 0.68,
-            "description": "PayPal Holdings, Inc. operates a technology platform that enables digital payments for merchants and consumers worldwide. The company operates a two-sided network at scale that connects merchants and ..."
+            "industry": "Banks - Regional",
+            "pe": 13.11,
+            "peg": 1.46,
+            "debt_to_equity": 0,
+            "description": "First Commonwealth Financial Corporation, a financial holding company, provides various consumer and commercial banking products and services in the United States. The company's consumer services incl..."
         },
-        "updated_at": "2026-07-29T15:08:54.956038"
+        "updated_at": "2026-07-30T15:08:08.770478"
     },
-    "GME": {
+    "SMH": {
         "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Specialty Retail",
-            "pe": 16.28,
-            "peg": 0.31,
-            "debt_to_equity": 0.74,
-            "description": "GameStop Corp., a specialty retailer, provides games, collectibles, and entertainment products through its stores and e-commerce platforms in United States, Australia and Europe. The company sells new..."
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 34.78,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "The fund normally invests at least 80% of its total assets in securities that comprise the fund's benchmark index. The index includes common stocks and depositary receipts of U.S. exchange-listed comp..."
         },
-        "updated_at": "2026-07-29T15:09:15.969587"
+        "updated_at": "2026-07-30T15:08:35.704859"
     },
-    "CXAI": {
+    "SPCX": {
         "data": {
-            "sector": "Technology",
-            "industry": "Software - Application",
+            "sector": "Industrials",
+            "industry": "Aerospace & Defense",
             "pe": 0,
             "peg": 0,
-            "debt_to_equity": 0.69,
-            "description": "CXApp Inc. provides experience solutions and delivering enterprise-grade software in the United States, Canada, and the Philippines. It offers CXAI Platform, which provides a comprehensive suite of to..."
+            "debt_to_equity": 0.74,
+            "description": "Space Exploration Technologies Corp. provides satellite-based broadband services in the United States, Ireland, Canada, and internationally. It operates through three operating segments: Space, Connec..."
         },
-        "updated_at": "2026-07-29T15:09:42.851663"
+        "updated_at": "2026-07-30T15:09:00.019592"
     },
-    "INTC": {
+    "VXUS": {
+        "data": {
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 17.94,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "The manager employs an indexing investment approach designed to track the performance of the FTSE Global All Cap ex US Index, a float-adjusted market-capitalization-weighted index designed to measure ..."
+        },
+        "updated_at": "2026-07-30T15:09:26.749544"
+    },
+    "DTE": {
+        "data": {
+            "sector": "Utilities",
+            "industry": "Utilities - Regulated Electric",
+            "pe": 22.4,
+            "peg": 2.04,
+            "debt_to_equity": 2.29,
+            "description": "DTE Energy Company engages in energy-related businesses and services. The company operates through four segments: Electric, Gas, DTE Vantage, and Energy Trading.The company's Electric segment generate..."
+        },
+        "updated_at": "2026-07-30T15:09:49.945785"
+    },
+    "MS": {
+        "data": {
+            "sector": "Financial Services",
+            "industry": "Capital Markets",
+            "pe": 16.85,
+            "peg": 2.08,
+            "debt_to_equity": 5.02,
+            "description": "Morgan Stanley, a financial holding company, provides various financial products and services to corporations, governments, financial institutions, and individuals in the Americas, Asia, Europe, the M..."
+        },
+        "updated_at": "2026-07-30T15:10:17.843640"
+    },
+    "ARM": {
         "data": {
             "sector": "Technology",
             "industry": "Semiconductors",
-            "pe": 0,
-            "peg": 1.36,
-            "debt_to_equity": 0.49,
-            "description": "Intel Corporation designs, develops, manufactures, markets, sells, and services computing and related end products and services in the United States, Ireland, Israel, and internationally. It operates ..."
+            "pe": 242.09,
+            "peg": 2.02,
+            "debt_to_equity": 0.06,
+            "description": "Arm Holdings plc researches, develops, licenses, and markets central processing unit (CPU) intellectual property (IP), graphics processing unit IP, systems IP, compute subsystems (CSS), and associated..."
         },
-        "updated_at": "2026-07-29T15:10:04.451069"
+        "updated_at": "2026-07-30T15:11:10.907261"
     },
-    "GLW": {
+    "TSLA": {
         "data": {
-            "sector": "Technology",
-            "industry": "Electronic Components",
-            "pe": 61.01,
-            "peg": 1.36,
-            "debt_to_equity": 0.8,
-            "description": "Corning Incorporated operates in optical communications, display, specialty materials, automotive, and life sciences businesses in the United States, Canada, Mexico, Japan, Taiwan, China, South Korea,..."
+            "sector": "Consumer Cyclical",
+            "industry": "Auto Manufacturers",
+            "pe": 285.33,
+            "peg": 4.4,
+            "debt_to_equity": 0.18,
+            "description": "Tesla, Inc. designs, develops, manufactures, leases, and sells electric vehicles, and energy generation and storage systems in the United States, China, and internationally. The company operates in tw..."
         },
-        "updated_at": "2026-07-29T15:10:31.039036"
+        "updated_at": "2026-07-30T15:11:29.983370"
     }
 }
