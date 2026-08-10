@@ -1,90 +1,90 @@
 {
-    "TSLA": {
+    "COIN": {
         "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Auto Manufacturers",
-            "pe": 297.66,
-            "peg": 4.71,
-            "debt_to_equity": 0.18,
-            "description": "Tesla, Inc. designs, develops, manufactures, leases, and sells electric vehicles, and energy generation and storage systems in the United States, China, and internationally. The company operates in tw..."
+            "sector": "Financial Services",
+            "industry": "Financial Data & Stock Exchanges",
+            "pe": 0,
+            "peg": 8.71,
+            "debt_to_equity": 0.51,
+            "description": "Coinbase Global, Inc. operates platform for crypto assets in the United States and internationally. It provides the primary financial account in the crypto economy for consumers; a brokerage platform ..."
         },
-        "updated_at": "2026-08-07T14:09:23.792259"
+        "updated_at": "2026-08-10T14:18:06.901985"
     },
-    "DTE": {
+    "DIS": {
         "data": {
-            "sector": "Utilities",
-            "industry": "Utilities - Regulated Electric",
-            "pe": 22.12,
-            "peg": 1.97,
-            "debt_to_equity": 2.29,
-            "description": "DTE Energy Company engages in energy-related businesses and services. The company operates through four segments: Electric, Gas, DTE Vantage, and Energy Trading.The company's Electric segment generate..."
+            "sector": "Communication Services",
+            "industry": "Entertainment",
+            "pe": 21.26,
+            "peg": 2.6,
+            "debt_to_equity": 0.39,
+            "description": "The Walt Disney Company operates as an entertainment company in Americas, Europe, and the Asia Pacific. It operates in three segments: Entertainment, Sports, and Experiences. The company produces and ..."
         },
-        "updated_at": "2026-08-07T14:09:51.983472"
+        "updated_at": "2026-08-10T14:18:28.544351"
+    },
+    "SPCX": {
+        "data": {
+            "sector": "Industrials",
+            "industry": "Aerospace & Defense",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 0.31,
+            "description": "Space Exploration Technologies Corp. provides satellite-based broadband services in the United States, Ireland, Canada, and internationally. It operates through three operating segments: Space, Connec..."
+        },
+        "updated_at": "2026-08-10T14:18:49.275896"
+    },
+    "RDDT": {
+        "data": {
+            "sector": "Communication Services",
+            "industry": "Internet Content & Information",
+            "pe": 37.08,
+            "peg": 1.05,
+            "debt_to_equity": 0.01,
+            "description": "Reddit, Inc. operates a digital community in the United States and internationally. The company's platform enables user to engage in conversations, explore passions, research new hobbies, exchange goo..."
+        },
+        "updated_at": "2026-08-10T14:19:15.484859"
     },
     "SNDK": {
         "data": {
             "sector": "Technology",
             "industry": "Computer Hardware",
-            "pe": 16.31,
+            "pe": 17.06,
             "peg": 0,
             "debt_to_equity": 0,
             "description": "Sandisk Corporation develops, manufactures, and sells data storage devices and solutions using NAND flash technology in the United States, Europe, the Middle East, Africa, Asia, and internationally. T..."
         },
-        "updated_at": "2026-08-07T14:10:19.315985"
+        "updated_at": "2026-08-10T14:19:36.602624"
     },
-    "HAL": {
-        "data": {
-            "sector": "Energy",
-            "industry": "Oil & Gas Equipment & Services",
-            "pe": 16.87,
-            "peg": 0.79,
-            "debt_to_equity": 0.74,
-            "description": "Halliburton Company provides products and services to the energy industry worldwide. It operates in two segments, Completion and Production, and Drilling and Evaluation. The Completion and Production ..."
-        },
-        "updated_at": "2026-08-07T14:11:04.830550"
-    },
-    "PLTR": {
+    "ONDS": {
         "data": {
             "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 143.7,
-            "peg": 2.29,
+            "industry": "Communication Equipment",
+            "pe": 104.56,
+            "peg": 0,
             "debt_to_equity": 0.02,
-            "description": "Palantir Technologies Inc. builds and deploys software platforms for the intelligence community to assist in counterterrorism investigations and operations in the United States, the United Kingdom, an..."
+            "description": "Ondas Inc. provides private wireless, drone, and automated data solutions in the United States and internationally. It operates through the Ondas Networks and Ondas Autonomous Systems segments. The co..."
         },
-        "updated_at": "2026-08-07T14:11:30.184328"
+        "updated_at": "2026-08-10T14:20:05.188096"
     },
-    "SCHW": {
+    "SCHD": {
         "data": {
-            "sector": "Financial Services",
-            "industry": "Capital Markets",
-            "pe": 19.46,
-            "peg": 1.08,
-            "debt_to_equity": 0.74,
-            "description": "The Charles Schwab Corporation, together with its subsidiaries, operates as a savings and loan holding company that provides wealth management, securities brokerage, banking, asset management, custody..."
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 19.6,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "To pursue its goal, the fund generally invests in stocks that are included in the index. The index is designed to measure the performance of high dividend yielding stocks issued by U.S. companies that..."
         },
-        "updated_at": "2026-08-07T14:11:55.546119"
+        "updated_at": "2026-08-10T14:20:35.369881"
     },
-    "INOD": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Information Technology Services",
-            "pe": 56.04,
-            "peg": 0.87,
-            "debt_to_equity": 0.03,
-            "description": "Innodata Inc. operates as a data engineering company in the United States, the United Kingdom, the Netherlands, Canada, Germany, Belgium, and internationally. The company operates through three segmen..."
-        },
-        "updated_at": "2026-08-07T14:12:15.783023"
-    },
-    "CRM": {
+    "SOUN": {
         "data": {
             "sector": "Technology",
             "industry": "Software - Application",
-            "pe": 22.35,
-            "peg": 0.78,
-            "debt_to_equity": 1.24,
-            "description": "Salesforce, Inc. provides customer relationship management technology services that connect companies and customers together in the United States, Europe, and the Asia Pacific. The company offers Agen..."
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 0.01,
+            "description": "SoundHound AI, Inc. provides independent voice artificial intelligence (AI) solutions that enables businesses across the automotive, TV, IoT, and customer service industries to deliver conversational ..."
         },
-        "updated_at": "2026-08-07T14:12:41.951137"
+        "updated_at": "2026-08-10T14:20:57.934447"
     }
 }
