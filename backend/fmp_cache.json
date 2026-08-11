@@ -1,90 +1,90 @@
 {
-    "COIN": {
+    "APA": {
+        "data": {
+            "sector": "Energy",
+            "industry": "Oil & Gas E&P",
+            "pe": 8.56,
+            "peg": 0.78,
+            "debt_to_equity": 0.49,
+            "description": "APA Corporation, an independent energy company, explores for, develops, and produces natural gas, crude oil, and natural gas liquids. The company has oil and gas operations in the United States, Egypt..."
+        },
+        "updated_at": "2026-08-11T14:17:18.606416"
+    },
+    "PYPL": {
         "data": {
             "sector": "Financial Services",
-            "industry": "Financial Data & Stock Exchanges",
-            "pe": 0,
-            "peg": 8.71,
-            "debt_to_equity": 0.51,
-            "description": "Coinbase Global, Inc. operates platform for crypto assets in the United States and internationally. It provides the primary financial account in the crypto economy for consumers; a brokerage platform ..."
+            "industry": "Credit Services",
+            "pe": 11.2,
+            "peg": 1.08,
+            "debt_to_equity": 0.72,
+            "description": "PayPal Holdings, Inc. operates a technology platform that enables digital payments for merchants and consumers worldwide. The company operates a two-sided network at scale that connects merchants and ..."
         },
-        "updated_at": "2026-08-10T14:18:06.901985"
+        "updated_at": "2026-08-11T14:18:09.469869"
     },
-    "DIS": {
+    "DJT": {
         "data": {
             "sector": "Communication Services",
-            "industry": "Entertainment",
-            "pe": 21.26,
-            "peg": 2.6,
-            "debt_to_equity": 0.39,
-            "description": "The Walt Disney Company operates as an entertainment company in Americas, Europe, and the Asia Pacific. It operates in three segments: Entertainment, Sports, and Experiences. The company produces and ..."
+            "industry": "Internet Content & Information",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 0.95,
+            "description": "Trump Media & Technology Group Corp. engages in social media and streaming services in the United States. It operates Truth Social, a social media platform for free expression; and Truth+, a streaming..."
         },
-        "updated_at": "2026-08-10T14:18:28.544351"
+        "updated_at": "2026-08-11T14:18:31.858669"
     },
-    "SPCX": {
+    "GLD": {
+        "data": {
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "The Trust holds gold bars and from time to time, issues Baskets in exchange for deposits of gold and distributes gold in connection with redemptions of Baskets. The investment objective of the Trust i..."
+        },
+        "updated_at": "2026-08-11T14:18:58.997955"
+    },
+    "CPA": {
+        "data": {
+            "sector": "Industrials",
+            "industry": "Airlines",
+            "pe": 8.98,
+            "peg": 0.94,
+            "debt_to_equity": 0.89,
+            "description": "Copa Holdings, S.A., through its subsidiaries, provides airline passenger, and cargo and mail transportation services in North America, South America, Central America, and the Caribbean. As of Decembe..."
+        },
+        "updated_at": "2026-08-11T14:19:22.902549"
+    },
+    "RCAT": {
         "data": {
             "sector": "Industrials",
             "industry": "Aerospace & Defense",
             "pe": 0,
             "peg": 0,
-            "debt_to_equity": 0.31,
-            "description": "Space Exploration Technologies Corp. provides satellite-based broadband services in the United States, Ireland, Canada, and internationally. It operates through three operating segments: Space, Connec..."
+            "debt_to_equity": 0.03,
+            "description": "Red Cat Holdings, Inc., together with its subsidiaries, provides drone and robotic solutions for defense, national security, and commercial applications in the United States. The company designs and m..."
         },
-        "updated_at": "2026-08-10T14:18:49.275896"
+        "updated_at": "2026-08-11T14:19:56.040975"
     },
-    "RDDT": {
+    "DIS": {
         "data": {
             "sector": "Communication Services",
-            "industry": "Internet Content & Information",
-            "pe": 37.08,
-            "peg": 1.05,
-            "debt_to_equity": 0.01,
-            "description": "Reddit, Inc. operates a digital community in the United States and internationally. The company's platform enables user to engage in conversations, explore passions, research new hobbies, exchange goo..."
+            "industry": "Entertainment",
+            "pe": 21.37,
+            "peg": 2.56,
+            "debt_to_equity": 0.39,
+            "description": "The Walt Disney Company operates as an entertainment company in Americas, Europe, and the Asia Pacific. It operates in three segments: Entertainment, Sports, and Experiences. The company produces and ..."
         },
-        "updated_at": "2026-08-10T14:19:15.484859"
+        "updated_at": "2026-08-11T14:20:21.838073"
     },
-    "SNDK": {
+    "GE": {
         "data": {
-            "sector": "Technology",
-            "industry": "Computer Hardware",
-            "pe": 17.06,
-            "peg": 0,
-            "debt_to_equity": 0,
-            "description": "Sandisk Corporation develops, manufactures, and sells data storage devices and solutions using NAND flash technology in the United States, Europe, the Middle East, Africa, Asia, and internationally. T..."
+            "sector": "Industrials",
+            "industry": "Aerospace & Defense",
+            "pe": 43.74,
+            "peg": 5.44,
+            "debt_to_equity": 1.13,
+            "description": "General Electric Company, doing business as GE Aerospace, designs and produces commercial and defense aircraft engines, integrated engine components, electric power, and aircraft systems. The company ..."
         },
-        "updated_at": "2026-08-10T14:19:36.602624"
-    },
-    "ONDS": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Communication Equipment",
-            "pe": 104.56,
-            "peg": 0,
-            "debt_to_equity": 0.02,
-            "description": "Ondas Inc. provides private wireless, drone, and automated data solutions in the United States and internationally. It operates through the Ondas Networks and Ondas Autonomous Systems segments. The co..."
-        },
-        "updated_at": "2026-08-10T14:20:05.188096"
-    },
-    "SCHD": {
-        "data": {
-            "sector": "Unknown",
-            "industry": "Unknown",
-            "pe": 19.6,
-            "peg": 0,
-            "debt_to_equity": 0,
-            "description": "To pursue its goal, the fund generally invests in stocks that are included in the index. The index is designed to measure the performance of high dividend yielding stocks issued by U.S. companies that..."
-        },
-        "updated_at": "2026-08-10T14:20:35.369881"
-    },
-    "SOUN": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Application",
-            "pe": 0,
-            "peg": 0,
-            "debt_to_equity": 0.01,
-            "description": "SoundHound AI, Inc. provides independent voice artificial intelligence (AI) solutions that enables businesses across the automotive, TV, IoT, and customer service industries to deliver conversational ..."
-        },
-        "updated_at": "2026-08-10T14:20:57.934447"
+        "updated_at": "2026-08-11T14:20:46.285128"
     }
 }
