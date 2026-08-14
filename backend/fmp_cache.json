@@ -1,90 +1,90 @@
 {
-    "WFC": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Banks - Diversified",
-            "pe": 12.89,
-            "peg": 1.68,
-            "debt_to_equity": 0,
-            "description": "Wells Fargo & Company, a financial services company, provides diversified banking, investment, mortgage, and consumer and commercial finance products and services in the United States and internationa..."
-        },
-        "updated_at": "2026-08-13T14:20:55.846074"
-    },
-    "SPCX": {
-        "data": {
-            "sector": "Industrials",
-            "industry": "Aerospace & Defense",
-            "pe": 0,
-            "peg": 0,
-            "debt_to_equity": 0.31,
-            "description": "Space Exploration Technologies Corp. provides satellite-based broadband services in the United States, Ireland, Canada, and internationally. It operates through three operating segments: Space, Connec..."
-        },
-        "updated_at": "2026-08-13T14:21:23.568599"
-    },
-    "CRWV": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 0,
-            "peg": 0,
-            "debt_to_equity": 10.27,
-            "description": "CoreWeave, Inc. operates as a cloud infrastructure technology company in the United States. The company offers CoreWeave Cloud platform that comprises proprietary software and cloud services that deli..."
-        },
-        "updated_at": "2026-08-13T14:21:46.920299"
-    },
-    "SLB": {
+    "CVX": {
         "data": {
             "sector": "Energy",
-            "industry": "Oil & Gas Equipment & Services",
-            "pe": 25.3,
-            "peg": 1.77,
-            "debt_to_equity": 0.47,
-            "description": "SLB N.V. engages in the provision of technology for the energy industry worldwide. The company operates through four divisions: Digital & Integration, Reservoir Performance, Well Construction, and Pro..."
+            "industry": "Oil & Gas Integrated",
+            "pe": 19.21,
+            "peg": 0.75,
+            "debt_to_equity": 0.19,
+            "description": "Chevron Corporation, through its subsidiaries, engages in the integrated energy and chemicals operations in the United States and internationally. It operates through Upstream, Downstream, and All Oth..."
         },
-        "updated_at": "2026-08-13T14:22:14.272551"
+        "updated_at": "2026-08-14T14:13:30.805874"
     },
-    "SBUX": {
-        "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Restaurants",
-            "pe": 64.13,
-            "peg": 1.31,
-            "debt_to_equity": 0,
-            "description": "Starbucks Corporation, together with its subsidiaries, operates as a roaster, marketer, and retailer of coffee internationally. The company operates through three segments: North America, Internationa..."
-        },
-        "updated_at": "2026-08-13T14:22:39.467379"
-    },
-    "ADBE": {
+    "TSM": {
         "data": {
             "sector": "Technology",
-            "industry": "Software - Application",
-            "pe": 15.04,
-            "peg": 0.66,
-            "debt_to_equity": 0.61,
-            "description": "Adobe Inc. operates as a technology company worldwide. The Digital Media segment offers products and services that enable individuals, teams, and enterprises to create, publish, and promote content. T..."
+            "industry": "Semiconductors",
+            "pe": 32.24,
+            "peg": 1.01,
+            "debt_to_equity": 0.15,
+            "description": "Taiwan Semiconductor Manufacturing Company Limited, together with its subsidiaries, manufactures, packages, tests, and sells integrated circuits and other semiconductor devices in Taiwan, China, Europ..."
         },
-        "updated_at": "2026-08-13T14:23:01.710480"
+        "updated_at": "2026-08-14T14:14:16.007364"
+    },
+    "NFLX": {
+        "data": {
+            "sector": "Communication Services",
+            "industry": "Entertainment",
+            "pe": 24.48,
+            "peg": 1.71,
+            "debt_to_equity": 0.55,
+            "description": "Netflix, Inc. provides entertainment services worldwide. The company offers television (TV) series, documentaries, feature films, games, and live programming across various genres and languages. It al..."
+        },
+        "updated_at": "2026-08-14T14:14:44.044572"
     },
     "VZ": {
         "data": {
             "sector": "Communication Services",
             "industry": "Telecom Services",
-            "pe": 12.37,
+            "pe": 12.61,
             "peg": 0.89,
             "debt_to_equity": 1.84,
             "description": "Verizon Communications Inc., through its subsidiaries, engages in the provision of communications, technology, information, and streaming products and services to consumers, businesses, and government..."
         },
-        "updated_at": "2026-08-13T14:23:30.798230"
+        "updated_at": "2026-08-14T14:15:12.084832"
     },
-    "AAPL": {
+    "FIG": {
         "data": {
             "sector": "Technology",
-            "industry": "Consumer Electronics",
-            "pe": 35.25,
-            "peg": 2.49,
-            "debt_to_equity": 0.78,
-            "description": "Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide. The company offers iPhone, a line of smartphones; Mac, a line of personal ..."
+            "industry": "Software - Application",
+            "pe": 0,
+            "peg": 7.95,
+            "debt_to_equity": 0.05,
+            "description": "Figma, Inc. develops and sells a collaborative, browser-based platform for designing, prototyping, building digital experiences, and subscriptions for access to its platform. The company offers Figma ..."
         },
-        "updated_at": "2026-08-13T14:23:52.984581"
+        "updated_at": "2026-08-14T14:15:35.937773"
+    },
+    "SOXL": {
+        "data": {
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 51.24,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "The fund invests at least 80% of its net assets in financial instruments, such as swap agreements, securities of the index, and ETFs that track the index, that, in combination, provide 3X daily levera..."
+        },
+        "updated_at": "2026-08-14T14:16:27.187785"
+    },
+    "QQQ": {
+        "data": {
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 31.33,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "To maintain the correspondence between the composition and weights of the securities in the trust (the \"securities\") and the stocks in the NASDAQ-100 Index\u00ae, the adviser adjusts the securities from ti..."
+        },
+        "updated_at": "2026-08-14T14:16:47.357388"
+    },
+    "SMCI": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Computer Hardware",
+            "pe": 21.04,
+            "peg": 0.91,
+            "debt_to_equity": 0.64,
+            "description": "Super Micro Computer, Inc., together with its subsidiaries, develops and sells server and storage solutions based on modular and open-standard architecture in the United States, Asia, Europe, and inte..."
+        },
+        "updated_at": "2026-08-14T14:17:17.210071"
     }
 }
