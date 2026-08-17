@@ -1,90 +1,90 @@
 {
-    "CVX": {
+    "TSLA": {
+        "data": {
+            "sector": "Consumer Cyclical",
+            "industry": "Auto Manufacturers",
+            "pe": 307.57,
+            "peg": 5.01,
+            "debt_to_equity": 0.18,
+            "description": "Tesla, Inc. designs, develops, manufactures, leases, and sells electric vehicles, and energy generation and storage systems in the United States, China, and internationally. The company operates in tw..."
+        },
+        "updated_at": "2026-08-17T13:36:04.630997"
+    },
+    "F": {
+        "data": {
+            "sector": "Consumer Cyclical",
+            "industry": "Auto Manufacturers",
+            "pe": 0,
+            "peg": 8.48,
+            "debt_to_equity": 4.57,
+            "description": "Ford Motor Company develops, delivers, and services Ford trucks, sport utility vehicles, commercial vans and cars, and Lincoln luxury vehicles in the United States, Canada, the United Kingdom, Mexico,..."
+        },
+        "updated_at": "2026-08-17T13:36:34.098835"
+    },
+    "AM": {
         "data": {
             "sector": "Energy",
-            "industry": "Oil & Gas Integrated",
-            "pe": 19.21,
-            "peg": 0.75,
-            "debt_to_equity": 0.19,
-            "description": "Chevron Corporation, through its subsidiaries, engages in the integrated energy and chemicals operations in the United States and internationally. It operates through Upstream, Downstream, and All Oth..."
+            "industry": "Oil & Gas Midstream",
+            "pe": 27.07,
+            "peg": 0,
+            "debt_to_equity": 1.86,
+            "description": "Antero Midstream Corporation owns, operates, and develops midstream energy assets in the Appalachian Basin. It operates in two segments, Gathering and Processing, and Water Handling. The gathering and..."
         },
-        "updated_at": "2026-08-14T14:13:30.805874"
+        "updated_at": "2026-08-17T13:37:02.024106"
     },
-    "TSM": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Semiconductors",
-            "pe": 32.24,
-            "peg": 1.01,
-            "debt_to_equity": 0.15,
-            "description": "Taiwan Semiconductor Manufacturing Company Limited, together with its subsidiaries, manufactures, packages, tests, and sells integrated circuits and other semiconductor devices in Taiwan, China, Europ..."
-        },
-        "updated_at": "2026-08-14T14:14:16.007364"
-    },
-    "NFLX": {
+    "RDDT": {
         "data": {
             "sector": "Communication Services",
-            "industry": "Entertainment",
-            "pe": 24.48,
-            "peg": 1.71,
-            "debt_to_equity": 0.55,
-            "description": "Netflix, Inc. provides entertainment services worldwide. The company offers television (TV) series, documentaries, feature films, games, and live programming across various genres and languages. It al..."
+            "industry": "Internet Content & Information",
+            "pe": 40.33,
+            "peg": 1.15,
+            "debt_to_equity": 0.01,
+            "description": "Reddit, Inc. operates a digital community in the United States and internationally. The company's platform enables user to engage in conversations, explore passions, research new hobbies, exchange goo..."
         },
-        "updated_at": "2026-08-14T14:14:44.044572"
+        "updated_at": "2026-08-17T13:37:32.368125"
     },
-    "VZ": {
+    "NKE": {
         "data": {
-            "sector": "Communication Services",
-            "industry": "Telecom Services",
-            "pe": 12.61,
-            "peg": 0.89,
-            "debt_to_equity": 1.84,
-            "description": "Verizon Communications Inc., through its subsidiaries, engages in the provision of communications, technology, information, and streaming products and services to consumers, businesses, and government..."
+            "sector": "Consumer Cyclical",
+            "industry": "Footwear & Accessories",
+            "pe": 19.27,
+            "peg": 1.51,
+            "debt_to_equity": 0.74,
+            "description": "NIKE, Inc., together with its subsidiaries, designs, develops, markets, and sells athletic footwear, apparel, equipment, accessories, and services for men, women, and kids in North America, Europe, th..."
         },
-        "updated_at": "2026-08-14T14:15:12.084832"
+        "updated_at": "2026-08-17T13:37:52.519928"
     },
-    "FIG": {
+    "U": {
         "data": {
             "sector": "Technology",
             "industry": "Software - Application",
             "pe": 0,
-            "peg": 7.95,
-            "debt_to_equity": 0.05,
-            "description": "Figma, Inc. develops and sells a collaborative, browser-based platform for designing, prototyping, building digital experiences, and subscriptions for access to its platform. The company offers Figma ..."
-        },
-        "updated_at": "2026-08-14T14:15:35.937773"
-    },
-    "SOXL": {
-        "data": {
-            "sector": "Unknown",
-            "industry": "Unknown",
-            "pe": 51.24,
             "peg": 0,
-            "debt_to_equity": 0,
-            "description": "The fund invests at least 80% of its net assets in financial instruments, such as swap agreements, securities of the index, and ETFs that track the index, that, in combination, provide 3X daily levera..."
+            "debt_to_equity": 0.7,
+            "description": "Unity Software Inc. operates a platform to develop, deploy, and grow games and interactive experiences for mobile phones, PCs, consoles, and extended reality devices in the United States, China, Hong ..."
         },
-        "updated_at": "2026-08-14T14:16:27.187785"
+        "updated_at": "2026-08-17T13:38:16.640004"
     },
-    "QQQ": {
+    "DTE": {
         "data": {
-            "sector": "Unknown",
-            "industry": "Unknown",
-            "pe": 31.33,
-            "peg": 0,
-            "debt_to_equity": 0,
-            "description": "To maintain the correspondence between the composition and weights of the securities in the trust (the \"securities\") and the stocks in the NASDAQ-100 Index\u00ae, the adviser adjusts the securities from ti..."
+            "sector": "Utilities",
+            "industry": "Utilities - Regulated Electric",
+            "pe": 22.15,
+            "peg": 1.98,
+            "debt_to_equity": 2.29,
+            "description": "DTE Energy Company engages in energy-related businesses and services. The company operates through four segments: Electric, Gas, DTE Vantage, and Energy Trading.The company's Electric segment generate..."
         },
-        "updated_at": "2026-08-14T14:16:47.357388"
+        "updated_at": "2026-08-17T13:38:36.174743"
     },
-    "SMCI": {
+    "MS": {
         "data": {
-            "sector": "Technology",
-            "industry": "Computer Hardware",
-            "pe": 21.04,
-            "peg": 0.91,
-            "debt_to_equity": 0.64,
-            "description": "Super Micro Computer, Inc., together with its subsidiaries, develops and sells server and storage solutions based on modular and open-standard architecture in the United States, Asia, Europe, and inte..."
+            "sector": "Financial Services",
+            "industry": "Capital Markets",
+            "pe": 17.62,
+            "peg": 2.06,
+            "debt_to_equity": 5.17,
+            "description": "Morgan Stanley, a financial holding company, provides various financial products and services to corporations, governments, financial institutions, and individuals in the Americas, Asia, Europe, the M..."
         },
-        "updated_at": "2026-08-14T14:17:17.210071"
+        "updated_at": "2026-08-17T13:38:58.018886"
     }
 }
