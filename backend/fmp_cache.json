@@ -1,25 +1,80 @@
 {
-    "DAL": {
+    "NVDA": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Semiconductors",
+            "pe": 33.63,
+            "peg": 0.62,
+            "debt_to_equity": 0.07,
+            "description": "NVIDIA Corporation operates as a data center scale AI infrastructure company in the United States, Taiwan, China, Hong Kong, Europe, and internationally. It operates through Compute & Networking, and ..."
+        },
+        "updated_at": "2026-08-19T13:40:45.425922"
+    },
+    "MSFT": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Software - Infrastructure",
+            "pe": 26.8,
+            "peg": 1.61,
+            "debt_to_equity": 0.29,
+            "description": "Microsoft Corporation, a technology company, develops and supports a portfolio of technology solutions for individuals and businesses worldwide. Its products include operating systems, server applicat..."
+        },
+        "updated_at": "2026-08-19T13:41:47.678799"
+    },
+    "UAE": {
+        "data": {
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 9.12,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "The fund generally will invest at least 80% of its assets in the component securities of the underlying index and in investments that have economic characteristics that are substantially identical to ..."
+        },
+        "updated_at": "2026-08-19T13:43:17.168717"
+    },
+    "AAPL": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Consumer Electronics",
+            "pe": 35.84,
+            "peg": 2.47,
+            "debt_to_equity": 0.78,
+            "description": "Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide. The company offers iPhone, a line of smartphones; Mac, a line of personal ..."
+        },
+        "updated_at": "2026-08-19T13:43:48.046748"
+    },
+    "TSM": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Semiconductors",
+            "pe": 31.02,
+            "peg": 1.03,
+            "debt_to_equity": 0.17,
+            "description": "Taiwan Semiconductor Manufacturing Company Limited, together with its subsidiaries, manufactures, packages, tests, and sells integrated circuits and other semiconductor devices in Taiwan, China, Europ..."
+        },
+        "updated_at": "2026-08-19T13:44:22.851016"
+    },
+    "HTZ": {
         "data": {
             "sector": "Industrials",
-            "industry": "Airlines",
-            "pe": 14.32,
-            "peg": 0.21,
-            "debt_to_equity": 0.97,
-            "description": "Delta Air Lines, Inc. provides scheduled air transportation for passengers and cargo in the United States and internationally. The company operates through two segments, Airline and Refinery. Its dome..."
+            "industry": "Rental & Leasing Services",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "Hertz Global Holdings, Inc. operates as a vehicle rental company. It operates through two segments: Americas RAC and International RAC. The company offers vehicle rental services under the Hertz, Doll..."
         },
-        "updated_at": "2026-08-18T13:38:52.254120"
+        "updated_at": "2026-08-19T13:44:53.263794"
     },
-    "SLB": {
+    "NKE": {
         "data": {
-            "sector": "Energy",
-            "industry": "Oil & Gas Equipment & Services",
-            "pe": 26.54,
-            "peg": 1.81,
-            "debt_to_equity": 0.47,
-            "description": "SLB N.V. engages in the provision of technology for the energy industry worldwide. The company operates through four divisions: Digital & Integration, Reservoir Performance, Well Construction, and Pro..."
+            "sector": "Consumer Cyclical",
+            "industry": "Footwear & Accessories",
+            "pe": 18.88,
+            "peg": 1.51,
+            "debt_to_equity": 0.74,
+            "description": "NIKE, Inc., together with its subsidiaries, designs, develops, markets, and sells athletic footwear, apparel, equipment, accessories, and services for men, women, and kids in North America, Europe, th..."
         },
-        "updated_at": "2026-08-18T13:39:15.084135"
+        "updated_at": "2026-08-19T13:45:43.760010"
     },
     "ASTS": {
         "data": {
@@ -30,61 +85,6 @@
             "debt_to_equity": 1.25,
             "description": "AST SpaceMobile, Inc., together with its subsidiaries, designs and develops the constellation of BlueBird satellites in the United States. The company provides a cellular broadband network in space to..."
         },
-        "updated_at": "2026-08-18T13:39:37.322832"
-    },
-    "HIVE": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Capital Markets",
-            "pe": 0,
-            "peg": 0,
-            "debt_to_equity": 0.89,
-            "description": "HIVE Digital Technologies Ltd., a technology company, builds and operates data centers powered by green energy in Bermuda, Paraguay, Sweden, and Canada. The Company operates the mining and sale of dig..."
-        },
-        "updated_at": "2026-08-18T13:39:55.888465"
-    },
-    "PYPL": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Credit Services",
-            "pe": 11.57,
-            "peg": 1.13,
-            "debt_to_equity": 0.72,
-            "description": "PayPal Holdings, Inc. operates a technology platform that enables digital payments for merchants and consumers worldwide. The company operates a two-sided network at scale that connects merchants and ..."
-        },
-        "updated_at": "2026-08-18T13:40:16.649311"
-    },
-    "NET": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 0,
-            "peg": 2.38,
-            "debt_to_equity": 2.18,
-            "description": "Cloudflare, Inc. operates as a cloud services provider that delivers a range of services to businesses worldwide. The company provides a cloud-based security solution to secure a range of combination ..."
-        },
-        "updated_at": "2026-08-18T13:40:40.602621"
-    },
-    "APA": {
-        "data": {
-            "sector": "Energy",
-            "industry": "Oil & Gas E&P",
-            "pe": 8.53,
-            "peg": 0.77,
-            "debt_to_equity": 0.49,
-            "description": "APA Corporation, an independent energy company, explores for, develops, and produces natural gas, crude oil, and natural gas liquids. The company has oil and gas operations in the United States, Egypt..."
-        },
-        "updated_at": "2026-08-18T13:41:05.144234"
-    },
-    "SMCI": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Computer Hardware",
-            "pe": 11.64,
-            "peg": 0.91,
-            "debt_to_equity": 0.64,
-            "description": "Super Micro Computer, Inc., together with its subsidiaries, develops and sells server and storage solutions based on modular and open-standard architecture in the United States, Asia, Europe, and inte..."
-        },
-        "updated_at": "2026-08-18T13:41:34.040022"
+        "updated_at": "2026-08-19T13:47:48.793030"
     }
 }
