@@ -1,90 +1,90 @@
 {
-    "VZ": {
+    "GS": {
+        "data": {
+            "sector": "Financial Services",
+            "industry": "Capital Markets",
+            "pe": 15.75,
+            "peg": 1.45,
+            "debt_to_equity": 7.25,
+            "description": "The Goldman Sachs Group, Inc., a financial institution, provides a range of financial services for corporations, financial institutions, governments, and individuals in the Americas, Europe, the Middl..."
+        },
+        "updated_at": "2026-08-21T13:41:47.678488"
+    },
+    "SMCI": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Computer Hardware",
+            "pe": 11.42,
+            "peg": 0.91,
+            "debt_to_equity": 0.64,
+            "description": "Super Micro Computer, Inc., together with its subsidiaries, develops and sells server and storage solutions based on modular and open-standard architecture in the United States, Asia, Europe, and inte..."
+        },
+        "updated_at": "2026-08-21T13:42:17.694038"
+    },
+    "IQ": {
         "data": {
             "sector": "Communication Services",
-            "industry": "Telecom Services",
-            "pe": 12.85,
-            "peg": 0.93,
-            "debt_to_equity": 1.84,
-            "description": "Verizon Communications Inc., through its subsidiaries, engages in the provision of communications, technology, information, and streaming products and services to consumers, businesses, and government..."
+            "industry": "Entertainment",
+            "pe": 0,
+            "peg": 2.48,
+            "debt_to_equity": 1.12,
+            "description": "iQIYI, Inc. provides online entertainment video services in the People's Republic of China. The company operates a platform that provides a collection of internet video content, such as professionally..."
         },
-        "updated_at": "2026-08-20T13:42:06.820259"
+        "updated_at": "2026-08-21T13:42:41.206740"
     },
-    "MU": {
+    "PFE": {
+        "data": {
+            "sector": "Healthcare",
+            "industry": "Drug Manufacturers - General",
+            "pe": 36.8,
+            "peg": 2.74,
+            "debt_to_equity": 0.74,
+            "description": "Pfizer Inc. discovers, develops, manufactures, markets, distributes, and sells biopharmaceutical products in the United States and internationally. It operates in three segments: Biopharma, PC1, and P..."
+        },
+        "updated_at": "2026-08-21T13:43:10.671611"
+    },
+    "BLK": {
+        "data": {
+            "sector": "Financial Services",
+            "industry": "Asset Management",
+            "pe": 27.66,
+            "peg": 1.25,
+            "debt_to_equity": 0.23,
+            "description": "BlackRock, Inc. is a publicly owned investment manager. The firm primarily provides its services to institutional, intermediary, and individual investors including corporate, public, union, and indust..."
+        },
+        "updated_at": "2026-08-21T13:43:37.965870"
+    },
+    "TSM": {
         "data": {
             "sector": "Technology",
             "industry": "Semiconductors",
-            "pe": 21.38,
-            "peg": 0.14,
-            "debt_to_equity": 0.06,
-            "description": "Micron Technology, Inc. designs, develops, manufactures, and sells memory and storage products in the United States, Taiwan, Japan, Mainland China, Hong Kong, Europe, and internationally. It operates ..."
+            "pe": 31.34,
+            "peg": 0.98,
+            "debt_to_equity": 0.17,
+            "description": "Taiwan Semiconductor Manufacturing Company Limited, together with its subsidiaries, manufactures, packages, tests, and sells integrated circuits and other semiconductor devices in Taiwan, China, Europ..."
         },
-        "updated_at": "2026-08-20T13:42:37.807326"
+        "updated_at": "2026-08-21T13:44:05.069693"
     },
-    "USO": {
+    "RKLB": {
         "data": {
-            "sector": "Unknown",
-            "industry": "Unknown",
-            "pe": 40.79,
-            "peg": 0,
-            "debt_to_equity": 0,
-            "description": "USO seeks to achieve its investment objective by investing primarily in futures contracts for light, sweet crude oil, other types of crude oil, diesel-heating oil, gasoline, natural gas, and other pet..."
-        },
-        "updated_at": "2026-08-20T13:43:04.981074"
-    },
-    "NCLH": {
-        "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Travel Services",
-            "pe": 10.41,
-            "peg": 1.56,
-            "debt_to_equity": 6.21,
-            "description": "Norwegian Cruise Line Holdings Ltd., together with its subsidiaries, operates as a cruise company in North America, Europe, the Asia-Pacific, and internationally. It offers itineraries to destinations..."
-        },
-        "updated_at": "2026-08-20T13:43:27.788627"
-    },
-    "MRVL": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Semiconductors",
-            "pe": 83.45,
-            "peg": 1.34,
-            "debt_to_equity": 0.29,
-            "description": "Marvell Technology, Inc., together with its subsidiaries, provides data infrastructure semiconductor solutions and spanning the data center core to network edge in the United States, Argentina, China,..."
-        },
-        "updated_at": "2026-08-20T13:44:19.463759"
-    },
-    "WMT": {
-        "data": {
-            "sector": "Consumer Defensive",
-            "industry": "Discount Stores",
-            "pe": 36.86,
-            "peg": 4.36,
-            "debt_to_equity": 0.75,
-            "description": "Walmart Inc. engages in the operation of retail and wholesale stores and clubs, ecommerce websites, and mobile applications worldwide. The company operates through three segments: Walmart U.S., Walmar..."
-        },
-        "updated_at": "2026-08-20T13:44:44.682833"
-    },
-    "TSLA": {
-        "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Auto Manufacturers",
-            "pe": 315.39,
-            "peg": 5.01,
-            "debt_to_equity": 0.18,
-            "description": "Tesla, Inc. designs, develops, manufactures, leases, and sells electric vehicles, and energy generation and storage systems in the United States, China, and internationally. The company operates in tw..."
-        },
-        "updated_at": "2026-08-20T13:45:17.174288"
-    },
-    "GLD": {
-        "data": {
-            "sector": "Unknown",
-            "industry": "Unknown",
+            "sector": "Industrials",
+            "industry": "Aerospace & Defense",
             "pe": 0,
             "peg": 0,
-            "debt_to_equity": 0,
-            "description": "The Trust holds gold bars and from time to time, issues Baskets in exchange for deposits of gold and distributes gold in connection with redemptions of Baskets. The investment objective of the Trust i..."
+            "debt_to_equity": 0.04,
+            "description": "Rocket Lab Corporation, a space company, provides launch services and space systems solutions in the United States, Canada, Japan, and internationally. The company operates through launch services and..."
         },
-        "updated_at": "2026-08-20T13:46:14.253321"
+        "updated_at": "2026-08-21T13:44:30.912759"
+    },
+    "RDDT": {
+        "data": {
+            "sector": "Communication Services",
+            "industry": "Internet Content & Information",
+            "pe": 35.71,
+            "peg": 1.02,
+            "debt_to_equity": 0.01,
+            "description": "Reddit, Inc. operates a digital community in the United States and internationally. The company's platform enables user to engage in conversations, explore passions, research new hobbies, exchange goo..."
+        },
+        "updated_at": "2026-08-21T13:44:58.988460"
     }
 }
