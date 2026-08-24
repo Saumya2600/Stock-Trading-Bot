@@ -1,90 +1,90 @@
 {
-    "GS": {
+    "DTE": {
         "data": {
-            "sector": "Financial Services",
-            "industry": "Capital Markets",
-            "pe": 15.75,
-            "peg": 1.45,
-            "debt_to_equity": 7.25,
-            "description": "The Goldman Sachs Group, Inc., a financial institution, provides a range of financial services for corporations, financial institutions, governments, and individuals in the Americas, Europe, the Middl..."
+            "sector": "Utilities",
+            "industry": "Utilities - Regulated Electric",
+            "pe": 21.43,
+            "peg": 1.9,
+            "debt_to_equity": 2.29,
+            "description": "DTE Energy Company engages in energy-related businesses and services. The company operates through four segments: Electric, Gas, DTE Vantage, and Energy Trading.The company's Electric segment generate..."
         },
-        "updated_at": "2026-08-21T13:41:47.678488"
+        "updated_at": "2026-08-24T13:46:30.062191"
     },
-    "SMCI": {
+    "AAPL": {
         "data": {
             "sector": "Technology",
-            "industry": "Computer Hardware",
-            "pe": 11.42,
-            "peg": 0.91,
-            "debt_to_equity": 0.64,
-            "description": "Super Micro Computer, Inc., together with its subsidiaries, develops and sells server and storage solutions based on modular and open-standard architecture in the United States, Asia, Europe, and inte..."
+            "industry": "Consumer Electronics",
+            "pe": 35.66,
+            "peg": 2.49,
+            "debt_to_equity": 0.78,
+            "description": "Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide. The company offers iPhone, a line of smartphones; Mac, a line of personal ..."
         },
-        "updated_at": "2026-08-21T13:42:17.694038"
+        "updated_at": "2026-08-24T13:46:58.870952"
     },
-    "IQ": {
+    "ADBE": {
         "data": {
-            "sector": "Communication Services",
-            "industry": "Entertainment",
-            "pe": 0,
-            "peg": 2.48,
-            "debt_to_equity": 1.12,
-            "description": "iQIYI, Inc. provides online entertainment video services in the People's Republic of China. The company operates a platform that provides a collection of internet video content, such as professionally..."
+            "sector": "Technology",
+            "industry": "Software - Application",
+            "pe": 15.72,
+            "peg": 0.67,
+            "debt_to_equity": 0.61,
+            "description": "Adobe Inc. operates as a technology company worldwide. The Digital Media segment offers products and services that enable individuals, teams, and enterprises to create, publish, and promote content. T..."
         },
-        "updated_at": "2026-08-21T13:42:41.206740"
+        "updated_at": "2026-08-24T13:47:22.063648"
     },
-    "PFE": {
+    "SLS": {
         "data": {
             "sector": "Healthcare",
-            "industry": "Drug Manufacturers - General",
-            "pe": 36.8,
-            "peg": 2.74,
-            "debt_to_equity": 0.74,
-            "description": "Pfizer Inc. discovers, develops, manufactures, markets, distributes, and sells biopharmaceutical products in the United States and internationally. It operates in three segments: Biopharma, PC1, and P..."
-        },
-        "updated_at": "2026-08-21T13:43:10.671611"
-    },
-    "BLK": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Asset Management",
-            "pe": 27.66,
-            "peg": 1.25,
-            "debt_to_equity": 0.23,
-            "description": "BlackRock, Inc. is a publicly owned investment manager. The firm primarily provides its services to institutional, intermediary, and individual investors including corporate, public, union, and indust..."
-        },
-        "updated_at": "2026-08-21T13:43:37.965870"
-    },
-    "TSM": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Semiconductors",
-            "pe": 31.34,
-            "peg": 0.98,
-            "debt_to_equity": 0.17,
-            "description": "Taiwan Semiconductor Manufacturing Company Limited, together with its subsidiaries, manufactures, packages, tests, and sells integrated circuits and other semiconductor devices in Taiwan, China, Europ..."
-        },
-        "updated_at": "2026-08-21T13:44:05.069693"
-    },
-    "RKLB": {
-        "data": {
-            "sector": "Industrials",
-            "industry": "Aerospace & Defense",
+            "industry": "Biotechnology",
             "pe": 0,
             "peg": 0,
-            "debt_to_equity": 0.04,
-            "description": "Rocket Lab Corporation, a space company, provides launch services and space systems solutions in the United States, Canada, Japan, and internationally. The company operates through launch services and..."
+            "debt_to_equity": 0.01,
+            "description": "SELLAS Life Sciences Group, Inc., a late-stage clinical biopharmaceutical company, focuses on the development of novel therapeutics for various cancer indications in the United States. The company's l..."
         },
-        "updated_at": "2026-08-21T13:44:30.912759"
+        "updated_at": "2026-08-24T13:47:50.491335"
     },
-    "RDDT": {
+    "TSLA": {
+        "data": {
+            "sector": "Consumer Cyclical",
+            "industry": "Auto Manufacturers",
+            "pe": 324.61,
+            "peg": 5.32,
+            "debt_to_equity": 0.18,
+            "description": "Tesla, Inc. designs, develops, manufactures, leases, and sells electric vehicles, and energy generation and storage systems in the United States, China, and internationally. The company operates in tw..."
+        },
+        "updated_at": "2026-08-24T13:48:19.292652"
+    },
+    "MGM": {
+        "data": {
+            "sector": "Consumer Cyclical",
+            "industry": "Resorts & Casinos",
+            "pe": 26.57,
+            "peg": 0.61,
+            "debt_to_equity": 8.93,
+            "description": "MGM Resorts International, through its subsidiaries, operates as a gaming and entertainment company in the United States, China, and internationally. It operates through four segments: Las Vegas Strip..."
+        },
+        "updated_at": "2026-08-24T13:48:49.371546"
+    },
+    "T": {
         "data": {
             "sector": "Communication Services",
-            "industry": "Internet Content & Information",
-            "pe": 35.71,
-            "peg": 1.02,
-            "debt_to_equity": 0.01,
-            "description": "Reddit, Inc. operates a digital community in the United States and internationally. The company's platform enables user to engage in conversations, explore passions, research new hobbies, exchange goo..."
+            "industry": "Telecom Services",
+            "pe": 8.43,
+            "peg": 1.68,
+            "debt_to_equity": 1.29,
+            "description": "AT&T Inc. provides telecommunications and technology services worldwide. It operates through two segments, Communications and Latin America. The Communications segment offers wireless voice and data c..."
         },
-        "updated_at": "2026-08-21T13:44:58.988460"
+        "updated_at": "2026-08-24T13:49:37.662965"
+    },
+    "MSFT": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Software - Infrastructure",
+            "pe": 27.03,
+            "peg": 1.57,
+            "debt_to_equity": 0.29,
+            "description": "Microsoft Corporation, a technology company, develops and supports a portfolio of technology solutions for individuals and businesses worldwide. Its products include operating systems, server applicat..."
+        },
+        "updated_at": "2026-08-24T13:50:07.199372"
     }
 }
