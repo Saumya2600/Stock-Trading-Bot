@@ -1,90 +1,90 @@
 {
-    "DTE": {
+    "PLTR": {
         "data": {
-            "sector": "Utilities",
-            "industry": "Utilities - Regulated Electric",
-            "pe": 21.44,
-            "peg": 1.9,
-            "debt_to_equity": 2.29,
-            "description": "DTE Energy Company engages in energy-related businesses and services. The company operates through four segments: Electric, Gas, DTE Vantage, and Energy Trading.The company's Electric segment generate..."
+            "sector": "Technology",
+            "industry": "Software - Infrastructure",
+            "pe": 147.42,
+            "peg": 2.41,
+            "debt_to_equity": 0.02,
+            "description": "Palantir Technologies Inc. builds and deploys software platforms for the intelligence community to assist in counterterrorism investigations and operations in the United States, the United Kingdom, an..."
         },
-        "updated_at": "2026-08-25T13:44:30.816379"
+        "updated_at": "2026-08-26T13:50:47.944975"
     },
-    "AGI": {
+    "HSBC": {
         "data": {
-            "sector": "Basic Materials",
-            "industry": "Gold",
-            "pe": 13.54,
-            "peg": 0,
-            "debt_to_equity": 0.05,
-            "description": "Alamos Gold Inc. operates as a gold producer in Canada and Mexico. It primarily explores for gold deposits. The company was founded in 2003 and is based in Toronto, Canada...."
-        },
-        "updated_at": "2026-08-25T13:44:59.937503"
-    },
-    "GOOG": {
-        "data": {
-            "sector": "Communication Services",
-            "industry": "Internet Content & Information",
-            "pe": 17.36,
-            "peg": 0.93,
-            "debt_to_equity": 0.19,
-            "description": "Alphabet Inc. offers various products and platforms in the United States, Europe, the Middle East, Africa, the Asia-Pacific, Canada, and Latin America. It operates through Google Services, Google Clou..."
-        },
-        "updated_at": "2026-08-25T13:45:32.050437"
-    },
-    "F": {
-        "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Auto Manufacturers",
-            "pe": 0,
-            "peg": 8.48,
-            "debt_to_equity": 4.57,
-            "description": "Ford Motor Company develops, delivers, and services Ford trucks, sport utility vehicles, commercial vans and cars, and Lincoln luxury vehicles in the United States, Canada, the United Kingdom, Mexico,..."
-        },
-        "updated_at": "2026-08-25T13:45:58.400459"
-    },
-    "PEP": {
-        "data": {
-            "sector": "Consumer Defensive",
-            "industry": "Beverages - Non-Alcoholic",
-            "pe": 18.75,
-            "peg": 1.55,
-            "debt_to_equity": 2.39,
-            "description": "PepsiCo, Inc. engages in the manufacture, marketing, distribution, and sale of various beverages and convenient foods worldwide. The company operates through six segments: PepsiCo Foods North America;..."
-        },
-        "updated_at": "2026-08-25T13:46:28.954513"
-    },
-    "EU": {
-        "data": {
-            "sector": "Energy",
-            "industry": "Uranium",
-            "pe": 0,
-            "peg": 0,
-            "debt_to_equity": 0.46,
-            "description": "enCore Energy Corp., together with its subsidiaries, engages in the acquisition, exploration, development, and extraction of uranium resource properties in the United States. The company is headquarte..."
-        },
-        "updated_at": "2026-08-25T13:46:50.197240"
-    },
-    "SOXL": {
-        "data": {
-            "sector": "Unknown",
-            "industry": "Unknown",
-            "pe": 41.67,
-            "peg": 0,
+            "sector": "Financial Services",
+            "industry": "Banks - Diversified",
+            "pe": 14.85,
+            "peg": 1.03,
             "debt_to_equity": 0,
-            "description": "The fund invests at least 80% of its net assets in financial instruments, such as swap agreements, securities of the index, and ETFs that track the index, that, in combination, provide 3X daily levera..."
+            "description": "HSBC Holdings plc engages in the provision of banking and financial products and services worldwide. It operates through four segments: Hong Kong, UK, Corporate and Institutional Banking, and Internat..."
         },
-        "updated_at": "2026-08-25T13:47:12.735984"
+        "updated_at": "2026-08-26T13:51:13.790623"
     },
-    "SLS": {
+    "ASTS": {
         "data": {
-            "sector": "Healthcare",
-            "industry": "Biotechnology",
+            "sector": "Technology",
+            "industry": "Communication Equipment",
             "pe": 0,
             "peg": 0,
-            "debt_to_equity": 0.01,
-            "description": "SELLAS Life Sciences Group, Inc., a late-stage clinical biopharmaceutical company, focuses on the development of novel therapeutics for various cancer indications in the United States. The company's l..."
+            "debt_to_equity": 1.25,
+            "description": "AST SpaceMobile, Inc., together with its subsidiaries, designs and develops the constellation of BlueBird satellites in the United States. The company provides a cellular broadband network in space to..."
         },
-        "updated_at": "2026-08-25T13:47:36.662033"
+        "updated_at": "2026-08-26T13:51:41.529275"
+    },
+    "RKLB": {
+        "data": {
+            "sector": "Industrials",
+            "industry": "Aerospace & Defense",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 0.04,
+            "description": "Rocket Lab Corporation, a space company, provides launch services and space systems solutions in the United States, Canada, Japan, and internationally. The company operates through launch services and..."
+        },
+        "updated_at": "2026-08-26T13:52:14.856917"
+    },
+    "AXP": {
+        "data": {
+            "sector": "Financial Services",
+            "industry": "Credit Services",
+            "pe": 20.39,
+            "peg": 1.57,
+            "debt_to_equity": 1.72,
+            "description": "American Express Company, together with its subsidiaries, operates as an integrated payments company in the United States, Europe, the Middle East and Africa, the Asia Pacific, Australia, New Zealand,..."
+        },
+        "updated_at": "2026-08-26T13:52:40.718830"
+    },
+    "DAL": {
+        "data": {
+            "sector": "Industrials",
+            "industry": "Airlines",
+            "pe": 13.94,
+            "peg": 0.21,
+            "debt_to_equity": 0.97,
+            "description": "Delta Air Lines, Inc. provides scheduled air transportation for passengers and cargo in the United States and internationally. The company operates through two segments, Airline and Refinery. Its dome..."
+        },
+        "updated_at": "2026-08-26T13:53:05.497372"
+    },
+    "CRM": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Software - Application",
+            "pe": 23.66,
+            "peg": 0.87,
+            "debt_to_equity": 1.24,
+            "description": "Salesforce, Inc. provides customer relationship management technology services that connect companies and customers together in the United States, Europe, and the Asia Pacific. The company offers Agen..."
+        },
+        "updated_at": "2026-08-26T13:53:27.452276"
+    },
+    "YOU": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Software - Application",
+            "pe": 30.64,
+            "peg": 0,
+            "debt_to_equity": 0.45,
+            "description": "Clear Secure, Inc. operates a secure identity platform under the CLEAR brand name primarily in the United States. It provides secure identity platform, a multi-layered infrastructure consisting of fro..."
+        },
+        "updated_at": "2026-08-26T13:53:51.904387"
     }
 }
