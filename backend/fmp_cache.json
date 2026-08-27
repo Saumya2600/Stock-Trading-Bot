@@ -1,90 +1,90 @@
 {
-    "PLTR": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 147.42,
-            "peg": 2.41,
-            "debt_to_equity": 0.02,
-            "description": "Palantir Technologies Inc. builds and deploys software platforms for the intelligence community to assist in counterterrorism investigations and operations in the United States, the United Kingdom, an..."
-        },
-        "updated_at": "2026-08-26T13:50:47.944975"
-    },
-    "HSBC": {
+    "BLK": {
         "data": {
             "sector": "Financial Services",
-            "industry": "Banks - Diversified",
-            "pe": 14.85,
-            "peg": 1.03,
-            "debt_to_equity": 0,
-            "description": "HSBC Holdings plc engages in the provision of banking and financial products and services worldwide. It operates through four segments: Hong Kong, UK, Corporate and Institutional Banking, and Internat..."
+            "industry": "Asset Management",
+            "pe": 27.95,
+            "peg": 1.13,
+            "debt_to_equity": 0.23,
+            "description": "BlackRock, Inc. is a publicly owned investment manager. The firm primarily provides its services to institutional, intermediary, and individual investors including corporate, public, union, and indust..."
         },
-        "updated_at": "2026-08-26T13:51:13.790623"
+        "updated_at": "2026-08-27T22:44:49.510444"
     },
-    "ASTS": {
+    "NOW": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Software - Application",
+            "pe": 86.52,
+            "peg": 1.13,
+            "debt_to_equity": 0.68,
+            "description": "ServiceNow, Inc. provides cloud-based solution for digital workflows in the North America, Brazil, Europe, the Middle East and Africa, Asia Pacific, and internationally. The company provides asset man..."
+        },
+        "updated_at": "2026-08-27T22:45:10.362531"
+    },
+    "WDAY": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Software - Application",
+            "pe": 60.49,
+            "peg": 0.75,
+            "debt_to_equity": 0.57,
+            "description": "Workday, Inc. provides enterprise cloud applications in the United States and internationally. The company offers a suite of financial management applications to maintain accounting information; manag..."
+        },
+        "updated_at": "2026-08-27T22:45:31.100711"
+    },
+    "SNDK": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Computer Hardware",
+            "pe": 20.13,
+            "peg": 0,
+            "debt_to_equity": 0.01,
+            "description": "Sandisk Corporation develops, manufactures, and sells data storage devices and solutions using NAND flash technology in the Americas, Europe, the Middle East, Africa, Asia, and internationally. The co..."
+        },
+        "updated_at": "2026-08-27T22:45:59.847768"
+    },
+    "CSCO": {
         "data": {
             "sector": "Technology",
             "industry": "Communication Equipment",
-            "pe": 0,
-            "peg": 0,
-            "debt_to_equity": 1.25,
-            "description": "AST SpaceMobile, Inc., together with its subsidiaries, designs and develops the constellation of BlueBird satellites in the United States. The company provides a cellular broadband network in space to..."
+            "pe": 33.68,
+            "peg": 1.02,
+            "debt_to_equity": 0.59,
+            "description": "Cisco Systems, Inc. designs, develops, and sells technologies that help to power, secure, and draw insights from the internet in the Americas, Europe, the Middle East, Africa, the Asia Pacific, Japan,..."
         },
-        "updated_at": "2026-08-26T13:51:41.529275"
+        "updated_at": "2026-08-27T22:46:47.216416"
     },
-    "RKLB": {
-        "data": {
-            "sector": "Industrials",
-            "industry": "Aerospace & Defense",
-            "pe": 0,
-            "peg": 0,
-            "debt_to_equity": 0.04,
-            "description": "Rocket Lab Corporation, a space company, provides launch services and space systems solutions in the United States, Canada, Japan, and internationally. The company operates through launch services and..."
-        },
-        "updated_at": "2026-08-26T13:52:14.856917"
-    },
-    "AXP": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Credit Services",
-            "pe": 20.39,
-            "peg": 1.57,
-            "debt_to_equity": 1.72,
-            "description": "American Express Company, together with its subsidiaries, operates as an integrated payments company in the United States, Europe, the Middle East and Africa, the Asia Pacific, Australia, New Zealand,..."
-        },
-        "updated_at": "2026-08-26T13:52:40.718830"
-    },
-    "DAL": {
-        "data": {
-            "sector": "Industrials",
-            "industry": "Airlines",
-            "pe": 13.94,
-            "peg": 0.21,
-            "debt_to_equity": 0.97,
-            "description": "Delta Air Lines, Inc. provides scheduled air transportation for passengers and cargo in the United States and internationally. The company operates through two segments, Airline and Refinery. Its dome..."
-        },
-        "updated_at": "2026-08-26T13:53:05.497372"
-    },
-    "CRM": {
+    "OKTA": {
         "data": {
             "sector": "Technology",
-            "industry": "Software - Application",
-            "pe": 23.66,
+            "industry": "Software - Infrastructure",
+            "pe": 125.3,
+            "peg": 1.24,
+            "debt_to_equity": 0.06,
+            "description": "Okta, Inc. operates as an identity partner in the United States and internationally. It offers Single Sign-on to secure access to cloud and on-premises applications from any device; Adaptive MFA for a..."
+        },
+        "updated_at": "2026-08-27T22:47:13.760313"
+    },
+    "GOOGL": {
+        "data": {
+            "sector": "Communication Services",
+            "industry": "Internet Content & Information",
+            "pe": 17.08,
+            "peg": 0.94,
+            "debt_to_equity": 0.19,
+            "description": "Alphabet Inc. offers various products and platforms in the United States, Europe, the Middle East, Africa, the Asia-Pacific, Canada, and Latin America. It operates through Google Services, Google Clou..."
+        },
+        "updated_at": "2026-08-27T22:47:35.138749"
+    },
+    "IT": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Information Technology Services",
+            "pe": 17.7,
             "peg": 0.87,
-            "debt_to_equity": 1.24,
-            "description": "Salesforce, Inc. provides customer relationship management technology services that connect companies and customers together in the United States, Europe, and the Asia Pacific. The company offers Agen..."
+            "debt_to_equity": 0,
+            "description": "Gartner, Inc. provides business and technology insights to support decision-making and performance on an organization's mission-critical priorities in the United States, Canada, Europe, the Middle Eas..."
         },
-        "updated_at": "2026-08-26T13:53:27.452276"
-    },
-    "YOU": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Application",
-            "pe": 30.64,
-            "peg": 0,
-            "debt_to_equity": 0.45,
-            "description": "Clear Secure, Inc. operates a secure identity platform under the CLEAR brand name primarily in the United States. It provides secure identity platform, a multi-layered infrastructure consisting of fro..."
-        },
-        "updated_at": "2026-08-26T13:53:51.904387"
+        "updated_at": "2026-08-27T22:48:02.801547"
     }
 }
