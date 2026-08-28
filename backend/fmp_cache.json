@@ -1,90 +1,90 @@
 {
-    "BLK": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Asset Management",
-            "pe": 27.95,
-            "peg": 1.13,
-            "debt_to_equity": 0.23,
-            "description": "BlackRock, Inc. is a publicly owned investment manager. The firm primarily provides its services to institutional, intermediary, and individual investors including corporate, public, union, and indust..."
-        },
-        "updated_at": "2026-08-27T22:44:49.510444"
-    },
-    "NOW": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Application",
-            "pe": 86.52,
-            "peg": 1.13,
-            "debt_to_equity": 0.68,
-            "description": "ServiceNow, Inc. provides cloud-based solution for digital workflows in the North America, Brazil, Europe, the Middle East and Africa, Asia Pacific, and internationally. The company provides asset man..."
-        },
-        "updated_at": "2026-08-27T22:45:10.362531"
-    },
-    "WDAY": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Application",
-            "pe": 60.49,
-            "peg": 0.75,
-            "debt_to_equity": 0.57,
-            "description": "Workday, Inc. provides enterprise cloud applications in the United States and internationally. The company offers a suite of financial management applications to maintain accounting information; manag..."
-        },
-        "updated_at": "2026-08-27T22:45:31.100711"
-    },
-    "SNDK": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Computer Hardware",
-            "pe": 20.13,
-            "peg": 0,
-            "debt_to_equity": 0.01,
-            "description": "Sandisk Corporation develops, manufactures, and sells data storage devices and solutions using NAND flash technology in the Americas, Europe, the Middle East, Africa, Asia, and internationally. The co..."
-        },
-        "updated_at": "2026-08-27T22:45:59.847768"
-    },
     "CSCO": {
         "data": {
             "sector": "Technology",
             "industry": "Communication Equipment",
-            "pe": 33.68,
+            "pe": 33.01,
             "peg": 1.02,
             "debt_to_equity": 0.59,
             "description": "Cisco Systems, Inc. designs, develops, and sells technologies that help to power, secure, and draw insights from the internet in the Americas, Europe, the Middle East, Africa, the Asia Pacific, Japan,..."
         },
-        "updated_at": "2026-08-27T22:46:47.216416"
+        "updated_at": "2026-08-28T22:52:06.545625"
     },
-    "OKTA": {
+    "CRM": {
         "data": {
             "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 125.3,
-            "peg": 1.24,
-            "debt_to_equity": 0.06,
-            "description": "Okta, Inc. operates as an identity partner in the United States and internationally. It offers Single Sign-on to secure access to cloud and on-premises applications from any device; Adaptive MFA for a..."
+            "industry": "Software - Application",
+            "pe": 23.46,
+            "peg": 0.85,
+            "debt_to_equity": 1.1,
+            "description": "Salesforce, Inc. provides customer relationship management technology services that connect companies and customers together in the United States, Europe, and the Asia Pacific. The company offers Agen..."
         },
-        "updated_at": "2026-08-27T22:47:13.760313"
+        "updated_at": "2026-08-28T22:52:31.436614"
     },
-    "GOOGL": {
+    "SPY": {
         "data": {
-            "sector": "Communication Services",
-            "industry": "Internet Content & Information",
-            "pe": 17.08,
-            "peg": 0.94,
-            "debt_to_equity": 0.19,
-            "description": "Alphabet Inc. offers various products and platforms in the United States, Europe, the Middle East, Africa, the Asia-Pacific, Canada, and Latin America. It operates through Google Services, Google Clou..."
-        },
-        "updated_at": "2026-08-27T22:47:35.138749"
-    },
-    "IT": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Information Technology Services",
-            "pe": 17.7,
-            "peg": 0.87,
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 25.92,
+            "peg": 0,
             "debt_to_equity": 0,
-            "description": "Gartner, Inc. provides business and technology insights to support decision-making and performance on an organization's mission-critical priorities in the United States, Canada, Europe, the Middle Eas..."
+            "description": "The trust seeks to achieve its investment objective by holding a portfolio of the common stocks that are included in the index (the \u201cPortfolio\u201d), with the weight of each stock in the Portfolio substan..."
         },
-        "updated_at": "2026-08-27T22:48:02.801547"
+        "updated_at": "2026-08-28T22:52:55.526355"
+    },
+    "GS": {
+        "data": {
+            "sector": "Financial Services",
+            "industry": "Capital Markets",
+            "pe": 15.97,
+            "peg": 1.5,
+            "debt_to_equity": 7.25,
+            "description": "The Goldman Sachs Group, Inc., a financial institution, provides a range of financial services for corporations, financial institutions, governments, and individuals in the Americas, Europe, the Middl..."
+        },
+        "updated_at": "2026-08-28T22:53:23.802267"
+    },
+    "MRVL": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Semiconductors",
+            "pe": 71.73,
+            "peg": 1.45,
+            "debt_to_equity": 0.27,
+            "description": "Marvell Technology, Inc., together with its subsidiaries, provides data infrastructure semiconductor solutions and spanning the data center core to network edge in the United States, Argentina, China,..."
+        },
+        "updated_at": "2026-08-28T22:53:57.192157"
+    },
+    "MS": {
+        "data": {
+            "sector": "Financial Services",
+            "industry": "Capital Markets",
+            "pe": 17.35,
+            "peg": 2.05,
+            "debt_to_equity": 5.17,
+            "description": "Morgan Stanley, a financial holding company, provides various financial products and services to corporations, governments, financial institutions, and individuals in the Americas, Asia, Europe, the M..."
+        },
+        "updated_at": "2026-08-28T22:54:55.432945"
+    },
+    "NKE": {
+        "data": {
+            "sector": "Consumer Cyclical",
+            "industry": "Footwear & Accessories",
+            "pe": 18.86,
+            "peg": 1.53,
+            "debt_to_equity": 0.74,
+            "description": "NIKE, Inc., together with its subsidiaries, designs, develops, markets, and sells athletic footwear, apparel, equipment, accessories, and services for men, women, and kids in North America, Europe, th..."
+        },
+        "updated_at": "2026-08-28T22:56:35.568319"
+    },
+    "HOOD": {
+        "data": {
+            "sector": "Financial Services",
+            "industry": "Capital Markets",
+            "pe": 46.13,
+            "peg": 2.54,
+            "debt_to_equity": 2.4,
+            "description": "Robinhood Markets, Inc. operates financial services platform in the United States. The company's platform allows users to invest in stocks, exchange-traded funds (ETFs), and American depository receip..."
+        },
+        "updated_at": "2026-08-28T22:57:03.767328"
     }
 }
