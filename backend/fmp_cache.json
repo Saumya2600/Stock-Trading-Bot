@@ -1,90 +1,90 @@
 {
-    "AVGO": {
+    "SLB": {
         "data": {
-            "sector": "Technology",
-            "industry": "Semiconductors",
-            "pe": 61.5,
-            "peg": 0.42,
-            "debt_to_equity": 0.74,
-            "description": "Broadcom Inc. designs, develops, and supplies various semiconductor devices and infrastructure software solutions internationally. The company operates in two segments: Semiconductor Solutions and Inf..."
+            "sector": "Energy",
+            "industry": "Oil & Gas Equipment & Services",
+            "pe": 28.28,
+            "peg": 1.96,
+            "debt_to_equity": 0.47,
+            "description": "SLB N.V. engages in the provision of technology for the energy industry worldwide. The company operates through four divisions: Digital & Integration, Reservoir Performance, Well Construction, and Pro..."
         },
-        "updated_at": "2026-08-31T19:21:56.666669"
+        "updated_at": "2026-09-01T17:07:47.711148"
     },
-    "SCHW": {
+    "TEM": {
+        "data": {
+            "sector": "Healthcare",
+            "industry": "Health Information Services",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 3.25,
+            "description": "Tempus AI, Inc. operates as a healthcare technology company in the United States. It offers the Tempus platform, a closed-loop, full-stack, bi-directional integrations between a clinician's desktop an..."
+        },
+        "updated_at": "2026-09-01T17:08:16.229742"
+    },
+    "SPY": {
+        "data": {
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 25.66,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "The trust seeks to achieve its investment objective by holding a portfolio of the common stocks that are included in the index (the \u201cPortfolio\u201d), with the weight of each stock in the Portfolio substan..."
+        },
+        "updated_at": "2026-09-01T17:08:43.056108"
+    },
+    "BE": {
+        "data": {
+            "sector": "Industrials",
+            "industry": "Electrical Equipment & Parts",
+            "pe": 270.05,
+            "peg": 0.88,
+            "debt_to_equity": 1.72,
+            "description": "Bloom Energy Corporation designs, manufactures, sells, and installs solid oxide fuel cell systems for on-site power generation in the United States and internationally. It offers Bloom Energy Server, ..."
+        },
+        "updated_at": "2026-09-01T17:09:03.354573"
+    },
+    "SOXL": {
+        "data": {
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 37.13,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "The fund invests at least 80% of its net assets in financial instruments, such as swap agreements, securities of the index, and ETFs that track the index, that, in combination, provide 3X daily levera..."
+        },
+        "updated_at": "2026-09-01T17:09:35.972620"
+    },
+    "NCLH": {
+        "data": {
+            "sector": "Consumer Cyclical",
+            "industry": "Travel Services",
+            "pe": 9.41,
+            "peg": 1.5,
+            "debt_to_equity": 6.21,
+            "description": "Norwegian Cruise Line Holdings Ltd., together with its subsidiaries, operates as a cruise company in North America, Europe, the Asia-Pacific, and internationally. It offers itineraries to destinations..."
+        },
+        "updated_at": "2026-09-01T17:10:02.707933"
+    },
+    "PYPL": {
         "data": {
             "sector": "Financial Services",
-            "industry": "Capital Markets",
-            "pe": 20.05,
-            "peg": 1.09,
-            "debt_to_equity": 1.51,
-            "description": "The Charles Schwab Corporation, together with its subsidiaries, operates as a savings and loan holding company that provides wealth management, securities brokerage, banking, asset management, custody..."
+            "industry": "Credit Services",
+            "pe": 9.95,
+            "peg": 0.98,
+            "debt_to_equity": 0.72,
+            "description": "PayPal Holdings, Inc. operates a technology platform that enables digital payments for merchants and consumers worldwide. The company operates a two-sided network at scale that connects merchants and ..."
         },
-        "updated_at": "2026-08-31T19:22:21.285573"
+        "updated_at": "2026-09-01T17:10:27.858944"
     },
     "CRM": {
         "data": {
             "sector": "Technology",
             "industry": "Software - Application",
-            "pe": 23.76,
-            "peg": 1.05,
+            "pe": 23.51,
+            "peg": 1.06,
             "debt_to_equity": 1.1,
             "description": "Salesforce, Inc. provides customer relationship management technology services that connect companies and customers together in the United States, Europe, and the Asia Pacific. The company offers Agen..."
         },
-        "updated_at": "2026-08-31T19:22:40.584793"
-    },
-    "DIS": {
-        "data": {
-            "sector": "Communication Services",
-            "industry": "Entertainment",
-            "pe": 22.21,
-            "peg": 2.65,
-            "debt_to_equity": 0.39,
-            "description": "The Walt Disney Company operates as an entertainment company in Americas, Europe, and the Asia Pacific. It operates in three segments: Entertainment, Sports, and Experiences. The company produces and ..."
-        },
-        "updated_at": "2026-08-31T19:23:03.273662"
-    },
-    "NVDA": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Semiconductors",
-            "pe": 27.71,
-            "peg": 0.63,
-            "debt_to_equity": 0.17,
-            "description": "NVIDIA Corporation operates as a data center scale AI infrastructure company in the United States, Taiwan, China, Hong Kong, Europe, and internationally. It operates through Compute & Networking, and ..."
-        },
-        "updated_at": "2026-08-31T19:23:34.512013"
-    },
-    "GE": {
-        "data": {
-            "sector": "Industrials",
-            "industry": "Aerospace & Defense",
-            "pe": 39.57,
-            "peg": 5.03,
-            "debt_to_equity": 1.13,
-            "description": "General Electric Company, doing business as GE Aerospace, designs and produces commercial and defense aircraft engines, integrated engine components, electric power, and aircraft systems. The company ..."
-        },
-        "updated_at": "2026-08-31T19:23:58.725694"
-    },
-    "MSFT": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 28.39,
-            "peg": 1.64,
-            "debt_to_equity": 0.29,
-            "description": "Microsoft Corporation, a technology company, develops and supports a portfolio of technology solutions for individuals and businesses worldwide. Its products include operating systems, server applicat..."
-        },
-        "updated_at": "2026-08-31T19:24:19.957388"
-    },
-    "INTC": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Semiconductors",
-            "pe": 0,
-            "peg": 1.36,
-            "debt_to_equity": 0.49,
-            "description": "Intel Corporation designs, develops, manufactures, markets, sells, and services computing and related end products and services in the United States, Ireland, Israel, and internationally. It operates ..."
-        },
-        "updated_at": "2026-08-31T19:24:44.324533"
+        "updated_at": "2026-09-01T17:10:54.904552"
     }
 }
