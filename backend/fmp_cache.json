@@ -1,90 +1,90 @@
 {
-    "SLB": {
-        "data": {
-            "sector": "Energy",
-            "industry": "Oil & Gas Equipment & Services",
-            "pe": 28.28,
-            "peg": 1.96,
-            "debt_to_equity": 0.47,
-            "description": "SLB N.V. engages in the provision of technology for the energy industry worldwide. The company operates through four divisions: Digital & Integration, Reservoir Performance, Well Construction, and Pro..."
-        },
-        "updated_at": "2026-09-01T17:07:47.711148"
-    },
-    "TEM": {
-        "data": {
-            "sector": "Healthcare",
-            "industry": "Health Information Services",
-            "pe": 0,
-            "peg": 0,
-            "debt_to_equity": 3.25,
-            "description": "Tempus AI, Inc. operates as a healthcare technology company in the United States. It offers the Tempus platform, a closed-loop, full-stack, bi-directional integrations between a clinician's desktop an..."
-        },
-        "updated_at": "2026-09-01T17:08:16.229742"
-    },
-    "SPY": {
-        "data": {
-            "sector": "Unknown",
-            "industry": "Unknown",
-            "pe": 25.66,
-            "peg": 0,
-            "debt_to_equity": 0,
-            "description": "The trust seeks to achieve its investment objective by holding a portfolio of the common stocks that are included in the index (the \u201cPortfolio\u201d), with the weight of each stock in the Portfolio substan..."
-        },
-        "updated_at": "2026-09-01T17:08:43.056108"
-    },
-    "BE": {
-        "data": {
-            "sector": "Industrials",
-            "industry": "Electrical Equipment & Parts",
-            "pe": 270.05,
-            "peg": 0.88,
-            "debt_to_equity": 1.72,
-            "description": "Bloom Energy Corporation designs, manufactures, sells, and installs solid oxide fuel cell systems for on-site power generation in the United States and internationally. It offers Bloom Energy Server, ..."
-        },
-        "updated_at": "2026-09-01T17:09:03.354573"
-    },
-    "SOXL": {
-        "data": {
-            "sector": "Unknown",
-            "industry": "Unknown",
-            "pe": 37.13,
-            "peg": 0,
-            "debt_to_equity": 0,
-            "description": "The fund invests at least 80% of its net assets in financial instruments, such as swap agreements, securities of the index, and ETFs that track the index, that, in combination, provide 3X daily levera..."
-        },
-        "updated_at": "2026-09-01T17:09:35.972620"
-    },
-    "NCLH": {
+    "TSLA": {
         "data": {
             "sector": "Consumer Cyclical",
-            "industry": "Travel Services",
-            "pe": 9.41,
-            "peg": 1.5,
-            "debt_to_equity": 6.21,
-            "description": "Norwegian Cruise Line Holdings Ltd., together with its subsidiaries, operates as a cruise company in North America, Europe, the Asia-Pacific, and internationally. It offers itineraries to destinations..."
+            "industry": "Auto Manufacturers",
+            "pe": 330.88,
+            "peg": 4.26,
+            "debt_to_equity": 0.18,
+            "description": "Tesla, Inc. designs, develops, manufactures, leases, and sells electric vehicles, and energy generation and storage systems in the United States, China, and internationally. The company operates in tw..."
         },
-        "updated_at": "2026-09-01T17:10:02.707933"
+        "updated_at": "2026-09-02T16:58:34.553395"
     },
-    "PYPL": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Credit Services",
-            "pe": 9.95,
-            "peg": 0.98,
-            "debt_to_equity": 0.72,
-            "description": "PayPal Holdings, Inc. operates a technology platform that enables digital payments for merchants and consumers worldwide. The company operates a two-sided network at scale that connects merchants and ..."
-        },
-        "updated_at": "2026-09-01T17:10:27.858944"
-    },
-    "CRM": {
+    "GTLB": {
         "data": {
             "sector": "Technology",
-            "industry": "Software - Application",
-            "pe": 23.51,
-            "peg": 1.06,
-            "debt_to_equity": 1.1,
-            "description": "Salesforce, Inc. provides customer relationship management technology services that connect companies and customers together in the United States, Europe, and the Asia Pacific. The company offers Agen..."
+            "industry": "Software - Infrastructure",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "GitLab Inc., together with its subsidiaries, develops software for the software development lifecycle in the United States, Europe, and the Asia Pacific. The company provides GitLab, an intelligent or..."
         },
-        "updated_at": "2026-09-01T17:10:54.904552"
+        "updated_at": "2026-09-02T16:59:07.247497"
+    },
+    "DTE": {
+        "data": {
+            "sector": "Utilities",
+            "industry": "Utilities - Regulated Electric",
+            "pe": 21.45,
+            "peg": 1.75,
+            "debt_to_equity": 2.29,
+            "description": "DTE Energy Company engages in energy-related businesses and services. The company operates through four segments: Electric, Gas, DTE Vantage, and Energy Trading.The company's Electric segment generate..."
+        },
+        "updated_at": "2026-09-02T16:59:49.904728"
+    },
+    "MDB": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Software - Infrastructure",
+            "pe": 550.23,
+            "peg": 1.67,
+            "debt_to_equity": 0.02,
+            "description": "MongoDB, Inc., together with its subsidiaries, provides general purpose database platform worldwide. The company offers MongoDB Atlas, a hosted multi-cloud database-as-a-service solution; MongoDB Ente..."
+        },
+        "updated_at": "2026-09-02T17:00:15.168814"
+    },
+    "OKTA": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Software - Infrastructure",
+            "pe": 95.27,
+            "peg": 1.38,
+            "debt_to_equity": 0.01,
+            "description": "Okta, Inc. operates as an identity partner in the United States and internationally. It offers Single Sign-on to secure access to cloud and on-premises applications from any device; Adaptive MFA for a..."
+        },
+        "updated_at": "2026-09-02T17:01:09.581703"
+    },
+    "SNDK": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Computer Hardware",
+            "pe": 20.87,
+            "peg": 0,
+            "debt_to_equity": 0.01,
+            "description": "Sandisk Corporation develops, manufactures, and sells data storage devices and solutions using NAND flash technology in the Americas, Europe, the Middle East, Africa, Asia, and internationally. The co..."
+        },
+        "updated_at": "2026-09-02T17:01:56.988228"
+    },
+    "USO": {
+        "data": {
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "USO seeks to achieve its investment objective by investing primarily in futures contracts for light, sweet crude oil, other types of crude oil, diesel-heating oil, gasoline, natural gas, and other pet..."
+        },
+        "updated_at": "2026-09-02T17:03:03.208991"
+    },
+    "IT": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Information Technology Services",
+            "pe": 17.03,
+            "peg": 0.76,
+            "debt_to_equity": 0,
+            "description": "Gartner, Inc. provides business and technology insights to support decision-making and performance on an organization's mission-critical priorities in the United States, Canada, Europe, the Middle Eas..."
+        },
+        "updated_at": "2026-09-02T17:03:43.767865"
     }
 }
