@@ -1,90 +1,90 @@
 {
-    "SNOW": {
+    "DVN": {
+        "data": {
+            "sector": "Energy",
+            "industry": "Oil & Gas E&P",
+            "pe": 10.54,
+            "peg": 2.92,
+            "debt_to_equity": 0.28,
+            "description": "Devon Energy Corporation, an independent energy company, engages in the exploration, development, and production of oil, natural gas, and natural gas liquids in the United States. The company operates..."
+        },
+        "updated_at": "2026-09-04T16:42:55.962049"
+    },
+    "ADBE": {
         "data": {
             "sector": "Technology",
             "industry": "Software - Application",
-            "pe": 0,
-            "peg": 8.08,
-            "debt_to_equity": 1.43,
-            "description": "Snowflake Inc. provides a cloud-based data platform for various organizations in the United States and internationally. The company's platform includes artificial intelligence (AI) Data Cloud, which e..."
+            "pe": 15.33,
+            "peg": 0.7,
+            "debt_to_equity": 0.61,
+            "description": "Adobe Inc. operates as a technology company worldwide. The Digital Media segment offers products and services that enable individuals, teams, and enterprises to create, publish, and promote content. T..."
         },
-        "updated_at": "2026-09-03T16:52:13.223273"
+        "updated_at": "2026-09-04T16:43:22.926826"
     },
-    "CRM": {
+    "CC": {
+        "data": {
+            "sector": "Basic Materials",
+            "industry": "Specialty Chemicals",
+            "pe": 0,
+            "peg": 1.6,
+            "debt_to_equity": 0,
+            "description": "The Chemours Company provides performance chemicals in North America, the Asia Pacific, Europe, the Middle East, Africa, and Latin America. The company operates through three segments: Thermal & Speci..."
+        },
+        "updated_at": "2026-09-04T16:43:47.542651"
+    },
+    "XOM": {
+        "data": {
+            "sector": "Energy",
+            "industry": "Oil & Gas Integrated",
+            "pe": 20.65,
+            "peg": 1.41,
+            "debt_to_equity": 0.16,
+            "description": "ExxonMobil Holdings Corporation engages in the exploration and production of crude oil and natural gas in the United States, Canada, and internationally. The company operates through Upstream, Energy ..."
+        },
+        "updated_at": "2026-09-04T16:44:12.651545"
+    },
+    "PEP": {
+        "data": {
+            "sector": "Consumer Defensive",
+            "industry": "Beverages - Non-Alcoholic",
+            "pe": 18.16,
+            "peg": 1.43,
+            "debt_to_equity": 2.39,
+            "description": "PepsiCo, Inc. engages in the manufacture, marketing, distribution, and sale of various beverages and convenient foods worldwide. The company operates through six segments: PepsiCo Foods North America;..."
+        },
+        "updated_at": "2026-09-04T16:44:40.206455"
+    },
+    "TSM": {
         "data": {
             "sector": "Technology",
-            "industry": "Software - Application",
-            "pe": 24.24,
-            "peg": 1.07,
-            "debt_to_equity": 1.1,
-            "description": "Salesforce, Inc. provides customer relationship management technology services that connect companies and customers together in the United States, Europe, and the Asia Pacific. The company offers Agen..."
+            "industry": "Semiconductors",
+            "pe": 31.74,
+            "peg": 0.79,
+            "debt_to_equity": 0.17,
+            "description": "Taiwan Semiconductor Manufacturing Company Limited, together with its subsidiaries, manufactures, packages, tests, and sells integrated circuits and other semiconductor devices in Taiwan, China, Europ..."
         },
-        "updated_at": "2026-09-03T16:52:35.021626"
+        "updated_at": "2026-09-04T16:45:07.888768"
     },
-    "HPE": {
+    "IT": {
         "data": {
             "sector": "Technology",
-            "industry": "Communication Equipment",
-            "pe": 46.52,
-            "peg": 0.85,
-            "debt_to_equity": 0.84,
-            "description": "Hewlett Packard Enterprise Company, together with its subsidiaries, develops intelligent solutions in the United States, the Americas, Europe, the Middle East, Africa, the Asia Pacific, Japan, and int..."
+            "industry": "Information Technology Services",
+            "pe": 16.91,
+            "peg": 0.76,
+            "debt_to_equity": 0,
+            "description": "Gartner, Inc. provides business and technology insights to support decision-making and performance on an organization's mission-critical priorities in the United States, Canada, Europe, the Middle Eas..."
         },
-        "updated_at": "2026-09-03T16:52:56.505005"
+        "updated_at": "2026-09-04T16:45:36.717046"
     },
-    "SNAP": {
+    "GLD": {
         "data": {
-            "sector": "Communication Services",
-            "industry": "Internet Content & Information",
-            "pe": 0,
-            "peg": 508.87,
-            "debt_to_equity": 2.19,
-            "description": "Snap Inc. operates as a technology company in North America, Europe, and internationally. The company offers Snapchat, a visual messaging application with various tabs, such as camera, visual messagin..."
-        },
-        "updated_at": "2026-09-03T16:53:23.600857"
-    },
-    "RKLB": {
-        "data": {
-            "sector": "Industrials",
-            "industry": "Aerospace & Defense",
+            "sector": "Unknown",
+            "industry": "Unknown",
             "pe": 0,
             "peg": 0,
-            "debt_to_equity": 0.04,
-            "description": "Rocket Lab Corporation, a space company, provides launch services and space systems solutions in the United States, Canada, Japan, and internationally. The company operates through launch services and..."
+            "debt_to_equity": 0,
+            "description": "The Trust holds gold bars and from time to time, issues Baskets in exchange for deposits of gold and distributes gold in connection with redemptions of Baskets. The investment objective of the Trust i..."
         },
-        "updated_at": "2026-09-03T16:53:57.562407"
-    },
-    "AAPL": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Consumer Electronics",
-            "pe": 37.81,
-            "peg": 2.56,
-            "debt_to_equity": 0.78,
-            "description": "Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide. The company offers iPhone, a line of smartphones; Mac, a line of personal ..."
-        },
-        "updated_at": "2026-09-03T16:54:21.913594"
-    },
-    "OKTA": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 101.9,
-            "peg": 1.38,
-            "debt_to_equity": 0.01,
-            "description": "Okta, Inc. operates as an identity partner in the United States and internationally. It offers Single Sign-on to secure access to cloud and on-premises applications from any device; Adaptive MFA for a..."
-        },
-        "updated_at": "2026-09-03T16:54:52.178243"
-    },
-    "NFLX": {
-        "data": {
-            "sector": "Communication Services",
-            "industry": "Entertainment",
-            "pe": 25.79,
-            "peg": 1.49,
-            "debt_to_equity": 0.55,
-            "description": "Netflix, Inc. provides entertainment services worldwide. The company offers television (TV) series, documentaries, feature films, games, and live programming across various genres and languages. It al..."
-        },
-        "updated_at": "2026-09-03T16:55:15.005007"
+        "updated_at": "2026-09-04T16:46:01.537866"
     }
 }
