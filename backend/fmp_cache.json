@@ -1,90 +1,90 @@
 {
-    "DVN": {
+    "AMZN": {
         "data": {
-            "sector": "Energy",
-            "industry": "Oil & Gas E&P",
-            "pe": 10.54,
-            "peg": 2.92,
-            "debt_to_equity": 0.28,
-            "description": "Devon Energy Corporation, an independent energy company, engages in the exploration, development, and production of oil, natural gas, and natural gas liquids in the United States. The company operates..."
+            "sector": "Consumer Cyclical",
+            "industry": "Internet Retail",
+            "pe": 20.8,
+            "peg": 1.51,
+            "debt_to_equity": 0.46,
+            "description": "Amazon.com, Inc. engages in the retail sale of consumer products, advertising, and subscriptions service through online and physical stores in North America and internationally. The company operates t..."
         },
-        "updated_at": "2026-09-04T16:42:55.962049"
+        "updated_at": "2026-09-07T18:03:17.141813"
     },
-    "ADBE": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Application",
-            "pe": 15.33,
-            "peg": 0.7,
-            "debt_to_equity": 0.61,
-            "description": "Adobe Inc. operates as a technology company worldwide. The Digital Media segment offers products and services that enable individuals, teams, and enterprises to create, publish, and promote content. T..."
-        },
-        "updated_at": "2026-09-04T16:43:22.926826"
-    },
-    "CC": {
-        "data": {
-            "sector": "Basic Materials",
-            "industry": "Specialty Chemicals",
-            "pe": 0,
-            "peg": 1.6,
-            "debt_to_equity": 0,
-            "description": "The Chemours Company provides performance chemicals in North America, the Asia Pacific, Europe, the Middle East, Africa, and Latin America. The company operates through three segments: Thermal & Speci..."
-        },
-        "updated_at": "2026-09-04T16:43:47.542651"
-    },
-    "XOM": {
-        "data": {
-            "sector": "Energy",
-            "industry": "Oil & Gas Integrated",
-            "pe": 20.65,
-            "peg": 1.41,
-            "debt_to_equity": 0.16,
-            "description": "ExxonMobil Holdings Corporation engages in the exploration and production of crude oil and natural gas in the United States, Canada, and internationally. The company operates through Upstream, Energy ..."
-        },
-        "updated_at": "2026-09-04T16:44:12.651545"
-    },
-    "PEP": {
-        "data": {
-            "sector": "Consumer Defensive",
-            "industry": "Beverages - Non-Alcoholic",
-            "pe": 18.16,
-            "peg": 1.43,
-            "debt_to_equity": 2.39,
-            "description": "PepsiCo, Inc. engages in the manufacture, marketing, distribution, and sale of various beverages and convenient foods worldwide. The company operates through six segments: PepsiCo Foods North America;..."
-        },
-        "updated_at": "2026-09-04T16:44:40.206455"
-    },
-    "TSM": {
+    "NVDA": {
         "data": {
             "sector": "Technology",
             "industry": "Semiconductors",
-            "pe": 31.74,
-            "peg": 0.79,
+            "pe": 29.16,
+            "peg": 0.59,
             "debt_to_equity": 0.17,
-            "description": "Taiwan Semiconductor Manufacturing Company Limited, together with its subsidiaries, manufactures, packages, tests, and sells integrated circuits and other semiconductor devices in Taiwan, China, Europ..."
+            "description": "NVIDIA Corporation operates as a data center scale AI infrastructure company in the United States, Taiwan, China, Hong Kong, Europe, and internationally. It operates through Compute & Networking, and ..."
         },
-        "updated_at": "2026-09-04T16:45:07.888768"
+        "updated_at": "2026-09-07T18:03:46.579072"
     },
-    "IT": {
+    "MDB": {
         "data": {
             "sector": "Technology",
-            "industry": "Information Technology Services",
-            "pe": 16.91,
-            "peg": 0.76,
-            "debt_to_equity": 0,
-            "description": "Gartner, Inc. provides business and technology insights to support decision-making and performance on an organization's mission-critical priorities in the United States, Canada, Europe, the Middle Eas..."
+            "industry": "Software - Infrastructure",
+            "pe": 526.77,
+            "peg": 1.67,
+            "debt_to_equity": 0.02,
+            "description": "MongoDB, Inc., together with its subsidiaries, provides general purpose database platform worldwide. The company offers MongoDB Atlas, a hosted multi-cloud database-as-a-service solution; MongoDB Ente..."
         },
-        "updated_at": "2026-09-04T16:45:36.717046"
+        "updated_at": "2026-09-07T18:04:10.938516"
     },
-    "GLD": {
+    "ZS": {
         "data": {
-            "sector": "Unknown",
-            "industry": "Unknown",
+            "sector": "Technology",
+            "industry": "Software - Infrastructure",
+            "pe": 0,
+            "peg": 1.85,
+            "debt_to_equity": 0.72,
+            "description": "Zscaler, Inc. operates as a cloud security company worldwide. The company offers cyberthreat protection products, including Zero Trust SASE, a solution that securely connects workforces, AI agents, wo..."
+        },
+        "updated_at": "2026-09-07T18:04:35.557963"
+    },
+    "OKTA": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Software - Infrastructure",
+            "pe": 103.39,
+            "peg": 1.41,
+            "debt_to_equity": 0.01,
+            "description": "Okta, Inc. operates as an identity partner in the United States and internationally. It offers Single Sign-on to secure access to cloud and on-premises applications from any device; Adaptive MFA for a..."
+        },
+        "updated_at": "2026-09-07T18:05:23.335577"
+    },
+    "AI": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Software - Infrastructure",
             "pe": 0,
             "peg": 0,
-            "debt_to_equity": 0,
-            "description": "The Trust holds gold bars and from time to time, issues Baskets in exchange for deposits of gold and distributes gold in connection with redemptions of Baskets. The investment objective of the Trust i..."
+            "debt_to_equity": 0.08,
+            "description": "C3.ai, Inc. operates as an enterprise artificial intelligence application software company in North America, Europe, the Middle East, Africa, the Asia Pacific, and internationally. It offers C3 agenti..."
         },
-        "updated_at": "2026-09-04T16:46:01.537866"
+        "updated_at": "2026-09-07T18:05:47.757280"
+    },
+    "BE": {
+        "data": {
+            "sector": "Industrials",
+            "industry": "Electrical Equipment & Parts",
+            "pe": 332.72,
+            "peg": 0.57,
+            "debt_to_equity": 1.72,
+            "description": "Bloom Energy Corporation designs, manufactures, sells, and installs solid oxide fuel cell systems for on-site power generation in the United States and internationally. It offers Bloom Energy Server, ..."
+        },
+        "updated_at": "2026-09-07T18:06:18.463368"
+    },
+    "AGI": {
+        "data": {
+            "sector": "Basic Materials",
+            "industry": "Gold",
+            "pe": 13.25,
+            "peg": 0,
+            "debt_to_equity": 0.05,
+            "description": "Alamos Gold Inc. operates as a gold producer in Canada and Mexico. It primarily explores for gold deposits. The company was founded in 2003 and is based in Toronto, Canada...."
+        },
+        "updated_at": "2026-09-07T18:06:43.212431"
     }
 }
