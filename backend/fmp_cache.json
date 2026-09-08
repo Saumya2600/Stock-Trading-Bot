@@ -1,58 +1,25 @@
 {
-    "AMZN": {
-        "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Internet Retail",
-            "pe": 20.8,
-            "peg": 1.51,
-            "debt_to_equity": 0.46,
-            "description": "Amazon.com, Inc. engages in the retail sale of consumer products, advertising, and subscriptions service through online and physical stores in North America and internationally. The company operates t..."
-        },
-        "updated_at": "2026-09-07T18:03:17.141813"
-    },
-    "NVDA": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Semiconductors",
-            "pe": 29.16,
-            "peg": 0.59,
-            "debt_to_equity": 0.17,
-            "description": "NVIDIA Corporation operates as a data center scale AI infrastructure company in the United States, Taiwan, China, Hong Kong, Europe, and internationally. It operates through Compute & Networking, and ..."
-        },
-        "updated_at": "2026-09-07T18:03:46.579072"
-    },
-    "MDB": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 526.77,
-            "peg": 1.67,
-            "debt_to_equity": 0.02,
-            "description": "MongoDB, Inc., together with its subsidiaries, provides general purpose database platform worldwide. The company offers MongoDB Atlas, a hosted multi-cloud database-as-a-service solution; MongoDB Ente..."
-        },
-        "updated_at": "2026-09-07T18:04:10.938516"
-    },
-    "ZS": {
+    "GTLB": {
         "data": {
             "sector": "Technology",
             "industry": "Software - Infrastructure",
             "pe": 0,
-            "peg": 1.85,
-            "debt_to_equity": 0.72,
-            "description": "Zscaler, Inc. operates as a cloud security company worldwide. The company offers cyberthreat protection products, including Zero Trust SASE, a solution that securely connects workforces, AI agents, wo..."
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "GitLab Inc., together with its subsidiaries, develops software for the software development lifecycle in the United States, Europe, and the Asia Pacific. The company provides GitLab, an intelligent or..."
         },
-        "updated_at": "2026-09-07T18:04:35.557963"
+        "updated_at": "2026-09-08T17:00:47.230378"
     },
-    "OKTA": {
+    "SNOW": {
         "data": {
             "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 103.39,
-            "peg": 1.41,
-            "debt_to_equity": 0.01,
-            "description": "Okta, Inc. operates as an identity partner in the United States and internationally. It offers Single Sign-on to secure access to cloud and on-premises applications from any device; Adaptive MFA for a..."
+            "industry": "Software - Application",
+            "pe": 0,
+            "peg": 8.51,
+            "debt_to_equity": 1.29,
+            "description": "Snowflake Inc. provides a cloud-based data platform for various organizations in the United States and internationally. The company's platform includes artificial intelligence (AI) Data Cloud, which e..."
         },
-        "updated_at": "2026-09-07T18:05:23.335577"
+        "updated_at": "2026-09-08T17:01:14.686204"
     },
     "AI": {
         "data": {
@@ -63,28 +30,61 @@
             "debt_to_equity": 0.08,
             "description": "C3.ai, Inc. operates as an enterprise artificial intelligence application software company in North America, Europe, the Middle East, Africa, the Asia Pacific, and internationally. It offers C3 agenti..."
         },
-        "updated_at": "2026-09-07T18:05:47.757280"
+        "updated_at": "2026-09-08T17:01:59.802805"
     },
-    "BE": {
+    "CRM": {
         "data": {
-            "sector": "Industrials",
-            "industry": "Electrical Equipment & Parts",
-            "pe": 332.72,
-            "peg": 0.57,
-            "debt_to_equity": 1.72,
-            "description": "Bloom Energy Corporation designs, manufactures, sells, and installs solid oxide fuel cell systems for on-site power generation in the United States and internationally. It offers Bloom Energy Server, ..."
+            "sector": "Technology",
+            "industry": "Software - Application",
+            "pe": 22.76,
+            "peg": 1.05,
+            "debt_to_equity": 1.1,
+            "description": "Salesforce, Inc. provides customer relationship management technology services that connect companies and customers together in the United States, Europe, and the Asia Pacific. The company offers Agen..."
         },
-        "updated_at": "2026-09-07T18:06:18.463368"
+        "updated_at": "2026-09-08T17:02:31.450895"
     },
-    "AGI": {
+    "DTE": {
         "data": {
-            "sector": "Basic Materials",
-            "industry": "Gold",
-            "pe": 13.25,
+            "sector": "Utilities",
+            "industry": "Utilities - Regulated Electric",
+            "pe": 21.79,
+            "peg": 1.75,
+            "debt_to_equity": 2.29,
+            "description": "DTE Energy Company engages in energy-related businesses and services. The company operates through four segments: Electric, Gas, DTE Vantage, and Energy Trading.The company's Electric segment generate..."
+        },
+        "updated_at": "2026-09-08T17:02:58.367207"
+    },
+    "HOOD": {
+        "data": {
+            "sector": "Financial Services",
+            "industry": "Capital Markets",
+            "pe": 53.28,
+            "peg": 2.13,
+            "debt_to_equity": 2.4,
+            "description": "Robinhood Markets, Inc. operates financial services platform in the United States. The company's platform allows users to invest in stocks, exchange-traded funds (ETFs), and American depository receip..."
+        },
+        "updated_at": "2026-09-08T17:03:25.216973"
+    },
+    "VOO": {
+        "data": {
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 25.86,
             "peg": 0,
-            "debt_to_equity": 0.05,
-            "description": "Alamos Gold Inc. operates as a gold producer in Canada and Mexico. It primarily explores for gold deposits. The company was founded in 2003 and is based in Toronto, Canada...."
+            "debt_to_equity": 0,
+            "description": "The fund manager employs an indexing investment approach designed to track the performance of the Standard & Poor's 500 Index, a widely recognized benchmark of U.S. stock market performance that is do..."
         },
-        "updated_at": "2026-09-07T18:06:43.212431"
+        "updated_at": "2026-09-08T17:03:50.800634"
+    },
+    "OXY": {
+        "data": {
+            "sector": "Energy",
+            "industry": "Oil & Gas E&P",
+            "pe": 17.83,
+            "peg": 1.21,
+            "debt_to_equity": 0.35,
+            "description": "Occidental Petroleum Corporation, together with its subsidiaries, engages in the acquisition, exploration, and development of oil and gas properties in the United States and internationally. It operat..."
+        },
+        "updated_at": "2026-09-08T17:04:13.747696"
     }
 }
