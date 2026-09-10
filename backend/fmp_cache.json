@@ -1,90 +1,90 @@
 {
-    "AI": {
+    "OKTA": {
         "data": {
             "sector": "Technology",
             "industry": "Software - Infrastructure",
-            "pe": 0,
-            "peg": 0,
-            "debt_to_equity": 0.08,
-            "description": "C3.ai, Inc. operates as an enterprise artificial intelligence application software company in North America, Europe, the Middle East, Africa, the Asia Pacific, and internationally. It offers C3 agenti..."
+            "pe": 104.39,
+            "peg": 1.41,
+            "debt_to_equity": 0.01,
+            "description": "Okta, Inc. operates as an identity partner in the United States and internationally. It offers Single Sign-on to secure access to cloud and on-premises applications from any device; Adaptive MFA for a..."
         },
-        "updated_at": "2026-09-09T16:59:32.609948"
+        "updated_at": "2026-09-10T16:51:53.327795"
     },
-    "APA": {
+    "WTI": {
         "data": {
             "sector": "Energy",
             "industry": "Oil & Gas E&P",
-            "pe": 9.36,
-            "peg": 1.15,
-            "debt_to_equity": 0.49,
-            "description": "APA Corporation, an independent energy company, explores for, develops, and produces natural gas, crude oil, and natural gas liquids. The company has oil and gas operations in the United States, Egypt..."
+            "pe": 0,
+            "peg": 0.73,
+            "debt_to_equity": 0,
+            "description": "W&T Offshore, Inc., an independent oil and natural gas producer, engages in the acquisition, exploration, and development of oil and natural gas properties in the Gulf of America. The company sells cr..."
         },
-        "updated_at": "2026-09-09T16:59:56.796431"
+        "updated_at": "2026-09-10T16:52:21.230643"
+    },
+    "KO": {
+        "data": {
+            "sector": "Consumer Defensive",
+            "industry": "Beverages - Non-Alcoholic",
+            "pe": 26.55,
+            "peg": 4.0,
+            "debt_to_equity": 1.16,
+            "description": "The Coca-Cola Company, a beverage company, manufactures and sells various nonalcoholic beverages in the United States and internationally. The company provides Trademark Coca-Cola, sparkling soft drin..."
+        },
+        "updated_at": "2026-09-10T16:53:12.714725"
+    },
+    "RKLB": {
+        "data": {
+            "sector": "Industrials",
+            "industry": "Aerospace & Defense",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 0.04,
+            "description": "Rocket Lab Corporation, a space company, provides launch services and space systems solutions in the United States, Canada, Japan, and internationally. The company operates through launch services and..."
+        },
+        "updated_at": "2026-09-10T16:53:39.752365"
+    },
+    "UBER": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Software - Application",
+            "pe": 16.03,
+            "peg": 6.42,
+            "debt_to_equity": 0.52,
+            "description": "Uber Technologies, Inc. develops and operates proprietary technology applications in the United States, Canada, Latin America, Europe, the Middle East, Africa, and the Asia Pacific. The company operat..."
+        },
+        "updated_at": "2026-09-10T16:54:04.946838"
     },
     "SCHW": {
         "data": {
             "sector": "Financial Services",
             "industry": "Capital Markets",
-            "pe": 19.54,
+            "pe": 19.47,
             "peg": 0.92,
             "debt_to_equity": 1.51,
             "description": "The Charles Schwab Corporation, together with its subsidiaries, operates as a savings and loan holding company that provides wealth management, securities brokerage, banking, asset management, custody..."
         },
-        "updated_at": "2026-09-09T17:00:25.046241"
+        "updated_at": "2026-09-10T16:54:54.934496"
     },
-    "MRVL": {
+    "DIS": {
+        "data": {
+            "sector": "Communication Services",
+            "industry": "Entertainment",
+            "pe": 21.68,
+            "peg": 2.61,
+            "debt_to_equity": 0.39,
+            "description": "The Walt Disney Company operates as an entertainment company in Americas, Europe, and the Asia Pacific. It operates in three segments: Entertainment, Sports, and Experiences. The company produces and ..."
+        },
+        "updated_at": "2026-09-10T16:55:18.402583"
+    },
+    "SNOW": {
         "data": {
             "sector": "Technology",
-            "industry": "Semiconductors",
-            "pe": 78.59,
-            "peg": 1.19,
-            "debt_to_equity": 0.29,
-            "description": "Marvell Technology, Inc., together with its subsidiaries, provides data infrastructure semiconductor solutions and spanning the data center core to network edge in the United States, Argentina, China,..."
+            "industry": "Software - Application",
+            "pe": 0,
+            "peg": 8.51,
+            "debt_to_equity": 1.29,
+            "description": "Snowflake Inc. provides a cloud-based data platform for various organizations in the United States and internationally. The company's platform includes artificial intelligence (AI) Data Cloud, which e..."
         },
-        "updated_at": "2026-09-09T17:00:52.590837"
-    },
-    "MDB": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 512.92,
-            "peg": 1.67,
-            "debt_to_equity": 0.02,
-            "description": "MongoDB, Inc., together with its subsidiaries, provides general purpose database platform worldwide. The company offers MongoDB Atlas, a hosted multi-cloud database-as-a-service solution; MongoDB Ente..."
-        },
-        "updated_at": "2026-09-09T17:01:17.301642"
-    },
-    "OKTA": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 102.85,
-            "peg": 1.41,
-            "debt_to_equity": 0.01,
-            "description": "Okta, Inc. operates as an identity partner in the United States and internationally. It offers Single Sign-on to secure access to cloud and on-premises applications from any device; Adaptive MFA for a..."
-        },
-        "updated_at": "2026-09-09T17:01:44.235828"
-    },
-    "PLTR": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 144.94,
-            "peg": 1.68,
-            "debt_to_equity": 0.02,
-            "description": "Palantir Technologies Inc. builds and deploys software platforms for the intelligence community to assist in counterterrorism investigations and operations in the United States, the United Kingdom, an..."
-        },
-        "updated_at": "2026-09-09T17:02:10.468471"
-    },
-    "SPY": {
-        "data": {
-            "sector": "Unknown",
-            "industry": "Unknown",
-            "pe": 24.64,
-            "peg": 0,
-            "debt_to_equity": 0,
-            "description": "The trust seeks to achieve its investment objective by holding a portfolio of the common stocks that are included in the index (the \u201cPortfolio\u201d), with the weight of each stock in the Portfolio substan..."
-        },
-        "updated_at": "2026-09-09T17:02:36.967359"
+        "updated_at": "2026-09-10T16:55:45.006946"
     }
 }
