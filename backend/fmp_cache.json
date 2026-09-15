@@ -1,90 +1,90 @@
 {
-    "AMD": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Semiconductors",
-            "pe": 127.03,
-            "peg": 0.53,
-            "debt_to_equity": 0.06,
-            "description": "Advanced Micro Devices, Inc. operates as a semiconductor company internationally. It operates in three segments: Data Center, Client and Gaming, and Embedded. The company offers artificial intelligenc..."
-        },
-        "updated_at": "2026-09-14T18:19:46.544286"
-    },
-    "ES": {
-        "data": {
-            "sector": "Utilities",
-            "industry": "Utilities - Regulated Electric",
-            "pe": 17.73,
-            "peg": 2.34,
-            "debt_to_equity": 1.81,
-            "description": "Eversource Energy, a public utility holding company, engages in the energy delivery business. The company operates through Electric Distribution, Electric Transmission, Natural Gas Distribution, and W..."
-        },
-        "updated_at": "2026-09-14T18:20:10.200056"
-    },
     "OKTA": {
         "data": {
             "sector": "Technology",
             "industry": "Software - Infrastructure",
-            "pe": 113.43,
-            "peg": 1.38,
+            "pe": 115.2,
+            "peg": 1.54,
             "debt_to_equity": 0.01,
             "description": "Okta, Inc. operates as an identity partner in the United States and internationally. It offers Single Sign-on to secure access to cloud and on-premises applications from any device; Adaptive MFA for a..."
         },
-        "updated_at": "2026-09-14T18:20:32.667525"
+        "updated_at": "2026-09-15T17:28:19.270322"
     },
-    "AI": {
+    "PYPL": {
+        "data": {
+            "sector": "Financial Services",
+            "industry": "Credit Services",
+            "pe": 10.17,
+            "peg": 0.95,
+            "debt_to_equity": 0.72,
+            "description": "PayPal Holdings, Inc. operates a technology platform that enables digital payments for merchants and consumers worldwide. The company operates a two-sided network at scale that connects merchants and ..."
+        },
+        "updated_at": "2026-09-15T17:28:47.108627"
+    },
+    "SNOW": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Software - Application",
+            "pe": 0,
+            "peg": 8.27,
+            "debt_to_equity": 1.29,
+            "description": "Snowflake Inc. provides a cloud-based data platform for various organizations in the United States and internationally. The company's platform includes artificial intelligence (AI) Data Cloud, which e..."
+        },
+        "updated_at": "2026-09-15T17:29:15.148666"
+    },
+    "MDB": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Software - Infrastructure",
+            "pe": 525.15,
+            "peg": 1.67,
+            "debt_to_equity": 0.02,
+            "description": "MongoDB, Inc., together with its subsidiaries, provides general purpose database platform worldwide. The company offers MongoDB Atlas, a hosted multi-cloud database-as-a-service solution; MongoDB Ente..."
+        },
+        "updated_at": "2026-09-15T17:29:44.348149"
+    },
+    "GOOGL": {
+        "data": {
+            "sector": "Communication Services",
+            "industry": "Internet Content & Information",
+            "pe": 17.21,
+            "peg": 1.25,
+            "debt_to_equity": 0.19,
+            "description": "Alphabet Inc. offers various products and platforms in the United States, Europe, the Middle East, Africa, the Asia-Pacific, Canada, and Latin America. It operates through Google Services, Google Clou..."
+        },
+        "updated_at": "2026-09-15T17:30:10.222379"
+    },
+    "DTE": {
+        "data": {
+            "sector": "Utilities",
+            "industry": "Utilities - Regulated Electric",
+            "pe": 20.58,
+            "peg": 1.68,
+            "debt_to_equity": 2.29,
+            "description": "DTE Energy Company engages in energy-related businesses and services. The company operates through four segments: Electric, Gas, DTE Vantage, and Energy Trading.The company's Electric segment generate..."
+        },
+        "updated_at": "2026-09-15T17:30:41.302670"
+    },
+    "ZS": {
         "data": {
             "sector": "Technology",
             "industry": "Software - Infrastructure",
             "pe": 0,
-            "peg": 0,
-            "debt_to_equity": 0.09,
-            "description": "C3.ai, Inc. operates as an enterprise artificial intelligence application software company in North America, Europe, the Middle East, Africa, the Asia Pacific, and internationally. It offers C3 agenti..."
+            "peg": 1.96,
+            "debt_to_equity": 0.72,
+            "description": "Zscaler, Inc. operates as a cloud security company worldwide. The company offers cyberthreat protection products, including Zero Trust SASE, a solution that securely connects workforces, AI agents, wo..."
         },
-        "updated_at": "2026-09-14T18:21:02.067929"
+        "updated_at": "2026-09-15T17:31:10.352353"
     },
-    "RDDT": {
-        "data": {
-            "sector": "Communication Services",
-            "industry": "Internet Content & Information",
-            "pe": 38.42,
-            "peg": 0.79,
-            "debt_to_equity": 0.01,
-            "description": "Reddit, Inc. operates a digital community in the United States and internationally. The company's platform enables user to engage in conversations, explore passions, research new hobbies, exchange goo..."
-        },
-        "updated_at": "2026-09-14T18:21:27.011139"
-    },
-    "NOW": {
+    "CRM": {
         "data": {
             "sector": "Technology",
             "industry": "Software - Application",
-            "pe": 89.01,
-            "peg": 0.95,
-            "debt_to_equity": 0.68,
-            "description": "ServiceNow, Inc. provides cloud-based solution for digital workflows in the North America, Brazil, Europe, the Middle East and Africa, Asia Pacific, and internationally. The company provides asset man..."
+            "pe": 23.83,
+            "peg": 0.87,
+            "debt_to_equity": 1.1,
+            "description": "Salesforce, Inc. provides customer relationship management technology services that connect companies and customers together in the United States, Europe, and the Asia Pacific. The company offers Agen..."
         },
-        "updated_at": "2026-09-14T18:21:49.000387"
-    },
-    "YOU": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Application",
-            "pe": 28.87,
-            "peg": 0,
-            "debt_to_equity": 0.45,
-            "description": "Clear Secure, Inc. operates a secure identity platform under the CLEAR brand name primarily in the United States. It provides secure identity platform, a multi-layered infrastructure consisting of fro..."
-        },
-        "updated_at": "2026-09-14T18:22:10.053339"
-    },
-    "TSM": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Semiconductors",
-            "pe": 31.17,
-            "peg": 0.82,
-            "debt_to_equity": 0.17,
-            "description": "Taiwan Semiconductor Manufacturing Company Limited, together with its subsidiaries, manufactures, packages, tests, and sells integrated circuits and other semiconductor devices in Taiwan, China, Europ..."
-        },
-        "updated_at": "2026-09-14T18:22:31.418480"
+        "updated_at": "2026-09-15T17:32:12.613843"
     }
 }
