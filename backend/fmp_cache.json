@@ -1,25 +1,14 @@
 {
-    "OKTA": {
+    "PEP": {
         "data": {
-            "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 115.2,
-            "peg": 1.54,
-            "debt_to_equity": 0.01,
-            "description": "Okta, Inc. operates as an identity partner in the United States and internationally. It offers Single Sign-on to secure access to cloud and on-premises applications from any device; Adaptive MFA for a..."
+            "sector": "Consumer Defensive",
+            "industry": "Beverages - Non-Alcoholic",
+            "pe": 17.72,
+            "peg": 1.4,
+            "debt_to_equity": 2.39,
+            "description": "PepsiCo, Inc. engages in the manufacture, marketing, distribution, and sale of various beverages and convenient foods worldwide. The company operates through six segments: PepsiCo Foods North America;..."
         },
-        "updated_at": "2026-09-15T17:28:19.270322"
-    },
-    "PYPL": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Credit Services",
-            "pe": 10.17,
-            "peg": 0.95,
-            "debt_to_equity": 0.72,
-            "description": "PayPal Holdings, Inc. operates a technology platform that enables digital payments for merchants and consumers worldwide. The company operates a two-sided network at scale that connects merchants and ..."
-        },
-        "updated_at": "2026-09-15T17:28:47.108627"
+        "updated_at": "2026-09-16T17:26:40.257991"
     },
     "SNOW": {
         "data": {
@@ -30,61 +19,72 @@
             "debt_to_equity": 1.29,
             "description": "Snowflake Inc. provides a cloud-based data platform for various organizations in the United States and internationally. The company's platform includes artificial intelligence (AI) Data Cloud, which e..."
         },
-        "updated_at": "2026-09-15T17:29:15.148666"
+        "updated_at": "2026-09-16T17:27:07.268055"
     },
-    "MDB": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 525.15,
-            "peg": 1.67,
-            "debt_to_equity": 0.02,
-            "description": "MongoDB, Inc., together with its subsidiaries, provides general purpose database platform worldwide. The company offers MongoDB Atlas, a hosted multi-cloud database-as-a-service solution; MongoDB Ente..."
-        },
-        "updated_at": "2026-09-15T17:29:44.348149"
-    },
-    "GOOGL": {
-        "data": {
-            "sector": "Communication Services",
-            "industry": "Internet Content & Information",
-            "pe": 17.21,
-            "peg": 1.25,
-            "debt_to_equity": 0.19,
-            "description": "Alphabet Inc. offers various products and platforms in the United States, Europe, the Middle East, Africa, the Asia-Pacific, Canada, and Latin America. It operates through Google Services, Google Clou..."
-        },
-        "updated_at": "2026-09-15T17:30:10.222379"
-    },
-    "DTE": {
-        "data": {
-            "sector": "Utilities",
-            "industry": "Utilities - Regulated Electric",
-            "pe": 20.58,
-            "peg": 1.68,
-            "debt_to_equity": 2.29,
-            "description": "DTE Energy Company engages in energy-related businesses and services. The company operates through four segments: Electric, Gas, DTE Vantage, and Energy Trading.The company's Electric segment generate..."
-        },
-        "updated_at": "2026-09-15T17:30:41.302670"
-    },
-    "ZS": {
+    "GTLB": {
         "data": {
             "sector": "Technology",
             "industry": "Software - Infrastructure",
             "pe": 0,
-            "peg": 1.96,
-            "debt_to_equity": 0.72,
-            "description": "Zscaler, Inc. operates as a cloud security company worldwide. The company offers cyberthreat protection products, including Zero Trust SASE, a solution that securely connects workforces, AI agents, wo..."
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "GitLab Inc., together with its subsidiaries, develops software for the software development lifecycle in the United States, Europe, and the Asia Pacific. The company provides GitLab, an intelligent or..."
         },
-        "updated_at": "2026-09-15T17:31:10.352353"
+        "updated_at": "2026-09-16T17:27:31.210845"
+    },
+    "OKTA": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Software - Infrastructure",
+            "pe": 113.7,
+            "peg": 1.54,
+            "debt_to_equity": 0.01,
+            "description": "Okta, Inc. operates as an identity partner in the United States and internationally. It offers Single Sign-on to secure access to cloud and on-premises applications from any device; Adaptive MFA for a..."
+        },
+        "updated_at": "2026-09-16T17:28:05.445222"
+    },
+    "NVDA": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Semiconductors",
+            "pe": 27.23,
+            "peg": 0.46,
+            "debt_to_equity": 0.17,
+            "description": "NVIDIA Corporation operates as a data center scale AI infrastructure company in the United States, Taiwan, China, Hong Kong, Europe, and internationally. It operates through Compute & Networking, and ..."
+        },
+        "updated_at": "2026-09-16T17:28:31.475555"
     },
     "CRM": {
         "data": {
             "sector": "Technology",
             "industry": "Software - Application",
-            "pe": 23.83,
+            "pe": 23.01,
             "peg": 0.87,
             "debt_to_equity": 1.1,
             "description": "Salesforce, Inc. provides customer relationship management technology services that connect companies and customers together in the United States, Europe, and the Asia Pacific. The company offers Agen..."
         },
-        "updated_at": "2026-09-15T17:32:12.613843"
+        "updated_at": "2026-09-16T17:28:51.996762"
+    },
+    "QQQ": {
+        "data": {
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 28.92,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "To maintain the correspondence between the composition and weights of the securities in the trust (the \"securities\") and the stocks in the NASDAQ-100 Index\u00ae, the adviser adjusts the securities from ti..."
+        },
+        "updated_at": "2026-09-16T17:29:11.430064"
+    },
+    "SCHW": {
+        "data": {
+            "sector": "Financial Services",
+            "industry": "Capital Markets",
+            "pe": 19.28,
+            "peg": 0.91,
+            "debt_to_equity": 1.51,
+            "description": "The Charles Schwab Corporation, together with its subsidiaries, operates as a savings and loan holding company that provides wealth management, securities brokerage, banking, asset management, custody..."
+        },
+        "updated_at": "2026-09-16T17:29:53.165955"
     }
 }
