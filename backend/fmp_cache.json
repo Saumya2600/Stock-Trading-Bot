@@ -1,25 +1,80 @@
 {
-    "PEP": {
+    "TSLA": {
         "data": {
-            "sector": "Consumer Defensive",
-            "industry": "Beverages - Non-Alcoholic",
-            "pe": 17.72,
-            "peg": 1.4,
-            "debt_to_equity": 2.39,
-            "description": "PepsiCo, Inc. engages in the manufacture, marketing, distribution, and sale of various beverages and convenient foods worldwide. The company operates through six segments: PepsiCo Foods North America;..."
+            "sector": "Consumer Cyclical",
+            "industry": "Auto Manufacturers",
+            "pe": 343.79,
+            "peg": 4.28,
+            "debt_to_equity": 0.18,
+            "description": "Tesla, Inc. designs, develops, manufactures, leases, and sells electric vehicles, and energy generation and storage systems in the United States, China, and internationally. The company operates in tw..."
         },
-        "updated_at": "2026-09-16T17:26:40.257991"
+        "updated_at": "2026-09-17T17:25:58.276901"
     },
-    "SNOW": {
+    "VTI": {
+        "data": {
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 24.08,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "The fund manager employs an indexing investment approach designed to track the performance of the CRSP U.S. Total Market Index (the \u201cTarget Index\u201d), which represents 100% of the investable U.S. stock ..."
+        },
+        "updated_at": "2026-09-17T17:26:23.831528"
+    },
+    "RE": {
+        "data": {
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "..."
+        },
+        "updated_at": "2026-09-17T17:27:29.483108"
+    },
+    "IQ": {
+        "data": {
+            "sector": "Communication Services",
+            "industry": "Entertainment",
+            "pe": 0,
+            "peg": 2.48,
+            "debt_to_equity": 1.12,
+            "description": "iQIYI, Inc. provides online entertainment video services in the People's Republic of China. The company operates a platform that provides a collection of internet video content, such as professionally..."
+        },
+        "updated_at": "2026-09-17T17:27:55.837538"
+    },
+    "BULL": {
         "data": {
             "sector": "Technology",
             "industry": "Software - Application",
-            "pe": 0,
-            "peg": 8.27,
-            "debt_to_equity": 1.29,
-            "description": "Snowflake Inc. provides a cloud-based data platform for various organizations in the United States and internationally. The company's platform includes artificial intelligence (AI) Data Cloud, which e..."
+            "pe": 12.55,
+            "peg": 0,
+            "debt_to_equity": 0.08,
+            "description": "Webull Corporation operates as a digital investment platform. The company offers various products and services, including trading, wealth management product distribution, market data and information, ..."
         },
-        "updated_at": "2026-09-16T17:27:07.268055"
+        "updated_at": "2026-09-17T17:28:21.157217"
+    },
+    "ZS": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Software - Infrastructure",
+            "pe": 0,
+            "peg": 1.96,
+            "debt_to_equity": 0.72,
+            "description": "Zscaler, Inc. operates as a cloud security company worldwide. The company offers cyberthreat protection products, including Zero Trust SASE, a solution that securely connects workforces, AI agents, wo..."
+        },
+        "updated_at": "2026-09-17T17:28:59.062471"
+    },
+    "GOOGL": {
+        "data": {
+            "sector": "Communication Services",
+            "industry": "Internet Content & Information",
+            "pe": 17.32,
+            "peg": 1.23,
+            "debt_to_equity": 0.19,
+            "description": "Alphabet Inc. offers various products and platforms in the United States, Europe, the Middle East, Africa, the Asia-Pacific, Canada, and Latin America. It operates through Google Services, Google Clou..."
+        },
+        "updated_at": "2026-09-17T17:29:25.759013"
     },
     "GTLB": {
         "data": {
@@ -30,61 +85,6 @@
             "debt_to_equity": 0,
             "description": "GitLab Inc., together with its subsidiaries, develops software for the software development lifecycle in the United States, Europe, and the Asia Pacific. The company provides GitLab, an intelligent or..."
         },
-        "updated_at": "2026-09-16T17:27:31.210845"
-    },
-    "OKTA": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 113.7,
-            "peg": 1.54,
-            "debt_to_equity": 0.01,
-            "description": "Okta, Inc. operates as an identity partner in the United States and internationally. It offers Single Sign-on to secure access to cloud and on-premises applications from any device; Adaptive MFA for a..."
-        },
-        "updated_at": "2026-09-16T17:28:05.445222"
-    },
-    "NVDA": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Semiconductors",
-            "pe": 27.23,
-            "peg": 0.46,
-            "debt_to_equity": 0.17,
-            "description": "NVIDIA Corporation operates as a data center scale AI infrastructure company in the United States, Taiwan, China, Hong Kong, Europe, and internationally. It operates through Compute & Networking, and ..."
-        },
-        "updated_at": "2026-09-16T17:28:31.475555"
-    },
-    "CRM": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Application",
-            "pe": 23.01,
-            "peg": 0.87,
-            "debt_to_equity": 1.1,
-            "description": "Salesforce, Inc. provides customer relationship management technology services that connect companies and customers together in the United States, Europe, and the Asia Pacific. The company offers Agen..."
-        },
-        "updated_at": "2026-09-16T17:28:51.996762"
-    },
-    "QQQ": {
-        "data": {
-            "sector": "Unknown",
-            "industry": "Unknown",
-            "pe": 28.92,
-            "peg": 0,
-            "debt_to_equity": 0,
-            "description": "To maintain the correspondence between the composition and weights of the securities in the trust (the \"securities\") and the stocks in the NASDAQ-100 Index\u00ae, the adviser adjusts the securities from ti..."
-        },
-        "updated_at": "2026-09-16T17:29:11.430064"
-    },
-    "SCHW": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Capital Markets",
-            "pe": 19.28,
-            "peg": 0.91,
-            "debt_to_equity": 1.51,
-            "description": "The Charles Schwab Corporation, together with its subsidiaries, operates as a savings and loan holding company that provides wealth management, securities brokerage, banking, asset management, custody..."
-        },
-        "updated_at": "2026-09-16T17:29:53.165955"
+        "updated_at": "2026-09-17T17:29:55.169521"
     }
 }
