@@ -1,36 +1,58 @@
 {
-    "CRM": {
+    "SNOW": {
         "data": {
             "sector": "Technology",
             "industry": "Software - Application",
-            "pe": 22.24,
-            "peg": 0.78,
-            "debt_to_equity": 1.1,
-            "description": "Salesforce, Inc. provides customer relationship management technology services that connect companies and customers together in the United States, Europe, and the Asia Pacific. The company offers Agen..."
+            "pe": 0,
+            "peg": 8.46,
+            "debt_to_equity": 1.29,
+            "description": "Snowflake Inc. provides a cloud-based data platform for various organizations in the United States and internationally. The company's platform includes artificial intelligence (AI) Data Cloud, which e..."
         },
-        "updated_at": "2026-09-23T17:40:22.828628"
+        "updated_at": "2026-09-24T17:43:07.963575"
     },
-    "DIS": {
-        "data": {
-            "sector": "Communication Services",
-            "industry": "Entertainment",
-            "pe": 21.43,
-            "peg": 3.38,
-            "debt_to_equity": 0.39,
-            "description": "The Walt Disney Company operates as an entertainment company in Americas, Europe, and the Asia Pacific. It operates in three segments: Entertainment, Sports, and Experiences. The company produces and ..."
-        },
-        "updated_at": "2026-09-23T17:40:47.328244"
-    },
-    "MDB": {
+    "ZS": {
         "data": {
             "sector": "Technology",
             "industry": "Software - Infrastructure",
-            "pe": 594.81,
-            "peg": 1.67,
-            "debt_to_equity": 0.02,
-            "description": "MongoDB, Inc., together with its subsidiaries, provides general purpose database platform worldwide. The company offers MongoDB Atlas, a hosted multi-cloud database-as-a-service solution; MongoDB Ente..."
+            "pe": 0,
+            "peg": 2.15,
+            "debt_to_equity": 0.72,
+            "description": "Zscaler, Inc. operates as a cloud security company worldwide. The company offers cyberthreat protection products, including Zero Trust SASE, a solution that securely connects workforces, AI agents, wo..."
         },
-        "updated_at": "2026-09-23T17:41:12.263321"
+        "updated_at": "2026-09-24T17:43:32.444794"
+    },
+    "KO": {
+        "data": {
+            "sector": "Consumer Defensive",
+            "industry": "Beverages - Non-Alcoholic",
+            "pe": 26.59,
+            "peg": 4.03,
+            "debt_to_equity": 1.16,
+            "description": "The Coca-Cola Company, a beverage company, manufactures and sells various nonalcoholic beverages in the United States and internationally. The company provides Trademark Coca-Cola, sparkling soft drin..."
+        },
+        "updated_at": "2026-09-24T17:43:55.727911"
+    },
+    "GOOGL": {
+        "data": {
+            "sector": "Communication Services",
+            "industry": "Internet Content & Information",
+            "pe": 17.11,
+            "peg": 1.25,
+            "debt_to_equity": 0.19,
+            "description": "Alphabet Inc. offers various products and platforms in the United States, Europe, the Middle East, Africa, the Asia-Pacific, Canada, and Latin America. It operates through Google Services, Google Clou..."
+        },
+        "updated_at": "2026-09-24T17:44:31.270265"
+    },
+    "WMT": {
+        "data": {
+            "sector": "Consumer Defensive",
+            "industry": "Discount Stores",
+            "pe": 39.26,
+            "peg": 4.2,
+            "debt_to_equity": 0.72,
+            "description": "Walmart Inc. engages in the operation of retail and wholesale stores and clubs, ecommerce websites, and mobile applications worldwide. The company operates through three segments: Walmart U.S., Walmar..."
+        },
+        "updated_at": "2026-09-24T17:44:54.781786"
     },
     "AI": {
         "data": {
@@ -41,50 +63,28 @@
             "debt_to_equity": 0.09,
             "description": "C3.ai, Inc. operates as an enterprise artificial intelligence application software company in North America, Europe, the Middle East, Africa, the Asia Pacific, and internationally. It offers C3 agenti..."
         },
-        "updated_at": "2026-09-23T17:41:39.004061"
+        "updated_at": "2026-09-24T17:45:18.806973"
     },
-    "GOOG": {
-        "data": {
-            "sector": "Communication Services",
-            "industry": "Internet Content & Information",
-            "pe": 16.8,
-            "peg": 1.24,
-            "debt_to_equity": 0.19,
-            "description": "Alphabet Inc. offers various products and platforms in the United States, Europe, the Middle East, Africa, the Asia-Pacific, Canada, and Latin America. It operates through Google Services, Google Clou..."
-        },
-        "updated_at": "2026-09-23T17:42:05.421025"
-    },
-    "GTLB": {
+    "SNDK": {
         "data": {
             "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 0,
+            "industry": "Computer Hardware",
+            "pe": 23.78,
             "peg": 0,
-            "debt_to_equity": 0,
-            "description": "GitLab Inc., together with its subsidiaries, develops software for the software development lifecycle in the United States, Europe, and the Asia Pacific. The company provides GitLab, an intelligent or..."
+            "debt_to_equity": 0.01,
+            "description": "Sandisk Corporation develops, manufactures, and sells data storage devices and solutions using NAND flash technology in the Americas, Europe, the Middle East, Africa, Asia, and internationally. The co..."
         },
-        "updated_at": "2026-09-23T17:42:30.664079"
+        "updated_at": "2026-09-24T17:45:45.446088"
     },
-    "VZ": {
-        "data": {
-            "sector": "Communication Services",
-            "industry": "Telecom Services",
-            "pe": 12.59,
-            "peg": 0.83,
-            "debt_to_equity": 1.84,
-            "description": "Verizon Communications Inc., through its subsidiaries, engages in the provision of communications, technology, information, and streaming products and services to consumers, businesses, and government..."
-        },
-        "updated_at": "2026-09-23T17:43:12.461551"
-    },
-    "CCL": {
+    "NKE": {
         "data": {
             "sector": "Consumer Cyclical",
-            "industry": "Travel Services",
-            "pe": 9.85,
-            "peg": 0.77,
-            "debt_to_equity": 2.02,
-            "description": "Carnival Corporation Ltd., a cruise company, provides leisure travel services. The company operates through four segments: North America Cruise Operations, Europe Cruise Operations, Cruise Support, an..."
+            "industry": "Footwear & Accessories",
+            "pe": 17.02,
+            "peg": 1.4,
+            "debt_to_equity": 0.74,
+            "description": "NIKE, Inc., together with its subsidiaries, designs, develops, markets, and sells athletic footwear, apparel, equipment, accessories, and services for men, women, and kids in North America, Europe, th..."
         },
-        "updated_at": "2026-09-23T17:43:39.296025"
+        "updated_at": "2026-09-24T17:46:26.275332"
     }
 }
