@@ -1,90 +1,90 @@
 {
-    "ZS": {
+    "F": {
         "data": {
-            "sector": "Technology",
-            "industry": "Software - Infrastructure",
+            "sector": "Consumer Cyclical",
+            "industry": "Auto Manufacturers",
             "pe": 0,
-            "peg": 2.2,
-            "debt_to_equity": 0.72,
-            "description": "Zscaler, Inc. operates as a cloud security company worldwide. The company offers cyberthreat protection products, including Zero Trust SASE, a solution that securely connects workforces, AI agents, wo..."
+            "peg": 8.48,
+            "debt_to_equity": 4.57,
+            "description": "Ford Motor Company develops, delivers, and services Ford trucks, sport utility vehicles, commercial vans and cars, and Lincoln luxury vehicles in the United States, Canada, the United Kingdom, Mexico,..."
         },
-        "updated_at": "2026-09-25T17:44:51.419578"
-    },
-    "BB": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 80.55,
-            "peg": 1.47,
-            "debt_to_equity": 0.28,
-            "description": "BlackBerry Limited provides intelligent software and services to enterprises and governments worldwide. The company operates through three segments: Secure Communications, QNX, and Licensing. The comp..."
-        },
-        "updated_at": "2026-09-25T17:45:21.353844"
-    },
-    "SNOW": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Application",
-            "pe": 0,
-            "peg": 8.39,
-            "debt_to_equity": 1.29,
-            "description": "Snowflake Inc. provides a cloud-based data platform for various organizations in the United States and internationally. The company's platform includes artificial intelligence (AI) Data Cloud, which e..."
-        },
-        "updated_at": "2026-09-25T17:45:38.311462"
-    },
-    "META": {
-        "data": {
-            "sector": "Communication Services",
-            "industry": "Internet Content & Information",
-            "pe": 28.25,
-            "peg": 1.03,
-            "debt_to_equity": 0.43,
-            "description": "Meta Platforms, Inc. engages in the development of products that enable people to connect and share with friends and family through mobile devices, personal computers, virtual reality (VR) headsets, a..."
-        },
-        "updated_at": "2026-09-25T17:46:11.510855"
+        "updated_at": "2026-09-28T19:58:23.842773"
     },
     "MDB": {
         "data": {
             "sector": "Technology",
             "industry": "Software - Infrastructure",
-            "pe": 579.01,
+            "pe": 478.9,
             "peg": 1.67,
             "debt_to_equity": 0.02,
             "description": "MongoDB, Inc., together with its subsidiaries, provides general purpose database platform worldwide. The company offers MongoDB Atlas, a hosted multi-cloud database-as-a-service solution; MongoDB Ente..."
         },
-        "updated_at": "2026-09-25T17:46:35.387213"
+        "updated_at": "2026-09-28T19:58:49.729452"
     },
-    "CRM": {
+    "OKTA": {
         "data": {
             "sector": "Technology",
-            "industry": "Software - Application",
-            "pe": 21.46,
-            "peg": 0.8,
-            "debt_to_equity": 1.1,
-            "description": "Salesforce, Inc. provides customer relationship management technology services that connect companies and customers together in the United States, Europe, and the Asia Pacific. The company offers Agen..."
-        },
-        "updated_at": "2026-09-25T17:46:55.268620"
-    },
-    "SNDK": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Computer Hardware",
-            "pe": 24.18,
-            "peg": 0,
+            "industry": "Software - Infrastructure",
+            "pe": 121.0,
+            "peg": 1.61,
             "debt_to_equity": 0.01,
-            "description": "Sandisk Corporation develops, manufactures, and sells data storage devices and solutions using NAND flash technology in the Americas, Europe, the Middle East, Africa, Asia, and internationally. The co..."
+            "description": "Okta, Inc. operates as an identity partner in the United States and internationally. It offers Single Sign-on to secure access to cloud and on-premises applications from any device; Adaptive MFA for a..."
         },
-        "updated_at": "2026-09-25T17:47:18.073267"
+        "updated_at": "2026-09-28T19:59:19.865797"
     },
-    "SPY": {
+    "BE": {
         "data": {
-            "sector": "Unknown",
-            "industry": "Unknown",
-            "pe": 24.91,
-            "peg": 0,
-            "debt_to_equity": 0,
-            "description": "The trust seeks to achieve its investment objective by holding a portfolio of the common stocks that are included in the index (the \u201cPortfolio\u201d), with the weight of each stock in the Portfolio substan..."
+            "sector": "Industrials",
+            "industry": "Electrical Equipment & Parts",
+            "pe": 337.13,
+            "peg": 0.65,
+            "debt_to_equity": 1.72,
+            "description": "Bloom Energy Corporation designs, manufactures, sells, and installs solid oxide fuel cell systems for on-site power generation in the United States and internationally. It offers Bloom Energy Server, ..."
         },
-        "updated_at": "2026-09-25T17:47:42.810134"
+        "updated_at": "2026-09-28T19:59:43.335800"
+    },
+    "AMZN": {
+        "data": {
+            "sector": "Consumer Cyclical",
+            "industry": "Internet Retail",
+            "pe": 19.8,
+            "peg": 1.48,
+            "debt_to_equity": 0.46,
+            "description": "Amazon.com, Inc. engages in the retail sale of consumer products, advertising, and subscriptions service through online and physical stores in North America and internationally. The company operates t..."
+        },
+        "updated_at": "2026-09-28T20:00:48.147349"
+    },
+    "NBIS": {
+        "data": {
+            "sector": "Communication Services",
+            "industry": "Internet Content & Information",
+            "pe": 0,
+            "peg": 0.54,
+            "debt_to_equity": 0.99,
+            "description": "Nebius Group N.V., a technology company, engages in building full-stack infrastructure to service the global AI industry in the United States, the United Kingdom, and internationally. It offers Nebius..."
+        },
+        "updated_at": "2026-09-28T20:01:47.774704"
+    },
+    "ZS": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Software - Infrastructure",
+            "pe": 0,
+            "peg": 1.98,
+            "debt_to_equity": 0.72,
+            "description": "Zscaler, Inc. operates as a cloud security company worldwide. The company offers cyberthreat protection products, including Zero Trust SASE, a solution that securely connects workforces, AI agents, wo..."
+        },
+        "updated_at": "2026-09-28T20:02:14.779653"
+    },
+    "MU": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Semiconductors",
+            "pe": 23.81,
+            "peg": 0.16,
+            "debt_to_equity": 0.06,
+            "description": "Micron Technology, Inc. designs, develops, manufactures, and sells memory and storage products in the United States, Taiwan, Japan, Mainland China, Hong Kong, Europe, and internationally. It operates ..."
+        },
+        "updated_at": "2026-09-28T20:02:43.072108"
     }
 }
