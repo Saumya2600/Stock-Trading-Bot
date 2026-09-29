@@ -4,6 +4,8 @@ on:
   schedule:
     # Research before market open: 9:00 AM EDT / 10:00 AM ADT = 13:00 UTC
     - cron: '0 13 * * 1-5'
+    # Research at market close: 4:00 PM EDT = 20:00 UTC
+    - cron: '0 20 * * 1-5'
   workflow_dispatch:
 
 permissions:
