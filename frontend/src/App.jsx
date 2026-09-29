@@ -1,18 +1,20 @@
-import { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, useLocation, useNavigate } from 'react-router-dom';
-import ExpandableReportCards from '@/components/ExpandableReportCards';
-import { X, Search, LayoutDashboard, LineChart as ChartIcon, Settings, Brain, FileText } from 'lucide-react';
+import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
+import { X, PanelLeftClose, PanelLeft, Search, LineChart as ChartIcon, Brain, FileText, Globe } from 'lucide-react';
 import { AdvancedRealTimeChart } from "react-ts-tradingview-widgets";
 
-const SECTOR_MAP = {
-  Technology: ['AAPL', 'MSFT', 'NVDA', 'AVGO', 'ORCL', 'ADBE', 'CRM', 'AMD', 'QCOM', 'INTC', 'TSM', 'ASML', 'CSCO', 'IBM', 'TXN', 'NOW', 'INTU', 'AMAT', 'MU', 'LRCX', 'PANW'],
-  Finance: ['JPM', 'V', 'MA', 'BAC', 'WFC', 'SPGI', 'GS', 'MS', 'AXP', 'C', 'BLK', 'SCHW', 'PGR', 'CB', 'MMC', 'CME', 'BX'],
-  Healthcare: ['LLY', 'UNH', 'JNJ', 'MRK', 'ABBV', 'TMO', 'DHR', 'PFE', 'ISRG', 'SYK', 'CVS', 'MDT', 'VRTX', 'REGN', 'BSX', 'ZTS'],
-  Consumer: ['AMZN', 'TSLA', 'WMT', 'HD', 'PG', 'COST', 'KO', 'PEP', 'MCD', 'NKE', 'SBUX', 'TGT', 'LVMUY', 'TM', 'F', 'GM'],
-  Communications: ['GOOGL', 'GOOG', 'META', 'NFLX', 'CMCSA', 'DIS', 'VZ', 'T', 'TMUS', 'CHTR'],
-  Industrial: ['CAT', 'GE', 'UNP', 'HON', 'BA', 'LMT', 'DE', 'UPS', 'RTX', 'MMM', 'CSX', 'ETN']
-};
+import { AppProvider, useApp } from './context/AppContext';
+import HubPage from './pages/HubPage';
+import MarketPage from './pages/MarketPage';
+import TradeHistoryPage from './pages/TradeHistoryPage';
+import SearchPage from './pages/SearchPage';
+import ExpandableReportCards from '@/components/ExpandableReportCards';
 
+function ReportsPage() {
+  const { researchReports } = useApp();
+  return <ExpandableReportCards reports={researchReports} />;
+}
+
+/* ── SVG glass filter ── */
 const GlassFilter = () => (
   <svg style={{ display: "none" }}>
     <filter id="glass-distortion" x="0%" y="0%" width="100%" height="100%" filterUnits="objectBoundingBox">
@@ -32,1140 +34,214 @@ const GlassFilter = () => (
   </svg>
 );
 
-function App() {
-  const [momentumStocks, setMomentumStocks] = useState([]);
-  const [activeStocks, setActiveStocks] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  const [view, setView] = useState('dashboard');
-  
-  const [selectedStock, setSelectedStock] = useState(null);
-  const [chartData, setChartData] = useState([]);
-  const [loadingChart, setLoadingChart] = useState(false);
-  const [chartRange, setChartRange] = useState('1M'); 
-  const [rangePercentChange, setRangePercentChange] = useState(0);
-
-  // New States
-  const [sectorFilter, setSectorFilter] = useState('All');
-  const [searchInput, setSearchInput] = useState('');
-  const [isSearching, setIsSearching] = useState(false);
-
-  const apiKey = import.meta.env.VITE_ALPACA_API_KEY;
-  const apiSecret = import.meta.env.VITE_ALPACA_SECRET_KEY;
-
-  const [botSignals, setBotSignals] = useState(null);
-  const [researchReports, setResearchReports] = useState({});
-  const [performance, setPerformance] = useState(null);
-  const [positions, setPositions] = useState(null);
-  const [researchStatus, setResearchStatus] = useState(null);
-  const [tradeHistory, setTradeHistory] = useState([]);
-  const [manualResearchLoading, setManualResearchLoading] = useState(false);
-  const [researchClearing, setResearchClearing] = useState(false);
-  const [botOnline, setBotOnline] = useState(false);
-  const [sidebarOpen, setSidebarOpen] = useState(window.innerWidth > 768);
-
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth <= 768) setSidebarOpen(false);
-      else setSidebarOpen(true);
-    };
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  const headers = {
-    'APCA-API-KEY-ID': apiKey || '',
-    'APCA-API-SECRET-KEY': apiSecret || '',
-    'accept': 'application/json'
-  };
-
-  const API_BASE_RAW = import.meta.env.VITE_API_BASE_URL || '';
-  const isServerless = API_BASE_RAW.includes("githubusercontent.com");
-  const API_BASE = (isServerless || !API_BASE_RAW) ? API_BASE_RAW : "";
-
-  // Poll the Python Bot API (Serverless via GitHub or Local JSON)
-  useEffect(() => {
-    const fetchBotData = async () => {
-      try {
-        const cacheBuster = `?t=${Date.now()}`;
-        
-        // Strategy: If API_BASE is empty or includes githubusercontent, we are in "static/serverless" mode.
-        // In this mode, we fetch reports.json and app_state.json directly.
-        if (isServerless || !API_BASE_RAW) {
-          const [resReports, resState] = await Promise.all([
-            fetch(`${API_BASE}/reports.json${cacheBuster}`).catch(() => ({ ok: false })),
-            fetch(`${API_BASE}/app_state.json${cacheBuster}`).catch(() => ({ ok: false }))
-          ]);
-
-          if (resReports.ok) {
-            const reportsData = await resReports.json();
-            setBotSignals({ signals: Object.keys(reportsData).filter(k => !k.startsWith('_')) });
-            setResearchReports(reportsData);
-            setResearchStatus({ status: "idle" });
-            setBotOnline(true);
-          }
-
-          if (resState.ok) {
-            const stateData = await resState.json();
-            setPerformance(stateData.portfolio_performance || {});
-            setTradeHistory(stateData.trade_history || []);
-          }
-          
-          // In Serverless mode, live positions are fetched directly from Alpaca in fetchAlpacaData below.
-          setPositions(prev => prev || { positions: [] }); 
-        } else {
-          // Fallback to active backend server (FastAPI)
-          const [resSignals, resResearch, resPerf, resPositions, resStatus, resTrades] = await Promise.all([
-            fetch(`${API_BASE}/signals`),
-            fetch(`${API_BASE}/research`),
-            fetch(`${API_BASE}/performance`),
-            fetch(`${API_BASE}/positions`),
-            fetch(`${API_BASE}/research_status`),
-            fetch(`${API_BASE}/trade_history`)
-          ].map(p => p.catch(() => ({ ok: false }))));
-          
-          if (resSignals.ok) setBotSignals(await resSignals.json());
-          if (resResearch.ok) setResearchReports(await resResearch.json());
-          if (resPerf.ok) setPerformance(await resPerf.json());
-          if (resPositions.ok) {
-            const posData = await resPositions.json();
-            if (posData && posData.positions) {
-              setPositions(prev => ({ ...posData, is_live_alpaca: false }));
-            }
-          }
-          if (resStatus.ok) setResearchStatus(await resStatus.json());
-          if (resTrades.ok) {
-            const historyData = await resTrades.json();
-            setTradeHistory(historyData.history || []);
-          }
-          
-          setBotOnline(resSignals.ok);
-        }
-      } catch (e) {
-        console.error("Bot Data Fetch Error:", e);
-        setBotOnline(false);
-      }
-    };
-
-    fetchBotData();
-    const interval = setInterval(fetchBotData, 5000); // Poll every 5s
-    return () => clearInterval(interval);
-  }, [API_BASE, isServerless, API_BASE_RAW]);
-
-  useEffect(() => {
-    fetchAlpacaData();
-  }, [apiKey, apiSecret]);
-
-  const fetchAlpacaData = async () => {
-    if (!apiKey || !apiSecret) {
-      setLoading(false);
-      setError("Please add your Alpaca API credentials to the .env file.");
-      return;
-    }
-    setLoading(true);
-    setError(null);
-
-    try {
-      // 1. Fetch Live Positions (Direct from Alpaca)
-      const resPositions = await fetch('https://paper-api.alpaca.markets/v2/positions', { headers });
-      if (resPositions.ok) {
-        const dataPos = await resPositions.json();
-        const mappedPositions = dataPos.map(p => ({
-          symbol: p.symbol,
-          quantity: p.qty,
-          avg_price: parseFloat(p.avg_entry_price),
-          current_price: parseFloat(p.current_price),
-          unrealized_pnl: parseFloat(p.unrealized_intraday_pl),
-          unrealized_pnl_pct: parseFloat(p.unrealized_intraday_plpc) * 100,
-          invested: parseFloat(p.cost_basis),
-          value: parseFloat(p.market_value)
-        }));
-        
-        // Fetch Account for Total Value
-        const resAccount = await fetch('https://paper-api.alpaca.markets/v2/account', { headers });
-        const dataAcc = await resAccount.json();
-
-        setPositions({
-          positions: mappedPositions,
-          total_invested: parseFloat(dataAcc.cash) + parseFloat(dataAcc.portfolio_value), // Rough estimate or just use portfolio_value
-          total_value: parseFloat(dataAcc.portfolio_value),
-          total_unrealized_pnl: parseFloat(dataAcc.equity) - parseFloat(dataAcc.last_equity),
-          is_live_alpaca: true
-        });
-      }
-    } catch (err) {
-      console.error("Error fetching Alpaca data:", err);
-      setError(err.message);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  const handleSearch = async (e) => {
-    e.preventDefault();
-    if(!searchInput.trim()) return;
-    
-    setIsSearching(true);
-    const ticker = searchInput.trim().toUpperCase();
-
-    try {
-      const resSnaps = await fetch(`https://data.alpaca.markets/v2/stocks/snapshots?symbols=${ticker}`, { headers });
-      const dataSnaps = await resSnaps.json();
-      
-      const snap = dataSnaps[ticker];
-      if (snap) {
-        const stockProxy = {
-          symbol: ticker,
-          price: snap?.latestTrade?.p || snap?.dailyBar?.c || 0,
-          percent_change: snap.prevDailyBar && snap.dailyBar ? ((snap.dailyBar.c - snap.prevDailyBar.c) / snap.prevDailyBar.c) * 100 : 0
-        };
-        openStockModal(stockProxy);
-      } else {
-        alert("Ticker not found or invalid format!");
-      }
-    } catch(e) { 
-      console.error(e);
-      alert("Error searching for ticker!");
-    }
-    
-    setIsSearching(false);
-    setSearchInput('');
-  };
-
-  const fetchChartDataForRange = async (stock, range) => {
-    setLoadingChart(true);
-    setChartRange(range);
-    
-    const end = new Date();
-    const start = new Date();
-    
-    if (range === '1W') start.setDate(end.getDate() - 7);
-    if (range === '1M') start.setDate(end.getDate() - 30);
-    if (range === '6M') start.setMonth(end.getMonth() - 6);
-    if (range === 'YTD') {
-      start.setMonth(0);
-      start.setDate(1);
-    }
-
-    const startStr = start.toISOString();
-    const endStr = end.toISOString();
-
-    try {
-      const res = await fetch(`https://data.alpaca.markets/v2/stocks/bars?symbols=${stock.symbol}&timeframe=1Day&feed=iex&start=${startStr}&end=${endStr}`, { headers });
-      const data = await res.json();
-      
-      if (data.bars && data.bars[stock.symbol]) {
-        const formattedData = data.bars[stock.symbol].map(bar => {
-          const dateStr = new Date(bar.t).toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
-          return {
-            name: dateStr,
-            Price: bar.c 
-          };
-        });
-        setChartData(formattedData);
-        
-        if (formattedData.length > 0) {
-          const firstPrice = formattedData[0].Price;
-          const lastPrice = formattedData[formattedData.length - 1].Price;
-          setRangePercentChange(((lastPrice - firstPrice) / firstPrice) * 100);
-        } else {
-          setRangePercentChange(0);
-        }
-      } else {
-        setChartData([]);
-        setRangePercentChange(0);
-      }
-    } catch (e) {
-      console.error("Error fetching chart data", e);
-      setChartData([]);
-      setRangePercentChange(0);
-    }
-    setLoadingChart(false);
-  };
-
-  const openStockModal = (stock) => {
-    // 🔗 DEEP RESEARCH MERGE: Find stored intelligence for this ticker
-    const intelligence = researchReports[stock.symbol];
-    const enrichedStock = intelligence ? { ...stock, ...intelligence } : stock;
-    
-    setSelectedStock(enrichedStock);
-    fetchChartDataForRange(enrichedStock, '1M'); 
-  };
-
-  const closeModal = () => {
-    setSelectedStock(null);
-  };
-
-  const getTradeSuggestion = (stock) => {
-    if (stock.percent_change > 5) return { text: 'Strong Buy', class: 'buy' };
-    if (stock.percent_change > 0) return { text: 'Buy', class: 'buy' };
-    if (stock.percent_change < -5) return { text: 'Sell', class: 'sell' };
-    if (stock.percent_change < 0) return { text: 'Hold', class: 'hold' };
-    return { text: 'Hold', class: 'hold' };
-  };
-
-  const StockCard = ({ stock }) => {
-    const suggestion = getTradeSuggestion(stock);
-    const isPositive = stock.percent_change >= 0;
-    
-    return (
-      <div className="glass-card" onClick={() => openStockModal(stock)}>
-        <div className="card-header">
-          <div style={{ maxWidth: '70%', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
-            <div className="ticker">{stock.symbol}</div>
-            <div className="label-md" style={{ marginTop: '0.25rem', fontSize: '0.65rem', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-              {stock.name || 'US Equity'}
-            </div>
-          </div>
-          <div className={`chip gain-indicator ${isPositive ? 'positive' : 'negative'}`}>
-            {isPositive ? '+' : ''}{parseFloat(stock.percent_change || 0).toFixed(2)}%
-          </div>
-        </div>
-        
-        <div className="price">${parseFloat(stock.price || 0).toFixed(2)}</div>
-        
-        <div className={`chip trade-suggestion ${suggestion.class}`}>
-          {suggestion.text}
-        </div>
-        {stock.volume && <div className="label-md" style={{ marginTop: '1rem', fontSize: '0.65rem' }}>Vol: {(stock.volume / 1000000).toFixed(1)}M</div>}
-      </div>
-    );
-  };
-
-  const renderResearchStatus = () => {
-    if (!researchStatus) return null;
-
-    const lastRun = researchStatus.last_run ? new Date(researchStatus.last_run).toLocaleString() : 'None yet';
-    const currentWindow = researchStatus.market_open ? 'OPEN' : 'CLOSED';
-    const nextOpen = researchStatus.next_market_open_sec != null ? `${Math.floor(researchStatus.next_market_open_sec / 3600)}h ${Math.floor((researchStatus.next_market_open_sec % 3600) / 60)}m` : 'Unknown';
-    const count = researchStatus.research_count || 0;
-    const symbols = researchStatus.research_symbols || [];
-    const symbolPreview = symbols.length ? symbols.slice(0, 8).join(', ') : 'No stocks researched yet';
-
-    return (
-      <div className="glass-card" style={{ marginBottom: '3rem', padding: '1.75rem' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
-          <div>
-            <h3 className="headline-sm">Research Status</h3>
-            <p className="label-md" style={{ color: 'var(--on-surface-variant)' }}>
-              Bot is currently {currentWindow.toLowerCase()}.
-            </p>
-          </div>
-          <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap' }}>
-            <button
-              className="chip positive"
-              style={{ cursor: 'pointer', padding: '0.7rem 1rem' }}
-              disabled={manualResearchLoading || researchClearing}
-              onClick={async () => {
-                setManualResearchLoading(true);
-                setResearchReports({});
-                try {
-                  await fetch(`${API_BASE}/trigger_research`, { method: 'POST' });
-                } catch (e) {
-                  console.error('Manual research failed', e);
-                }
-                setManualResearchLoading(false);
-              }}
-            >
-              {manualResearchLoading ? 'Triggering…' : 'Run Now'}
-            </button>
-            <button
-              className="chip hold"
-              style={{ cursor: 'pointer', padding: '0.7rem 1rem' }}
-              disabled={researchClearing || manualResearchLoading}
-              onClick={async () => {
-                setResearchClearing(true);
-                setResearchReports({});
-                try {
-                  await fetch(`${API_BASE}/clear_research`, { method: 'POST' });
-                } catch (e) {
-                  console.error('Clear research failed', e);
-                }
-                setResearchClearing(false);
-              }}
-            >
-              {researchClearing ? 'Clearing…' : 'Clear Old Research'}
-            </button>
-          </div>
-        </div>
-
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1rem' }}>
-          <div>
-            <div className="label-sm" style={{ color: 'var(--on-surface-variant)' }}>Last Research Run</div>
-            <div className="headline-sm">{lastRun}</div>
-          </div>
-          <div>
-            <div className="label-sm" style={{ color: 'var(--on-surface-variant)' }}>Stocks in latest cycle</div>
-            <div className="headline-sm">{count}</div>
-          </div>
-        </div>
-
-        <div style={{ marginBottom: '1rem' }}>
-          <div className="label-sm" style={{ color: 'var(--on-surface-variant)' }}>Latest research symbols</div>
-          <div className="label-md" style={{ marginTop: '0.3rem' }}>{symbolPreview}</div>
-        </div>
-
-        <div className="label-md" style={{ color: 'var(--on-surface-variant)' }}>
-          Next market open in: {nextOpen}
-        </div>
-      </div>
-    );
-  };
-
-  const renderTradeTimeline = () => {
-    if (!tradeHistory || tradeHistory.length === 0) {
-      return (
-        <div className="glass-card" style={{ marginBottom: '3rem', padding: '2rem' }}>
-          <h3 className="headline-sm">Bot Trade Timeline</h3>
-          <p className="label-md" style={{ color: 'var(--on-surface-variant)', marginTop: '0.5rem' }}>
-            No trade events yet. Trades will appear here after the bot buys or sells.
-          </p>
-        </div>
-      );
-    }
-
-    return (
-      <div className="glass-card" style={{ marginBottom: '3rem', padding: '2rem' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem' }}>
-          <div>
-            <h3 className="headline-sm">Bot Trade Timeline</h3>
-            <p className="label-md" style={{ color: 'var(--on-surface-variant)' }}>
-              Recent buys and sells by the bot, newest first.
-            </p>
-          </div>
-        </div>
-
-        <div style={{ position: 'relative', paddingLeft: '1rem', borderLeft: '2px solid rgba(255,255,255,0.12)' }}>
-          {tradeHistory.slice(0, 10).sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp)).map((trade, index) => (
-            <div key={`${trade.symbol}-${trade.timestamp}-${index}`} style={{ position: 'relative', marginBottom: '1.75rem', paddingLeft: '1.5rem' }}>
-              <div style={{ position: 'absolute', left: '-10px', top: '0.4rem', width: '16px', height: '16px', borderRadius: '50%', background: trade.side === 'BUY' ? '#3fff8b' : '#ff716c', border: '2px solid rgba(255,255,255,0.15)' }} />
-              <div className="glass-card" style={{ padding: '1rem', background: 'rgba(255,255,255,0.03)', borderRadius: '14px', border: '1px solid rgba(255,255,255,0.08)' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: '1rem' }}>
-                  <div>
-                    <div className="headline-md" style={{ marginBottom: '0.25rem' }}>{trade.symbol} • {trade.side}</div>
-                    <div className="label-sm" style={{ color: 'var(--on-surface-variant)' }}>
-                      {trade.quantity} shares @ ${trade.price.toFixed(2)}
-                    </div>
-                  </div>
-                  <div style={{ textAlign: 'right' }}>
-                    <div className="label-sm" style={{ color: trade.side === 'BUY' ? '#3fff8b' : '#ff716c', fontWeight: '700' }}>{trade.side}</div>
-                    <div className="label-sm" style={{ color: 'var(--on-surface-variant)' }}>{new Date(trade.timestamp).toLocaleString()}</div>
-                  </div>
-                </div>
-                <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', marginTop: '0.85rem', gap: '0.75rem' }}>
-                  <div className="label-sm" style={{ color: 'var(--on-surface-variant)' }}>AI Grade: {trade.ai_grade}</div>
-                  {trade.signal && <div className="chip" style={{ background: 'rgba(255,255,255,0.08)', color: '#fff', fontSize: '0.7rem' }}>{trade.signal}</div>}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    );
-  };
-
-  const renderBotSignals = () => {
-    if (!botOnline) {
-      return (
-        <div className="glass-card" style={{ border: '1px dashed rgba(255,255,255,0.1)', opacity: 0.7 }}>
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-            <div>
-              <div className="headline-sm">Intelligence Engine Offline</div>
-              <div className="label-md" style={{ color: 'var(--on-surface-variant)' }}>Start backend/bot.py to activate AI Research & Discovery</div>
-            </div>
-            <div className="chip hold">OFFLINE</div>
-          </div>
-        </div>
-      );
-    }
-
-    const symbols = Object.keys(researchReports).filter((key) => !key.startsWith("_"));
-    if (symbols.length === 0) return <div className="loading" style={{ padding: '2rem' }}>AI Researcher initializing data... run the bot or click Run Now to kick off research.</div>;
-
-    return (
-      <div className="stock-grid" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(360px, 1fr))' }}>
-        {symbols.map((ticker) => {
-          const research = researchReports[ticker];
-          const tech = botSignals?.[ticker];
-          const aiGrade = research?.ai_grade || 50;
-          const gradeColor = aiGrade > 80 ? '#3fff8b' : aiGrade < 40 ? '#ff716c' : '#ffd60a';
-
-          return (
-            <div key={ticker} className="glass-card" style={{ 
-              background: 'linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 100%)',
-              border: `1px solid ${aiGrade > 80 || aiGrade < 40 ? gradeColor + '44' : 'rgba(255,255,255,0.1)'}`,
-              position: 'relative',
-              overflow: 'hidden',
-              padding: '1.5rem',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '1.25rem'
-            }}>
-              {/* Dynamic Aura */}
-              <div style={{ 
-                position: 'absolute', top: '-40px', right: '-40px', width: '120px', height: '120px', 
-                background: gradeColor, filter: 'blur(70px)', opacity: 0.1, borderRadius: '50%' 
-              }} />
-
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-                <div>
-                  <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                    <div className="ticker" style={{ fontSize: '1.5rem' }}>{ticker}</div>
-                    <div className="chip" style={{ 
-                      fontSize: '0.6rem', padding: '2px 6px', 
-                      background: research.type === 'DEEP VALUE' ? 'rgba(63, 255, 139, 0.1)' : 'rgba(255, 214, 10, 0.1)',
-                      color: research.type === 'DEEP VALUE' ? '#3fff8b' : '#ffd60a',
-                      border: '1px solid currentColor'
-                    }}>
-                      {research.type}
-                    </div>
-                  </div>
-                  <div style={{ marginTop: '0.25rem', color: '#fff', fontSize: '0.85rem', fontWeight: '500' }}>
-                    {research.name || ticker}
-                  </div>
-                  <div style={{ marginTop: '0.25rem', color: 'var(--on-surface-variant)', fontSize: '0.75rem' }}>
-                    Price: ${research.price.toFixed(2)}
-                  </div>
-                </div>
-                <div style={{ textAlign: 'right' }}>
-                  <div className="label-md" style={{ color: gradeColor, fontWeight: '800' }}>AI GRADE</div>
-                  <div className="headline-md" style={{ color: gradeColor }}>{aiGrade}</div>
-                </div>
-              </div>
-
-              <div className="glass-card" style={{ background: 'rgba(255,255,255,0.02)', padding: '1rem', border: '1px solid rgba(255,255,255,0.05)', borderRadius: '8px' }}>
-                <div className="label-md" style={{ fontSize: '0.65rem', marginBottom: '0.5rem', opacity: 0.5 }}>AI RESEARCH BRIEF</div>
-                <div style={{ fontSize: '0.85rem', lineHeight: '1.4', color: 'var(--on-surface)' }}>
-                  {research.reasoning || "Analyzing latest news catalysts..."}
-                </div>
-              </div>
-
-              <div style={{ marginTop: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <div style={{ display: 'flex', gap: '0.5rem' }}>
-                   {tech?.signal && <div className={`chip ${tech.signal.includes('BUY') ? 'positive' : 'hold'}`} style={{ fontSize: '0.6rem' }}>{tech.signal}</div>}
-                   <button 
-                     className="chip hold" 
-                     style={{ fontSize: '0.6rem', cursor: 'pointer', border: '1px solid rgba(255,255,255,0.1)' }}
-                     onClick={() => openStockModal(research)}
-                   >
-                     DETAILS ↗
-                   </button>
-                </div>
-                <div className="label-md" style={{ fontSize: '0.6rem', opacity: 0.3 }}>
-                  Updated: {new Date(research.updated_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
-                </div>
-              </div>
-            </div>
-          );
-        })}
-      </div>
-    );
-  };
-
-  const renderPerformanceChart = () => {
-    if (!performance || performance.bot_roi == null || performance.spy_roi == null) return null;
-    const isWinning = performance.bot_roi > performance.spy_roi;
-
-    return (
-      <div className="glass-card" style={{ marginBottom: '3rem', padding: '2rem' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
-          <div>
-            <h3 className="headline-sm">Performance vs. Benchmark</h3>
-            <p className="label-md" style={{ color: 'var(--on-surface-variant)' }}>Your Bot vs S&P 500 (SPY)</p>
-          </div>
-          <div style={{ textAlign: 'right' }}>
-             <div className="display-lg" style={{ color: isWinning ? '#3fff8b' : '#ff716c', fontSize: '2.5rem' }}>
-               {isWinning ? '+' : ''}{(performance.bot_roi - performance.spy_roi).toFixed(2)}%
-             </div>
-             <div className="label-md">ALPHA VS SPY</div>
-          </div>
-        </div>
-
-        <div className="responsive-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
-           <div style={{ padding: '1.5rem', background: 'rgba(63, 255, 139, 0.05)', borderRadius: '12px', border: '1px solid rgba(63, 255, 139, 0.1)' }}>
-              <div className="label-md" style={{ color: '#3fff8b' }}>AI BOT ROI</div>
-              <div className="headline-md" style={{ marginTop: '0.5rem' }}>{performance.bot_roi.toFixed(2)}%</div>
-           </div>
-           <div style={{ padding: '1.5rem', background: 'rgba(255, 255, 255, 0.05)', borderRadius: '12px', border: '1px solid rgba(255, 255, 255, 0.1)' }}>
-              <div className="label-md" style={{ color: 'var(--on-surface-variant)' }}>SPY ROI</div>
-              <div className="headline-md" style={{ marginTop: '0.5rem' }}>{performance.spy_roi.toFixed(2)}%</div>
-           </div>
-        </div>
-
-        <div style={{ marginTop: '1.5rem', color: 'var(--on-surface-variant)', fontSize: '0.75rem', textAlign: 'center' }}>
-          Autonomous Execution active. {(performance.trades_count || tradeHistory.length)} trades placed by the bot since inception.
-        </div>
-      </div>
-    );
-  };
-
-  const renderPortfolioPositions = () => {
-    if (!positions || !positions.positions || positions.positions.length === 0) {
-      return (
-        <div className="glass-card" style={{ marginBottom: '3rem', padding: '2rem' }}>
-          <h3 className="headline-sm">Bot Portfolio Positions</h3>
-          <p className="label-md" style={{ color: 'var(--on-surface-variant)', marginTop: '0.5rem' }}>
-            No active positions. Bot is waiting for high-conviction opportunities.
-          </p>
-        </div>
-      );
-    }
-
-    const totalInvested = positions.total_invested || 0;
-    const totalValue = positions.total_value || 0;
-    const totalPnL = positions.total_unrealized_pnl || 0;
-    const totalPnLPct = totalInvested > 0 ? (totalPnL / totalInvested) * 100 : 0;
-
-    return (
-      <div className="glass-card" style={{ marginBottom: '3rem', padding: '2rem' }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
-          <div>
-            <h3 className="headline-sm">Bot Portfolio Positions</h3>
-            <p className="label-md" style={{ color: 'var(--on-surface-variant)' }}>
-              {positions.is_live_alpaca ? "LIVE FROM ALPACA" : "Current holdings and sell targets to beat SPY"}
-            </p>
-          </div>
-          <div style={{ textAlign: 'right' }}>
-            <div className="display-lg" style={{ color: totalPnL >= 0 ? '#3fff8b' : '#ff716c', fontSize: '2rem' }}>
-              {totalPnL >= 0 ? '+' : ''}${totalPnL.toFixed(2)}
-            </div>
-            <div className="label-md" style={{ color: totalPnL >= 0 ? '#3fff8b' : '#ff716c' }}>
-              {totalPnLPct >= 0 ? '+' : ''}{totalPnLPct.toFixed(2)}% P&L
-            </div>
-          </div>
-        </div>
-
-        <div className="responsive-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1rem' }}>
-          {positions.positions.map((position) => {
-            const isPositive = position.unrealized_pnl >= 0;
-            const sellTargetMet = position.sell_target_price ? position.current_price >= position.sell_target_price : false;
-            
-            return (
-              <div 
-                key={position.symbol}
-                style={{
-                  padding: '1.5rem',
-                  background: 'rgba(255, 255, 255, 0.02)',
-                  borderRadius: '12px',
-                  border: `1px solid ${sellTargetMet ? 'rgba(63, 255, 139, 0.3)' : 'rgba(255, 255, 255, 0.1)'}`,
-                  position: 'relative'
-                }}
-              >
-                {sellTargetMet && (
-                  <div style={{
-                    position: 'absolute',
-                    top: '10px',
-                    right: '10px',
-                    background: '#3fff8b',
-                    color: '#000',
-                    padding: '2px 8px',
-                    borderRadius: '12px',
-                    fontSize: '0.7rem',
-                    fontWeight: '700'
-                  }}>
-                    SELL TARGET MET
-                  </div>
-                )}
-
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '1rem' }}>
-                  <div>
-                    <div className="headline-md" style={{ fontSize: '1.2rem' }}>{position.symbol}</div>
-                    <div className="label-sm" style={{ color: 'var(--on-surface-variant)' }}>{position.name}</div>
-                  </div>
-                  <div style={{ textAlign: 'right' }}>
-                    <div className="label-md" style={{ color: isPositive ? '#3fff8b' : '#ff716c' }}>
-                      {isPositive ? '+' : ''}${position.unrealized_pnl.toFixed(2)}
-                    </div>
-                    <div className="label-sm" style={{ color: isPositive ? '#3fff8b' : '#ff716c' }}>
-                      {isPositive ? '+' : ''}{position.unrealized_pnl_pct.toFixed(2)}%
-                    </div>
-                  </div>
-                </div>
-
-                <div className="responsive-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1rem' }}>
-                  <div>
-                    <div className="label-sm" style={{ color: 'var(--on-surface-variant)' }}>Quantity</div>
-                    <div className="headline-sm">{position.quantity}</div>
-                  </div>
-                  <div>
-                    <div className="label-sm" style={{ color: 'var(--on-surface-variant)' }}>Avg Price</div>
-                    <div className="headline-sm">${(position.avg_price || 0).toFixed(2)}</div>
-                  </div>
-                  <div>
-                    <div className="label-sm" style={{ color: 'var(--on-surface-variant)' }}>Current</div>
-                    <div className="headline-sm">${(position.current_price || 0).toFixed(2)}</div>
-                  </div>
-                  <div>
-                    <div className="label-sm" style={{ color: 'var(--on-surface-variant)' }}>Invested</div>
-                    <div className="headline-sm">${(position.invested || 0).toFixed(2)}</div>
-                  </div>
-                </div>
-
-                <div style={{ borderTop: '1px solid rgba(255, 255, 255, 0.1)', paddingTop: '1rem' }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                    <div>
-                      <div className="label-sm" style={{ color: 'var(--on-surface-variant)' }}>Sell Target (Beat SPY)</div>
-                      <div className="headline-sm" style={{ color: sellTargetMet ? '#3fff8b' : 'var(--on-surface-variant)' }}>
-                        {position.sell_target_price ? `$${position.sell_target_price.toFixed(2)}` : 'N/A'}
-                      </div>
-                    </div>
-                    <div style={{ textAlign: 'right' }}>
-                      <div className="label-sm" style={{ color: 'var(--on-surface-variant)' }}>SPY ROI</div>
-                      <div className="label-md">
-                        {position.spy_roi != null ? `${position.spy_roi >= 0 ? '+' : ''}${position.spy_roi.toFixed(2)}%` : 'N/A'}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div style={{ marginTop: '0.5rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                  <div className="label-sm" style={{ color: 'var(--on-surface-variant)' }}>
-                    AI Grade: {position.ai_grade}/100 • {position.risk_level} Risk
-                  </div>
-                  {position.sell_target_pct && !sellTargetMet && (
-                    <div className="label-sm" style={{ color: '#ff716c' }}>
-                      Need +{position.sell_target_pct.toFixed(2)}% to sell
-                    </div>
-                  )}
-                </div>
-              </div>
-            );
-          })}
-        </div>
-
-        <div style={{ marginTop: '2rem', padding: '1.5rem', background: 'rgba(255, 255, 255, 0.02)', borderRadius: '12px' }}>
-          <div className="responsive-grid" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1.5rem' }}>
-            <div className="label-md">Portfolio Summary</div>
-            <div className="responsive-grid" style={{ display: 'flex', gap: '2rem', flexWrap: 'wrap' }}>
-              <div>
-                <div className="label-sm" style={{ color: 'var(--on-surface-variant)' }}>Total Invested</div>
-                <div className="headline-sm">${totalInvested.toFixed(2)}</div>
-              </div>
-              <div>
-                <div className="label-sm" style={{ color: 'var(--on-surface-variant)' }}>Current Value</div>
-                <div className="headline-sm">${totalValue.toFixed(2)}</div>
-              </div>
-              <div>
-                <div className="label-sm" style={{ color: 'var(--on-surface-variant)' }}>Unrealized P&L</div>
-                <div className="headline-sm" style={{ color: totalPnL >= 0 ? '#3fff8b' : '#ff716c' }}>
-                  {totalPnL >= 0 ? '+' : ''}${totalPnL.toFixed(2)}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  };
-
-  const HubPage = () => (
-    <>
-      <header style={{ marginBottom: '2rem' }}>
-        <h2 className="display-lg">Intelligence Hub</h2>
-        <p className="headline-sm" style={{ marginTop: '0.5rem', opacity: 0.7 }}>Autonomous Deep Research & SPY Alpha Tracking</p>
-      </header>
-
-      {/* Benchmark Section */}
-      {renderPerformanceChart()}
-
-      {/* Research Status */}
-      {renderResearchStatus()}
-
-      {/* Portfolio Positions */}
-      {renderPortfolioPositions()}
-
-      {/* Trade Timeline */}
-      {renderTradeTimeline()}
-
-      {/* AI Strategy Bot Signals */}
-      <div style={{ marginBottom: '3rem' }}>
-        <div style={{ display: 'flex', alignItems: 'center', margin: '0 0 1rem 0', gap: '1rem' }}>
-          <h3 className="label-lg" style={{ color: 'var(--on-surface-variant)', letterSpacing: '0.1em' }}>DEEP RESEARCH INTELLIGENCE</h3>
-        </div>
-        {renderBotSignals()}
-      </div>
-    </>
-  );
-
-  const MarketPage = () => {
-    if (loading) return <div className="loading">Connecting to Alpaca...</div>;
-    
-    const filteredActives = activeStocks.filter(s => sectorFilter === 'All' || SECTOR_MAP[sectorFilter].includes(s.symbol));
-    const filteredMomentum = momentumStocks.filter(s => sectorFilter === 'All' || SECTOR_MAP[sectorFilter].includes(s.symbol));
-
-    return (
-      <>
-        <header style={{ marginBottom: '2rem' }}>
-          <h2 className="display-lg">Global Market</h2>
-          <p className="headline-sm" style={{ marginTop: '0.5rem', opacity: 0.7 }}>Real-time US Movers & Sector Analysis</p>
-        </header>
-
-        {/* Sector Filters */}
-        <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '2.5rem', flexWrap: 'wrap' }}>
-          {['All', 'Technology', 'Finance', 'Healthcare', 'Consumer', 'Communications', 'Industrial'].map(sector => (
-            <button 
-              key={sector}
-              onClick={() => setSectorFilter(sector)}
-              style={{
-                background: sectorFilter === sector ? 'var(--on-surface)' : 'var(--surface-container-highest)',
-                color: sectorFilter === sector ? 'var(--surface)' : 'var(--on-surface-variant)',
-                border: 'none',
-                padding: '8px 16px',
-                borderRadius: '99px',
-                cursor: 'pointer',
-                fontWeight: '600',
-                transition: 'all 0.2s',
-                boxShadow: sectorFilter === sector ? '0 4px 12px rgba(255,255,255,0.2)' : 'none'
-              }}
-            >
-              {sector}
-            </button>
-          ))}
-        </div>
-
-        {error ? (
-          <div style={{ padding: '1.5rem', background: 'rgba(255, 113, 108, 0.1)', borderLeft: '4px solid #ff716c', borderRadius: '0 8px 8px 0' }}>
-            <p className="headline-sm" style={{ color: '#ff716c', marginBottom: '0.5rem' }}>Authentication Failed</p>
-            <p style={{ color: 'var(--on-surface-variant)' }}>{error}</p>
-          </div>
-        ) : (
-          <>
-            <section style={{ marginBottom: '3rem' }}>
-              <div style={{ display: 'flex', alignItems: 'center', margin: '0 0 1.5rem 0', gap: '1rem' }}>
-                <h3 className="headline-sm" style={{ color: 'var(--on-surface)'}}>Highest Volume Active</h3>
-                <span className="label-md" style={{ color: 'var(--primary)', border: '1px solid var(--primary)', padding: '2px 6px', borderRadius: '4px' }}>Most Traded</span>
-              </div>
-              <div className="stock-grid">
-                {filteredActives.slice(0, 15).map(stock => <StockCard key={stock.symbol} stock={stock} />)}
-                {filteredActives.length === 0 && <p style={{ color: 'var(--on-surface-variant)' }}>No {sectorFilter} stocks in this pool right now.</p>}
-              </div>
-            </section>
-
-            <hr style={{ border: 'none', borderTop: '1px solid rgba(72, 72, 71, 0.3)', margin: '3rem 0' }} />
-
-            <section style={{ marginBottom: '3rem' }}>
-              <div style={{ display: 'flex', alignItems: 'center', margin: '0 0 1.5rem 0', gap: '1rem' }}>
-                <h3 className="headline-sm" style={{ color: 'var(--on-surface)'}}>Best Momentum</h3>
-                <span className="label-md" style={{ color: 'var(--secondary)', border: '1px solid var(--secondary)', padding: '2px 6px', borderRadius: '4px' }}>Top Gainers</span>
-              </div>
-              <div className="stock-grid">
-                {filteredMomentum.slice(0, 15).map(stock => <StockCard key={stock.symbol} stock={stock} />)}
-                {filteredMomentum.length === 0 && <p style={{ color: 'var(--on-surface-variant)' }}>No {sectorFilter} stocks in this pool right now.</p>}
-              </div>
-            </section>
-          </>
-        )}
-      </>
-    );
-  };
-
-  const renderStockModal = () => {
-    if (!selectedStock) return null;
-    
-    const isPositive = rangePercentChange >= 0;
-    const strokeColor = isPositive ? '#3fff8b' : '#ff716c';
-
-    return (
-      <div className="modal-backdrop" onClick={closeModal}>
-        <div className="modal-content" style={{ maxWidth: '1000px' }} onClick={e => e.stopPropagation()}>
-          <button className="modal-close" onClick={closeModal}><X size={24} /></button>
-          
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '2rem' }}>
-            <div style={{ maxWidth: '60%' }}>
-              <div style={{ display: 'flex', alignItems: 'baseline', gap: '1rem' }}>
-                <h2 className="display-lg" style={{ fontSize: '2.5rem' }}>{selectedStock.symbol}</h2>
-                <div style={{ color: 'var(--on-surface-variant)', fontSize: '1.2rem', fontWeight: '500' }}>{selectedStock.name}</div>
-              </div>
-              <div style={{ display: 'flex', gap: '0.5rem', marginTop: '1rem' }}>
-                {['1W', '1M', '6M', 'YTD'].map(range => (
-                  <button 
-                    key={range}
-                    onClick={() => fetchChartDataForRange(selectedStock, range)}
-                    style={{
-                      background: chartRange === range ? 'rgba(255,255,255,0.1)' : 'transparent',
-                      border: '1px solid ' + (chartRange === range ? 'rgba(255,255,255,0.3)' : 'rgba(255,255,255,0.1)'),
-                      color: chartRange === range ? '#fff' : 'var(--on-surface-variant)',
-                      padding: '4px 12px',
-                      borderRadius: '16px',
-                      cursor: 'pointer',
-                      fontWeight: '600',
-                      transition: 'all 0.2s',
-                    }}
-                  >
-                    {range}
-                  </button>
-                ))}
-              </div>
-            </div>
-            <div style={{ textAlign: 'right' }}>
-              <div className="price" style={{ fontSize: '2.5rem', margin: 0 }}>${parseFloat(selectedStock.price || 0).toFixed(2)}</div>
-              <div className={`chip gain-indicator ${isPositive ? 'positive' : 'negative'}`} style={{ marginTop: '0.5rem' }}>
-                {isPositive ? '+' : ''}{parseFloat(rangePercentChange || 0).toFixed(2)}%
-              </div>
-            </div>
-          </div>
-
-          <div style={{ width: '100%', height: '400px', marginBottom: '2rem' }}>
-            <AdvancedRealTimeChart 
-              theme="dark" 
-              symbol={selectedStock.symbol} 
-              width="100%" 
-              height="100%" 
-              allow_symbol_change={false} 
-              hide_side_toolbar={true}
-              timezone="America/New_York"
-              style="1"
-            />
-          </div>
-
-          {/* New Intelligence Section */}
-          <div className="responsive-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', borderTop: '1px solid rgba(255,255,255,0.1)', paddingTop: '2rem' }}>
-             <div className="glass-card" style={{ background: 'rgba(63, 255, 139, 0.05)', border: '1px solid rgba(63, 255, 139, 0.1)' }}>
-                <h4 className="label-md" style={{ color: '#3fff8b', marginBottom: '1rem' }}>AI PRICE TARGETS</h4>
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                   <div>
-                      <div className="label-md" style={{ opacity: 0.6, fontSize: '0.65rem' }}>ENTRY ZONE</div>
-                      <div className="headline-sm">${parseFloat(selectedStock.entry_price || selectedStock.price).toFixed(2)}</div>
-                   </div>
-                   <div style={{ textAlign: 'right' }}>
-                      <div className="label-md" style={{ opacity: 0.6, fontSize: '0.65rem' }}>TARGET PRICE</div>
-                      <div className="headline-sm" style={{ color: '#3fff8b' }}>${parseFloat(selectedStock.target_price || (selectedStock.price * 1.25)).toFixed(2)}</div>
-                   </div>
-                </div>
-                <div style={{ marginTop: '1rem', paddingTop: '1rem', borderTop: '1px solid rgba(63, 255, 139, 0.1)', display: 'flex', justifyContent: 'space-between' }}>
-                   <span className="label-md" style={{ opacity: 0.6 }}>EST. UPSIDE</span>
-                   <span className="label-md" style={{ color: '#3fff8b', fontWeight: '800' }}>
-                     {(((selectedStock.target_price || (selectedStock.price * 1.25)) / (selectedStock.entry_price || selectedStock.price) - 1) * 100).toFixed(1)}%
-                   </span>
-                </div>
-             </div>
-
-             <div className="glass-card" style={{ background: 'rgba(255, 255, 255, 0.02)' }}>
-                <h4 className="label-md" style={{ color: 'var(--on-surface-variant)', marginBottom: '1rem' }}>BUREAU OF INTELLIGENCE</h4>
-                <div style={{ marginBottom: '1rem' }}>
-                   <div className="label-md" style={{ opacity: 0.5, fontSize: '0.65rem' }}>SELECTION LOGIC</div>
-                   <div style={{ fontSize: '0.85rem', lineHeight: '1.4' }}>{selectedStock.reasoning || "Selected via autonomous multi-factor discovery scan."}</div>
-                </div>
-                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                   <div>
-                      <div className="label-md" style={{ opacity: 0.5, fontSize: '0.65rem' }}>RISK LEVEL</div>
-                      <div className={`chip ${selectedStock.risk_level === 'High' ? 'negative' : selectedStock.risk_level === 'Low' ? 'positive' : 'hold'}`} style={{ fontSize: '0.7rem' }}>
-                         {selectedStock.risk_level || "Medium"}
-                      </div>
-                   </div>
-                   <div style={{ textAlign: 'right' }}>
-                      <div className="label-md" style={{ opacity: 0.5, fontSize: '0.65rem' }}>CONVICTION</div>
-                      <div className="headline-sm" style={{ fontSize: '1rem' }}>{(selectedStock.ai_grade || 70) > 85 ? 'HIGH' : 'MODERATE'}</div>
-                   </div>
-                </div>
-             </div>
-          </div>
-        </div>
-      </div>
-    );
-  };
-
-  const TradeHistoryPage = () => {
-    const [filter, setFilter] = useState('ALL');
-    const sorted = [...tradeHistory].sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
-    const filtered = filter === 'ALL' ? sorted : sorted.filter(t => t.side === filter);
-    const totalBuys = tradeHistory.filter(t => t.side === 'BUY').length;
-    const totalSells = tradeHistory.filter(t => t.side === 'SELL').length;
-    const totalVolume = tradeHistory.reduce((sum, t) => sum + (t.price * t.quantity), 0);
-
-    return (
-      <>
-        <header style={{ marginBottom: '2rem' }}>
-          <h2 className="display-lg">Trade History</h2>
-          <p className="headline-sm" style={{ marginTop: '0.5rem', opacity: 0.7 }}>All buy & sell events executed by the bot</p>
-        </header>
-
-        {/* Stats Row */}
-        <div className="responsive-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '1rem', marginBottom: '2rem' }}>
-          <div className="glass-card" style={{ padding: '1.25rem', textAlign: 'center' }}>
-            <div className="label-sm" style={{ color: 'var(--on-surface-variant)' }}>Total Trades</div>
-            <div className="display-lg" style={{ fontSize: '2.5rem', marginTop: '0.25rem' }}>{tradeHistory.length}</div>
-          </div>
-          <div className="glass-card" style={{ padding: '1.25rem', textAlign: 'center', border: '1px solid rgba(63,255,139,0.2)' }}>
-            <div className="label-sm" style={{ color: '#3fff8b' }}>Buys</div>
-            <div className="display-lg" style={{ fontSize: '2.5rem', marginTop: '0.25rem', color: '#3fff8b' }}>{totalBuys}</div>
-          </div>
-          <div className="glass-card" style={{ padding: '1.25rem', textAlign: 'center', border: '1px solid rgba(255,113,108,0.2)' }}>
-            <div className="label-sm" style={{ color: '#ff716c' }}>Sells</div>
-            <div className="display-lg" style={{ fontSize: '2.5rem', marginTop: '0.25rem', color: '#ff716c' }}>{totalSells}</div>
-          </div>
-        </div>
-
-        {/* Filter */}
-        <div style={{ display: 'flex', gap: '0.5rem', marginBottom: '1.5rem' }}>
-          {['ALL', 'BUY', 'SELL'].map(f => (
-            <button key={f} onClick={() => setFilter(f)} style={{
-              background: filter === f ? 'rgba(255,255,255,0.15)' : 'rgba(255,255,255,0.04)',
-              border: `1px solid ${filter === f ? 'rgba(255,255,255,0.3)' : 'rgba(255,255,255,0.08)'}`,
-              color: filter === f ? '#fff' : 'var(--on-surface-variant)',
-              padding: '6px 18px', borderRadius: '99px', cursor: 'pointer', fontWeight: '700', fontSize: '0.8rem', transition: 'all 0.2s'
-            }}>{f}</button>
-          ))}
-          <div style={{ marginLeft: 'auto', color: 'var(--on-surface-variant)', fontSize: '0.8rem', alignSelf: 'center' }}>
-            Total volume: ${totalVolume.toLocaleString('en-US', { maximumFractionDigits: 0 })}
-          </div>
-        </div>
-
-        {/* Timeline */}
-        {filtered.length === 0 ? (
-          <div className="glass-card" style={{ padding: '3rem', textAlign: 'center', opacity: 0.5 }}>
-            <ChartIcon size={48} style={{ marginBottom: '1rem' }} />
-            <p>No trades yet. Bot will log events here after market hours.</p>
-          </div>
-        ) : (
-          <div style={{ position: 'relative', paddingLeft: '1.5rem', borderLeft: '2px solid rgba(255,255,255,0.08)' }}>
-            {filtered.map((trade, index) => (
-              <div key={`${trade.symbol}-${trade.timestamp}-${index}`} style={{ position: 'relative', marginBottom: '1.25rem', paddingLeft: '1.5rem' }}>
-                <div style={{
-                  position: 'absolute', left: '-10px', top: '1rem',
-                  width: '16px', height: '16px', borderRadius: '50%',
-                  background: trade.side === 'BUY' ? '#3fff8b' : '#ff716c',
-                  border: '2px solid rgba(255,255,255,0.15)',
-                  boxShadow: `0 0 12px ${trade.side === 'BUY' ? '#3fff8b' : '#ff716c'}66`
-                }} />
-                <div className="glass-card" style={{
-                  padding: '1.25rem',
-                  background: trade.side === 'BUY' ? 'rgba(63,255,139,0.03)' : 'rgba(255,113,108,0.03)',
-                  border: `1px solid ${trade.side === 'BUY' ? 'rgba(63,255,139,0.12)' : 'rgba(255,113,108,0.12)'}`,
-                  borderRadius: '14px'
-                }}>
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '0.5rem' }}>
-                    <div>
-                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.25rem' }}>
-                        <div className="ticker" style={{ fontSize: '1.3rem' }}>{trade.symbol}</div>
-                        <div className={`chip ${trade.side === 'BUY' ? 'positive' : 'negative'}`} style={{ fontSize: '0.65rem' }}>{trade.side}</div>
-                        {trade.signal && <div className="chip" style={{ background: 'rgba(255,255,255,0.06)', color: '#fff', fontSize: '0.6rem' }}>{trade.signal}</div>}
-                      </div>
-                      <div className="label-sm" style={{ color: 'var(--on-surface-variant)' }}>
-                        {trade.quantity} shares @ <strong style={{ color: '#fff' }}>${(trade.price || 0).toFixed(2)}</strong>
-                        {' '}= <strong style={{ color: '#fff' }}>${((trade.price || 0) * (trade.quantity || 0)).toLocaleString('en-US', { maximumFractionDigits: 0 })}</strong>
-                      </div>
-                    </div>
-                    <div style={{ textAlign: 'right' }}>
-                      <div className="label-sm" style={{ color: 'var(--on-surface-variant)' }}>{new Date(trade.timestamp).toLocaleDateString()}</div>
-                      <div className="label-sm" style={{ color: 'var(--on-surface-variant)' }}>{new Date(trade.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</div>
-                      {trade.ai_grade != null && (
-                        <div className="label-sm" style={{ marginTop: '0.25rem' }}>
-                          AI Grade: <strong style={{ color: trade.ai_grade >= 80 ? '#3fff8b' : trade.ai_grade < 50 ? '#ff716c' : '#ffd60a' }}>{trade.ai_grade}</strong>
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
-      </>
-    );
-  };
-
-  const renderSettings = () => (
-    <div>
-      <h2 className="display-lg">Settings</h2>
-      <div className="glass-card" style={{ marginTop: '2rem', maxWidth: '600px', display: 'block' }}>
-        <h3 className="headline-sm">Alpaca API Status</h3>
-        <p style={{ color: 'var(--on-surface-variant)', fontSize: '0.9rem', margin: '1rem 0' }}>
-          The app is configured and pulling data right from `data.alpaca.markets`.
-        </p>
-      </div>
-    </div>
-  );
-
-  const Sidebar = ({ isOpen, onClose }) => {
-    const location = useLocation();
-    const navigate = useNavigate();
-
-    return (
-      <nav className={`sidebar ${isOpen ? 'open' : ''}`}>
-        <div style={{ padding: '1rem 0', marginBottom: '1rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-          <h1 style={{ fontSize: '1.5rem', fontWeight: '800', background: 'linear-gradient(90deg, #fff, #3fff8b)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
-            DEEP TECH
-          </h1>
-          <button className="mobile-close" onClick={onClose} style={{ background: 'none', border: 'none', color: '#fff', cursor: 'pointer', display: 'none' }}>
-            <X size={20} />
-          </button>
-        </div>
-
-        {/* Global Search Box */}
-        <form onSubmit={handleSearch} style={{ position: 'relative', marginBottom: '2rem' }}>
-          <input 
-            type="text" 
-            placeholder="Quick Search..." 
-            value={searchInput}
-            onChange={(e) => setSearchInput(e.target.value)}
-            disabled={isSearching}
-            style={{
-              width: '100%',
-              background: 'rgba(255,255,255,0.05)',
-              border: '1px solid rgba(255,255,255,0.1)',
-              borderRadius: '8px',
-              padding: '10px 12px 10px 36px',
-              color: '#fff',
-              fontSize: '0.8rem',
-              outline: 'none'
-            }}
-          />
-          <Search size={14} color="var(--on-surface-variant)" style={{ position: 'absolute', left: '10px', top: '12px' }} />
-        </form>
-
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-          <Link to="/" className={`nav-item ${location.pathname === '/' ? 'active' : ''}`}>
-             <Brain size={18} /> Intelligence Hub
-          </Link>
-          <Link to="/reports" className={`nav-item ${location.pathname === '/reports' ? 'active' : ''}`}>
-             <FileText size={18} /> Deep Research
-          </Link>
-          <Link to="/history" className={`nav-item ${location.pathname === '/history' ? 'active' : ''}`}>
-             <ChartIcon size={18} /> Trade History
-          </Link>
-          <Link to="/settings" className={`nav-item ${location.pathname === '/settings' ? 'active' : ''}`}>
-             <Settings size={18} /> Settings
-          </Link>
-        </div>
-
-        <div style={{ marginTop: 'auto', paddingTop: '2rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-           <div className="glass-card" style={{ padding: '1rem', background: 'rgba(255,255,255,0.02)' }}>
-              <div className="label-md" style={{ fontSize: '0.65rem', marginBottom: '0.5rem' }}>ENGINE STATUS</div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                 <div style={{ width: '8px', height: '8px', background: botOnline ? '#3fff8b' : '#ff716c', borderRadius: '50%', boxShadow: botOnline ? '0 0 10px #3fff8b' : 'none' }} />
-                 <span style={{ fontSize: '0.7rem', fontWeight: '700' }}>{botOnline ? 'ONLINE' : 'OFFLINE'}</span>
-              </div>
-           </div>
-        </div>
-      </nav>
-    );
-  };
+/* ── Sidebar ── */
+function Sidebar({ isOpen, onClose }) {
+  const location = useLocation();
+  const { botOnline, searchInput, setSearchInput, isSearching, handleSearch } = useApp();
+
+  const navItems = [
+    { to: '/', icon: <Brain size={18} />, label: 'Intelligence Hub' },
+    { to: '/search', icon: <Search size={18} />, label: 'Search' },
+    { to: '/reports', icon: <FileText size={18} />, label: 'Deep Research' },
+    { to: '/market', icon: <Globe size={18} />, label: 'Market' },
+    { to: '/history', icon: <ChartIcon size={18} />, label: 'Trade History' },
+  ];
 
   return (
-    <Router>
-      <div className={`app-container ${!sidebarOpen ? 'sidebar-collapsed' : ''}`}>
-        <GlassFilter />
-        <button className="mobile-menu-btn" onClick={() => setSidebarOpen(true)}>
-          <LayoutDashboard size={20} color="#fff" />
+    <nav className={`sidebar ${isOpen ? 'open' : ''}`}>
+      <div className="sidebar-header">
+        <h1 className="sidebar-logo">DEEP TECH</h1>
+        <button className="sidebar-close-btn" onClick={onClose} title="Collapse Sidebar">
+          <PanelLeftClose size={20} />
         </button>
-        
-        <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
-        
-        <main className="main-content">
-          <Routes>
-            <Route path="/" element={<HubPage />} />
-            <Route path="/reports" element={<ExpandableReportCards reports={researchReports} />} />
-            <Route path="/market" element={<MarketPage />} />
-            <Route path="/history" element={<TradeHistoryPage />} />
-            <Route path="/settings" element={renderSettings()} />
-          </Routes>
-        </main>
-
-        {renderStockModal()}
       </div>
-    </Router>
+
+      <form onSubmit={handleSearch} className="sidebar-search-form">
+        <div className="sidebar-search-field">
+          <Search size={14} className="sidebar-search-icon" />
+          <input
+            type="text"
+            placeholder="Quick Search…"
+            value={searchInput}
+            onChange={e => setSearchInput(e.target.value)}
+            disabled={isSearching}
+            className="sidebar-search-input"
+          />
+        </div>
+      </form>
+
+      <div className="sidebar-nav">
+        {navItems.map(({ to, icon, label }) => (
+          <Link
+            key={to}
+            to={to}
+            className={`nav-item ${location.pathname === to ? 'active' : ''}`}
+            onClick={() => window.innerWidth <= 768 && onClose()}
+          >
+            {icon}
+            <span>{label}</span>
+          </Link>
+        ))}
+      </div>
+
+      <div className="sidebar-footer">
+        <div className="engine-status-card">
+          <div className="label-md" style={{ fontSize: '0.6rem', marginBottom: '0.5rem', opacity: 0.5 }}>ENGINE</div>
+          <div className="engine-status-row">
+            <div className={`status-dot ${botOnline ? 'online' : 'offline'}`} />
+            <span className="engine-status-label" style={{ color: botOnline ? '#3fff8b' : '#ff716c' }}>
+              {botOnline ? 'ONLINE' : 'OFFLINE'}
+            </span>
+          </div>
+        </div>
+      </div>
+    </nav>
   );
 }
 
-export default App;
+/* ── Stock Detail Modal ── */
+function StockModal() {
+  const { selectedStock, closeModal, chartRange, rangePercentChange, fetchChartDataForRange } = useApp();
+  if (!selectedStock) return null;
+  const isPositive = rangePercentChange >= 0;
+
+  return (
+    <div className="modal-backdrop" onClick={closeModal}>
+      <div className="modal-content" onClick={e => e.stopPropagation()}>
+        <button className="modal-close" onClick={closeModal}><X size={20} /></button>
+
+        {/* Header */}
+        <div className="modal-header">
+          <div>
+            <div className="modal-symbol-row">
+              <h2 className="modal-symbol">{selectedStock.symbol}</h2>
+              {selectedStock.name && (
+                <span className="modal-company">{selectedStock.name}</span>
+              )}
+            </div>
+            <div className="modal-range-pills">
+              {['1W', '1M', '6M', 'YTD'].map(range => (
+                <button
+                  key={range}
+                  className={`range-pill ${chartRange === range ? 'active' : ''}`}
+                  onClick={() => fetchChartDataForRange(selectedStock, range)}
+                >
+                  {range}
+                </button>
+              ))}
+            </div>
+          </div>
+          <div className="modal-price-block">
+            <div className="modal-price">${parseFloat(selectedStock.price || 0).toFixed(2)}</div>
+            <div className={`chip gain-indicator ${isPositive ? 'positive' : 'negative'}`}>
+              {isPositive ? '+' : ''}{parseFloat(rangePercentChange || 0).toFixed(2)}%
+            </div>
+          </div>
+        </div>
+
+        {/* Chart */}
+        <div className="modal-chart">
+          <AdvancedRealTimeChart
+            theme="dark"
+            symbol={selectedStock.symbol}
+            width="100%"
+            height="100%"
+            allow_symbol_change={false}
+            hide_side_toolbar={true}
+            timezone="America/New_York"
+            style="1"
+          />
+        </div>
+
+        {/* Intelligence grid */}
+        <div className="modal-intel-grid">
+          <div className="glass-card" style={{ background: 'rgba(63,255,139,0.04)', border: '1px solid rgba(63,255,139,0.12)' }}>
+            <h4 className="label-md" style={{ color: '#3fff8b', marginBottom: '1rem' }}>AI PRICE TARGETS</h4>
+            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+              <div>
+                <div className="label-md" style={{ opacity: 0.5, fontSize: '0.6rem' }}>ENTRY</div>
+                <div className="headline-sm" style={{ color: '#fff', fontSize: '1rem', marginTop: '0.25rem' }}>
+                  ${parseFloat(selectedStock.entry_price || selectedStock.price).toFixed(2)}
+                </div>
+              </div>
+              <div style={{ textAlign: 'right' }}>
+                <div className="label-md" style={{ opacity: 0.5, fontSize: '0.6rem' }}>TARGET</div>
+                <div className="headline-sm" style={{ color: '#3fff8b', fontSize: '1rem', marginTop: '0.25rem' }}>
+                  ${parseFloat(selectedStock.target_price || (selectedStock.price * 1.25)).toFixed(2)}
+                </div>
+              </div>
+            </div>
+            <div style={{ marginTop: '1rem', paddingTop: '1rem', borderTop: '1px solid rgba(63,255,139,0.1)', display: 'flex', justifyContent: 'space-between' }}>
+              <span className="label-md" style={{ opacity: 0.5 }}>EST. UPSIDE</span>
+              <span className="label-md" style={{ color: '#3fff8b', fontWeight: '800' }}>
+                {(((selectedStock.target_price || (selectedStock.price * 1.25)) / (selectedStock.entry_price || selectedStock.price) - 1) * 100).toFixed(1)}%
+              </span>
+            </div>
+          </div>
+
+          <div className="glass-card" style={{ background: 'rgba(255,255,255,0.02)' }}>
+            <h4 className="label-md" style={{ color: 'var(--on-surface-variant)', marginBottom: '1rem' }}>BUREAU OF INTELLIGENCE</h4>
+            <div style={{ marginBottom: '1rem' }}>
+              <div className="label-md" style={{ opacity: 0.4, fontSize: '0.6rem' }}>SELECTION LOGIC</div>
+              <div style={{ fontSize: '0.85rem', lineHeight: '1.55', marginTop: '0.35rem' }}>
+                {selectedStock.reasoning || "Selected via autonomous multi-factor discovery scan."}
+              </div>
+            </div>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
+              <div>
+                <div className="label-md" style={{ opacity: 0.4, fontSize: '0.6rem' }}>RISK</div>
+                <div className={`chip ${selectedStock.risk_level === 'High' ? 'negative' : selectedStock.risk_level === 'Low' ? 'positive' : 'hold'}`} style={{ fontSize: '0.65rem', marginTop: '0.25rem' }}>
+                  {selectedStock.risk_level || "Medium"}
+                </div>
+              </div>
+              <div style={{ textAlign: 'right' }}>
+                <div className="label-md" style={{ opacity: 0.4, fontSize: '0.6rem' }}>CONVICTION</div>
+                <div style={{ fontWeight: '700', fontSize: '0.9rem', marginTop: '0.25rem' }}>
+                  {(selectedStock.ai_grade || 70) > 85 ? 'HIGH' : 'MODERATE'}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ── App shell ── */
+function AppShell() {
+  const { sidebarOpen, setSidebarOpen } = useApp();
+
+  return (
+    <div className={`app-container ${!sidebarOpen ? 'sidebar-collapsed' : ''}`}>
+      <GlassFilter />
+      <button className="sidebar-toggle-btn" onClick={() => setSidebarOpen(true)} title="Expand Sidebar">
+        <PanelLeft size={20} />
+      </button>
+
+      <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+
+      <main className="main-content">
+        <Routes>
+          <Route path="/" element={<HubPage />} />
+          <Route path="/search" element={<SearchPage />} />
+          <Route path="/reports" element={<ReportsPage />} />
+          <Route path="/market" element={<MarketPage />} />
+          <Route path="/history" element={<TradeHistoryPage />} />
+        </Routes>
+      </main>
+
+      <StockModal />
+    </div>
+  );
+}
+
+export default function App() {
+  return (
+    <Router>
+      <AppProvider>
+        <AppShell />
+      </AppProvider>
+    </Router>
+  );
+}

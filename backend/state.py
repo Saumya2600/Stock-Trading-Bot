@@ -74,9 +74,21 @@ def save_reports():
     if os.path.exists(os.path.dirname(public_path)):
         save_json(research_reports, public_path)
 
+def normalize_report_grade(report):
+    if not isinstance(report, dict):
+        return
+    value = report.get("ai_grade", report.get("grade", 50))
+    try:
+        report["ai_grade"] = int(value)
+    except Exception:
+        report["ai_grade"] = 50
+
+
 def load_reports():
     global research_reports
     research_reports.update(load_json(REPORTS_FILE, {}))
+    for report in research_reports.values():
+        normalize_report_grade(report)
 
 def save_reddit_cache():
     save_json(reddit_cache, REDDIT_CACHE_FILE)

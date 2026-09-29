@@ -6,7 +6,8 @@ import state
 
 class DeepResearchBot(Strategy):
     def initialize(self, one_shot=False):
-        self.sleeptime = "3M"
+        # For one-shot execution, use 1 second sleeptime; otherwise 3 minutes
+        self.sleeptime = "1S" if one_shot else "3M"
         self.fast_period = 9
         self.slow_period = 21
         self.symbols = []
@@ -20,6 +21,7 @@ class DeepResearchBot(Strategy):
         report = state.research_reports.get(symbol, {})
         signal_data = state.latest_signals.get(symbol, {})
         stop_loss = float(report.get("stop_loss", 0.0))
+        self.log_message(f"[TRADE] {side} {symbol} x{quantity} @ ${price} filled")
         state.trade_history.append({
             "timestamp": datetime.now().isoformat(),
             "symbol": symbol,
@@ -32,6 +34,7 @@ class DeepResearchBot(Strategy):
         })
         state.portfolio_performance["trades_count"] += 1
         state.save_app_state()
+        self.log_message(f"[TRADE] Recorded. Total trades: {len(state.trade_history)}")
 
     def on_trading_iteration(self):
         if not is_market_open():
@@ -123,34 +126,52 @@ class DeepResearchBot(Strategy):
 
                 self.log_message(f"[DEBUG] {symbol}: cash=${cash:.2f}, qty_calc={quantity}, existing_pos={existing_pos is not None}, current_px={current_px:.2f}")
                 if ai_grade >= 55:  # Aggressive: Buy anything with positive AI conviction
-                    if not existing_pos and quantity > 0:
-                        current_price = self.get_last_price(symbol)
-                        if current_price > last_price * 1.05:
-                            self.log_message(f"⏭️ SKIPPING {symbol}: Price pumped >5% — current=${current_price:.2f} vs research=${last_price:.2f}")
-                            for o in self.get_orders():
-                                if o.asset.symbol == symbol and o.side == "buy":
-                                    self.cancel_order(o)
-                            continue
-
-                        # Re-check quantity against live price (already computed above, but re-clamp to be safe)
-                        cost = quantity * current_price
-                        available = self.get_cash() * 0.95
-                        if cost > available:
-                            quantity = int(available / current_price)
-                        if quantity == 0 and self.get_cash() >= current_price:
-                            quantity = 1
-                        
-                        pending_match = False
+                    if existing_pos:
+                        self.log_message(f"[SKIP] {symbol}: EXISTING_POS already held")
+                        continue
+                    if quantity <= 0:
+                        self.log_message(f"[SKIP] {symbol}: QUANTITY_ZERO qty={quantity} (risk=${max_risk:.2f})")
+                        continue
+                    
+                    current_price = self.get_last_price(symbol)
+                    pump_pct = (current_price - last_price) / last_price * 100 if last_price > 0 else 0
+                    
+                    # For grade >= 70: ignore pump, buy anyway. For 55-69: enforce 5% pump guard
+                    if ai_grade < 70 and current_price > last_price * 1.05:
+                        self.log_message(f"[SKIP] {symbol}: PUMP_GUARD pumped {pump_pct:.1f}% (grade={ai_grade}<70) — current=${current_price:.2f} vs research=${last_price:.2f}")
                         for o in self.get_orders():
                             if o.asset.symbol == symbol and o.side == "buy":
-                                pending_match = True
-                                break
-                                
-                        if quantity > 0 and not pending_match:
-                            self.log_message(f"🟢 BUY ORDER: {symbol} x{quantity} @ ~${current_price:.2f} (Grade {ai_grade})")
-                            order = self.create_order(symbol, quantity, "buy")
-                            self.submit_order(order)
-                            traded_this_cycle += 1
+                                self.cancel_order(o)
+                        continue
+                    elif pump_pct > 5:
+                        self.log_message(f"[WARN] {symbol}: Pumped {pump_pct:.1f}% but grade={ai_grade}>=70, BUYING ANYWAY")
+
+                    # Re-check quantity against live price (already computed above, but re-clamp to be safe)
+                    cost = quantity * current_price
+                    available = self.get_cash() * 0.95
+                    if cost > available:
+                        quantity = int(available / current_price)
+                    if quantity == 0 and self.get_cash() >= current_price:
+                        quantity = 1
+                    
+                    if quantity <= 0:
+                        self.log_message(f"[SKIP] {symbol}: CASH_INSUFFICIENT live_price=${current_price:.2f}, cash=${self.get_cash():.2f}")
+                        continue
+                    
+                    pending_match = False
+                    for o in self.get_orders():
+                        if o.asset.symbol == symbol and o.side == "buy":
+                            pending_match = True
+                            break
+                    
+                    if pending_match:
+                        self.log_message(f"[SKIP] {symbol}: PENDING_ORDER already submitted")
+                        continue
+                    
+                    self.log_message(f"🟢 BUY ORDER: {symbol} x{quantity} @ ~${current_price:.2f} (Grade {ai_grade})")
+                    order = self.create_order(symbol, quantity, "buy")
+                    self.submit_order(order)
+                    traded_this_cycle += 1
 
                 elif existing_pos:
                     current_price = self.get_last_price(symbol)
@@ -182,8 +203,16 @@ class DeepResearchBot(Strategy):
 
         self.iterations += 1
         if self.one_shot and self.iterations >= 1:
-            self.log_message("[ONE-SHOT] Trading cycle complete. Exiting...")
-            # stop_strategy() removed in Lumibot v4+ — sleep to flush orders then hard exit
-            time.sleep(5)
+            self.log_message("[ONE-SHOT] Trading cycle complete. Waiting for fills...")
+            initial_trades = len(state.trade_history)
+            # Give pending orders time to fill before exiting (up to 60 seconds)
+            for i in range(60):
+                pending = [o for o in self.get_orders() if o.status not in ["filled", "canceled"]]
+                trades_recorded = len(state.trade_history) - initial_trades
+                self.log_message(f"[ONE-SHOT] Wait {i+1}/60: {len(pending)} pending, {trades_recorded} trades recorded")
+                if not pending and trades_recorded > 0:
+                    self.log_message(f"[ONE-SHOT] All orders complete. {trades_recorded} trades saved. Exiting.")
+                    break
+                time.sleep(1)
             import os as _os
             _os._exit(0)

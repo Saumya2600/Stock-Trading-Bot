@@ -638,7 +638,11 @@ class DeepResearchBot(Strategy):
             if symbol.startswith("_"):  # skip meta
                 continue
             try:
-                ai_grade = report.get("ai_grade", 50)
+                ai_grade = report.get("ai_grade", report.get("grade", 50))
+                try:
+                    ai_grade = int(ai_grade)
+                except Exception:
+                    ai_grade = 50
                 last_price = report.get("price", 0)
                 stop_loss = report.get("stop_loss", last_price * 0.93)
                 if last_price <= 0:

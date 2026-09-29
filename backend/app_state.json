@@ -1,10 +1,51 @@
 {
-  "trade_history": [],
+  "trade_history": [
+    {
+      "timestamp": "2026-06-10T15:59:24.677000",
+      "symbol": "SCHW",
+      "side": "BUY",
+      "quantity": 10541.0,
+      "price": 90.09,
+      "ai_grade": 85,
+      "signal": "Buy",
+      "stop_loss": 86.42
+    },
+    {
+      "timestamp": "2026-06-10T15:59:24.888000",
+      "symbol": "MDB",
+      "side": "BUY",
+      "quantity": 1666.0,
+      "price": 351.18,
+      "ai_grade": 75,
+      "signal": "Buy",
+      "stop_loss": 324.58
+    },
+    {
+      "timestamp": "2026-06-10T15:59:25.614000",
+      "symbol": "GTLB",
+      "side": "BUY",
+      "quantity": 26666.0,
+      "price": 28.58,
+      "ai_grade": 85,
+      "signal": "Buy",
+      "stop_loss": 27.48
+    },
+    {
+      "timestamp": "2026-06-10T15:59:27.382000",
+      "symbol": "AI",
+      "side": "BUY",
+      "quantity": 84745.0,
+      "price": 10.78,
+      "ai_grade": 75,
+      "signal": "Buy",
+      "stop_loss": 10.45
+    }
+  ],
   "portfolio_performance": {
     "bot_roi": 0.0,
     "spy_roi": 0.0,
-    "trades_count": 0,
-    "bot_start_value": 0.0,
-    "spy_start_price": 0.0
+    "trades_count": 4,
+    "bot_start_value": 1000000.0,
+    "spy_start_price": 727.60
   }
 }
