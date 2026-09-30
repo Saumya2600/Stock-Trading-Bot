@@ -1,36 +1,80 @@
 {
-    "RDDT": {
-        "data": {
-            "sector": "Communication Services",
-            "industry": "Internet Content & Information",
-            "pe": 33.55,
-            "peg": 0.73,
-            "debt_to_equity": 0.01,
-            "description": "Reddit, Inc. operates a digital community in the United States and internationally. The company's platform enables user to engage in conversations, explore passions, research new hobbies, exchange goo..."
-        },
-        "updated_at": "2026-09-30T18:15:43.090981"
-    },
-    "ASTS": {
+    "MU": {
         "data": {
             "sector": "Technology",
-            "industry": "Communication Equipment",
+            "industry": "Semiconductors",
+            "pe": 24.1,
+            "peg": 0.16,
+            "debt_to_equity": 0.06,
+            "description": "Micron Technology, Inc. designs, develops, manufactures, and sells memory and storage products in the United States, Taiwan, Japan, Mainland China, Hong Kong, Europe, and internationally. It operates ..."
+        },
+        "updated_at": "2026-09-30T23:40:32.724416"
+    },
+    "RKLB": {
+        "data": {
+            "sector": "Industrials",
+            "industry": "Aerospace & Defense",
             "pe": 0,
             "peg": 0,
-            "debt_to_equity": 1.25,
-            "description": "AST SpaceMobile, Inc., together with its subsidiaries, designs and develops the constellation of BlueBird satellites in the United States. The company provides a cellular broadband network in space to..."
+            "debt_to_equity": 0.04,
+            "description": "Rocket Lab Corporation, a space company, provides launch services and space systems solutions in the United States, Canada, Japan, and internationally. The company operates through launch services and..."
         },
-        "updated_at": "2026-09-30T18:16:07.554102"
+        "updated_at": "2026-09-30T23:40:54.527647"
     },
-    "SBUX": {
+    "SNOW": {
         "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Restaurants",
-            "pe": 55.04,
-            "peg": 1.13,
-            "debt_to_equity": 0,
-            "description": "Starbucks Corporation, together with its subsidiaries, operates as a roaster, marketer, and retailer of coffee internationally. The company operates through three segments: North America, Internationa..."
+            "sector": "Technology",
+            "industry": "Software - Application",
+            "pe": 0,
+            "peg": 8.3,
+            "debt_to_equity": 1.29,
+            "description": "Snowflake Inc. provides a cloud-based data platform for various organizations in the United States and internationally. The company's platform includes artificial intelligence (AI) Data Cloud, which e..."
         },
-        "updated_at": "2026-09-30T18:16:27.028968"
+        "updated_at": "2026-09-30T23:41:17.879724"
+    },
+    "OXY": {
+        "data": {
+            "sector": "Energy",
+            "industry": "Oil & Gas E&P",
+            "pe": 16.32,
+            "peg": 1.1,
+            "debt_to_equity": 0.35,
+            "description": "Occidental Petroleum Corporation, together with its subsidiaries, engages in the acquisition, exploration, and development of oil and gas properties in the United States and internationally. It operat..."
+        },
+        "updated_at": "2026-09-30T23:41:40.609418"
+    },
+    "MDB": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Software - Infrastructure",
+            "pe": 491.0,
+            "peg": 1.67,
+            "debt_to_equity": 0.02,
+            "description": "MongoDB, Inc., together with its subsidiaries, provides general purpose database platform worldwide. The company offers MongoDB Atlas, a hosted multi-cloud database-as-a-service solution; MongoDB Ente..."
+        },
+        "updated_at": "2026-09-30T23:42:00.021735"
+    },
+    "OKTA": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Software - Infrastructure",
+            "pe": 124.47,
+            "peg": 1.69,
+            "debt_to_equity": 0.01,
+            "description": "Okta, Inc. operates as an identity partner in the United States and internationally. It offers Single Sign-on to secure access to cloud and on-premises applications from any device; Adaptive MFA for a..."
+        },
+        "updated_at": "2026-09-30T23:42:24.225009"
+    },
+    "CRM": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Software - Application",
+            "pe": 21.0,
+            "peg": 0.75,
+            "debt_to_equity": 1.1,
+            "description": "Salesforce, Inc. provides customer relationship management technology services that connect companies and customers together in the United States, Europe, and the Asia Pacific. The company offers Agen..."
+        },
+        "updated_at": "2026-09-30T23:42:42.765168"
     },
     "GTLB": {
         "data": {
@@ -41,50 +85,6 @@
             "debt_to_equity": 0,
             "description": "GitLab Inc., together with its subsidiaries, develops software for the software development lifecycle in the United States, Europe, and the Asia Pacific. The company provides GitLab, an intelligent or..."
         },
-        "updated_at": "2026-09-30T18:17:07.512949"
-    },
-    "ARR": {
-        "data": {
-            "sector": "Real Estate",
-            "industry": "REIT - Mortgage",
-            "pe": 3.16,
-            "peg": 2.97,
-            "debt_to_equity": 7.57,
-            "description": "ARMOUR Residential REIT, Inc. invests in residential mortgage-backed securities (MBS) in the United States. Its securities portfolio primarily consists of the United States Government-sponsored entity..."
-        },
-        "updated_at": "2026-09-30T18:17:31.946097"
-    },
-    "DB": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Banks - Regional",
-            "pe": 9.63,
-            "peg": 1.5,
-            "debt_to_equity": 0,
-            "description": "Deutsche Bank Aktiengesellschaft, a stock corporation, provides corporate and investment banking, private clients, and asset management products and services in Germany, the United Kingdom, the rest o..."
-        },
-        "updated_at": "2026-09-30T18:17:58.124629"
-    },
-    "CRM": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Application",
-            "pe": 21.19,
-            "peg": 0.75,
-            "debt_to_equity": 1.1,
-            "description": "Salesforce, Inc. provides customer relationship management technology services that connect companies and customers together in the United States, Europe, and the Asia Pacific. The company offers Agen..."
-        },
-        "updated_at": "2026-09-30T18:18:27.791157"
-    },
-    "AMD": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Semiconductors",
-            "pe": 153.95,
-            "peg": 0.62,
-            "debt_to_equity": 0.06,
-            "description": "Advanced Micro Devices, Inc. operates as a semiconductor company internationally. It operates in three segments: Data Center, Client and Gaming, and Embedded. The company offers artificial intelligenc..."
-        },
-        "updated_at": "2026-09-30T18:18:51.017739"
+        "updated_at": "2026-09-30T23:43:04.392270"
     }
 }
