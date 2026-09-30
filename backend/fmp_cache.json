@@ -1,47 +1,14 @@
 {
-    "SNOW": {
+    "RDDT": {
         "data": {
-            "sector": "Technology",
-            "industry": "Software - Application",
-            "pe": 0,
-            "peg": 8.24,
-            "debt_to_equity": 1.29,
-            "description": "Snowflake Inc. provides a cloud-based data platform for various organizations in the United States and internationally. The company's platform includes artificial intelligence (AI) Data Cloud, which e..."
+            "sector": "Communication Services",
+            "industry": "Internet Content & Information",
+            "pe": 33.55,
+            "peg": 0.73,
+            "debt_to_equity": 0.01,
+            "description": "Reddit, Inc. operates a digital community in the United States and internationally. The company's platform enables user to engage in conversations, explore passions, research new hobbies, exchange goo..."
         },
-        "updated_at": "2026-09-29T23:37:46.872934"
-    },
-    "ZS": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 0,
-            "peg": 2.04,
-            "debt_to_equity": 0.72,
-            "description": "Zscaler, Inc. operates as a cloud security company worldwide. The company offers cyberthreat protection products, including Zero Trust SASE, a solution that securely connects workforces, AI agents, wo..."
-        },
-        "updated_at": "2026-09-29T23:38:13.934449"
-    },
-    "AI": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 0,
-            "peg": 0,
-            "debt_to_equity": 0.09,
-            "description": "C3.ai, Inc. operates as an enterprise artificial intelligence application software company in North America, Europe, the Middle East, Africa, the Asia Pacific, and internationally. It offers C3 agenti..."
-        },
-        "updated_at": "2026-09-29T23:38:39.532477"
-    },
-    "GM": {
-        "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Auto Manufacturers",
-            "pe": 35.92,
-            "peg": 0.28,
-            "debt_to_equity": 2.02,
-            "description": "General Motors Company designs, builds, and sells trucks, crossovers, cars, and automobile parts worldwide. It operates through GM North America, GM International, and GM Financial segments. The compa..."
-        },
-        "updated_at": "2026-09-29T23:39:03.106262"
+        "updated_at": "2026-09-30T18:15:43.090981"
     },
     "ASTS": {
         "data": {
@@ -52,39 +19,72 @@
             "debt_to_equity": 1.25,
             "description": "AST SpaceMobile, Inc., together with its subsidiaries, designs and develops the constellation of BlueBird satellites in the United States. The company provides a cellular broadband network in space to..."
         },
-        "updated_at": "2026-09-29T23:39:32.179817"
+        "updated_at": "2026-09-30T18:16:07.554102"
     },
-    "IOVA": {
+    "SBUX": {
         "data": {
-            "sector": "Healthcare",
-            "industry": "Biotechnology",
+            "sector": "Consumer Cyclical",
+            "industry": "Restaurants",
+            "pe": 55.04,
+            "peg": 1.13,
+            "debt_to_equity": 0,
+            "description": "Starbucks Corporation, together with its subsidiaries, operates as a roaster, marketer, and retailer of coffee internationally. The company operates through three segments: North America, Internationa..."
+        },
+        "updated_at": "2026-09-30T18:16:27.028968"
+    },
+    "GTLB": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Software - Infrastructure",
             "pe": 0,
             "peg": 0,
-            "debt_to_equity": 0.06,
-            "description": "Iovance Biotherapeutics, Inc., a commercial-stage biopharmaceutical company, develops and commercializes cell therapies using autologous tumor infiltrating lymphocyte for the treatment of metastatic m..."
+            "debt_to_equity": 0,
+            "description": "GitLab Inc., together with its subsidiaries, develops software for the software development lifecycle in the United States, Europe, and the Asia Pacific. The company provides GitLab, an intelligent or..."
         },
-        "updated_at": "2026-09-29T23:39:59.905272"
+        "updated_at": "2026-09-30T18:17:07.512949"
     },
-    "AM": {
+    "ARR": {
         "data": {
-            "sector": "Energy",
-            "industry": "Oil & Gas Midstream",
-            "pe": 24.4,
-            "peg": 0,
-            "debt_to_equity": 1.86,
-            "description": "Antero Midstream Corporation owns, operates, and develops midstream energy assets in the Appalachian Basin. It operates in two segments, Gathering and Processing, and Water Handling. The gathering and..."
+            "sector": "Real Estate",
+            "industry": "REIT - Mortgage",
+            "pe": 3.16,
+            "peg": 2.97,
+            "debt_to_equity": 7.57,
+            "description": "ARMOUR Residential REIT, Inc. invests in residential mortgage-backed securities (MBS) in the United States. Its securities portfolio primarily consists of the United States Government-sponsored entity..."
         },
-        "updated_at": "2026-09-29T23:40:22.239692"
+        "updated_at": "2026-09-30T18:17:31.946097"
+    },
+    "DB": {
+        "data": {
+            "sector": "Financial Services",
+            "industry": "Banks - Regional",
+            "pe": 9.63,
+            "peg": 1.5,
+            "debt_to_equity": 0,
+            "description": "Deutsche Bank Aktiengesellschaft, a stock corporation, provides corporate and investment banking, private clients, and asset management products and services in Germany, the United Kingdom, the rest o..."
+        },
+        "updated_at": "2026-09-30T18:17:58.124629"
     },
     "CRM": {
         "data": {
             "sector": "Technology",
             "industry": "Software - Application",
-            "pe": 20.61,
-            "peg": 0.76,
+            "pe": 21.19,
+            "peg": 0.75,
             "debt_to_equity": 1.1,
             "description": "Salesforce, Inc. provides customer relationship management technology services that connect companies and customers together in the United States, Europe, and the Asia Pacific. The company offers Agen..."
         },
-        "updated_at": "2026-09-29T23:40:44.528690"
+        "updated_at": "2026-09-30T18:18:27.791157"
+    },
+    "AMD": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Semiconductors",
+            "pe": 153.95,
+            "peg": 0.62,
+            "debt_to_equity": 0.06,
+            "description": "Advanced Micro Devices, Inc. operates as a semiconductor company internationally. It operates in three segments: Data Center, Client and Gaming, and Embedded. The company offers artificial intelligenc..."
+        },
+        "updated_at": "2026-09-30T18:18:51.017739"
     }
 }
