@@ -1,47 +1,47 @@
 {
-    "CRM": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Application",
-            "pe": 21.52,
-            "peg": 0.75,
-            "debt_to_equity": 1.1,
-            "description": "Salesforce, Inc. provides customer relationship management technology services that connect companies and customers together in the United States, Europe, and the Asia Pacific. The company offers Agen..."
-        },
-        "updated_at": "2026-10-01T18:41:13.073323"
-    },
-    "ALL": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Insurance - Property & Casualty",
-            "pe": 4.49,
-            "peg": 1.66,
-            "debt_to_equity": 0.22,
-            "description": "The Allstate Corporation, together with its subsidiaries, provides property and casualty, and other insurance products in the United States and Canada. It operates in four segments: Allstate Protectio..."
-        },
-        "updated_at": "2026-10-01T18:41:33.569261"
-    },
-    "RDDT": {
+    "T": {
         "data": {
             "sector": "Communication Services",
-            "industry": "Internet Content & Information",
-            "pe": 34.57,
-            "peg": 0.73,
-            "debt_to_equity": 0.01,
-            "description": "Reddit, Inc. operates a digital community in the United States and internationally. The company's platform enables user to engage in conversations, explore passions, research new hobbies, exchange goo..."
+            "industry": "Telecom Services",
+            "pe": 8.02,
+            "peg": 1.48,
+            "debt_to_equity": 1.29,
+            "description": "AT&T Inc. provides telecommunications and technology services worldwide. It operates through two segments, Communications and Latin America. The Communications segment offers wireless voice and data c..."
         },
-        "updated_at": "2026-10-01T18:41:58.963018"
+        "updated_at": "2026-10-01T23:52:30.088836"
     },
-    "ZS": {
+    "TSLA": {
+        "data": {
+            "sector": "Consumer Cyclical",
+            "industry": "Auto Manufacturers",
+            "pe": 334.07,
+            "peg": 4.24,
+            "debt_to_equity": 0.18,
+            "description": "Tesla, Inc. designs, develops, manufactures, leases, and sells electric vehicles, and energy generation and storage systems in the United States, China, and internationally. The company operates in tw..."
+        },
+        "updated_at": "2026-10-01T23:52:58.525783"
+    },
+    "AI": {
         "data": {
             "sector": "Technology",
             "industry": "Software - Infrastructure",
             "pe": 0,
-            "peg": 2.03,
-            "debt_to_equity": 0.72,
-            "description": "Zscaler, Inc. operates as a cloud security company worldwide. The company offers cyberthreat protection products, including Zero Trust SASE, a solution that securely connects workforces, AI agents, wo..."
+            "peg": 0,
+            "debt_to_equity": 0.09,
+            "description": "C3.ai, Inc. operates as an enterprise artificial intelligence application software company in North America, Europe, the Middle East, Africa, the Asia Pacific, and internationally. It offers C3 agenti..."
         },
-        "updated_at": "2026-10-01T18:42:20.386231"
+        "updated_at": "2026-10-01T23:53:22.634664"
+    },
+    "CRM": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Software - Application",
+            "pe": 21.66,
+            "peg": 0.77,
+            "debt_to_equity": 1.1,
+            "description": "Salesforce, Inc. provides customer relationship management technology services that connect companies and customers together in the United States, Europe, and the Asia Pacific. The company offers Agen..."
+        },
+        "updated_at": "2026-10-01T23:53:52.848214"
     },
     "GTLB": {
         "data": {
@@ -52,39 +52,39 @@
             "debt_to_equity": 0,
             "description": "GitLab Inc., together with its subsidiaries, develops software for the software development lifecycle in the United States, Europe, and the Asia Pacific. The company provides GitLab, an intelligent or..."
         },
-        "updated_at": "2026-10-01T18:42:46.323733"
+        "updated_at": "2026-10-01T23:54:15.970927"
     },
-    "HOOD": {
+    "VOO": {
         "data": {
-            "sector": "Financial Services",
-            "industry": "Capital Markets",
-            "pe": 49.43,
-            "peg": 2.03,
-            "debt_to_equity": 2.4,
-            "description": "Robinhood Markets, Inc. operates financial services platform in the United States. The company's platform allows users to invest in stocks, exchange-traded funds (ETFs), and American depository receip..."
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 24.71,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "The fund manager employs an indexing investment approach designed to track the performance of the Standard & Poor's 500 Index, a widely recognized benchmark of U.S. stock market performance that is do..."
         },
-        "updated_at": "2026-10-01T18:43:33.260677"
+        "updated_at": "2026-10-01T23:54:37.054096"
     },
-    "NOW": {
+    "AAPL": {
         "data": {
             "sector": "Technology",
-            "industry": "Software - Application",
-            "pe": 86.41,
-            "peg": 0.94,
-            "debt_to_equity": 0.68,
-            "description": "ServiceNow, Inc. provides cloud-based solution for digital workflows in the North America, Brazil, Europe, the Middle East and Africa, Asia Pacific, and internationally. The company provides asset man..."
+            "industry": "Consumer Electronics",
+            "pe": 37.84,
+            "peg": 2.67,
+            "debt_to_equity": 0.78,
+            "description": "Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide. The company offers iPhone, a line of smartphones; Mac, a line of personal ..."
         },
-        "updated_at": "2026-10-01T18:43:55.354656"
+        "updated_at": "2026-10-01T23:55:01.927785"
     },
-    "GS": {
+    "SNDK": {
         "data": {
-            "sector": "Financial Services",
-            "industry": "Capital Markets",
-            "pe": 13.78,
-            "peg": 1.11,
-            "debt_to_equity": 7.25,
-            "description": "The Goldman Sachs Group, Inc., a financial institution, provides a range of financial services for corporations, financial institutions, governments, and individuals in the Americas, Europe, the Middl..."
+            "sector": "Technology",
+            "industry": "Computer Hardware",
+            "pe": 24.23,
+            "peg": 0,
+            "debt_to_equity": 0.01,
+            "description": "Sandisk Corporation develops, manufactures, and sells data storage devices and solutions using NAND flash technology in the Americas, Europe, the Middle East, Africa, Asia, and internationally. The co..."
         },
-        "updated_at": "2026-10-01T18:44:17.361584"
+        "updated_at": "2026-10-01T23:55:34.467620"
     }
 }
