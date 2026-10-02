@@ -1,47 +1,25 @@
 {
-    "T": {
+    "UAL": {
         "data": {
-            "sector": "Communication Services",
-            "industry": "Telecom Services",
-            "pe": 8.02,
-            "peg": 1.48,
-            "debt_to_equity": 1.29,
-            "description": "AT&T Inc. provides telecommunications and technology services worldwide. It operates through two segments, Communications and Latin America. The Communications segment offers wireless voice and data c..."
+            "sector": "Industrials",
+            "industry": "Airlines",
+            "pe": 10.51,
+            "peg": 6.5,
+            "debt_to_equity": 2.02,
+            "description": "United Airlines Holdings, Inc., through its subsidiaries, provides air transportation services in the United States, Canada, Atlantic, the Pacific, and Latin America. It transports people and cargo th..."
         },
-        "updated_at": "2026-10-01T23:52:30.088836"
+        "updated_at": "2026-10-02T18:11:35.132661"
     },
-    "TSLA": {
-        "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Auto Manufacturers",
-            "pe": 334.07,
-            "peg": 4.24,
-            "debt_to_equity": 0.18,
-            "description": "Tesla, Inc. designs, develops, manufactures, leases, and sells electric vehicles, and energy generation and storage systems in the United States, China, and internationally. The company operates in tw..."
-        },
-        "updated_at": "2026-10-01T23:52:58.525783"
-    },
-    "AI": {
+    "WDC": {
         "data": {
             "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 0,
-            "peg": 0,
-            "debt_to_equity": 0.09,
-            "description": "C3.ai, Inc. operates as an enterprise artificial intelligence application software company in North America, Europe, the Middle East, Africa, the Asia Pacific, and internationally. It offers C3 agenti..."
+            "industry": "Computer Hardware",
+            "pe": 15.49,
+            "peg": 0.88,
+            "debt_to_equity": 0.13,
+            "description": "Western Digital Corporation engages in the development, manufacture, and sale of data storage devices and solutions based on hard disk drive (HDD) technology in the United States, Asia, Europe, the Mi..."
         },
-        "updated_at": "2026-10-01T23:53:22.634664"
-    },
-    "CRM": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Application",
-            "pe": 21.66,
-            "peg": 0.77,
-            "debt_to_equity": 1.1,
-            "description": "Salesforce, Inc. provides customer relationship management technology services that connect companies and customers together in the United States, Europe, and the Asia Pacific. The company offers Agen..."
-        },
-        "updated_at": "2026-10-01T23:53:52.848214"
+        "updated_at": "2026-10-02T18:12:01.536073"
     },
     "GTLB": {
         "data": {
@@ -52,39 +30,61 @@
             "debt_to_equity": 0,
             "description": "GitLab Inc., together with its subsidiaries, develops software for the software development lifecycle in the United States, Europe, and the Asia Pacific. The company provides GitLab, an intelligent or..."
         },
-        "updated_at": "2026-10-01T23:54:15.970927"
+        "updated_at": "2026-10-02T18:12:36.813431"
     },
-    "VOO": {
+    "MDB": {
         "data": {
-            "sector": "Unknown",
-            "industry": "Unknown",
-            "pe": 24.71,
+            "sector": "Technology",
+            "industry": "Software - Infrastructure",
+            "pe": 510.76,
+            "peg": 1.67,
+            "debt_to_equity": 0.02,
+            "description": "MongoDB, Inc., together with its subsidiaries, provides general purpose database platform worldwide. The company offers MongoDB Atlas, a hosted multi-cloud database-as-a-service solution; MongoDB Ente..."
+        },
+        "updated_at": "2026-10-02T18:13:32.082109"
+    },
+    "TP": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Software - Infrastructure",
+            "pe": 18.96,
             "peg": 0,
+            "debt_to_equity": 1.84,
+            "description": "Ticketplus Ltd., through its subsidiaries, operates as a technology company focuses on live entertainment industry across Latin America. It provide a proprietary, full-stack event platform that suppor..."
+        },
+        "updated_at": "2026-10-02T18:13:58.584925"
+    },
+    "PLTR": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Software - Infrastructure",
+            "pe": 162.01,
+            "peg": 1.83,
+            "debt_to_equity": 0.02,
+            "description": "Palantir Technologies Inc. builds and deploys software platforms for the intelligence community to assist in counterterrorism investigations and operations in the United States, the United Kingdom, an..."
+        },
+        "updated_at": "2026-10-02T18:14:29.087376"
+    },
+    "SBUX": {
+        "data": {
+            "sector": "Consumer Cyclical",
+            "industry": "Restaurants",
+            "pe": 54.73,
+            "peg": 1.04,
             "debt_to_equity": 0,
-            "description": "The fund manager employs an indexing investment approach designed to track the performance of the Standard & Poor's 500 Index, a widely recognized benchmark of U.S. stock market performance that is do..."
+            "description": "Starbucks Corporation, together with its subsidiaries, operates as a roaster, marketer, and retailer of coffee internationally. The company operates through three segments: North America, Internationa..."
         },
-        "updated_at": "2026-10-01T23:54:37.054096"
+        "updated_at": "2026-10-02T18:14:50.875306"
     },
-    "AAPL": {
+    "COIN": {
         "data": {
-            "sector": "Technology",
-            "industry": "Consumer Electronics",
-            "pe": 37.84,
-            "peg": 2.67,
-            "debt_to_equity": 0.78,
-            "description": "Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide. The company offers iPhone, a line of smartphones; Mac, a line of personal ..."
+            "sector": "Financial Services",
+            "industry": "Financial Data & Stock Exchanges",
+            "pe": 0,
+            "peg": 1.91,
+            "debt_to_equity": 0.51,
+            "description": "Coinbase Global, Inc. operates platform for crypto assets in the United States and internationally. It provides the primary financial account in the crypto economy for consumers; a brokerage platform ..."
         },
-        "updated_at": "2026-10-01T23:55:01.927785"
-    },
-    "SNDK": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Computer Hardware",
-            "pe": 24.23,
-            "peg": 0,
-            "debt_to_equity": 0.01,
-            "description": "Sandisk Corporation develops, manufactures, and sells data storage devices and solutions using NAND flash technology in the Americas, Europe, the Middle East, Africa, Asia, and internationally. The co..."
-        },
-        "updated_at": "2026-10-01T23:55:34.467620"
+        "updated_at": "2026-10-02T18:15:27.873936"
     }
 }
