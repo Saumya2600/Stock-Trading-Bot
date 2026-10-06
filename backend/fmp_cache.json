@@ -1,90 +1,90 @@
 {
-    "CRM": {
+    "APLD": {
         "data": {
             "sector": "Technology",
-            "industry": "Software - Application",
-            "pe": 20.48,
-            "peg": 0.84,
-            "debt_to_equity": 1.1,
-            "description": "Salesforce, Inc. provides customer relationship management technology services that connect companies and customers together in the United States, Europe, and the Asia Pacific. The company offers Agen..."
+            "industry": "Information Technology Services",
+            "pe": 0,
+            "peg": 1.83,
+            "debt_to_equity": 1.36,
+            "description": "Applied Digital Corporation designs, develops, and operates digital infrastructure solutions to high-performance computing (HPC) and artificial intelligence industries in North America. It operates th..."
         },
-        "updated_at": "2026-10-06T18:45:28.006279"
+        "updated_at": "2026-10-06T23:45:04.668969"
     },
-    "IWM": {
-        "data": {
-            "sector": "Unknown",
-            "industry": "Unknown",
-            "pe": 16.56,
-            "peg": 0,
-            "debt_to_equity": 0,
-            "description": "The underlying index is a float-adjusted capitalization-weighted index of equity securities issued by the approximately 1,933 smallest issuers in the Russell 3000 Index. The fund may use derivatives t..."
-        },
-        "updated_at": "2026-10-06T18:46:03.682376"
-    },
-    "GOOGL": {
-        "data": {
-            "sector": "Communication Services",
-            "industry": "Internet Content & Information",
-            "pe": 17.48,
-            "peg": 1.23,
-            "debt_to_equity": 0.19,
-            "description": "Alphabet Inc. offers various products and platforms in the United States, Europe, the Middle East, Africa, the Asia-Pacific, Canada, and Latin America. It operates through Google Services, Google Clou..."
-        },
-        "updated_at": "2026-10-06T18:50:21.404242"
-    },
-    "U": {
+    "INTC": {
         "data": {
             "sector": "Technology",
-            "industry": "Software - Application",
+            "industry": "Semiconductors",
+            "pe": 0,
+            "peg": 1.36,
+            "debt_to_equity": 0.49,
+            "description": "Intel Corporation designs, develops, manufactures, markets, sells, and services computing and related end products and services in the United States, Ireland, Israel, and internationally. It operates ..."
+        },
+        "updated_at": "2026-10-06T23:45:31.877059"
+    },
+    "ASTS": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Communication Equipment",
             "pe": 0,
             "peg": 0,
-            "debt_to_equity": 0.7,
-            "description": "Unity Software Inc. operates a platform to develop, deploy, and grow games and interactive experiences for mobile phones, PCs, consoles, and extended reality devices in the United States, China, Hong ..."
+            "debt_to_equity": 1.25,
+            "description": "AST SpaceMobile, Inc., together with its subsidiaries, designs and develops the constellation of BlueBird satellites in the United States. The company provides a cellular broadband network in space to..."
         },
-        "updated_at": "2026-10-06T18:50:46.692076"
+        "updated_at": "2026-10-06T23:46:02.062725"
     },
-    "SNOW": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Application",
-            "pe": 0,
-            "peg": 6.11,
-            "debt_to_equity": 1.29,
-            "description": "Snowflake Inc. provides a cloud-based data platform for various organizations in the United States and internationally. The company's platform includes artificial intelligence (AI) Data Cloud, which e..."
-        },
-        "updated_at": "2026-10-06T18:51:13.992341"
-    },
-    "ALL": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Insurance - Property & Casualty",
-            "pe": 4.46,
-            "peg": 1.65,
-            "debt_to_equity": 0.22,
-            "description": "The Allstate Corporation, together with its subsidiaries, provides property and casualty, and other insurance products in the United States and Canada. It operates in four segments: Allstate Protectio..."
-        },
-        "updated_at": "2026-10-06T18:51:46.921821"
-    },
-    "AI": {
+    "ZS": {
         "data": {
             "sector": "Technology",
             "industry": "Software - Infrastructure",
             "pe": 0,
-            "peg": 0,
-            "debt_to_equity": 0.09,
-            "description": "C3.ai, Inc. operates as an enterprise artificial intelligence application software company in North America, Europe, the Middle East, Africa, the Asia Pacific, and internationally. It offers C3 agenti..."
+            "peg": 2.07,
+            "debt_to_equity": 0.72,
+            "description": "Zscaler, Inc. operates as a cloud security company worldwide. The company offers cyberthreat protection products, including Zero Trust SASE, a solution that securely connects workforces, AI agents, wo..."
         },
-        "updated_at": "2026-10-06T18:52:14.030234"
+        "updated_at": "2026-10-06T23:46:27.383986"
     },
-    "MRVL": {
+    "META": {
         "data": {
-            "sector": "Technology",
-            "industry": "Semiconductors",
-            "pe": 94.05,
-            "peg": 0.91,
-            "debt_to_equity": 0.29,
-            "description": "Marvell Technology, Inc., together with its subsidiaries, provides data infrastructure semiconductor solutions and spanning the data center core to network edge in the United States, Argentina, China,..."
+            "sector": "Communication Services",
+            "industry": "Internet Content & Information",
+            "pe": 27.84,
+            "peg": 0.98,
+            "debt_to_equity": 0.43,
+            "description": "Meta Platforms, Inc. engages in the development of products that enable people to connect and share with friends and family through mobile devices, personal computers, virtual reality (VR) headsets, a..."
         },
-        "updated_at": "2026-10-06T18:52:43.996664"
+        "updated_at": "2026-10-06T23:47:03.370106"
+    },
+    "VTI": {
+        "data": {
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 24.57,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "The fund manager employs an indexing investment approach designed to track the performance of the CRSP U.S. Total Market Index (the \u201cTarget Index\u201d), which represents 100% of the investable U.S. stock ..."
+        },
+        "updated_at": "2026-10-06T23:47:25.645008"
+    },
+    "AMZN": {
+        "data": {
+            "sector": "Consumer Cyclical",
+            "industry": "Internet Retail",
+            "pe": 20.62,
+            "peg": 1.49,
+            "debt_to_equity": 0.46,
+            "description": "Amazon.com, Inc. engages in the retail sale of consumer products, advertising, and subscriptions service through online and physical stores in North America and internationally. The company operates t..."
+        },
+        "updated_at": "2026-10-06T23:47:48.493543"
+    },
+    "HOOD": {
+        "data": {
+            "sector": "Financial Services",
+            "industry": "Capital Markets",
+            "pe": 49.34,
+            "peg": 1.99,
+            "debt_to_equity": 2.4,
+            "description": "Robinhood Markets, Inc. operates financial services platform in the United States. The company's platform allows users to invest in stocks, exchange-traded funds (ETFs), and American depository receip..."
+        },
+        "updated_at": "2026-10-06T23:48:17.548294"
     }
 }
