@@ -1,90 +1,90 @@
 {
-    "ZS": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 0,
-            "peg": 2.01,
-            "debt_to_equity": 0.72,
-            "description": "Zscaler, Inc. operates as a cloud security company worldwide. The company offers cyberthreat protection products, including Zero Trust SASE, a solution that securely connects workforces, AI agents, wo..."
-        },
-        "updated_at": "2026-10-06T01:17:31.180941"
-    },
-    "COIN": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Financial Data & Stock Exchanges",
-            "pe": 0,
-            "peg": 1.85,
-            "debt_to_equity": 0.51,
-            "description": "Coinbase Global, Inc. operates platform for crypto assets in the United States and internationally. It provides the primary financial account in the crypto economy for consumers; a brokerage platform ..."
-        },
-        "updated_at": "2026-10-06T01:17:54.170971"
-    },
-    "OKTA": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 131.5,
-            "peg": 1.51,
-            "debt_to_equity": 0.01,
-            "description": "Okta, Inc. operates as an identity partner in the United States and internationally. It offers Single Sign-on to secure access to cloud and on-premises applications from any device; Adaptive MFA for a..."
-        },
-        "updated_at": "2026-10-06T01:18:23.523294"
-    },
-    "GME": {
-        "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Specialty Retail",
-            "pe": 16.61,
-            "peg": 0.31,
-            "debt_to_equity": 0.71,
-            "description": "GameStop Corp., a specialty retailer, provides games, collectibles, and entertainment products through its stores and e-commerce platforms in United States, Australia and Europe. The company sells new..."
-        },
-        "updated_at": "2026-10-06T01:18:51.891498"
-    },
     "CRM": {
         "data": {
             "sector": "Technology",
             "industry": "Software - Application",
-            "pe": 21.02,
+            "pe": 20.48,
             "peg": 0.84,
             "debt_to_equity": 1.1,
             "description": "Salesforce, Inc. provides customer relationship management technology services that connect companies and customers together in the United States, Europe, and the Asia Pacific. The company offers Agen..."
         },
-        "updated_at": "2026-10-06T01:19:18.725734"
+        "updated_at": "2026-10-06T18:45:28.006279"
     },
-    "LVS": {
+    "IWM": {
         "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Resorts & Casinos",
-            "pe": 14.25,
-            "peg": 0.77,
-            "debt_to_equity": 17.04,
-            "description": "Las Vegas Sands Corp., together with its subsidiaries, owns, develops, and operates integrated resorts in Macao and Singapore. It owns and operates The Venetian Macao Resort Hotel, The Londoner Macao,..."
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 16.56,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "The underlying index is a float-adjusted capitalization-weighted index of equity securities issued by the approximately 1,933 smallest issuers in the Russell 3000 Index. The fund may use derivatives t..."
         },
-        "updated_at": "2026-10-06T01:19:48.440568"
+        "updated_at": "2026-10-06T18:46:03.682376"
     },
-    "NKE": {
+    "GOOGL": {
         "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Footwear & Accessories",
-            "pe": 16.17,
-            "peg": 1.36,
-            "debt_to_equity": 0.73,
-            "description": "NIKE, Inc., together with its subsidiaries, designs, develops, markets, and sells athletic footwear, apparel, equipment, accessories, and services for men, women, and kids in North America, Europe, th..."
+            "sector": "Communication Services",
+            "industry": "Internet Content & Information",
+            "pe": 17.48,
+            "peg": 1.23,
+            "debt_to_equity": 0.19,
+            "description": "Alphabet Inc. offers various products and platforms in the United States, Europe, the Middle East, Africa, the Asia-Pacific, Canada, and Latin America. It operates through Google Services, Google Clou..."
         },
-        "updated_at": "2026-10-06T01:20:12.007697"
+        "updated_at": "2026-10-06T18:50:21.404242"
     },
-    "MDB": {
+    "U": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Software - Application",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 0.7,
+            "description": "Unity Software Inc. operates a platform to develop, deploy, and grow games and interactive experiences for mobile phones, PCs, consoles, and extended reality devices in the United States, China, Hong ..."
+        },
+        "updated_at": "2026-10-06T18:50:46.692076"
+    },
+    "SNOW": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Software - Application",
+            "pe": 0,
+            "peg": 6.11,
+            "debt_to_equity": 1.29,
+            "description": "Snowflake Inc. provides a cloud-based data platform for various organizations in the United States and internationally. The company's platform includes artificial intelligence (AI) Data Cloud, which e..."
+        },
+        "updated_at": "2026-10-06T18:51:13.992341"
+    },
+    "ALL": {
+        "data": {
+            "sector": "Financial Services",
+            "industry": "Insurance - Property & Casualty",
+            "pe": 4.46,
+            "peg": 1.65,
+            "debt_to_equity": 0.22,
+            "description": "The Allstate Corporation, together with its subsidiaries, provides property and casualty, and other insurance products in the United States and Canada. It operates in four segments: Allstate Protectio..."
+        },
+        "updated_at": "2026-10-06T18:51:46.921821"
+    },
+    "AI": {
         "data": {
             "sector": "Technology",
             "industry": "Software - Infrastructure",
-            "pe": 498.93,
-            "peg": 1.67,
-            "debt_to_equity": 0.02,
-            "description": "MongoDB, Inc., together with its subsidiaries, provides general purpose database platform worldwide. The company offers MongoDB Atlas, a hosted multi-cloud database-as-a-service solution; MongoDB Ente..."
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 0.09,
+            "description": "C3.ai, Inc. operates as an enterprise artificial intelligence application software company in North America, Europe, the Middle East, Africa, the Asia Pacific, and internationally. It offers C3 agenti..."
         },
-        "updated_at": "2026-10-06T01:20:46.198988"
+        "updated_at": "2026-10-06T18:52:14.030234"
+    },
+    "MRVL": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Semiconductors",
+            "pe": 94.05,
+            "peg": 0.91,
+            "debt_to_equity": 0.29,
+            "description": "Marvell Technology, Inc., together with its subsidiaries, provides data infrastructure semiconductor solutions and spanning the data center core to network edge in the United States, Argentina, China,..."
+        },
+        "updated_at": "2026-10-06T18:52:43.996664"
     }
 }
