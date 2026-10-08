@@ -1,25 +1,80 @@
 {
-    "DTE": {
+    "INTC": {
         "data": {
-            "sector": "Utilities",
-            "industry": "Utilities - Regulated Electric",
-            "pe": 20.27,
-            "peg": 1.65,
-            "debt_to_equity": 2.29,
-            "description": "DTE Energy Company engages in energy-related businesses and services. The company operates through four segments: Electric, Gas, DTE Vantage, and Energy Trading.The company's Electric segment generate..."
+            "sector": "Technology",
+            "industry": "Semiconductors",
+            "pe": 0,
+            "peg": 1.36,
+            "debt_to_equity": 0.49,
+            "description": "Intel Corporation designs, develops, manufactures, markets, sells, and services computing and related end products and services in the United States, Ireland, Israel, and internationally. It operates ..."
         },
-        "updated_at": "2026-10-07T19:11:42.391984"
+        "updated_at": "2026-10-08T00:09:12.234236"
     },
-    "ET": {
+    "NVDA": {
         "data": {
-            "sector": "Energy",
-            "industry": "Oil & Gas Midstream",
-            "pe": 13.92,
-            "peg": 0.62,
-            "debt_to_equity": 1.38,
-            "description": "Energy Transfer LP, together with its subsidiaries, provides energy-related services in the United States. It operates through Intrastate Transportation and Storage; Interstate Transportation and Stor..."
+            "sector": "Technology",
+            "industry": "Semiconductors",
+            "pe": 30.02,
+            "peg": 0.29,
+            "debt_to_equity": 0.17,
+            "description": "NVIDIA Corporation operates as a data center scale AI infrastructure company in the United States, Taiwan, China, Hong Kong, Europe, and internationally. It operates through Compute & Networking, and ..."
         },
-        "updated_at": "2026-10-07T19:12:14.685940"
+        "updated_at": "2026-10-08T00:09:40.905205"
+    },
+    "BX": {
+        "data": {
+            "sector": "Financial Services",
+            "industry": "Asset Management",
+            "pe": 25.02,
+            "peg": 1.11,
+            "debt_to_equity": 0.68,
+            "description": "Blackstone Inc. is an alternative asset management firm specializing in private equity, venture capital, real estate, hedge fund solutions, credit, secondary funds of funds, public debt and equity and..."
+        },
+        "updated_at": "2026-10-08T00:10:07.415428"
+    },
+    "MCD": {
+        "data": {
+            "sector": "Consumer Cyclical",
+            "industry": "Restaurants",
+            "pe": 18.76,
+            "peg": 2.45,
+            "debt_to_equity": 0,
+            "description": "McDonald's Corporation owns, operates, and franchises restaurants under the McDonald's brand in the United States and internationally. It offers food and beverages, including hamburgers and cheeseburg..."
+        },
+        "updated_at": "2026-10-08T00:10:34.815934"
+    },
+    "AAL": {
+        "data": {
+            "sector": "Industrials",
+            "industry": "Airlines",
+            "pe": 0,
+            "peg": 0.11,
+            "debt_to_equity": 0,
+            "description": "American Airlines Group Inc., through its subsidiaries, operates as a network air carrier in the United States, Latin America, Atlantic, and Pacific. The company provides scheduled air transportation ..."
+        },
+        "updated_at": "2026-10-08T00:11:04.626497"
+    },
+    "GLD": {
+        "data": {
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "The Trust holds gold bars and from time to time, issues Baskets in exchange for deposits of gold and distributes gold in connection with redemptions of Baskets. The investment objective of the Trust i..."
+        },
+        "updated_at": "2026-10-08T00:11:38.368680"
+    },
+    "IWM": {
+        "data": {
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 16.34,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "The underlying index is a float-adjusted capitalization-weighted index of equity securities issued by the approximately 1,933 smallest issuers in the Russell 3000 Index. The fund may use derivatives t..."
+        },
+        "updated_at": "2026-10-08T00:12:05.700758"
     },
     "SNOW": {
         "data": {
@@ -30,61 +85,6 @@
             "debt_to_equity": 1.29,
             "description": "Snowflake Inc. provides a cloud-based data platform for various organizations in the United States and internationally. The company's platform includes artificial intelligence (AI) Data Cloud, which e..."
         },
-        "updated_at": "2026-10-07T19:12:38.063526"
-    },
-    "NBIS": {
-        "data": {
-            "sector": "Communication Services",
-            "industry": "Internet Content & Information",
-            "pe": 183.59,
-            "peg": 0.58,
-            "debt_to_equity": 0.99,
-            "description": "Nebius Group N.V., a technology company, engages in building full-stack infrastructure to service the global AI industry in the United States, the United Kingdom, and internationally. It offers Nebius..."
-        },
-        "updated_at": "2026-10-07T19:13:00.053101"
-    },
-    "AI": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 0,
-            "peg": 0,
-            "debt_to_equity": 0.09,
-            "description": "C3.ai, Inc. operates as an enterprise artificial intelligence application software company in North America, Europe, the Middle East, Africa, the Asia Pacific, and internationally. It offers C3 agenti..."
-        },
-        "updated_at": "2026-10-07T19:13:29.806731"
-    },
-    "BAC": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Banks - Diversified",
-            "pe": 12.31,
-            "peg": 0.85,
-            "debt_to_equity": 0,
-            "description": "Bank of America Corporation, through its subsidiaries, provides various financial products and services for individual consumers, small and middle-market businesses, institutional investors, large cor..."
-        },
-        "updated_at": "2026-10-07T19:13:51.660693"
-    },
-    "SOXL": {
-        "data": {
-            "sector": "Unknown",
-            "industry": "Unknown",
-            "pe": 35.28,
-            "peg": 0,
-            "debt_to_equity": 0,
-            "description": "The fund invests at least 80% of its net assets in financial instruments, such as swap agreements, securities of the index, and ETFs that track the index, that, in combination, provide 3X daily levera..."
-        },
-        "updated_at": "2026-10-07T19:14:16.467650"
-    },
-    "XOM": {
-        "data": {
-            "sector": "Energy",
-            "industry": "Oil & Gas Integrated",
-            "pe": 21.2,
-            "peg": 1.45,
-            "debt_to_equity": 0.16,
-            "description": "ExxonMobil Holdings Corporation engages in the exploration and production of crude oil and natural gas in the United States, Canada, and internationally. The company operates through Upstream, Energy ..."
-        },
-        "updated_at": "2026-10-07T19:14:46.396155"
+        "updated_at": "2026-10-08T00:12:31.068067"
     }
 }
