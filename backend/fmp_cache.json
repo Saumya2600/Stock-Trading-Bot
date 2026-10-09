@@ -1,90 +1,90 @@
 {
-    "SPCX": {
+    "WMT": {
+        "data": {
+            "sector": "Consumer Defensive",
+            "industry": "Discount Stores",
+            "pe": 40.34,
+            "peg": 3.75,
+            "debt_to_equity": 0.72,
+            "description": "Walmart Inc. engages in the operation of retail and wholesale stores and clubs, ecommerce websites, and mobile applications worldwide. The company operates through three segments: Walmart U.S., Walmar..."
+        },
+        "updated_at": "2026-10-09T18:38:23.869860"
+    },
+    "NBIS": {
+        "data": {
+            "sector": "Communication Services",
+            "industry": "Internet Content & Information",
+            "pe": 172.29,
+            "peg": 0.51,
+            "debt_to_equity": 0.99,
+            "description": "Nebius Group N.V., a technology company, engages in building full-stack infrastructure to service the global AI industry in the United States, the United Kingdom, and internationally. It offers Nebius..."
+        },
+        "updated_at": "2026-10-09T18:38:47.021847"
+    },
+    "INTC": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Semiconductors",
+            "pe": 0,
+            "peg": 1.36,
+            "debt_to_equity": 0.49,
+            "description": "Intel Corporation designs, develops, manufactures, markets, sells, and services computing and related end products and services in the United States, Ireland, Israel, and internationally. It operates ..."
+        },
+        "updated_at": "2026-10-09T18:39:09.386192"
+    },
+    "DAL": {
         "data": {
             "sector": "Industrials",
-            "industry": "Aerospace & Defense",
-            "pe": 0,
-            "peg": 0,
-            "debt_to_equity": 0.31,
-            "description": "Space Exploration Technologies Corp. provides satellite-based broadband services in the United States, Ireland, Canada, and internationally. It operates through three operating segments: Space, Connec..."
+            "industry": "Airlines",
+            "pe": 13.5,
+            "peg": 0.21,
+            "debt_to_equity": 0.97,
+            "description": "Delta Air Lines, Inc. provides scheduled air transportation for passengers and cargo in the United States and internationally. The company operates through two segments, Airline and Refinery. Its dome..."
         },
-        "updated_at": "2026-10-09T00:15:50.355208"
+        "updated_at": "2026-10-09T18:39:36.724068"
     },
-    "COP": {
-        "data": {
-            "sector": "Energy",
-            "industry": "Oil & Gas E&P",
-            "pe": 17.77,
-            "peg": 1.09,
-            "debt_to_equity": 0.36,
-            "description": "ConocoPhillips explores for, produces, transports, and markets crude oil, bitumen, natural gas, liquefied natural gas (LNG), and natural gas liquids. It operates in five segments: Alaska; Lower 48; Ca..."
-        },
-        "updated_at": "2026-10-09T00:16:18.828436"
-    },
-    "PLUG": {
-        "data": {
-            "sector": "Industrials",
-            "industry": "Electrical Equipment & Parts",
-            "pe": 0,
-            "peg": 0.84,
-            "debt_to_equity": 1.77,
-            "description": "Plug Power Inc. designs, develops, and sells hydrogen products and solutions in Europe, Australia, North America, and internationally. The company offers GenDrive, a hydrogen fueled PEM fuel cell syst..."
-        },
-        "updated_at": "2026-10-09T00:16:46.990282"
-    },
-    "LULU": {
-        "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Apparel Retail",
-            "pe": 7.63,
-            "peg": 0.94,
-            "debt_to_equity": 0.45,
-            "description": "lululemon athletica inc., together with its subsidiaries, designs, distributes, and retails technical athletic apparel, footwear, and accessories for women and men under the lululemon brand in the Uni..."
-        },
-        "updated_at": "2026-10-09T00:17:10.928288"
-    },
-    "C": {
+    "ALL": {
         "data": {
             "sector": "Financial Services",
-            "industry": "Banks - Diversified",
-            "pe": 13.83,
-            "peg": 0.61,
-            "debt_to_equity": 0,
-            "description": "Citigroup Inc., a diversified financial service holding company, provides various financial products and services to consumers, corporations, governments, and institutions. It operates through five se..."
+            "industry": "Insurance - Property & Casualty",
+            "pe": 4.61,
+            "peg": 1.7,
+            "debt_to_equity": 0.22,
+            "description": "The Allstate Corporation, together with its subsidiaries, provides property and casualty, and other insurance products in the United States and Canada. It operates in four segments: Allstate Protectio..."
         },
-        "updated_at": "2026-10-09T00:17:44.162353"
+        "updated_at": "2026-10-09T18:40:10.623420"
     },
-    "GM": {
+    "ASTS": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Communication Equipment",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 1.25,
+            "description": "AST SpaceMobile, Inc., together with its subsidiaries, designs and develops the constellation of BlueBird satellites in the United States. The company provides a cellular broadband network in space to..."
+        },
+        "updated_at": "2026-10-09T18:40:58.298986"
+    },
+    "MU": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Semiconductors",
+            "pe": 13.89,
+            "peg": 0.16,
+            "debt_to_equity": 0.04,
+            "description": "Micron Technology, Inc. designs, develops, manufactures, and sells memory and storage products in the United States, Taiwan, Japan, Mainland China, Hong Kong, Europe, and internationally. It operates ..."
+        },
+        "updated_at": "2026-10-09T18:41:24.677009"
+    },
+    "MCD": {
         "data": {
             "sector": "Consumer Cyclical",
-            "industry": "Auto Manufacturers",
-            "pe": 36.88,
-            "peg": 0.29,
-            "debt_to_equity": 2.02,
-            "description": "General Motors Company designs, builds, and sells trucks, crossovers, cars, and automobile parts worldwide. It operates through GM North America, GM International, and GM Financial segments. The compa..."
-        },
-        "updated_at": "2026-10-09T00:18:10.031762"
-    },
-    "VTI": {
-        "data": {
-            "sector": "Unknown",
-            "industry": "Unknown",
-            "pe": 24.37,
-            "peg": 0,
+            "industry": "Restaurants",
+            "pe": 19.19,
+            "peg": 2.5,
             "debt_to_equity": 0,
-            "description": "The fund manager employs an indexing investment approach designed to track the performance of the CRSP U.S. Total Market Index (the \u201cTarget Index\u201d), which represents 100% of the investable U.S. stock ..."
+            "description": "McDonald's Corporation owns, operates, and franchises restaurants under the McDonald's brand in the United States and internationally. It offers food and beverages, including hamburgers and cheeseburg..."
         },
-        "updated_at": "2026-10-09T00:18:31.419085"
-    },
-    "BX": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Asset Management",
-            "pe": 25.21,
-            "peg": 1.11,
-            "debt_to_equity": 0.68,
-            "description": "Blackstone Inc. is an alternative asset management firm specializing in private equity, venture capital, real estate, hedge fund solutions, credit, secondary funds of funds, public debt and equity and..."
-        },
-        "updated_at": "2026-10-09T00:19:29.735811"
+        "updated_at": "2026-10-09T18:41:45.341700"
     }
 }
