@@ -79,8 +79,8 @@ export default function TradeHistoryPage() {
                       {trade.signal && <div className="chip" style={{ background: 'rgba(255,255,255,0.06)', color: '#fff', fontSize: '0.6rem' }}>{trade.signal}</div>}
                     </div>
                     <div className="label-sm" style={{ color: 'var(--on-surface-variant)', textTransform: 'none', letterSpacing: 0, fontSize: '0.8rem' }}>
-                      {trade.quantity} shares @ <strong style={{ color: '#fff' }}>${(trade.price || 0).toFixed(2)}</strong>
-                      {' '}= <strong style={{ color: '#fff' }}>${((trade.price || 0) * (trade.quantity || 0)).toLocaleString('en-US', { maximumFractionDigits: 0 })}</strong>
+                      {Number(trade.quantity || 0).toLocaleString('en-US')} shares @ <strong style={{ color: '#fff' }}>${(trade.price || 0).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</strong>
+                      {' '}= <strong style={{ color: '#fff' }}>${((trade.price || 0) * (trade.quantity || 0)).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</strong>
                     </div>
                   </div>
                   <div style={{ textAlign: 'right' }}>

@@ -29,11 +29,11 @@ function StockCard({ stock }) {
           {isPositive ? '+' : ''}{parseFloat(stock.percent_change || 0).toFixed(2)}%
         </div>
       </div>
-      <div className="price">${parseFloat(stock.price || 0).toFixed(2)}</div>
+      <div className="price">${parseFloat(stock.price || 0).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</div>
       <div className={`chip trade-suggestion ${suggestion.class}`}>{suggestion.text}</div>
       {stock.volume && (
         <div className="label-md" style={{ marginTop: '1rem', fontSize: '0.65rem' }}>
-          Vol: {(stock.volume / 1000000).toFixed(1)}M
+          Vol: {(stock.volume / 1000000).toLocaleString('en-US', { maximumFractionDigits: 1 })}M
         </div>
       )}
     </div>

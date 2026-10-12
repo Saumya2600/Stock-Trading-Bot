@@ -149,6 +149,7 @@ export function AppProvider({ children }) {
     setLoading(true);
     setError(null);
     try {
+      // 1. Fetch live positions and account
       const resPositions = await fetch('https://paper-api.alpaca.markets/v2/positions', { headers });
       if (resPositions.ok) {
         const dataPos = await resPositions.json();
@@ -171,6 +172,80 @@ export function AppProvider({ children }) {
           total_unrealized_pnl: parseFloat(dataAcc.equity) - parseFloat(dataAcc.last_equity),
           is_live_alpaca: true
         });
+      }
+
+      // 2. Fetch live trade orders from Alpaca as direct sync
+      try {
+        const resOrders = await fetch('https://paper-api.alpaca.markets/v2/orders?status=all&limit=50', { headers });
+        if (resOrders.ok) {
+          const ordersData = await resOrders.json();
+          const filledOrders = ordersData
+            .filter(o => o.status === 'filled' && o.filled_at)
+            .map(o => ({
+              timestamp: o.filled_at,
+              symbol: o.symbol,
+              side: (o.side || 'buy').toUpperCase(),
+              quantity: parseFloat(o.filled_qty || o.qty || 0),
+              price: parseFloat(o.filled_avg_price || 0),
+              signal: 'Executed',
+              ai_grade: researchReports[o.symbol]?.ai_grade ?? null
+            }));
+          if (filledOrders.length > 0) {
+            setTradeHistory(prev => {
+              // Merge with existing state while avoiding duplicate timestamps
+              const existingMap = new Map((prev || []).map(t => [`${t.symbol}_${t.timestamp}`, t]));
+              filledOrders.forEach(o => {
+                const k = `${o.symbol}_${o.timestamp}`;
+                if (!existingMap.has(k)) existingMap.set(k, o);
+              });
+              return Array.from(existingMap.values()).sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
+            });
+          }
+        }
+      } catch (errOrders) {
+        console.warn("Could not fetch Alpaca live orders:", errOrders);
+      }
+
+      // 3. Fetch Market Screener Movers (top 50)
+      try {
+        const resMovers = await fetch('https://data.alpaca.markets/v1beta1/screener/stocks/movers?top=50', { headers });
+        if (resMovers.ok) {
+          const dataMovers = await resMovers.json();
+          const allMovers = [...(dataMovers.gainers || []), ...(dataMovers.losers || [])];
+          allMovers.sort((a, b) => (b.percent_change || 0) - (a.percent_change || 0));
+          setMomentumStocks(allMovers);
+        }
+      } catch (errMovers) {
+        console.warn("Could not fetch market movers:", errMovers);
+      }
+
+      // 4. Fetch Market Screener Most Actives (top 50) + snapshots
+      try {
+        const resActives = await fetch('https://data.alpaca.markets/v1beta1/screener/stocks/most-actives?by=volume&top=50', { headers });
+        if (resActives.ok) {
+          const dataActives = await resActives.json();
+          if (dataActives.most_actives && dataActives.most_actives.length > 0) {
+            const symbols = dataActives.most_actives.map(s => s.symbol).join(',');
+            const resSnaps = await fetch(`https://data.alpaca.markets/v2/stocks/snapshots?symbols=${symbols}`, { headers });
+            if (resSnaps.ok) {
+              const dataSnaps = await resSnaps.json();
+              const mappedActives = dataActives.most_actives.map(s => {
+                const snap = dataSnaps[s.symbol];
+                return {
+                  symbol: s.symbol,
+                  volume: s.volume,
+                  price: snap?.latestTrade?.p || snap?.dailyBar?.c || 0,
+                  percent_change: snap && snap.prevDailyBar && snap.dailyBar
+                    ? ((snap.dailyBar.c - snap.prevDailyBar.c) / snap.prevDailyBar.c) * 100
+                    : 0
+                };
+              });
+              setActiveStocks(mappedActives);
+            }
+          }
+        }
+      } catch (errActives) {
+        console.warn("Could not fetch most actives:", errActives);
       }
     } catch (err) {
       console.error("Error fetching Alpaca data:", err);
