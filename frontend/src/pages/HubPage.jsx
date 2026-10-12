@@ -192,6 +192,13 @@ export default function HubPage() {
     const totalInvested = positions.total_invested || 0;
     const pct = totalInvested > 0 ? (totalPnL / totalInvested) * 100 : 0;
 
+    const fmtCur = (val, prefix = '$') => {
+      if (val === undefined || val === null || isNaN(val)) return '—';
+      const num = Number(val);
+      const sign = num < 0 ? '-' : '';
+      return `${sign}${prefix}${Math.abs(num).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+    };
+
     return (
       <div className="glass-card hub-section">
         <div className="hub-section-header">
@@ -201,7 +208,7 @@ export default function HubPage() {
           </div>
           <div style={{ textAlign: 'right' }}>
             <div style={{ fontSize: '1.75rem', fontWeight: '700', letterSpacing: '-0.03em', color: totalPnL >= 0 ? '#3fff8b' : '#ff716c' }}>
-              {totalPnL >= 0 ? '+' : ''}${totalPnL.toFixed(2)}
+              {totalPnL >= 0 ? '+' : ''}{fmtCur(totalPnL)}
             </div>
             <div className="label-md" style={{ color: totalPnL >= 0 ? '#3fff8b' : '#ff716c' }}>
               {pct >= 0 ? '+' : ''}{pct.toFixed(2)}% P&L
@@ -223,7 +230,7 @@ export default function HubPage() {
                   </div>
                   <div style={{ textAlign: 'right' }}>
                     <div style={{ fontWeight: '700', color: pos ? '#3fff8b' : '#ff716c', fontSize: '0.95rem' }}>
-                      {pos ? '+' : ''}${p.unrealized_pnl.toFixed(2)}
+                      {pos ? '+' : ''}{fmtCur(p.unrealized_pnl)}
                     </div>
                     <div className="label-sm" style={{ color: pos ? '#3fff8b' : '#ff716c' }}>
                       {pos ? '+' : ''}{p.unrealized_pnl_pct.toFixed(2)}%
@@ -231,7 +238,12 @@ export default function HubPage() {
                   </div>
                 </div>
                 <div className="position-details">
-                  {[['Qty', p.quantity], ['Avg', `$${(p.avg_price||0).toFixed(2)}`], ['Now', `$${(p.current_price||0).toFixed(2)}`], ['Grade', `${p.ai_grade||'—'}/100`]].map(([l,v]) => (
+                  {[
+                    ['Qty', Number(p.quantity || 0).toLocaleString('en-US')],
+                    ['Avg', fmtCur(p.avg_price || 0)],
+                    ['Now', fmtCur(p.current_price || 0)],
+                    ['Grade', `${p.ai_grade||'—'}/100`]
+                  ].map(([l,v]) => (
                     <div key={l}>
                       <div className="label-sm" style={{ color: 'var(--on-surface-variant)' }}>{l}</div>
                       <div style={{ fontWeight: '600', fontSize: '0.85rem', marginTop: '0.15rem' }}>{v}</div>
@@ -244,7 +256,11 @@ export default function HubPage() {
         </div>
 
         <div className="portfolio-summary-bar">
-          {[['Invested', `$${totalInvested.toFixed(2)}`], ['Value', `$${totalValue.toFixed(2)}`], ['P&L', `${totalPnL >= 0 ? '+' : ''}$${totalPnL.toFixed(2)}`]].map(([l, v]) => (
+          {[
+            ['Invested', fmtCur(totalInvested)],
+            ['Value', fmtCur(totalValue)],
+            ['P&L', `${totalPnL >= 0 ? '+' : ''}${fmtCur(totalPnL)}`]
+          ].map(([l, v]) => (
             <div key={l}>
               <div className="label-sm" style={{ color: 'var(--on-surface-variant)' }}>{l}</div>
               <div style={{ fontWeight: '600', fontSize: '0.9rem', marginTop: '0.2rem' }}>{v}</div>
