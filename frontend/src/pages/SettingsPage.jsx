@@ -25,8 +25,9 @@ export default function SettingsPage() {
           <div style={{ marginTop: '1.25rem', padding: '1rem', background: 'rgba(255,255,255,0.02)', borderRadius: '12px', fontFamily: 'monospace', fontSize: '0.8rem', color: 'var(--on-surface-variant)', lineHeight: '1.8' }}>
             <div>ALPACA_API_KEY=stored in Vercel</div>
             <div>ALPACA_SECRET_KEY=stored in Vercel</div>
-            <div>DASHBOARD_PASSWORD=stored in Vercel</div>
-            <div>DASHBOARD_SESSION_SECRET=stored in Vercel</div>
+            <div>SUPABASE_URL=stored in Vercel</div>
+            <div>SUPABASE_ANON_KEY=stored in Vercel</div>
+            <div>DASHBOARD_ALLOWED_EMAILS=stored in Vercel</div>
           </div>
         </div>
 

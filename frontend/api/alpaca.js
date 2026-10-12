@@ -1,8 +1,5 @@
-import { createHmac, timingSafeEqual } from 'node:crypto';
-import { Buffer } from 'node:buffer';
 import process from 'node:process';
-
-const COOKIE_NAME = 'stockbot_session';
+import authorizeSupabaseUser from '../server/supabaseAuth.js';
 
 const ENDPOINTS = {
   snapshots: {
@@ -45,20 +42,6 @@ const ENDPOINTS = {
   },
 };
 
-function hasValidSession(req, secret) {
-  const cookies = (req.headers.cookie || '').split(';');
-  const entry = cookies.find(cookie => cookie.trim().startsWith(`${COOKIE_NAME}=`));
-  if (!entry) return false;
-
-  const [expiresAt, suppliedSignature] = entry.trim().slice(COOKIE_NAME.length + 1).split('.');
-  if (!expiresAt || !suppliedSignature || Number(expiresAt) <= Math.floor(Date.now() / 1000)) return false;
-
-  const expectedSignature = createHmac('sha256', secret).update(expiresAt).digest('base64url');
-  const expected = Buffer.from(expectedSignature);
-  const supplied = Buffer.from(suppliedSignature);
-  return expected.length === supplied.length && timingSafeEqual(expected, supplied);
-}
-
 function pickFields(value, fields) {
   return Object.fromEntries(fields.filter(field => value[field] !== undefined).map(field => [field, value[field]]));
 }
@@ -92,13 +75,11 @@ export default async function handler(req, res) {
 
   const key = process.env.ALPACA_API_KEY;
   const secret = process.env.ALPACA_SECRET_KEY;
-  const sessionSecret = process.env.DASHBOARD_SESSION_SECRET;
-  if (!key || !secret || !sessionSecret) {
+  if (!key || !secret) {
     return res.status(503).json({ error: 'Vercel server environment is missing required configuration.' });
   }
-  if (!hasValidSession(req, sessionSecret)) {
-    return res.status(401).json({ error: 'Sign in to use Alpaca data.' });
-  }
+  const authorization = await authorizeSupabaseUser(req);
+  if (!authorization.user) return res.status(authorization.status).json({ error: authorization.error });
 
   const requestUrl = new URL(req.url, `https://${req.headers.host || 'localhost'}`);
   const endpoint = requestUrl.searchParams.get('endpoint');
