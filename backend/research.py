@@ -287,8 +287,24 @@ def run_research_cycle(force=False, manual_reason=None):
     single_signal = [s for s in target_meta if s not in multi_signal]
     random.shuffle(multi_signal)
     random.shuffle(single_signal)
-    # Always include all multi-signal, fill rest from single up to 8 total
-    all_targets = [s for s in (multi_signal + single_signal) if s not in BLACKLIST][:8]
+    # Deduplicate ticker aliases: GOOG and GOOGL are the same company (Class A vs Class C)
+    # Prefer GOOGL (voting shares); remove GOOG if both appear
+    TICKER_ALIASES = {"GOOG": "GOOGL"}
+    seen_canonical = set()
+    deduped_targets = []
+    for s in (multi_signal + single_signal):
+        if s in BLACKLIST:
+            continue
+        canonical = TICKER_ALIASES.get(s, s)
+        if canonical in seen_canonical:
+            safe_print(f"[RESEARCH] Deduped {s} -> same company as {canonical}, skipping")
+            continue
+        seen_canonical.add(canonical)
+        deduped_targets.append(s)
+        if len(deduped_targets) >= 8:
+            break
+
+    all_targets = deduped_targets
     safe_print(f"[RESEARCH] Targets ({len(all_targets)}): blacklisted={len(BLACKLIST)}, pool={len(target_meta)} unique")
     headers = {"Apca-Api-Key-Id": ALPACA_API_KEY, "Apca-Api-Secret-Key": ALPACA_SECRET_KEY}
     temp_reports = {}

@@ -64,26 +64,40 @@ class DeepResearchBot(Strategy):
             return
 
         current_value = self.get_portfolio_value()
-        # Lumibot get_cash() can return negative values due to order-history replay desync.
-        # Bypass it: query Alpaca paper API directly for real cash balance.
+        # IMPORTANT: Alpaca paper cash can be deeply negative due to order-history replay.
+        # Use BUYING_POWER instead of CASH for sizing — buying_power reflects actual available margin.
         try:
             import requests as _req
             from config import ALPACA_API_KEY, ALPACA_SECRET_KEY
             _headers = {"Apca-Api-Key-Id": ALPACA_API_KEY, "Apca-Api-Secret-Key": ALPACA_SECRET_KEY}
             _acct = _req.get("https://paper-api.alpaca.markets/v2/account", headers=_headers, timeout=5).json()
-            available_cash = float(_acct.get("cash", 0))
-            self.log_message(f"[CASH] Alpaca real cash=${available_cash:.2f} (buying_power=${float(_acct.get('buying_power', 0)):.2f})")
+            raw_cash = float(_acct.get("cash", 0))
+            buying_power = float(_acct.get("buying_power", 0))
+            # Use buying_power for paper account (cash is often negative due to history replay)
+            # Cap at 50% of buying_power to be conservative
+            available_cash = min(buying_power * 0.5, max(buying_power, 0))
+            self.log_message(f"[CASH] Alpaca cash=${raw_cash:.2f}, buying_power=${buying_power:.2f} → using=${available_cash:.2f} for sizing")
         except Exception as _e:
             available_cash = max(0.0, self.get_cash())
             self.log_message(f"[CASH FALLBACK] get_cash()=${available_cash:.2f} (direct query failed: {_e})")
-        risk_per_trade = 0.05  # High risk: 5% of portfolio per trade
+        risk_per_trade = 0.05  # 5% of portfolio per trade
         traded_this_cycle = 0
+
+        # --- Deduplicate ticker aliases (GOOG vs GOOGL = same underlying, keep only GOOGL)
+        TICKER_ALIASES = {"GOOG": "GOOGL"}  # prefer GOOGL over GOOG
+        seen_underlying = set()  # track canonical tickers already processed
         all_positions = self.get_positions()
         self.log_message(f"[PORTFOLIO] value=${current_value:.2f} | cash=${available_cash:.2f} | positions={len(all_positions)}")
 
         for symbol, report in list(state.research_reports.items()):
             if symbol.startswith("_"):
                 continue
+            # Skip duplicate alias (e.g. GOOG when GOOGL already present or processed)
+            canonical = TICKER_ALIASES.get(symbol, symbol)
+            if canonical in seen_underlying:
+                self.log_message(f"[SKIP] {symbol}: DUPLICATE_ALIAS of {canonical}, already handled")
+                continue
+            seen_underlying.add(canonical)
             try:
                 ai_grade = report.get("ai_grade", report.get("grade", 50))
                 try:
@@ -146,16 +160,15 @@ class DeepResearchBot(Strategy):
                     elif pump_pct > 5:
                         self.log_message(f"[WARN] {symbol}: Pumped {pump_pct:.1f}% but grade={ai_grade}>=70, BUYING ANYWAY")
 
-                    # Re-check quantity against live price (already computed above, but re-clamp to be safe)
+                    # Re-check quantity against live price using buying_power-based cash
                     cost = quantity * current_price
-                    available = self.get_cash() * 0.95
-                    if cost > available:
-                        quantity = int(available / current_price)
-                    if quantity == 0 and self.get_cash() >= current_price:
+                    if cost > available_cash:
+                        quantity = int(available_cash / current_price)
+                    if quantity == 0 and available_cash >= current_price:
                         quantity = 1
                     
                     if quantity <= 0:
-                        self.log_message(f"[SKIP] {symbol}: CASH_INSUFFICIENT live_price=${current_price:.2f}, cash=${self.get_cash():.2f}")
+                        self.log_message(f"[SKIP] {symbol}: CASH_INSUFFICIENT live_price=${current_price:.2f}, avail=${available_cash:.2f}")
                         continue
                     
                     pending_match = False
