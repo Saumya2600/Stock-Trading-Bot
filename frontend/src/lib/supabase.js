@@ -25,22 +25,26 @@ if (!isValidUrl) {
 export async function savePicksToSupabase(reportsObj) {
   if (!supabase) return { error: 'Supabase not configured' };
 
-  const today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
   const picks = Object.entries(reportsObj)
     .filter(([k]) => !k.startsWith('_'))
-    .map(([symbol, r]) => ({
-      symbol,
-      name: r.name || symbol,
-      ai_grade: r.ai_grade || 50,
-      price: r.price || null,
-      target_price: r.target_price || null,
-      entry_price: r.entry_price || null,
-      reasoning: r.reasoning || null,
-      risk_level: r.risk_level || 'Medium',
-      type: r.type || null,
-      updated_at: r.updated_at || new Date().toISOString(),
-      run_date: today,
-    }));
+    .map(([symbol, r]) => {
+      const updatedAtStr = r.updated_at || new Date().toISOString();
+      // Use the actual report date so historical scans don't falsely label as today
+      const runDate = updatedAtStr.split('T')[0];
+      return {
+        symbol,
+        name: r.name || symbol,
+        ai_grade: r.ai_grade || 50,
+        price: r.price || null,
+        target_price: r.target_price || null,
+        entry_price: r.entry_price || null,
+        reasoning: r.reasoning || null,
+        risk_level: r.risk_level || 'Medium',
+        type: r.type || null,
+        updated_at: updatedAtStr,
+        run_date: runDate,
+      };
+    });
 
   if (!picks.length) return { data: [], error: null };
 
