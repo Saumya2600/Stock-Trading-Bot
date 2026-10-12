@@ -1,6 +1,7 @@
 import { useApp } from '../context/AppContext';
 import { Brain, TrendingUp, Activity, Clock, Zap, ChevronRight, Database } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { formatAtlanticDateTime, formatAtlanticTime } from '../lib/dateTime';
 
 /* ── small reusable stat cell ── */
 function StatCell({ label, value, sub, accent }) {
@@ -108,7 +109,7 @@ export default function HubPage() {
   const ResearchStatus = () => {
     if (!researchStatus) return null;
     const lastRun = researchStatus.last_run
-      ? new Date(researchStatus.last_run).toLocaleString()
+      ? `${formatAtlanticDateTime(researchStatus.last_run)} ADT/AST`
       : 'None yet';
     const isOpen = researchStatus.market_open;
     const nextOpen = researchStatus.next_market_open_sec != null
@@ -297,7 +298,7 @@ export default function HubPage() {
                     {t.signal && <span className="chip" style={{ background: 'rgba(255,255,255,0.06)', fontSize: '0.58rem', marginLeft: '0.4rem' }}>{t.signal}</span>}
                   </div>
                   <div style={{ textAlign: 'right' }}>
-                    <div className="label-sm" style={{ color: 'var(--on-surface-variant)' }}>{new Date(t.timestamp).toLocaleString()}</div>
+                    <div className="label-sm" style={{ color: 'var(--on-surface-variant)' }}>{formatAtlanticDateTime(t.timestamp)} ADT/AST</div>
                     {t.ai_grade != null && (
                       <div className="label-sm" style={{ color: t.ai_grade >= 80 ? '#3fff8b' : t.ai_grade < 50 ? '#ff716c' : '#ffd60a' }}>
                         Grade {t.ai_grade}
@@ -400,7 +401,7 @@ export default function HubPage() {
                   </button>
                 </div>
                 <div className="label-md" style={{ fontSize: '0.55rem', opacity: 0.25 }}>
-                  {new Date(r.updated_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                  {formatAtlanticTime(r.updated_at)} ADT/AST
                 </div>
               </div>
             </div>

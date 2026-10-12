@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { formatAtlanticDate, formatAtlanticTime } from '../lib/dateTime';
 import { 
   ChevronDown, 
   ChevronUp, 
@@ -50,7 +51,7 @@ const ReportCard = ({ symbol, data }) => {
           <div style={{ flex: 1 }}>
             <div className="headline-md" style={{ marginBottom: '0.25rem' }}>{data.name || symbol}</div>
             <div className="label-sm" style={{ opacity: 0.6, display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <Calendar size={12} /> {data.updated_at ? new Date(data.updated_at).toLocaleDateString() : 'N/A'} at {data.updated_at ? new Date(data.updated_at).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) : 'N/A'}
+              <Calendar size={12} /> {formatAtlanticDate(data.updated_at)} at {formatAtlanticTime(data.updated_at)} ADT/AST
             </div>
           </div>
 
