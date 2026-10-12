@@ -53,6 +53,11 @@ def simple_bollinger_bands(series, length=20, std=2):
     lower = sma - (rolling_std * std)
     return upper, sma, lower
 
+def get_ast_now():
+    """Current time in Atlantic Standard / Daylight Time (America/Halifax)."""
+    halifax = pytz.timezone("America/Halifax")
+    return datetime.now(tz=pytz.utc).astimezone(halifax)
+
 def is_market_open(now=None):
     eastern = pytz.timezone("US/Eastern")
     now = now or datetime.now(tz=pytz.utc).astimezone(eastern)
@@ -78,13 +83,14 @@ def seconds_until_market_open(now=None):
     return int((next_open - now).total_seconds())
 
 def is_research_window(now=None):
-    """Allow research to run 1 hour before market open until close."""
+    """Allow research from 8:30 AM to 4:00 PM US/Eastern (9:30 AM to 5:00 PM AST/ADT)."""
     eastern = pytz.timezone("US/Eastern")
     now = now or datetime.now(tz=pytz.utc).astimezone(eastern)
     if now.weekday() >= 5:
         return False
-    # Start research at 8:30 AM ET
+    # 8:30 AM ET = 9:30 AM AST/ADT (1 hour pre-market)
     research_start = now.replace(hour=8, minute=30, second=0, microsecond=0)
+    # 4:00 PM ET = 5:00 PM AST/ADT (Market close)
     market_close = now.replace(hour=16, minute=0, second=0, microsecond=0)
     return research_start <= now < market_close
 

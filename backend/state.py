@@ -13,17 +13,20 @@ portfolio_performance = {
     "bot_start_value": 0.0,
     "spy_start_price": 0.0
 }
-strategy_instance = None
-
-REPORTS_FILE = "reports.json"
-FMP_CACHE_FILE = "fmp_cache.json"
-STATE_FILE = "app_state.json"
-REDDIT_CACHE_FILE = "reddit_cache.json"
-LOW_CACHE_FILE = "low_cache.json"
-LONGTERM_PICKS_FILE = "longterm_picks.json"
-
 import os
 import json
+
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BACKEND_DIR = os.path.join(BASE_DIR, "backend")
+FRONTEND_PUBLIC_DIR = os.path.join(BASE_DIR, "frontend", "public")
+
+REPORTS_FILE = os.path.join(BASE_DIR, "reports.json")
+BACKEND_REPORTS_FILE = os.path.join(BACKEND_DIR, "reports.json")
+FMP_CACHE_FILE = os.path.join(BASE_DIR, "fmp_cache.json")
+STATE_FILE = os.path.join(BASE_DIR, "app_state.json")
+REDDIT_CACHE_FILE = os.path.join(BASE_DIR, "reddit_cache.json")
+LOW_CACHE_FILE = os.path.join(BASE_DIR, "low_cache.json")
+LONGTERM_PICKS_FILE = os.path.join(BASE_DIR, "longterm_picks.json")
 
 def save_json(obj, path):
     try:
@@ -47,10 +50,8 @@ def save_app_state():
         "portfolio_performance": portfolio_performance
     }
     save_json(data, STATE_FILE)
-    # Also save to frontend public for local dev
-    public_path = os.path.join("..", "frontend", "public", STATE_FILE)
-    if os.path.exists(os.path.dirname(public_path)):
-        save_json(data, public_path)
+    public_path = os.path.join(FRONTEND_PUBLIC_DIR, os.path.basename(STATE_FILE))
+    save_json(data, public_path)
 
 def load_app_state():
     global trade_history, portfolio_performance
@@ -71,10 +72,9 @@ def load_fmp_cache():
 
 def save_reports():
     save_json(research_reports, REPORTS_FILE)
-    # Also save to frontend public for local dev
-    public_path = os.path.join("..", "frontend", "public", REPORTS_FILE)
-    if os.path.exists(os.path.dirname(public_path)):
-        save_json(research_reports, public_path)
+    save_json(research_reports, BACKEND_REPORTS_FILE)
+    public_path = os.path.join(FRONTEND_PUBLIC_DIR, os.path.basename(REPORTS_FILE))
+    save_json(research_reports, public_path)
 
 def normalize_report_grade(report):
     if not isinstance(report, dict):

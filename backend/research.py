@@ -432,13 +432,15 @@ def run_research_cycle(force=False, manual_reason=None):
     safe_print("[RESEARCH] Deep research cycle complete.")
 
 def research_scheduler():
-    safe_print("[SCHEDULER] Research scheduler starting (Automatic Mode).")
+    from utils import get_ast_now
+    safe_print(f"[SCHEDULER] Research scheduler starting (Automatic Mode). Current AST: {get_ast_now().strftime('%Y-%m-%d %I:%M:%S %p %Z')}")
     while True:
         try:
             if is_research_window():
                 run_research_cycle()
             else:
-                safe_print("[SCHEDULER] Outside research window. Sleeping.")
+                ast_time = get_ast_now().strftime('%I:%M %p %Z')
+                safe_print(f"[SCHEDULER] Outside research window (9:30 AM - 5:00 PM ADT). Current: {ast_time}. Sleeping 10m.")
                 time.sleep(600)  # Check every 10 mins
         except Exception as e:
             safe_print(f"[SCHEDULER ERROR] {e}")
