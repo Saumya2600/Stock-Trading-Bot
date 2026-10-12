@@ -1,5 +1,6 @@
 import { useApp } from '../context/AppContext';
-import { Brain, TrendingUp, Activity, Clock, Zap, ChevronRight } from 'lucide-react';
+import { Brain, TrendingUp, Activity, Clock, Zap, ChevronRight, Database } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 /* ── small reusable stat cell ── */
 function StatCell({ label, value, sub, accent }) {
@@ -400,6 +401,11 @@ export default function HubPage() {
         <div>
           <h1 className="hub-title">Intelligence Hub</h1>
           <p className="hub-subtitle">Autonomous Deep Research · SPY Alpha Tracking</p>
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+          <Link to="/picks" className="supa-badge" style={{ textDecoration: 'none', color: 'rgba(255,255,255,0.3)' }}>
+            <Database size={10} /> Picks DB
+          </Link>
         </div>
       </div>
 

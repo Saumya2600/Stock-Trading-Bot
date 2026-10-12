@@ -5,6 +5,13 @@ from datetime import datetime
 import state
 from utils import is_market_open, seconds_until_market_open
 from research import run_research_cycle
+from longterm import generate_longterm_picks, trigger_longterm_async, DEFAULT_PICKS_DATA
+
+# Initialize longterm picks if empty
+state.load_longterm_picks()
+if not state.longterm_data or not state.longterm_data.get("picks"):
+    state.longterm_data = dict(DEFAULT_PICKS_DATA)
+    state.save_longterm_picks()
 
 api = FastAPI()
 api.add_middleware(
@@ -33,6 +40,18 @@ def get_research_status():
         "research_symbols": symbol_keys,
         "research_count": len(symbol_keys),
     }
+
+@api.get("/longterm_picks")
+def get_longterm_picks():
+    if not state.longterm_data or not state.longterm_data.get("picks"):
+        state.longterm_data = dict(DEFAULT_PICKS_DATA)
+        state.save_longterm_picks()
+    return state.longterm_data
+
+@api.post("/trigger_longterm")
+def trigger_longterm():
+    trigger_longterm_async()
+    return {"status": "longterm research triggered", "timestamp": datetime.now().isoformat()}
 
 @api.post("/trigger_research")
 def trigger_research():

@@ -1,4 +1,5 @@
-import { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useState, useEffect, useRef } from 'react';
+import { savePicksToSupabase } from '../lib/supabase';
 
 const AppContext = createContext(null);
 
@@ -28,6 +29,8 @@ export function AppProvider({ children }) {
   const [tradeHistory, setTradeHistory] = useState([]);
   const [manualResearchLoading, setManualResearchLoading] = useState(false);
   const [researchClearing, setResearchClearing] = useState(false);
+  const [longtermData, setLongtermData] = useState(null);
+  const [longtermLoading, setLongtermLoading] = useState(false);
   const [botOnline, setBotOnline] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(window.innerWidth > 768);
 
@@ -58,9 +61,10 @@ export function AppProvider({ children }) {
       try {
         const cacheBuster = `?t=${Date.now()}`;
         if (isServerless || !API_BASE_RAW) {
-          const [resReports, resState] = await Promise.all([
+          const [resReports, resState, resLongterm] = await Promise.all([
             fetch(`${API_BASE}/reports.json${cacheBuster}`).catch(() => ({ ok: false })),
-            fetch(`${API_BASE}/app_state.json${cacheBuster}`).catch(() => ({ ok: false }))
+            fetch(`${API_BASE}/app_state.json${cacheBuster}`).catch(() => ({ ok: false })),
+            fetch(`${API_BASE}/longterm_picks.json${cacheBuster}`).catch(() => ({ ok: false }))
           ]);
           if (resReports.ok) {
             const reportsData = await resReports.json();
@@ -74,15 +78,20 @@ export function AppProvider({ children }) {
             setPerformance(stateData.portfolio_performance || {});
             setTradeHistory(stateData.trade_history || []);
           }
+          if (resLongterm && resLongterm.ok) {
+            const ltData = await resLongterm.json();
+            setLongtermData(ltData);
+          }
           setPositions(prev => prev || { positions: [] });
         } else {
-          const [resSignals, resResearch, resPerf, resPositions, resStatus, resTrades] = await Promise.all([
+          const [resSignals, resResearch, resPerf, resPositions, resStatus, resTrades, resLongterm] = await Promise.all([
             fetch(`${API_BASE}/signals`),
             fetch(`${API_BASE}/research`),
             fetch(`${API_BASE}/performance`),
             fetch(`${API_BASE}/positions`),
             fetch(`${API_BASE}/research_status`),
-            fetch(`${API_BASE}/trade_history`)
+            fetch(`${API_BASE}/trade_history`),
+            fetch(`${API_BASE}/longterm_picks`)
           ].map(p => p.catch(() => ({ ok: false }))));
 
           if (resSignals.ok) setBotSignals(await resSignals.json());
@@ -97,6 +106,10 @@ export function AppProvider({ children }) {
             const historyData = await resTrades.json();
             setTradeHistory(historyData.history || []);
           }
+          if (resLongterm && resLongterm.ok) {
+            const ltData = await resLongterm.json();
+            setLongtermData(ltData);
+          }
           setBotOnline(resSignals.ok);
         }
       } catch (e) {
@@ -108,6 +121,20 @@ export function AppProvider({ children }) {
     const interval = setInterval(fetchBotData, 5000);
     return () => clearInterval(interval);
   }, [API_BASE, isServerless, API_BASE_RAW]);
+
+  // Auto-save picks to Supabase (debounced 2 s after reports change)
+  const saveDebounce = useRef(null);
+  useEffect(() => {
+    const symbols = Object.keys(researchReports).filter(k => !k.startsWith('_'));
+    if (!symbols.length) return;
+    clearTimeout(saveDebounce.current);
+    saveDebounce.current = setTimeout(async () => {
+      const { error } = await savePicksToSupabase(researchReports);
+      if (error) console.warn('[Supabase save]', error);
+      else console.log('[Supabase] Saved', symbols.length, 'picks');
+    }, 2000);
+    return () => clearTimeout(saveDebounce.current);
+  }, [researchReports]);
 
   useEffect(() => {
     fetchAlpacaData();
@@ -235,6 +262,28 @@ export function AppProvider({ children }) {
     return { text: 'Hold', class: 'hold' };
   };
 
+  const triggerLongtermPicks = async () => {
+    setLongtermLoading(true);
+    try {
+      if (!isServerless && API_BASE_RAW) {
+        await fetch(`${API_BASE}/trigger_longterm`, { method: 'POST' });
+      }
+      const cacheBuster = `?t=${Date.now()}`;
+      const url = isServerless || !API_BASE_RAW 
+        ? `${API_BASE}/longterm_picks.json${cacheBuster}`
+        : `${API_BASE}/longterm_picks`;
+      const res = await fetch(url);
+      if (res.ok) {
+        const data = await res.json();
+        setLongtermData(data);
+      }
+    } catch (e) {
+      console.error("Error triggering longterm picks:", e);
+    } finally {
+      setTimeout(() => setLongtermLoading(false), 800);
+    }
+  };
+
   return (
     <AppContext.Provider value={{
       momentumStocks, setMomentumStocks,
@@ -248,6 +297,8 @@ export function AppProvider({ children }) {
       manualResearchLoading, setManualResearchLoading,
       researchClearing, setResearchClearing,
       setResearchReports,
+      longtermData, setLongtermData,
+      longtermLoading, triggerLongtermPicks,
       botOnline,
       sidebarOpen, setSidebarOpen,
       API_BASE,

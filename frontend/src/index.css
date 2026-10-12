@@ -1,3 +1,4 @@
+@import "tailwindcss";
 /* ── Design tokens ── */
 :root {
   --font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
@@ -727,7 +728,12 @@ body {
 }
 
 .hub-hero {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
   margin-bottom: 2rem;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .hub-title {
@@ -1061,4 +1067,25 @@ body {
 
 .details-btn:hover {
   background: rgba(255, 255, 255, 0.1);
+}
+
+/* chip colour variants */
+.chip.positive { background: rgba(63,255,139,0.15); color: #3fff8b; border-color: rgba(63,255,139,0.3); }
+.chip.negative { background: rgba(255,113,108,0.15); color: #ff716c; border-color: rgba(255,113,108,0.3); }
+.chip.hold     { background: rgba(255,214,10,0.12); color: #ffd60a; border-color: rgba(255,214,10,0.2); }
+
+/* Supabase save indicator */
+.supa-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.3);
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 6px;
+  padding: 3px 8px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }

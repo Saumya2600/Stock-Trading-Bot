@@ -5,6 +5,7 @@ fmp_cache = {}
 trade_history = []
 reddit_cache = {}
 low_cache = {}
+longterm_data = {}
 portfolio_performance = {
     "bot_roi": 0.0,
     "spy_roi": 0.0,
@@ -19,6 +20,7 @@ FMP_CACHE_FILE = "fmp_cache.json"
 STATE_FILE = "app_state.json"
 REDDIT_CACHE_FILE = "reddit_cache.json"
 LOW_CACHE_FILE = "low_cache.json"
+LONGTERM_PICKS_FILE = "longterm_picks.json"
 
 import os
 import json
@@ -103,3 +105,13 @@ def save_low_cache():
 def load_low_cache():
     global low_cache
     low_cache.update(load_json(LOW_CACHE_FILE, {}))
+
+def save_longterm_picks():
+    save_json(longterm_data, LONGTERM_PICKS_FILE)
+    public_path = os.path.join("..", "frontend", "public", LONGTERM_PICKS_FILE)
+    if os.path.exists(os.path.dirname(public_path)):
+        save_json(longterm_data, public_path)
+
+def load_longterm_picks():
+    global longterm_data
+    longterm_data.update(load_json(LONGTERM_PICKS_FILE, {}))
