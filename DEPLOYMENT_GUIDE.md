@@ -93,6 +93,20 @@ GOOGLE_API_KEY_FALLBACK=your_fallback_gemini_key
 fmp=your_fmp_key
 ```
 
+### Vercel Frontend Functions
+
+Set Vercel Root Directory to `frontend`. Add these server-side environment variables in Project Settings → Environment Variables. Do not prefix them with `VITE_`:
+
+```
+ALPACA_API_KEY=your_paper_trading_key
+ALPACA_SECRET_KEY=your_paper_trading_secret
+DASHBOARD_PASSWORD=long_unique_dashboard_password
+DASHBOARD_SESSION_SECRET=random_secret_at_least_32_characters
+```
+
+These values stay server-side. GitHub Actions still use their existing repository secrets. Run locally with `npx vercel dev` to use Vercel Functions; plain `npm run dev` does not serve `/api/*` functions.
+Remove `VITE_ALPACA_API_KEY` and `VITE_ALPACA_SECRET_KEY` from Vercel frontend build variables after adding server-side values. Keep existing GitHub Actions secrets unchanged.
+
 ---
 
 ## 📅 NEW FEATURE: Daily Research Scheduling

@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
-import { X, PanelLeftClose, PanelLeft, Search, LineChart as ChartIcon, Brain, FileText, Globe, Database } from 'lucide-react';
+import { X, PanelLeftClose, PanelLeft, Search, LineChart as ChartIcon, Brain, FileText, Globe, Database, LogOut } from 'lucide-react';
 import { AdvancedRealTimeChart } from "react-ts-tradingview-widgets";
 
 import { AppProvider, useApp } from './context/AppContext';
@@ -9,6 +9,8 @@ import TradeHistoryPage from './pages/TradeHistoryPage';
 import SearchPage from './pages/SearchPage';
 import PicksHistoryPage from './pages/PicksHistoryPage';
 import ExpandableReportCards from '@/components/ExpandableReportCards';
+import DashboardAuthGate from './components/DashboardAuthGate';
+import { useDashboardAuth } from './components/dashboardAuthContext';
 
 function ReportsPage() {
   const { researchReports } = useApp();
@@ -39,6 +41,7 @@ const GlassFilter = () => (
 function Sidebar({ isOpen, onClose }) {
   const location = useLocation();
   const { botOnline, searchInput, setSearchInput, isSearching, handleSearch } = useApp();
+  const { logout } = useDashboardAuth();
 
   const navItems = [
     { to: '/', icon: <Brain size={18} />, label: 'Intelligence Hub' },
@@ -96,6 +99,9 @@ function Sidebar({ isOpen, onClose }) {
             </span>
           </div>
         </div>
+        <button className="apple-btn apple-btn-secondary" onClick={logout} style={{ width: '100%', marginTop: '0.75rem' }}>
+          <LogOut size={14} /> Sign out
+        </button>
       </div>
     </nav>
   );
@@ -242,9 +248,11 @@ function AppShell() {
 export default function App() {
   return (
     <Router>
-      <AppProvider>
-        <AppShell />
-      </AppProvider>
+      <DashboardAuthGate>
+        <AppProvider>
+          <AppShell />
+        </AppProvider>
+      </DashboardAuthGate>
     </Router>
   );
 }

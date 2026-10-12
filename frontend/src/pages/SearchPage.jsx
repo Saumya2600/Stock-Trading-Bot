@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { Search, TrendingUp, Clock, X } from 'lucide-react';
 import { useApp } from '../context/AppContext';
+import { alpacaRequest } from '../lib/alpaca';
 
 const POPULAR_TICKERS = [
   { symbol: 'AAPL', name: 'Apple Inc.' },
@@ -30,13 +31,6 @@ function addToHistory(symbol) {
 
 export default function SearchPage() {
   const { openStockModal } = useApp();
-  const apiKey = import.meta.env.VITE_ALPACA_API_KEY;
-  const apiSecret = import.meta.env.VITE_ALPACA_SECRET_KEY;
-  const headers = {
-    'APCA-API-KEY-ID': apiKey || '',
-    'APCA-API-SECRET-KEY': apiSecret || '',
-    'accept': 'application/json'
-  };
 
   const [query, setQuery] = useState('');
   const [searching, setSearching] = useState(false);
@@ -54,11 +48,7 @@ export default function SearchPage() {
     setSearching(true);
     const sym = ticker.trim().toUpperCase();
     try {
-      const res = await fetch(
-        `https://data.alpaca.markets/v2/stocks/snapshots?symbols=${sym}`,
-        { headers }
-      );
-      const data = await res.json();
+      const data = await alpacaRequest('snapshots', { symbols: sym });
       const snap = data[sym];
       if (snap) {
         addToHistory(sym);

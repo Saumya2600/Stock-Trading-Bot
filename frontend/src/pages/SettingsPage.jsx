@@ -2,7 +2,6 @@ import { useApp } from '../context/AppContext';
 
 export default function SettingsPage() {
   const { botOnline } = useApp();
-  const apiKey = import.meta.env.VITE_ALPACA_API_KEY;
 
   return (
     <>
@@ -16,19 +15,18 @@ export default function SettingsPage() {
         <div className="glass-card" style={{ padding: '2rem' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
             <h3 className="headline-sm" style={{ fontSize: '1.1rem' }}>Alpaca API</h3>
-            <div className={`chip ${apiKey ? 'positive' : 'negative'}`} style={{ fontSize: '0.65rem' }}>
-              {apiKey ? 'CONNECTED' : 'NOT SET'}
-            </div>
+            <div className="chip hold" style={{ fontSize: '0.65rem' }}>SERVER-SIDE</div>
           </div>
           <p style={{ color: 'var(--on-surface-variant)', fontSize: '0.85rem', lineHeight: '1.6' }}>
-            The app reads live market data directly from{' '}
+            Vercel Function reads live market data from{' '}
             <code style={{ background: 'rgba(255,255,255,0.06)', padding: '2px 6px', borderRadius: '4px', fontSize: '0.8rem' }}>data.alpaca.markets</code>.
-            Add your Alpaca credentials to the <code style={{ background: 'rgba(255,255,255,0.06)', padding: '2px 6px', borderRadius: '4px', fontSize: '0.8rem' }}>.env</code> file to enable live data.
+            Store Alpaca credentials in Vercel server environment variables. Never add them as <code style={{ background: 'rgba(255,255,255,0.06)', padding: '2px 6px', borderRadius: '4px', fontSize: '0.8rem' }}>VITE_*</code> variables.
           </p>
           <div style={{ marginTop: '1.25rem', padding: '1rem', background: 'rgba(255,255,255,0.02)', borderRadius: '12px', fontFamily: 'monospace', fontSize: '0.8rem', color: 'var(--on-surface-variant)', lineHeight: '1.8' }}>
-            <div>VITE_ALPACA_API_KEY=your_key_here</div>
-            <div>VITE_ALPACA_SECRET_KEY=your_secret_here</div>
-            <div>VITE_API_BASE_URL=http://localhost:8000</div>
+            <div>ALPACA_API_KEY=stored in Vercel</div>
+            <div>ALPACA_SECRET_KEY=stored in Vercel</div>
+            <div>DASHBOARD_PASSWORD=stored in Vercel</div>
+            <div>DASHBOARD_SESSION_SECRET=stored in Vercel</div>
           </div>
         </div>
 

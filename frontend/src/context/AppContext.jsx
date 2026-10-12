@@ -1,5 +1,6 @@
-import { createContext, useContext, useState, useEffect, useRef } from 'react';
+import { createContext, useContext, useState, useEffect, useRef, useCallback } from 'react';
 import { savePicksToSupabase } from '../lib/supabase';
+import { alpacaRequest } from '../lib/alpaca';
 
 const AppContext = createContext(null);
 
@@ -33,15 +34,6 @@ export function AppProvider({ children }) {
   const [longtermLoading, setLongtermLoading] = useState(false);
   const [botOnline, setBotOnline] = useState(false);
   const [sidebarOpen, setSidebarOpen] = useState(window.innerWidth > 768);
-
-  const apiKey = import.meta.env.VITE_ALPACA_API_KEY;
-  const apiSecret = import.meta.env.VITE_ALPACA_SECRET_KEY;
-
-  const headers = {
-    'APCA-API-KEY-ID': apiKey || '',
-    'APCA-API-SECRET-KEY': apiSecret || '',
-    'accept': 'application/json'
-  };
 
   const API_BASE_RAW = import.meta.env.VITE_API_BASE_URL || '';
   const isServerless = API_BASE_RAW.includes("githubusercontent.com");
@@ -99,7 +91,7 @@ export function AppProvider({ children }) {
           if (resPerf.ok) setPerformance(await resPerf.json());
           if (resPositions.ok) {
             const posData = await resPositions.json();
-            if (posData && posData.positions) setPositions(prev => ({ ...posData, is_live_alpaca: false }));
+            if (posData && posData.positions) setPositions({ ...posData, is_live_alpaca: false });
           }
           if (resStatus.ok) setResearchStatus(await resStatus.json());
           if (resTrades.ok) {
@@ -136,35 +128,24 @@ export function AppProvider({ children }) {
     return () => clearTimeout(saveDebounce.current);
   }, [researchReports]);
 
-  useEffect(() => {
-    fetchAlpacaData();
-  }, [apiKey, apiSecret]);
-
-  const fetchAlpacaData = async () => {
-    if (!apiKey || !apiSecret) {
-      setLoading(false);
-      setError("Please add your Alpaca API credentials to the .env file.");
-      return;
-    }
+  const fetchAlpacaData = useCallback(async () => {
     setLoading(true);
     setError(null);
     try {
       // 1. Fetch live positions and account
-      const resPositions = await fetch('https://paper-api.alpaca.markets/v2/positions', { headers });
-      if (resPositions.ok) {
-        const dataPos = await resPositions.json();
+      const dataPos = await alpacaRequest('positions');
+      if (Array.isArray(dataPos)) {
         const mappedPositions = dataPos.map(p => ({
           symbol: p.symbol,
           quantity: p.qty,
           avg_price: parseFloat(p.avg_entry_price),
           current_price: parseFloat(p.current_price),
-          unrealized_pnl: parseFloat(p.unrealized_intraday_pl),
+          unrealized_pnl: parseFloat(p.unrealized_intraday_pl ?? p.unrealized_pl),
           unrealized_pnl_pct: parseFloat(p.unrealized_intraday_plpc) * 100,
           invested: parseFloat(p.cost_basis),
           value: parseFloat(p.market_value)
         }));
-        const resAccount = await fetch('https://paper-api.alpaca.markets/v2/account', { headers });
-        const dataAcc = await resAccount.json();
+        const dataAcc = await alpacaRequest('account');
         setPositions({
           positions: mappedPositions,
           total_invested: parseFloat(dataAcc.cash) + parseFloat(dataAcc.portfolio_value),
@@ -176,9 +157,8 @@ export function AppProvider({ children }) {
 
       // 2. Fetch live trade orders from Alpaca as direct sync
       try {
-        const resOrders = await fetch('https://paper-api.alpaca.markets/v2/orders?status=all&limit=50', { headers });
-        if (resOrders.ok) {
-          const ordersData = await resOrders.json();
+        const ordersData = await alpacaRequest('orders', { status: 'all', limit: 50 });
+        if (Array.isArray(ordersData)) {
           const filledOrders = ordersData
             .filter(o => o.status === 'filled' && o.filled_at)
             .map(o => ({
@@ -188,7 +168,7 @@ export function AppProvider({ children }) {
               quantity: parseFloat(o.filled_qty || o.qty || 0),
               price: parseFloat(o.filled_avg_price || 0),
               signal: 'Executed',
-              ai_grade: researchReports[o.symbol]?.ai_grade ?? null
+              ai_grade: null
             }));
           if (filledOrders.length > 0) {
             setTradeHistory(prev => {
@@ -208,41 +188,32 @@ export function AppProvider({ children }) {
 
       // 3. Fetch Market Screener Movers (top 50)
       try {
-        const resMovers = await fetch('https://data.alpaca.markets/v1beta1/screener/stocks/movers?top=50', { headers });
-        if (resMovers.ok) {
-          const dataMovers = await resMovers.json();
-          const allMovers = [...(dataMovers.gainers || []), ...(dataMovers.losers || [])];
-          allMovers.sort((a, b) => (b.percent_change || 0) - (a.percent_change || 0));
-          setMomentumStocks(allMovers);
-        }
+        const dataMovers = await alpacaRequest('movers', { top: 50 });
+        const allMovers = [...(dataMovers.gainers || []), ...(dataMovers.losers || [])];
+        allMovers.sort((a, b) => (b.percent_change || 0) - (a.percent_change || 0));
+        setMomentumStocks(allMovers);
       } catch (errMovers) {
         console.warn("Could not fetch market movers:", errMovers);
       }
 
       // 4. Fetch Market Screener Most Actives (top 50) + snapshots
       try {
-        const resActives = await fetch('https://data.alpaca.markets/v1beta1/screener/stocks/most-actives?by=volume&top=50', { headers });
-        if (resActives.ok) {
-          const dataActives = await resActives.json();
-          if (dataActives.most_actives && dataActives.most_actives.length > 0) {
-            const symbols = dataActives.most_actives.map(s => s.symbol).join(',');
-            const resSnaps = await fetch(`https://data.alpaca.markets/v2/stocks/snapshots?symbols=${symbols}`, { headers });
-            if (resSnaps.ok) {
-              const dataSnaps = await resSnaps.json();
-              const mappedActives = dataActives.most_actives.map(s => {
-                const snap = dataSnaps[s.symbol];
-                return {
-                  symbol: s.symbol,
-                  volume: s.volume,
-                  price: snap?.latestTrade?.p || snap?.dailyBar?.c || 0,
-                  percent_change: snap && snap.prevDailyBar && snap.dailyBar
-                    ? ((snap.dailyBar.c - snap.prevDailyBar.c) / snap.prevDailyBar.c) * 100
-                    : 0
-                };
-              });
-              setActiveStocks(mappedActives);
-            }
-          }
+        const dataActives = await alpacaRequest('most_actives', { by: 'volume', top: 50 });
+        if (dataActives.most_actives && dataActives.most_actives.length > 0) {
+          const symbols = dataActives.most_actives.map(s => s.symbol).join(',');
+          const dataSnaps = await alpacaRequest('snapshots', { symbols });
+          const mappedActives = dataActives.most_actives.map(s => {
+            const snap = dataSnaps[s.symbol];
+            return {
+              symbol: s.symbol,
+              volume: s.volume,
+              price: snap?.latestTrade?.p || snap?.dailyBar?.c || 0,
+              percent_change: snap && snap.prevDailyBar && snap.dailyBar
+                ? ((snap.dailyBar.c - snap.prevDailyBar.c) / snap.prevDailyBar.c) * 100
+                : 0
+            };
+          });
+          setActiveStocks(mappedActives);
         }
       } catch (errActives) {
         console.warn("Could not fetch most actives:", errActives);
@@ -253,7 +224,11 @@ export function AppProvider({ children }) {
     } finally {
       setLoading(false);
     }
-  };
+  }, []);
+
+  useEffect(() => {
+    Promise.resolve().then(fetchAlpacaData);
+  }, [fetchAlpacaData]);
 
   const fetchChartDataForRange = async (stock, range) => {
     setLoadingChart(true);
@@ -265,11 +240,13 @@ export function AppProvider({ children }) {
     if (range === '6M') start.setMonth(end.getMonth() - 6);
     if (range === 'YTD') { start.setMonth(0); start.setDate(1); }
     try {
-      const res = await fetch(
-        `https://data.alpaca.markets/v2/stocks/bars?symbols=${stock.symbol}&timeframe=1Day&feed=iex&start=${start.toISOString()}&end=${end.toISOString()}`,
-        { headers }
-      );
-      const data = await res.json();
+      const data = await alpacaRequest('bars', {
+        symbols: stock.symbol,
+        timeframe: '1Day',
+        feed: 'iex',
+        start: start.toISOString(),
+        end: end.toISOString(),
+      });
       if (data.bars && data.bars[stock.symbol]) {
         const formattedData = data.bars[stock.symbol].map(bar => ({
           name: new Date(bar.t).toLocaleDateString(undefined, { month: 'short', day: 'numeric' }),
@@ -304,11 +281,7 @@ export function AppProvider({ children }) {
     setIsSearching(true);
     const ticker = searchInput.trim().toUpperCase();
     try {
-      const resSnaps = await fetch(
-        `https://data.alpaca.markets/v2/stocks/snapshots?symbols=${ticker}`,
-        { headers }
-      );
-      const dataSnaps = await resSnaps.json();
+      const dataSnaps = await alpacaRequest('snapshots', { symbols: ticker });
       const snap = dataSnaps[ticker];
       if (snap) {
         openStockModal({
