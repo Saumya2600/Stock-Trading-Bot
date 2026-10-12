@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { fetchPicksFromSupabase } from '../lib/supabase';
+import { formatAtlanticDateTime } from '../lib/dateTime';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Database, TrendingUp, TrendingDown, Minus, RefreshCw, Calendar, Star } from 'lucide-react';
 
@@ -263,7 +264,7 @@ export default function PicksHistoryPage() {
                             </p>
                             {pick.updated_at && (
                               <div style={{ fontSize: '0.7rem', color: 'rgba(255,255,255,0.2)', marginTop: '0.6rem' }}>
-                                Analyzed {new Date(pick.updated_at).toLocaleString()}
+                                Analyzed {formatAtlanticDateTime(pick.updated_at)} ADT/AST
                               </div>
                             )}
                           </div>

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { LineChart as ChartIcon } from 'lucide-react';
 import { useApp } from '../context/AppContext';
+import { formatAtlanticDate, formatAtlanticTime } from '../lib/dateTime';
 
 export default function TradeHistoryPage() {
   const { tradeHistory } = useApp();
@@ -84,8 +85,8 @@ export default function TradeHistoryPage() {
                     </div>
                   </div>
                   <div style={{ textAlign: 'right' }}>
-                    <div className="label-sm" style={{ color: 'var(--on-surface-variant)' }}>{new Date(trade.timestamp).toLocaleDateString()}</div>
-                    <div className="label-sm" style={{ color: 'var(--on-surface-variant)' }}>{new Date(trade.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</div>
+                    <div className="label-sm" style={{ color: 'var(--on-surface-variant)' }}>{formatAtlanticDate(trade.timestamp)}</div>
+                    <div className="label-sm" style={{ color: 'var(--on-surface-variant)' }}>{formatAtlanticTime(trade.timestamp)} ADT/AST</div>
                     {trade.ai_grade != null && (
                       <div className="label-sm" style={{ marginTop: '0.25rem' }}>
                         AI Grade: <strong style={{ color: trade.ai_grade >= 80 ? '#3fff8b' : trade.ai_grade < 50 ? '#ff716c' : '#ffd60a' }}>{trade.ai_grade}</strong>
