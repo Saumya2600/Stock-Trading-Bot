@@ -86,26 +86,29 @@ Your trading bot can be deployed to various platforms. Since the bot needs **con
 Add these to your deployment platform:
 
 ```
-VITE_ALPACA_API_KEY=your_key
-VITE_ALPACA_SECRET_KEY=your_secret
 GOOGLE_API_KEY=your_primary_gemini_key
 GOOGLE_API_KEY_FALLBACK=your_fallback_gemini_key
 fmp=your_fmp_key
 ```
 
+GitHub Actions also require repository secrets `VITE_ALPACA_API_KEY` and `VITE_ALPACA_SECRET_KEY`; these are workflow secrets, not frontend build variables.
+
 ### Vercel Frontend Functions
 
-Set Vercel Root Directory to `frontend`. Add these server-side environment variables in Project Settings → Environment Variables. Do not prefix them with `VITE_`:
+Set Vercel Root Directory to `frontend`. Keep `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` for the frontend client. Add these server-side variables in Project Settings → Environment Variables:
 
 ```
 ALPACA_API_KEY=your_paper_trading_key
 ALPACA_SECRET_KEY=your_paper_trading_secret
-DASHBOARD_PASSWORD=long_unique_dashboard_password
-DASHBOARD_SESSION_SECRET=random_secret_at_least_32_characters
+SUPABASE_URL=your_supabase_project_url
+SUPABASE_ANON_KEY=your_supabase_anon_key
+DASHBOARD_ALLOWED_EMAILS=your-login-email@example.com
 ```
 
-These values stay server-side. GitHub Actions still use their existing repository secrets. Run locally with `npx vercel dev` to use Vercel Functions; plain `npm run dev` does not serve `/api/*` functions.
-Remove `VITE_ALPACA_API_KEY` and `VITE_ALPACA_SECRET_KEY` from Vercel frontend build variables after adding server-side values. Keep existing GitHub Actions secrets unchanged.
+Create your account in Supabase Authentication → Users. Disable public sign-ups and list your exact account email in `DASHBOARD_ALLOWED_EMAILS`. The anon key is public; never use Supabase service-role key in frontend or Vercel proxy.
+
+Alpaca credentials stay server-side in Vercel. Remove `VITE_ALPACA_API_KEY` and `VITE_ALPACA_SECRET_KEY` from Vercel frontend variables. If previously deployed frontend included those keys, rotate them in Alpaca, then update GitHub Actions and Vercel values. Run locally with `npx vercel dev`; plain `npm run dev` does not serve `/api/*` functions.
+Remove obsolete `DASHBOARD_PASSWORD` and `DASHBOARD_SESSION_SECRET` variables; Supabase Auth now handles sign-in.
 
 ---
 

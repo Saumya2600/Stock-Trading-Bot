@@ -3,16 +3,23 @@ import { createClient } from '@supabase/supabase-js';
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || '';
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || '';
 
-// Only init if the URL looks valid — never crash on placeholder values
-const isValidUrl = supabaseUrl.startsWith('http://') || supabaseUrl.startsWith('https://');
+// Only init when both public Supabase settings are present.
+const isConfigured = (supabaseUrl.startsWith('http://') || supabaseUrl.startsWith('https://'))
+  && Boolean(supabaseAnonKey);
 
-export const supabase = isValidUrl
+export const supabase = isConfigured
   ? createClient(supabaseUrl, supabaseAnonKey)
   : null;
 
-if (!isValidUrl) {
+const publicDataClient = isConfigured
+  ? createClient(supabaseUrl, supabaseAnonKey, {
+    auth: { autoRefreshToken: false, persistSession: false, detectSessionInUrl: false },
+  })
+  : null;
+
+if (!isConfigured) {
   console.warn(
-    '[Supabase] Not configured. Set VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY in .env to enable picks persistence.'
+    '[Supabase] Not configured. Set VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY to enable sign-in and picks persistence.'
   );
 }
 
@@ -23,7 +30,7 @@ if (!isValidUrl) {
  *   entry_price, reasoning, risk_level, type, updated_at, run_date)
  */
 export async function savePicksToSupabase(reportsObj) {
-  if (!supabase) return { error: 'Supabase not configured' };
+  if (!publicDataClient) return { error: 'Supabase not configured' };
 
   const picks = Object.entries(reportsObj)
     .filter(([k]) => !k.startsWith('_'))
@@ -48,7 +55,7 @@ export async function savePicksToSupabase(reportsObj) {
 
   if (!picks.length) return { data: [], error: null };
 
-  const { data, error } = await supabase
+  const { data, error } = await publicDataClient
     .from('research_picks')
     .upsert(picks, { onConflict: 'symbol,run_date' });
 
@@ -59,12 +66,12 @@ export async function savePicksToSupabase(reportsObj) {
  * Fetch all stored picks from Supabase, newest first.
  */
 export async function fetchPicksFromSupabase({ limit = 100, days = 30 } = {}) {
-  if (!supabase) return { data: [], error: 'Supabase not configured' };
+  if (!publicDataClient) return { data: [], error: 'Supabase not configured' };
 
   const since = new Date();
   since.setDate(since.getDate() - days);
 
-  const { data, error } = await supabase
+  const { data, error } = await publicDataClient
     .from('research_picks')
     .select('*')
     .gte('run_date', since.toISOString().split('T')[0])
