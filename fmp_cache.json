@@ -1,25 +1,36 @@
 {
-    "NBIS": {
+    "AAPL": {
         "data": {
-            "sector": "Communication Services",
-            "industry": "Internet Content & Information",
-            "pe": 164.11,
-            "peg": 0.51,
-            "debt_to_equity": 0.99,
-            "description": "Nebius Group N.V., a technology company, engages in building full-stack infrastructure to service the global AI industry in the United States, the United Kingdom, and internationally. It offers Nebius..."
+            "sector": "Technology",
+            "industry": "Consumer Electronics",
+            "pe": 39.1,
+            "peg": 2.69,
+            "debt_to_equity": 0.78,
+            "description": "Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide. The company offers iPhone, a line of smartphones; Mac, a line of personal ..."
         },
-        "updated_at": "2026-10-12T21:32:46.667532"
+        "updated_at": "2026-10-13T01:59:18.937999"
     },
-    "BE": {
+    "XOM": {
         "data": {
-            "sector": "Industrials",
-            "industry": "Electrical Equipment & Parts",
-            "pe": 345.11,
-            "peg": 0.63,
-            "debt_to_equity": 1.72,
-            "description": "Bloom Energy Corporation designs, manufactures, sells, and installs solid oxide fuel cell systems for on-site power generation in the United States and internationally. It offers Bloom Energy Server, ..."
+            "sector": "Energy",
+            "industry": "Oil & Gas Integrated",
+            "pe": 22.16,
+            "peg": 1.49,
+            "debt_to_equity": 0.16,
+            "description": "ExxonMobil Holdings Corporation engages in the exploration and production of crude oil and natural gas in the United States, Canada, and internationally. The company operates through Upstream, Energy ..."
         },
-        "updated_at": "2026-10-12T21:33:20.883428"
+        "updated_at": "2026-10-13T01:59:49.412030"
+    },
+    "NOW": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Software - Application",
+            "pe": 87.7,
+            "peg": 1.01,
+            "debt_to_equity": 0.68,
+            "description": "ServiceNow, Inc. provides cloud-based solution for digital workflows in the North America, Brazil, Europe, the Middle East and Africa, Asia Pacific, and internationally. The company provides asset man..."
+        },
+        "updated_at": "2026-10-13T02:00:20.816020"
     },
     "GOOGL": {
         "data": {
@@ -30,61 +41,50 @@
             "debt_to_equity": 0.19,
             "description": "Alphabet Inc. offers various products and platforms in the United States, Europe, the Middle East, Africa, the Asia-Pacific, Canada, and Latin America. It operates through Google Services, Google Clou..."
         },
-        "updated_at": "2026-10-12T21:33:41.571298"
+        "updated_at": "2026-10-13T02:00:42.944673"
     },
-    "IT": {
+    "SLB": {
+        "data": {
+            "sector": "Energy",
+            "industry": "Oil & Gas Equipment & Services",
+            "pe": 23.56,
+            "peg": 1.29,
+            "debt_to_equity": 0.47,
+            "description": "SLB N.V. engages in the provision of technology for the energy industry worldwide. The company operates through four divisions: Digital & Integration, Reservoir Performance, Well Construction, and Pro..."
+        },
+        "updated_at": "2026-10-13T02:01:12.288898"
+    },
+    "HAL": {
+        "data": {
+            "sector": "Energy",
+            "industry": "Oil & Gas Equipment & Services",
+            "pe": 17.16,
+            "peg": 0.67,
+            "debt_to_equity": 0.74,
+            "description": "Halliburton Company provides products and services to the energy industry worldwide. It operates in two segments, Completion and Production, and Drilling and Evaluation. The Completion and Production ..."
+        },
+        "updated_at": "2026-10-13T02:01:36.092709"
+    },
+    "APLD": {
         "data": {
             "sector": "Technology",
             "industry": "Information Technology Services",
-            "pe": 17.55,
-            "peg": 0.76,
-            "debt_to_equity": 0,
-            "description": "Gartner, Inc. provides business and technology insights to support decision-making and performance on an organization's mission-critical priorities in the United States, Canada, Europe, the Middle Eas..."
+            "pe": 0,
+            "peg": 1.83,
+            "debt_to_equity": 1.71,
+            "description": "Applied Digital Corporation designs, develops, and operates digital infrastructure solutions to high-performance computing (HPC) and artificial intelligence industries in North America. It operates th..."
         },
-        "updated_at": "2026-10-12T21:34:03.542294"
+        "updated_at": "2026-10-13T02:02:20.887022"
     },
-    "MSFT": {
+    "SPCX": {
         "data": {
-            "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 30.15,
-            "peg": 1.74,
-            "debt_to_equity": 0.29,
-            "description": "Microsoft Corporation, a technology company, develops and supports a portfolio of technology solutions for individuals and businesses worldwide. Its products include operating systems, server applicat..."
+            "sector": "Industrials",
+            "industry": "Aerospace & Defense",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 0.31,
+            "description": "Space Exploration Technologies Corp. provides satellite-based broadband services in the United States, Ireland, Canada, and internationally. It operates through three operating segments: Space, Connec..."
         },
-        "updated_at": "2026-10-12T21:34:34.322582"
-    },
-    "DTE": {
-        "data": {
-            "sector": "Utilities",
-            "industry": "Utilities - Regulated Electric",
-            "pe": 20.29,
-            "peg": 1.63,
-            "debt_to_equity": 2.29,
-            "description": "DTE Energy Company engages in energy-related businesses and services. The company operates through four segments: Electric, Gas, DTE Vantage, and Energy Trading.The company's Electric segment generate..."
-        },
-        "updated_at": "2026-10-12T21:35:03.710250"
-    },
-    "AMZN": {
-        "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Internet Retail",
-            "pe": 20.88,
-            "peg": 1.53,
-            "debt_to_equity": 0.46,
-            "description": "Amazon.com, Inc. engages in the retail sale of consumer products, advertising, and subscriptions service through online and physical stores in North America and internationally. The company operates t..."
-        },
-        "updated_at": "2026-10-12T21:35:31.138307"
-    },
-    "ET": {
-        "data": {
-            "sector": "Energy",
-            "industry": "Oil & Gas Midstream",
-            "pe": 13.98,
-            "peg": 0.62,
-            "debt_to_equity": 1.38,
-            "description": "Energy Transfer LP, together with its subsidiaries, provides energy-related services in the United States. It operates through Intrastate Transportation and Storage; Interstate Transportation and Stor..."
-        },
-        "updated_at": "2026-10-12T21:35:51.652382"
+        "updated_at": "2026-10-13T02:03:09.358015"
     }
 }
