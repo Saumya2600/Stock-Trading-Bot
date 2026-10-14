@@ -1,25 +1,25 @@
 {
-    "WDC": {
+    "APLD": {
         "data": {
             "sector": "Technology",
-            "industry": "Computer Hardware",
-            "pe": 14.14,
-            "peg": 0.74,
-            "debt_to_equity": 0.13,
-            "description": "Western Digital Corporation engages in the development, manufacture, and sale of data storage devices and solutions based on hard disk drive (HDD) technology in the United States, Asia, Europe, the Mi..."
+            "industry": "Information Technology Services",
+            "pe": 0,
+            "peg": 1.83,
+            "debt_to_equity": 1.71,
+            "description": "Applied Digital Corporation designs, develops, and operates digital infrastructure solutions to high-performance computing (HPC) and artificial intelligence industries in North America. It operates th..."
         },
-        "updated_at": "2026-10-13T23:43:48.239139"
+        "updated_at": "2026-10-14T17:45:53.921617"
     },
-    "SLB": {
+    "AAPL": {
         "data": {
-            "sector": "Energy",
-            "industry": "Oil & Gas Equipment & Services",
-            "pe": 23.56,
-            "peg": 1.29,
-            "debt_to_equity": 0.47,
-            "description": "SLB N.V. engages in the provision of technology for the energy industry worldwide. The company operates through four divisions: Digital & Integration, Reservoir Performance, Well Construction, and Pro..."
+            "sector": "Technology",
+            "industry": "Consumer Electronics",
+            "pe": 39.24,
+            "peg": 2.73,
+            "debt_to_equity": 0.78,
+            "description": "Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide. The company offers iPhone, a line of smartphones; Mac, a line of personal ..."
         },
-        "updated_at": "2026-10-13T23:44:18.229538"
+        "updated_at": "2026-10-14T17:46:21.282889"
     },
     "IREN": {
         "data": {
@@ -30,61 +30,61 @@
             "debt_to_equity": 1.87,
             "description": "IREN Limited operates as a vertically integrated AI cloud services platform in Australia and Canada. It develops, owns, and operate data centers, including the associated land, grid connections, and s..."
         },
-        "updated_at": "2026-10-13T23:44:40.065837"
-    },
-    "TSLA": {
-        "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Auto Manufacturers",
-            "pe": 347.44,
-            "peg": 3.85,
-            "debt_to_equity": 0.18,
-            "description": "Tesla, Inc. designs, develops, manufactures, leases, and sells electric vehicles, and energy generation and storage systems in the United States, China, and internationally. The company operates in tw..."
-        },
-        "updated_at": "2026-10-13T23:45:07.093846"
-    },
-    "MSFT": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 30.62,
-            "peg": 1.76,
-            "debt_to_equity": 0.29,
-            "description": "Microsoft Corporation, a technology company, develops and supports a portfolio of technology solutions for individuals and businesses worldwide. Its products include operating systems, server applicat..."
-        },
-        "updated_at": "2026-10-13T23:45:32.608960"
-    },
-    "VOO": {
-        "data": {
-            "sector": "Unknown",
-            "industry": "Unknown",
-            "pe": 25.16,
-            "peg": 0,
-            "debt_to_equity": 0,
-            "description": "The fund manager employs an indexing investment approach designed to track the performance of the Standard & Poor's 500 Index, a widely recognized benchmark of U.S. stock market performance that is do..."
-        },
-        "updated_at": "2026-10-13T23:45:59.707414"
+        "updated_at": "2026-10-14T17:47:08.706086"
     },
     "MGM": {
         "data": {
             "sector": "Consumer Cyclical",
             "industry": "Resorts & Casinos",
-            "pe": 18.15,
+            "pe": 17.77,
             "peg": 0.37,
             "debt_to_equity": 8.93,
             "description": "MGM Resorts International, through its subsidiaries, operates as a gaming and entertainment company in the United States, China, and internationally. It operates through four segments: Las Vegas Strip..."
         },
-        "updated_at": "2026-10-13T23:46:23.533015"
+        "updated_at": "2026-10-14T17:47:35.763368"
     },
-    "UNH": {
+    "VOO": {
         "data": {
-            "sector": "Healthcare",
-            "industry": "Healthcare Plans",
-            "pe": 24.29,
-            "peg": 1.03,
-            "debt_to_equity": 0.69,
-            "description": "UnitedHealth Group Incorporated operates as a health care company in the United States and internationally. It operates through four segments: Optum Health, Optum Insight, Optum Rx; and UnitedHealthca..."
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 24.84,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "The fund manager employs an indexing investment approach designed to track the performance of the Standard & Poor's 500 Index, a widely recognized benchmark of U.S. stock market performance that is do..."
         },
-        "updated_at": "2026-10-13T23:46:53.866394"
+        "updated_at": "2026-10-14T17:47:58.619635"
+    },
+    "AM": {
+        "data": {
+            "sector": "Energy",
+            "industry": "Oil & Gas Midstream",
+            "pe": 25.1,
+            "peg": 0,
+            "debt_to_equity": 1.86,
+            "description": "Antero Midstream Corporation owns, operates, and develops midstream energy assets in the Appalachian Basin. It operates in two segments, Gathering and Processing, and Water Handling. The gathering and..."
+        },
+        "updated_at": "2026-10-14T17:48:27.690728"
+    },
+    "SLB": {
+        "data": {
+            "sector": "Energy",
+            "industry": "Oil & Gas Equipment & Services",
+            "pe": 23.21,
+            "peg": 1.29,
+            "debt_to_equity": 0.47,
+            "description": "SLB N.V. engages in the provision of technology for the energy industry worldwide. The company operates through four divisions: Digital & Integration, Reservoir Performance, Well Construction, and Pro..."
+        },
+        "updated_at": "2026-10-14T17:48:56.555293"
+    },
+    "NVDA": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Semiconductors",
+            "pe": 27.97,
+            "peg": 0.28,
+            "debt_to_equity": 0.17,
+            "description": "NVIDIA Corporation operates as a data center scale AI infrastructure company in the United States, Taiwan, China, Hong Kong, Europe, and internationally. It operates through Compute & Networking, and ..."
+        },
+        "updated_at": "2026-10-14T17:49:20.049069"
     }
 }
