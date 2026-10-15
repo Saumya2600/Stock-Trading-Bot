@@ -1,90 +1,90 @@
 {
-    "SPY": {
+    "API": {
         "data": {
-            "sector": "Unknown",
-            "industry": "Unknown",
-            "pe": 24.43,
+            "sector": "Technology",
+            "industry": "Software - Application",
+            "pe": 49.56,
             "peg": 0,
-            "debt_to_equity": 0,
-            "description": "The trust seeks to achieve its investment objective by holding a portfolio of the common stocks that are included in the index (the \u201cPortfolio\u201d), with the weight of each stock in the Portfolio substan..."
+            "debt_to_equity": 0.18,
+            "description": "Agora, Inc., through its subsidiaries, engages in the operation of a real-time engagement platform-as-a-service in the United States, the People's Republic of China, and internationally. Its RTE-PaaS ..."
         },
-        "updated_at": "2026-10-14T23:07:47.171717"
+        "updated_at": "2026-10-15T17:34:47.448235"
     },
-    "MU": {
+    "PFE": {
+        "data": {
+            "sector": "Healthcare",
+            "industry": "Drug Manufacturers - General",
+            "pe": 37.95,
+            "peg": 13.38,
+            "debt_to_equity": 0.74,
+            "description": "Pfizer Inc. discovers, develops, manufactures, markets, distributes, and sells biopharmaceutical products in the United States and internationally. It operates in three segments: Biopharma, PC1, and P..."
+        },
+        "updated_at": "2026-10-15T17:35:19.060716"
+    },
+    "APLD": {
         "data": {
             "sector": "Technology",
-            "industry": "Semiconductors",
-            "pe": 12.3,
-            "peg": 0.16,
-            "debt_to_equity": 0.04,
-            "description": "Micron Technology, Inc. engages in the provision of semiconductor memory and storage products in the United States, Taiwan, Mainland China, other Asia Pacific countries, Japan, Europe, and internation..."
+            "industry": "Information Technology Services",
+            "pe": 0,
+            "peg": 1.83,
+            "debt_to_equity": 1.71,
+            "description": "Applied Digital Corporation designs, develops, and operates digital infrastructure solutions to high-performance computing (HPC) and artificial intelligence industries in North America. It operates th..."
         },
-        "updated_at": "2026-10-14T23:08:19.932068"
+        "updated_at": "2026-10-15T17:35:46.911494"
     },
-    "AAPL": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Consumer Electronics",
-            "pe": 39.33,
-            "peg": 2.73,
-            "debt_to_equity": 0.78,
-            "description": "Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide. The company offers iPhone, a line of smartphones; Mac, a line of personal ..."
-        },
-        "updated_at": "2026-10-14T23:08:59.101320"
-    },
-    "DAL": {
-        "data": {
-            "sector": "Industrials",
-            "industry": "Airlines",
-            "pe": 15.3,
-            "peg": 0.21,
-            "debt_to_equity": 0.89,
-            "description": "Delta Air Lines, Inc. provides scheduled air transportation for passengers and cargo in the United States and internationally. The company operates through two segments, Airline and Refinery. Its dome..."
-        },
-        "updated_at": "2026-10-14T23:09:31.891662"
-    },
-    "DIS": {
+    "GOOGL": {
         "data": {
             "sector": "Communication Services",
-            "industry": "Entertainment",
-            "pe": 22.47,
-            "peg": 3.53,
-            "debt_to_equity": 0.39,
-            "description": "The Walt Disney Company operates as an entertainment company in Americas, Europe, and the Asia Pacific. It operates in three segments: Entertainment, Sports, and Experiences. The company produces and ..."
+            "industry": "Internet Content & Information",
+            "pe": 17.85,
+            "peg": 1.22,
+            "debt_to_equity": 0.19,
+            "description": "Alphabet Inc. offers various products and platforms in the United States, Europe, the Middle East, Africa, the Asia-Pacific, Canada, and Latin America. It operates through Google Services, Google Clou..."
         },
-        "updated_at": "2026-10-14T23:10:05.904095"
+        "updated_at": "2026-10-15T17:36:12.467134"
     },
-    "CCL": {
-        "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Travel Services",
-            "pe": 11.44,
-            "peg": 0.92,
-            "debt_to_equity": 1.77,
-            "description": "Carnival Corporation Ltd., a cruise company, provides leisure travel services. The company operates through four segments: North America Cruise Operations, Europe Cruise Operations, Cruise Support, an..."
-        },
-        "updated_at": "2026-10-14T23:10:52.212108"
-    },
-    "SNDK": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Computer Hardware",
-            "pe": 19.03,
-            "peg": 0,
-            "debt_to_equity": 0.01,
-            "description": "Sandisk Corporation develops, manufactures, and sells data storage devices and solutions using NAND flash technology in the Americas, Europe, the Middle East, Africa, Asia, and internationally. The co..."
-        },
-        "updated_at": "2026-10-14T23:11:24.769387"
-    },
-    "BAC": {
+    "HOOD": {
         "data": {
             "sector": "Financial Services",
-            "industry": "Banks - Diversified",
-            "pe": 11.87,
-            "peg": 0.85,
-            "debt_to_equity": 0,
-            "description": "Bank of America Corporation, through its subsidiaries, provides various financial products and services for individual consumers, small and middle-market businesses, institutional investors, large cor..."
+            "industry": "Capital Markets",
+            "pe": 49.15,
+            "peg": 1.71,
+            "debt_to_equity": 2.4,
+            "description": "Robinhood Markets, Inc. operates financial services platform in the United States. The company's platform allows users to invest in stocks, exchange-traded funds (ETFs), and American depository receip..."
         },
-        "updated_at": "2026-10-14T23:11:54.392968"
+        "updated_at": "2026-10-15T17:36:34.445648"
+    },
+    "ASML": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Semiconductor Equipment & Materials",
+            "pe": 55.57,
+            "peg": 1.03,
+            "debt_to_equity": 0.09,
+            "description": "ASML Holding N.V. provides lithography solutions for the development, production, marketing, sales, upgrading, and servicing of advanced semiconductor equipment systems. The company offers lithography..."
+        },
+        "updated_at": "2026-10-15T17:36:58.343757"
+    },
+    "IREN": {
+        "data": {
+            "sector": "Financial Services",
+            "industry": "Capital Markets",
+            "pe": 0,
+            "peg": 3.11,
+            "debt_to_equity": 1.87,
+            "description": "IREN Limited operates as a vertically integrated AI cloud services platform in Australia and Canada. It develops, owns, and operate data centers, including the associated land, grid connections, and s..."
+        },
+        "updated_at": "2026-10-15T17:37:23.679353"
+    },
+    "CVX": {
+        "data": {
+            "sector": "Energy",
+            "industry": "Oil & Gas Integrated",
+            "pe": 20.7,
+            "peg": 0.96,
+            "debt_to_equity": 0.19,
+            "description": "Chevron Corporation, through its subsidiaries, engages in the integrated energy and chemicals operations. It operates through Upstream and Downstream segments. The Upstream segment engages in the expl..."
+        },
+        "updated_at": "2026-10-15T17:37:49.112376"
     }
 }
