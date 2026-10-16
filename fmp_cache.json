@@ -1,90 +1,90 @@
 {
-    "APA": {
+    "AMZN": {
         "data": {
-            "sector": "Energy",
-            "industry": "Oil & Gas E&P",
-            "pe": 9.99,
-            "peg": 1.46,
-            "debt_to_equity": 0.49,
-            "description": "APA Corporation, an independent energy company, explores for, develops, and produces natural gas, crude oil, and natural gas liquids. The company has oil and gas operations in the United States, Egypt..."
+            "sector": "Consumer Cyclical",
+            "industry": "Internet Retail",
+            "pe": 20.12,
+            "peg": 1.47,
+            "debt_to_equity": 0.46,
+            "description": "Amazon.com, Inc. engages in the retail sale of consumer products, advertising, and subscriptions service through online and physical stores in North America and internationally. The company operates t..."
         },
-        "updated_at": "2026-10-15T23:01:08.560910"
+        "updated_at": "2026-10-16T17:09:57.517557"
     },
-    "SNDK": {
+    "BAC": {
         "data": {
-            "sector": "Technology",
-            "industry": "Computer Hardware",
-            "pe": 19.97,
-            "peg": 0,
-            "debt_to_equity": 0.01,
-            "description": "Sandisk Corporation develops, manufactures, and sells data storage devices and solutions using NAND flash technology in the Americas, Europe, the Middle East, Africa, Asia, and internationally. The co..."
-        },
-        "updated_at": "2026-10-15T23:02:21.342342"
-    },
-    "DELL": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Computer Hardware",
-            "pe": 31.02,
-            "peg": 0.51,
+            "sector": "Financial Services",
+            "industry": "Banks - Diversified",
+            "pe": 12.3,
+            "peg": 0.81,
             "debt_to_equity": 0,
-            "description": "Dell Technologies Inc. designs, develops, manufactures, markets, sells, and supports various comprehensive and integrated solutions, products, and services in the Americas, Europe, the Middle East, As..."
+            "description": "Bank of America Corporation, through its subsidiaries, provides various financial products and services for individual consumers, small and middle-market businesses, institutional investors, large cor..."
         },
-        "updated_at": "2026-10-15T23:02:42.307371"
+        "updated_at": "2026-10-16T17:10:28.735064"
     },
-    "IT": {
+    "AAPL": {
         "data": {
             "sector": "Technology",
-            "industry": "Information Technology Services",
-            "pe": 18.86,
-            "peg": 0.78,
-            "debt_to_equity": 0,
-            "description": "Gartner, Inc. provides business and technology insights to support decision-making and performance on an organization's mission-critical priorities in the United States, Canada, Europe, the Middle Eas..."
+            "industry": "Consumer Electronics",
+            "pe": 39.31,
+            "peg": 2.75,
+            "debt_to_equity": 0.78,
+            "description": "Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide. The company offers iPhone, a line of smartphones; Mac, a line of personal ..."
         },
-        "updated_at": "2026-10-15T23:03:09.473349"
+        "updated_at": "2026-10-16T17:11:00.217923"
     },
-    "WMT": {
-        "data": {
-            "sector": "Consumer Defensive",
-            "industry": "Discount Stores",
-            "pe": 42.71,
-            "peg": 3.94,
-            "debt_to_equity": 0.72,
-            "description": "Walmart Inc. engages in the operation of retail and wholesale stores and clubs, ecommerce websites, and mobile applications worldwide. The company operates through three segments: Walmart U.S., Walmar..."
-        },
-        "updated_at": "2026-10-15T23:03:42.914394"
-    },
-    "TSLA": {
+    "GM": {
         "data": {
             "sector": "Consumer Cyclical",
             "industry": "Auto Manufacturers",
-            "pe": 341.92,
-            "peg": 3.74,
-            "debt_to_equity": 0.18,
-            "description": "Tesla, Inc. designs, develops, manufactures, leases, and sells electric vehicles, and energy generation and storage systems in the United States, China, and internationally. The company operates in tw..."
+            "pe": 37.74,
+            "peg": 0.29,
+            "debt_to_equity": 2.02,
+            "description": "General Motors Company designs, builds, and sells trucks, crossovers, cars, and automobile parts worldwide. It operates through GM North America, GM International, and GM Financial segments. The compa..."
         },
-        "updated_at": "2026-10-15T23:04:09.847812"
+        "updated_at": "2026-10-16T17:11:20.908738"
     },
-    "PFE": {
+    "IREN": {
         "data": {
-            "sector": "Healthcare",
-            "industry": "Drug Manufacturers - General",
-            "pe": 38.74,
-            "peg": 13.38,
-            "debt_to_equity": 0.74,
-            "description": "Pfizer Inc. discovers, develops, manufactures, markets, distributes, and sells biopharmaceutical products in the United States and internationally. It operates in three segments: Biopharma, PC1, and P..."
+            "sector": "Financial Services",
+            "industry": "Capital Markets",
+            "pe": 0,
+            "peg": 3.11,
+            "debt_to_equity": 1.87,
+            "description": "IREN Limited operates as a vertically integrated AI cloud services platform in Australia and Canada. It develops, owns, and operate data centers, including the associated land, grid connections, and s..."
         },
-        "updated_at": "2026-10-15T23:04:34.667066"
+        "updated_at": "2026-10-16T17:11:49.541383"
     },
-    "MSFT": {
+    "DTE": {
         "data": {
-            "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 30.39,
-            "peg": 1.73,
-            "debt_to_equity": 0.29,
-            "description": "Microsoft Corporation, a technology company, develops and supports a portfolio of technology solutions for individuals and businesses worldwide. Its products include operating systems, server applicat..."
+            "sector": "Utilities",
+            "industry": "Utilities - Regulated Electric",
+            "pe": 20.53,
+            "peg": 1.65,
+            "debt_to_equity": 2.29,
+            "description": "DTE Energy Company engages in energy-related businesses and services. The company operates through four segments: Electric, Gas, DTE Vantage, and Energy Trading.The company's Electric segment generate..."
         },
-        "updated_at": "2026-10-15T23:05:38.547609"
+        "updated_at": "2026-10-16T17:12:19.808048"
+    },
+    "GE": {
+        "data": {
+            "sector": "Industrials",
+            "industry": "Aerospace & Defense",
+            "pe": 37.26,
+            "peg": 3.9,
+            "debt_to_equity": 1.13,
+            "description": "General Electric Company, doing business as GE Aerospace, designs and produces commercial and defense aircraft engines, integrated engine components, electric power, and aircraft systems. The company ..."
+        },
+        "updated_at": "2026-10-16T17:12:52.856882"
+    },
+    "FOR": {
+        "data": {
+            "sector": "Real Estate",
+            "industry": "Real Estate - Development",
+            "pe": 7.7,
+            "peg": 4.9,
+            "debt_to_equity": 0.44,
+            "description": "Forestar Group Inc. operates as a residential lot development company in the United States. It acquires land and develops infrastructure for single-family residential communities. The company sells it..."
+        },
+        "updated_at": "2026-10-16T17:13:22.263506"
     }
 }
