@@ -1,90 +1,90 @@
 {
-    "AMZN": {
+    "NBIS": {
         "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Internet Retail",
-            "pe": 20.12,
-            "peg": 1.47,
-            "debt_to_equity": 0.46,
-            "description": "Amazon.com, Inc. engages in the retail sale of consumer products, advertising, and subscriptions service through online and physical stores in North America and internationally. The company operates t..."
+            "sector": "Communication Services",
+            "industry": "Internet Content & Information",
+            "pe": 129.27,
+            "peg": 0.43,
+            "debt_to_equity": 0.99,
+            "description": "Nebius Group N.V., a technology company, engages in building full-stack infrastructure to service the global AI industry in the United States, the United Kingdom, and internationally. It offers Nebius..."
         },
-        "updated_at": "2026-10-16T17:09:57.517557"
+        "updated_at": "2026-10-16T22:46:09.908526"
     },
-    "BAC": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Banks - Diversified",
-            "pe": 12.3,
-            "peg": 0.81,
-            "debt_to_equity": 0,
-            "description": "Bank of America Corporation, through its subsidiaries, provides various financial products and services for individual consumers, small and middle-market businesses, institutional investors, large cor..."
-        },
-        "updated_at": "2026-10-16T17:10:28.735064"
-    },
-    "AAPL": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Consumer Electronics",
-            "pe": 39.31,
-            "peg": 2.75,
-            "debt_to_equity": 0.78,
-            "description": "Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide. The company offers iPhone, a line of smartphones; Mac, a line of personal ..."
-        },
-        "updated_at": "2026-10-16T17:11:00.217923"
-    },
-    "GM": {
-        "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Auto Manufacturers",
-            "pe": 37.74,
-            "peg": 0.29,
-            "debt_to_equity": 2.02,
-            "description": "General Motors Company designs, builds, and sells trucks, crossovers, cars, and automobile parts worldwide. It operates through GM North America, GM International, and GM Financial segments. The compa..."
-        },
-        "updated_at": "2026-10-16T17:11:20.908738"
-    },
-    "IREN": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Capital Markets",
-            "pe": 0,
-            "peg": 3.11,
-            "debt_to_equity": 1.87,
-            "description": "IREN Limited operates as a vertically integrated AI cloud services platform in Australia and Canada. It develops, owns, and operate data centers, including the associated land, grid connections, and s..."
-        },
-        "updated_at": "2026-10-16T17:11:49.541383"
-    },
-    "DTE": {
-        "data": {
-            "sector": "Utilities",
-            "industry": "Utilities - Regulated Electric",
-            "pe": 20.53,
-            "peg": 1.65,
-            "debt_to_equity": 2.29,
-            "description": "DTE Energy Company engages in energy-related businesses and services. The company operates through four segments: Electric, Gas, DTE Vantage, and Energy Trading.The company's Electric segment generate..."
-        },
-        "updated_at": "2026-10-16T17:12:19.808048"
-    },
-    "GE": {
+    "RKLB": {
         "data": {
             "sector": "Industrials",
             "industry": "Aerospace & Defense",
-            "pe": 37.26,
-            "peg": 3.9,
-            "debt_to_equity": 1.13,
-            "description": "General Electric Company, doing business as GE Aerospace, designs and produces commercial and defense aircraft engines, integrated engine components, electric power, and aircraft systems. The company ..."
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 0.04,
+            "description": "Rocket Lab Corporation, a space company, provides launch services and space systems solutions in the United States, Canada, Japan, and internationally. The company operates through launch services and..."
         },
-        "updated_at": "2026-10-16T17:12:52.856882"
+        "updated_at": "2026-10-16T22:46:40.503779"
     },
-    "FOR": {
+    "AGI": {
         "data": {
-            "sector": "Real Estate",
-            "industry": "Real Estate - Development",
-            "pe": 7.7,
-            "peg": 4.9,
-            "debt_to_equity": 0.44,
-            "description": "Forestar Group Inc. operates as a residential lot development company in the United States. It acquires land and develops infrastructure for single-family residential communities. The company sells it..."
+            "sector": "Basic Materials",
+            "industry": "Gold",
+            "pe": 11.55,
+            "peg": 0,
+            "debt_to_equity": 0.05,
+            "description": "Alamos Gold Inc. operates as a gold producer in Canada and Mexico. It primarily explores for gold deposits. The company was founded in 2003 and is based in Toronto, Canada...."
         },
-        "updated_at": "2026-10-16T17:13:22.263506"
+        "updated_at": "2026-10-16T22:47:01.237903"
+    },
+    "TSM": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Semiconductors",
+            "pe": 26.74,
+            "peg": 0.81,
+            "debt_to_equity": 0.17,
+            "description": "Taiwan Semiconductor Manufacturing Company Limited, together with its subsidiaries, manufactures, packages, tests, and sells integrated circuits and other semiconductor devices in Taiwan, China, Europ..."
+        },
+        "updated_at": "2026-10-16T22:47:34.346505"
+    },
+    "SOXS": {
+        "data": {
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "The fund invests at least 80% of the fund\u2019s net assets in financial instruments, that, in combination, provide 3X daily inverse (opposite) or short exposure to the index or to ETFs that track the inde..."
+        },
+        "updated_at": "2026-10-16T22:47:54.971282"
+    },
+    "SPY": {
+        "data": {
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 24.23,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "The trust seeks to achieve its investment objective by holding a portfolio of the common stocks that are included in the index (the \u201cPortfolio\u201d), with the weight of each stock in the Portfolio substan..."
+        },
+        "updated_at": "2026-10-16T22:48:15.766824"
+    },
+    "JNJ": {
+        "data": {
+            "sector": "Healthcare",
+            "industry": "Drug Manufacturers - General",
+            "pe": 38.78,
+            "peg": 2.77,
+            "debt_to_equity": 0.58,
+            "description": "Johnson & Johnson, together with its subsidiaries, engages in the research and development, manufacture, and sale of a range of products in the healthcare field worldwide. It operates in two segments,..."
+        },
+        "updated_at": "2026-10-16T22:48:51.002434"
+    },
+    "GS": {
+        "data": {
+            "sector": "Financial Services",
+            "industry": "Capital Markets",
+            "pe": 12.67,
+            "peg": 1.12,
+            "debt_to_equity": 6.71,
+            "description": "The Goldman Sachs Group, Inc., a financial institution, provides a range of financial services for corporations, financial institutions, governments, and individuals in the Americas, Europe, the Middl..."
+        },
+        "updated_at": "2026-10-16T22:49:15.882884"
     }
 }
