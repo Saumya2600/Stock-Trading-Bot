@@ -1,90 +1,90 @@
 {
-    "GLD": {
+    "PLTR": {
         "data": {
-            "sector": "Unknown",
-            "industry": "Unknown",
-            "pe": 0,
-            "peg": 0,
-            "debt_to_equity": 0,
-            "description": "The Trust holds gold bars and from time to time, issues Baskets in exchange for deposits of gold and distributes gold in connection with redemptions of Baskets. The investment objective of the Trust i..."
+            "sector": "Technology",
+            "industry": "Software - Infrastructure",
+            "pe": 167.37,
+            "peg": 1.61,
+            "debt_to_equity": 0.02,
+            "description": "Palantir Technologies Inc. builds and deploys software platforms for the intelligence community to assist in counterterrorism investigations and operations in the United States, the United Kingdom, an..."
         },
-        "updated_at": "2026-10-19T18:57:58.818391"
+        "updated_at": "2026-10-19T23:32:27.632776"
     },
-    "GE": {
+    "AMZN": {
         "data": {
-            "sector": "Industrials",
-            "industry": "Aerospace & Defense",
-            "pe": 36.91,
-            "peg": 3.99,
-            "debt_to_equity": 1.13,
-            "description": "General Electric Company, doing business as GE Aerospace, designs and produces commercial and defense aircraft engines, integrated engine components, electric power, and aircraft systems. The company ..."
+            "sector": "Consumer Cyclical",
+            "industry": "Internet Retail",
+            "pe": 21.11,
+            "peg": 1.45,
+            "debt_to_equity": 0.46,
+            "description": "Amazon.com, Inc. engages in the retail sale of consumer products, advertising, and subscriptions service through online and physical stores in North America and internationally. The company operates t..."
         },
-        "updated_at": "2026-10-19T18:58:25.954123"
+        "updated_at": "2026-10-19T23:32:52.055538"
     },
-    "INTC": {
+    "AVGO": {
         "data": {
             "sector": "Technology",
             "industry": "Semiconductors",
-            "pe": 0,
-            "peg": 1.36,
-            "debt_to_equity": 0.49,
-            "description": "Intel Corporation designs, develops, manufactures, markets, sells, and services computing and related end products and services in the United States, Ireland, Israel, and internationally. It operates ..."
+            "pe": 42.73,
+            "peg": 0.33,
+            "debt_to_equity": 0.6,
+            "description": "Broadcom Inc. designs, develops, and supplies various semiconductor devices and infrastructure software solutions internationally. The company operates in two segments: Semiconductor Solutions and Inf..."
         },
-        "updated_at": "2026-10-19T18:58:50.733351"
+        "updated_at": "2026-10-19T23:33:18.813923"
+    },
+    "NBIS": {
+        "data": {
+            "sector": "Communication Services",
+            "industry": "Internet Content & Information",
+            "pe": 133.0,
+            "peg": 0.38,
+            "debt_to_equity": 0.99,
+            "description": "Nebius Group N.V., a technology company, engages in building full-stack infrastructure to service the global AI industry in the United States, the United Kingdom, and internationally. It offers Nebius..."
+        },
+        "updated_at": "2026-10-19T23:33:42.072418"
+    },
+    "META": {
+        "data": {
+            "sector": "Communication Services",
+            "industry": "Internet Content & Information",
+            "pe": 26.58,
+            "peg": 0.94,
+            "debt_to_equity": 0.43,
+            "description": "Meta Platforms, Inc. engages in the development of products that enable people to connect and share with friends and family through mobile devices, personal computers, virtual reality (VR) headsets, a..."
+        },
+        "updated_at": "2026-10-19T23:34:06.797127"
     },
     "AAPL": {
         "data": {
             "sector": "Technology",
             "industry": "Consumer Electronics",
-            "pe": 39.37,
+            "pe": 39.33,
             "peg": 2.75,
             "debt_to_equity": 0.78,
             "description": "Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide. The company offers iPhone, a line of smartphones; Mac, a line of personal ..."
         },
-        "updated_at": "2026-10-19T18:59:17.056086"
+        "updated_at": "2026-10-19T23:34:37.371880"
     },
-    "SPCX": {
+    "IREN": {
         "data": {
-            "sector": "Industrials",
-            "industry": "Aerospace & Defense",
+            "sector": "Financial Services",
+            "industry": "Capital Markets",
             "pe": 0,
-            "peg": 0,
-            "debt_to_equity": 0.31,
-            "description": "Space Exploration Technologies Corp. provides satellite-based broadband services in the United States, Ireland, Canada, and internationally. It operates through three operating segments: Space, Connec..."
+            "peg": 3.11,
+            "debt_to_equity": 1.87,
+            "description": "IREN Limited operates as a vertically integrated AI cloud services platform in Australia and Canada. It develops, owns, and operate data centers, including the associated land, grid connections, and s..."
         },
-        "updated_at": "2026-10-19T18:59:38.303471"
+        "updated_at": "2026-10-19T23:35:03.262877"
     },
-    "AM": {
+    "ALL": {
         "data": {
-            "sector": "Energy",
-            "industry": "Oil & Gas Midstream",
-            "pe": 24.69,
-            "peg": 0,
-            "debt_to_equity": 1.86,
-            "description": "Antero Midstream Corporation owns, operates, and develops midstream energy assets in the Appalachian Basin. It operates in two segments, Gathering and Processing, and Water Handling. The gathering and..."
+            "sector": "Financial Services",
+            "industry": "Insurance - Property & Casualty",
+            "pe": 4.94,
+            "peg": 1.82,
+            "debt_to_equity": 0.22,
+            "description": "The Allstate Corporation, together with its subsidiaries, provides property and casualty, and other insurance products in the United States and Canada. It operates in four segments: Allstate Protectio..."
         },
-        "updated_at": "2026-10-19T19:00:07.727178"
-    },
-    "LVS": {
-        "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Resorts & Casinos",
-            "pe": 14.8,
-            "peg": 0.81,
-            "debt_to_equity": 17.04,
-            "description": "Las Vegas Sands Corp., together with its subsidiaries, owns, develops, and operates integrated resorts in Macao and Singapore. It owns and operates The Venetian Macao Resort Hotel, The Londoner Macao,..."
-        },
-        "updated_at": "2026-10-19T19:00:34.222917"
-    },
-    "NFLX": {
-        "data": {
-            "sector": "Communication Services",
-            "industry": "Entertainment",
-            "pe": 21.92,
-            "peg": 1.21,
-            "debt_to_equity": 0.55,
-            "description": "Netflix, Inc. provides entertainment services worldwide. The company offers television (TV) series, documentaries, feature films, games, and live programming across various genres and languages. It al..."
-        },
-        "updated_at": "2026-10-19T19:01:43.921576"
+        "updated_at": "2026-10-19T23:35:30.516876"
     }
 }
