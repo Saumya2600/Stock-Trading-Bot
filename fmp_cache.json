@@ -1,90 +1,90 @@
 {
-    "CVX": {
-        "data": {
-            "sector": "Energy",
-            "industry": "Oil & Gas Integrated",
-            "pe": 21.61,
-            "peg": 0.97,
-            "debt_to_equity": 0.19,
-            "description": "Chevron Corporation, through its subsidiaries, engages in the integrated energy and chemicals operations. It operates through Upstream and Downstream segments. The Upstream segment engages in the expl..."
-        },
-        "updated_at": "2026-10-20T17:44:29.989958"
-    },
-    "GS": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Capital Markets",
-            "pe": 12.75,
-            "peg": 1.11,
-            "debt_to_equity": 6.71,
-            "description": "The Goldman Sachs Group, Inc., a financial institution, provides a range of financial services for corporations, financial institutions, governments, and individuals in the Americas, Europe, the Middl..."
-        },
-        "updated_at": "2026-10-20T17:45:03.123334"
-    },
-    "NFLX": {
+    "GOOGL": {
         "data": {
             "sector": "Communication Services",
-            "industry": "Entertainment",
-            "pe": 21.76,
-            "peg": 1.21,
-            "debt_to_equity": 0.55,
-            "description": "Netflix, Inc. provides entertainment services worldwide. The company offers television (TV) series, documentaries, feature films, games, and live programming across various genres and languages. It al..."
+            "industry": "Internet Content & Information",
+            "pe": 17.07,
+            "peg": 1.2,
+            "debt_to_equity": 0.19,
+            "description": "Alphabet Inc. offers various products and platforms in the United States, Europe, the Middle East, Africa, the Asia-Pacific, Canada, and Latin America. It operates through Google Services, Google Clou..."
         },
-        "updated_at": "2026-10-20T17:45:29.855468"
+        "updated_at": "2026-10-20T23:07:51.349732"
     },
-    "AMD": {
+    "AM": {
         "data": {
-            "sector": "Technology",
-            "industry": "Semiconductors",
-            "pe": 137.78,
-            "peg": 0.53,
-            "debt_to_equity": 0.06,
-            "description": "Advanced Micro Devices, Inc. operates as a semiconductor company internationally. It operates in three segments: Data Center, Client and Gaming, and Embedded. The company offers artificial intelligenc..."
+            "sector": "Energy",
+            "industry": "Oil & Gas Midstream",
+            "pe": 24.78,
+            "peg": 0,
+            "debt_to_equity": 1.86,
+            "description": "Antero Midstream Corporation owns, operates, and develops midstream energy assets in the Appalachian Basin. It operates in two segments, Gathering and Processing, and Water Handling. The gathering and..."
         },
-        "updated_at": "2026-10-20T17:45:50.304397"
+        "updated_at": "2026-10-20T23:08:15.866631"
     },
-    "BE": {
+    "JPM": {
+        "data": {
+            "sector": "Financial Services",
+            "industry": "Banks - Diversified",
+            "pe": 14.06,
+            "peg": 1.45,
+            "debt_to_equity": 0,
+            "description": "JPMorgan Chase & Co. operates as a bank and financial holding company in the United States, rest of North America, Europe, the Middle East, Africa, the Asia Pacific, Latin America, and the Caribbean. ..."
+        },
+        "updated_at": "2026-10-20T23:08:47.676367"
+    },
+    "EU": {
+        "data": {
+            "sector": "Energy",
+            "industry": "Uranium",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 0.46,
+            "description": "enCore Energy Corp., together with its subsidiaries, engages in the acquisition, exploration, development, and extraction of uranium resource properties in the United States. The company is headquarte..."
+        },
+        "updated_at": "2026-10-20T23:09:17.985163"
+    },
+    "HTZ": {
         "data": {
             "sector": "Industrials",
-            "industry": "Electrical Equipment & Parts",
-            "pe": 293.47,
-            "peg": 0.5,
-            "debt_to_equity": 1.72,
-            "description": "Bloom Energy Corporation designs, manufactures, sells, and installs solid oxide fuel cell systems for on-site power generation in the United States and internationally. It offers Bloom Energy Server, ..."
+            "industry": "Rental & Leasing Services",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "Hertz Global Holdings, Inc. operates as a vehicle rental company. It operates through two segments: Americas RAC and International RAC. The company offers vehicle rental services under the Hertz, Doll..."
         },
-        "updated_at": "2026-10-20T17:46:16.718165"
+        "updated_at": "2026-10-20T23:10:09.460893"
     },
-    "SOXL": {
+    "SPY": {
         "data": {
             "sector": "Unknown",
             "industry": "Unknown",
-            "pe": 22.5,
+            "pe": 24.42,
             "peg": 0,
             "debt_to_equity": 0,
-            "description": "The fund invests at least 80% of its net assets in financial instruments, such as swap agreements, securities of the index, and ETFs that track the index, that, in combination, provide 3X daily levera..."
+            "description": "The trust seeks to achieve its investment objective by holding a portfolio of the common stocks that are included in the index (the \u201cPortfolio\u201d), with the weight of each stock in the Portfolio substan..."
         },
-        "updated_at": "2026-10-20T17:46:45.585740"
+        "updated_at": "2026-10-20T23:10:31.299404"
     },
-    "NOW": {
+    "DTE": {
+        "data": {
+            "sector": "Utilities",
+            "industry": "Utilities - Regulated Electric",
+            "pe": 20.49,
+            "peg": 1.67,
+            "debt_to_equity": 2.29,
+            "description": "DTE Energy Company engages in energy-related businesses and services. The company operates through four segments: Electric, Gas, DTE Vantage, and Energy Trading.The company's Electric segment generate..."
+        },
+        "updated_at": "2026-10-20T23:10:55.342637"
+    },
+    "SNDK": {
         "data": {
             "sector": "Technology",
-            "industry": "Software - Application",
-            "pe": 93.56,
-            "peg": 1.02,
-            "debt_to_equity": 0.68,
-            "description": "ServiceNow, Inc. provides cloud-based solution for digital workflows in the North America, Brazil, Europe, the Middle East and Africa, Asia Pacific, and internationally. The company provides asset man..."
-        },
-        "updated_at": "2026-10-20T17:47:13.430052"
-    },
-    "MRNA": {
-        "data": {
-            "sector": "Healthcare",
-            "industry": "Biotechnology",
-            "pe": 0,
+            "industry": "Computer Hardware",
+            "pe": 18.51,
             "peg": 0,
-            "debt_to_equity": 0.19,
-            "description": "Moderna, Inc., a biotechnology company, provides messenger RNA medicines in the United States, Europe, and internationally. The company's respiratory vaccines include spikevax, mNEXSPIKE, mRESVIA, COV..."
+            "debt_to_equity": 0.01,
+            "description": "Sandisk Corporation develops, manufactures, and sells data storage devices and solutions using NAND flash technology in the Americas, Europe, the Middle East, Africa, Asia, and internationally. The co..."
         },
-        "updated_at": "2026-10-20T17:47:37.144739"
+        "updated_at": "2026-10-20T23:11:19.535938"
     }
 }
