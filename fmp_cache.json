@@ -1,36 +1,69 @@
 {
-    "MSFT": {
+    "DIS": {
+        "data": {
+            "sector": "Communication Services",
+            "industry": "Entertainment",
+            "pe": 23.06,
+            "peg": 3.63,
+            "debt_to_equity": 0.39,
+            "description": "The Walt Disney Company operates as an entertainment company in Americas, Europe, and the Asia Pacific. It operates in three segments: Entertainment, Sports, and Experiences. The company produces and ..."
+        },
+        "updated_at": "2026-10-21T23:11:00.815195"
+    },
+    "SCHW": {
+        "data": {
+            "sector": "Financial Services",
+            "industry": "Capital Markets",
+            "pe": 15.66,
+            "peg": 0.75,
+            "debt_to_equity": 0.78,
+            "description": "The Charles Schwab Corporation, together with its subsidiaries, operates as a savings and loan holding company that provides wealth management, securities brokerage, banking, asset management, custody..."
+        },
+        "updated_at": "2026-10-21T23:11:32.130498"
+    },
+    "CSCO": {
         "data": {
             "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 29.67,
-            "peg": 1.72,
-            "debt_to_equity": 0.29,
-            "description": "Microsoft Corporation, a technology company, develops and supports a portfolio of technology solutions for individuals and businesses worldwide. Its products include operating systems, server applicat..."
+            "industry": "Communication Equipment",
+            "pe": 32.21,
+            "peg": 0.98,
+            "debt_to_equity": 0.62,
+            "description": "Cisco Systems, Inc. designs, develops, and sells technologies to power, help, secure, and draw insights from the internet in the Americas, Europe, the Middle East, Africa, the Asia Pacific, Japan, and..."
         },
-        "updated_at": "2026-10-21T17:51:17.448281"
+        "updated_at": "2026-10-21T23:11:56.479653"
     },
-    "PFE": {
+    "TSM": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Semiconductors",
+            "pe": 27.99,
+            "peg": 0.78,
+            "debt_to_equity": 0.12,
+            "description": "Taiwan Semiconductor Manufacturing Company Limited, together with its subsidiaries, manufactures, packages, tests, and sells integrated circuits and other semiconductor devices in Taiwan, China, Europ..."
+        },
+        "updated_at": "2026-10-21T23:12:24.164205"
+    },
+    "JNJ": {
         "data": {
             "sector": "Healthcare",
             "industry": "Drug Manufacturers - General",
-            "pe": 39.11,
-            "peg": 13.55,
-            "debt_to_equity": 0.74,
-            "description": "Pfizer Inc. discovers, develops, manufactures, markets, distributes, and sells biopharmaceutical products in the United States and internationally. It operates in three segments: Biopharma, PC1, and P..."
+            "pe": 39.12,
+            "peg": 2.87,
+            "debt_to_equity": 0.58,
+            "description": "Johnson & Johnson, together with its subsidiaries, engages in the research and development, manufacture, and sale of a range of products in the healthcare field worldwide. It operates in two segments,..."
         },
-        "updated_at": "2026-10-21T17:51:40.412841"
+        "updated_at": "2026-10-21T23:12:53.543516"
     },
-    "IBM": {
+    "SPCX": {
         "data": {
-            "sector": "Technology",
-            "industry": "Information Technology Services",
-            "pe": 21.78,
-            "peg": 2.2,
-            "debt_to_equity": 1.89,
-            "description": "International Business Machines Corporation, together with its subsidiaries, provides integrated solutions and services in the Americas, Europe, the Middle East, Africa, and the Asia Pacific. It opera..."
+            "sector": "Industrials",
+            "industry": "Aerospace & Defense",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 0.31,
+            "description": "Space Exploration Technologies Corp. provides satellite-based broadband services in the United States, Ireland, Canada, and internationally. It operates through three operating segments: Space, Connec..."
         },
-        "updated_at": "2026-10-21T17:52:12.066496"
+        "updated_at": "2026-10-21T23:13:19.515618"
     },
     "ASTS": {
         "data": {
@@ -41,50 +74,17 @@
             "debt_to_equity": 1.25,
             "description": "AST SpaceMobile, Inc., together with its subsidiaries, designs and develops the constellation of BlueBird satellites in the United States. The company provides a cellular broadband network in space to..."
         },
-        "updated_at": "2026-10-21T17:52:37.410771"
+        "updated_at": "2026-10-21T23:14:03.287275"
     },
-    "OKLO": {
+    "IP": {
         "data": {
-            "sector": "Utilities",
-            "industry": "Utilities - Independent Power Producers",
+            "sector": "Consumer Cyclical",
+            "industry": "Packaging & Containers",
             "pe": 0,
-            "peg": 0,
-            "debt_to_equity": 0.0,
-            "description": "Oklo Inc. develops fission power plants to provide energy at scale to customers in the United States. The company offers Aurora Powerhouse, which is designed to produce between 15 and up to 75 megawat..."
+            "peg": 1.58,
+            "debt_to_equity": 0.69,
+            "description": "International Paper Company produces and sells renewable fiber-based packaging in North America, Latin America, Europe, South America, and North Africa. It operates through two segments, Packaging Sol..."
         },
-        "updated_at": "2026-10-21T17:53:04.706168"
-    },
-    "CSCO": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Communication Equipment",
-            "pe": 32.18,
-            "peg": 0.99,
-            "debt_to_equity": 0.62,
-            "description": "Cisco Systems, Inc. designs, develops, and sells technologies to power, help, secure, and draw insights from the internet in the Americas, Europe, the Middle East, Africa, the Asia Pacific, Japan, and..."
-        },
-        "updated_at": "2026-10-21T17:54:05.741330"
-    },
-    "SLB": {
-        "data": {
-            "sector": "Energy",
-            "industry": "Oil & Gas Equipment & Services",
-            "pe": 24.64,
-            "peg": 1.31,
-            "debt_to_equity": 0.47,
-            "description": "SLB N.V. engages in the provision of technology for the energy industry worldwide. The company operates through four divisions: Digital & Integration, Reservoir Performance, Well Construction, and Pro..."
-        },
-        "updated_at": "2026-10-21T17:54:29.544378"
-    },
-    "AAPL": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Consumer Electronics",
-            "pe": 39.52,
-            "peg": 2.75,
-            "debt_to_equity": 0.78,
-            "description": "Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide. The company offers iPhone, a line of smartphones; Mac, a line of personal ..."
-        },
-        "updated_at": "2026-10-21T17:55:00.017016"
+        "updated_at": "2026-10-21T23:14:24.745125"
     }
 }
