@@ -1,90 +1,90 @@
 {
-    "GOOGL": {
-        "data": {
-            "sector": "Communication Services",
-            "industry": "Internet Content & Information",
-            "pe": 17.07,
-            "peg": 1.2,
-            "debt_to_equity": 0.19,
-            "description": "Alphabet Inc. offers various products and platforms in the United States, Europe, the Middle East, Africa, the Asia-Pacific, Canada, and Latin America. It operates through Google Services, Google Clou..."
-        },
-        "updated_at": "2026-10-20T23:07:51.349732"
-    },
-    "AM": {
-        "data": {
-            "sector": "Energy",
-            "industry": "Oil & Gas Midstream",
-            "pe": 24.78,
-            "peg": 0,
-            "debt_to_equity": 1.86,
-            "description": "Antero Midstream Corporation owns, operates, and develops midstream energy assets in the Appalachian Basin. It operates in two segments, Gathering and Processing, and Water Handling. The gathering and..."
-        },
-        "updated_at": "2026-10-20T23:08:15.866631"
-    },
-    "JPM": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Banks - Diversified",
-            "pe": 14.06,
-            "peg": 1.45,
-            "debt_to_equity": 0,
-            "description": "JPMorgan Chase & Co. operates as a bank and financial holding company in the United States, rest of North America, Europe, the Middle East, Africa, the Asia Pacific, Latin America, and the Caribbean. ..."
-        },
-        "updated_at": "2026-10-20T23:08:47.676367"
-    },
-    "EU": {
-        "data": {
-            "sector": "Energy",
-            "industry": "Uranium",
-            "pe": 0,
-            "peg": 0,
-            "debt_to_equity": 0.46,
-            "description": "enCore Energy Corp., together with its subsidiaries, engages in the acquisition, exploration, development, and extraction of uranium resource properties in the United States. The company is headquarte..."
-        },
-        "updated_at": "2026-10-20T23:09:17.985163"
-    },
-    "HTZ": {
-        "data": {
-            "sector": "Industrials",
-            "industry": "Rental & Leasing Services",
-            "pe": 0,
-            "peg": 0,
-            "debt_to_equity": 0,
-            "description": "Hertz Global Holdings, Inc. operates as a vehicle rental company. It operates through two segments: Americas RAC and International RAC. The company offers vehicle rental services under the Hertz, Doll..."
-        },
-        "updated_at": "2026-10-20T23:10:09.460893"
-    },
-    "SPY": {
-        "data": {
-            "sector": "Unknown",
-            "industry": "Unknown",
-            "pe": 24.42,
-            "peg": 0,
-            "debt_to_equity": 0,
-            "description": "The trust seeks to achieve its investment objective by holding a portfolio of the common stocks that are included in the index (the \u201cPortfolio\u201d), with the weight of each stock in the Portfolio substan..."
-        },
-        "updated_at": "2026-10-20T23:10:31.299404"
-    },
-    "DTE": {
-        "data": {
-            "sector": "Utilities",
-            "industry": "Utilities - Regulated Electric",
-            "pe": 20.49,
-            "peg": 1.67,
-            "debt_to_equity": 2.29,
-            "description": "DTE Energy Company engages in energy-related businesses and services. The company operates through four segments: Electric, Gas, DTE Vantage, and Energy Trading.The company's Electric segment generate..."
-        },
-        "updated_at": "2026-10-20T23:10:55.342637"
-    },
-    "SNDK": {
+    "MSFT": {
         "data": {
             "sector": "Technology",
-            "industry": "Computer Hardware",
-            "pe": 18.51,
-            "peg": 0,
-            "debt_to_equity": 0.01,
-            "description": "Sandisk Corporation develops, manufactures, and sells data storage devices and solutions using NAND flash technology in the Americas, Europe, the Middle East, Africa, Asia, and internationally. The co..."
+            "industry": "Software - Infrastructure",
+            "pe": 29.67,
+            "peg": 1.72,
+            "debt_to_equity": 0.29,
+            "description": "Microsoft Corporation, a technology company, develops and supports a portfolio of technology solutions for individuals and businesses worldwide. Its products include operating systems, server applicat..."
         },
-        "updated_at": "2026-10-20T23:11:19.535938"
+        "updated_at": "2026-10-21T17:51:17.448281"
+    },
+    "PFE": {
+        "data": {
+            "sector": "Healthcare",
+            "industry": "Drug Manufacturers - General",
+            "pe": 39.11,
+            "peg": 13.55,
+            "debt_to_equity": 0.74,
+            "description": "Pfizer Inc. discovers, develops, manufactures, markets, distributes, and sells biopharmaceutical products in the United States and internationally. It operates in three segments: Biopharma, PC1, and P..."
+        },
+        "updated_at": "2026-10-21T17:51:40.412841"
+    },
+    "IBM": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Information Technology Services",
+            "pe": 21.78,
+            "peg": 2.2,
+            "debt_to_equity": 1.89,
+            "description": "International Business Machines Corporation, together with its subsidiaries, provides integrated solutions and services in the Americas, Europe, the Middle East, Africa, and the Asia Pacific. It opera..."
+        },
+        "updated_at": "2026-10-21T17:52:12.066496"
+    },
+    "ASTS": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Communication Equipment",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 1.25,
+            "description": "AST SpaceMobile, Inc., together with its subsidiaries, designs and develops the constellation of BlueBird satellites in the United States. The company provides a cellular broadband network in space to..."
+        },
+        "updated_at": "2026-10-21T17:52:37.410771"
+    },
+    "OKLO": {
+        "data": {
+            "sector": "Utilities",
+            "industry": "Utilities - Independent Power Producers",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 0.0,
+            "description": "Oklo Inc. develops fission power plants to provide energy at scale to customers in the United States. The company offers Aurora Powerhouse, which is designed to produce between 15 and up to 75 megawat..."
+        },
+        "updated_at": "2026-10-21T17:53:04.706168"
+    },
+    "CSCO": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Communication Equipment",
+            "pe": 32.18,
+            "peg": 0.99,
+            "debt_to_equity": 0.62,
+            "description": "Cisco Systems, Inc. designs, develops, and sells technologies to power, help, secure, and draw insights from the internet in the Americas, Europe, the Middle East, Africa, the Asia Pacific, Japan, and..."
+        },
+        "updated_at": "2026-10-21T17:54:05.741330"
+    },
+    "SLB": {
+        "data": {
+            "sector": "Energy",
+            "industry": "Oil & Gas Equipment & Services",
+            "pe": 24.64,
+            "peg": 1.31,
+            "debt_to_equity": 0.47,
+            "description": "SLB N.V. engages in the provision of technology for the energy industry worldwide. The company operates through four divisions: Digital & Integration, Reservoir Performance, Well Construction, and Pro..."
+        },
+        "updated_at": "2026-10-21T17:54:29.544378"
+    },
+    "AAPL": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Consumer Electronics",
+            "pe": 39.52,
+            "peg": 2.75,
+            "debt_to_equity": 0.78,
+            "description": "Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide. The company offers iPhone, a line of smartphones; Mac, a line of personal ..."
+        },
+        "updated_at": "2026-10-21T17:55:00.017016"
     }
 }
