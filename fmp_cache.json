@@ -1,90 +1,90 @@
 {
-    "UAL": {
+    "KO": {
         "data": {
-            "sector": "Industrials",
-            "industry": "Airlines",
-            "pe": 9.0,
-            "peg": 6.5,
-            "debt_to_equity": 1.93,
-            "description": "United Airlines Holdings, Inc., through its subsidiaries, provides air transportation services in the United States, Canada, Atlantic, the Pacific, and Latin America. It transports people and cargo th..."
+            "sector": "Consumer Defensive",
+            "industry": "Beverages - Non-Alcoholic",
+            "pe": 27.84,
+            "peg": 4.33,
+            "debt_to_equity": 1.16,
+            "description": "The Coca-Cola Company, a beverage company, manufactures and sells various nonalcoholic beverages in the United States and internationally. The company provides Trademark Coca-Cola, sparkling soft drin..."
         },
-        "updated_at": "2026-10-23T17:40:35.374463"
-    },
-    "DTE": {
-        "data": {
-            "sector": "Utilities",
-            "industry": "Utilities - Regulated Electric",
-            "pe": 20.89,
-            "peg": 1.67,
-            "debt_to_equity": 2.29,
-            "description": "DTE Energy Company engages in energy-related businesses and services. The company operates through four segments: Electric, Gas, DTE Vantage, and Energy Trading.The company's Electric segment generate..."
-        },
-        "updated_at": "2026-10-23T17:41:02.577909"
-    },
-    "ALL": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Insurance - Property & Casualty",
-            "pe": 5.09,
-            "peg": 1.85,
-            "debt_to_equity": 0.22,
-            "description": "The Allstate Corporation, together with its subsidiaries, provides property and casualty, and other insurance products in the United States and Canada. It operates in four segments: Allstate Protectio..."
-        },
-        "updated_at": "2026-10-23T17:41:22.786292"
-    },
-    "JPM": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Banks - Diversified",
-            "pe": 13.9,
-            "peg": 1.43,
-            "debt_to_equity": 0,
-            "description": "JPMorgan Chase & Co. operates as a bank and financial holding company in the United States, rest of North America, Europe, the Middle East, Africa, the Asia Pacific, Latin America, and the Caribbean. ..."
-        },
-        "updated_at": "2026-10-23T17:42:08.036777"
-    },
-    "VZ": {
-        "data": {
-            "sector": "Communication Services",
-            "industry": "Telecom Services",
-            "pe": 11.6,
-            "peg": 0.79,
-            "debt_to_equity": 1.84,
-            "description": "Verizon Communications Inc., through its subsidiaries, engages in the provision of communications, technology, information, and streaming products and services to consumers, businesses, and government..."
-        },
-        "updated_at": "2026-10-23T17:42:34.692531"
-    },
-    "RNA": {
-        "data": {
-            "sector": "Healthcare",
-            "industry": "Biotechnology",
-            "pe": 0,
-            "peg": 0,
-            "debt_to_equity": 0.01,
-            "description": "Atrium Therapeutics, Inc., a biopharmaceutical company, focuses on delivering ribonucleic acid (RNA) therapeutics to the heart to transform the care for people living with cardiomyopathies. The compan..."
-        },
-        "updated_at": "2026-10-23T17:43:18.534368"
-    },
-    "MSFT": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 29.21,
-            "peg": 1.73,
-            "debt_to_equity": 0.29,
-            "description": "Microsoft Corporation, a technology company, develops and supports a portfolio of technology solutions for individuals and businesses worldwide. Its products include operating systems, server applicat..."
-        },
-        "updated_at": "2026-10-23T17:43:42.691586"
+        "updated_at": "2026-10-23T23:02:40.055881"
     },
     "MS": {
         "data": {
             "sector": "Financial Services",
             "industry": "Capital Markets",
-            "pe": 14.3,
-            "peg": 1.63,
+            "pe": 14.23,
+            "peg": 1.6,
             "debt_to_equity": 5.17,
             "description": "Morgan Stanley, a financial holding company, provides various financial products and services to corporations, governments, financial institutions, and individuals in the Americas, Asia, Europe, the M..."
         },
-        "updated_at": "2026-10-23T17:44:20.174431"
+        "updated_at": "2026-10-23T23:03:03.253679"
+    },
+    "AAPL": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Consumer Electronics",
+            "pe": 39.88,
+            "peg": 2.79,
+            "debt_to_equity": 0.78,
+            "description": "Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide. The company offers iPhone, a line of smartphones; Mac, a line of personal ..."
+        },
+        "updated_at": "2026-10-23T23:03:29.251338"
+    },
+    "NKE": {
+        "data": {
+            "sector": "Consumer Cyclical",
+            "industry": "Footwear & Accessories",
+            "pe": 17.93,
+            "peg": 3.24,
+            "debt_to_equity": 0.73,
+            "description": "NIKE, Inc., together with its subsidiaries, designs, develops, markets, and sells athletic footwear, apparel, equipment, accessories, and services for men, women, and kids in North America, Europe, th..."
+        },
+        "updated_at": "2026-10-23T23:03:58.836493"
+    },
+    "UAL": {
+        "data": {
+            "sector": "Industrials",
+            "industry": "Airlines",
+            "pe": 8.97,
+            "peg": 6.5,
+            "debt_to_equity": 1.93,
+            "description": "United Airlines Holdings, Inc., through its subsidiaries, provides air transportation services in the United States, Canada, Atlantic, the Pacific, and Latin America. It transports people and cargo th..."
+        },
+        "updated_at": "2026-10-23T23:04:21.911437"
+    },
+    "MRNA": {
+        "data": {
+            "sector": "Healthcare",
+            "industry": "Biotechnology",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 0.19,
+            "description": "Moderna, Inc., a biotechnology company, provides messenger RNA medicines in the United States, Europe, and internationally. The company's respiratory vaccines include spikevax, mNEXSPIKE, mRESVIA, COV..."
+        },
+        "updated_at": "2026-10-23T23:04:55.767029"
+    },
+    "VT": {
+        "data": {
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 19.86,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "The fund employs an indexing investment approach designed to track the performance of the FTSE Global All Cap Index. It invests by sampling the target index, meaning that it holds a range of securitie..."
+        },
+        "updated_at": "2026-10-23T23:05:13.854671"
+    },
+    "WMT": {
+        "data": {
+            "sector": "Consumer Defensive",
+            "industry": "Discount Stores",
+            "pe": 43.44,
+            "peg": 4.11,
+            "debt_to_equity": 0.72,
+            "description": "Walmart Inc. engages in the operation of retail and wholesale stores and clubs, ecommerce websites, and mobile applications worldwide. The company operates through three segments: Walmart U.S., Walmar..."
+        },
+        "updated_at": "2026-10-23T23:05:44.319666"
     }
 }
