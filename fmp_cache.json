@@ -1,90 +1,90 @@
 {
-    "SNDK": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Computer Hardware",
-            "pe": 17.1,
-            "peg": 0,
-            "debt_to_equity": 0.01,
-            "description": "Sandisk Corporation develops, manufactures, and sells data storage devices and solutions using NAND flash technology in the Americas, Europe, the Middle East, Africa, Asia, and internationally. The co..."
-        },
-        "updated_at": "2026-10-22T23:11:58.892176"
-    },
-    "NCLH": {
-        "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Travel Services",
-            "pe": 9.59,
-            "peg": 1.3,
-            "debt_to_equity": 6.21,
-            "description": "Norwegian Cruise Line Holdings Ltd., together with its subsidiaries, operates as a cruise company in North America, Europe, the Asia-Pacific, and internationally. It offers itineraries to destinations..."
-        },
-        "updated_at": "2026-10-22T23:12:21.846560"
-    },
-    "RKLB": {
+    "UAL": {
         "data": {
             "sector": "Industrials",
-            "industry": "Aerospace & Defense",
+            "industry": "Airlines",
+            "pe": 9.0,
+            "peg": 6.5,
+            "debt_to_equity": 1.93,
+            "description": "United Airlines Holdings, Inc., through its subsidiaries, provides air transportation services in the United States, Canada, Atlantic, the Pacific, and Latin America. It transports people and cargo th..."
+        },
+        "updated_at": "2026-10-23T17:40:35.374463"
+    },
+    "DTE": {
+        "data": {
+            "sector": "Utilities",
+            "industry": "Utilities - Regulated Electric",
+            "pe": 20.89,
+            "peg": 1.67,
+            "debt_to_equity": 2.29,
+            "description": "DTE Energy Company engages in energy-related businesses and services. The company operates through four segments: Electric, Gas, DTE Vantage, and Energy Trading.The company's Electric segment generate..."
+        },
+        "updated_at": "2026-10-23T17:41:02.577909"
+    },
+    "ALL": {
+        "data": {
+            "sector": "Financial Services",
+            "industry": "Insurance - Property & Casualty",
+            "pe": 5.09,
+            "peg": 1.85,
+            "debt_to_equity": 0.22,
+            "description": "The Allstate Corporation, together with its subsidiaries, provides property and casualty, and other insurance products in the United States and Canada. It operates in four segments: Allstate Protectio..."
+        },
+        "updated_at": "2026-10-23T17:41:22.786292"
+    },
+    "JPM": {
+        "data": {
+            "sector": "Financial Services",
+            "industry": "Banks - Diversified",
+            "pe": 13.9,
+            "peg": 1.43,
+            "debt_to_equity": 0,
+            "description": "JPMorgan Chase & Co. operates as a bank and financial holding company in the United States, rest of North America, Europe, the Middle East, Africa, the Asia Pacific, Latin America, and the Caribbean. ..."
+        },
+        "updated_at": "2026-10-23T17:42:08.036777"
+    },
+    "VZ": {
+        "data": {
+            "sector": "Communication Services",
+            "industry": "Telecom Services",
+            "pe": 11.6,
+            "peg": 0.79,
+            "debt_to_equity": 1.84,
+            "description": "Verizon Communications Inc., through its subsidiaries, engages in the provision of communications, technology, information, and streaming products and services to consumers, businesses, and government..."
+        },
+        "updated_at": "2026-10-23T17:42:34.692531"
+    },
+    "RNA": {
+        "data": {
+            "sector": "Healthcare",
+            "industry": "Biotechnology",
             "pe": 0,
             "peg": 0,
-            "debt_to_equity": 0.04,
-            "description": "Rocket Lab Corporation, a space company, provides launch services and space systems solutions in the United States, Canada, Japan, and internationally. The company operates through launch services and..."
+            "debt_to_equity": 0.01,
+            "description": "Atrium Therapeutics, Inc., a biopharmaceutical company, focuses on delivering ribonucleic acid (RNA) therapeutics to the heart to transform the care for people living with cardiomyopathies. The compan..."
         },
-        "updated_at": "2026-10-22T23:12:48.229754"
+        "updated_at": "2026-10-23T17:43:18.534368"
     },
-    "BE": {
+    "MSFT": {
         "data": {
-            "sector": "Industrials",
-            "industry": "Electrical Equipment & Parts",
-            "pe": 286.54,
-            "peg": 0.54,
-            "debt_to_equity": 1.72,
-            "description": "Bloom Energy Corporation designs, manufactures, sells, and installs solid oxide fuel cell systems for on-site power generation in the United States and internationally. It offers Bloom Energy Server, ..."
+            "sector": "Technology",
+            "industry": "Software - Infrastructure",
+            "pe": 29.21,
+            "peg": 1.73,
+            "debt_to_equity": 0.29,
+            "description": "Microsoft Corporation, a technology company, develops and supports a portfolio of technology solutions for individuals and businesses worldwide. Its products include operating systems, server applicat..."
         },
-        "updated_at": "2026-10-22T23:13:14.514893"
+        "updated_at": "2026-10-23T17:43:42.691586"
     },
-    "SCHW": {
+    "MS": {
         "data": {
             "sector": "Financial Services",
             "industry": "Capital Markets",
-            "pe": 15.63,
-            "peg": 0.75,
-            "debt_to_equity": 0.78,
-            "description": "The Charles Schwab Corporation, together with its subsidiaries, operates as a savings and loan holding company that provides wealth management, securities brokerage, banking, asset management, custody..."
+            "pe": 14.3,
+            "peg": 1.63,
+            "debt_to_equity": 5.17,
+            "description": "Morgan Stanley, a financial holding company, provides various financial products and services to corporations, governments, financial institutions, and individuals in the Americas, Asia, Europe, the M..."
         },
-        "updated_at": "2026-10-22T23:13:39.947542"
-    },
-    "SPY": {
-        "data": {
-            "sector": "Unknown",
-            "industry": "Unknown",
-            "pe": 24.25,
-            "peg": 0,
-            "debt_to_equity": 0,
-            "description": "The trust seeks to achieve its investment objective by holding a portfolio of the common stocks that are included in the index (the \u201cPortfolio\u201d), with the weight of each stock in the Portfolio substan..."
-        },
-        "updated_at": "2026-10-22T23:14:06.752174"
-    },
-    "WMT": {
-        "data": {
-            "sector": "Consumer Defensive",
-            "industry": "Discount Stores",
-            "pe": 43.88,
-            "peg": 4.0,
-            "debt_to_equity": 0.72,
-            "description": "Walmart Inc. engages in the operation of retail and wholesale stores and clubs, ecommerce websites, and mobile applications worldwide. The company operates through three segments: Walmart U.S., Walmar..."
-        },
-        "updated_at": "2026-10-22T23:14:35.905620"
-    },
-    "AAOI": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Communication Equipment",
-            "pe": 0,
-            "peg": 0.78,
-            "debt_to_equity": 0.18,
-            "description": "Applied Optoelectronics, Inc. engages in the design, manufacture, and sale of fiber-optic networking products in the United States, Taiwan, and China. The company offers optical modules, optical filte..."
-        },
-        "updated_at": "2026-10-22T23:15:01.912677"
+        "updated_at": "2026-10-23T17:44:20.174431"
     }
 }
