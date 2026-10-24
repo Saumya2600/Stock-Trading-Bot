@@ -21,6 +21,9 @@ api.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+@api.get("/")
+def health_check():
+    return {"status": "online", "message": "Autonomous Alpha Trading Bot API"}
 
 @api.get("/signals")
 def get_signals():
