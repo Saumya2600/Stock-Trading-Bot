@@ -1,0 +1,150 @@
+{
+    "last_updated": "2026-10-12 13:22",
+    "macro_regime": {
+        "fed_funds_rate": "5.25% - 5.50%",
+        "rate_stance": "Plateau / Gradual Easing Bias",
+        "ten_year_yield": "4.21%",
+        "two_year_yield": "4.15%",
+        "yield_curve_spread": "+0.06% (Steepening / De-inverting)",
+        "vix_volatility": "15.4 (Low Regulated Risk)",
+        "inflation_cpi": "2.9% YoY (Disinflation Trend)",
+        "regime_summary": "Macro transition into disinflationary soft landing. Capital is no longer free: companies with strong Free Cash Flow, pricing power, and near-zero debt refinancing risk will decisively compound over 3-5 years."
+    },
+    "picks": [
+        {
+            "symbol": "GOOGL",
+            "name": "Alphabet Inc.",
+            "sector": "Communication Services / AI",
+            "price": 178.5,
+            "fair_value": 220.0,
+            "upside_pct": 23.2,
+            "horizon": "3 - 5 Years",
+            "conviction_tier": "Tier 1 Core",
+            "moat_rating": 9.6,
+            "rate_sensitivity": "Low",
+            "rate_impact": "Net cash fortress ($110B+). High rates earn billions in interest income while starving unprofitable AI competitors.",
+            "fcf_yield": "4.3%",
+            "pe_ratio": 22.4,
+            "peg_ratio": 1.25,
+            "thesis": "Secular AI moat with proprietary TPU infrastructure, YouTube subscriptions, and Android/Search ecosystem. Valuation trades at a notable discount to MegaCap tech peers despite unmatched computing scale.",
+            "catalysts": [
+                "Enterprise Gemini API integration across Google Cloud accelerating margins",
+                "Waymo autonomous commercial scaling expanding to multi-city operations",
+                "New capital return policy via expanding dividends and aggressive share buybacks"
+            ],
+            "risks": [
+                "DOJ antitrust litigation remedies",
+                "Search query cannibalization by conversational AI interfaces"
+            ],
+            "market_sentiment": "Bullish (78/100)"
+        },
+        {
+            "symbol": "MSFT",
+            "name": "Microsoft Corporation",
+            "sector": "Enterprise Software & Cloud",
+            "price": 428.1,
+            "fair_value": 510.0,
+            "upside_pct": 19.1,
+            "horizon": "3 - 5 Years",
+            "conviction_tier": "Tier 1 Core",
+            "moat_rating": 9.8,
+            "rate_sensitivity": "Low",
+            "rate_impact": "AAA credit rating (stronger than US government). Mission-critical enterprise software seat retention ensures recurring pricing power regardless of Fed hikes.",
+            "fcf_yield": "3.2%",
+            "pe_ratio": 33.1,
+            "peg_ratio": 1.85,
+            "thesis": "Supreme enterprise enterprise software monopoly with Azure Cloud capturing the lion's share of Fortune 500 AI deployments. High switching costs create an insurmountable recurring cash flow moat.",
+            "catalysts": [
+                "Copilot ARR ramp reaching broad enterprise seat renewal cycles",
+                "Azure OpenAI services capacity expansions unlocking enterprise backlog",
+                "High double-digit dividend growth supported by $70B+ annual free cash flow"
+            ],
+            "risks": [
+                "Massive AI data center Capex causing near-term margin friction",
+                "Potential deceleration in PC commercial hardware upgrades"
+            ],
+            "market_sentiment": "Very Bullish (85/100)"
+        },
+        {
+            "symbol": "NVDA",
+            "name": "NVIDIA Corporation",
+            "sector": "Semiconductors & Accelerated Compute",
+            "price": 121.4,
+            "fair_value": 160.0,
+            "upside_pct": 31.8,
+            "horizon": "2 - 4 Years",
+            "conviction_tier": "Growth Alpha",
+            "moat_rating": 9.7,
+            "rate_sensitivity": "Medium-Low",
+            "rate_impact": "Massive gross margins (75%+) and tens of billions in pure net cash. Client capex budgets remain committed even in restrictive monetary regimes.",
+            "fcf_yield": "3.8%",
+            "pe_ratio": 38.5,
+            "peg_ratio": 1.15,
+            "thesis": "CUDA software ecosystem creates standard architectural lock-in across all modern AI research. Blackwell platform transition sets a generational multi-year compute refresh across hyperscalers and sovereign nations.",
+            "catalysts": [
+                "Blackwell architecture volume ramp with full hyperscaler allocation pre-sold",
+                "Sovereign AI infrastructure buildouts across Europe, Japan, and the Middle East",
+                "Enterprise software licensing and DGX Cloud recurring margin contribution"
+            ],
+            "risks": [
+                "Cyclical semiconductor capacity digestion cycles in 2026+",
+                "Geopolitical export curbs restricting access to secondary Asian markets"
+            ],
+            "market_sentiment": "Strong Bullish (88/100)"
+        },
+        {
+            "symbol": "AMZN",
+            "name": "Amazon.com Inc.",
+            "sector": "E-Commerce, Cloud & Digital Advertising",
+            "price": 186.2,
+            "fair_value": 235.0,
+            "upside_pct": 26.2,
+            "horizon": "3 - 5 Years",
+            "conviction_tier": "Core Compounder",
+            "moat_rating": 9.4,
+            "rate_sensitivity": "Medium",
+            "rate_impact": "Regionalized fulfillment network cuts transport and capital intensity, shielding domestic retail margins from inflationary cost pressures.",
+            "fcf_yield": "4.6%",
+            "pe_ratio": 36.2,
+            "peg_ratio": 1.3,
+            "thesis": "Operating margin expansion cycle underway as AWS cloud re-accelerates, retail fulfillment costs decline via robotics automation, and ultra-high-margin ad business scales past $50B.",
+            "catalysts": [
+                "AWS custom Trainium2 & Inferentia2 chips driving low-cost enterprise AI workloads",
+                "Prime Video advertising monetization reaching full ad-tier maturity",
+                "Warehouse robotics automation unlocking structural 300bps operating margin expansion"
+            ],
+            "risks": [
+                "Consumer discretionary spending slowdown under lingering credit card debt burdens",
+                "Intense cloud competition from Azure and Google Cloud"
+            ],
+            "market_sentiment": "Bullish (82/100)"
+        },
+        {
+            "symbol": "LLY",
+            "name": "Eli Lilly and Company",
+            "sector": "Healthcare & Biotech Moat",
+            "price": 918.0,
+            "fair_value": 1120.0,
+            "upside_pct": 22.0,
+            "horizon": "3 - 5 Years",
+            "conviction_tier": "Defensive Growth",
+            "moat_rating": 9.5,
+            "rate_sensitivity": "Very Low",
+            "rate_impact": "Inelastic pharmaceutical demand makes earnings virtually immune to Federal Reserve interest rate decisions or recessions.",
+            "fcf_yield": "2.8%",
+            "pe_ratio": 54.0,
+            "peg_ratio": 1.7,
+            "thesis": "Incretin metabolic revolution leader (Mounjaro / Zepbound) with expanding indications in sleep apnea, cardiovascular disease, and liver fibrosis (MASH). Massive multi-decade commercial runway.",
+            "catalysts": [
+                "Manufacturing supply capacity ramp bringing millions of unfulfilled patients online",
+                "Cardiovascular and Alzheimer's (Kisunla) Medicare reimbursement expansion",
+                "Next-generation oral GLP-1 molecule (Orforglipron) phase 3 data readout"
+            ],
+            "risks": [
+                "Compounding pharmacies attempting legal generic workarounds during shortages",
+                "High initial valuation multiples requiring sustained 25%+ top-line beats"
+            ],
+            "market_sentiment": "Bullish (76/100)"
+        }
+    ]
+}
