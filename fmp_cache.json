@@ -1,90 +1,90 @@
 {
-    "KO": {
-        "data": {
-            "sector": "Consumer Defensive",
-            "industry": "Beverages - Non-Alcoholic",
-            "pe": 27.84,
-            "peg": 4.33,
-            "debt_to_equity": 1.16,
-            "description": "The Coca-Cola Company, a beverage company, manufactures and sells various nonalcoholic beverages in the United States and internationally. The company provides Trademark Coca-Cola, sparkling soft drin..."
-        },
-        "updated_at": "2026-10-23T23:02:40.055881"
-    },
-    "MS": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Capital Markets",
-            "pe": 14.23,
-            "peg": 1.6,
-            "debt_to_equity": 5.17,
-            "description": "Morgan Stanley, a financial holding company, provides various financial products and services to corporations, governments, financial institutions, and individuals in the Americas, Asia, Europe, the M..."
-        },
-        "updated_at": "2026-10-23T23:03:03.253679"
-    },
-    "AAPL": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Consumer Electronics",
-            "pe": 39.88,
-            "peg": 2.79,
-            "debt_to_equity": 0.78,
-            "description": "Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide. The company offers iPhone, a line of smartphones; Mac, a line of personal ..."
-        },
-        "updated_at": "2026-10-23T23:03:29.251338"
-    },
-    "NKE": {
-        "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Footwear & Accessories",
-            "pe": 17.93,
-            "peg": 3.24,
-            "debt_to_equity": 0.73,
-            "description": "NIKE, Inc., together with its subsidiaries, designs, develops, markets, and sells athletic footwear, apparel, equipment, accessories, and services for men, women, and kids in North America, Europe, th..."
-        },
-        "updated_at": "2026-10-23T23:03:58.836493"
-    },
-    "UAL": {
-        "data": {
-            "sector": "Industrials",
-            "industry": "Airlines",
-            "pe": 8.97,
-            "peg": 6.5,
-            "debt_to_equity": 1.93,
-            "description": "United Airlines Holdings, Inc., through its subsidiaries, provides air transportation services in the United States, Canada, Atlantic, the Pacific, and Latin America. It transports people and cargo th..."
-        },
-        "updated_at": "2026-10-23T23:04:21.911437"
-    },
-    "MRNA": {
-        "data": {
-            "sector": "Healthcare",
-            "industry": "Biotechnology",
-            "pe": 0,
-            "peg": 0,
-            "debt_to_equity": 0.19,
-            "description": "Moderna, Inc., a biotechnology company, provides messenger RNA medicines in the United States, Europe, and internationally. The company's respiratory vaccines include spikevax, mNEXSPIKE, mRESVIA, COV..."
-        },
-        "updated_at": "2026-10-23T23:04:55.767029"
-    },
-    "VT": {
+    "SPY": {
         "data": {
             "sector": "Unknown",
             "industry": "Unknown",
-            "pe": 19.86,
+            "pe": 24.13,
             "peg": 0,
             "debt_to_equity": 0,
-            "description": "The fund employs an indexing investment approach designed to track the performance of the FTSE Global All Cap Index. It invests by sampling the target index, meaning that it holds a range of securitie..."
+            "description": "The trust seeks to achieve its investment objective by holding a portfolio of the common stocks that are included in the index (the \u201cPortfolio\u201d), with the weight of each stock in the Portfolio substan..."
         },
-        "updated_at": "2026-10-23T23:05:13.854671"
+        "updated_at": "2026-10-24T14:14:02.047383"
     },
-    "WMT": {
+    "BE": {
         "data": {
-            "sector": "Consumer Defensive",
-            "industry": "Discount Stores",
-            "pe": 43.44,
-            "peg": 4.11,
-            "debt_to_equity": 0.72,
-            "description": "Walmart Inc. engages in the operation of retail and wholesale stores and clubs, ecommerce websites, and mobile applications worldwide. The company operates through three segments: Walmart U.S., Walmar..."
+            "sector": "Industrials",
+            "industry": "Electrical Equipment & Parts",
+            "pe": 117.15,
+            "peg": 0.49,
+            "debt_to_equity": 1.42,
+            "description": "Bloom Energy Corporation designs, manufactures, sells, and installs solid oxide fuel cell systems for on-site power generation in the United States and internationally. It offers Bloom Energy Server, ..."
         },
-        "updated_at": "2026-10-23T23:05:44.319666"
+        "updated_at": "2026-10-24T14:14:47.019171"
+    },
+    "SPCX": {
+        "data": {
+            "sector": "Industrials",
+            "industry": "Aerospace & Defense",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 0.22,
+            "description": "Space Exploration Technologies Corp. provides satellite-based broadband services in the United States, Ireland, Canada, and internationally. It operates through three operating segments: Space, Connec..."
+        },
+        "updated_at": "2026-10-24T14:15:25.299952"
+    },
+    "MSFT": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Software - Infrastructure",
+            "pe": 29.22,
+            "peg": 1.69,
+            "debt_to_equity": 0.29,
+            "description": "Microsoft Corporation, a technology company, develops and supports a portfolio of technology solutions for individuals and businesses worldwide. Its products include operating systems, server applicat..."
+        },
+        "updated_at": "2026-10-24T14:15:50.235001"
+    },
+    "NVDA": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Semiconductors",
+            "pe": 26.67,
+            "peg": 0.26,
+            "debt_to_equity": 0.17,
+            "description": "NVIDIA Corporation operates as a data center scale AI infrastructure company in the United States, Taiwan, China, Hong Kong, Europe, and internationally. It operates through Compute & Networking, and ..."
+        },
+        "updated_at": "2026-10-24T14:16:23.151800"
+    },
+    "ASTS": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Communication Equipment",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 1.25,
+            "description": "AST SpaceMobile, Inc., together with its subsidiaries, designs and develops the constellation of BlueBird satellites in the United States. The company provides a cellular broadband network in space to..."
+        },
+        "updated_at": "2026-10-24T14:16:45.217118"
+    },
+    "QQQ": {
+        "data": {
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 26.97,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "To maintain the correspondence between the composition and weights of the securities in the trust (the \"securities\") and the stocks in the NASDAQ-100 Index\u00ae, the adviser adjusts the securities from ti..."
+        },
+        "updated_at": "2026-10-24T14:17:17.193660"
+    },
+    "CRWV": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Software - Infrastructure",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 10.27,
+            "description": "CoreWeave, Inc. operates as a cloud infrastructure technology company in the United States. The company offers CoreWeave Cloud platform that comprises proprietary software and cloud services that deli..."
+        },
+        "updated_at": "2026-10-24T14:17:45.113409"
     }
 }
