@@ -1,90 +1,90 @@
 {
-    "AMZN": {
+    "DDOG": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Software - Application",
+            "pe": 540.45,
+            "peg": 1.46,
+            "debt_to_equity": 0.29,
+            "description": "Datadog, Inc. operates an observability and security platform for cloud applications in the United States and internationally. The company's products comprise infrastructure and application performanc..."
+        },
+        "updated_at": "2026-10-27T18:32:10.777870"
+    },
+    "VC": {
         "data": {
             "sector": "Consumer Cyclical",
-            "industry": "Internet Retail",
-            "pe": 20.04,
-            "peg": 1.44,
-            "debt_to_equity": 0.46,
-            "description": "Amazon.com, Inc. engages in the retail sale of consumer products, advertising, and subscriptions service through online and physical stores in North America and internationally. The company operates t..."
+            "industry": "Auto Parts",
+            "pe": 20.41,
+            "peg": 1.01,
+            "debt_to_equity": 0.31,
+            "description": "Visteon Corporation, an automotive technology company, engages in the design, manufacture, and sale of automotive electronics and connected car solutions for vehicle manufacturers. It provides instrum..."
         },
-        "updated_at": "2026-10-26T23:44:42.866184"
+        "updated_at": "2026-10-27T18:32:36.667952"
     },
-    "MS": {
+    "KO": {
         "data": {
-            "sector": "Financial Services",
-            "industry": "Capital Markets",
-            "pe": 14.55,
-            "peg": 1.56,
-            "debt_to_equity": 5.17,
-            "description": "Morgan Stanley, a financial holding company, provides various financial products and services to corporations, governments, financial institutions, and individuals in the Americas, Asia, Europe, the M..."
+            "sector": "Consumer Defensive",
+            "industry": "Beverages - Non-Alcoholic",
+            "pe": 27.48,
+            "peg": 4.21,
+            "debt_to_equity": 1.16,
+            "description": "The Coca-Cola Company, a beverage company, manufactures and sells various nonalcoholic beverages in the United States and internationally. The company provides Trademark Coca-Cola, sparkling soft drin..."
         },
-        "updated_at": "2026-10-26T23:45:11.386957"
+        "updated_at": "2026-10-27T18:33:01.821521"
     },
-    "GOOG": {
+    "GOOGL": {
         "data": {
             "sector": "Communication Services",
             "industry": "Internet Content & Information",
-            "pe": 15.76,
+            "pe": 16.14,
             "peg": 1.11,
             "debt_to_equity": 0.19,
             "description": "Alphabet Inc. offers various products and platforms in the United States, Europe, the Middle East, Africa, the Asia-Pacific, Canada, and Latin America. It operates through Google Services, Google Clou..."
         },
-        "updated_at": "2026-10-26T23:45:31.105995"
+        "updated_at": "2026-10-27T18:33:26.605922"
     },
-    "GME": {
+    "DTE": {
         "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Specialty Retail",
-            "pe": 15.72,
-            "peg": 0.31,
-            "debt_to_equity": 0.71,
-            "description": "GameStop Corp., a specialty retailer, provides games, collectibles, and entertainment products through its stores and e-commerce platforms in United States, Australia and Europe. The company sells new..."
+            "sector": "Utilities",
+            "industry": "Utilities - Regulated Electric",
+            "pe": 20.9,
+            "peg": 1.7,
+            "debt_to_equity": 2.29,
+            "description": "DTE Energy Company engages in energy-related businesses and services. The company operates through four segments: Electric, Gas, DTE Vantage, and Energy Trading.The company's Electric segment generate..."
         },
-        "updated_at": "2026-10-26T23:45:52.190071"
+        "updated_at": "2026-10-27T18:33:50.247909"
     },
-    "SPCX": {
+    "GS": {
         "data": {
-            "sector": "Industrials",
-            "industry": "Aerospace & Defense",
-            "pe": 638.7,
-            "peg": 0,
-            "debt_to_equity": 0.22,
-            "description": "Space Exploration Technologies Corp. provides satellite-based broadband services in the United States, Ireland, Canada, and internationally. It operates through three operating segments: Space, Connec..."
+            "sector": "Financial Services",
+            "industry": "Capital Markets",
+            "pe": 13.12,
+            "peg": 1.12,
+            "debt_to_equity": 6.71,
+            "description": "The Goldman Sachs Group, Inc., a financial institution, provides a range of financial services for corporations, financial institutions, governments, and individuals in the Americas, Europe, the Middl..."
         },
-        "updated_at": "2026-10-26T23:46:17.156854"
+        "updated_at": "2026-10-27T18:34:14.570285"
     },
-    "MAR": {
+    "BAC": {
         "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Lodging",
-            "pe": 40.86,
-            "peg": 1.95,
+            "sector": "Financial Services",
+            "industry": "Banks - Diversified",
+            "pe": 12.11,
+            "peg": 0.92,
             "debt_to_equity": 0,
-            "description": "Marriott International, Inc. engages in the operation, franchising, and licensing of hotel, residential, timeshare, and other lodging properties in the United States, Canada, Europe, the Middle East, ..."
+            "description": "Bank of America Corporation, through its subsidiaries, provides various financial products and services for individual consumers, small and middle-market businesses, institutional investors, large cor..."
         },
-        "updated_at": "2026-10-26T23:46:38.997993"
+        "updated_at": "2026-10-27T18:34:42.647136"
     },
-    "SBUX": {
+    "WFC": {
         "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Restaurants",
-            "pe": 59.36,
-            "peg": 1.11,
+            "sector": "Financial Services",
+            "industry": "Banks - Diversified",
+            "pe": 11.59,
+            "peg": 1.28,
             "debt_to_equity": 0,
-            "description": "Starbucks Corporation, together with its subsidiaries, operates as a roaster, marketer, and retailer of coffee internationally. The company operates through three segments: North America, Internationa..."
+            "description": "Wells Fargo & Company, a financial services company, provides diversified banking, investment, mortgage, and consumer and commercial finance products and services in the United States and internationa..."
         },
-        "updated_at": "2026-10-26T23:47:00.888534"
-    },
-    "QQQ": {
-        "data": {
-            "sector": "Unknown",
-            "industry": "Unknown",
-            "pe": 27.27,
-            "peg": 0,
-            "debt_to_equity": 0,
-            "description": "To maintain the correspondence between the composition and weights of the securities in the trust (the \"securities\") and the stocks in the NASDAQ-100 Index\u00ae, the adviser adjusts the securities from ti..."
-        },
-        "updated_at": "2026-10-26T23:47:24.090618"
+        "updated_at": "2026-10-27T18:35:34.247077"
     }
 }
