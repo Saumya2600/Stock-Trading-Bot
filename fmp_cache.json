@@ -1,90 +1,90 @@
 {
-    "DDOG": {
+    "AVGO": {
         "data": {
             "sector": "Technology",
-            "industry": "Software - Application",
-            "pe": 540.45,
-            "peg": 1.46,
-            "debt_to_equity": 0.29,
-            "description": "Datadog, Inc. operates an observability and security platform for cloud applications in the United States and internationally. The company's products comprise infrastructure and application performanc..."
+            "industry": "Semiconductors",
+            "pe": 43.72,
+            "peg": 0.33,
+            "debt_to_equity": 0.6,
+            "description": "Broadcom Inc. designs, develops, and supplies various semiconductor devices and infrastructure software solutions internationally. The company operates in two segments: Semiconductor Solutions and Inf..."
         },
-        "updated_at": "2026-10-27T18:32:10.777870"
+        "updated_at": "2026-10-27T23:42:09.010065"
     },
-    "VC": {
+    "VZ": {
+        "data": {
+            "sector": "Communication Services",
+            "industry": "Telecom Services",
+            "pe": 11.44,
+            "peg": 0.78,
+            "debt_to_equity": 1.76,
+            "description": "Verizon Communications Inc., through its subsidiaries, engages in the provision of communications, technology, information, and streaming products and services to consumers, businesses, and government..."
+        },
+        "updated_at": "2026-10-27T23:42:35.139686"
+    },
+    "GM": {
         "data": {
             "sector": "Consumer Cyclical",
-            "industry": "Auto Parts",
-            "pe": 20.41,
-            "peg": 1.01,
-            "debt_to_equity": 0.31,
-            "description": "Visteon Corporation, an automotive technology company, engages in the design, manufacture, and sale of automotive electronics and connected car solutions for vehicle manufacturers. It provides instrum..."
+            "industry": "Auto Manufacturers",
+            "pe": 17.62,
+            "peg": 0.25,
+            "debt_to_equity": 2.03,
+            "description": "General Motors Company designs, builds, and sells trucks, crossovers, cars, and automobile parts worldwide. It operates through GM North America, GM International, and GM Financial segments. The compa..."
         },
-        "updated_at": "2026-10-27T18:32:36.667952"
+        "updated_at": "2026-10-27T23:43:08.173887"
     },
-    "KO": {
+    "SOFI": {
         "data": {
-            "sector": "Consumer Defensive",
-            "industry": "Beverages - Non-Alcoholic",
-            "pe": 27.48,
-            "peg": 4.21,
-            "debt_to_equity": 1.16,
-            "description": "The Coca-Cola Company, a beverage company, manufactures and sells various nonalcoholic beverages in the United States and internationally. The company provides Trademark Coca-Cola, sparkling soft drin..."
+            "sector": "Financial Services",
+            "industry": "Credit Services",
+            "pe": 33.47,
+            "peg": 0.51,
+            "debt_to_equity": 0.31,
+            "description": "SoFi Technologies, Inc. provides various financial services in the United States, Latin America, Canada, and Hong Kong. The company operates through three segments: Lending, Technology Platform, and F..."
         },
-        "updated_at": "2026-10-27T18:33:01.821521"
+        "updated_at": "2026-10-27T23:43:36.246331"
     },
-    "GOOGL": {
+    "AMD": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Semiconductors",
+            "pe": 142.92,
+            "peg": 0.53,
+            "debt_to_equity": 0.06,
+            "description": "Advanced Micro Devices, Inc. operates as a semiconductor company internationally. It operates in three segments: Data Center, Client and Gaming, and Embedded. The company offers artificial intelligenc..."
+        },
+        "updated_at": "2026-10-27T23:43:57.250437"
+    },
+    "MU": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Semiconductors",
+            "pe": 12.5,
+            "peg": 0.16,
+            "debt_to_equity": 0.04,
+            "description": "Micron Technology, Inc. engages in the provision of semiconductor memory and storage products in the United States, Taiwan, Mainland China, other Asia Pacific countries, Japan, Europe, and internation..."
+        },
+        "updated_at": "2026-10-27T23:44:24.422709"
+    },
+    "GOOG": {
         "data": {
             "sector": "Communication Services",
             "industry": "Internet Content & Information",
-            "pe": 16.14,
-            "peg": 1.11,
+            "pe": 15.9,
+            "peg": 1.1,
             "debt_to_equity": 0.19,
             "description": "Alphabet Inc. offers various products and platforms in the United States, Europe, the Middle East, Africa, the Asia-Pacific, Canada, and Latin America. It operates through Google Services, Google Clou..."
         },
-        "updated_at": "2026-10-27T18:33:26.605922"
+        "updated_at": "2026-10-27T23:44:48.993486"
     },
-    "DTE": {
+    "BA": {
         "data": {
-            "sector": "Utilities",
-            "industry": "Utilities - Regulated Electric",
-            "pe": 20.9,
-            "peg": 1.7,
-            "debt_to_equity": 2.29,
-            "description": "DTE Energy Company engages in energy-related businesses and services. The company operates through four segments: Electric, Gas, DTE Vantage, and Energy Trading.The company's Electric segment generate..."
+            "sector": "Industrials",
+            "industry": "Aerospace & Defense",
+            "pe": 60.06,
+            "peg": 1.48,
+            "debt_to_equity": 7.91,
+            "description": "The Boeing Company, together with its subsidiaries, designs, develops, manufactures, sells, services, and supports commercial jetliners, military aircraft, satellites, missile defense, human space fli..."
         },
-        "updated_at": "2026-10-27T18:33:50.247909"
-    },
-    "GS": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Capital Markets",
-            "pe": 13.12,
-            "peg": 1.12,
-            "debt_to_equity": 6.71,
-            "description": "The Goldman Sachs Group, Inc., a financial institution, provides a range of financial services for corporations, financial institutions, governments, and individuals in the Americas, Europe, the Middl..."
-        },
-        "updated_at": "2026-10-27T18:34:14.570285"
-    },
-    "BAC": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Banks - Diversified",
-            "pe": 12.11,
-            "peg": 0.92,
-            "debt_to_equity": 0,
-            "description": "Bank of America Corporation, through its subsidiaries, provides various financial products and services for individual consumers, small and middle-market businesses, institutional investors, large cor..."
-        },
-        "updated_at": "2026-10-27T18:34:42.647136"
-    },
-    "WFC": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Banks - Diversified",
-            "pe": 11.59,
-            "peg": 1.28,
-            "debt_to_equity": 0,
-            "description": "Wells Fargo & Company, a financial services company, provides diversified banking, investment, mortgage, and consumer and commercial finance products and services in the United States and internationa..."
-        },
-        "updated_at": "2026-10-27T18:35:34.247077"
+        "updated_at": "2026-10-27T23:45:18.088968"
     }
 }
