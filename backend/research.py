@@ -7,10 +7,42 @@ import pandas as pd
 from datetime import datetime
 import time
 
-from config import GEMINI_API_KEYS, RESEARCH_GEMINI_KEY, ALPACA_API_KEY, ALPACA_SECRET_KEY
+from config import GEMINI_API_KEYS, RESEARCH_GEMINI_KEY, ALPACA_API_KEY, ALPACA_SECRET_KEY, SUPABASE_URL, SUPABASE_KEY
 from utils import safe_print, is_market_open, is_research_window, seconds_until_market_open, simple_sma, simple_rsi, simple_macd, simple_atr, simple_bollinger_bands
 from data import fetch_reddit_trending, fetch_52_week_lows, fetch_fmp_data, fetch_earnings_surprises, fetch_upcoming_earnings, fetch_rvol_breakouts, fetch_news_sentiment
 import state
+
+def sync_picks_to_supabase(reports):
+    if not SUPABASE_URL or not SUPABASE_KEY:
+        safe_print("[SUPABASE] ⚠️ Credentials missing, skipping direct sync.")
+        return
+    try:
+        from supabase import create_client
+        sb = create_client(SUPABASE_URL, SUPABASE_KEY)
+        picks = []
+        for symbol, r in reports.items():
+            if symbol.startswith("_"):
+                continue
+            updated_at_str = r.get("updated_at") or datetime.now().isoformat()
+            run_date = updated_at_str.split("T")[0]
+            picks.append({
+                "symbol": symbol,
+                "name": r.get("name") or symbol,
+                "ai_grade": r.get("ai_grade", 50),
+                "price": r.get("price"),
+                "target_price": r.get("target_price"),
+                "entry_price": r.get("entry_price"),
+                "reasoning": r.get("reasoning"),
+                "risk_level": r.get("risk_level", "Medium"),
+                "type": r.get("type"),
+                "updated_at": updated_at_str,
+                "run_date": run_date,
+            })
+        if picks:
+            res = sb.table("research_picks").upsert(picks, on_conflict="symbol,run_date").execute()
+            safe_print(f"[SUPABASE] ✅ Successfully synced {len(picks)} picks to Supabase table research_picks.")
+    except Exception as e:
+        safe_print(f"[SUPABASE ERROR] Could not sync picks: {e}")
 
 BLACKLIST = ["MSTR", "SGOV", "TLT", "SHY", "IEI"]
 
@@ -442,6 +474,7 @@ def run_research_cycle(force=False, manual_reason=None):
         state.latest_signals.update(temp_signals)
         state.research_reports["_last_run"] = now.isoformat()
         state.save_reports()
+        sync_picks_to_supabase(state.research_reports)
     else:
         safe_print("[RESEARCH] No new research completed this cycle; retaining existing reports.")
 
