@@ -112,6 +112,12 @@ function StockModal() {
   const { selectedStock, closeModal, chartRange, rangePercentChange, fetchChartDataForRange } = useApp();
   if (!selectedStock) return null;
   const isPositive = rangePercentChange >= 0;
+  const tradingViewRange = {
+    '1W': '5D',
+    '1M': '1M',
+    '6M': '6M',
+    YTD: 'YTD',
+  }[chartRange] || '1M';
 
   return (
     <div className="modal-backdrop" onClick={closeModal}>
@@ -152,6 +158,7 @@ function StockModal() {
           <AdvancedRealTimeChart
             theme="dark"
             symbol={selectedStock.symbol}
+            range={tradingViewRange}
             width="100%"
             height="100%"
             allow_symbol_change={false}
