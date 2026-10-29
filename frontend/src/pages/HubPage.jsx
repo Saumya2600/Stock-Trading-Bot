@@ -320,24 +320,17 @@ export default function HubPage() {
 
   /* ── AI Intelligence Cards ── */
   const IntelligenceCards = () => {
-    if (!botOnline) {
+    const symbols = Object.keys(researchReports || {}).filter(k => !k.startsWith('_'));
+    if (!symbols.length) {
       return (
         <div className="glass-card offline-card">
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
             <div>
-              <div className="hub-section-title">Intelligence Engine Offline</div>
-              <div className="hub-section-sub">Start backend/bot.py to activate AI Research & Discovery</div>
+              <div className="hub-section-title">{botOnline ? 'Awaiting Fresh Scan' : 'Intelligence Engine Waking…'}</div>
+              <div className="hub-section-sub">{botOnline ? 'Click Run Now to kick off research' : 'Connecting to cloud trading engine'}</div>
             </div>
-            <div className="chip hold">OFFLINE</div>
+            <div className="chip hold">{botOnline ? 'IDLE' : 'CONNECTING'}</div>
           </div>
-        </div>
-      );
-    }
-    const symbols = Object.keys(researchReports).filter(k => !k.startsWith('_'));
-    if (!symbols.length) {
-      return (
-        <div style={{ padding: '2rem', color: 'var(--on-surface-variant)', fontSize: '0.9rem' }}>
-          AI Researcher initializing… click Run Now to kick off research.
         </div>
       );
     }

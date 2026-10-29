@@ -102,11 +102,32 @@ export function AppProvider({ children }) {
             const ltData = await resLongterm.json();
             setLongtermData(ltData);
           }
-          setBotOnline(resSignals.ok);
+          setBotOnline(Boolean(resSignals.ok));
+
+          // If backend was unreachable (e.g. Render waking up), fallback to static JSON so mobile never shows blank
+          if (!resResearch.ok) {
+            const fallbackRes = await fetch(`/reports.json${cacheBuster}`).catch(() => ({ ok: false }));
+            if (fallbackRes.ok) {
+              const fallbackReports = await fallbackRes.json();
+              setResearchReports(prev => (Object.keys(prev || {}).length ? prev : fallbackReports));
+              setBotSignals(prev => prev || { signals: Object.keys(fallbackReports).filter(k => !k.startsWith('_')) });
+            }
+            const fallbackState = await fetch(`/app_state.json${cacheBuster}`).catch(() => ({ ok: false }));
+            if (fallbackState.ok) {
+              const sData = await fallbackState.json();
+              setTradeHistory(prev => (prev && prev.length ? prev : (sData.trade_history || [])));
+              setPerformance(prev => prev || sData.portfolio_performance || {});
+            }
+          }
         }
       } catch (e) {
         console.error("Bot Data Fetch Error:", e);
         setBotOnline(false);
+        try {
+          const cacheBuster = `?t=${Date.now()}`;
+          const fallbackRes = await fetch(`/reports.json${cacheBuster}`).catch(() => ({ ok: false }));
+          if (fallbackRes.ok) setResearchReports(await fallbackRes.json());
+        } catch (_) {}
       }
     };
     fetchBotData();
