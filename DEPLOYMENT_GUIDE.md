@@ -50,9 +50,11 @@ Your trading bot can be deployed to various platforms. Since the bot needs **con
 2. "Create New" → "Web Service"
 3. Connect GitHub repo
 4. Configure:
-   - **Runtime:** Python 3.9+
-   - **Build Command:** `pip install -r backend/requirements.txt`
-   - **Start Command:** `cd backend && python bot.py`
+   - **Runtime:** Python 3.11
+   - **Root Directory:** `backend`
+   - **Build Command:** `pip install -r requirements.txt`
+   - **Start Command:** `python main.py`
+   - Render blueprint: use `render.yaml` from repository root
 5. Add env vars in dashboard
 6. Deploy ✅
 
@@ -104,6 +106,14 @@ SUPABASE_URL=your_supabase_project_url
 SUPABASE_ANON_KEY=your_supabase_anon_key
 DASHBOARD_ALLOWED_EMAILS=your-login-email@example.com
 ```
+
+Set frontend build variable `VITE_API_BASE_URL` to your Render service URL, for example:
+
+```
+VITE_API_BASE_URL=https://stock-trading-bot.onrender.com
+```
+
+Do not include a trailing slash. Vercel frontend then reads live research, positions, performance, long-term picks, and trade history from Render.
 
 Create your account in Supabase Authentication → Users. Disable public sign-ups and list your exact account email in `DASHBOARD_ALLOWED_EMAILS`. The anon key is public; never use Supabase service-role key in frontend or Vercel proxy.
 
@@ -204,6 +214,19 @@ Once deployed:
    - Gemini: Free tier ~10k requests/day ✅
    - FMP: Free tier 250 requests/day ✅
    - Alpaca: Free (paper trading) ✅
+
+### How Long-Term Picks Become Trades
+
+The trading strategy reads `backend/longterm_picks.json` and adds fresh picks to its candidate list. Picks older than 14 days are ignored. Each eligible pick still must pass market-open, available-buying-power, existing-position, duplicate-order, and position-size checks.
+
+Research workflow now refreshes long-term picks before committing JSON files. If no orders appear, inspect logs for:
+
+- `Picks stale` — run the research workflow or refresh long-term picks.
+- `QUANTITY_ZERO` / `CASH_INSUFFICIENT` — buying power cannot support one share.
+- `EXISTING_POS` / `PENDING_ORDER` — safety guard blocked duplicate exposure.
+- `PUMP_GUARD` — price moved too far above research price for lower-grade research signals.
+
+Keep Alpaca in paper mode while validating fills. Confirm order IDs and filled quantities in `/trade_history`; an order submission alone does not guarantee a fill.
 
 ---
 

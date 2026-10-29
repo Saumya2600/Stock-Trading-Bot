@@ -17,15 +17,20 @@ def main():
 
     # Load persisted research reports and app state from disk
     state.load_reports()
+    state.load_longterm_picks()
     state.load_app_state()
 
-    if not state.research_reports:
-        safe_print(f"[{datetime.now()}] TRADE RUNNER: No research reports found. Run research first. Exiting.")
+    if not state.research_reports and not state.longterm_data.get("picks"):
+        safe_print(f"[{datetime.now()}] TRADE RUNNER: No research reports or long-term picks found. Exiting.")
         sys.exit(0)
 
     # Log what we have
     report_symbols = [k for k in state.research_reports if not k.startswith("_")]
     safe_print(f"[{datetime.now()}] TRADE RUNNER: Loaded {len(report_symbols)} research reports: {report_symbols}")
+    safe_print(
+        f"[{datetime.now()}] TRADE RUNNER: Loaded "
+        f"{len(state.longterm_data.get('picks', []))} long-term picks"
+    )
     high_conviction = [(s, state.research_reports[s].get('ai_grade', 0)) for s in report_symbols if state.research_reports[s].get('ai_grade', 0) >= 55]
     safe_print(f"[{datetime.now()}] TRADE RUNNER: High-conviction (grade>=55): {high_conviction}")
 

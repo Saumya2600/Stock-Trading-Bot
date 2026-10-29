@@ -1,8 +1,11 @@
 from datetime import datetime
 import time
+import re
 from lumibot.strategies.strategy import Strategy
 from utils import safe_print, is_market_open, seconds_until_market_open
 import state
+
+MAX_LONGTERM_PICK_AGE_DAYS = 14
 
 class DeepResearchBot(Strategy):
     def initialize(self, one_shot=False):
@@ -36,6 +39,55 @@ class DeepResearchBot(Strategy):
         state.save_app_state()
         self.log_message(f"[TRADE] Recorded. Total trades: {len(state.trade_history)}")
 
+    def _trading_candidates(self):
+        """Return research reports plus eligible long-term picks not in reports."""
+        candidates = dict(state.research_reports)
+        picks_data = state.longterm_data or {}
+        picks = picks_data.get("picks", [])
+        updated_at = picks_data.get("last_updated")
+
+        if not isinstance(picks, list) or not updated_at:
+            return candidates
+
+        try:
+            age_days = (datetime.now() - datetime.strptime(updated_at, "%Y-%m-%d %H:%M")).total_seconds() / 86400
+        except (TypeError, ValueError):
+            self.log_message("[LONGTERM] Invalid last_updated; ignoring long-term picks")
+            return candidates
+
+        if age_days > MAX_LONGTERM_PICK_AGE_DAYS:
+            self.log_message(
+                f"[LONGTERM] Picks stale ({age_days:.1f}d old, max {MAX_LONGTERM_PICK_AGE_DAYS}d); "
+                "refresh research before buying"
+            )
+            return candidates
+
+        for pick in picks:
+            if not isinstance(pick, dict):
+                continue
+            symbol = str(pick.get("symbol", "")).upper().strip()
+            try:
+                price = float(pick.get("price", 0) or 0)
+            except (TypeError, ValueError):
+                self.log_message(f"[LONGTERM] Invalid price for {symbol or 'unknown'}; skipping")
+                continue
+            if not symbol or price <= 0 or symbol in candidates:
+                continue
+
+            sentiment = str(pick.get("market_sentiment", ""))
+            sentiment_match = re.search(r"(\d{1,3})\s*/\s*100", sentiment)
+            grade = int(sentiment_match.group(1)) if sentiment_match else 70
+            candidates[symbol] = {
+                **pick,
+                "price": price,
+                "ai_grade": grade,
+                "stop_loss": round(price * 0.90, 2),
+                "_source": "longterm_pick",
+            }
+            self.log_message(f"[LONGTERM] Added {symbol} candidate (grade={grade})")
+
+        return candidates
+
     def on_trading_iteration(self):
         if not is_market_open():
             safe_print("[BOT] Market closed.")
@@ -59,7 +111,8 @@ class DeepResearchBot(Strategy):
                 self.log_message(f"[BENCHMARK ERROR] {e}")
                 return
 
-        if not state.research_reports:
+        candidates = self._trading_candidates()
+        if not candidates:
             self.log_message("[WAITING] Research engine still scanning... will trade once reports arrive.")
             return
 
@@ -89,7 +142,7 @@ class DeepResearchBot(Strategy):
         all_positions = self.get_positions()
         self.log_message(f"[PORTFOLIO] value=${current_value:.2f} | cash=${available_cash:.2f} | positions={len(all_positions)}")
 
-        for symbol, report in list(state.research_reports.items()):
+        for symbol, report in list(candidates.items()):
             if symbol.startswith("_"):
                 continue
             # Skip duplicate alias (e.g. GOOG when GOOGL already present or processed)
@@ -106,7 +159,11 @@ class DeepResearchBot(Strategy):
                     ai_grade = 50
                 last_price = report.get("price", 0)
                 stop_loss = report.get("stop_loss", last_price * 0.93)
-                self.log_message(f"[EVAL] {symbol}: grade={ai_grade}, price={last_price}, stop={stop_loss:.2f}")
+                source = report.get("_source", "research")
+                self.log_message(
+                    f"[EVAL] {symbol}: source={source}, grade={ai_grade}, "
+                    f"price={last_price}, stop={stop_loss:.2f}"
+                )
                 if last_price <= 0:
                     self.log_message(f"[SKIP] {symbol}: price=0")
                     continue

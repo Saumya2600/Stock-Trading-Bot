@@ -37,7 +37,7 @@ export function AppProvider({ children }) {
 
   const API_BASE_RAW = import.meta.env.VITE_API_BASE_URL || '';
   const isServerless = API_BASE_RAW.includes("githubusercontent.com");
-  const API_BASE = (isServerless || !API_BASE_RAW) ? API_BASE_RAW : "";
+  const API_BASE = API_BASE_RAW;
 
   useEffect(() => {
     const handleResize = () => {

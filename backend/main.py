@@ -26,9 +26,10 @@ if __name__ == "__main__":
     state.load_app_state()
     state.load_reddit_cache()
     state.load_low_cache()
+    state.load_longterm_picks()
 
     threading.Thread(target=research_scheduler, daemon=True).start()
     threading.Thread(target=start_bot, daemon=True).start()
     print("[ONLINE] Autonomous Research Bot - ONLINE")
     print("[PERFORMANCE] Tracking performance vs SPY...")
-    uvicorn.run(api, host="0.0.0.0", port=8001)
+    uvicorn.run(api, host="0.0.0.0", port=int(os.getenv("PORT", "8001")))
