@@ -1,90 +1,90 @@
 {
-    "SNDK": {
+    "WMT": {
         "data": {
-            "sector": "Technology",
-            "industry": "Computer Hardware",
-            "pe": 19.05,
-            "peg": 0,
-            "debt_to_equity": 0.01,
-            "description": "Sandisk Corporation develops, manufactures, and sells data storage devices and solutions using NAND flash technology in the Americas, Europe, the Middle East, Africa, Asia, and internationally. The co..."
+            "sector": "Consumer Defensive",
+            "industry": "Discount Stores",
+            "pe": 43.95,
+            "peg": 4.03,
+            "debt_to_equity": 0.72,
+            "description": "Walmart Inc. engages in the operation of retail and wholesale stores and clubs, ecommerce websites, and mobile applications worldwide. The company operates through three segments: Walmart U.S., Walmar..."
         },
-        "updated_at": "2026-10-28T23:59:31.762837"
+        "updated_at": "2026-10-29T18:37:03.068316"
     },
-    "F": {
+    "AMZN": {
         "data": {
             "sector": "Consumer Cyclical",
-            "industry": "Auto Manufacturers",
-            "pe": 0,
-            "peg": 8.48,
-            "debt_to_equity": 4.57,
-            "description": "Ford Motor Company develops, delivers, and services Ford trucks, sport utility vehicles, commercial vans and cars, and Lincoln luxury vehicles in the United States, Canada, the United Kingdom, Mexico,..."
+            "industry": "Internet Retail",
+            "pe": 19.66,
+            "peg": 1.48,
+            "debt_to_equity": 0.46,
+            "description": "Amazon.com, Inc. engages in the retail sale of consumer products, advertising, and subscriptions service through online and physical stores in North America and internationally. The company operates t..."
         },
-        "updated_at": "2026-10-28T23:59:58.602415"
+        "updated_at": "2026-10-29T18:37:31.133624"
     },
-    "VRT": {
+    "APA": {
         "data": {
-            "sector": "Industrials",
-            "industry": "Electrical Equipment & Parts",
-            "pe": 54.96,
-            "peg": 0.69,
-            "debt_to_equity": 0.7,
-            "description": "Vertiv Holdings Co designs, manufactures, and services critical digital infrastructure technologies and life cycle services for data centers, communication networks, and commercial and industrial envi..."
+            "sector": "Energy",
+            "industry": "Oil & Gas E&P",
+            "pe": 10.83,
+            "peg": 1.26,
+            "debt_to_equity": 0.49,
+            "description": "APA Corporation, an independent energy company, explores for, develops, and produces natural gas, crude oil, and natural gas liquids. The company has oil and gas operations in the United States, Egypt..."
         },
-        "updated_at": "2026-10-29T00:00:30.523843"
+        "updated_at": "2026-10-29T18:37:57.233425"
     },
-    "RDDT": {
+    "QQQ": {
         "data": {
-            "sector": "Communication Services",
-            "industry": "Internet Content & Information",
-            "pe": 31.33,
-            "peg": 0.68,
-            "debt_to_equity": 0.01,
-            "description": "Reddit, Inc. operates a digital community in the United States and internationally. The company's platform enables user to engage in conversations, explore passions, research new hobbies, exchange goo..."
-        },
-        "updated_at": "2026-10-29T00:01:01.682703"
-    },
-    "AGI": {
-        "data": {
-            "sector": "Basic Materials",
-            "industry": "Gold",
-            "pe": 11.39,
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 27.28,
             "peg": 0,
-            "debt_to_equity": 0.05,
-            "description": "Alamos Gold Inc. operates as a gold producer in Canada and Mexico. It primarily explores for gold deposits. The company was founded in 2003 and is based in Toronto, Canada...."
-        },
-        "updated_at": "2026-10-29T00:01:38.380713"
-    },
-    "C": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Banks - Diversified",
-            "pe": 12.1,
-            "peg": 0.51,
             "debt_to_equity": 0,
-            "description": "Citigroup Inc., a diversified financial service holding company, provides various financial products and services to consumers, corporations, governments, and institutions. It operates through five se..."
+            "description": "To maintain the correspondence between the composition and weights of the securities in the trust (the \"securities\") and the stocks in the NASDAQ-100 Index\u00ae, the adviser adjusts the securities from ti..."
         },
-        "updated_at": "2026-10-29T00:03:18.451737"
-    },
-    "SPCX": {
-        "data": {
-            "sector": "Industrials",
-            "industry": "Aerospace & Defense",
-            "pe": 631.43,
-            "peg": 0,
-            "debt_to_equity": 0.22,
-            "description": "Space Exploration Technologies Corp. provides satellite-based broadband services in the United States, Ireland, Canada, and internationally. It operates through three operating segments: Space, Connec..."
-        },
-        "updated_at": "2026-10-29T00:03:40.906324"
+        "updated_at": "2026-10-29T18:38:22.829368"
     },
     "MSFT": {
         "data": {
             "sector": "Technology",
             "industry": "Software - Infrastructure",
-            "pe": 29.58,
-            "peg": 1.73,
+            "pe": 29.4,
+            "peg": 1.72,
             "debt_to_equity": 0.29,
             "description": "Microsoft Corporation, a technology company, develops and supports a portfolio of technology solutions for individuals and businesses worldwide. Its products include operating systems, server applicat..."
         },
-        "updated_at": "2026-10-29T00:04:32.560530"
+        "updated_at": "2026-10-29T18:38:49.634371"
+    },
+    "NVDA": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Semiconductors",
+            "pe": 26.86,
+            "peg": 0.26,
+            "debt_to_equity": 0.17,
+            "description": "NVIDIA Corporation operates as a data center scale AI infrastructure company in the United States, Taiwan, China, Hong Kong, Europe, and internationally. It operates through Compute & Networking, and ..."
+        },
+        "updated_at": "2026-10-29T18:39:16.428841"
+    },
+    "DTE": {
+        "data": {
+            "sector": "Utilities",
+            "industry": "Utilities - Regulated Electric",
+            "pe": 21.29,
+            "peg": 1.7,
+            "debt_to_equity": 2.29,
+            "description": "DTE Energy Company engages in energy-related businesses and services. The company operates through four segments: Electric, Gas, DTE Vantage, and Energy Trading. The company's Electric segment generat..."
+        },
+        "updated_at": "2026-10-29T18:39:41.112972"
+    },
+    "FTNT": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Software - Infrastructure",
+            "pe": 44.68,
+            "peg": 1.91,
+            "debt_to_equity": 0.36,
+            "description": "Fortinet, Inc. provides cybersecurity and convergence of networking and security solutions worldwide. The company offers FortiOS, a unified operating system designed to address cybersecurity threats; ..."
+        },
+        "updated_at": "2026-10-29T18:40:05.612240"
     }
 }
