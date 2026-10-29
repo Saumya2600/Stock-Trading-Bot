@@ -2,6 +2,8 @@ name: Research Bot (Morning Scan)
 
 on:
   schedule:
+    # Pre-market scan: 8:30 AM EDT / 9:30 AM ADT = 12:30 UTC
+    - cron: '30 12 * * 1-5'
     # Research before market open: 9:00 AM EDT / 10:00 AM ADT = 13:00 UTC
     - cron: '0 13 * * 1-5'
     # Research at market close: 4:00 PM EDT = 20:00 UTC
@@ -62,4 +64,6 @@ jobs:
           git add *.json
 
           git commit -m "Automated Research Sync: $(date)" || echo "No changes to commit"
+          # Pull with rebase to avoid conflicts if another workflow pushed first
+          git pull --rebase origin main || true
           git push origin main

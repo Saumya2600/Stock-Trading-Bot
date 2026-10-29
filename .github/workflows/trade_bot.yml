@@ -63,4 +63,5 @@ jobs:
           git add app_state.json
 
           git commit -m "Automated Trade Sync: $(date)" || echo "No changes to commit"
+          git pull --rebase origin main || true
           git push origin main

@@ -434,6 +434,17 @@ def run_research_cycle(force=False, manual_reason=None):
             )
             if not _all_keys_exhausted:
                 time.sleep(GEMINI_CALL_DELAY)
+            # Determine pick type label for frontend display
+            src = target_meta.get(symbol, {}).get("source", "")
+            is_val = target_meta.get(symbol, {}).get("is_value_scan", False)
+            if is_val or "52wk_low" in src:
+                pick_type = "DEEP VALUE"
+            elif "rvol" in src or "breakout" in src.lower():
+                pick_type = "BREAKOUT"
+            elif "eps_beat" in src or "earnings" in src.lower():
+                pick_type = "EARNINGS PLAY"
+            else:
+                pick_type = "MOMENTUM"
             temp_reports[symbol] = {
                 "symbol": symbol,
                 "name": name,
@@ -451,6 +462,7 @@ def run_research_cycle(force=False, manual_reason=None):
                 "bull_case": analysis.get("bull_case", ""),
                 "price_history": bars if isinstance(bars, list) else [],
                 "updated_at": now.isoformat(),
+                "type": pick_type,
                 "fundamentals": fundamentals
             }
             temp_signals[symbol] = {

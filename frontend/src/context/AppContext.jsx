@@ -1,5 +1,5 @@
 import { createContext, useContext, useState, useEffect, useRef, useCallback } from 'react';
-import { savePicksToSupabase } from '../lib/supabase';
+import { savePicksToSupabase, fetchPicksFromSupabase } from '../lib/supabase';
 import { alpacaRequest } from '../lib/alpaca';
 
 const AppContext = createContext(null);
@@ -106,11 +106,37 @@ export function AppProvider({ children }) {
 
           // If backend was unreachable (e.g. Render waking up), fallback to static JSON so mobile never shows blank
           if (!resResearch.ok) {
+            let gotFreshData = false;
+            // Tier 1 fallback: static /reports.json (committed by GitHub Actions)
             const fallbackRes = await fetch(`/reports.json${cacheBuster}`).catch(() => ({ ok: false }));
             if (fallbackRes.ok) {
               const fallbackReports = await fallbackRes.json();
-              setResearchReports(prev => (Object.keys(prev || {}).length ? prev : fallbackReports));
-              setBotSignals(prev => prev || { signals: Object.keys(fallbackReports).filter(k => !k.startsWith('_')) });
+              const hasPicks = Object.keys(fallbackReports).filter(k => !k.startsWith('_')).length > 0;
+              if (hasPicks) {
+                setResearchReports(prev => (Object.keys(prev || {}).length ? prev : fallbackReports));
+                setBotSignals(prev => prev || { signals: Object.keys(fallbackReports).filter(k => !k.startsWith('_')) });
+                gotFreshData = true;
+              }
+            }
+            // Tier 2 fallback: Supabase DB (Python pushes here after every research cycle)
+            if (!gotFreshData) {
+              try {
+                const { data: sbPicks, error: sbErr } = await fetchPicksFromSupabase({ days: 7, limit: 50 });
+                if (!sbErr && sbPicks && sbPicks.length > 0) {
+                  // Convert Supabase rows back to reports dict keyed by symbol (latest per symbol)
+                  const sbReports = {};
+                  sbPicks.forEach(p => {
+                    if (!sbReports[p.symbol] || p.run_date > (sbReports[p.symbol].updated_at || '').split('T')[0]) {
+                      sbReports[p.symbol] = p;
+                    }
+                  });
+                  setResearchReports(prev => (Object.keys(prev || {}).length ? prev : sbReports));
+                  setBotSignals(prev => prev || { signals: Object.keys(sbReports) });
+                  console.log('[Supabase fallback] Loaded', Object.keys(sbReports).length, 'picks from Supabase');
+                }
+              } catch (sbEx) {
+                console.warn('[Supabase fallback] Error:', sbEx);
+              }
             }
             const fallbackState = await fetch(`/app_state.json${cacheBuster}`).catch(() => ({ ok: false }));
             if (fallbackState.ok) {
