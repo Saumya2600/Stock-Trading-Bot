@@ -1,90 +1,90 @@
 {
-    "META": {
+    "SNDK": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Computer Hardware",
+            "pe": 19.05,
+            "peg": 0,
+            "debt_to_equity": 0.01,
+            "description": "Sandisk Corporation develops, manufactures, and sells data storage devices and solutions using NAND flash technology in the Americas, Europe, the Middle East, Africa, Asia, and internationally. The co..."
+        },
+        "updated_at": "2026-10-28T23:59:31.762837"
+    },
+    "F": {
+        "data": {
+            "sector": "Consumer Cyclical",
+            "industry": "Auto Manufacturers",
+            "pe": 0,
+            "peg": 8.48,
+            "debt_to_equity": 4.57,
+            "description": "Ford Motor Company develops, delivers, and services Ford trucks, sport utility vehicles, commercial vans and cars, and Lincoln luxury vehicles in the United States, Canada, the United Kingdom, Mexico,..."
+        },
+        "updated_at": "2026-10-28T23:59:58.602415"
+    },
+    "VRT": {
+        "data": {
+            "sector": "Industrials",
+            "industry": "Electrical Equipment & Parts",
+            "pe": 54.96,
+            "peg": 0.69,
+            "debt_to_equity": 0.7,
+            "description": "Vertiv Holdings Co designs, manufactures, and services critical digital infrastructure technologies and life cycle services for data centers, communication networks, and commercial and industrial envi..."
+        },
+        "updated_at": "2026-10-29T00:00:30.523843"
+    },
+    "RDDT": {
         "data": {
             "sector": "Communication Services",
             "industry": "Internet Content & Information",
-            "pe": 20.91,
-            "peg": 0.82,
-            "debt_to_equity": 0.42,
-            "description": "Meta Platforms, Inc. engages in the development of products that enable people to connect and share with friends and family through mobile devices, personal computers, virtual reality (VR) headsets, a..."
+            "pe": 31.33,
+            "peg": 0.68,
+            "debt_to_equity": 0.01,
+            "description": "Reddit, Inc. operates a digital community in the United States and internationally. The company's platform enables user to engage in conversations, explore passions, research new hobbies, exchange goo..."
         },
-        "updated_at": "2026-10-28T18:37:49.411255"
+        "updated_at": "2026-10-29T00:01:01.682703"
     },
-    "DIS": {
+    "AGI": {
         "data": {
-            "sector": "Communication Services",
-            "industry": "Entertainment",
-            "pe": 22.53,
-            "peg": 3.59,
-            "debt_to_equity": 0.39,
-            "description": "The Walt Disney Company operates as an entertainment company in Americas, Europe, and the Asia Pacific. It operates in three segments: Entertainment, Sports, and Experiences. The company produces and ..."
+            "sector": "Basic Materials",
+            "industry": "Gold",
+            "pe": 11.39,
+            "peg": 0,
+            "debt_to_equity": 0.05,
+            "description": "Alamos Gold Inc. operates as a gold producer in Canada and Mexico. It primarily explores for gold deposits. The company was founded in 2003 and is based in Toronto, Canada...."
         },
-        "updated_at": "2026-10-28T18:38:20.419002"
+        "updated_at": "2026-10-29T00:01:38.380713"
     },
-    "NFLX": {
+    "C": {
         "data": {
-            "sector": "Communication Services",
-            "industry": "Entertainment",
-            "pe": 17.84,
-            "peg": 1.01,
-            "debt_to_equity": 0.6,
-            "description": "Netflix, Inc. provides entertainment services worldwide. The company offers television (TV) series, documentaries, feature films, games, and live programming across various genres and languages. It al..."
+            "sector": "Financial Services",
+            "industry": "Banks - Diversified",
+            "pe": 12.1,
+            "peg": 0.51,
+            "debt_to_equity": 0,
+            "description": "Citigroup Inc., a diversified financial service holding company, provides various financial products and services to consumers, corporations, governments, and institutions. It operates through five se..."
         },
-        "updated_at": "2026-10-28T18:39:17.507235"
+        "updated_at": "2026-10-29T00:03:18.451737"
     },
     "SPCX": {
         "data": {
             "sector": "Industrials",
             "industry": "Aerospace & Defense",
-            "pe": 628.96,
+            "pe": 631.43,
             "peg": 0,
             "debt_to_equity": 0.22,
             "description": "Space Exploration Technologies Corp. provides satellite-based broadband services in the United States, Ireland, Canada, and internationally. It operates through three operating segments: Space, Connec..."
         },
-        "updated_at": "2026-10-28T18:39:42.194072"
+        "updated_at": "2026-10-29T00:03:40.906324"
     },
-    "MS": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Capital Markets",
-            "pe": 15.06,
-            "peg": 1.6,
-            "debt_to_equity": 5.17,
-            "description": "Morgan Stanley, a financial holding company, provides various financial products and services to corporations, governments, financial institutions, and individuals in the Americas, Asia, Europe, the M..."
-        },
-        "updated_at": "2026-10-28T18:40:05.430492"
-    },
-    "IT": {
+    "MSFT": {
         "data": {
             "sector": "Technology",
-            "industry": "Information Technology Services",
-            "pe": 19.78,
-            "peg": 0.92,
-            "debt_to_equity": 0,
-            "description": "Gartner, Inc. provides business and technology insights to support decision-making and performance on an organization's mission-critical priorities in the United States, Canada, Europe, the Middle Eas..."
+            "industry": "Software - Infrastructure",
+            "pe": 29.58,
+            "peg": 1.73,
+            "debt_to_equity": 0.29,
+            "description": "Microsoft Corporation, a technology company, develops and supports a portfolio of technology solutions for individuals and businesses worldwide. Its products include operating systems, server applicat..."
         },
-        "updated_at": "2026-10-28T18:40:28.197298"
-    },
-    "VOO": {
-        "data": {
-            "sector": "Unknown",
-            "industry": "Unknown",
-            "pe": 24.5,
-            "peg": 0,
-            "debt_to_equity": 0,
-            "description": "The fund manager employs an indexing investment approach designed to track the performance of the Standard & Poor's 500 Index, a widely recognized benchmark of U.S. stock market performance that is do..."
-        },
-        "updated_at": "2026-10-28T18:40:55.297677"
-    },
-    "CSCO": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Communication Equipment",
-            "pe": 33.12,
-            "peg": 1.02,
-            "debt_to_equity": 0.62,
-            "description": "Cisco Systems, Inc. designs, develops, and sells technologies to power, help, secure, and draw insights from the internet in the Americas, Europe, the Middle East, Africa, the Asia Pacific, Japan, and..."
-        },
-        "updated_at": "2026-10-28T18:41:20.518729"
+        "updated_at": "2026-10-29T00:04:32.560530"
     }
 }
