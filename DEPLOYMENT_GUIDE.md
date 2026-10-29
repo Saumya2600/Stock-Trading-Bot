@@ -51,9 +51,9 @@ Your trading bot can be deployed to various platforms. Since the bot needs **con
 3. Connect GitHub repo
 4. Configure:
    - **Runtime:** Python 3.11
-   - **Root Directory:** `backend`
-   - **Build Command:** `pip install -r requirements.txt`
-   - **Start Command:** `python main.py`
+   - **Root Directory:** repository root / blank
+   - **Build Command:** `pip install -r backend/requirements.txt`
+   - **Start Command:** `python backend/main.py`
    - Render blueprint: use `render.yaml` from repository root
 5. Add env vars in dashboard
 6. Deploy ✅

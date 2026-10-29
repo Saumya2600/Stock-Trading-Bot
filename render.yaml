@@ -2,9 +2,8 @@ services:
   - type: web
     name: stock-trading-bot
     runtime: python
-    rootDir: backend
-    buildCommand: pip install -r requirements.txt
-    startCommand: python main.py
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: python backend/main.py
     healthCheckPath: /
     envVars:
       - key: PYTHON_VERSION
