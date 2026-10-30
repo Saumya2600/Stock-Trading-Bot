@@ -92,8 +92,11 @@ def _sec_headers():
 def fetch_company_profile(symbol):
     """Return free Finnhub name and market-cap data, cached for one day."""
     cached = _profile_cache.get(symbol)
-    if cached and _now_utc() - cached["loaded_at"] < timedelta(days=1):
-        return cached["data"]
+    if cached:
+        cache_age = _now_utc() - cached["loaded_at"]
+        cache_ttl = timedelta(days=1) if cached["data"] else timedelta(minutes=5)
+        if cache_age < cache_ttl:
+            return cached["data"]
     if not FINNHUB_KEY:
         return {}
     try:
@@ -103,12 +106,14 @@ def fetch_company_profile(symbol):
             params={"symbol": symbol},
             timeout=10,
         )
+        if not isinstance(data, dict):
+            raise ValueError(f"invalid profile response for {symbol}")
         profile = {
             "name": str(data.get("name") or symbol).strip(),
             # Finnhub reports marketCapitalization in millions of USD.
             "market_cap_millions": _number(data.get("marketCapitalization")),
         }
-    except requests.RequestException as exc:
+    except (requests.RequestException, TypeError, ValueError, AttributeError) as exc:
         safe_print(f"[OVERNIGHT] Profile request failed for {symbol}: {exc}")
         profile = {}
     _profile_cache[symbol] = {"loaded_at": _now_utc(), "data": profile}
@@ -167,11 +172,13 @@ def fetch_earnings_calendar():
         })
 
     eligible = []
+    profile_missing = 0
     for event in normalized:
         profile = fetch_company_profile(event["symbol"])
         market_cap_millions = profile.get("market_cap_millions")
         market_cap_category = _market_cap_category(market_cap_millions)
         if not market_cap_category:
+            profile_missing += 1
             continue
         event.update({
             "name": profile.get("name") or event["symbol"],
@@ -183,7 +190,11 @@ def fetch_earnings_calendar():
     deduped = {}
     for event in eligible:
         deduped[f"{event['symbol']}:{event['earnings_date']}"] = event
-    return list(deduped.values())
+    return list(deduped.values()), {
+        "calendar_rows": len(normalized),
+        "eligible_rows": len(deduped),
+        "excluded_rows": profile_missing,
+    }
 
 
 def _load_sec_tickers():
@@ -439,7 +450,7 @@ def run_overnight_refresh():
     state.overnight_analysis["error"] = None
     state.save_overnight_analysis()
     try:
-        calendar = fetch_earnings_calendar()
+        calendar, calendar_diagnostics = fetch_earnings_calendar()
         # Calendar rows do not carry status; limit expensive enrichment to reported rows.
         today = datetime.now(EASTERN).date()
         released = [
@@ -486,12 +497,22 @@ def run_overnight_refresh():
                 "alpaca": "latest available quote and daily volume",
                 "scoring": "local deterministic rules; no trade execution",
             },
+            "diagnostics": calendar_diagnostics,
         })
         state.save_overnight_analysis()
         safe_print(f"[OVERNIGHT] Refresh complete: {len(events)} events")
         return state.overnight_analysis
-    except (requests.RequestException, RuntimeError, ValueError) as exc:
+    except (requests.RequestException, RuntimeError, TypeError, ValueError, AttributeError) as exc:
         message = f"{type(exc).__name__}: {exc}"
+        state.overnight_analysis.update({
+            "status": "error",
+            "error": message,
+        })
+        state.save_overnight_analysis()
+        safe_print(f"[OVERNIGHT] Refresh failed: {message}")
+        return state.overnight_analysis
+    except Exception as exc:
+        message = f"UnexpectedError: {exc}"
         state.overnight_analysis.update({
             "status": "error",
             "error": message,

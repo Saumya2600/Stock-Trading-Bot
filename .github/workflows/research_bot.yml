@@ -1,6 +1,8 @@
 name: Research Bot (Morning Scan)
 
 on:
+  push:
+    branches: [main]
   schedule:
     # Run 1: before market open — 8:30 AM EDT / 9:30 AM ADT = 12:30 UTC
     - cron: '30 12 * * 1-5'

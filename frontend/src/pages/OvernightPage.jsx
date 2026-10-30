@@ -199,6 +199,7 @@ export default function OvernightPage() {
 
   const released = useMemo(() => data.events.filter(event => event.status === 'released'), [data.events]);
   const upcoming = useMemo(() => data.events.filter(event => event.status === 'upcoming'), [data.events]);
+  const isRefreshing = data.status === 'refreshing';
   const upcomingByDate = useMemo(() => {
     return upcoming.reduce((groups, event) => {
       groups[event.earnings_date] = groups[event.earnings_date] || [];
@@ -318,13 +319,21 @@ export default function OvernightPage() {
         </section>
       )}
 
-      {loading && <div className="glass-card overnight-empty">Loading free earnings data…</div>}
-      {!loading && ((viewMode === 'analysis' && !released.length && !upcoming.length) || (viewMode === 'calendar' && !upcoming.length)) && (
+      {(loading || isRefreshing) && (
+        <div className="glass-card overnight-empty">
+          <RefreshCw size={28} style={{ opacity: 0.45, animation: 'spin 1s linear infinite' }} />
+          <h2 className="headline-md">Refreshing earnings data</h2>
+          <p>Loading scheduled earnings and market-cap data. This can take a moment on free API limits.</p>
+        </div>
+      )}
+      {!loading && !isRefreshing && ((viewMode === 'analysis' && !released.length && !upcoming.length) || (viewMode === 'calendar' && !upcoming.length)) && (
         <div className="glass-card overnight-empty">
           <TrendingUp size={28} style={{ opacity: 0.35 }} />
           <h2 className="headline-md">{viewMode === 'calendar' ? 'No upcoming earnings found' : 'No released events found'}</h2>
           <p>{viewMode === 'calendar'
-            ? 'Finnhub returned no scheduled earnings for next seven days. Check API key and refresh.'
+            ? data.error || (data.diagnostics?.calendar_rows
+              ? `Finnhub returned ${data.diagnostics.calendar_rows} rows; ${data.diagnostics.excluded_rows} removed because market-cap data was unavailable or below Mid Cap.`
+              : 'No scheduled earnings loaded. Check Finnhub API key and refresh.')
             : 'No released earnings in current data. Open Upcoming calendar to see scheduled events.'}</p>
         </div>
       )}
