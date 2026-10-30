@@ -24,9 +24,14 @@ SEC_ARCHIVE_URL = "https://www.sec.gov/Archives/edgar/data"
 ALPACA_SNAPSHOTS_URL = "https://data.alpaca.markets/v2/stocks/snapshots"
 FINNHUB_CALENDAR_URL = "https://finnhub.io/api/v1/calendar/earnings"
 FINNHUB_NEWS_URL = "https://finnhub.io/api/v1/company-news"
+FINNHUB_PROFILE_URL = "https://finnhub.io/api/v1/stock/profile2"
 
 _refresh_lock = threading.Lock()
 _sec_ticker_cache = {"loaded_at": None, "symbols": {}}
+_profile_cache = {}
+
+MID_CAP_MIN_MILLIONS = 2_000
+LARGE_CAP_MIN_MILLIONS = 10_000
 
 
 def _now_utc():
@@ -84,6 +89,42 @@ def _sec_headers():
     return {"User-Agent": user_agent, "Accept-Encoding": "gzip, deflate"}
 
 
+def fetch_company_profile(symbol):
+    """Return free Finnhub name and market-cap data, cached for one day."""
+    cached = _profile_cache.get(symbol)
+    if cached and _now_utc() - cached["loaded_at"] < timedelta(days=1):
+        return cached["data"]
+    if not FINNHUB_KEY:
+        return {}
+    try:
+        data = _request_json(
+            FINNHUB_PROFILE_URL,
+            headers={"X-Finnhub-Token": FINNHUB_KEY},
+            params={"symbol": symbol},
+            timeout=10,
+        )
+        profile = {
+            "name": str(data.get("name") or symbol).strip(),
+            # Finnhub reports marketCapitalization in millions of USD.
+            "market_cap_millions": _number(data.get("marketCapitalization")),
+        }
+    except requests.RequestException as exc:
+        safe_print(f"[OVERNIGHT] Profile request failed for {symbol}: {exc}")
+        profile = {}
+    _profile_cache[symbol] = {"loaded_at": _now_utc(), "data": profile}
+    return profile
+
+
+def _market_cap_category(market_cap_millions):
+    if market_cap_millions is None:
+        return None
+    if market_cap_millions >= LARGE_CAP_MIN_MILLIONS:
+        return "Large Cap"
+    if market_cap_millions >= MID_CAP_MIN_MILLIONS:
+        return "Mid Cap"
+    return None
+
+
 def fetch_earnings_calendar():
     """Fetch recent releases plus next seven days of scheduled earnings."""
     if not FINNHUB_KEY:
@@ -125,8 +166,22 @@ def fetch_earnings_calendar():
             "finnhub_surprise_pct": _number(entry.get("surprisePercent")),
         })
 
-    deduped = {}
+    eligible = []
     for event in normalized:
+        profile = fetch_company_profile(event["symbol"])
+        market_cap_millions = profile.get("market_cap_millions")
+        market_cap_category = _market_cap_category(market_cap_millions)
+        if not market_cap_category:
+            continue
+        event.update({
+            "name": profile.get("name") or event["symbol"],
+            "market_cap_millions": market_cap_millions,
+            "market_cap_category": market_cap_category,
+        })
+        eligible.append(event)
+
+    deduped = {}
+    for event in eligible:
         deduped[f"{event['symbol']}:{event['earnings_date']}"] = event
     return list(deduped.values())
 

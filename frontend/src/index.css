@@ -269,6 +269,15 @@ body {
 }
 .overnight-title-row { display: flex; align-items: center; gap: 0.7rem; }
 .overnight-hero-actions { display: flex; align-items: center; gap: 0.6rem; }
+.ticker-company-name {
+  max-width: 190px;
+  margin-top: 0.2rem;
+  overflow: hidden;
+  color: rgba(255,255,255,0.62);
+  font-size: 0.72rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 .overnight-safety-banner {
   display: flex;
   align-items: center;
@@ -308,6 +317,12 @@ body {
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.05em;
+}
+.market-cap-badge {
+  margin-top: 0.3rem;
+  color: rgba(255,255,255,0.55);
+  font-size: 0.62rem;
+  letter-spacing: 0.04em;
 }
 .overnight-day-list { display: flex; flex-direction: column; gap: 1.5rem; margin-top: 0.8rem; }
 .overnight-day-group { display: flex; flex-direction: column; gap: 0.6rem; }

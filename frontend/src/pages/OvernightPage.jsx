@@ -19,6 +19,15 @@ function formatPercent(value) {
   return Number.isFinite(number) ? `${number >= 0 ? '+' : ''}${number.toFixed(2)}%` : '—';
 }
 
+function formatRevenue(value) {
+  if (value === null || value === undefined || value === '') return '—';
+  const number = Number(value);
+  if (!Number.isFinite(number)) return '—';
+  if (Math.abs(number) >= 1e9) return `$${(number / 1e9).toFixed(2)}B`;
+  if (Math.abs(number) >= 1e6) return `$${(number / 1e6).toFixed(1)}M`;
+  return `$${number.toLocaleString('en-US', { maximumFractionDigits: 0 })}`;
+}
+
 function signalColor(signal) {
   if (signal?.includes('BULLISH')) return GREEN;
   if (signal?.includes('BEARISH')) return RED;
@@ -38,8 +47,9 @@ function EventCard({ event }) {
       <div className="overnight-card-header">
         <div>
           <div className="ticker">{event.symbol}</div>
+          <div className="ticker-company-name">{event.name || 'Company name unavailable'}</div>
           <div className="label-md" style={{ marginTop: '0.3rem' }}>
-            {event.earnings_date} · {event.session}
+            {event.earnings_date} · {event.session} · {event.market_cap_category || 'Cap unknown'}
           </div>
         </div>
         <div style={{ textAlign: 'right' }}>
@@ -56,7 +66,7 @@ function EventCard({ event }) {
         </div>
         <div>
           <span className="label-sm">Revenue</span>
-          <strong>{formatNumber(event.revenue_actual, 0)} <small>vs {formatNumber(event.revenue_estimate, 0)}</small></strong>
+          <strong>{formatRevenue(event.revenue_actual)} <small>vs {formatRevenue(event.revenue_estimate)}</small></strong>
           <span className="overnight-subvalue">{formatPercent(event.revenue_surprise_pct)}</span>
         </div>
         <div>
@@ -100,9 +110,13 @@ function UpcomingCalendarCard({ event }) {
       <div className="overnight-card-header">
         <div>
           <div className="ticker">{event.symbol}</div>
+          <div className="ticker-company-name">{event.name || 'Company name unavailable'}</div>
           <div className="label-md" style={{ marginTop: '0.3rem' }}>{dateLabel}</div>
         </div>
-        <div className="calendar-session">{event.session === 'UNKNOWN' ? 'TIME TBD' : event.session}</div>
+        <div className="calendar-session">
+          <div>{event.session === 'UNKNOWN' ? 'TIME TBD' : event.session}</div>
+          <div className="market-cap-badge">{event.market_cap_category}</div>
+        </div>
       </div>
       <div className="overnight-metrics">
         <div>
@@ -111,7 +125,7 @@ function UpcomingCalendarCard({ event }) {
         </div>
         <div>
           <span className="label-sm">Revenue estimate</span>
-          <strong>{formatNumber(event.revenue_estimate, 0)}</strong>
+          <strong>{formatRevenue(event.revenue_estimate)}</strong>
         </div>
         <div>
           <span className="label-sm">Status</span>

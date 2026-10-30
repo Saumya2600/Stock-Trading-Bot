@@ -123,6 +123,7 @@ Sidebar **Overnight Earnings** is read-only. It uses no paid provider and never 
 - SEC EDGAR filing links (`SEC_USER_AGENT`, optional but recommended)
 - Alpaca latest available quote (`VITE_ALPACA_API_KEY` and secret)
 - Local deterministic scoring; no paid AI dependency
+- Mid-cap (`$2B–$10B`) and large-cap (`$10B+`) earnings only
 
 Set `SEC_USER_AGENT` in Render and GitHub Actions to a descriptive value containing a contact email:
 
