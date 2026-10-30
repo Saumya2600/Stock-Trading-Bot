@@ -6,6 +6,7 @@ import state
 from utils import is_market_open, seconds_until_market_open
 from research import run_research_cycle
 from longterm import generate_longterm_picks, trigger_longterm_async, DEFAULT_PICKS_DATA
+from overnight_analysis import run_overnight_refresh
 
 # Initialize longterm picks if empty
 state.load_longterm_picks()
@@ -58,6 +59,26 @@ def get_longterm_picks():
         state.longterm_data = dict(DEFAULT_PICKS_DATA)
         state.save_longterm_picks()
     return state.longterm_data
+
+@api.get("/overnight_analysis")
+def get_overnight_analysis():
+    return state.overnight_analysis
+
+@api.get("/overnight_analysis/status")
+def get_overnight_analysis_status():
+    analysis = state.overnight_analysis
+    return {
+        "status": analysis.get("status", "idle"),
+        "last_refresh": analysis.get("last_refresh"),
+        "last_attempt": analysis.get("last_attempt"),
+        "error": analysis.get("error"),
+        "event_count": len(analysis.get("events", [])),
+    }
+
+@api.post("/overnight_analysis/refresh")
+def trigger_overnight_analysis():
+    threading.Thread(target=run_overnight_refresh, daemon=True).start()
+    return {"status": "overnight refresh triggered", "timestamp": datetime.now().isoformat()}
 
 @api.post("/trigger_longterm")
 def trigger_longterm():

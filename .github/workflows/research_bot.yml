@@ -42,11 +42,14 @@ jobs:
           VITE_ALPACA_SECRET_KEY: ${{ secrets.VITE_ALPACA_SECRET_KEY }}
           VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
           VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
+          SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
         timeout-minutes: 15
         run: |
           cd backend
           echo "Running RESEARCH..."
           python run_research.py
+          echo "Running OVERNIGHT ANALYSIS..."
+          python run_overnight.py
 
       - name: Sync and Push Results
         run: |
@@ -60,6 +63,8 @@ jobs:
           cp backend/app_state.json frontend/public/app_state.json || true
           cp backend/longterm_picks.json ./longterm_picks.json || true
           cp backend/longterm_picks.json frontend/public/longterm_picks.json || true
+          cp backend/overnight_analysis.json ./overnight_analysis.json || true
+          cp backend/overnight_analysis.json frontend/public/overnight_analysis.json || true
 
           git add backend/*.json
           git add frontend/public/*.json

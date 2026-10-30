@@ -6,6 +6,14 @@ trade_history = []
 reddit_cache = {}
 low_cache = {}
 longterm_data = {}
+overnight_analysis = {
+    "events": [],
+    "status": "idle",
+    "last_refresh": None,
+    "last_attempt": None,
+    "error": None,
+    "sources": {}
+}
 portfolio_performance = {
     "bot_roi": 0.0,
     "spy_roi": 0.0,
@@ -27,6 +35,7 @@ STATE_FILE = os.path.join(BASE_DIR, "app_state.json")
 REDDIT_CACHE_FILE = os.path.join(BASE_DIR, "reddit_cache.json")
 LOW_CACHE_FILE = os.path.join(BASE_DIR, "low_cache.json")
 LONGTERM_PICKS_FILE = os.path.join(BASE_DIR, "longterm_picks.json")
+OVERNIGHT_ANALYSIS_FILE = os.path.join(BASE_DIR, "overnight_analysis.json")
 
 def save_json(obj, path):
     try:
@@ -115,3 +124,13 @@ def save_longterm_picks():
 def load_longterm_picks():
     global longterm_data
     longterm_data.update(load_json(LONGTERM_PICKS_FILE, {}))
+
+def save_overnight_analysis():
+    save_json(overnight_analysis, OVERNIGHT_ANALYSIS_FILE)
+    public_path = os.path.join(FRONTEND_PUBLIC_DIR, os.path.basename(OVERNIGHT_ANALYSIS_FILE))
+    save_json(overnight_analysis, public_path)
+
+def load_overnight_analysis():
+    data = load_json(OVERNIGHT_ANALYSIS_FILE, {})
+    if isinstance(data, dict):
+        overnight_analysis.update(data)

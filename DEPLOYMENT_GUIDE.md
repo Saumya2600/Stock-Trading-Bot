@@ -115,6 +115,29 @@ VITE_API_BASE_URL=https://stock-trading-bot.onrender.com
 
 Do not include a trailing slash. Vercel frontend then reads live research, positions, performance, long-term picks, and trade history from Render.
 
+### Free overnight earnings analysis
+
+Sidebar **Overnight Earnings** is read-only. It uses no paid provider and never submits broker orders:
+
+- Finnhub free earnings calendar and headlines (`FINNHUB_KEY`)
+- SEC EDGAR filing links (`SEC_USER_AGENT`, optional but recommended)
+- Alpaca latest available quote (`VITE_ALPACA_API_KEY` and secret)
+- Local deterministic scoring; no paid AI dependency
+
+Set `SEC_USER_AGENT` in Render and GitHub Actions to a descriptive value containing a contact email:
+
+```text
+Stock-Trading-Bot contact: you@example.com
+```
+
+Endpoints:
+
+- `GET /overnight_analysis`
+- `GET /overnight_analysis/status`
+- `POST /overnight_analysis/refresh`
+
+SEC is free, but filing data can arrive after company release. Finnhub calendar remains event source; SEC provides official filing verification links. GitHub Actions syncs `overnight_analysis.json` as a static fallback. Render refreshes during `4:00–9:00 AM` and `4:00–8:00 PM` US/Eastern on weekdays.
+
 Create your account in Supabase Authentication → Users. Disable public sign-ups and list your exact account email in `DASHBOARD_ALLOWED_EMAILS`. The anon key is public; never use Supabase service-role key in frontend or Vercel proxy.
 
 Alpaca credentials stay server-side in Vercel. Remove `VITE_ALPACA_API_KEY` and `VITE_ALPACA_SECRET_KEY` from Vercel frontend variables. If previously deployed frontend included those keys, rotate them in Alpaca, then update GitHub Actions and Vercel values. Run locally with `npx vercel dev`; plain `npm run dev` does not serve `/api/*` functions.

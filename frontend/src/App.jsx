@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
-import { X, PanelLeftClose, PanelLeft, Search, LineChart as ChartIcon, Brain, FileText, Globe, Database, LogOut } from 'lucide-react';
+import { X, PanelLeftClose, PanelLeft, Search, LineChart as ChartIcon, Brain, FileText, Globe, Database, LogOut, Moon } from 'lucide-react';
 import { AdvancedRealTimeChart } from "react-ts-tradingview-widgets";
 
 import { AppProvider, useApp } from './context/AppContext';
@@ -8,6 +8,7 @@ import MarketPage from './pages/MarketPage';
 import TradeHistoryPage from './pages/TradeHistoryPage';
 import SearchPage from './pages/SearchPage';
 import PicksHistoryPage from './pages/PicksHistoryPage';
+import OvernightPage from './pages/OvernightPage';
 import ExpandableReportCards from '@/components/ExpandableReportCards';
 import DashboardAuthGate from './components/DashboardAuthGate';
 import { useDashboardAuth } from './components/dashboardAuthContext';
@@ -48,6 +49,7 @@ function Sidebar({ isOpen, onClose }) {
     { to: '/search', icon: <Search size={18} />, label: 'Search' },
     { to: '/reports', icon: <FileText size={18} />, label: 'Deep Research' },
     { to: '/picks', icon: <Database size={18} />, label: 'Picks History' },
+    { to: '/overnight', icon: <Moon size={18} />, label: 'Overnight Earnings' },
     { to: '/market', icon: <Globe size={18} />, label: 'Market' },
     { to: '/history', icon: <ChartIcon size={18} />, label: 'Trade History' },
   ];
@@ -242,6 +244,7 @@ function AppShell() {
           <Route path="/search" element={<SearchPage />} />
           <Route path="/reports" element={<ReportsPage />} />
           <Route path="/picks" element={<PicksHistoryPage />} />
+          <Route path="/overnight" element={<OvernightPage />} />
           <Route path="/market" element={<MarketPage />} />
           <Route path="/history" element={<TradeHistoryPage />} />
         </Routes>

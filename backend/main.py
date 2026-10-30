@@ -7,6 +7,7 @@ from lumibot.traders import Trader
 from config import ALPACA_CREDS
 import state
 from research import research_scheduler
+from overnight_analysis import overnight_scheduler
 from strategy import DeepResearchBot
 from server import api
 
@@ -28,8 +29,10 @@ if __name__ == "__main__":
     state.load_reddit_cache()
     state.load_low_cache()
     state.load_longterm_picks()
+    state.load_overnight_analysis()
 
     threading.Thread(target=research_scheduler, daemon=True).start()
+    threading.Thread(target=overnight_scheduler, daemon=True).start()
     threading.Thread(target=start_bot, daemon=True).start()
     print("[ONLINE] Autonomous Research Bot - ONLINE")
     print("[PERFORMANCE] Tracking performance vs SPY...")
