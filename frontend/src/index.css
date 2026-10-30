@@ -279,6 +279,35 @@ body {
   padding: 0.8rem 1rem;
   font-size: 0.82rem;
 }
+.overnight-view-tabs {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+.overnight-view-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 9px;
+  background: rgba(255,255,255,0.03);
+  color: var(--on-surface-variant);
+  padding: 0.6rem 0.8rem;
+  font: inherit;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+.overnight-view-tab.active {
+  color: var(--on-surface);
+  border-color: rgba(87,188,255,0.45);
+  background: rgba(87,188,255,0.1);
+}
+.calendar-session {
+  color: #57bcff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
 .overnight-status-row { gap: 0.5rem; color: var(--on-surface-variant); font-size: 0.78rem; }
 .overnight-status-row .label-sm { margin-left: auto; }
 .overnight-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1rem; margin-top: 0.8rem; }

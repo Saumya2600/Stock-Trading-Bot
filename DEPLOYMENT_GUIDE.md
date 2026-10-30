@@ -136,7 +136,7 @@ Endpoints:
 - `GET /overnight_analysis/status`
 - `POST /overnight_analysis/refresh`
 
-SEC is free, but filing data can arrive after company release. Finnhub calendar remains event source; SEC provides official filing verification links. GitHub Actions syncs `overnight_analysis.json` as a static fallback. Render refreshes during `4:00–9:00 AM` and `4:00–8:00 PM` US/Eastern on weekdays.
+SEC is free, but filing data can arrive after company release. Finnhub calendar remains event source; SEC provides official filing verification links. GitHub Actions syncs `overnight_analysis.json` as a static fallback. Render refreshes during `4:00–9:00 AM` and `4:00–8:00 PM` US/Eastern on weekdays. Upcoming calendar covers next seven days.
 
 Create your account in Supabase Authentication → Users. Disable public sign-ups and list your exact account email in `DASHBOARD_ALLOWED_EMAILS`. The anon key is public; never use Supabase service-role key in frontend or Vercel proxy.
 

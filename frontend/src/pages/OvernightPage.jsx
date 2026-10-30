@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { ExternalLink, Moon, RefreshCw, ShieldCheck, TrendingUp } from 'lucide-react';
+import { CalendarDays, ExternalLink, Moon, RefreshCw, ShieldCheck, TrendingUp } from 'lucide-react';
 
 const API_BASE = import.meta.env.VITE_API_BASE_URL || '';
 const STATIC_BACKEND = !API_BASE || API_BASE.includes('githubusercontent.com');
@@ -84,11 +84,54 @@ function EventCard({ event }) {
   );
 }
 
+function UpcomingCalendarCard({ event }) {
+  const eventDate = new Date(`${event.earnings_date}T12:00:00`);
+  const dateLabel = eventDate.toLocaleDateString('en-US', {
+    weekday: 'short',
+    month: 'short',
+    day: 'numeric',
+  });
+
+  return (
+    <article className="glass-card overnight-card calendar-card">
+      <div className="overnight-card-header">
+        <div>
+          <div className="ticker">{event.symbol}</div>
+          <div className="label-md" style={{ marginTop: '0.3rem' }}>{dateLabel}</div>
+        </div>
+        <div className="calendar-session">{event.session === 'UNKNOWN' ? 'TIME TBD' : event.session}</div>
+      </div>
+      <div className="overnight-metrics">
+        <div>
+          <span className="label-sm">EPS estimate</span>
+          <strong>{formatNumber(event.eps_estimate)}</strong>
+        </div>
+        <div>
+          <span className="label-sm">Revenue estimate</span>
+          <strong>{formatNumber(event.revenue_estimate, 0)}</strong>
+        </div>
+        <div>
+          <span className="label-sm">Status</span>
+          <strong style={{ color: '#57bcff' }}>Scheduled</strong>
+        </div>
+        <div>
+          <span className="label-sm">Analysis</span>
+          <strong>Not released</strong>
+        </div>
+      </div>
+      <div className="overnight-card-footer">
+        <span className="label-sm">Calendar estimate · no order</span>
+      </div>
+    </article>
+  );
+}
+
 export default function OvernightPage() {
   const [data, setData] = useState({ events: [], status: 'idle', sources: {} });
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
   const [error, setError] = useState(null);
+  const [viewMode, setViewMode] = useState('analysis');
 
   const load = useCallback(async () => {
     setLoading(true);
@@ -161,6 +204,25 @@ export default function OvernightPage() {
         <span><strong>Analysis only.</strong> This page never buys, sells, or calls broker order APIs.</span>
       </div>
 
+      <div className="overnight-view-tabs" role="tablist" aria-label="Overnight earnings views">
+        <button
+          className={`overnight-view-tab ${viewMode === 'analysis' ? 'active' : ''}`}
+          onClick={() => setViewMode('analysis')}
+          role="tab"
+          aria-selected={viewMode === 'analysis'}
+        >
+          <Moon size={14} /> Overnight analysis
+        </button>
+        <button
+          className={`overnight-view-tab ${viewMode === 'calendar' ? 'active' : ''}`}
+          onClick={() => setViewMode('calendar')}
+          role="tab"
+          aria-selected={viewMode === 'calendar'}
+        >
+          <CalendarDays size={14} /> Upcoming calendar · 7 days
+        </button>
+      </div>
+
       <div className="overnight-status-row">
         <span className={`status-dot ${data.status === 'error' ? 'offline' : 'online'}`} />
         <span>{data.status === 'refreshing' ? 'Refreshing free data…' : `Data ${data.status}`}</span>
@@ -170,7 +232,7 @@ export default function OvernightPage() {
       {error && <div className="glass-card overnight-error">{error}</div>}
       {data.error && !error && <div className="glass-card overnight-error">{data.error}</div>}
 
-      {!loading && released.length > 0 && (
+      {viewMode === 'analysis' && !loading && released.length > 0 && (
         <section>
           <div className="overnight-section-heading">
             <h2 className="headline-md">Released</h2>
@@ -180,7 +242,7 @@ export default function OvernightPage() {
         </section>
       )}
 
-      {!loading && upcoming.length > 0 && (
+      {viewMode === 'analysis' && !loading && upcoming.length > 0 && (
         <section>
           <div className="overnight-section-heading">
             <h2 className="headline-md">Upcoming</h2>
@@ -190,12 +252,26 @@ export default function OvernightPage() {
         </section>
       )}
 
+      {viewMode === 'calendar' && !loading && upcoming.length > 0 && (
+        <section>
+          <div className="overnight-section-heading">
+            <h2 className="headline-md">Upcoming earnings calendar</h2>
+            <span className="label-md">{upcoming.length} scheduled</span>
+          </div>
+          <div className="overnight-grid">
+            {upcoming.map(event => <UpcomingCalendarCard key={`${event.symbol}-${event.earnings_date}`} event={event} />)}
+          </div>
+        </section>
+      )}
+
       {loading && <div className="glass-card overnight-empty">Loading free earnings data…</div>}
-      {!loading && !released.length && !upcoming.length && (
+      {!loading && ((viewMode === 'analysis' && !released.length && !upcoming.length) || (viewMode === 'calendar' && !upcoming.length)) && (
         <div className="glass-card overnight-empty">
           <TrendingUp size={28} style={{ opacity: 0.35 }} />
-          <h2 className="headline-md">No events found</h2>
-          <p>Finnhub calendar returned no earnings for this window. Check API key and refresh during earnings hours.</p>
+          <h2 className="headline-md">{viewMode === 'calendar' ? 'No upcoming earnings found' : 'No released events found'}</h2>
+          <p>{viewMode === 'calendar'
+            ? 'Finnhub returned no scheduled earnings for next seven days. Check API key and refresh.'
+            : 'No released earnings in current data. Open Upcoming calendar to see scheduled events.'}</p>
         </div>
       )}
 

@@ -85,14 +85,14 @@ def _sec_headers():
 
 
 def fetch_earnings_calendar():
-    """Fetch yesterday through tomorrow so AMC results and upcoming events coexist."""
+    """Fetch recent releases plus next seven days of scheduled earnings."""
     if not FINNHUB_KEY:
         raise RuntimeError("FINNHUB_KEY missing; free earnings calendar unavailable")
 
     today = datetime.now(EASTERN).date()
     params = {
         "from": (today - timedelta(days=1)).isoformat(),
-        "to": (today + timedelta(days=1)).isoformat(),
+        "to": (today + timedelta(days=7)).isoformat(),
     }
     data = _request_json(
         FINNHUB_CALENDAR_URL,
