@@ -29,6 +29,9 @@ function EventCard({ event }) {
   const color = signalColor(event.signal);
   const hasResults = event.status === 'released';
   const priceColor = Number(event.after_hours_change_pct) >= 0 ? GREEN : RED;
+  const scoreLabel = hasResults && event.score !== null && event.score !== undefined
+    ? `Score ${event.score}`
+    : 'Score pending';
 
   return (
     <article className="glass-card overnight-card">
@@ -40,8 +43,8 @@ function EventCard({ event }) {
           </div>
         </div>
         <div style={{ textAlign: 'right' }}>
-          <div style={{ color, fontWeight: 800, fontSize: '0.8rem' }}>{event.signal}</div>
-          <div className="label-md" style={{ marginTop: '0.3rem' }}>Score {event.score}</div>
+          <div style={{ color, fontWeight: 800, fontSize: '0.8rem' }}>{hasResults ? event.signal : 'SCHEDULED'}</div>
+          <div className="label-md" style={{ marginTop: '0.3rem' }}>{scoreLabel}</div>
         </div>
       </div>
 
@@ -182,6 +185,14 @@ export default function OvernightPage() {
 
   const released = useMemo(() => data.events.filter(event => event.status === 'released'), [data.events]);
   const upcoming = useMemo(() => data.events.filter(event => event.status === 'upcoming'), [data.events]);
+  const upcomingByDate = useMemo(() => {
+    return upcoming.reduce((groups, event) => {
+      groups[event.earnings_date] = groups[event.earnings_date] || [];
+      groups[event.earnings_date].push(event);
+      return groups;
+    }, {});
+  }, [upcoming]);
+  const calendarDays = useMemo(() => Object.keys(upcomingByDate).sort(), [upcomingByDate]);
 
   return (
     <div className="page-enter overnight-page">
@@ -193,10 +204,19 @@ export default function OvernightPage() {
           </div>
           <p className="hub-subtitle">After-hours earnings analysis · no orders</p>
         </div>
-        <button className="apple-btn apple-btn-secondary" onClick={refresh} disabled={refreshing || loading}>
-          <RefreshCw size={14} style={{ animation: refreshing ? 'spin 1s linear infinite' : 'none' }} />
-          Refresh
-        </button>
+        <div className="overnight-hero-actions">
+          <button
+            className="apple-btn apple-btn-secondary"
+            onClick={() => setViewMode('calendar')}
+            type="button"
+          >
+            <CalendarDays size={14} /> Earnings calendar
+          </button>
+          <button className="apple-btn apple-btn-secondary" onClick={refresh} disabled={refreshing || loading} type="button">
+            <RefreshCw size={14} style={{ animation: refreshing ? 'spin 1s linear infinite' : 'none' }} />
+            Refresh
+          </button>
+        </div>
       </header>
 
       <div className="overnight-safety-banner">
@@ -258,8 +278,28 @@ export default function OvernightPage() {
             <h2 className="headline-md">Upcoming earnings calendar</h2>
             <span className="label-md">{upcoming.length} scheduled</span>
           </div>
-          <div className="overnight-grid">
-            {upcoming.map(event => <UpcomingCalendarCard key={`${event.symbol}-${event.earnings_date}`} event={event} />)}
+          <div className="overnight-day-list">
+            {calendarDays.map(day => {
+              const dateLabel = new Date(`${day}T12:00:00`).toLocaleDateString('en-US', {
+                weekday: 'long',
+                month: 'long',
+                day: 'numeric',
+              });
+              return (
+                <div key={day} className="overnight-day-group">
+                  <div className="overnight-day-heading">
+                    <CalendarDays size={15} />
+                    <h3>{dateLabel}</h3>
+                    <span className="label-md">{upcomingByDate[day].length} scheduled</span>
+                  </div>
+                  <div className="overnight-grid">
+                    {upcomingByDate[day].map(event => (
+                      <UpcomingCalendarCard key={`${event.symbol}-${event.earnings_date}`} event={event} />
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </section>
       )}

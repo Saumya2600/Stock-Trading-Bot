@@ -259,7 +259,7 @@ body {
 }
 
 .overnight-page { gap: 1.5rem; }
-.overnight-hero, .overnight-card-header, .overnight-card-footer, .overnight-status-row, .overnight-section-heading {
+.overnight-hero, .overnight-hero-actions, .overnight-card-header, .overnight-card-footer, .overnight-status-row, .overnight-section-heading {
   display: flex;
   align-items: center;
 }
@@ -268,6 +268,7 @@ body {
   gap: 1rem;
 }
 .overnight-title-row { display: flex; align-items: center; gap: 0.7rem; }
+.overnight-hero-actions { display: flex; align-items: center; gap: 0.6rem; }
 .overnight-safety-banner {
   display: flex;
   align-items: center;
@@ -308,6 +309,11 @@ body {
   font-weight: 700;
   letter-spacing: 0.05em;
 }
+.overnight-day-list { display: flex; flex-direction: column; gap: 1.5rem; margin-top: 0.8rem; }
+.overnight-day-group { display: flex; flex-direction: column; gap: 0.6rem; }
+.overnight-day-heading { display: flex; align-items: center; gap: 0.5rem; color: #57bcff; }
+.overnight-day-heading h3 { margin: 0; color: var(--on-surface); font-size: 0.95rem; }
+.overnight-day-heading .label-md { margin-left: auto; }
 .overnight-status-row { gap: 0.5rem; color: var(--on-surface-variant); font-size: 0.78rem; }
 .overnight-status-row .label-sm { margin-left: auto; }
 .overnight-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1rem; margin-top: 0.8rem; }
@@ -562,6 +568,8 @@ body {
 @media (max-width: 768px) {
   .overnight-hero { align-items: flex-start; }
   .overnight-hero, .overnight-sources { flex-direction: column; align-items: flex-start; }
+  .overnight-hero-actions { width: 100%; }
+  .overnight-hero-actions .apple-btn { flex: 1; justify-content: center; }
   .overnight-status-row { align-items: flex-start; flex-wrap: wrap; }
   .overnight-status-row .label-sm { width: 100%; margin-left: 1.2rem; }
   .overnight-grid { grid-template-columns: 1fr; }

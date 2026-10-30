@@ -288,12 +288,29 @@ def _guidance_from_headlines(headlines):
 
 
 def _score_event(event):
+    if event.get("status") == "upcoming":
+        event["score"] = None
+        event["signal"] = "SCHEDULED"
+        event["summary"] = "Upcoming earnings; no released results yet."
+        return
+
     score = 50.0
     reasons = []
     eps_surprise = event.get("eps_surprise_pct")
     revenue_surprise = event.get("revenue_surprise_pct")
     price_change = event.get("after_hours_change_pct")
     guidance = event.get("guidance_direction")
+    has_evidence = any((
+        eps_surprise is not None,
+        revenue_surprise is not None,
+        guidance in {"RAISED", "LOWERED", "MAINTAINED"},
+        price_change is not None,
+    ))
+    if not has_evidence:
+        event["score"] = None
+        event["signal"] = "INSUFFICIENT DATA"
+        event["summary"] = "Released event has no verified result or price data yet."
+        return
 
     if eps_surprise is not None:
         contribution = max(-25, min(25, eps_surprise * 2))
