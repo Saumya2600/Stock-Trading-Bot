@@ -160,9 +160,13 @@ export function AppProvider({ children }) {
         } catch (_) {}
       }
     };
+    window.addEventListener('refresh-dashboard-data', fetchBotData);
     fetchBotData();
     const interval = setInterval(fetchBotData, 5000);
-    return () => clearInterval(interval);
+    return () => {
+      clearInterval(interval);
+      window.removeEventListener('refresh-dashboard-data', fetchBotData);
+    };
   }, [API_BASE, isServerless, API_BASE_RAW]);
 
   // Auto-save picks to Supabase (debounced 2 s after reports change)

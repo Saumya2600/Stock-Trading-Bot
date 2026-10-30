@@ -74,6 +74,7 @@ export default function DashboardAuthGate({ children }) {
         await supabase.auth.signOut({ scope: 'local' });
         return;
       }
+      window.dispatchEvent(new Event('refresh-dashboard-data'));
       setPassword('');
     } catch (reason) {
       setError(reason.message);

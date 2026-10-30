@@ -34,8 +34,8 @@ const ReportCard = ({ symbol, data }) => {
       <div className="glass-card-inner-shadow" />
       
       {/* Header / Summary View */}
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer' }} onClick={() => setIsExpanded(!isExpanded)}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', flex: 1 }}>
+      <div className="report-card-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer' }} onClick={() => setIsExpanded(!isExpanded)}>
+        <div className="report-card-summary" style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', flex: 1 }}>
           <div style={{ position: 'relative' }}>
              <div className="ticker" style={{ fontSize: '2rem' }}>{symbol}</div>
              <div style={{ 
@@ -55,7 +55,7 @@ const ReportCard = ({ symbol, data }) => {
             </div>
           </div>
 
-          <div style={{ display: 'flex', gap: '2rem', marginRight: '2rem' }}>
+          <div className="report-card-metrics" style={{ display: 'flex', gap: '2rem', marginRight: '2rem' }}>
              <div style={{ textAlign: 'right' }}>
                 <div className="label-sm">Current</div>
                 <div className="headline-sm" style={{ fontSize: '1rem' }}>${price.toFixed(2)}</div>

@@ -41,7 +41,7 @@ body {
 .label-md { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--on-surface-variant); }
 .label-sm { font-size: 0.65rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--on-surface-variant); }
 
-.app-container { display: flex; min-height: 100vh; }
+.app-container { display: flex; min-height: 100vh; min-width: 0; overflow-x: hidden; }
 
 .sidebar {
   width: 260px;
@@ -242,6 +242,7 @@ body {
 
 .main-content {
   flex: 1;
+  min-width: 0;
   padding: 3rem 4rem;
   display: flex;
   flex-direction: column;
@@ -525,6 +526,7 @@ body {
   }
 
   .main-content { padding: 5rem 1.25rem 2rem; }
+  .main-content > * { min-width: 0; max-width: 100%; }
   .display-lg { font-size: 2.25rem; }
   .headline-sm { font-size: 1.15rem; }
   
@@ -547,8 +549,8 @@ body {
   }
 
   .modal-chart {
-    height: 380px;
-    min-height: 340px;
+    height: min(52vh, 380px);
+    min-height: 260px;
     margin-bottom: 1rem;
   }
 
@@ -568,6 +570,36 @@ body {
 
   .hero-bento {
     grid-template-columns: 1fr !important;
+  }
+
+  .report-card-header {
+    align-items: flex-start !important;
+    gap: 0.75rem;
+  }
+
+  .report-card-summary {
+    align-items: flex-start !important;
+    gap: 0.75rem !important;
+    min-width: 0;
+  }
+
+  .report-card-summary > div:nth-child(2) {
+    min-width: 0;
+  }
+
+  .report-card-summary .headline-md,
+  .report-card-summary .label-sm {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .report-card-metrics {
+    display: none !important;
+  }
+
+  .report-card-header > button {
+    flex: 0 0 auto;
   }
 }
 
