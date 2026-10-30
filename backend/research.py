@@ -493,16 +493,32 @@ def run_research_cycle(force=False, manual_reason=None):
     safe_print("[RESEARCH] Deep research cycle complete.")
 
 def research_scheduler():
-    from utils import get_ast_now
-    safe_print(f"[SCHEDULER] Research scheduler starting (Automatic Mode). Current AST: {get_ast_now().strftime('%Y-%m-%d %I:%M:%S %p %Z')}")
+    last_slot = None
+    safe_print(f"[SCHEDULER] Research scheduler starting. Current ET: {datetime.now().strftime('%Y-%m-%d %I:%M:%S %p')}")
     while True:
         try:
-            if is_research_window():
-                run_research_cycle()
-            else:
-                ast_time = get_ast_now().strftime('%I:%M %p %Z')
-                safe_print(f"[SCHEDULER] Outside research window (9:30 AM - 5:00 PM ADT). Current: {ast_time}. Sleeping 10m.")
-                time.sleep(600)  # Check every 10 mins
+            eastern = pytz.timezone("US/Eastern")
+            now = datetime.now(tz=pytz.utc).astimezone(eastern)
+            slot = None
+            if now.weekday() < 5:
+                minutes = now.hour * 60 + now.minute
+                if 8 * 60 + 30 <= minutes < 8 * 60 + 45:
+                    slot = "pre_market"
+                elif 16 * 60 <= minutes < 16 * 60 + 15:
+                    slot = "market_close"
+
+            slot_key = f"{now.date()}:{slot}" if slot else None
+            if slot_key and slot_key != last_slot:
+                safe_print(f"[SCHEDULER] Running {slot} research at {now.strftime('%Y-%m-%d %I:%M:%S %p %Z')}")
+                run_research_cycle(force=True, manual_reason=slot)
+                try:
+                    from longterm import generate_longterm_picks
+                    generate_longterm_picks()
+                except Exception as longterm_error:
+                    safe_print(f"[SCHEDULER] Long-term refresh failed: {longterm_error}")
+                last_slot = slot_key
+            elif not slot:
+                safe_print(f"[SCHEDULER] Waiting for 8:30 AM or 4:00 PM ET. Current: {now.strftime('%I:%M %p %Z')}")
         except Exception as e:
             safe_print(f"[SCHEDULER ERROR] {e}")
-        time.sleep(600)  # Standard poll interval: 10 minutes
+        time.sleep(60)

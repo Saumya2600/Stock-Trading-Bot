@@ -52,11 +52,15 @@ export function AppProvider({ children }) {
     const fetchBotData = async () => {
       try {
         const cacheBuster = `?t=${Date.now()}`;
+        const fetchFresh = (url) => fetch(`${url}${url.includes('?') ? '&' : '?'}t=${Date.now()}`, {
+          cache: 'no-store',
+          headers: { 'Cache-Control': 'no-cache' },
+        });
         if (isServerless || !API_BASE_RAW) {
           const [resReports, resState, resLongterm] = await Promise.all([
-            fetch(`${API_BASE}/reports.json${cacheBuster}`).catch(() => ({ ok: false })),
-            fetch(`${API_BASE}/app_state.json${cacheBuster}`).catch(() => ({ ok: false })),
-            fetch(`${API_BASE}/longterm_picks.json${cacheBuster}`).catch(() => ({ ok: false }))
+            fetchFresh(`${API_BASE}/reports.json`).catch(() => ({ ok: false })),
+            fetchFresh(`${API_BASE}/app_state.json`).catch(() => ({ ok: false })),
+            fetchFresh(`${API_BASE}/longterm_picks.json`).catch(() => ({ ok: false }))
           ]);
           if (resReports.ok) {
             const reportsData = await resReports.json();
@@ -77,13 +81,13 @@ export function AppProvider({ children }) {
           setPositions(prev => prev || { positions: [] });
         } else {
           const [resSignals, resResearch, resPerf, resPositions, resStatus, resTrades, resLongterm] = await Promise.all([
-            fetch(`${API_BASE}/signals`),
-            fetch(`${API_BASE}/research`),
-            fetch(`${API_BASE}/performance`),
-            fetch(`${API_BASE}/positions`),
-            fetch(`${API_BASE}/research_status`),
-            fetch(`${API_BASE}/trade_history`),
-            fetch(`${API_BASE}/longterm_picks`)
+            fetchFresh(`${API_BASE}/signals`),
+            fetchFresh(`${API_BASE}/research`),
+            fetchFresh(`${API_BASE}/performance`),
+            fetchFresh(`${API_BASE}/positions`),
+            fetchFresh(`${API_BASE}/research_status`),
+            fetchFresh(`${API_BASE}/trade_history`),
+            fetchFresh(`${API_BASE}/longterm_picks`)
           ].map(p => p.catch(() => ({ ok: false }))));
 
           if (resSignals.ok) setBotSignals(await resSignals.json());

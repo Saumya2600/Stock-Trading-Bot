@@ -21,6 +21,14 @@ api.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+@api.middleware("http")
+async def disable_api_cache(request, call_next):
+    response = await call_next(request)
+    response.headers["Cache-Control"] = "no-store, no-cache, must-revalidate, max-age=0"
+    response.headers["Pragma"] = "no-cache"
+    return response
+
 @api.get("/")
 def health_check():
     return {"status": "online", "message": "Autonomous Alpha Trading Bot API"}

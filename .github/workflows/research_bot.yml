@@ -2,11 +2,9 @@ name: Research Bot (Morning Scan)
 
 on:
   schedule:
-    # Pre-market scan: 8:30 AM EDT / 9:30 AM ADT = 12:30 UTC
+    # Run 1: before market open — 8:30 AM EDT / 9:30 AM ADT = 12:30 UTC
     - cron: '30 12 * * 1-5'
-    # Research before market open: 9:00 AM EDT / 10:00 AM ADT = 13:00 UTC
-    - cron: '0 13 * * 1-5'
-    # Research at market close: 4:00 PM EDT = 20:00 UTC
+    # Run 2: market close — 4:00 PM EDT / 5:00 PM ADT = 20:00 UTC
     - cron: '0 20 * * 1-5'
   workflow_dispatch:
 
@@ -58,6 +56,10 @@ jobs:
           # Sync backend results
           cp backend/reports.json ./reports.json || true
           cp backend/reports.json frontend/public/reports.json || true
+          cp backend/app_state.json ./app_state.json || true
+          cp backend/app_state.json frontend/public/app_state.json || true
+          cp backend/longterm_picks.json ./longterm_picks.json || true
+          cp backend/longterm_picks.json frontend/public/longterm_picks.json || true
 
           git add backend/*.json
           git add frontend/public/*.json
