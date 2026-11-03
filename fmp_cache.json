@@ -1,58 +1,47 @@
 {
-    "AXP": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Credit Services",
-            "pe": 18.48,
-            "peg": 1.32,
-            "debt_to_equity": 1.68,
-            "description": "American Express Company, together with its subsidiaries, operates as an integrated payments company in the United States, Europe, the Middle East and Africa, the Asia Pacific, Australia, New Zealand,..."
-        },
-        "updated_at": "2026-11-02T21:53:49.285418"
-    },
-    "AMZN": {
+    "WYNN": {
         "data": {
             "sector": "Consumer Cyclical",
-            "industry": "Internet Retail",
-            "pe": 19.86,
-            "peg": 1.39,
-            "debt_to_equity": 0.5,
-            "description": "Amazon.com, Inc. engages in the retail sale of consumer products, advertising, and subscriptions service through online and physical stores in North America and internationally. The company operates t..."
-        },
-        "updated_at": "2026-11-02T21:54:13.442005"
-    },
-    "BA": {
-        "data": {
-            "sector": "Industrials",
-            "industry": "Aerospace & Defense",
-            "pe": 18.1,
-            "peg": 1.51,
-            "debt_to_equity": 7.39,
-            "description": "The Boeing Company, together with its subsidiaries, designs, develops, manufactures, sells, services, and supports commercial jetliners, military aircraft, satellites, missile defense, human space fli..."
-        },
-        "updated_at": "2026-11-02T21:54:33.486351"
-    },
-    "SOXL": {
-        "data": {
-            "sector": "Unknown",
-            "industry": "Unknown",
-            "pe": 15.4,
-            "peg": 0,
+            "industry": "Resorts & Casinos",
+            "pe": 18.63,
+            "peg": 0.66,
             "debt_to_equity": 0,
-            "description": "The fund invests at least 80% of its net assets in financial instruments, such as swap agreements, securities of the index, and ETFs that track the index, that, in combination, provide 3X daily levera..."
+            "description": "Wynn Resorts, Limited designs, develops, and operates integrated resorts. It operates in four segments: Wynn Palace, Wynn Macau, Las Vegas Operations, and Encore Boston Harbor. The Wynn Palace segment..."
         },
-        "updated_at": "2026-11-02T21:55:03.401695"
+        "updated_at": "2026-11-03T02:10:50.355010"
     },
-    "USO": {
+    "FCF": {
         "data": {
-            "sector": "Unknown",
-            "industry": "Unknown",
+            "sector": "Financial Services",
+            "industry": "Banks - Regional",
+            "pe": 12.72,
+            "peg": 1.46,
+            "debt_to_equity": 0,
+            "description": "First Commonwealth Financial Corporation, a financial holding company, provides various consumer and commercial banking products and services in the United States. The company's consumer services incl..."
+        },
+        "updated_at": "2026-11-03T02:11:17.332523"
+    },
+    "SNDK": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Computer Hardware",
+            "pe": 8.59,
+            "peg": 0,
+            "debt_to_equity": 0.01,
+            "description": "Sandisk Corporation develops, manufactures, and sells data storage devices and solutions using NAND flash technology in the Americas, Europe, the Middle East, Africa, Asia, and internationally. The co..."
+        },
+        "updated_at": "2026-11-03T02:11:55.933645"
+    },
+    "LITE": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Communication Equipment",
             "pe": 0,
-            "peg": 0,
-            "debt_to_equity": 0,
-            "description": "USO seeks to achieve its investment objective by investing primarily in futures contracts for light, sweet crude oil, other types of crude oil, diesel-heating oil, gasoline, natural gas, and other pet..."
+            "peg": 0.63,
+            "debt_to_equity": 0.36,
+            "description": "Lumentum Holdings Inc. manufactures and sells optical and photonic products in the Americas, the Asia-Pacific, Europe, the Middle East, and Africa. It offers component products, including semiconducto..."
         },
-        "updated_at": "2026-11-02T21:55:33.044028"
+        "updated_at": "2026-11-03T02:12:28.316010"
     },
     "INTC": {
         "data": {
@@ -63,28 +52,39 @@
             "debt_to_equity": 0.38,
             "description": "Intel Corporation designs, develops, manufactures, markets, sells, and services computing and related end products and services in the United States, Ireland, Israel, and internationally. It operates ..."
         },
-        "updated_at": "2026-11-02T21:55:59.132002"
+        "updated_at": "2026-11-03T02:12:58.920981"
     },
-    "ORCL": {
+    "AMZN": {
         "data": {
-            "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 18.69,
-            "peg": 0.73,
-            "debt_to_equity": 2.52,
-            "description": "Oracle Corporation offers products and services that build, run and support enterprise information technology frameworks worldwide. Its Oracle cloud software as a service offering includes various clo..."
+            "sector": "Consumer Cyclical",
+            "industry": "Internet Retail",
+            "pe": 19.86,
+            "peg": 1.39,
+            "debt_to_equity": 0.5,
+            "description": "Amazon.com, Inc. engages in the retail sale of consumer products, advertising, and subscriptions service through online and physical stores in North America and internationally. The company operates t..."
         },
-        "updated_at": "2026-11-02T21:56:24.675700"
+        "updated_at": "2026-11-03T02:13:26.831209"
     },
-    "AAL": {
+    "DIS": {
         "data": {
-            "sector": "Industrials",
-            "industry": "Airlines",
-            "pe": 0,
-            "peg": 0.2,
-            "debt_to_equity": 0,
-            "description": "American Airlines Group Inc., through its subsidiaries, operates as a network air carrier in the United States, Latin America, Atlantic, and Pacific. The company provides scheduled air transportation ..."
+            "sector": "Communication Services",
+            "industry": "Entertainment",
+            "pe": 23.32,
+            "peg": 3.61,
+            "debt_to_equity": 0.39,
+            "description": "The Walt Disney Company operates as an entertainment company in Americas, Europe, and the Asia Pacific. It operates in three segments: Entertainment, Sports, and Experiences. The company produces and ..."
         },
-        "updated_at": "2026-11-02T21:56:54.521203"
+        "updated_at": "2026-11-03T02:14:15.747580"
+    },
+    "META": {
+        "data": {
+            "sector": "Communication Services",
+            "industry": "Internet Content & Information",
+            "pe": 20.7,
+            "peg": 0.8,
+            "debt_to_equity": 0.42,
+            "description": "Meta Platforms, Inc. engages in the development of products that enable people to connect and share with friends and family through mobile devices, personal computers, virtual reality (VR) headsets, a..."
+        },
+        "updated_at": "2026-11-03T02:14:55.553656"
     }
 }
