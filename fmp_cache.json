@@ -1,90 +1,90 @@
 {
-    "NFLX": {
+    "C": {
         "data": {
-            "sector": "Communication Services",
-            "industry": "Entertainment",
-            "pe": 18.21,
-            "peg": 0.98,
-            "debt_to_equity": 0.6,
-            "description": "Netflix, Inc. provides entertainment services worldwide. The company offers television (TV) series, documentaries, feature films, games, and live programming across various genres and languages. It al..."
-        },
-        "updated_at": "2026-11-03T19:43:18.886774"
-    },
-    "AAPL": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Consumer Electronics",
-            "pe": 36.91,
-            "peg": 2.71,
-            "debt_to_equity": 0.78,
-            "description": "Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide. The company offers iPhone, a line of smartphones; Mac, a line of personal ..."
-        },
-        "updated_at": "2026-11-03T19:44:18.976503"
-    },
-    "SBUX": {
-        "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Restaurants",
-            "pe": 47.14,
-            "peg": 1.15,
+            "sector": "Financial Services",
+            "industry": "Banks - Diversified",
+            "pe": 11.96,
+            "peg": 0.51,
             "debt_to_equity": 0,
-            "description": "Starbucks Corporation, together with its subsidiaries, operates as a roaster, marketer, and retailer of coffee internationally. The company operates through three segments: North America, Internationa..."
+            "description": "Citigroup Inc., a diversified financial service holding company, provides various financial products and services to consumers, corporations, governments, and institutions. It operates through five se..."
         },
-        "updated_at": "2026-11-03T19:44:58.108287"
+        "updated_at": "2026-11-04T00:34:15.838687"
     },
-    "SPY": {
+    "JNJ": {
         "data": {
-            "sector": "Unknown",
-            "industry": "Unknown",
-            "pe": 23.97,
-            "peg": 0,
-            "debt_to_equity": 0,
-            "description": "The trust seeks to achieve its investment objective by holding a portfolio of the common stocks that are included in the index (the \u201cPortfolio\u201d), with the weight of each stock in the Portfolio substan..."
+            "sector": "Healthcare",
+            "industry": "Drug Manufacturers - General",
+            "pe": 40.39,
+            "peg": 3.04,
+            "debt_to_equity": 0.55,
+            "description": "Johnson & Johnson, together with its subsidiaries, engages in the research and development, manufacture, and sale of a range of products in the healthcare field worldwide. It operates in two segments,..."
         },
-        "updated_at": "2026-11-03T19:45:31.211777"
+        "updated_at": "2026-11-04T00:34:46.473171"
     },
-    "SMCI": {
+    "SNDK": {
         "data": {
             "sector": "Technology",
             "industry": "Computer Hardware",
-            "pe": 9.76,
-            "peg": 0.91,
-            "debt_to_equity": 0.64,
-            "description": "Super Micro Computer, Inc., together with its subsidiaries, develops and sells server and storage solutions based on modular and open-standard architecture in the United States, Asia, Europe, and inte..."
+            "pe": 9.0,
+            "peg": 0,
+            "debt_to_equity": 0.01,
+            "description": "Sandisk Corporation develops, manufactures, and sells data storage devices and solutions using NAND flash technology in the Americas, Europe, the Middle East, Africa, Asia, and internationally. The co..."
         },
-        "updated_at": "2026-11-03T19:46:01.553261"
+        "updated_at": "2026-11-04T00:35:05.865458"
     },
-    "CSCO": {
+    "SHOP": {
         "data": {
             "sector": "Technology",
-            "industry": "Communication Equipment",
-            "pe": 31.02,
-            "peg": 0.94,
-            "debt_to_equity": 0.62,
-            "description": "Cisco Systems, Inc. designs, develops, and sells technologies to power, help, secure, and draw insights from the internet in the Americas, Europe, the Middle East, Africa, the Asia Pacific, Japan, and..."
+            "industry": "Software - Application",
+            "pe": 96.33,
+            "peg": 2.18,
+            "debt_to_equity": 0.01,
+            "description": "Shopify Inc., a commerce technology company, provides tools to start, scale, market, and run a business of various sizes in Canada, the United States, Europe, the Middle East, Africa, the Asia Pacific..."
         },
-        "updated_at": "2026-11-03T19:46:32.744407"
+        "updated_at": "2026-11-04T00:35:34.273405"
     },
-    "DIS": {
+    "NVDA": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Semiconductors",
+            "pe": 26.13,
+            "peg": 0.25,
+            "debt_to_equity": 0.17,
+            "description": "NVIDIA Corporation operates as a data center scale AI infrastructure company in the United States, Taiwan, China, Hong Kong, Europe, and internationally. It operates through Compute & Networking, and ..."
+        },
+        "updated_at": "2026-11-04T00:35:54.897900"
+    },
+    "TSLA": {
+        "data": {
+            "sector": "Consumer Cyclical",
+            "industry": "Auto Manufacturers",
+            "pe": 437.91,
+            "peg": 4.71,
+            "debt_to_equity": 0.18,
+            "description": "Tesla, Inc. designs, develops, manufactures, leases, and sells electric vehicles, and energy generation and storage systems in the United States, China, and internationally. The company operates in tw..."
+        },
+        "updated_at": "2026-11-04T00:36:18.613302"
+    },
+    "DAL": {
+        "data": {
+            "sector": "Industrials",
+            "industry": "Airlines",
+            "pe": 16.62,
+            "peg": 0.21,
+            "debt_to_equity": 0.89,
+            "description": "Delta Air Lines, Inc. provides scheduled air transportation for passengers and cargo in the United States and internationally. The company operates through two segments, Airline and Refinery. Its dome..."
+        },
+        "updated_at": "2026-11-04T00:36:39.208579"
+    },
+    "IQ": {
         "data": {
             "sector": "Communication Services",
             "industry": "Entertainment",
-            "pe": 23.5,
-            "peg": 3.68,
-            "debt_to_equity": 0.39,
-            "description": "The Walt Disney Company operates as an entertainment company in Americas, Europe, and the Asia Pacific. It operates in three segments: Entertainment, Sports, and Experiences. The company produces and ..."
+            "pe": 0,
+            "peg": 2.48,
+            "debt_to_equity": 1.12,
+            "description": "iQIYI, Inc. provides online entertainment video services in the People's Republic of China. The company operates a platform that provides a collection of internet video content, such as professionally..."
         },
-        "updated_at": "2026-11-03T19:46:59.460762"
-    },
-    "RCL": {
-        "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Travel Services",
-            "pe": 18.57,
-            "peg": 1.29,
-            "debt_to_equity": 1.94,
-            "description": "Royal Caribbean Cruises Ltd. operates as a cruise company worldwide. The company operates cruises under the Royal Caribbean International, Celebrity Cruises, and Silversea Cruises brands, which compri..."
-        },
-        "updated_at": "2026-11-03T19:47:24.459041"
+        "updated_at": "2026-11-04T00:37:37.893330"
     }
 }
