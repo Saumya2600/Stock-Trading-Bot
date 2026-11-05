@@ -2,112 +2,144 @@
     "date": "2026-11-05",
     "lows": [
         {
-            "symbol": "CAT",
-            "name": "CAT"
+            "symbol": "LVS",
+            "name": "LVS"
         },
         {
-            "symbol": "CVX",
-            "name": "CVX"
-        },
-        {
-            "symbol": "MSFT",
-            "name": "MSFT"
-        },
-        {
-            "symbol": "VZ",
-            "name": "VZ"
-        },
-        {
-            "symbol": "WMT",
-            "name": "WMT"
-        },
-        {
-            "symbol": "BA",
-            "name": "BA"
-        },
-        {
-            "symbol": "MGM",
-            "name": "MGM"
-        },
-        {
-            "symbol": "AAPL",
-            "name": "AAPL"
+            "symbol": "WYNN",
+            "name": "WYNN"
         },
         {
             "symbol": "ADBE",
             "name": "ADBE"
         },
         {
-            "symbol": "APA",
-            "name": "APA"
+            "symbol": "BA",
+            "name": "BA"
         },
         {
-            "symbol": "DVN",
-            "name": "DVN"
-        },
-        {
-            "symbol": "INTC",
-            "name": "INTC"
-        },
-        {
-            "symbol": "PYPL",
-            "name": "PYPL"
-        },
-        {
-            "symbol": "SNOW",
-            "name": "SNOW"
-        },
-        {
-            "symbol": "DIS",
-            "name": "DIS"
-        },
-        {
-            "symbol": "AMZN",
-            "name": "AMZN"
-        },
-        {
-            "symbol": "DDOG",
-            "name": "DDOG"
+            "symbol": "CSCO",
+            "name": "CSCO"
         },
         {
             "symbol": "F",
             "name": "F"
         },
         {
+            "symbol": "GM",
+            "name": "GM"
+        },
+        {
+            "symbol": "AMZN",
+            "name": "AMZN"
+        },
+        {
+            "symbol": "UAL",
+            "name": "UAL"
+        },
+        {
+            "symbol": "AAL",
+            "name": "AAL"
+        },
+        {
+            "symbol": "AAPL",
+            "name": "AAPL"
+        },
+        {
+            "symbol": "GS",
+            "name": "GS"
+        },
+        {
+            "symbol": "JNJ",
+            "name": "JNJ"
+        },
+        {
+            "symbol": "NET",
+            "name": "NET"
+        },
+        {
+            "symbol": "PYPL",
+            "name": "PYPL"
+        },
+        {
+            "symbol": "DDOG",
+            "name": "DDOG"
+        },
+        {
+            "symbol": "INTC",
+            "name": "INTC"
+        },
+        {
             "symbol": "MAR",
             "name": "MAR"
         },
         {
-            "symbol": "TSM",
-            "name": "TSM"
-        },
-        {
-            "symbol": "JPM",
-            "name": "JPM"
-        },
-        {
-            "symbol": "T",
-            "name": "T"
+            "symbol": "SCHW",
+            "name": "SCHW"
         },
         {
             "symbol": "ZS",
             "name": "ZS"
         },
         {
+            "symbol": "CAT",
+            "name": "CAT"
+        },
+        {
+            "symbol": "CRM",
+            "name": "CRM"
+        },
+        {
             "symbol": "C",
             "name": "C"
         },
         {
-            "symbol": "NKE",
-            "name": "NKE"
+            "symbol": "MSFT",
+            "name": "MSFT"
         },
         {
             "symbol": "NVDA",
             "name": "NVDA"
         },
         {
+            "symbol": "PFE",
+            "name": "PFE"
+        },
+        {
+            "symbol": "SNOW",
+            "name": "SNOW"
+        },
+        {
+            "symbol": "XOM",
+            "name": "XOM"
+        },
+        {
+            "symbol": "NKE",
+            "name": "NKE"
+        },
+        {
             "symbol": "GOOGL",
             "name": "GOOGL"
+        },
+        {
+            "symbol": "HAL",
+            "name": "HAL"
+        },
+        {
+            "symbol": "MGM",
+            "name": "MGM"
+        },
+        {
+            "symbol": "TSM",
+            "name": "TSM"
+        },
+        {
+            "symbol": "WFC",
+            "name": "WFC"
+        },
+        {
+            "symbol": "GE",
+            "name": "GE"
         },
         {
             "symbol": "BAC",
@@ -118,20 +150,60 @@
             "name": "COP"
         },
         {
-            "symbol": "CSCO",
-            "name": "CSCO"
+            "symbol": "CVX",
+            "name": "CVX"
+        },
+        {
+            "symbol": "NCLH",
+            "name": "NCLH"
+        },
+        {
+            "symbol": "NFLX",
+            "name": "NFLX"
+        },
+        {
+            "symbol": "OXY",
+            "name": "OXY"
+        },
+        {
+            "symbol": "PEP",
+            "name": "PEP"
+        },
+        {
+            "symbol": "TSLA",
+            "name": "TSLA"
+        },
+        {
+            "symbol": "COIN",
+            "name": "COIN"
+        },
+        {
+            "symbol": "SBUX",
+            "name": "SBUX"
+        },
+        {
+            "symbol": "BLK",
+            "name": "BLK"
+        },
+        {
+            "symbol": "BX",
+            "name": "BX"
         },
         {
             "symbol": "KO",
             "name": "KO"
         },
         {
-            "symbol": "PFE",
-            "name": "PFE"
+            "symbol": "PLTR",
+            "name": "PLTR"
         },
         {
-            "symbol": "WYNN",
-            "name": "WYNN"
+            "symbol": "VZ",
+            "name": "VZ"
+        },
+        {
+            "symbol": "DVN",
+            "name": "DVN"
         },
         {
             "symbol": "AMD",
@@ -142,36 +214,44 @@
             "name": "AXP"
         },
         {
-            "symbol": "HAL",
-            "name": "HAL"
+            "symbol": "CCL",
+            "name": "CCL"
         },
         {
-            "symbol": "OXY",
-            "name": "OXY"
+            "symbol": "DIS",
+            "name": "DIS"
         },
         {
-            "symbol": "META",
-            "name": "META"
+            "symbol": "SLB",
+            "name": "SLB"
         },
         {
-            "symbol": "TSLA",
-            "name": "TSLA"
+            "symbol": "DAL",
+            "name": "DAL"
         },
         {
-            "symbol": "CRM",
-            "name": "CRM"
+            "symbol": "MS",
+            "name": "MS"
         },
         {
-            "symbol": "WFC",
-            "name": "WFC"
+            "symbol": "T",
+            "name": "T"
         },
         {
-            "symbol": "PEP",
-            "name": "PEP"
+            "symbol": "WMT",
+            "name": "WMT"
         },
         {
-            "symbol": "XOM",
-            "name": "XOM"
+            "symbol": "APA",
+            "name": "APA"
+        },
+        {
+            "symbol": "JPM",
+            "name": "JPM"
+        },
+        {
+            "symbol": "RCL",
+            "name": "RCL"
         }
     ]
 }

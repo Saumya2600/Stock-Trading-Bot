@@ -1,90 +1,90 @@
 {
-    "MRVL": {
+    "KO": {
         "data": {
-            "sector": "Technology",
-            "industry": "Semiconductors",
-            "pe": 52.57,
-            "peg": 0.42,
-            "debt_to_equity": 0.29,
-            "description": "Marvell Technology, Inc., together with its subsidiaries, provides data infrastructure semiconductor solutions and spanning the data center core to network edge in the United States, Argentina, China,..."
+            "sector": "Consumer Defensive",
+            "industry": "Beverages - Non-Alcoholic",
+            "pe": 28.24,
+            "peg": 3.99,
+            "debt_to_equity": 1.07,
+            "description": "The Coca-Cola Company, a beverage company, manufactures and sells various nonalcoholic beverages in the United States and internationally. The company provides Trademark Coca-Cola, sparkling soft drin..."
         },
-        "updated_at": "2026-11-05T00:52:08.458167"
+        "updated_at": "2026-11-05T20:12:49.011071"
     },
-    "MSFT": {
+    "DAL": {
         "data": {
-            "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 29.01,
-            "peg": 1.54,
-            "debt_to_equity": 0.28,
-            "description": "Microsoft Corporation, a technology company, develops and supports a portfolio of technology solutions for individuals and businesses worldwide. Its products include operating systems, server applicat..."
+            "sector": "Industrials",
+            "industry": "Airlines",
+            "pe": 17.01,
+            "peg": 0.21,
+            "debt_to_equity": 0.89,
+            "description": "Delta Air Lines, Inc. provides scheduled air transportation for passengers and cargo in the United States and internationally. The company operates through two segments, Airline and Refinery. Its dome..."
         },
-        "updated_at": "2026-11-05T00:52:32.290322"
+        "updated_at": "2026-11-05T20:13:14.399860"
     },
-    "AMZN": {
-        "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Internet Retail",
-            "pe": 21.51,
-            "peg": 1.17,
-            "debt_to_equity": 0.5,
-            "description": "Amazon.com, Inc. engages in the retail sale of consumer products, advertising, and subscriptions service through online and physical stores in North America and internationally. The company operates t..."
-        },
-        "updated_at": "2026-11-05T00:52:54.532550"
-    },
-    "AXP": {
+    "MS": {
         "data": {
             "sector": "Financial Services",
-            "industry": "Credit Services",
-            "pe": 18.74,
-            "peg": 1.35,
-            "debt_to_equity": 1.68,
-            "description": "American Express Company, together with its subsidiaries, operates as an integrated payments company in the United States, Europe, the Middle East and Africa, the Asia Pacific, Australia, New Zealand,..."
+            "industry": "Capital Markets",
+            "pe": 14.49,
+            "peg": 1.62,
+            "debt_to_equity": 5.17,
+            "description": "Morgan Stanley, a financial holding company, provides various financial products and services to corporations, governments, financial institutions, and individuals in the Americas, Asia, Europe, the M..."
         },
-        "updated_at": "2026-11-05T00:53:15.696986"
+        "updated_at": "2026-11-05T20:13:54.094359"
     },
-    "QQQ": {
+    "SOXS": {
         "data": {
             "sector": "Unknown",
             "industry": "Unknown",
-            "pe": 26.5,
+            "pe": 0,
             "peg": 0,
             "debt_to_equity": 0,
-            "description": "To maintain the correspondence between the composition and weights of the securities in the trust (the \"securities\") and the stocks in the NASDAQ-100 Index\u00ae, the adviser adjusts the securities from ti..."
+            "description": "The fund invests at least 80% of the fund\u2019s net assets in financial instruments, that, in combination, provide 3X daily inverse (opposite) or short exposure to the index or to ETFs that track the inde..."
         },
-        "updated_at": "2026-11-05T00:53:41.303798"
+        "updated_at": "2026-11-05T20:14:27.716242"
     },
-    "PFE": {
+    "BLK": {
+        "data": {
+            "sector": "Financial Services",
+            "industry": "Asset Management",
+            "pe": 26.67,
+            "peg": 0.96,
+            "debt_to_equity": 0.23,
+            "description": "BlackRock, Inc. is a publicly owned investment manager. The firm primarily provides its services to institutional, intermediary, and individual investors including corporate, public, union, and indust..."
+        },
+        "updated_at": "2026-11-05T20:14:54.935711"
+    },
+    "WAY": {
         "data": {
             "sector": "Healthcare",
-            "industry": "Drug Manufacturers - General",
-            "pe": 43.99,
-            "peg": 13.75,
-            "debt_to_equity": 0.74,
-            "description": "Pfizer Inc. discovers, develops, manufactures, markets, distributes, and sells biopharmaceutical products in the United States and internationally. It operates in three segments: Biopharma, PC1, and P..."
+            "industry": "Health Information Services",
+            "pe": 41.48,
+            "peg": 0,
+            "debt_to_equity": 0.37,
+            "description": "Waystar Holding Corp. develops a cloud-based software solution for healthcare payments. Its platform offers financial clearance, patient financial care, claim and payer payment management, denials pre..."
         },
-        "updated_at": "2026-11-05T00:54:12.618273"
+        "updated_at": "2026-11-05T20:15:22.811884"
     },
-    "T": {
-        "data": {
-            "sector": "Communication Services",
-            "industry": "Telecom Services",
-            "pe": 11.67,
-            "peg": 1.26,
-            "debt_to_equity": 1.45,
-            "description": "AT&T Inc. provides telecommunications and technology services worldwide. It operates through two segments, Communications and Latin America. The Communications segment offers wireless voice and data c..."
-        },
-        "updated_at": "2026-11-05T00:54:45.546234"
-    },
-    "INTC": {
+    "NVDA": {
         "data": {
             "sector": "Technology",
             "industry": "Semiconductors",
-            "pe": 0,
-            "peg": 1.36,
-            "debt_to_equity": 0.38,
-            "description": "Intel Corporation designs, develops, manufactures, markets, sells, and services computing and related end products and services in the United States, Ireland, Israel, and internationally. It operates ..."
+            "pe": 23.1,
+            "peg": 0.25,
+            "debt_to_equity": 0.17,
+            "description": "NVIDIA Corporation operates as a data center scale AI infrastructure company in the United States, Taiwan, China, Hong Kong, Europe, and internationally. It operates through Compute & Networking, and ..."
         },
-        "updated_at": "2026-11-05T00:55:10.798150"
+        "updated_at": "2026-11-05T20:15:48.609607"
+    },
+    "AAOI": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Communication Equipment",
+            "pe": 0,
+            "peg": 0.78,
+            "debt_to_equity": 0.18,
+            "description": "Applied Optoelectronics, Inc. engages in the design, manufacture, and sale of fiber-optic networking products in the United States, Taiwan, and China. The company offers optical modules, optical filte..."
+        },
+        "updated_at": "2026-11-05T20:16:10.664963"
     }
 }
