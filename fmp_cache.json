@@ -1,80 +1,58 @@
 {
-    "KO": {
+    "PLTR": {
         "data": {
-            "sector": "Consumer Defensive",
-            "industry": "Beverages - Non-Alcoholic",
-            "pe": 28.24,
-            "peg": 3.99,
-            "debt_to_equity": 1.07,
-            "description": "The Coca-Cola Company, a beverage company, manufactures and sells various nonalcoholic beverages in the United States and internationally. The company provides Trademark Coca-Cola, sparkling soft drin..."
+            "sector": "Technology",
+            "industry": "Software - Infrastructure",
+            "pe": 109.15,
+            "peg": 1.56,
+            "debt_to_equity": 0.02,
+            "description": "Palantir Technologies Inc. builds and deploys software platforms for the intelligence community to assist in counterterrorism investigations and operations in the United States, the United Kingdom, an..."
         },
-        "updated_at": "2026-11-05T20:12:49.011071"
+        "updated_at": "2026-11-06T00:57:24.506701"
     },
-    "DAL": {
+    "NOW": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Software - Application",
+            "pe": 73.64,
+            "peg": 0.84,
+            "debt_to_equity": 0.64,
+            "description": "ServiceNow, Inc. provides cloud-based solution for digital workflows in the North America, Brazil, Europe, the Middle East and Africa, Asia Pacific, and internationally. The company provides asset man..."
+        },
+        "updated_at": "2026-11-06T00:57:54.316704"
+    },
+    "AMZN": {
+        "data": {
+            "sector": "Consumer Cyclical",
+            "industry": "Internet Retail",
+            "pe": 21.04,
+            "peg": 1.24,
+            "debt_to_equity": 0.5,
+            "description": "Amazon.com, Inc. engages in the retail sale of consumer products, advertising, and subscriptions service through online and physical stores in North America and internationally. The company operates t..."
+        },
+        "updated_at": "2026-11-06T00:58:20.583189"
+    },
+    "BE": {
         "data": {
             "sector": "Industrials",
-            "industry": "Airlines",
-            "pe": 17.01,
-            "peg": 0.21,
-            "debt_to_equity": 0.89,
-            "description": "Delta Air Lines, Inc. provides scheduled air transportation for passengers and cargo in the United States and internationally. The company operates through two segments, Airline and Refinery. Its dome..."
+            "industry": "Electrical Equipment & Parts",
+            "pe": 101.53,
+            "peg": 0.38,
+            "debt_to_equity": 1.42,
+            "description": "Bloom Energy Corporation designs, manufactures, sells, and installs solid oxide fuel cell systems for on-site power generation in the United States and internationally. It offers Bloom Energy Server, ..."
         },
-        "updated_at": "2026-11-05T20:13:14.399860"
+        "updated_at": "2026-11-06T00:58:45.268740"
     },
-    "MS": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Capital Markets",
-            "pe": 14.49,
-            "peg": 1.62,
-            "debt_to_equity": 5.17,
-            "description": "Morgan Stanley, a financial holding company, provides various financial products and services to corporations, governments, financial institutions, and individuals in the Americas, Asia, Europe, the M..."
-        },
-        "updated_at": "2026-11-05T20:13:54.094359"
-    },
-    "SOXS": {
-        "data": {
-            "sector": "Unknown",
-            "industry": "Unknown",
-            "pe": 0,
-            "peg": 0,
-            "debt_to_equity": 0,
-            "description": "The fund invests at least 80% of the fund\u2019s net assets in financial instruments, that, in combination, provide 3X daily inverse (opposite) or short exposure to the index or to ETFs that track the inde..."
-        },
-        "updated_at": "2026-11-05T20:14:27.716242"
-    },
-    "BLK": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Asset Management",
-            "pe": 26.67,
-            "peg": 0.96,
-            "debt_to_equity": 0.23,
-            "description": "BlackRock, Inc. is a publicly owned investment manager. The firm primarily provides its services to institutional, intermediary, and individual investors including corporate, public, union, and indust..."
-        },
-        "updated_at": "2026-11-05T20:14:54.935711"
-    },
-    "WAY": {
-        "data": {
-            "sector": "Healthcare",
-            "industry": "Health Information Services",
-            "pe": 41.48,
-            "peg": 0,
-            "debt_to_equity": 0.37,
-            "description": "Waystar Holding Corp. develops a cloud-based software solution for healthcare payments. Its platform offers financial clearance, patient financial care, claim and payer payment management, denials pre..."
-        },
-        "updated_at": "2026-11-05T20:15:22.811884"
-    },
-    "NVDA": {
+    "AVGO": {
         "data": {
             "sector": "Technology",
             "industry": "Semiconductors",
-            "pe": 23.1,
-            "peg": 0.25,
-            "debt_to_equity": 0.17,
-            "description": "NVIDIA Corporation operates as a data center scale AI infrastructure company in the United States, Taiwan, China, Hong Kong, Europe, and internationally. It operates through Compute & Networking, and ..."
+            "pe": 37.23,
+            "peg": 0.32,
+            "debt_to_equity": 0.6,
+            "description": "Broadcom Inc. designs, develops, and supplies various semiconductor devices and infrastructure software solutions internationally. The company operates in two segments: Semiconductor Solutions and Inf..."
         },
-        "updated_at": "2026-11-05T20:15:48.609607"
+        "updated_at": "2026-11-06T00:59:13.041324"
     },
     "AAOI": {
         "data": {
@@ -85,6 +63,28 @@
             "debt_to_equity": 0.18,
             "description": "Applied Optoelectronics, Inc. engages in the design, manufacture, and sale of fiber-optic networking products in the United States, Taiwan, and China. The company offers optical modules, optical filte..."
         },
-        "updated_at": "2026-11-05T20:16:10.664963"
+        "updated_at": "2026-11-06T00:59:40.213693"
+    },
+    "MA": {
+        "data": {
+            "sector": "Financial Services",
+            "industry": "Credit Services",
+            "pe": 34.32,
+            "peg": 1.75,
+            "debt_to_equity": 3.55,
+            "description": "Mastercard Incorporated, a technology company, provides transaction processing and other payment-related products and services in the United States and internationally. The company offers products and..."
+        },
+        "updated_at": "2026-11-06T01:00:56.314427"
+    },
+    "C": {
+        "data": {
+            "sector": "Financial Services",
+            "industry": "Banks - Diversified",
+            "pe": 11.54,
+            "peg": 0.52,
+            "debt_to_equity": 0,
+            "description": "Citigroup Inc., a diversified financial service holding company, provides various financial products and services to consumers, corporations, governments, and institutions. It operates through five se..."
+        },
+        "updated_at": "2026-11-06T01:01:52.597455"
     }
 }
