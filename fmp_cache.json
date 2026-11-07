@@ -1,90 +1,90 @@
 {
-    "GE": {
-        "data": {
-            "sector": "Industrials",
-            "industry": "Aerospace & Defense",
-            "pe": 36.93,
-            "peg": 3.69,
-            "debt_to_equity": 1.16,
-            "description": "General Electric Company, doing business as GE Aerospace, designs and produces commercial and defense aircraft engines, integrated engine components, electric power, and aircraft systems. The company ..."
-        },
-        "updated_at": "2026-11-06T19:38:35.674960"
-    },
-    "MA": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Credit Services",
-            "pe": 34.35,
-            "peg": 1.71,
-            "debt_to_equity": 3.55,
-            "description": "Mastercard Incorporated, a technology company, provides transaction processing and other payment-related products and services in the United States and internationally. The company offers products and..."
-        },
-        "updated_at": "2026-11-06T19:38:56.479323"
-    },
-    "DNUT": {
-        "data": {
-            "sector": "Consumer Defensive",
-            "industry": "Grocery Stores",
-            "pe": 0,
-            "peg": 0,
-            "debt_to_equity": 2.05,
-            "description": "Krispy Kreme, Inc., together with its subsidiaries, produces doughnuts in the United States, the United Kingdom, Ireland, Australia, New Zealand, Mexico, Canada, Japan, and internationally. It operate..."
-        },
-        "updated_at": "2026-11-06T19:39:18.288379"
-    },
-    "SPCX": {
-        "data": {
-            "sector": "Industrials",
-            "industry": "Aerospace & Defense",
-            "pe": 582.13,
-            "peg": 0,
-            "debt_to_equity": 0.22,
-            "description": "Space Exploration Technologies Corp. provides satellite-based broadband services in the United States, Ireland, Canada, and internationally. It operates through three operating segments: Space, Connec..."
-        },
-        "updated_at": "2026-11-06T19:39:39.904142"
-    },
-    "VXUS": {
-        "data": {
-            "sector": "Unknown",
-            "industry": "Unknown",
-            "pe": 15.29,
-            "peg": 0,
-            "debt_to_equity": 0,
-            "description": "The manager employs an indexing investment approach designed to track the performance of the FTSE Global All Cap ex US Index, a float-adjusted market-capitalization-weighted index designed to measure ..."
-        },
-        "updated_at": "2026-11-06T19:40:05.970512"
-    },
-    "CRWV": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 0,
-            "peg": 0,
-            "debt_to_equity": 10.27,
-            "description": "CoreWeave, Inc. operates as a cloud infrastructure technology company in the United States. The company offers CoreWeave Cloud platform that comprises proprietary software and cloud services that deli..."
-        },
-        "updated_at": "2026-11-06T19:40:33.119438"
-    },
-    "VTI": {
-        "data": {
-            "sector": "Unknown",
-            "industry": "Unknown",
-            "pe": 22.93,
-            "peg": 0,
-            "debt_to_equity": 0,
-            "description": "The fund manager employs an indexing investment approach designed to track the performance of the CRSP U.S. Total Market Index (the \u201cTarget Index\u201d), which represents 100% of the investable U.S. stock ..."
-        },
-        "updated_at": "2026-11-06T19:41:00.668417"
-    },
-    "MRVL": {
+    "TSM": {
         "data": {
             "sector": "Technology",
             "industry": "Semiconductors",
-            "pe": 45.61,
-            "peg": 0.33,
-            "debt_to_equity": 0.29,
-            "description": "Marvell Technology, Inc., together with its subsidiaries, provides data infrastructure semiconductor solutions and spanning the data center core to network edge in the United States, Argentina, China,..."
+            "pe": 24.33,
+            "peg": 0.64,
+            "debt_to_equity": 0.12,
+            "description": "Taiwan Semiconductor Manufacturing Company Limited, together with its subsidiaries, manufactures, packages, tests, and sells integrated circuits and other semiconductor devices in Taiwan, China, Europ..."
         },
-        "updated_at": "2026-11-06T19:41:27.371101"
+        "updated_at": "2026-11-07T00:04:40.729110"
+    },
+    "CCL": {
+        "data": {
+            "sector": "Consumer Cyclical",
+            "industry": "Travel Services",
+            "pe": 13.03,
+            "peg": 1.02,
+            "debt_to_equity": 1.77,
+            "description": "Carnival Corporation Ltd., a cruise company, provides leisure travel services. The company operates through four segments: North America Cruise Operations, Europe Cruise Operations, Cruise Support, an..."
+        },
+        "updated_at": "2026-11-07T00:05:05.951707"
+    },
+    "NBIS": {
+        "data": {
+            "sector": "Communication Services",
+            "industry": "Internet Content & Information",
+            "pe": 101.16,
+            "peg": 0.27,
+            "debt_to_equity": 0.99,
+            "description": "Nebius Group N.V., a technology company, engages in building full-stack infrastructure to service the global AI industry in the United States, the United Kingdom, and internationally. It offers Nebius..."
+        },
+        "updated_at": "2026-11-07T00:05:53.113028"
+    },
+    "IT": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Information Technology Services",
+            "pe": 13.62,
+            "peg": 0.79,
+            "debt_to_equity": 0,
+            "description": "Gartner, Inc. provides business and technology insights to support decision-making and performance on an organization's mission-critical priorities in the United States, Canada, Europe, the Middle Eas..."
+        },
+        "updated_at": "2026-11-07T00:06:22.141910"
+    },
+    "TQQQ": {
+        "data": {
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 23.98,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "The fund invests in financial instruments that ProShare Advisors believes, in combination, should produce daily returns consistent with the Daily Target. The index is designed to measure the performan..."
+        },
+        "updated_at": "2026-11-07T00:06:49.428632"
+    },
+    "SOXX": {
+        "data": {
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 9.63,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "The fund generally will invest at least 80% of its assets in the component securities of its index and in investments that have economic characteristics that are substantially identical to the compone..."
+        },
+        "updated_at": "2026-11-07T00:07:20.026798"
+    },
+    "DKNG": {
+        "data": {
+            "sector": "Consumer Cyclical",
+            "industry": "Gambling",
+            "pe": 0,
+            "peg": 0.06,
+            "debt_to_equity": 12.71,
+            "description": "DraftKings Inc. operates as a digital sports entertainment and gaming company in the United States and internationally. The company offers online and retail sports betting, daily fantasy sports, digit..."
+        },
+        "updated_at": "2026-11-07T00:07:49.251011"
+    },
+    "PYPL": {
+        "data": {
+            "sector": "Financial Services",
+            "industry": "Credit Services",
+            "pe": 11.31,
+            "peg": 0.94,
+            "debt_to_equity": 0.73,
+            "description": "PayPal Holdings, Inc. operates a technology platform that enables digital payments for merchants and consumers worldwide. The company operates a two-sided network at scale that connects merchants and ..."
+        },
+        "updated_at": "2026-11-07T00:08:17.814181"
     }
 }
