@@ -95,6 +95,16 @@ fmp=your_fmp_key
 
 GitHub Actions also require repository secrets `VITE_ALPACA_API_KEY` and `VITE_ALPACA_SECRET_KEY`; these are workflow secrets, not frontend build variables.
 
+### Paper-account reset
+
+To start a clean paper-only validation:
+
+1. Open GitHub Actions → **Reset Paper Account** → **Run workflow**.
+2. Enter exactly `RESET PAPER`.
+3. Confirm logs show `endpoint=https://paper-api.alpaca.markets/v2` and `verified zero positions`.
+
+This manual workflow closes every position in Alpaca's paper account, resets dashboard trade history, and commits fresh paper metrics. It has no schedule and cannot call Alpaca's live endpoint.
+
 ### Vercel Frontend Functions
 
 Set Vercel Root Directory to `frontend`. Keep `VITE_SUPABASE_URL` and `VITE_SUPABASE_ANON_KEY` for the frontend client. Add these server-side variables in Project Settings → Environment Variables:

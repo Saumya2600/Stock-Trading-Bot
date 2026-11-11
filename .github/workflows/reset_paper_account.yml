@@ -1,0 +1,51 @@
+name: Reset Paper Account
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirmation:
+        description: 'Type RESET PAPER to close every paper position'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  reset-paper-account:
+    if: inputs.confirmation == 'RESET PAPER'
+    runs-on: ubuntu-latest
+    concurrency:
+      group: stock-bot-data-sync
+      cancel-in-progress: false
+    steps:
+      - name: Checkout latest main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      - name: Close paper positions and reset metrics
+        env:
+          VITE_ALPACA_API_KEY: ${{ secrets.VITE_ALPACA_API_KEY }}
+          VITE_ALPACA_SECRET_KEY: ${{ secrets.VITE_ALPACA_SECRET_KEY }}
+        run: python backend/reset_paper_account.py --confirm "RESET PAPER"
+
+      - name: Commit reset state
+        run: |
+          git config user.name "GitHub Action Bot"
+          git config user.email "actions@github.com"
+          git add app_state.json backend/app_state.json frontend/public/app_state.json
+          git commit -m "Reset paper trading account metrics" || echo "No state changes to commit"
+          git pull --rebase origin main
+          git push origin main
