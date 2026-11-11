@@ -2,17 +2,9 @@ name: Trading Bot (Live Execution)
 
 on:
   schedule:
-    # Market hours: 9:30 AM - 4:00 PM EDT = 13:30 - 20:00 UTC (weekdays only)
-    #
-    # Two entries are required because a single cron cannot express "start at :30".
-    #
-    # Entry 1 — covers the first half-hour of trading (13:30–13:55 UTC):
-    #   Explicitly lists :30 :35 :40 :45 :50 :55 of hour 13.
-    - cron: '30,35,40,45,50,55 13 * * 1-5'
-    #
-    # Entry 2 — covers 14:00–19:55 UTC (10:00 AM–3:55 PM EDT):
-    #   Every 5 mins across hours 14–19. Stops before 20:00 (4:00 PM EDT close).
-    - cron: '*/5 14-19 * * 1-5'
+    # Broad UTC window covers 9:30 AM–4:00 PM US/Eastern in both DST seasons.
+    # run_trades.py checks exact market hours and exits outside them.
+    - cron: '*/5 13-21 * * 1-5'
   workflow_dispatch:
 
 permissions:
