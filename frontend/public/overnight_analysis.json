@@ -673,10 +673,10 @@
             "summary": "Upcoming earnings; no released results yet."
         }
     ],
-    "status": "complete",
+    "status": "error",
     "last_refresh": "2026-11-11T17:58:33.998788+00:00",
-    "last_attempt": "2026-11-11T17:57:01.107743+00:00",
-    "error": null,
+    "last_attempt": "2026-11-11T19:48:18.717640+00:00",
+    "error": "HTTPError: 429 Client Error: Too Many Requests for url: https://finnhub.io/api/v1/calendar/earnings?from=2026-11-10&to=2026-11-18",
     "sources": {
         "finnhub": "earnings calendar and headlines",
         "sec": "official filing links",
