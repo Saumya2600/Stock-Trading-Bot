@@ -47,7 +47,7 @@ jobs:
           cd backend
           echo "Running TRADING cycle..."
           # Use timeout 5m as a double-safety for Lumibot
-          timeout 300 python run_trades.py || echo "Trade cycle timed out or finished"
+          timeout 300 python run_trades.py
 
       - name: Sync and Push App State
         run: |
