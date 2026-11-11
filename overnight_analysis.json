@@ -1,775 +1,258 @@
 {
     "events": [
         {
-            "symbol": "DAC",
-            "earnings_date": "2026-11-09",
-            "session": "AMC",
-            "eps_estimate": 7.4185,
-            "eps_actual": null,
-            "eps_surprise_pct": null,
-            "revenue_estimate": 273610343.0,
-            "revenue_actual": null,
-            "revenue_surprise_pct": null,
+            "symbol": "ALH",
+            "earnings_date": "2026-11-10",
+            "session": "BMO",
+            "eps_estimate": 0.3229,
+            "eps_actual": 0.38,
+            "eps_surprise_pct": 17.68,
+            "revenue_estimate": 465567438.0,
+            "revenue_actual": 460920000.0,
+            "revenue_surprise_pct": -1.0,
             "finnhub_surprise_pct": null,
-            "name": "Danaos Corporation",
-            "market_cap_millions": 2678.83678,
+            "name": "Alliance Laundry Holdings Inc.",
+            "market_cap_millions": 4983.642751599835,
             "market_cap_category": "Mid Cap",
             "status": "released",
-            "detected_at": "2026-11-10T20:02:35.529544+00:00",
-            "sec_filing": {
-                "status": "not_found",
-                "url": null
-            },
-            "news": [],
-            "guidance_direction": "UNKNOWN",
-            "after_hours_price": 146.59,
-            "regular_close_price": 146.59,
-            "after_hours_change_pct": 0.0,
-            "volume": 8365.0,
-            "volume_ratio": 0.87,
-            "quote_timestamp": "2026-11-10T19:30:54.943344499Z",
-            "score": 50,
-            "signal": "MIXED",
-            "summary": "extended move +0.0%"
-        },
-        {
-            "symbol": "DDS",
-            "earnings_date": "2026-11-09",
-            "session": "UNKNOWN",
-            "eps_estimate": 8.1642,
-            "eps_actual": null,
-            "eps_surprise_pct": null,
-            "revenue_estimate": 1493567800.0,
-            "revenue_actual": null,
-            "revenue_surprise_pct": null,
-            "finnhub_surprise_pct": null,
-            "name": "Dillard's, Inc.",
-            "market_cap_millions": 10177.634243,
-            "market_cap_category": "Large Cap",
-            "status": "released",
-            "detected_at": "2026-11-10T20:02:35.798517+00:00",
-            "sec_filing": {
-                "status": "not_found",
-                "url": null
-            },
-            "news": [
-                {
-                    "headline": "I Underestimated Dillard's (Rating Upgrade)",
-                    "source": "SeekingAlpha",
-                    "url": "https://finnhub.io/api/news?id=4fc79d5d74215ba8a5a9bff0120dfefd97892eceda17d7f2a42078c6bc8969c8",
-                    "published_at": 1794320093
-                }
-            ],
-            "guidance_direction": "UNKNOWN",
-            "after_hours_price": 640.79,
-            "regular_close_price": 640.79,
-            "after_hours_change_pct": 0.0,
-            "volume": 8943.0,
-            "volume_ratio": 0.48,
-            "quote_timestamp": "2026-11-10T20:00:53.25559724Z",
-            "score": 50,
-            "signal": "MIXED",
-            "summary": "extended move +0.0%"
-        },
-        {
-            "symbol": "DFTX",
-            "earnings_date": "2026-11-09",
-            "session": "AMC",
-            "eps_estimate": -0.5683,
-            "eps_actual": -0.46,
-            "eps_surprise_pct": 19.06,
-            "revenue_estimate": 0.0,
-            "revenue_actual": 0.0,
-            "revenue_surprise_pct": null,
-            "finnhub_surprise_pct": null,
-            "name": "Definium Therapeutics Inc",
-            "market_cap_millions": 4755.246582999999,
-            "market_cap_category": "Mid Cap",
-            "status": "released",
-            "detected_at": "2026-11-10T20:02:35.977481+00:00",
+            "detected_at": "2026-11-11T00:40:04.789684+00:00",
             "sec_filing": {
                 "status": "found",
                 "form": "8-K",
-                "filed_at": "2026-11-09",
-                "accession": "0001193125-26-453595",
-                "url": "https://www.sec.gov/Archives/edgar/data/1813814/000119312526453595/dftx-20261109.htm"
-            },
-            "news": [
-                {
-                    "headline": "Definium Q3 Earnings: Psychedelics Approval Beckons But Valuation Seems Inflated",
-                    "source": "SeekingAlpha",
-                    "url": "https://finnhub.io/api/news?id=a125ad347b1f2ffc4afeac90107660bbadf222cad50c0966d87657dbbbdb5b9f",
-                    "published_at": 1794317698
-                },
-                {
-                    "headline": "Definium Therapeutics Inc (DFTX) (Q3 2026) Earnings Call Highlights: $1. ...",
-                    "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=8a4341427128f21653d7ea0753d69ddbf8806e51bb67274848f80a273df31f60",
-                    "published_at": 1794287485
-                },
-                {
-                    "headline": "Definium Therapeutics, Inc. (DFTX) Q3 2026 Earnings Call Transcript",
-                    "source": "SeekingAlpha",
-                    "url": "https://finnhub.io/api/news?id=066b96dd27d308b9c9878c0516fab504da6e9e557df23293496dd4aca937b0b6",
-                    "published_at": 1794283276
-                },
-                {
-                    "headline": "Definium (DFTX) Q3 2026 Earnings Call Transcript",
-                    "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=2a5fab61c960463dc60c4a9f1940c47a2bfb0a28a2f22d62ea80310da73abef4",
-                    "published_at": 1794276031
-                },
-                {
-                    "headline": "What Definium Therapeutics (DFTX) Said on Its Q3 Earnings Call",
-                    "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=71fa425785a8e85108f66857450ac8b15d09f8936bd30cb1f70b4569ba2e1295",
-                    "published_at": 1794273283
-                }
-            ],
-            "guidance_direction": "UNKNOWN",
-            "after_hours_price": 34.13,
-            "regular_close_price": 34.13,
-            "after_hours_change_pct": 0.0,
-            "volume": 61333.0,
-            "volume_ratio": 0.54,
-            "quote_timestamp": "2026-11-10T20:02:26.144980372Z",
-            "score": 75,
-            "signal": "STRONG BULLISH",
-            "summary": "EPS surprise +19.1%; extended move +0.0%"
-        },
-        {
-            "symbol": "DHT",
-            "earnings_date": "2026-11-09",
-            "session": "AMC",
-            "eps_estimate": 1.0988,
-            "eps_actual": 1.45,
-            "eps_surprise_pct": 31.96,
-            "revenue_estimate": 236032091.0,
-            "revenue_actual": 290640000.0,
-            "revenue_surprise_pct": 23.14,
-            "finnhub_surprise_pct": null,
-            "name": "DHT Holdings, Inc.",
-            "market_cap_millions": 3315.003448,
-            "market_cap_category": "Mid Cap",
-            "status": "released",
-            "detected_at": "2026-11-10T20:02:36.262706+00:00",
-            "sec_filing": {
-                "status": "not_found",
-                "url": null
-            },
-            "news": [
-                {
-                    "headline": "DHT Holdings, Inc. (DHT) Q3 2026 Earnings Call Transcript",
-                    "source": "SeekingAlpha",
-                    "url": "https://finnhub.io/api/news?id=d16327fe221f2df1e069d3efb4e62bb0fc2664c595363ab699261ebc9f76defc",
-                    "published_at": 1794306654
-                },
-                {
-                    "headline": "DHT Holdings Q3 2026 Earnings Call Transcript",
-                    "source": "Benzinga",
-                    "url": "https://finnhub.io/api/news?id=8c9e581526cfb80865c13d2c4cc9819bb9041f1701874f5c7ab1d838a2637bed",
-                    "published_at": 1794303803
-                },
-                {
-                    "headline": "DHT Holdings, Inc. 2026 Q3 - Results - Earnings Call Presentation",
-                    "source": "SeekingAlpha",
-                    "url": "https://finnhub.io/api/news?id=0537ad493d0151964ee6db5518f67ec8c63d74eaf160ec98dd8951740f8c1427",
-                    "published_at": 1794301314
-                },
-                {
-                    "headline": "DHT Holdings, Inc. Reports Profit After Tax of $270.9 million for the Third Quarter of 2026",
-                    "source": "Fintel",
-                    "url": "https://finnhub.io/api/news?id=24996301cc1ac2b7aabc464a1d075ed6644c7b92141840af785b9bb0a13d2d5c",
-                    "published_at": 1794294525
-                },
-                {
-                    "headline": "DHT Holdings (NYSE:DHT) Posts Wide Q3 Earnings Beat as Revenue and EPS Surpass Consensus",
-                    "source": "ChartMill",
-                    "url": "https://finnhub.io/api/news?id=8831afeab2595d9c36116ea3445f9fbb96efd2639a9642e0e7992b6e3a50831e",
-                    "published_at": 1794271214
-                }
-            ],
-            "guidance_direction": "UNKNOWN",
-            "after_hours_price": 20.7,
-            "regular_close_price": 20.7,
-            "after_hours_change_pct": 0.0,
-            "volume": 412501.0,
-            "volume_ratio": 0.89,
-            "quote_timestamp": "2026-11-10T20:02:25.14402142Z",
-            "score": 100,
-            "signal": "STRONG BULLISH",
-            "summary": "EPS surprise +32.0%; revenue surprise +23.1%; extended move +0.0%"
-        },
-        {
-            "symbol": "EQPT",
-            "earnings_date": "2026-11-09",
-            "session": "AMC",
-            "eps_estimate": 0.109,
-            "eps_actual": 0.16,
-            "eps_surprise_pct": 46.79,
-            "revenue_estimate": 1334319936.0,
-            "revenue_actual": 1468000000.0,
-            "revenue_surprise_pct": 10.02,
-            "finnhub_surprise_pct": null,
-            "name": "Equipmentshare.Com Inc",
-            "market_cap_millions": 4114.211596,
-            "market_cap_category": "Mid Cap",
-            "status": "released",
-            "detected_at": "2026-11-10T20:02:36.523365+00:00",
-            "sec_filing": {
-                "status": "found",
-                "form": "10-Q",
                 "filed_at": "2026-11-10",
-                "accession": "0001693736-26-000030",
-                "url": "https://www.sec.gov/Archives/edgar/data/1693736/000169373626000030/eqpt-20260930.htm"
+                "accession": "0001628280-26-072509",
+                "url": "https://www.sec.gov/Archives/edgar/data/1317685/000162828026072509/all-20261110.htm"
             },
             "news": [
                 {
-                    "headline": "EquipmentShare.com Inc. (EQPT) Q3 2026 Earnings Call Transcript",
-                    "source": "SeekingAlpha",
-                    "url": "https://finnhub.io/api/news?id=7f726a42ae07588e0954975a81f910bd1628f1cff44b2caa0ab5db946df14880",
-                    "published_at": 1794319870
-                },
-                {
-                    "headline": "EquipmentShare.com Q3 2026 Earnings Call Transcript",
-                    "source": "Benzinga",
-                    "url": "https://finnhub.io/api/news?id=bdf557928108df2d2d61dc0bd871b4601bced33ca46d28a124a925add794abe1",
-                    "published_at": 1794306959
-                },
-                {
-                    "headline": "EquipmentShare.com (NASDAQ:EQPT) Q3 Earnings Beat, but Shares Slip After Strong Run",
+                    "headline": "Alliance Laundry (NYSE:ALH) Q3 Earnings Beat, In-Line Revenue, Raised EBITDA Guidance",
                     "source": "ChartMill",
-                    "url": "https://finnhub.io/api/news?id=718c97fd94e75fbeaf2448ac1ab7416a7dc4efa754e61ed48f21251ac6f939e9",
-                    "published_at": 1794271320
+                    "url": "https://finnhub.io/api/news?id=64afa6b74138e85f83faee5b26f8fe36713d5781d460834c4f5d1c8cb4109cd2",
+                    "published_at": 1794316864
                 },
                 {
-                    "headline": "EquipmentShare Expands Nationwide TELEHERO\u00ae Fleet in Honor of Veterans Day, Deploying Four New Units to Support Military and Veteran Organizations",
-                    "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=233b352cac69bf3d3ece61ce0e33bf345d08ea99d660c587cbfe627107e6cba3",
-                    "published_at": 1794253020
+                    "headline": "Alliance Laundry Holdings Inc. (ALH) Q3 2026 Earnings Call Transcript",
+                    "source": "SeekingAlpha",
+                    "url": "https://finnhub.io/api/news?id=0f06f08907a815239d37c6b7cc8e7155a80759d723dfa653eda35abd03512fc9",
+                    "published_at": 1794310289
                 },
                 {
-                    "headline": "EquipmentShare.com Affirms FY2026 Sales Guidance of $5.808B-$6.045B vs $5.747B Est",
+                    "headline": "Alliance Laundry Holdings Q3 2026 Earnings Call Transcript",
                     "source": "Benzinga",
-                    "url": "https://finnhub.io/api/news?id=677ed35ae1bc5f5a443c8c73e714cccb6b74aa3452998befc1121d8ae0d28eaa",
-                    "published_at": 1794246465
+                    "url": "https://finnhub.io/api/news?id=a29dc9db0c666791a3204754f55d0583d0bc300459e377e0e9fa73782a9ed18e",
+                    "published_at": 1794305763
+                },
+                {
+                    "headline": "Alliance Laundry Holdings Affirms FY2026 Sales Guidance of $1.812B-$1.829B vs $1.823B Est",
+                    "source": "Benzinga",
+                    "url": "https://finnhub.io/api/news?id=677099f385e5c139accbe57e25135a5ec462beca1ce48970691763f2a3a76189",
+                    "published_at": 1794297661
                 }
             ],
-            "guidance_direction": "UNKNOWN",
-            "after_hours_price": 12.945,
-            "regular_close_price": 12.945,
+            "guidance_direction": "RAISED",
+            "after_hours_price": 25.06,
+            "regular_close_price": 25.06,
             "after_hours_change_pct": 0.0,
-            "volume": 446542.0,
-            "volume_ratio": 4.38,
-            "quote_timestamp": "2026-11-10T20:02:31.010369735Z",
-            "score": 95,
+            "volume": 96648.0,
+            "volume_ratio": 0.99,
+            "quote_timestamp": "2026-11-10T20:59:58.224926249Z",
+            "score": 93,
             "signal": "STRONG BULLISH",
-            "summary": "EPS surprise +46.8%; revenue surprise +10.0%; extended move +0.0%"
+            "summary": "EPS surprise +17.7%; revenue surprise -1.0%; guidance raised; extended move +0.0%"
         },
         {
-            "symbol": "EQX",
-            "earnings_date": "2026-11-09",
-            "session": "AMC",
-            "eps_estimate": 0.1919,
-            "eps_actual": 0.19,
-            "eps_surprise_pct": -0.99,
-            "revenue_estimate": 1010320675.0,
-            "revenue_actual": 1047010000.0,
-            "revenue_surprise_pct": 3.63,
+            "symbol": "ATAT",
+            "earnings_date": "2026-11-10",
+            "session": "BMO",
+            "eps_estimate": 4.2262,
+            "eps_actual": 3.2016479999999996,
+            "eps_surprise_pct": -24.24,
+            "revenue_estimate": 3315771252.0,
+            "revenue_actual": 3411756150.0,
+            "revenue_surprise_pct": 2.89,
             "finnhub_surprise_pct": null,
-            "name": "Equinox Gold Corp.",
-            "market_cap_millions": 14114.589831567566,
-            "market_cap_category": "Large Cap",
+            "name": "Atour Lifestyle Holdings Limited",
+            "market_cap_millions": 4911.456289,
+            "market_cap_category": "Mid Cap",
             "status": "released",
-            "detected_at": "2026-11-10T20:02:36.793488+00:00",
+            "detected_at": "2026-11-11T00:40:04.978297+00:00",
             "sec_filing": {
                 "status": "not_found",
                 "url": null
             },
             "news": [
                 {
-                    "headline": "Equinox Gold Corp. (EQX:CA) Q3 2026 Earnings Call Transcript",
+                    "headline": "Atour Lifestyle Holdings Limited (ATAT) Q3 2026 Earnings Call Transcript",
                     "source": "SeekingAlpha",
-                    "url": "https://finnhub.io/api/news?id=d7371d9ed0d6853f901b29ee152e0d3bc69284375e2f3a3cbb64cebf8f9d35fa",
-                    "published_at": 1794319271
+                    "url": "https://finnhub.io/api/news?id=23636862523a8f707af07cd0bcb1e79a40f8dd074918a2b724a737d75a500790",
+                    "published_at": 1794319852
                 },
                 {
-                    "headline": "Equinox Gold Reports Q3 Results; Transformational Combination Begins to Deliver",
+                    "headline": "Atour Lifestyle (NASDAQ:ATAT) Posts Mixed Q3 as Revenue Beat Is Offset by EPS Miss",
+                    "source": "ChartMill",
+                    "url": "https://finnhub.io/api/news?id=3aa5bf5d53b31c281c1276e34ba74008d8f818e5273c4320d545c9765299f482",
+                    "published_at": 1794313886
+                },
+                {
+                    "headline": "Atour Lifestyle Holdings Limited Reports Third Quarter 2026 Unaudited Financial Results",
                     "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=183a1abc8640b4b966c174725f5c1db642d8538a922fd255bc303f5e44ba3a92",
-                    "published_at": 1794263400
+                    "url": "https://finnhub.io/api/news?id=45f5ecb2965ec7a7d0d8c00f35e86aa1bec774bd8d5f33cafce6a3648db6bee2",
+                    "published_at": 1794308400
                 },
                 {
-                    "headline": "Equinox Gold: Q3 Earnings Snapshot",
+                    "headline": "Atour Lifestyle Holdings Limited Announces Cash Dividend",
                     "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=ac6d5a994b2109d90e5f2bd72b04ac701455b21cda0a7555321b2cdd3653cc5a",
-                    "published_at": 1794263040
+                    "url": "https://finnhub.io/api/news?id=5d880b499acd0facd6ae98d51a1bec35dda30eaa831887056548a368b3454e90",
+                    "published_at": 1794308400
                 },
                 {
-                    "headline": "Equinox Gold Declares Quarterly Dividend",
-                    "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=bc6a25b99ce2ca2df3406a5c95577f555ca2356456a643420284a6f43ba5578a",
-                    "published_at": 1794262920
-                },
-                {
-                    "headline": "Equinox Gold Q3 Adj. EPS $0.19, Inline, Sales $1.047B Beat $1.000B Estimate",
+                    "headline": "CORRECTION: Atour Lifestyle Q3 Adj. EPADS $0.67 Beats $0.56 Estimate, Sales $511.495M Miss $530.990M Estimate",
                     "source": "Benzinga",
-                    "url": "https://finnhub.io/api/news?id=2364b54c7aa0c2b4c101bc48a027edab40af6c413d4b0cf21e6e4d2172139f7f",
-                    "published_at": 1794248480
+                    "url": "https://finnhub.io/api/news?id=5c692f3e8378bda4c3ed09064121505ff568a5e0f342bc5afe9cb4cf8700668c",
+                    "published_at": 1794306442
                 }
             ],
             "guidance_direction": "UNKNOWN",
-            "after_hours_price": 11.41,
-            "regular_close_price": 11.41,
+            "after_hours_price": 36.065,
+            "regular_close_price": 36.065,
             "after_hours_change_pct": 0.0,
-            "volume": 1146363.0,
-            "volume_ratio": 1.12,
-            "quote_timestamp": "2026-11-10T20:01:57.421494437Z",
-            "score": 55,
-            "signal": "MIXED",
-            "summary": "EPS surprise -1.0%; revenue surprise +3.6%; extended move +0.0%"
+            "volume": 146679.0,
+            "volume_ratio": 2.91,
+            "quote_timestamp": "2026-11-10T20:59:58.6687069Z",
+            "score": 31,
+            "signal": "BEARISH",
+            "summary": "EPS surprise -24.2%; revenue surprise +2.9%; extended move +0.0%"
         },
         {
-            "symbol": "FERG",
-            "earnings_date": "2026-11-09",
-            "session": "BMO",
-            "eps_estimate": 3.3704,
-            "eps_actual": 3.43,
-            "eps_surprise_pct": 1.77,
-            "revenue_estimate": 8910451362.0,
-            "revenue_actual": 9026000000.0,
-            "revenue_surprise_pct": 1.3,
+            "symbol": "ATRO",
+            "earnings_date": "2026-11-10",
+            "session": "AMC",
+            "eps_estimate": 0.7487,
+            "eps_actual": 0.81,
+            "eps_surprise_pct": 8.19,
+            "revenue_estimate": 273388152.0,
+            "revenue_actual": 271680000.0,
+            "revenue_surprise_pct": -0.62,
             "finnhub_surprise_pct": null,
-            "name": "Ferguson Enterprises Inc.",
-            "market_cap_millions": 50284.16227600001,
-            "market_cap_category": "Large Cap",
+            "name": "Astronics Corporation",
+            "market_cap_millions": 2662.9353617562297,
+            "market_cap_category": "Mid Cap",
             "status": "released",
-            "detected_at": "2026-11-10T20:02:37.090489+00:00",
+            "detected_at": "2026-11-11T00:40:05.122702+00:00",
             "sec_filing": {
                 "status": "found",
                 "form": "8-K",
-                "filed_at": "2026-11-09",
-                "accession": "0002011641-26-000042",
-                "url": "https://www.sec.gov/Archives/edgar/data/2011641/000201164126000042/ferg-20261109.htm"
-            },
-            "news": [
-                {
-                    "headline": "Nvidia To $300? Here Are 10 Top Analyst Forecasts For Tuesday",
-                    "source": "Benzinga",
-                    "url": "https://finnhub.io/api/news?id=25102c1ae6ec6abfa92b3653d8ad82592d15154bb9d3cb83501073b795dadccd",
-                    "published_at": 1794303348
-                },
-                {
-                    "headline": "Baird Maintains Outperform on Ferguson Enterprises, Raises Price Target to $300",
-                    "source": "Benzinga",
-                    "url": "https://finnhub.io/api/news?id=4d39e539403db635b0e50abc264d8acff019570bfffe855b47811ed5535aa033",
-                    "published_at": 1794296447
-                },
-                {
-                    "headline": "Ferguson: Managing A Mixed Macro Admirably",
-                    "source": "SeekingAlpha",
-                    "url": "https://finnhub.io/api/news?id=3910f77c770ca4f6ffb2440ce0596e57f796ebdd87d7e0dae985b571d5d60be2",
-                    "published_at": 1794296399
-                },
-                {
-                    "headline": "Ferguson plc Q3 2026 Earnings Call Summary",
-                    "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=4575aab8b3814fe84be851d4f03b32019ec1cd6f71a31f8a21f500886145930c",
-                    "published_at": 1794261195
-                },
-                {
-                    "headline": "Ferguson (FERG) Q3 2026 Earnings Call Transcript",
-                    "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=81a178b8db2c42064167bc6b8e9b9120d693d50a796cf331e73bdb3265f021d4",
-                    "published_at": 1794258882
-                }
-            ],
-            "guidance_direction": "UNKNOWN",
-            "after_hours_price": 259.495,
-            "regular_close_price": 259.495,
-            "after_hours_change_pct": 0.0,
-            "volume": 54075.0,
-            "volume_ratio": 0.2,
-            "quote_timestamp": "2026-11-10T19:59:05.405105259Z",
-            "score": 56,
-            "signal": "MIXED",
-            "summary": "EPS surprise +1.8%; revenue surprise +1.3%; extended move +0.0%"
-        },
-        {
-            "symbol": "FRVO",
-            "earnings_date": "2026-11-09",
-            "session": "BMO",
-            "eps_estimate": -0.0868,
-            "eps_actual": -0.07,
-            "eps_surprise_pct": 19.35,
-            "revenue_estimate": 168687.0,
-            "revenue_actual": 120000.0,
-            "revenue_surprise_pct": -28.86,
-            "finnhub_surprise_pct": null,
-            "name": "Fervo Energy Co",
-            "market_cap_millions": 3354.4005069999994,
-            "market_cap_category": "Mid Cap",
-            "status": "released",
-            "detected_at": "2026-11-10T20:02:37.341179+00:00",
-            "sec_filing": {
-                "status": "found",
-                "form": "10-Q",
                 "filed_at": "2026-11-10",
-                "accession": "0001628280-26-072482",
-                "url": "https://www.sec.gov/Archives/edgar/data/1853868/000162828026072482/frvo-20260930.htm"
+                "accession": "0001628280-26-072755",
+                "url": "https://www.sec.gov/Archives/edgar/data/8063/000162828026072755/atro-20261110.htm"
             },
             "news": [
                 {
-                    "headline": "Baird Maintains Outperform on Fervo Energy, Lowers Price Target to $20",
-                    "source": "Benzinga",
-                    "url": "https://finnhub.io/api/news?id=4c496089b152ad5a7794974915f396dd9bb6fdac534660ae733625a38eb626e1",
-                    "published_at": 1794296646
+                    "headline": "Astronics (NASDAQ:ATRO) Slumps on Soft Q4 Sales Outlook Despite Q3 Earnings Beat",
+                    "source": "ChartMill",
+                    "url": "https://finnhub.io/api/news?id=107999f00e2d28a515f036e8ca4171d72df1a58b45560413890c9ba21106f3f6",
+                    "published_at": 1794351864
                 },
                 {
-                    "headline": "Fervo Energy (FRVO) is Surging This Much. What\u2019s Powering the Rally?",
-                    "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=f8e134ef6de0540cac6b7ae20c6134b7fd03e2ccbf6a3ba101ff462e558c01bd",
-                    "published_at": 1794282082
-                },
-                {
-                    "headline": "Dow Surges 1,100 Points As Oil Prices Fall: Investor Sentiment Improves, Greed Index Moves To \u2018Fear\u2019 Zone",
-                    "source": "Benzinga",
-                    "url": "https://finnhub.io/api/news?id=419835f2ab6af25f05e7f9e3f526d33062527028076ee1705c61982154af056c",
-                    "published_at": 1794276309
-                },
-                {
-                    "headline": "Fervo Energy (FRVO) Q3 2026 Earnings Call Transcript",
-                    "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=4f2a4f6f508ffe125628b8e7249a242afc61156a20ad6755f58414edbf8d31fc",
-                    "published_at": 1794267879
-                },
-                {
-                    "headline": "Fervo Energy Co (FRVO) (Q3 2026) Earnings Call Highlights: First Geoblock Online, Google PPA ...",
-                    "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=12156c7e6b9fc8b0aecc70d5c2dcf94a0d898289f4dea2358b88263dd2fef9c6",
-                    "published_at": 1794265484
+                    "headline": "After-Hours Stock Movers: KPTI Rises 140%, STAK Falls 51.5% After US Close",
+                    "source": "ChartMill",
+                    "url": "https://finnhub.io/api/news?id=6960092250b609f76f8915279aed74a87f95d6950c2d5b42b2b429e9b5a895aa",
+                    "published_at": 1794348035
                 }
             ],
             "guidance_direction": "UNKNOWN",
-            "after_hours_price": 11.37,
-            "regular_close_price": 11.39,
-            "after_hours_change_pct": -0.18,
-            "volume": 416582.0,
-            "volume_ratio": 0.39,
-            "quote_timestamp": "2026-11-10T20:02:08.876486091Z",
-            "score": 50,
-            "signal": "MIXED",
-            "summary": "EPS surprise +19.4%; revenue surprise -28.9%; extended move -0.2%"
-        },
-        {
-            "symbol": "GBTG",
-            "earnings_date": "2026-11-09",
-            "session": "UNKNOWN",
-            "eps_estimate": 0.0306,
-            "eps_actual": null,
-            "eps_surprise_pct": null,
-            "revenue_estimate": 817030200.0,
-            "revenue_actual": null,
-            "revenue_surprise_pct": null,
-            "finnhub_surprise_pct": null,
-            "name": "Global Business Travel Group, Inc",
-            "market_cap_millions": 4962.55,
-            "market_cap_category": "Mid Cap",
-            "status": "released",
-            "detected_at": "2026-11-10T20:02:37.547791+00:00",
-            "sec_filing": {
-                "status": "not_found",
-                "url": null
-            },
-            "news": [],
-            "guidance_direction": "UNKNOWN",
-            "after_hours_price": 9.5,
-            "regular_close_price": 9.5,
+            "after_hours_price": 62.04,
+            "regular_close_price": 62.04,
             "after_hours_change_pct": 0.0,
-            "volume": 128300.0,
-            "volume_ratio": 0.38,
-            "quote_timestamp": "2026-09-28T19:59:58.963695829Z",
-            "score": 50,
-            "signal": "MIXED",
-            "summary": "extended move +0.0%"
-        },
-        {
-            "symbol": "GCMG",
-            "earnings_date": "2026-11-09",
-            "session": "BMO",
-            "eps_estimate": 0.2118,
-            "eps_actual": 0.22,
-            "eps_surprise_pct": 3.87,
-            "revenue_estimate": 144432000.0,
-            "revenue_actual": 145550000.0,
-            "revenue_surprise_pct": 0.77,
-            "finnhub_surprise_pct": null,
-            "name": "GCM Grosvenor Inc.",
-            "market_cap_millions": 2727.553724,
-            "market_cap_category": "Mid Cap",
-            "status": "released",
-            "detected_at": "2026-11-10T20:02:37.687138+00:00",
-            "sec_filing": {
-                "status": "found",
-                "form": "8-K",
-                "filed_at": "2026-11-09",
-                "accession": "0001819796-26-000030",
-                "url": "https://www.sec.gov/Archives/edgar/data/1819796/000181979626000030/gcm-20261109.htm"
-            },
-            "news": [
-                {
-                    "headline": "Piper Sandler Maintains Overweight on GCM Grosvenor, Raises Price Target to $15",
-                    "source": "Benzinga",
-                    "url": "https://finnhub.io/api/news?id=08ea588f01d0fc61df895d3d5879517a418dcbdfc08f9b4d05b685184ccf814e",
-                    "published_at": 1794300364
-                },
-                {
-                    "headline": "GCM Grosvenor (GCMG) Q3 2026 Earnings Call Transcript",
-                    "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=8bc83d128bb9c12aee4e9d07d5de683c5fddf2b4ac72dd04b61c8a62ff2b5b38",
-                    "published_at": 1794267879
-                },
-                {
-                    "headline": "GCM Grosvenor Inc (GCMG) (Q3 2026) Earnings Call Highlights: AUM Climbs to $98 Billion as ...",
-                    "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=67e50decc31c55feb12331ad59d5bb34d72df99a5f47b12374b665011690cbfd",
-                    "published_at": 1794265413
-                },
-                {
-                    "headline": "GCM Grosvenor Inc. Q3 2026 Earnings Call Summary",
-                    "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=49e269724fddbdb86085c6a883286dd53bbeee7042e3323d16b2be02f015f8de",
-                    "published_at": 1794261432
-                },
-                {
-                    "headline": "What GCM Grosvenor (GCMG) Said on Its Q3 Earnings Call",
-                    "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=a2add75c8a53aeed92292080ebf607598d0a325bf86a1204f0ccaadd6ee3c03e",
-                    "published_at": 1794244500
-                }
-            ],
-            "guidance_direction": "UNKNOWN",
-            "after_hours_price": 13.985,
-            "regular_close_price": 13.985,
-            "after_hours_change_pct": 0.0,
-            "volume": 55499.0,
-            "volume_ratio": 1.4,
-            "quote_timestamp": "2026-11-10T20:01:28.498886463Z",
-            "score": 59,
-            "signal": "MIXED",
-            "summary": "EPS surprise +3.9%; revenue surprise +0.8%; extended move +0.0%"
-        },
-        {
-            "symbol": "HIMS",
-            "earnings_date": "2026-11-09",
-            "session": "AMC",
-            "eps_estimate": 0.0649,
-            "eps_actual": 0.03,
-            "eps_surprise_pct": -53.78,
-            "revenue_estimate": 910745841.0,
-            "revenue_actual": 890370000.0,
-            "revenue_surprise_pct": -2.24,
-            "finnhub_surprise_pct": null,
-            "name": "Hims & Hers Health, Inc.",
-            "market_cap_millions": 5352.209842000001,
-            "market_cap_category": "Mid Cap",
-            "status": "released",
-            "detected_at": "2026-11-10T20:02:38.257263+00:00",
-            "sec_filing": {
-                "status": "found",
-                "form": "8-K",
-                "filed_at": "2026-11-09",
-                "accession": "0001773751-26-000242",
-                "url": "https://www.sec.gov/Archives/edgar/data/1773751/000177375126000242/hims-20261109.htm"
-            },
-            "news": [
-                {
-                    "headline": "Hims & Hers Celebrated Its Eli Lilly Deal, Then Lost a Quarter of Its Value in a Week",
-                    "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=47053b185d07bc55377ac743c33a9cc1ccb86d1e28b7d06b2a244c85192de8e0",
-                    "published_at": 1794333830
-                },
-                {
-                    "headline": "Hims & Hers Health Inc (HIMS) (Q3 2026) Earnings Call Highlights: Revenue Surges 49% to ...",
-                    "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=0005a73ed214c80259aad966c663564e3695f86c3a7ce90323a5b47882828862",
-                    "published_at": 1794330234
-                },
-                {
-                    "headline": "HIMS May See Heightened \u2018Gyrations\u2019 As Weight-Loss Drug Trends Fuel Subscriber Uncertainty, Jefferies Warns \u2013 Stock Hits 7-Month Lows",
-                    "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=3bbee50ccc4461e3461c51f4a3db638b014cc49006c2f7a9a2d8a57a8ded3bda",
-                    "published_at": 1794327115
-                },
-                {
-                    "headline": "Hims & Hers stock sinks after Q3 results, outlook disappoints",
-                    "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=60a1ee5d9bdd20c8530d6094bd578f4cf3e2ad4e5e85d1ffc0ed55799f81a497",
-                    "published_at": 1794325547
-                },
-                {
-                    "headline": "Stock Market Today: Dow Dips On Hot Inflation Data; Nvidia Falls Again, Anthropic Sets IPO Range (Live Coverage)",
-                    "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=da4b6468f7b07843e1b9de42fc190efda0a049a2abd6c729c74866c400d1cd24",
-                    "published_at": 1794324688
-                }
-            ],
-            "guidance_direction": "UNKNOWN",
-            "after_hours_price": 18.79,
-            "regular_close_price": 18.79,
-            "after_hours_change_pct": 0.0,
-            "volume": 1285380.0,
-            "volume_ratio": 1.11,
-            "quote_timestamp": "2026-11-10T20:01:56.964462529Z",
-            "score": 21,
-            "signal": "STRONG BEARISH",
-            "summary": "EPS surprise -53.8%; revenue surprise -2.2%; extended move +0.0%"
-        },
-        {
-            "symbol": "HRB",
-            "earnings_date": "2026-11-09",
-            "session": "AMC",
-            "eps_estimate": -1.4483,
-            "eps_actual": -1.4,
-            "eps_surprise_pct": 3.33,
-            "revenue_estimate": 214401032.0,
-            "revenue_actual": 224340000.0,
-            "revenue_surprise_pct": 4.64,
-            "finnhub_surprise_pct": null,
-            "name": "H & R Block Inc",
-            "market_cap_millions": 6244.696392,
-            "market_cap_category": "Mid Cap",
-            "status": "released",
-            "detected_at": "2026-11-10T20:02:38.692276+00:00",
-            "sec_filing": {
-                "status": "found",
-                "form": "8-K",
-                "filed_at": "2026-11-09",
-                "accession": "0000012659-26-000035",
-                "url": "https://www.sec.gov/Archives/edgar/data/12659/000001265926000035/hrb-20261109.htm"
-            },
-            "news": [
-                {
-                    "headline": "Is H&R Block (HRB) Undervalued Following Its Reaffirmed Outlook And Capital Returns?",
-                    "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=3fb88e089c4a39e35aaabe524a48dde7659e4a8d8e44804018d26ee390a46807",
-                    "published_at": 1794326890
-                },
-                {
-                    "headline": "H&R Block (HRB) reports Q3: everything you need to know ahead of earnings",
-                    "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=d305ebb8ba5b77c664d4f43fd0d35ccad52f4c40b5e88ddc63c78444c6f0430a",
-                    "published_at": 1794324336
-                },
-                {
-                    "headline": "H&R Block (HRB) Stock Could Be A Bargain As Texas Political Shift Raises Questions",
-                    "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=e2fb13dafbb42304d1cc3c85e5ab7eeaa2e53a5cff02585417ba798489d8a8ab",
-                    "published_at": 1794319838
-                },
-                {
-                    "headline": "H&R Block Inc (HRB) (Q1 2027) Earnings Call Highlights: Revenue Jumps 10. ...",
-                    "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=cb4edd67e1c6b92d4fc22475e64ed325c22261e6fe0ca4a40adf090274720b44",
-                    "published_at": 1794315962
-                },
-                {
-                    "headline": "H&R Block Emerald Advance\u00ae Loan offers up to $1,750 now through Dec. 30",
-                    "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=741188b6385a27bc7d1e2bdede93bd2c973d737bb054d5cb019f61142767980c",
-                    "published_at": 1794315600
-                }
-            ],
-            "guidance_direction": "UNKNOWN",
-            "after_hours_price": 50.83,
-            "regular_close_price": 50.83,
-            "after_hours_change_pct": 0.0,
-            "volume": 67211.0,
-            "volume_ratio": 0.55,
-            "quote_timestamp": "2026-11-10T20:01:54.259462329Z",
-            "score": 66,
+            "volume": 35815.0,
+            "volume_ratio": 1.14,
+            "quote_timestamp": "2026-11-10T20:59:57.609107369Z",
+            "score": 65,
             "signal": "BULLISH",
-            "summary": "EPS surprise +3.3%; revenue surprise +4.6%; extended move +0.0%"
+            "summary": "EPS surprise +8.2%; revenue surprise -0.6%; extended move +0.0%"
         },
         {
-            "symbol": "HSAI",
-            "earnings_date": "2026-11-09",
-            "session": "UNKNOWN",
-            "eps_estimate": 1.2175,
-            "eps_actual": null,
-            "eps_surprise_pct": null,
-            "revenue_estimate": 1044885450.0,
-            "revenue_actual": null,
-            "revenue_surprise_pct": null,
+            "symbol": "CRWV",
+            "earnings_date": "2026-11-10",
+            "session": "AMC",
+            "eps_estimate": -1.1816,
+            "eps_actual": -1.0,
+            "eps_surprise_pct": 15.37,
+            "revenue_estimate": 3617100805.0,
+            "revenue_actual": 3661000000.0,
+            "revenue_surprise_pct": 1.21,
             "finnhub_surprise_pct": null,
-            "name": "Hesai Group",
-            "market_cap_millions": 2274.8931593296,
-            "market_cap_category": "Mid Cap",
+            "name": "CoreWeave, Inc.",
+            "market_cap_millions": 26876.377563894857,
+            "market_cap_category": "Large Cap",
             "status": "released",
-            "detected_at": "2026-11-10T20:02:38.851904+00:00",
+            "detected_at": "2026-11-11T00:40:05.232150+00:00",
             "sec_filing": {
-                "status": "not_found",
-                "url": null
+                "status": "found",
+                "form": "8-K",
+                "filed_at": "2026-11-10",
+                "accession": "0001769628-26-000461",
+                "url": "https://www.sec.gov/Archives/edgar/data/1769628/000176962826000461/crwv-20261110.htm"
             },
             "news": [
                 {
-                    "headline": "Hesai Group (HSAI) Q3 2026 Earnings Call Transcript",
-                    "source": "SeekingAlpha",
-                    "url": "https://finnhub.io/api/news?id=164e4ef872fd74b4219de3e9f348ed5fe93f7343850bc1c6dee3dd2445f1604b",
-                    "published_at": 1794315671
+                    "headline": "CoreWeave Earnings Were Strong. Investors Remain Antsy as Stock Edges Up.",
+                    "source": "Yahoo",
+                    "url": "https://finnhub.io/api/news?id=de16f5bf51708a4ad363c682285fc81f484ec1b5757b1ccb77b1afb8f093814f",
+                    "published_at": 1794351780
                 },
                 {
-                    "headline": "Hesai Gr Q3 2026 Earnings Call Transcript",
-                    "source": "Benzinga",
-                    "url": "https://finnhub.io/api/news?id=336b65744714b88260e010f2dfd5ba56e7c0a1caa82fbd4d490ec53d75ce4785",
-                    "published_at": 1794302425
+                    "headline": "Ethereum ended CoreWeave's mining days. Earnings test its AI bet",
+                    "source": "Yahoo",
+                    "url": "https://finnhub.io/api/news?id=b109ba8ba808ace54d6e6a94c4fd6ff5bb16dd2d0ae3618ef0a1b74dfe4022ae",
+                    "published_at": 1794349525
                 },
                 {
-                    "headline": "Hesai Gr Sees Q4 Sales $164.000M-$172.000M vs $193.610M Est",
-                    "source": "Benzinga",
-                    "url": "https://finnhub.io/api/news?id=f362971af6a4763d4d0604a741660323e4e4e12227af9181904f986da34698ea",
-                    "published_at": 1794287894
+                    "headline": "CoreWeave Q3 earnings: Stock climbs after full-year outlook raised",
+                    "source": "Yahoo",
+                    "url": "https://finnhub.io/api/news?id=0ab92d0ca524fcfc4b46579927490c1585163003974f501e08a8c0ade94d9117",
+                    "published_at": 1794349380
                 },
                 {
-                    "headline": "Hesai Gr Q3 Adj. EPS $0.01 Down From $0.04 YoY, Sales $158.407M Up From $117.975M YoY",
-                    "source": "Benzinga",
-                    "url": "https://finnhub.io/api/news?id=d1c6ef1cce8d2683903d4d210d66c9f05aec8cf6ce3bf7491e860c7555eb692c",
-                    "published_at": 1794285624
+                    "headline": "CRWV Stock Climbs 8% After-Hours As $132B Revenue Backlog Reinforces AI Compute Demand: NBIS, IREN Tick Higher",
+                    "source": "Yahoo",
+                    "url": "https://finnhub.io/api/news?id=8a4c10e9a2ce5d56e3522be12917f375a6525d3b453adbc47ea67ac8600c5e2d",
+                    "published_at": 1794348580
                 },
                 {
-                    "headline": "Petrobras, TransDigm On Deck Tuesday As Oil Profits, Aerospace Demand Face Test",
-                    "source": "Benzinga",
-                    "url": "https://finnhub.io/api/news?id=83be46baf195f23053f60addfd8c8cb6c086b0a2140f23e1628e7d44af6b8b23",
-                    "published_at": 1794241844
+                    "headline": "Stock Market Today, Nov. 10: CoreWeave Stock Edges Lower as a Multibillion-Dollar Question Looms Over Earnings",
+                    "source": "Yahoo",
+                    "url": "https://finnhub.io/api/news?id=0a7961ca7686a1cbaeb402ee12ec19234b3c4f869f946fc751dc0d4e860962f7",
+                    "published_at": 1794348302
                 }
             ],
             "guidance_direction": "UNKNOWN",
-            "after_hours_price": 14.22,
-            "regular_close_price": 14.225,
-            "after_hours_change_pct": -0.04,
-            "volume": 111030.0,
-            "volume_ratio": 0.8,
-            "quote_timestamp": "2026-11-10T20:02:11.615419659Z",
-            "score": 50,
-            "signal": "MIXED",
-            "summary": "extended move -0.0%"
+            "after_hours_price": 49.25,
+            "regular_close_price": 48.74,
+            "after_hours_change_pct": 1.05,
+            "volume": 1753166.0,
+            "volume_ratio": 1.23,
+            "quote_timestamp": "2026-11-10T21:59:40.226573143Z",
+            "score": 78,
+            "signal": "STRONG BULLISH",
+            "summary": "EPS surprise +15.4%; revenue surprise +1.2%; extended move +1.1%"
         },
         {
-            "symbol": "YETI",
-            "earnings_date": "2026-11-12",
-            "session": "BMO",
-            "eps_estimate": 0.8571,
+            "symbol": "BN",
+            "earnings_date": "2026-11-10",
+            "session": "UNKNOWN",
+            "eps_estimate": 0.7455,
             "eps_actual": null,
             "eps_surprise_pct": null,
-            "revenue_estimate": 533505359.0,
+            "revenue_estimate": 1853619930.0,
             "revenue_actual": null,
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
-            "name": "YETI Holdings, Inc.",
-            "market_cap_millions": 3186.69,
-            "market_cap_category": "Mid Cap",
+            "name": "Brookfield Corporation",
+            "market_cap_millions": 103962.05225123724,
+            "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-10T20:02:38.852072+00:00",
+            "detected_at": "2026-11-11T00:40:05.232313+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -798,10 +281,10 @@
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
             "name": "Almonty Industries Inc",
-            "market_cap_millions": 2531.418413,
+            "market_cap_millions": 2348.233148925356,
             "market_cap_category": "Mid Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-10T20:02:38.851993+00:00",
+            "detected_at": "2026-11-11T00:40:05.232231+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -830,10 +313,10 @@
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
             "name": "Amer Sports Inc",
-            "market_cap_millions": 18885.942285000005,
+            "market_cap_millions": 18536.84908195009,
             "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-10T20:02:38.852003+00:00",
+            "detected_at": "2026-11-11T00:40:05.232242+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -865,7 +348,7 @@
             "market_cap_millions": 3207.09,
             "market_cap_category": "Mid Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-10T20:02:38.852011+00:00",
+            "detected_at": "2026-11-11T00:40:05.232251+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -894,10 +377,10 @@
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
             "name": "The Walt Disney Company",
-            "market_cap_millions": 205682.947037,
+            "market_cap_millions": 205838.3488606512,
             "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-10T20:02:38.852019+00:00",
+            "detected_at": "2026-11-11T00:40:05.232264+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -926,10 +409,10 @@
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
             "name": "Dolby Laboratories, Inc.",
-            "market_cap_millions": 6068.801248999999,
+            "market_cap_millions": 6057.5609935611965,
             "market_cap_category": "Mid Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-10T20:02:38.852027+00:00",
+            "detected_at": "2026-11-11T00:40:05.232275+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -949,7 +432,7 @@
         {
             "symbol": "GBDC",
             "earnings_date": "2026-11-17",
-            "session": "UNKNOWN",
+            "session": "AMC",
             "eps_estimate": 0.3337,
             "eps_actual": null,
             "eps_surprise_pct": null,
@@ -958,10 +441,10 @@
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
             "name": "Golub Capital BDC Inc",
-            "market_cap_millions": 3297.575027,
+            "market_cap_millions": 3310.5576058464567,
             "market_cap_category": "Mid Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-10T20:02:38.852036+00:00",
+            "detected_at": "2026-11-11T00:40:05.232282+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -981,7 +464,7 @@
         {
             "symbol": "HD",
             "earnings_date": "2026-11-17",
-            "session": "UNKNOWN",
+            "session": "BMO",
             "eps_estimate": 3.9538,
             "eps_actual": null,
             "eps_surprise_pct": null,
@@ -990,10 +473,10 @@
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
             "name": "The Home Depot, Inc.",
-            "market_cap_millions": 352603.4846329999,
+            "market_cap_millions": 350189.0756215918,
             "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-10T20:02:38.852044+00:00",
+            "detected_at": "2026-11-11T00:40:05.232289+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -1022,10 +505,10 @@
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
             "name": "IHS Holding Limited",
-            "market_cap_millions": 2855.595609,
+            "market_cap_millions": 2869.129237478673,
             "market_cap_category": "Mid Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-10T20:02:38.852051+00:00",
+            "detected_at": "2026-11-11T00:40:05.232295+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -1045,7 +528,7 @@
         {
             "symbol": "KLAR",
             "earnings_date": "2026-11-17",
-            "session": "UNKNOWN",
+            "session": "BMO",
             "eps_estimate": -0.1345,
             "eps_actual": null,
             "eps_surprise_pct": null,
@@ -1054,10 +537,10 @@
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
             "name": "Klarna Group PLC",
-            "market_cap_millions": 5103.494485,
+            "market_cap_millions": 4982.163263959881,
             "market_cap_category": "Mid Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-10T20:02:38.852058+00:00",
+            "detected_at": "2026-11-11T00:40:05.232301+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -1077,7 +560,7 @@
         {
             "symbol": "MFP",
             "earnings_date": "2026-11-17",
-            "session": "UNKNOWN",
+            "session": "BMO",
             "eps_estimate": 0.5212,
             "eps_actual": null,
             "eps_surprise_pct": null,
@@ -1086,10 +569,10 @@
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
             "name": "Midera Food Processing Inc",
-            "market_cap_millions": 2085.576238,
+            "market_cap_millions": 2039.4411748301889,
             "market_cap_category": "Mid Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-10T20:02:38.852065+00:00",
+            "detected_at": "2026-11-11T00:40:05.232307+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -1108,8 +591,8 @@
         }
     ],
     "status": "complete",
-    "last_refresh": "2026-11-10T20:02:38.852092+00:00",
-    "last_attempt": "2026-11-10T20:00:03.983027+00:00",
+    "last_refresh": "2026-11-11T00:40:05.232325+00:00",
+    "last_attempt": "2026-11-11T00:38:29.376622+00:00",
     "error": null,
     "sources": {
         "finnhub": "earnings calendar and headlines",
@@ -1119,7 +602,7 @@
     },
     "diagnostics": {
         "calendar_rows": 1498,
-        "eligible_rows": 24,
-        "excluded_rows": 1474
+        "eligible_rows": 15,
+        "excluded_rows": 1483
     }
 }
