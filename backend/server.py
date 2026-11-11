@@ -2,7 +2,9 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import threading
 from datetime import datetime
+import requests
 import state
+from config import ALPACA_API_KEY, ALPACA_SECRET_KEY
 from utils import is_market_open, seconds_until_market_open
 from research import run_research_cycle
 from longterm import generate_longterm_picks, trigger_longterm_async, DEFAULT_PICKS_DATA
@@ -118,49 +120,63 @@ def get_performance():
 
 @api.get("/positions")
 def get_positions():
-    if not state.strategy_instance:
-        return {"error": "Bot not initialized"}
     try:
+        if not ALPACA_API_KEY or not ALPACA_SECRET_KEY:
+            return {"error": "Alpaca credentials missing", "positions": []}
+
+        headers = {
+            "Apca-Api-Key-Id": ALPACA_API_KEY,
+            "Apca-Api-Secret-Key": ALPACA_SECRET_KEY,
+        }
+        account_response = requests.get(
+            "https://paper-api.alpaca.markets/v2/account",
+            headers=headers,
+            timeout=10,
+        )
+        account_response.raise_for_status()
+        account = account_response.json()
+
+        positions_response = requests.get(
+            "https://paper-api.alpaca.markets/v2/positions",
+            headers=headers,
+            timeout=10,
+        )
+        positions_response.raise_for_status()
+        positions = positions_response.json()
         positions_data = []
-        positions = state.strategy_instance.get_positions()
         for position in positions:
-            symbol = position.symbol
-            quantity = position.quantity
-            avg_price = position.avg_fill_price or 0
-            current_price = state.strategy_instance.get_last_price(symbol)
-            if current_price > 0:
-                invested = quantity * avg_price
-                current_value = quantity * current_price
-                unrealized_pnl = current_value - invested
-                unrealized_pnl_pct = (unrealized_pnl / invested) * 100 if invested > 0 else 0
-                spy_price = state.strategy_instance.get_last_price("SPY")
-                spy_start = state.portfolio_performance.get("spy_start_price", spy_price)
-                spy_roi = ((spy_price - spy_start) / spy_start) * 100 if spy_start > 0 else 0
-                sell_target_pct = spy_roi + 5
-                sell_target_price = current_price * (1 + sell_target_pct / 100)
-                research = state.research_reports.get(symbol, {})
-                positions_data.append({
-                    "symbol": symbol,
-                    "name": str(research.get("name", symbol)),
-                    "quantity": float(quantity),
-                    "avg_price": float(round(avg_price, 2)),
-                    "current_price": float(round(current_price, 2)),
-                    "invested": float(round(invested, 2)),
-                    "current_value": float(round(current_value, 2)),
-                    "unrealized_pnl": float(round(unrealized_pnl, 2)),
-                    "unrealized_pnl_pct": float(round(unrealized_pnl_pct, 2)),
-                    "sell_target_price": float(round(sell_target_price, 2)),
-                    "sell_target_pct": float(round(sell_target_pct, 2)),
-                    "spy_roi": float(round(spy_roi, 2)),
-                    "ai_grade": int(research.get("ai_grade", 50)),
-                    "risk_level": str(research.get("risk_level", "Medium")),
-                    "stop_loss": float(research.get("stop_loss")) if research.get("stop_loss") is not None else None
-                })
+            symbol = str(position.get("symbol", "")).strip()
+            quantity = float(position.get("qty", 0) or 0)
+            avg_price = float(position.get("avg_entry_price", 0) or 0)
+            current_price = float(position.get("current_price", 0) or 0)
+            invested = float(position.get("cost_basis", 0) or 0)
+            current_value = float(position.get("market_value", 0) or 0)
+            unrealized_pnl = float(position.get("unrealized_pl", 0) or 0)
+            unrealized_pnl_pct = float(position.get("unrealized_plpc", 0) or 0) * 100
+            research = state.research_reports.get(symbol, {})
+            positions_data.append({
+                "symbol": symbol,
+                "name": str(research.get("name", symbol)),
+                "quantity": quantity,
+                "avg_price": float(round(avg_price, 2)),
+                "current_price": float(round(current_price, 2)),
+                "invested": float(round(invested, 2)),
+                "current_value": float(round(current_value, 2)),
+                "unrealized_pnl": float(round(unrealized_pnl, 2)),
+                "unrealized_pnl_pct": float(round(unrealized_pnl_pct, 2)),
+                "ai_grade": int(research.get("ai_grade", 50)),
+                "risk_level": str(research.get("risk_level", "Medium")),
+                "stop_loss": float(research.get("stop_loss")) if research.get("stop_loss") is not None else None,
+            })
         return {
             "positions": positions_data,
             "total_invested": float(sum(p["invested"] for p in positions_data)),
-            "total_value": float(sum(p["current_value"] for p in positions_data)),
-            "total_unrealized_pnl": float(sum(p["unrealized_pnl"] for p in positions_data))
+            "total_value": float(account.get("portfolio_value", account.get("equity", 0)) or 0),
+            "cash": float(account.get("cash", 0) or 0),
+            "total_unrealized_pnl": float(sum(p["unrealized_pnl"] for p in positions_data)),
+            "is_live_alpaca": True,
         }
-    except Exception as e:
-        return {"error": str(e)}
+    except requests.RequestException as exc:
+        return {"error": f"Alpaca positions request failed: {exc}", "positions": []}
+    except (TypeError, ValueError, KeyError) as exc:
+        return {"error": f"Alpaca positions response invalid: {exc}", "positions": []}

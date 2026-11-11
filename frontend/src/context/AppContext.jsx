@@ -99,7 +99,9 @@ export function AppProvider({ children }) {
           if (resPerf.ok) setPerformance(await resPerf.json());
           if (resPositions.ok) {
             const posData = await resPositions.json();
-            if (posData && posData.positions) setPositions({ ...posData, is_live_alpaca: false });
+            if (posData && posData.positions) {
+              setPositions({ ...posData, is_live_alpaca: posData.is_live_alpaca ?? true });
+            }
           }
           if (resStatus.ok) setResearchStatus(await resStatus.json());
           if (resTrades.ok) {

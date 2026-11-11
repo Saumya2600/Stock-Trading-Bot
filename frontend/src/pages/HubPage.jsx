@@ -78,7 +78,7 @@ export default function HubPage() {
           <div className="glass-card hero-stat-card">
             <Activity size={16} style={{ color: '#57bcff', opacity: 0.7, marginBottom: '0.75rem' }} />
             <StatCell
-              label="PORTFOLIO"
+              label={positions?.positions?.length ? 'PORTFOLIO' : 'PAPER CASH'}
               value={portfolioValue > 0 ? `$${portfolioValue.toLocaleString('en-US', { maximumFractionDigits: 0 })}` : '—'}
               sub={totalPnL !== 0 ? `${totalPnL >= 0 ? '+' : ''}$${totalPnL.toFixed(0)} P&L` : null}
               accent={totalPnL >= 0 ? '#3fff8b' : '#ff716c'}
