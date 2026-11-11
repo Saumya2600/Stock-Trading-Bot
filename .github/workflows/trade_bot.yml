@@ -10,6 +10,11 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  # Research and trading both update shared JSON snapshots on main.
+  group: stock-bot-data-sync
+  cancel-in-progress: false
+
 jobs:
   trade-cycle:
     runs-on: ubuntu-latest
@@ -55,5 +60,5 @@ jobs:
           git add app_state.json
 
           git commit -m "Automated Trade Sync: $(date)" || echo "No changes to commit"
-          git pull --rebase origin main || true
+          git pull --rebase origin main
           git push origin main

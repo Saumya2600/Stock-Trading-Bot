@@ -11,6 +11,11 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  # Research and trading both update shared JSON snapshots on main.
+  group: stock-bot-data-sync
+  cancel-in-progress: false
+
 jobs:
   research-cycle:
     runs-on: ubuntu-latest
@@ -63,14 +68,12 @@ jobs:
           cp backend/app_state.json frontend/public/app_state.json || true
           cp backend/longterm_picks.json ./longterm_picks.json || true
           cp backend/longterm_picks.json frontend/public/longterm_picks.json || true
-          cp backend/overnight_analysis.json ./overnight_analysis.json || true
-          cp backend/overnight_analysis.json frontend/public/overnight_analysis.json || true
+          cp overnight_analysis.json frontend/public/overnight_analysis.json || true
 
           git add backend/*.json
           git add frontend/public/*.json
           git add *.json
 
           git commit -m "Automated Research Sync: $(date)" || echo "No changes to commit"
-          # Pull with rebase to avoid conflicts if another workflow pushed first
-          git pull --rebase origin main || true
+          git pull --rebase origin main
           git push origin main
