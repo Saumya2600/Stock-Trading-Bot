@@ -91,7 +91,11 @@ export function AppProvider({ children }) {
           ].map(p => p.catch(() => ({ ok: false }))));
 
           if (resSignals.ok) setBotSignals(await resSignals.json());
-          if (resResearch.ok) setResearchReports(await resResearch.json());
+          let liveResearch = null;
+          if (resResearch.ok) {
+            liveResearch = await resResearch.json();
+            setResearchReports(liveResearch);
+          }
           if (resPerf.ok) setPerformance(await resPerf.json());
           if (resPositions.ok) {
             const posData = await resPositions.json();
@@ -108,8 +112,12 @@ export function AppProvider({ children }) {
           }
           setBotOnline(Boolean(resSignals.ok));
 
-          // If backend was unreachable (e.g. Render waking up), fallback to static JSON so mobile never shows blank
-          if (!resResearch.ok) {
+          // Render can return an empty in-memory state after restart. Use the
+          // GitHub Actions snapshot when live API has no report rows.
+          const liveResearchSymbols = liveResearch && typeof liveResearch === 'object'
+            ? Object.keys(liveResearch).filter(k => !k.startsWith('_'))
+            : [];
+          if (!resResearch.ok || liveResearchSymbols.length === 0) {
             let gotFreshData = false;
             // Tier 1 fallback: static /reports.json (committed by GitHub Actions)
             const fallbackRes = await fetch(`/reports.json${cacheBuster}`).catch(() => ({ ok: false }));
@@ -117,7 +125,7 @@ export function AppProvider({ children }) {
               const fallbackReports = await fallbackRes.json();
               const hasPicks = Object.keys(fallbackReports).filter(k => !k.startsWith('_')).length > 0;
               if (hasPicks) {
-                setResearchReports(prev => (Object.keys(prev || {}).length ? prev : fallbackReports));
+                setResearchReports(fallbackReports);
                 setBotSignals(prev => prev || { signals: Object.keys(fallbackReports).filter(k => !k.startsWith('_')) });
                 gotFreshData = true;
               }
@@ -157,7 +165,9 @@ export function AppProvider({ children }) {
           const cacheBuster = `?t=${Date.now()}`;
           const fallbackRes = await fetch(`/reports.json${cacheBuster}`).catch(() => ({ ok: false }));
           if (fallbackRes.ok) setResearchReports(await fallbackRes.json());
-        } catch (_) {}
+        } catch (fallbackError) {
+          console.warn("Static report fallback failed:", fallbackError);
+        }
       }
     };
     window.addEventListener('refresh-dashboard-data', fetchBotData);
