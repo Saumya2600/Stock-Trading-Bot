@@ -106,7 +106,20 @@ export function AppProvider({ children }) {
           if (resStatus.ok) setResearchStatus(await resStatus.json());
           if (resTrades.ok) {
             const historyData = await resTrades.json();
-            setTradeHistory(historyData.history || []);
+            const serverHistory = Array.isArray(historyData.history) ? historyData.history : [];
+            setTradeHistory(prev => {
+              const merged = new Map();
+              serverHistory.forEach(trade => {
+                merged.set(`${trade.symbol}_${trade.timestamp}`, trade);
+              });
+              (prev || []).forEach(trade => {
+                const key = `${trade.symbol}_${trade.timestamp}`;
+                if (!merged.has(key)) merged.set(key, trade);
+              });
+              return Array.from(merged.values()).sort(
+                (a, b) => new Date(b.timestamp) - new Date(a.timestamp)
+              );
+            });
           }
           if (resLongterm && resLongterm.ok) {
             const ltData = await resLongterm.json();
