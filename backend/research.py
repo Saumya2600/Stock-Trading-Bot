@@ -350,6 +350,15 @@ def run_research_cycle(force=False, manual_reason=None):
         except:
             return 0.0
 
+    def safe_response_json(response, default):
+        if not response.ok or not response.content:
+            return default
+        try:
+            payload = response.json()
+            return payload if isinstance(payload, dict) else default
+        except ValueError:
+            return default
+
     sym_str = ",".join(all_targets)
     all_bars = {}
     all_snapshots = {}
@@ -357,12 +366,12 @@ def run_research_cycle(force=False, manual_reason=None):
         # Get Snapshots for latest price
         s_res = requests.get(f"https://data.alpaca.markets/v2/stocks/snapshots?symbols={sym_str}", headers=headers, timeout=10)
         if s_res.status_code == 200:
-            all_snapshots = s_res.json()
-            
+            all_snapshots = safe_response_json(s_res, {})
+
         # Get Bars for technicals
         b_res = requests.get(f"https://data.alpaca.markets/v2/stocks/bars?symbols={sym_str}&timeframe=1Day&limit=30", headers=headers, timeout=10)
         if b_res.status_code == 200:
-            all_bars = b_res.json().get('bars', {})
+            all_bars = safe_response_json(b_res, {}).get('bars', {})
             if all_bars or all_snapshots:
                 break
         elif b_res.status_code == 429:
@@ -375,13 +384,24 @@ def run_research_cycle(force=False, manual_reason=None):
             name = symbol
             try:
                 asset_url = f"https://api.alpaca.markets/v2/assets/{symbol}"
-                asset_res = requests.get(asset_url, headers=headers, timeout=10).json()
+                asset_response = requests.get(asset_url, headers=headers, timeout=10)
+                asset_res = safe_response_json(asset_response, {})
                 name = asset_res.get('name', symbol)
                 time.sleep(0.5) # Pace for Alpaca rate limit
-            except: pass
+            except (requests.RequestException, ValueError):
+                pass
             news_url = f"https://data.alpaca.markets/v1beta1/news?symbols={symbol}&limit=8"
-            news_res = requests.get(news_url, headers=headers, timeout=10).json()
-            headlines = [n['headline'] for n in news_res.get('news', [])]
+            try:
+                news_response = requests.get(news_url, headers=headers, timeout=10)
+                news_res = safe_response_json(news_response, {})
+                headlines = [
+                    item.get('headline')
+                    for item in news_res.get('news', [])
+                    if isinstance(item, dict) and item.get('headline')
+                ]
+            except requests.RequestException as exc:
+                safe_print(f"[RESEARCH] {symbol}: news unavailable ({exc}); continuing without headlines.")
+                headlines = []
             
             bars = all_bars.get(symbol, [])
             snap = all_snapshots.get(symbol, {})
