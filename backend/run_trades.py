@@ -1,12 +1,45 @@
 import os
 import sys
 from datetime import datetime
+import requests
 
 # Add current directory to path
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 from utils import safe_print, is_market_open
 import state
+
+
+def verify_paper_credentials():
+    """Fail early with a useful message when Alpaca paper keys are invalid."""
+    api_key = os.getenv("VITE_ALPACA_API_KEY")
+    api_secret = os.getenv("VITE_ALPACA_SECRET_KEY")
+    if not api_key or not api_secret:
+        raise RuntimeError(
+            "ALPACA_AUTH_ERROR: GitHub paper secrets are missing. "
+            "Set VITE_ALPACA_API_KEY and VITE_ALPACA_SECRET_KEY."
+        )
+
+    response = requests.get(
+        "https://paper-api.alpaca.markets/v2/account",
+        headers={
+            "Apca-Api-Key-Id": api_key,
+            "Apca-Api-Secret-Key": api_secret,
+        },
+        timeout=10,
+    )
+    if response.status_code == 401:
+        raise RuntimeError(
+            "ALPACA_AUTH_ERROR: GitHub paper secrets are invalid or expired. "
+            "Regenerate the Paper API key pair, then update both GitHub secrets."
+        )
+    response.raise_for_status()
+    account = response.json()
+    if str(account.get("status", "")).lower() != "active":
+        raise RuntimeError(
+            f"ALPACA_AUTH_ERROR: Paper account is not active ({account.get('status')})."
+        )
+
 
 def main():
     if not is_market_open():
@@ -35,6 +68,8 @@ def main():
     safe_print(f"[{datetime.now()}] TRADE RUNNER: High-conviction (grade>=55): {high_conviction}")
 
     try:
+        verify_paper_credentials()
+        safe_print(f"[{datetime.now()}] TRADE RUNNER: Paper Alpaca credentials verified.")
         from config import ALPACA_CREDS
         from lumibot.brokers import Alpaca
         from lumibot.traders import Trader
