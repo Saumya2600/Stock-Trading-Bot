@@ -1,90 +1,90 @@
 {
+    "IP": {
+        "data": {
+            "sector": "Consumer Cyclical",
+            "industry": "Packaging & Containers",
+            "pe": 0,
+            "peg": 1.58,
+            "debt_to_equity": 0.79,
+            "description": "International Paper Company produces and sells renewable fiber-based packaging in North America, Latin America, Europe, South America, and North Africa. It operates through two segments, Packaging Sol..."
+        },
+        "updated_at": "2026-11-13T01:01:01.508102"
+    },
+    "SPY": {
+        "data": {
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 24.09,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "The trust seeks to achieve its investment objective by holding a portfolio of the common stocks that are included in the index (the \u201cPortfolio\u201d), with the weight of each stock in the Portfolio substan..."
+        },
+        "updated_at": "2026-11-13T01:02:31.717926"
+    },
+    "TSLA": {
+        "data": {
+            "sector": "Consumer Cyclical",
+            "industry": "Auto Manufacturers",
+            "pe": 436.76,
+            "peg": 4.56,
+            "debt_to_equity": 0.18,
+            "description": "Tesla, Inc. designs, develops, manufactures, leases, and sells electric vehicles, and energy generation and storage systems in the United States, China, and internationally. The company operates in tw..."
+        },
+        "updated_at": "2026-11-13T01:02:57.313099"
+    },
     "OXY": {
         "data": {
             "sector": "Energy",
             "industry": "Oil & Gas E&P",
-            "pe": 12.7,
-            "peg": 0.84,
+            "pe": 13.01,
+            "peg": 0.86,
             "debt_to_equity": 0.29,
             "description": "Occidental Petroleum Corporation, together with its subsidiaries, engages in the acquisition, exploration, and development of oil and gas properties in the United States and internationally. It operat..."
         },
-        "updated_at": "2026-11-11T17:53:49.574147"
+        "updated_at": "2026-11-13T01:03:40.347980"
     },
-    "CRWV": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 0,
-            "peg": 0,
-            "debt_to_equity": 16.45,
-            "description": "CoreWeave, Inc. operates as a cloud infrastructure technology company in the United States. The company offers CoreWeave Cloud platform that comprises proprietary software and cloud services that deli..."
-        },
-        "updated_at": "2026-11-11T17:54:13.604928"
-    },
-    "MU": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Semiconductors",
-            "pe": 11.1,
-            "peg": 0.16,
-            "debt_to_equity": 0.04,
-            "description": "Micron Technology, Inc. engages in the provision of semiconductor memory and storage products in the United States, Taiwan, Mainland China, other Asia Pacific countries, Japan, Europe, and internation..."
-        },
-        "updated_at": "2026-11-11T17:54:37.489692"
-    },
-    "C": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Banks - Diversified",
-            "pe": 12.13,
-            "peg": 0.51,
-            "debt_to_equity": 0,
-            "description": "Citigroup Inc., a diversified financial service holding company, provides various financial products and services to consumers, corporations, governments, and institutions. It operates through five se..."
-        },
-        "updated_at": "2026-11-11T17:55:03.182960"
-    },
-    "CIA": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Insurance - Life",
-            "pe": 24.88,
-            "peg": 1.21,
-            "debt_to_equity": 0,
-            "description": "Citizens, Inc., is a diversified financial services company providing life, living benefits and final expense insurance and other financial products to individuals and small businesses in the U.S., La..."
-        },
-        "updated_at": "2026-11-11T17:55:24.083186"
-    },
-    "LVS": {
-        "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Resorts & Casinos",
-            "pe": 16.43,
-            "peg": 1.06,
-            "debt_to_equity": 0,
-            "description": "Las Vegas Sands Corp., together with its subsidiaries, owns, develops, and operates integrated resorts in Macao and Singapore. It owns and operates The Venetian Macao Resort Hotel, The Londoner Macao,..."
-        },
-        "updated_at": "2026-11-11T17:55:44.543458"
-    },
-    "APA": {
+    "PR": {
         "data": {
             "sector": "Energy",
             "industry": "Oil & Gas E&P",
-            "pe": 7.54,
-            "peg": 1.1,
-            "debt_to_equity": 0.42,
-            "description": "APA Corporation, an independent energy company, explores for, develops, and produces natural gas, crude oil, and natural gas liquids. The company has oil and gas operations in the United States, Egypt..."
+            "pe": 11.8,
+            "peg": 0.77,
+            "debt_to_equity": 0.26,
+            "description": "Permian Resources Corporation, an independent oil and natural gas company, focuses on the development of crude oil and associated liquids-rich natural gas reserves in the United States. The company's ..."
         },
-        "updated_at": "2026-11-11T17:56:08.362708"
+        "updated_at": "2026-11-13T01:04:19.645648"
     },
-    "YOU": {
+    "DC": {
         "data": {
-            "sector": "Technology",
-            "industry": "Software - Application",
-            "pe": 32.19,
+            "sector": "Basic Materials",
+            "industry": "Gold",
+            "pe": 0,
             "peg": 0,
-            "debt_to_equity": 0.83,
-            "description": "Clear Secure, Inc. operates a secure identity platform under the CLEAR brand name primarily in the United States. It provides secure identity platform, a multi-layered infrastructure consisting of fro..."
+            "debt_to_equity": 0.01,
+            "description": "Dakota Gold Corp. engages in the acquisition, exploration, and development of mineral properties in the United States. The company primarily explores for gold deposits. The company was incorporated in..."
         },
-        "updated_at": "2026-11-11T17:56:32.733730"
+        "updated_at": "2026-11-13T01:04:46.605379"
+    },
+    "DTE": {
+        "data": {
+            "sector": "Utilities",
+            "industry": "Utilities - Regulated Electric",
+            "pe": 21.22,
+            "peg": 1.79,
+            "debt_to_equity": 2.27,
+            "description": "DTE Energy Company engages in energy-related businesses and services. The company operates through four segments: Electric, Gas, DTE Vantage, and Energy Trading. The company's Electric segment generat..."
+        },
+        "updated_at": "2026-11-13T01:05:13.235604"
+    },
+    "NFLX": {
+        "data": {
+            "sector": "Communication Services",
+            "industry": "Entertainment",
+            "pe": 18.12,
+            "peg": 1.03,
+            "debt_to_equity": 0.6,
+            "description": "Netflix, Inc. provides entertainment services worldwide. The company offers television (TV) series, documentaries, feature films, games, and live programming across various genres and languages. It al..."
+        },
+        "updated_at": "2026-11-13T01:05:39.325902"
     }
 }
