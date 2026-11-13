@@ -1,91 +1,156 @@
 {
     "events": [
         {
-            "symbol": "ERAS",
-            "earnings_date": "2026-11-11",
-            "session": "AMC",
-            "eps_estimate": -0.1326,
-            "eps_actual": null,
-            "eps_surprise_pct": null,
+            "symbol": "BLTE",
+            "earnings_date": "2026-11-12",
+            "session": "BMO",
+            "eps_estimate": -0.7836,
+            "eps_actual": -0.65,
+            "eps_surprise_pct": 17.05,
             "revenue_estimate": 0.0,
-            "revenue_actual": null,
+            "revenue_actual": 0.0,
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
-            "name": "Erasca, Inc.",
-            "market_cap_millions": 5519.244486803571,
+            "name": "Belite Bio, Inc",
+            "market_cap_millions": 6902.782906,
             "market_cap_category": "Mid Cap",
             "status": "released",
-            "detected_at": "2026-11-13T01:08:31.918596+00:00",
-            "sec_filing": {
-                "status": "found",
-                "form": "10-Q",
-                "filed_at": "2026-11-12",
-                "accession": "0001193125-26-458289",
-                "url": "https://www.sec.gov/Archives/edgar/data/1761918/000119312526458289/eras-20260930.htm"
-            },
-            "news": [
-                {
-                    "headline": "Erasca Reports Third Quarter 2026 Business Updates and Financial Results",
-                    "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=4cd000548b8d01ab8cab2f93dcec26dc7ad2c6fd501642cdb5efddffd05e7cce",
-                    "published_at": 1794517260
-                },
-                {
-                    "headline": "Erasca Stock In Focus As Combination Trial Begins",
-                    "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=6a9bbdb05737e24203ffdfedaf22da1c9703dad450ea3c8db1e438db84c315a3",
-                    "published_at": 1794453188
-                }
-            ],
-            "guidance_direction": "UNKNOWN",
-            "after_hours_price": 15.79,
-            "regular_close_price": 15.79,
-            "after_hours_change_pct": 0.0,
-            "volume": 357932.0,
-            "volume_ratio": 0.42,
-            "quote_timestamp": "2026-11-12T20:59:59.902421324Z",
-            "score": 50,
-            "signal": "MIXED",
-            "summary": "extended move +0.0%"
-        },
-        {
-            "symbol": "NIO",
-            "earnings_date": "2026-11-11",
-            "session": "UNKNOWN",
-            "eps_estimate": -0.0939,
-            "eps_actual": null,
-            "eps_surprise_pct": null,
-            "revenue_estimate": 33668882128.0,
-            "revenue_actual": null,
-            "revenue_surprise_pct": null,
-            "finnhub_surprise_pct": null,
-            "name": "NIO Inc.",
-            "market_cap_millions": 7705.677491042509,
-            "market_cap_category": "Mid Cap",
-            "status": "released",
-            "detected_at": "2026-11-13T01:08:32.119898+00:00",
+            "detected_at": "2026-11-13T20:03:43.724760+00:00",
             "sec_filing": {
                 "status": "not_found",
                 "url": null
             },
             "news": [
                 {
-                    "headline": "NIO Inc. (NIO) Stock Dips While Market Gains: Key Facts",
+                    "headline": "Belite Bio, Inc (BLTE) Q3 2026 Earnings Call Transcript",
+                    "source": "SeekingAlpha",
+                    "url": "https://finnhub.io/api/news?id=1cbea88c54a62a6ef981de74197f62584bb0ed82b61370378f75ea8671585843",
+                    "published_at": 1794509944
+                },
+                {
+                    "headline": "Belite Bio Reports Unaudited Third Quarter 2026 Financial Results and Provides a Corporate Update",
                     "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=850f0bec700b8cc1b385a51d8ed831fcc99615266104591929b8d35ab3dd9b94",
-                    "published_at": 1794433502
+                    "url": "https://finnhub.io/api/news?id=5b848ee2661d35341569e63e4da90c934713bac2950f9fd871ab8a3850dde5e1",
+                    "published_at": 1794481200
+                },
+                {
+                    "headline": "Belite Bio Q3 EPS $(0.65) Beats $(0.80) Estimate",
+                    "source": "Benzinga",
+                    "url": "https://finnhub.io/api/news?id=a504fa3215a8de7126403935bb4bad8d5394b82cecd022fa7d30a5600144d565",
+                    "published_at": 1794466907
                 }
             ],
             "guidance_direction": "UNKNOWN",
-            "after_hours_price": 3.05,
-            "regular_close_price": 3.04,
-            "after_hours_change_pct": 0.33,
-            "volume": 3445635.0,
-            "volume_ratio": 2.93,
-            "quote_timestamp": "2026-11-12T21:15:03.587722216Z",
+            "after_hours_price": 163.73,
+            "regular_close_price": 163.73,
+            "after_hours_change_pct": 0.0,
+            "volume": 11634.0,
+            "volume_ratio": 0.54,
+            "quote_timestamp": "2026-11-13T19:45:48.724031441Z",
+            "score": 75,
+            "signal": "STRONG BULLISH",
+            "summary": "EPS surprise +17.1%; extended move +0.0%"
+        },
+        {
+            "symbol": "BRC",
+            "earnings_date": "2026-11-12",
+            "session": "UNKNOWN",
+            "eps_estimate": 1.5251,
+            "eps_actual": null,
+            "eps_surprise_pct": null,
+            "revenue_estimate": 720893560.0,
+            "revenue_actual": null,
+            "revenue_surprise_pct": null,
+            "finnhub_surprise_pct": null,
+            "name": "Brady Corporation",
+            "market_cap_millions": 3864.2607228899774,
+            "market_cap_category": "Mid Cap",
+            "status": "released",
+            "detected_at": "2026-11-13T20:03:43.986033+00:00",
+            "sec_filing": {
+                "status": "found",
+                "form": "8-K",
+                "filed_at": "2026-11-09",
+                "accession": "0000746598-26-000054",
+                "url": "https://www.sec.gov/Archives/edgar/data/746598/000074659826000054/brc-20261106.htm"
+            },
+            "news": [],
+            "guidance_direction": "UNKNOWN",
+            "after_hours_price": 82.86,
+            "regular_close_price": 82.86,
+            "after_hours_change_pct": 0.0,
+            "volume": 6904.0,
+            "volume_ratio": 0.54,
+            "quote_timestamp": "2026-11-13T19:55:04.863636117Z",
             "score": 50,
             "signal": "MIXED",
-            "summary": "extended move +0.3%"
+            "summary": "extended move +0.0%"
+        },
+        {
+            "symbol": "CBRS",
+            "earnings_date": "2026-11-12",
+            "session": "AMC",
+            "eps_estimate": -0.1446,
+            "eps_actual": 0.13,
+            "eps_surprise_pct": 189.9,
+            "revenue_estimate": 218995927.0,
+            "revenue_actual": 230870000.0,
+            "revenue_surprise_pct": 5.42,
+            "finnhub_surprise_pct": null,
+            "name": "Cerebras Systems Inc",
+            "market_cap_millions": 23257.862522631203,
+            "market_cap_category": "Large Cap",
+            "status": "released",
+            "detected_at": "2026-11-13T20:03:44.177761+00:00",
+            "sec_filing": {
+                "status": "found",
+                "form": "8-K",
+                "filed_at": "2026-11-12",
+                "accession": "0001628280-26-073366",
+                "url": "https://www.sec.gov/Archives/edgar/data/2021728/000162828026073366/cbrs-20261112.htm"
+            },
+            "news": [
+                {
+                    "headline": "Stock Market Today: Dow Jones, S&P 500, Nasdaq 100  Futures Rise as Nvidia CEO Exit Remains in Focus\u2014 CSCO, AMAT, NU in Focus(UPDATED)",
+                    "source": "Benzinga",
+                    "url": "https://finnhub.io/api/news?id=4b6f07fbe022981ec4fb6800419643860c83d59c3ce2a510e07ffd73a152adb0",
+                    "published_at": 1794562844
+                },
+                {
+                    "headline": "12 Information Technology Stocks Moving In Friday's Pre-Market Session",
+                    "source": "Benzinga",
+                    "url": "https://finnhub.io/api/news?id=bcc13ab44a5a331e572b3d9dde3abd392471253aed3c7b5239e503854417200d",
+                    "published_at": 1794557146
+                },
+                {
+                    "headline": "Needham Maintains Buy on Cerebras Systems, Lowers Price Target to $200",
+                    "source": "Benzinga",
+                    "url": "https://finnhub.io/api/news?id=15ed1a92b4769d720091718c525866c70afc6b0c3141a2cf659fc04510ab7fdb",
+                    "published_at": 1794556877
+                },
+                {
+                    "headline": "Cathie Wood Says Nvidia \u2018Cannot Be Just The Jensen Show\u2019 After Huang\u2019s Exit, Warns NVDA\u2019s Five-Year CAGR Could Be Cut in Half",
+                    "source": "Benzinga",
+                    "url": "https://finnhub.io/api/news?id=8bd7c1a84c1080010ae341208dd162034063be29c6bf1d457642461eee029271",
+                    "published_at": 1794551330
+                },
+                {
+                    "headline": "Cerebras (CBRS) Stock Is Trending Pre-Market: Here's Why",
+                    "source": "Benzinga",
+                    "url": "https://finnhub.io/api/news?id=f6b8581d2bc2110374dba6373034e1e7b3b52720b243d4977a5fa345cb2e9e96",
+                    "published_at": 1794546883
+                }
+            ],
+            "guidance_direction": "UNKNOWN",
+            "after_hours_price": 109.75,
+            "regular_close_price": 109.79,
+            "after_hours_change_pct": -0.04,
+            "volume": 610806.0,
+            "volume_ratio": 1.22,
+            "quote_timestamp": "2026-11-13T20:03:23.691589346Z",
+            "score": 86,
+            "signal": "STRONG BULLISH",
+            "summary": "EPS surprise +189.9%; revenue surprise +5.4%; extended move -0.0%"
         },
         {
             "symbol": "CLBT",
@@ -99,15 +164,27 @@
             "revenue_surprise_pct": 0.12,
             "finnhub_surprise_pct": null,
             "name": "Cellebrite DI Ltd",
-            "market_cap_millions": 2737.104151117323,
+            "market_cap_millions": 2929.3801983553712,
             "market_cap_category": "Mid Cap",
             "status": "released",
-            "detected_at": "2026-11-13T01:08:31.060951+00:00",
+            "detected_at": "2026-11-13T20:03:44.376090+00:00",
             "sec_filing": {
                 "status": "not_found",
                 "url": null
             },
             "news": [
+                {
+                    "headline": "Cellebrite (CLBT) Q3 2026 Earnings Call Transcript",
+                    "source": "Yahoo",
+                    "url": "https://finnhub.io/api/news?id=62aef5e85d208652916de92bb54f8ba53317f9757e48e73c543246d7456a5f36",
+                    "published_at": 1794529752
+                },
+                {
+                    "headline": "Cellebrite DI Q3 Earnings Call Highlights",
+                    "source": "Yahoo",
+                    "url": "https://finnhub.io/api/news?id=6d2e8b911c63d8ddac883adf80b1ac9f144eb982452d81b771e5d9b2b398a98f",
+                    "published_at": 1794503724
+                },
                 {
                     "headline": "Cellebrite DI Ltd. (CLBT) Q3 2026 Earnings Call Transcript",
                     "source": "SeekingAlpha",
@@ -121,34 +198,22 @@
                     "published_at": 1794489831
                 },
                 {
-                    "headline": "Cellebrite DI Lowers FY2026 Sales Guidance from $555.000M-$561.000M to $553.000M-$558.000M vs $556.733M Est",
-                    "source": "Benzinga",
-                    "url": "https://finnhub.io/api/news?id=d0963b4460ac17896f68cfcd1073d8e4e94efccc463d890fdc2be257e6409980",
-                    "published_at": 1794470572
-                },
-                {
-                    "headline": "Cellebrite DI Q3 Adj. EPS $0.17 Beats $0.16 Estimate, Sales $149.022M Beat $145.923M Estimate",
-                    "source": "Benzinga",
-                    "url": "https://finnhub.io/api/news?id=a1e595ac46dddf313892b3aee5c9a795b26e3f669ab23f44ffe8efbd4656c581",
-                    "published_at": 1794470564
-                },
-                {
-                    "headline": "Cellebrite DI Sees Q4 Sales $145.000M-$150.000M vs $151.451M Est",
-                    "source": "Benzinga",
-                    "url": "https://finnhub.io/api/news?id=a8613af2a90ca4f9df12a88f97b759352b3fd1305144dd54213174151c7981c6",
-                    "published_at": 1794470555
+                    "headline": "Cellebrite DI Ltd. (CLBT) Q3 Earnings Meet Estimates",
+                    "source": "Yahoo",
+                    "url": "https://finnhub.io/api/news?id=96fca1b00da521dbd6f5f56c51a3a408ad5e39e6a2f6867f321eb973dfa717ea",
+                    "published_at": 1794486902
                 }
             ],
-            "guidance_direction": "LOWERED",
-            "after_hours_price": 10.9,
-            "regular_close_price": 10.9,
+            "guidance_direction": "UNKNOWN",
+            "after_hours_price": 11.68,
+            "regular_close_price": 11.68,
             "after_hours_change_pct": 0.0,
-            "volume": 561032.0,
-            "volume_ratio": 2.01,
-            "quote_timestamp": "2026-11-12T20:59:58.018225671Z",
-            "score": 41,
-            "signal": "MIXED",
-            "summary": "EPS surprise +5.5%; revenue surprise +0.1%; guidance lowered; extended move +0.0%"
+            "volume": 312322.0,
+            "volume_ratio": 0.56,
+            "quote_timestamp": "2026-11-13T20:03:37.549287558Z",
+            "score": 61,
+            "signal": "BULLISH",
+            "summary": "EPS surprise +5.5%; revenue surprise +0.1%; extended move +0.0%"
         },
         {
             "symbol": "CSCO",
@@ -162,10 +227,10 @@
             "revenue_surprise_pct": 0.11,
             "finnhub_surprise_pct": null,
             "name": "Cisco Systems Inc",
-            "market_cap_millions": 401611.3363219176,
+            "market_cap_millions": 378619.372650574,
             "market_cap_category": "Large Cap",
             "status": "released",
-            "detected_at": "2026-11-13T01:08:31.203112+00:00",
+            "detected_at": "2026-11-13T20:03:44.623326+00:00",
             "sec_filing": {
                 "status": "found",
                 "form": "8-K",
@@ -175,144 +240,46 @@
             },
             "news": [
                 {
-                    "headline": "Dow Jones Futures Rise After Market Weathers Nvidia CEO Huang's Exit, Surging Yields; SpaceX-Tesla Merger Deal Close",
+                    "headline": "Cisco Stocks Fall 5.29% as AI Networking Mix Squeezes Gross Margins",
                     "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=29a78bd2ce9f098216b8703032bc86519f8cb074a568e6fa2a4b610c7d8d0c9f",
-                    "published_at": 1794527272
+                    "url": "https://finnhub.io/api/news?id=c22920a68946de1b35aa04fbd7b88da37c43b9db68ec0883d4ff88c570ad64cf",
+                    "published_at": 1794591296
                 },
                 {
-                    "headline": "Colette Kress named Nvidia interim CEO as Jensen Huang's abrupt resignation raises investor concerns",
+                    "headline": "3 signs the AI trade is back",
                     "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=a522a5c460f3e472e70909fcd66bb8dd9cb1af4c1692ff5fc2d8bab36dda9d4a",
-                    "published_at": 1794520213
+                    "url": "https://finnhub.io/api/news?id=55a70a0ae01f4059c16df4f350de768a98615961217374313eff3a32fa01cdd2",
+                    "published_at": 1794589967
                 },
                 {
-                    "headline": "Cisco shares climb 4% on strong earnings beat and raised outlook",
+                    "headline": "Cisco CEO Shrugs Off Concerns On Revenue Guidance Dip, Says \u2018Profitability Of The Business Is Incredible\u2019",
                     "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=1efb029a599c5f2ad157fbc4b227d46170f4d336af638924997613dee151e486",
-                    "published_at": 1794519827
+                    "url": "https://finnhub.io/api/news?id=3c08968e25a7461896cc94c09b128be5ea5c63ff4514b85ceaa1701ec2dd9e9a",
+                    "published_at": 1794587525
                 },
                 {
-                    "headline": "Cisco Shares Climb as First-Quarter Growth Hits More Than 15-Year High",
+                    "headline": "Cerebras Soars on Sales; Cisco Down on Expectations Miss | Stock Movers",
                     "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=451d6562cff7e785d1c17e708ed7f0ef2e73582d5aaf8396bfff9d4b0c9fd32b",
-                    "published_at": 1794519560
+                    "url": "https://finnhub.io/api/news?id=1ca72817aaa78c51d92b9ad4ffddc7915af75d3891b71438622fb95dc111c286",
+                    "published_at": 1794586794
                 },
                 {
-                    "headline": "Cisco (CSCO) Reports Q1 Earnings: What Key Metrics Have to Say",
+                    "headline": "Inside Ken Fisher\u2019s Portfolio: Every Move He Made in the Third Quarter",
                     "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=a294dea48b019e62af727699798141fd191c1957f573dc1a0609b083234d279f",
-                    "published_at": 1794519001
+                    "url": "https://finnhub.io/api/news?id=6c9af31ca9f25f93c6591303ecef2642dc6be7a5fbf09c113804cc7dc8ac7c81",
+                    "published_at": 1794585675
                 }
             ],
-            "guidance_direction": "RAISED",
-            "after_hours_price": 103.4,
-            "regular_close_price": 101.97,
-            "after_hours_change_pct": 1.4,
-            "volume": 1150903.0,
-            "volume_ratio": 1.04,
-            "quote_timestamp": "2026-11-12T21:48:53.707077987Z",
-            "score": 79,
-            "signal": "STRONG BULLISH",
-            "summary": "EPS surprise +3.5%; revenue surprise +0.1%; guidance raised; extended move +1.4%"
-        },
-        {
-            "symbol": "DLO",
-            "earnings_date": "2026-11-12",
-            "session": "AMC",
-            "eps_estimate": 0.2222,
-            "eps_actual": 0.23,
-            "eps_surprise_pct": 3.51,
-            "revenue_estimate": 416139018.0,
-            "revenue_actual": 398050000.0,
-            "revenue_surprise_pct": -4.35,
-            "finnhub_surprise_pct": null,
-            "name": "DLocal Limited",
-            "market_cap_millions": 4024.241541783667,
-            "market_cap_category": "Mid Cap",
-            "status": "released",
-            "detected_at": "2026-11-13T01:08:31.414287+00:00",
-            "sec_filing": {
-                "status": "not_found",
-                "url": null
-            },
-            "news": [],
             "guidance_direction": "UNKNOWN",
-            "after_hours_price": 13.69,
-            "regular_close_price": 13.69,
-            "after_hours_change_pct": 0.0,
-            "volume": 157841.0,
-            "volume_ratio": 1.18,
-            "quote_timestamp": "2026-11-12T20:59:59.538427828Z",
-            "score": 48,
+            "after_hours_price": 95.565,
+            "regular_close_price": 95.51,
+            "after_hours_change_pct": 0.06,
+            "volume": 916736.0,
+            "volume_ratio": 0.8,
+            "quote_timestamp": "2026-11-13T20:03:24.486169705Z",
+            "score": 57,
             "signal": "MIXED",
-            "summary": "EPS surprise +3.5%; revenue surprise -4.3%; extended move +0.0%"
-        },
-        {
-            "symbol": "DPC",
-            "earnings_date": "2026-11-12",
-            "session": "BMO",
-            "eps_estimate": 0.2222,
-            "eps_actual": 0.49,
-            "eps_surprise_pct": 120.52,
-            "revenue_estimate": 269064000.0,
-            "revenue_actual": 308100000.0,
-            "revenue_surprise_pct": 14.51,
-            "finnhub_surprise_pct": null,
-            "name": "DPC Holdings PLC",
-            "market_cap_millions": 5128.662447470644,
-            "market_cap_category": "Mid Cap",
-            "status": "released",
-            "detected_at": "2026-11-13T01:08:31.716755+00:00",
-            "sec_filing": {
-                "status": "found",
-                "form": "8-K",
-                "filed_at": "2026-11-12",
-                "accession": "0001104659-26-125825",
-                "url": "https://www.sec.gov/Archives/edgar/data/2107018/000110465926125825/tm2629268d1_8k.htm"
-            },
-            "news": [
-                {
-                    "headline": "DPC Holdings (DPC) Q3 2026 Earnings Call Transcript",
-                    "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=f9666e8e4dc20ea6480cd583611d3ddecb95004b025e1ed7a736237397e52338",
-                    "published_at": 1794495670
-                },
-                {
-                    "headline": "DPC Holdings PLC 2026 Q3 - Results - Earnings Call Presentation",
-                    "source": "SeekingAlpha",
-                    "url": "https://finnhub.io/api/news?id=6a734b617cc3b7f2289aa96e14b27f6e37bf7bec95586531984fa0e98d6416f5",
-                    "published_at": 1794492076
-                },
-                {
-                    "headline": "DPC Holdings PLC (DPC) Q3 2026 Earnings Call Transcript",
-                    "source": "SeekingAlpha",
-                    "url": "https://finnhub.io/api/news?id=380dc7ad3136896e9ee91fbbb26ddd439c1d7a215007c5bf3cb147529075d50f",
-                    "published_at": 1794491949
-                },
-                {
-                    "headline": "Premarket Gainers and Losers for Nov. 12, 2026",
-                    "source": "ChartMill",
-                    "url": "https://finnhub.io/api/news?id=5dfb1d84fb3edaf40f65cb356ce496fb1e861914cd7d1675cca582f0f7774d60",
-                    "published_at": 1794490251
-                },
-                {
-                    "headline": "Janes Capital Partners Advises SeaCast on the Sale of Its 50% Stake in Montana Precision Products to Doncasters",
-                    "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=d1512ce2b2530bcd4355b2eaf3d9e95258991dd7e94119e871bbd049457f0476",
-                    "published_at": 1794486600
-                }
-            ],
-            "guidance_direction": "UNKNOWN",
-            "after_hours_price": 34.41,
-            "regular_close_price": 34.41,
-            "after_hours_change_pct": 0.0,
-            "volume": 239518.0,
-            "volume_ratio": 1.52,
-            "quote_timestamp": "2026-11-12T20:59:54.812005982Z",
-            "score": 100,
-            "signal": "STRONG BULLISH",
-            "summary": "EPS surprise +120.5%; revenue surprise +14.5%; extended move +0.0%"
+            "summary": "EPS surprise +3.5%; revenue surprise +0.1%; extended move +0.1%"
         },
         {
             "symbol": "BBWI",
@@ -326,10 +293,10 @@
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
             "name": "Bath & Body Works, Inc.",
-            "market_cap_millions": 4250.682989025782,
+            "market_cap_millions": 4319.242512967743,
             "market_cap_category": "Mid Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-13T01:08:32.120141+00:00",
+            "detected_at": "2026-11-13T20:03:44.623554+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -358,74 +325,10 @@
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
             "name": "Bullish",
-            "market_cap_millions": 3482.502083301743,
+            "market_cap_millions": 3308.15144004877,
             "market_cap_category": "Mid Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-13T01:08:32.120149+00:00",
-            "sec_filing": {
-                "status": "not_checked",
-                "url": null
-            },
-            "news": [],
-            "guidance_direction": "UNKNOWN",
-            "after_hours_price": null,
-            "regular_close_price": null,
-            "after_hours_change_pct": null,
-            "volume": null,
-            "volume_ratio": null,
-            "quote_timestamp": null,
-            "score": null,
-            "signal": "SCHEDULED",
-            "summary": "Upcoming earnings; no released results yet."
-        },
-        {
-            "symbol": "CPA",
-            "earnings_date": "2026-11-18",
-            "session": "AMC",
-            "eps_estimate": 3.8679,
-            "eps_actual": null,
-            "eps_surprise_pct": null,
-            "revenue_estimate": 1187799016.0,
-            "revenue_actual": null,
-            "revenue_surprise_pct": null,
-            "finnhub_surprise_pct": null,
-            "name": "Copa Holdings, S.A.",
-            "market_cap_millions": 5829.8300500857895,
-            "market_cap_category": "Mid Cap",
-            "status": "upcoming",
-            "detected_at": "2026-11-13T01:08:32.120156+00:00",
-            "sec_filing": {
-                "status": "not_checked",
-                "url": null
-            },
-            "news": [],
-            "guidance_direction": "UNKNOWN",
-            "after_hours_price": null,
-            "regular_close_price": null,
-            "after_hours_change_pct": null,
-            "volume": null,
-            "volume_ratio": null,
-            "quote_timestamp": null,
-            "score": null,
-            "signal": "SCHEDULED",
-            "summary": "Upcoming earnings; no released results yet."
-        },
-        {
-            "symbol": "CPRT",
-            "earnings_date": "2026-11-18",
-            "session": "UNKNOWN",
-            "eps_estimate": 0.4066,
-            "eps_actual": null,
-            "eps_surprise_pct": null,
-            "revenue_estimate": 1208985222.0,
-            "revenue_actual": null,
-            "revenue_surprise_pct": null,
-            "finnhub_surprise_pct": null,
-            "name": "Copart Inc",
-            "market_cap_millions": 29639.4621258525,
-            "market_cap_category": "Large Cap",
-            "status": "upcoming",
-            "detected_at": "2026-11-13T01:08:32.120164+00:00",
+            "detected_at": "2026-11-13T20:03:44.623559+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -454,10 +357,10 @@
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
             "name": "Alibaba Group Holding Limited",
-            "market_cap_millions": 255132.34848619133,
+            "market_cap_millions": 237886.83329604036,
             "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-13T01:08:32.119965+00:00",
+            "detected_at": "2026-11-13T20:03:44.623443+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -486,10 +389,10 @@
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
             "name": "The Buckle, Inc.",
-            "market_cap_millions": 2263.4563602073504,
+            "market_cap_millions": 2276.849427928995,
             "market_cap_category": "Mid Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-13T01:08:32.119985+00:00",
+            "detected_at": "2026-11-13T20:03:44.623454+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -518,10 +421,10 @@
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
             "name": "Webull Corp",
-            "market_cap_millions": 2681.730634118577,
+            "market_cap_millions": 2757.4246962701613,
             "market_cap_category": "Mid Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-13T01:08:32.120000+00:00",
+            "detected_at": "2026-11-13T20:03:44.623461+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -550,10 +453,10 @@
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
             "name": "Youdao, Inc.",
-            "market_cap_millions": 2340.311795,
+            "market_cap_millions": 2313.772259,
             "market_cap_category": "Mid Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-13T01:08:32.120010+00:00",
+            "detected_at": "2026-11-13T20:03:44.623469+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -582,10 +485,10 @@
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
             "name": "ESCO Technologies Inc.",
-            "market_cap_millions": 7296.390275450667,
+            "market_cap_millions": 7190.8096233280785,
             "market_cap_category": "Mid Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-13T01:08:32.120020+00:00",
+            "detected_at": "2026-11-13T20:03:44.623475+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -614,10 +517,10 @@
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
             "name": "Elastic N.V.",
-            "market_cap_millions": 9438.593783419312,
+            "market_cap_millions": 9262.136808776724,
             "market_cap_category": "Mid Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-13T01:08:32.120028+00:00",
+            "detected_at": "2026-11-13T20:03:44.623481+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -646,10 +549,10 @@
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
             "name": "Futu Holdings Limited",
-            "market_cap_millions": 13739.059787,
+            "market_cap_millions": 13405.397292,
             "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-13T01:08:32.120037+00:00",
+            "detected_at": "2026-11-13T20:03:44.623486+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -678,42 +581,10 @@
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
             "name": "Helmerich & Payne, Inc.",
-            "market_cap_millions": 3710.7328069153473,
+            "market_cap_millions": 3732.219895141125,
             "market_cap_category": "Mid Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-13T01:08:32.120044+00:00",
-            "sec_filing": {
-                "status": "not_checked",
-                "url": null
-            },
-            "news": [],
-            "guidance_direction": "UNKNOWN",
-            "after_hours_price": null,
-            "regular_close_price": null,
-            "after_hours_change_pct": null,
-            "volume": null,
-            "volume_ratio": null,
-            "quote_timestamp": null,
-            "score": null,
-            "signal": "SCHEDULED",
-            "summary": "Upcoming earnings; no released results yet."
-        },
-        {
-            "symbol": "IESC",
-            "earnings_date": "2026-11-19",
-            "session": "UNKNOWN",
-            "eps_estimate": 2.8662,
-            "eps_actual": null,
-            "eps_surprise_pct": null,
-            "revenue_estimate": 1170960000.0,
-            "revenue_actual": null,
-            "revenue_surprise_pct": null,
-            "finnhub_surprise_pct": null,
-            "name": "IES Holdings Inc",
-            "market_cap_millions": 7015.5131959397695,
-            "market_cap_category": "Mid Cap",
-            "status": "upcoming",
-            "detected_at": "2026-11-13T01:08:32.120052+00:00",
+            "detected_at": "2026-11-13T20:03:44.623491+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -742,10 +613,10 @@
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
             "name": "Intuit Inc.",
-            "market_cap_millions": 90905.67143147728,
+            "market_cap_millions": 92052.11358678789,
             "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-13T01:08:32.120059+00:00",
+            "detected_at": "2026-11-13T20:03:44.623496+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -774,10 +645,10 @@
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
             "name": "Keysight Technologies, Inc.",
-            "market_cap_millions": 51793.563071619756,
+            "market_cap_millions": 49837.450200638996,
             "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-13T01:08:32.120067+00:00",
+            "detected_at": "2026-11-13T20:03:44.623501+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -806,10 +677,10 @@
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
             "name": "Manchester United PLC",
-            "market_cap_millions": 3937.978326916069,
+            "market_cap_millions": 3903.480187717039,
             "market_cap_category": "Mid Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-13T01:08:32.120074+00:00",
+            "detected_at": "2026-11-13T20:03:44.623506+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -838,10 +709,10 @@
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
             "name": "Maximus, Inc.",
-            "market_cap_millions": 3396.44783781967,
+            "market_cap_millions": 3414.7733422614456,
             "market_cap_category": "Mid Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-13T01:08:32.120082+00:00",
+            "detected_at": "2026-11-13T20:03:44.623511+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -870,10 +741,10 @@
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
             "name": "NetEase, Inc.",
-            "market_cap_millions": 79904.7486131372,
+            "market_cap_millions": 78930.79780090966,
             "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-13T01:08:32.120089+00:00",
+            "detected_at": "2026-11-13T20:03:44.623516+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -902,10 +773,10 @@
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
             "name": "Post Holdings, Inc.",
-            "market_cap_millions": 3499.84098731758,
+            "market_cap_millions": 3561.380559778699,
             "market_cap_category": "Mid Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-13T01:08:32.120097+00:00",
+            "detected_at": "2026-11-13T20:03:44.623522+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -934,10 +805,10 @@
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
             "name": "Construction Partners, Inc.",
-            "market_cap_millions": 4598.334931452338,
+            "market_cap_millions": 4556.335698666502,
             "market_cap_category": "Mid Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-13T01:08:32.120104+00:00",
+            "detected_at": "2026-11-13T20:03:44.623527+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -969,7 +840,7 @@
             "market_cap_millions": 4119.77,
             "market_cap_category": "Mid Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-13T01:08:32.120111+00:00",
+            "detected_at": "2026-11-13T20:03:44.623533+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -1001,7 +872,7 @@
             "market_cap_millions": 16017.62,
             "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-13T01:08:32.120118+00:00",
+            "detected_at": "2026-11-13T20:03:44.623539+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -1033,7 +904,7 @@
             "market_cap_millions": 979897.0,
             "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-13T01:08:32.120125+00:00",
+            "detected_at": "2026-11-13T20:03:44.623544+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -1065,7 +936,71 @@
             "market_cap_millions": 8684.25,
             "market_cap_category": "Mid Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-13T01:08:32.120133+00:00",
+            "detected_at": "2026-11-13T20:03:44.623549+00:00",
+            "sec_filing": {
+                "status": "not_checked",
+                "url": null
+            },
+            "news": [],
+            "guidance_direction": "UNKNOWN",
+            "after_hours_price": null,
+            "regular_close_price": null,
+            "after_hours_change_pct": null,
+            "volume": null,
+            "volume_ratio": null,
+            "quote_timestamp": null,
+            "score": null,
+            "signal": "SCHEDULED",
+            "summary": "Upcoming earnings; no released results yet."
+        },
+        {
+            "symbol": "BJ",
+            "earnings_date": "2026-11-20",
+            "session": "UNKNOWN",
+            "eps_estimate": 1.2805,
+            "eps_actual": null,
+            "eps_surprise_pct": null,
+            "revenue_estimate": 6102548727.0,
+            "revenue_actual": null,
+            "revenue_surprise_pct": null,
+            "finnhub_surprise_pct": null,
+            "name": "BJ's Wholesale Club Holdings, Inc.",
+            "market_cap_millions": 14034.509878916351,
+            "market_cap_category": "Large Cap",
+            "status": "upcoming",
+            "detected_at": "2026-11-13T20:03:44.623420+00:00",
+            "sec_filing": {
+                "status": "not_checked",
+                "url": null
+            },
+            "news": [],
+            "guidance_direction": "UNKNOWN",
+            "after_hours_price": null,
+            "regular_close_price": null,
+            "after_hours_change_pct": null,
+            "volume": null,
+            "volume_ratio": null,
+            "quote_timestamp": null,
+            "score": null,
+            "signal": "SCHEDULED",
+            "summary": "Upcoming earnings; no released results yet."
+        },
+        {
+            "symbol": "BSP",
+            "earnings_date": "2026-11-20",
+            "session": "UNKNOWN",
+            "eps_estimate": 0.3198,
+            "eps_actual": null,
+            "eps_surprise_pct": null,
+            "revenue_estimate": 753148112.0,
+            "revenue_actual": null,
+            "revenue_surprise_pct": null,
+            "finnhub_surprise_pct": null,
+            "name": "Bending Spoons SpA",
+            "market_cap_millions": 26105.316390229043,
+            "market_cap_category": "Large Cap",
+            "status": "upcoming",
+            "detected_at": "2026-11-13T20:03:44.623431+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -1084,8 +1019,8 @@
         }
     ],
     "status": "complete",
-    "last_refresh": "2026-11-13T01:08:32.120206+00:00",
-    "last_attempt": "2026-11-13T01:06:15.127983+00:00",
+    "last_refresh": "2026-11-13T20:03:44.623574+00:00",
+    "last_attempt": "2026-11-13T20:01:41.652142+00:00",
     "error": null,
     "sources": {
         "finnhub": "earnings calendar and headlines",
@@ -1094,8 +1029,8 @@
         "scoring": "local deterministic rules; no trade execution"
     },
     "diagnostics": {
-        "calendar_rows": 1118,
-        "eligible_rows": 30,
-        "excluded_rows": 1088
+        "calendar_rows": 946,
+        "eligible_rows": 28,
+        "excluded_rows": 918
     }
 }
