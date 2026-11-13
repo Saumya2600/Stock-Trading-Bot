@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { fetchPicksFromSupabase } from '../lib/supabase';
-import { formatAtlanticDateTime } from '../lib/dateTime';
+import { formatAtlanticDateTime, getAtlanticDateKey } from '../lib/dateTime';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Database, TrendingUp, TrendingDown, Minus, RefreshCw, Calendar, Star } from 'lucide-react';
 
@@ -61,9 +61,10 @@ export default function PicksHistoryPage() {
 
   useEffect(() => { load(); }, [load]);
 
-  // Group by run_date
+  // Group by local Atlantic date from report timestamp.
   const grouped = picks.reduce((acc, p) => {
-    (acc[p.run_date] = acc[p.run_date] || []).push(p);
+    const dateKey = getAtlanticDateKey(p.updated_at) || p.run_date;
+    (acc[dateKey] = acc[dateKey] || []).push(p);
     return acc;
   }, {});
   const dates = Object.keys(grouped).sort((a, b) => b.localeCompare(a));

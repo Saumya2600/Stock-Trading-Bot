@@ -6,6 +6,7 @@ import requests
 import pandas as pd
 from datetime import datetime
 import time
+import pytz
 
 from config import GEMINI_API_KEYS, RESEARCH_GEMINI_KEY, ALPACA_API_KEY, ALPACA_SECRET_KEY, SUPABASE_URL, SUPABASE_KEY
 from utils import safe_print, is_market_open, is_research_window, seconds_until_market_open, simple_sma, simple_rsi, simple_macd, simple_atr, simple_bollinger_bands
@@ -24,7 +25,12 @@ def sync_picks_to_supabase(reports):
             if symbol.startswith("_"):
                 continue
             updated_at_str = r.get("updated_at") or datetime.now().isoformat()
-            run_date = updated_at_str.split("T")[0]
+            try:
+                run_date = datetime.fromisoformat(updated_at_str).astimezone(
+                    pytz.timezone("America/Halifax")
+                ).date().isoformat()
+            except ValueError:
+                run_date = updated_at_str.split("T")[0]
             picks.append({
                 "symbol": symbol,
                 "name": r.get("name") or symbol,
@@ -283,6 +289,9 @@ def run_research_cycle(force=False, manual_reason=None):
             safe_print("[RESEARCH] Last research <3h ago. Skipping.")
             return
     safe_print(f"[RESEARCH] Starting deep research cycle. Reason: {manual_reason or 'scheduled'}")
+    report_timestamp = datetime.now(tz=pytz.utc).astimezone(
+        pytz.timezone("America/Halifax")
+    ).isoformat()
     trending = fetch_reddit_trending()           # Reddit/ApeWisdom momentum
     deep_value_hits = fetch_52_week_lows()       # Deep value contrarian
     earnings_beats = fetch_earnings_surprises()  # Post-earnings drift
@@ -481,7 +490,7 @@ def run_research_cycle(force=False, manual_reason=None):
                 "bear_case": analysis.get("bear_case", ""),
                 "bull_case": analysis.get("bull_case", ""),
                 "price_history": bars if isinstance(bars, list) else [],
-                "updated_at": now.isoformat(),
+                "updated_at": report_timestamp,
                 "type": pick_type,
                 "fundamentals": fundamentals
             }
@@ -494,7 +503,7 @@ def run_research_cycle(force=False, manual_reason=None):
                 "rsi": technicals.get("rsi"),
                 "signal": "BUY (Golden Cross)" if technicals.get("sma_fast", 0) > technicals.get("sma_slow", 0) else "SELL (Death Cross)" if technicals.get("sma_fast", 0) < technicals.get("sma_slow", 0) else "Hold",
                 "status": target_meta.get(symbol, {}).get("source", "TRENDING").upper().replace(" ", "_"),
-                "last_updated": now.isoformat()
+                "last_updated": report_timestamp
             }
         except Exception as e:
             safe_print(f"[RESEARCH ERROR] {symbol}: {type(e).__name__}: {e}")

@@ -10,6 +10,20 @@ function parseUtcTimestamp(value) {
   return Number.isNaN(date.getTime()) ? null : date;
 }
 
+export function getAtlanticDateKey(value) {
+  const date = parseUtcTimestamp(value);
+  if (!date) return null;
+
+  const parts = new Intl.DateTimeFormat('en-CA', {
+    timeZone: ATLANTIC_TIME_ZONE,
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).formatToParts(date);
+  const values = Object.fromEntries(parts.map(({ type, value: partValue }) => [type, partValue]));
+  return `${values.year}-${values.month}-${values.day}`;
+}
+
 export function formatAtlanticDate(value) {
   const date = parseUtcTimestamp(value);
   return date
