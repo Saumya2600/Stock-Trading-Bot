@@ -26,3 +26,14 @@ services:
         sync: false
       - key: VITE_SUPABASE_ANON_KEY
         sync: false
+  - type: cron
+    name: stock-trading-bot-pre-market
+    runtime: python
+    schedule: "30 12 * * 1-5"
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: python backend/run_render_premarket.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11.9"
+      - key: RESEARCH_WEB_URL
+        value: https://stock-trading-bot.onrender.com

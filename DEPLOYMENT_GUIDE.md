@@ -58,6 +58,25 @@ Your trading bot can be deployed to various platforms. Since the bot needs **con
 5. Add env vars in dashboard
 6. Deploy ✅
 
+#### Render pre-market cron
+
+`render.yaml` defines `stock-trading-bot-pre-market` as a Render Cron Job. It runs at
+`12:30 UTC` on weekdays, before the US market opens in both daylight and standard
+time seasons. The cron calls the web service's `/trigger_research` endpoint, waits
+for `/research_status.last_run` to change, and exits non-zero if research does not
+finish within 15 minutes.
+
+After applying the blueprint, confirm the cron service has:
+
+```text
+RESEARCH_WEB_URL=https://stock-trading-bot.onrender.com
+```
+
+Render web service remains responsible for API state and close scan. GitHub Actions
+keeps its close-scan schedule as fallback; it no longer owns pre-market research.
+Cron jobs are separate services and do not share files with the web service, so the
+cron triggers the web process instead of writing local JSON snapshots.
+
 ---
 
 ### **Option 3: Replit** 

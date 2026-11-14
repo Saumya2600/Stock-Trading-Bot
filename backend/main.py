@@ -31,6 +31,7 @@ if __name__ == "__main__":
     state.load_longterm_picks()
     state.load_overnight_analysis()
 
+    # Render cron owns pre-market research; web scheduler handles close scan.
     threading.Thread(target=research_scheduler, daemon=True).start()
     threading.Thread(target=overnight_scheduler, daemon=True).start()
     threading.Thread(target=start_bot, daemon=True).start()

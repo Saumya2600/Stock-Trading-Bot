@@ -88,8 +88,12 @@ def trigger_longterm():
     return {"status": "longterm research triggered", "timestamp": datetime.now().isoformat()}
 
 @api.post("/trigger_research")
-def trigger_research():
-    threading.Thread(target=run_research_cycle, kwargs={"force": True, "manual_reason": "manual"}, daemon=True).start()
+def trigger_research(reason: str = "manual"):
+    threading.Thread(
+        target=run_research_cycle,
+        kwargs={"force": True, "manual_reason": reason},
+        daemon=True,
+    ).start()
     return {"status": "research triggered", "timestamp": datetime.now().isoformat()}
 
 @api.post("/clear_research")
