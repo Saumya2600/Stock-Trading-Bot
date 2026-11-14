@@ -2,7 +2,9 @@ name: Research Bot (Pre-open + Close)
 
 on:
   schedule:
-    # Render cron owns pre-market research. GitHub remains close-scan fallback.
+    # Run 1: before US market open — 12:30 UTC
+    - cron: '30 12 * * 1-5'
+    # Run 2: before/at US market close depending on daylight time — 20:00 UTC
     - cron: '0 20 * * 1-5'
   workflow_dispatch:
 

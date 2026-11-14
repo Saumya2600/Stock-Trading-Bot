@@ -531,7 +531,9 @@ def research_scheduler():
             slot = None
             if now.weekday() < 5:
                 minutes = now.hour * 60 + now.minute
-                if 16 * 60 <= minutes < 16 * 60 + 15:
+                if 8 * 60 + 30 <= minutes < 8 * 60 + 45:
+                    slot = "pre_market"
+                elif 16 * 60 <= minutes < 16 * 60 + 15:
                     slot = "market_close"
 
             slot_key = f"{now.date()}:{slot}" if slot else None
@@ -545,7 +547,7 @@ def research_scheduler():
                     safe_print(f"[SCHEDULER] Long-term refresh failed: {longterm_error}")
                 last_slot = slot_key
             elif not slot:
-                safe_print(f"[SCHEDULER] Waiting for 4:00 PM ET close scan. Current: {now.strftime('%I:%M %p %Z')}")
+                safe_print(f"[SCHEDULER] Waiting for 8:30 AM or 4:00 PM ET. Current: {now.strftime('%I:%M %p %Z')}")
         except Exception as e:
             safe_print(f"[SCHEDULER ERROR] {e}")
         time.sleep(60)
