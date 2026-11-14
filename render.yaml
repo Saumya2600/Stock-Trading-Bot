@@ -26,3 +26,5 @@ services:
         sync: false
       - key: VITE_SUPABASE_ANON_KEY
         sync: false
+      - key: RESEARCH_TRIGGER_TOKEN
+        sync: false

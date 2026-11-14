@@ -68,6 +68,24 @@ GitHub Actions keeps both schedules as fallback. UptimeRobot can ping the Render
 health URL to reduce free-tier sleep, but cannot guarantee scheduler execution after
 service restarts. Confirm Render logs show `[SCHEDULER] Running pre_market research`.
 
+#### cron-job.org pre-market trigger
+
+For stronger timing without paying for a Render Cron Job:
+
+1. In Render → **Environment**, add `RESEARCH_TRIGGER_TOKEN`.
+2. Generate a long random token locally. Never paste it into chat or GitHub.
+3. In cron-job.org, create a cronjob with:
+   - URL: `https://YOUR-RENDER-SERVICE.onrender.com/scheduled/trigger_research`
+   - Method: `POST`
+   - Time zone: `America/New_York`
+   - Schedule: weekdays at `08:30`
+   - Header: `X-Research-Trigger-Token: YOUR_TOKEN`
+4. Enable cronjob after Render redeploys.
+
+The endpoint returns `401` for wrong token and `503` when Render has no token
+configured. Existing `/trigger_research` remains available for dashboard manual
+**Run Now**.
+
 ---
 
 ### **Option 3: Replit** 

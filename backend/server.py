@@ -1,10 +1,11 @@
-from fastapi import FastAPI
+import hmac
+from fastapi import FastAPI, Header, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 import threading
 from datetime import datetime
 import requests
 import state
-from config import ALPACA_API_KEY, ALPACA_SECRET_KEY
+from config import ALPACA_API_KEY, ALPACA_SECRET_KEY, RESEARCH_TRIGGER_TOKEN
 from utils import is_market_open, seconds_until_market_open
 from research import run_research_cycle
 from longterm import generate_longterm_picks, trigger_longterm_async, DEFAULT_PICKS_DATA
@@ -95,6 +96,19 @@ def trigger_research(reason: str = "manual"):
         daemon=True,
     ).start()
     return {"status": "research triggered", "timestamp": datetime.now().isoformat()}
+
+@api.post("/scheduled/trigger_research")
+def trigger_scheduled_research(
+    x_research_trigger_token: str | None = Header(default=None),
+):
+    if not RESEARCH_TRIGGER_TOKEN:
+        raise HTTPException(status_code=503, detail="Scheduled research trigger is not configured.")
+    if not x_research_trigger_token or not hmac.compare_digest(
+        x_research_trigger_token,
+        RESEARCH_TRIGGER_TOKEN,
+    ):
+        raise HTTPException(status_code=401, detail="Invalid research trigger token.")
+    return trigger_research(reason="cron_job_org")
 
 @api.post("/clear_research")
 def clear_research():
