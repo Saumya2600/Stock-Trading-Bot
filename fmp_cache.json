@@ -1,80 +1,36 @@
 {
-    "MSFT": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 27.4,
-            "peg": 1.54,
-            "debt_to_equity": 0.28,
-            "description": "Microsoft Corporation, a technology company, develops and supports a portfolio of technology solutions for individuals and businesses worldwide. Its products include operating systems, server applicat..."
-        },
-        "updated_at": "2026-11-13T19:57:12.035923"
-    },
-    "BLK": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Asset Management",
-            "pe": 27.72,
-            "peg": 1.02,
-            "debt_to_equity": 0.22,
-            "description": "BlackRock, Inc. is a publicly owned investment manager. The firm primarily provides its services to institutional, intermediary, and individual investors including corporate, public, union, and indust..."
-        },
-        "updated_at": "2026-11-13T19:57:44.427153"
-    },
-    "COIN": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Financial Data & Stock Exchanges",
-            "pe": 0,
-            "peg": 0.62,
-            "debt_to_equity": 0.49,
-            "description": "Coinbase Global, Inc. operates platform for crypto assets in the United States and internationally. It provides the primary financial account in the crypto economy for consumers; a brokerage platform ..."
-        },
-        "updated_at": "2026-11-13T19:58:30.167725"
-    },
-    "GM": {
-        "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Auto Manufacturers",
-            "pe": 18.89,
-            "peg": 0.29,
-            "debt_to_equity": 2.03,
-            "description": "General Motors Company designs, builds, and sells trucks, crossovers, cars, and automobile parts worldwide. It operates through GM North America, GM International, and GM Financial segments. The compa..."
-        },
-        "updated_at": "2026-11-13T19:58:58.108319"
-    },
-    "HR": {
-        "data": {
-            "sector": "Real Estate",
-            "industry": "REIT - Healthcare Facilities",
-            "pe": 0,
-            "peg": 8.82,
-            "debt_to_equity": 1.09,
-            "description": "Healthcare Realty Trust Incorporated is a real estate investment trust (REIT) that owns and operates medical outpatient buildings primarily located around market-leading hospital campuses. The Company..."
-        },
-        "updated_at": "2026-11-13T19:59:21.285899"
-    },
-    "HAL": {
+    "XOM": {
         "data": {
             "sector": "Energy",
-            "industry": "Oil & Gas Equipment & Services",
-            "pe": 14.1,
-            "peg": 0.67,
-            "debt_to_equity": 0.73,
-            "description": "Halliburton Company provides products and services to the energy industry worldwide. It operates in two segments, Completion and Production, and Drilling and Evaluation. The Completion and Production ..."
+            "industry": "Oil & Gas Integrated",
+            "pe": 17.55,
+            "peg": 1.34,
+            "debt_to_equity": 0.13,
+            "description": "ExxonMobil Holdings Corporation engages in the exploration and production of crude oil and natural gas in the United States, Canada, and internationally. The company operates through Upstream, Energy ..."
         },
-        "updated_at": "2026-11-13T19:59:44.192167"
+        "updated_at": "2026-11-14T00:51:31.931791"
     },
-    "SPY": {
+    "JNJ": {
         "data": {
-            "sector": "Unknown",
-            "industry": "Unknown",
-            "pe": 23.97,
-            "peg": 0,
-            "debt_to_equity": 0,
-            "description": "The trust seeks to achieve its investment objective by holding a portfolio of the common stocks that are included in the index (the \u201cPortfolio\u201d), with the weight of each stock in the Portfolio substan..."
+            "sector": "Healthcare",
+            "industry": "Drug Manufacturers - General",
+            "pe": 43.36,
+            "peg": 3.19,
+            "debt_to_equity": 0.55,
+            "description": "Johnson & Johnson, together with its subsidiaries, engages in the research and development, manufacture, and sale of a range of products in the healthcare field worldwide. It operates in two segments,..."
         },
-        "updated_at": "2026-11-13T20:00:31.224346"
+        "updated_at": "2026-11-14T00:51:56.905398"
+    },
+    "COP": {
+        "data": {
+            "sector": "Energy",
+            "industry": "Oil & Gas E&P",
+            "pe": 14.99,
+            "peg": 0.91,
+            "debt_to_equity": 0.35,
+            "description": "ConocoPhillips explores for, produces, transports, and markets crude oil, bitumen, natural gas, liquefied natural gas (LNG), and natural gas liquids. It operates in five segments: Alaska; Lower 48; Ca..."
+        },
+        "updated_at": "2026-11-14T00:52:17.737637"
     },
     "DC": {
         "data": {
@@ -85,6 +41,50 @@
             "debt_to_equity": 0.01,
             "description": "Dakota Gold Corp. engages in the acquisition, exploration, and development of mineral properties in the United States. The company primarily explores for gold deposits. The company was incorporated in..."
         },
-        "updated_at": "2026-11-13T20:00:57.459166"
+        "updated_at": "2026-11-14T00:52:44.376632"
+    },
+    "HAL": {
+        "data": {
+            "sector": "Energy",
+            "industry": "Oil & Gas Equipment & Services",
+            "pe": 14.19,
+            "peg": 0.67,
+            "debt_to_equity": 0.73,
+            "description": "Halliburton Company provides products and services to the energy industry worldwide. It operates in two segments, Completion and Production, and Drilling and Evaluation. The Completion and Production ..."
+        },
+        "updated_at": "2026-11-14T00:53:12.700107"
+    },
+    "AMZN": {
+        "data": {
+            "sector": "Consumer Cyclical",
+            "industry": "Internet Retail",
+            "pe": 21.56,
+            "peg": 1.24,
+            "debt_to_equity": 0.5,
+            "description": "Amazon.com, Inc. engages in the retail sale of consumer products, advertising, and subscriptions service through online and physical stores in North America and internationally. The company operates t..."
+        },
+        "updated_at": "2026-11-14T00:53:42.292683"
+    },
+    "SMH": {
+        "data": {
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 26.28,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "The fund normally invests at least 80% of its total assets in securities that comprise the fund's benchmark index. The index includes common stocks and depositary receipts of U.S. exchange-listed comp..."
+        },
+        "updated_at": "2026-11-14T00:54:05.833165"
+    },
+    "UP": {
+        "data": {
+            "sector": "Industrials",
+            "industry": "Airports & Air Services",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "Wheels Up Experience Inc. provides on-demand private aviation services in the United States and internationally. The company offers Wheels Up Membership program that consists of a simplified on-ramp t..."
+        },
+        "updated_at": "2026-11-14T00:54:34.254786"
     }
 }
