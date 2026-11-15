@@ -37,6 +37,24 @@ async def disable_api_cache(request, call_next):
 def health_check():
     return {"status": "online", "message": "Autonomous Alpha Trading Bot API"}
 
+@api.get("/app_state.json")
+def get_app_state_json():
+    """Same shape as the committed app_state.json, but live.
+
+    Runtime trades used to exist only in this container and never reached the
+    dashboard, because the frontend had no route to ask for them.
+    """
+    return {
+        "trade_history": state.trade_history,
+        "portfolio_performance": state.portfolio_performance,
+    }
+
+
+@api.get("/reports.json")
+def get_reports_json():
+    return state.research_reports
+
+
 @api.get("/signals")
 def get_signals():
     return state.latest_signals

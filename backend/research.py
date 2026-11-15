@@ -9,7 +9,18 @@ import time
 import pytz
 
 from config import GEMINI_API_KEYS, RESEARCH_GEMINI_KEY, ALPACA_API_KEY, ALPACA_SECRET_KEY, SUPABASE_URL, SUPABASE_KEY
-from utils import safe_print, is_market_open, is_research_window, seconds_until_market_open, simple_sma, simple_rsi, simple_macd, simple_atr, simple_bollinger_bands
+from utils import (
+    safe_print,
+    is_market_open,
+    is_research_window,
+    is_trading_day,
+    seconds_until_market_open,
+    simple_sma,
+    simple_rsi,
+    simple_macd,
+    simple_atr,
+    simple_bollinger_bands,
+)
 from data import fetch_reddit_trending, fetch_52_week_lows, fetch_fmp_data, fetch_earnings_surprises, fetch_upcoming_earnings, fetch_rvol_breakouts, fetch_news_sentiment
 import state
 
@@ -278,6 +289,11 @@ Return ONLY valid JSON, no prose, no markdown.
 def run_research_cycle(force=False, manual_reason=None):
     global _all_keys_exhausted
     _all_keys_exhausted = False
+    # A holiday is not a quiet weekend: nothing trades, so nothing is worth
+    # spending a research cycle on, even when a manual trigger forces it.
+    if not is_trading_day():
+        safe_print("[RESEARCH] Market holiday. Skipping research.")
+        return
     if not force and not is_research_window():
         safe_print("[RESEARCH] Outside research window (8:30am-4pm ET). Skipping.")
         return
@@ -529,7 +545,7 @@ def research_scheduler():
             eastern = pytz.timezone("US/Eastern")
             now = datetime.now(tz=pytz.utc).astimezone(eastern)
             slot = None
-            if now.weekday() < 5:
+            if is_trading_day(now.date()):
                 minutes = now.hour * 60 + now.minute
                 if 8 * 60 + 30 <= minutes < 8 * 60 + 45:
                     slot = "pre_market"

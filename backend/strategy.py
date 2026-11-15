@@ -6,6 +6,7 @@ from utils import safe_print, is_market_open, seconds_until_market_open
 import state
 
 MAX_LONGTERM_PICK_AGE_DAYS = 14
+MAX_OPEN_POSITIONS = 5
 
 class DeepResearchBot(Strategy):
     def initialize(self, one_shot=False):
@@ -103,10 +104,25 @@ class DeepResearchBot(Strategy):
 
         if not self.benchmark_initialized:
             try:
-                state.portfolio_performance["bot_start_value"] = float(self.get_portfolio_value())
-                state.portfolio_performance["spy_start_price"] = float(self.get_last_price("SPY"))
+                # A restart must not reset "since inception": both engines load
+                # these from app_state, so only seed them when they are empty.
+                stored_value = float(state.portfolio_performance.get("bot_start_value") or 0)
+                stored_spy = float(state.portfolio_performance.get("spy_start_price") or 0)
+                if stored_value <= 0:
+                    state.portfolio_performance["bot_start_value"] = float(self.get_portfolio_value())
+                if stored_spy <= 0:
+                    state.portfolio_performance["spy_start_price"] = float(self.get_last_price("SPY"))
                 self.benchmark_initialized = True
-                self.log_message(f"[BENCHMARK INIT] Starting value: ${state.portfolio_performance['bot_start_value']:.2f} | SPY: ${state.portfolio_performance['spy_start_price']:.2f}")
+                seeded = stored_value <= 0 or stored_spy <= 0
+                if seeded:
+                    # Persist immediately, otherwise every restart re-seeds and
+                    # "since inception" silently becomes "since last boot".
+                    state.save_app_state()
+                self.log_message(
+                    f"[BENCHMARK] Value: ${state.portfolio_performance['bot_start_value']:.2f} | "
+                    f"SPY: ${state.portfolio_performance['spy_start_price']:.2f} "
+                    f"({'seeded' if seeded else 'restored'})"
+                )
             except Exception as e:
                 self.log_message(f"[BENCHMARK ERROR] {e}")
                 return
@@ -140,7 +156,8 @@ class DeepResearchBot(Strategy):
         TICKER_ALIASES = {"GOOG": "GOOGL"}  # prefer GOOGL over GOOG
         seen_underlying = set()  # track canonical tickers already processed
         all_positions = self.get_positions()
-        self.log_message(f"[PORTFOLIO] value=${current_value:.2f} | cash=${available_cash:.2f} | positions={len(all_positions)}")
+        open_positions = [p for p in all_positions if float(getattr(p, "quantity", 0) or 0) > 0]
+        self.log_message(f"[PORTFOLIO] value=${current_value:.2f} | cash=${available_cash:.2f} | positions={len(open_positions)}")
 
         for symbol, report in list(candidates.items()):
             if symbol.startswith("_"):
@@ -200,6 +217,9 @@ class DeepResearchBot(Strategy):
                     if existing_pos:
                         self.log_message(f"[SKIP] {symbol}: EXISTING_POS already held")
                         continue
+                    if len(open_positions) >= MAX_OPEN_POSITIONS:
+                        self.log_message(f"[SKIP] {symbol}: POSITION_CAP {len(open_positions)}/{MAX_OPEN_POSITIONS} open")
+                        continue
                     if quantity <= 0:
                         self.log_message(f"[SKIP] {symbol}: QUANTITY_ZERO qty={quantity} (risk=${max_risk:.2f})")
                         continue
@@ -242,6 +262,7 @@ class DeepResearchBot(Strategy):
                     order = self.create_order(symbol, quantity, "buy")
                     self.submit_order(order)
                     traded_this_cycle += 1
+                    open_positions.append(order)
 
                 elif existing_pos:
                     current_price = self.get_last_price(symbol)
@@ -259,6 +280,38 @@ class DeepResearchBot(Strategy):
 
             except Exception as e:
                 self.log_message(f"[TRADE ERROR] {symbol}: {e}")
+
+        # --- Exit coverage -------------------------------------------------
+        # Research rewrites the report set every cycle. A holding that falls out
+        # of it is no longer in `candidates`, so without this pass it would never
+        # be evaluated again and its stop would never fire.
+        known = {str(s).upper() for s in candidates}
+        for pos in all_positions:
+            symbol = getattr(getattr(pos, "asset", None), "symbol", None)
+            if not symbol or symbol.upper() in known:
+                continue
+            quantity = float(getattr(pos, "quantity", 0) or 0)
+            if quantity <= 0:
+                continue
+            report = state.research_reports.get(symbol, {}) or {}
+            stop_loss = float(report.get("stop_loss", 0) or 0)
+            if stop_loss <= 0:
+                basis = float(getattr(pos, "avg_fill_price", 0) or 0)
+                stop_loss = round(basis * 0.93, 2) if basis > 0 else 0
+            if stop_loss <= 0:
+                self.log_message(f"[ORPHAN] {symbol}: held but no report, stop or cost basis — leaving it")
+                continue
+            price = self.get_last_price(symbol) or 0
+            if price <= 0:
+                continue
+            if price <= stop_loss:
+                if any(o.asset.symbol == symbol and o.side == "sell" for o in self.get_orders()):
+                    continue
+                self.log_message(
+                    f"🔴 SELL ORDER: {symbol} — untracked holding hit stop ${price:.2f} <= ${stop_loss:.2f}"
+                )
+                self.sell_all(symbol)
+                traded_this_cycle += 1
 
         try:
             current_bot_val = self.get_portfolio_value()

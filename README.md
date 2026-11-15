@@ -31,6 +31,25 @@ threshold. Every decision, including the ones it rejects, ends up on the dashboa
 | `*.json` (repo root) | **Committed runtime state** — see the data flow below |
 | `render.yaml` / `vercel.json` | Hosting configuration for each half |
 
+## Trading guardrails
+
+The runtime is deliberately conservative about *when* and *how much* it buys:
+
+- **One executor.** `TRADING_ENGINE` decides who may submit orders. `actions` (default)
+  leaves the GitHub workflow as the only trader — it also commits state, so its fills are
+  the ones the dashboard can see. Set `TRADING_ENGINE=render` to hand execution to the
+  Render process instead. Two engines both seeing "no position yet" at 9:35 can double-buy.
+- **Real market calendar.** `utils.us_market_holidays` covers the ten NYSE closures
+  (including Good Friday and Juneteenth) with observed-date shifting, and
+  `us_market_early_closes` handles the 13:00 early closes. Weekends alone are not enough.
+- **Position cap.** `MAX_OPEN_POSITIONS = 5` in `strategy.py`; beyond that, new signals are
+  logged and skipped rather than liquidating the account.
+- **Exit coverage.** Research rewrites the report set every cycle, so every held position is
+  swept for its stop even if it is no longer in today's reports. A stop from the report is
+  used when present; otherwise 7% under the fill price.
+- **Stable benchmark.** `bot_start_value` and `spy_start_price` are only seeded when absent,
+  so alpha is measured since inception rather than since the last restart.
+
 The JSON files at the repo root are written by the backend and re-committed by CI. They are
 the reason the dashboard has data to show when the Render service is asleep, so they are
 deliberately tracked — do not add them to `.gitignore`.
@@ -41,9 +60,10 @@ deliberately tracked — do not add them to `.gitignore`.
 2. The script writes `reports.json`, `app_state.json`, `longterm_picks.json` and
    `overnight_analysis.json` in the repo root (and mirrors them into `frontend/public/`).
 3. The job commits and pushes those files.
-4. The dashboard fetches live endpoints from Render when `VITE_API_BASE_URL` is set, and
-   falls back to the committed static JSON when it is not, so a cold backend never leaves
-   the page empty.
+4. The dashboard fetches live endpoints from Render when `VITE_API_BASE_URL` is set
+   (`/reports.json`, `/app_state.json`, `/longterm_picks`, `/trade_history`), and falls back
+   to the committed static JSON when it is not, so a cold backend never leaves the page
+   empty.
 
 ## Scheduled jobs
 

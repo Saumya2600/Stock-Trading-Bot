@@ -28,3 +28,5 @@ services:
         sync: false
       - key: RESEARCH_TRIGGER_TOKEN
         sync: false
+      - key: TRADING_ENGINE
+        value: actions
