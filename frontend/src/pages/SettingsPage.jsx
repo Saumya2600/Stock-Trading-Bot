@@ -15,7 +15,7 @@ export default function SettingsPage() {
         <div className="glass-card" style={{ padding: '2rem' }}>
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
             <h3 className="headline-sm" style={{ fontSize: '1.1rem' }}>Alpaca API</h3>
-            <div className="chip hold" style={{ fontSize: '0.65rem' }}>SERVER-SIDE</div>
+            <div className="chip hold" style={{ fontSize: '0.7rem' }}>SERVER-SIDE</div>
           </div>
           <p style={{ color: 'var(--on-surface-variant)', fontSize: '0.85rem', lineHeight: '1.6' }}>
             Vercel Function reads live market data from{' '}

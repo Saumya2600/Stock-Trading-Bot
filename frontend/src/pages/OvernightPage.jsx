@@ -3,9 +3,9 @@ import { CalendarDays, ExternalLink, Moon, RefreshCw, ShieldCheck, TrendingUp } 
 
 const API_BASE = import.meta.env.VITE_API_BASE_URL || '';
 const STATIC_BACKEND = !API_BASE || API_BASE.includes('githubusercontent.com');
-const GREEN = '#3fff8b';
-const RED = '#ff716c';
-const AMBER = '#ffd60a';
+const GREEN = 'var(--primary)';
+const RED = 'var(--secondary)';
+const AMBER = 'var(--warning)';
 
 function formatNumber(value, digits = 2) {
   if (value === null || value === undefined || value === '') return '—';
@@ -129,7 +129,7 @@ function UpcomingCalendarCard({ event }) {
         </div>
         <div>
           <span className="label-sm">Status</span>
-          <strong style={{ color: '#57bcff' }}>Scheduled</strong>
+          <strong style={{ color: 'var(--tertiary)' }}>Scheduled</strong>
         </div>
         <div>
           <span className="label-sm">Analysis</span>
@@ -214,7 +214,7 @@ export default function OvernightPage() {
       <header className="overnight-hero">
         <div>
           <div className="overnight-title-row">
-            <Moon size={24} style={{ color: '#57bcff' }} />
+            <Moon size={24} style={{ color: 'var(--tertiary)' }} />
             <h1 className="hub-title">Overnight Earnings</h1>
           </div>
           <p className="hub-subtitle">After-hours earnings analysis · no orders</p>
@@ -264,8 +264,8 @@ export default function OvernightPage() {
         {data.last_refresh && <span className="label-sm">Last refresh {new Date(data.last_refresh).toLocaleString()}</span>}
       </div>
 
-      {error && <div className="glass-card overnight-error">{error}</div>}
-      {data.error && !error && <div className="glass-card overnight-error">{data.error}</div>}
+      {error && <div className="glass-card overnight-error" role="alert">{error}</div>}
+      {data.error && !error && <div className="glass-card overnight-error" role="alert">{data.error}</div>}
 
       {viewMode === 'analysis' && !loading && released.length > 0 && (
         <section>

@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import { AlertCircle, Loader2 } from 'lucide-react';
 import { DashboardAuthContext } from './dashboardAuthContext';
 import { supabase } from '../lib/supabase';
 
@@ -9,6 +10,7 @@ export default function DashboardAuthGate({ children }) {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [submitting, setSubmitting] = useState(false);
+  const settledRef = useRef(false);
 
   const verifySession = async nextSession => {
     if (!nextSession?.access_token) {
@@ -21,20 +23,22 @@ export default function DashboardAuthGate({ children }) {
       const response = await fetch('/api/session', {
         headers: { Authorization: `Bearer ${nextSession.access_token}` },
         cache: 'no-store',
+        signal: AbortSignal.timeout(8000),
       });
       const payload = await response.json().catch(() => ({}));
       if (!response.ok) {
         setSession(null);
-        setError(payload.error || 'This account cannot access dashboard.');
+        setError(payload.error || 'This account cannot access the dashboard.');
         return false;
       }
 
+      settledRef.current = true;
       setSession(nextSession);
       setError('');
       return true;
     } catch {
       setSession(null);
-      setError('Could not verify Supabase session.');
+      setError('Could not verify your session. Check your connection and try again.');
       return false;
     } finally {
       setChecking(false);
@@ -43,6 +47,7 @@ export default function DashboardAuthGate({ children }) {
 
   useEffect(() => {
     if (!supabase) return undefined;
+    let active = true;
 
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, nextSession) => {
       if (!nextSession) {
@@ -54,7 +59,30 @@ export default function DashboardAuthGate({ children }) {
       Promise.resolve().then(() => verifySession(nextSession));
     });
 
-    return () => subscription.unsubscribe();
+    /* The auth event does not always fire on a cold load (hard navigation,
+       restored tab), which left the gate spinning forever. Read the stored
+       session once and verify it, so the gate always resolves. */
+    supabase.auth.getSession().then(({ data }) => {
+      if (!active) return;
+      if (data?.session) Promise.resolve().then(() => verifySession(data.session));
+      else setChecking(false);
+    }).catch(() => {
+      if (active) setChecking(false);
+    });
+
+    /* The access check must always finish. A hanging request or a stalled
+       auth client previously left this screen spinning with no way out. */
+    const safety = window.setTimeout(() => {
+      if (!active || settledRef.current) return;
+      setChecking(false);
+      setError(current => current || 'The access check timed out. Reload the page or sign in again.');
+    }, 10000);
+
+    return () => {
+      active = false;
+      window.clearTimeout(safety);
+      subscription.unsubscribe();
+    };
   }, []);
 
   const login = async event => {
@@ -89,40 +117,81 @@ export default function DashboardAuthGate({ children }) {
     setError('');
   };
 
-  if (checking) return <div className="loading">Checking dashboard access...</div>;
+  if (checking) {
+    return (
+      <div className="auth-shell">
+        <div className="loading" role="status">Checking dashboard access&hellip;</div>
+      </div>
+    );
+  }
+
+  const message = error || (!supabase
+    ? 'Supabase is not configured. Add VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY to your environment.'
+    : '');
 
   if (!session) {
     return (
-      <main style={{ minHeight: '100vh', display: 'grid', placeItems: 'center', padding: '1.5rem' }}>
-        <form onSubmit={login} className="glass-card" style={{ width: 'min(100%, 380px)', padding: '2rem' }}>
-          <h1 className="headline-md" style={{ marginBottom: '0.5rem' }}>Dashboard sign-in</h1>
-          <p className="label-sm" style={{ marginBottom: '1.5rem', textTransform: 'none' }}>Sign in with your approved Supabase account.</p>
-          <input
-            autoFocus
-            type="email"
-            autoComplete="username"
-            value={email}
-            onChange={event => setEmail(event.target.value)}
-            aria-label="Email address"
-            placeholder="Email address"
-            required
-            style={{ width: '100%', padding: '0.8rem', marginBottom: '0.75rem', color: '#fff', background: '#111', border: '1px solid #444', borderRadius: '6px' }}
-          />
-          <input
-            type="password"
-            autoComplete="current-password"
-            value={password}
-            onChange={event => setPassword(event.target.value)}
-            aria-label="Dashboard password"
-            required
-            style={{ width: '100%', padding: '0.8rem', marginBottom: '1rem', color: '#fff', background: '#111', border: '1px solid #444', borderRadius: '6px' }}
-          />
-          {(error || !supabase) && <p role="alert" style={{ color: '#ff716c', fontSize: '0.85rem' }}>{error || 'Supabase is not configured. Add VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY.'}</p>}
-          <button className="apple-btn apple-btn-primary" type="submit" disabled={submitting || !supabase || !email || !password} style={{ width: '100%' }}>
-            {submitting ? 'Signing in...' : 'Sign in'}
+      <div className="auth-shell">
+        <form onSubmit={login} className="glass-card auth-card" noValidate>
+          <div className="auth-brand">Deep Tech</div>
+          <h1 className="auth-title">Dashboard sign-in</h1>
+          <p className="auth-sub">Use your approved Supabase account to open the trading dashboard.</p>
+
+          {message && (
+            <p className="auth-error" role="alert">
+              <AlertCircle size={15} aria-hidden="true" />
+              <span>{message}</span>
+            </p>
+          )}
+
+          <div className="auth-field">
+            <label className="auth-label" htmlFor="auth-email">Email</label>
+            <input
+              id="auth-email"
+              className="auth-input"
+              autoFocus
+              type="email"
+              autoComplete="username"
+              value={email}
+              onChange={event => setEmail(event.target.value)}
+              aria-invalid={Boolean(message) || undefined}
+              placeholder="you@example.com"
+              required
+            />
+          </div>
+
+          <div className="auth-field">
+            <label className="auth-label" htmlFor="auth-password">Password</label>
+            <input
+              id="auth-password"
+              className="auth-input"
+              type="password"
+              autoComplete="current-password"
+              value={password}
+              onChange={event => setPassword(event.target.value)}
+              aria-invalid={Boolean(message) || undefined}
+              placeholder="Your dashboard password"
+              required
+            />
+          </div>
+
+          <button
+            className="apple-btn apple-btn-primary auth-submit"
+            type="submit"
+            disabled={submitting || !supabase || !email || !password}
+          >
+            {submitting ? (
+              <>
+                <Loader2 size={15} className="spinner" aria-hidden="true" /> Signing in&hellip;
+              </>
+            ) : 'Sign in'}
           </button>
+
+          <p className="auth-note">
+            Access is limited to the emails your operator allowlisted. Ask them to add you if sign-in is refused.
+          </p>
         </form>
-      </main>
+      </div>
     );
   }
 

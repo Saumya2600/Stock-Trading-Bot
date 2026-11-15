@@ -1,4 +1,6 @@
+import { AlertCircle, TrendingUp, Activity } from 'lucide-react';
 import { useApp } from '../context/AppContext';
+import Reveal from '../components/motion/Reveal';
 
 const SECTOR_MAP = {
   Technology: ['AAPL', 'MSFT', 'NVDA', 'AVGO', 'ORCL', 'ADBE', 'CRM', 'AMD', 'QCOM', 'INTC', 'TSM', 'ASML', 'CSCO', 'IBM', 'TXN', 'NOW', 'INTU', 'AMAT', 'MU', 'LRCX', 'PANW'],
@@ -17,11 +19,39 @@ function StockCard({ stock }) {
   const isPositive = stock.percent_change >= 0;
 
   return (
-    <div className="glass-card" onClick={() => openStockModal(stock)} style={{ cursor: 'pointer' }}>
+    <div
+      role="button"
+      tabIndex={0}
+      aria-label={`Open ${stock.symbol} details`}
+      className="glass-card stock-card is-clickable tilt-card"
+      onClick={() => openStockModal(stock)}
+      onMouseMove={event => {
+        const target = event.currentTarget;
+        const rect = target.getBoundingClientRect();
+        const px = (event.clientX - rect.left) / rect.width;
+        const py = (event.clientY - rect.top) / rect.height;
+        target.style.setProperty('--rx', `${(0.5 - py) * 7}deg`);
+        target.style.setProperty('--ry', `${(px - 0.5) * 9}deg`);
+        target.style.setProperty('--mx', `${px * 100}%`);
+        target.style.setProperty('--my', `${py * 100}%`);
+      }}
+      onMouseLeave={event => {
+        const target = event.currentTarget;
+        target.style.setProperty('--rx', '0deg');
+        target.style.setProperty('--ry', '0deg');
+      }}
+      onKeyDown={event => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          openStockModal(stock);
+        }
+      }}
+    >
+      <span className="tilt-card__shine" aria-hidden="true" />
       <div className="card-header">
-        <div style={{ maxWidth: '70%', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+        <div style={{ minWidth: 0 }}>
           <div className="ticker">{stock.symbol}</div>
-          <div className="label-md" style={{ marginTop: '0.25rem', fontSize: '0.65rem', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+          <div className="label-md" style={{ marginTop: '0.3rem', fontSize: '0.7rem', letterSpacing: '0.06em', textTransform: 'none', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
             {stock.name || 'US Equity'}
           </div>
         </div>
@@ -32,8 +62,8 @@ function StockCard({ stock }) {
       <div className="price">${parseFloat(stock.price || 0).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</div>
       <div className={`chip trade-suggestion ${suggestion.class}`}>{suggestion.text}</div>
       {stock.volume && (
-        <div className="label-md" style={{ marginTop: '1rem', fontSize: '0.65rem' }}>
-          Vol: {(stock.volume / 1000000).toLocaleString('en-US', { maximumFractionDigits: 1 })}M
+        <div className="label-md" style={{ marginTop: '0.9rem', fontSize: '0.7rem' }}>
+          Vol {(stock.volume / 1000000).toLocaleString('en-US', { maximumFractionDigits: 1 })}M
         </div>
       )}
     </div>
@@ -43,25 +73,27 @@ function StockCard({ stock }) {
 export default function MarketPage() {
   const { loading, error, activeStocks, momentumStocks, sectorFilter, setSectorFilter } = useApp();
 
-  if (loading) return <div className="loading">Connecting to Alpaca...</div>;
+  if (loading) return <div className="loading" role="status">Connecting to Alpaca…</div>;
 
   const filteredActives = activeStocks.filter(s => sectorFilter === 'All' || SECTOR_MAP[sectorFilter]?.includes(s.symbol));
   const filteredMomentum = momentumStocks.filter(s => sectorFilter === 'All' || SECTOR_MAP[sectorFilter]?.includes(s.symbol));
 
   return (
-    <>
-      <header style={{ marginBottom: '2rem' }}>
-        <h2 className="display-lg">Global Market</h2>
-        <p className="headline-sm" style={{ marginTop: '0.5rem', opacity: 0.7 }}>Real-time US Movers &amp; Sector Analysis</p>
+    <div className="page-enter">
+      <header className="page-head">
+        <div>
+          <h1 className="display-lg">Global Market</h1>
+          <p className="headline-sm" style={{ marginTop: '0.4rem' }}>Live US movers and sector rotation</p>
+        </div>
       </header>
 
-      {/* Sector filters — pill strip */}
-      <div className="sector-strip">
+      <div className="sector-strip" role="group" aria-label="Filter by sector">
         {SECTORS.map(sector => (
           <button
             key={sector}
             onClick={() => setSectorFilter(sector)}
             className={`sector-pill ${sectorFilter === sector ? 'active' : ''}`}
+            aria-pressed={sectorFilter === sector}
           >
             {sector}
           </button>
@@ -69,37 +101,63 @@ export default function MarketPage() {
       </div>
 
       {error ? (
-        <div style={{ padding: '1.5rem', background: 'rgba(255,113,108,0.1)', borderLeft: '4px solid #ff716c', borderRadius: '0 12px 12px 0' }}>
-          <p className="headline-sm" style={{ color: '#ff716c', marginBottom: '0.5rem' }}>Authentication Failed</p>
-          <p style={{ color: 'var(--on-surface-variant)' }}>{error}</p>
+        <div className="inline-alert" role="alert">
+          <AlertCircle size={17} aria-hidden="true" />
+          <div>
+            <p className="inline-alert__title">Market data is unavailable</p>
+            <p className="inline-alert__body">
+              Alpaca rejected the request. {error} Check the API credentials in your server environment, then reload.
+            </p>
+          </div>
         </div>
       ) : (
         <>
-          <section style={{ marginBottom: '3rem' }}>
-            <div style={{ display: 'flex', alignItems: 'center', margin: '0 0 1.5rem 0', gap: '1rem' }}>
-              <h3 className="headline-sm" style={{ color: 'var(--on-surface)' }}>Highest Volume Active</h3>
-              <span className="label-md" style={{ color: 'var(--primary)', border: '1px solid var(--primary)', padding: '2px 8px', borderRadius: '6px' }}>Most Traded</span>
+          <section>
+            <div className="market-section-head">
+              <h2>Highest volume</h2>
+              <span className="market-tag" style={{ color: 'var(--primary)' }}>Most traded</span>
+              <span className="section-rule" style={{ flex: 1 }} />
+              <span className="label-sm">{filteredActives.length} symbols</span>
             </div>
-            <div className="stock-grid">
+            <Reveal className="stock-grid" y={30} stagger={0.045}>
               {filteredActives.slice(0, 15).map(stock => <StockCard key={stock.symbol} stock={stock} />)}
-              {filteredActives.length === 0 && <p style={{ color: 'var(--on-surface-variant)' }}>No {sectorFilter} stocks in this pool right now.</p>}
-            </div>
+              {filteredActives.length === 0 && (
+                <div className="state-block">
+                  <Activity size={26} aria-hidden="true" />
+                  <p className="state-block__title">No symbols in this pool</p>
+                  <p className="state-block__body">
+                    The Alpaca feed returned no {sectorFilter === 'All' ? '' : sectorFilter.toLowerCase() + ' '}movers.
+                    Try another sector, or reload if the feed is still warming up.
+                  </p>
+                  <button className="apple-btn apple-btn-secondary" onClick={() => setSectorFilter('All')}>Show all sectors</button>
+                </div>
+              )}
+            </Reveal>
           </section>
 
-          <hr style={{ border: 'none', borderTop: '1px solid rgba(72,72,71,0.3)', margin: '2rem 0' }} />
+          <hr className="market-divider" />
 
-          <section style={{ marginBottom: '3rem' }}>
-            <div style={{ display: 'flex', alignItems: 'center', margin: '0 0 1.5rem 0', gap: '1rem' }}>
-              <h3 className="headline-sm" style={{ color: 'var(--on-surface)' }}>Best Momentum</h3>
-              <span className="label-md" style={{ color: 'var(--secondary)', border: '1px solid var(--secondary)', padding: '2px 8px', borderRadius: '6px' }}>Top Gainers</span>
+          <section>
+            <div className="market-section-head">
+              <h2>Best momentum</h2>
+              <span className="market-tag" style={{ color: 'var(--secondary)' }}>Top gainers</span>
+              <span className="section-rule" style={{ flex: 1 }} />
+              <span className="label-sm">{filteredMomentum.length} symbols</span>
             </div>
-            <div className="stock-grid">
+            <Reveal className="stock-grid" y={30} stagger={0.045}>
               {filteredMomentum.slice(0, 15).map(stock => <StockCard key={stock.symbol} stock={stock} />)}
-              {filteredMomentum.length === 0 && <p style={{ color: 'var(--on-surface-variant)' }}>No {sectorFilter} stocks in this pool right now.</p>}
-            </div>
+              {filteredMomentum.length === 0 && (
+                <div className="state-block">
+                  <TrendingUp size={26} aria-hidden="true" />
+                  <p className="state-block__title">No momentum names</p>
+                  <p className="state-block__body">The gainers pool is empty for this filter. Widen it to see the full market.</p>
+                  <button className="apple-btn apple-btn-secondary" onClick={() => setSectorFilter('All')}>Show all sectors</button>
+                </div>
+              )}
+            </Reveal>
           </section>
         </>
       )}
-    </>
+    </div>
   );
 }

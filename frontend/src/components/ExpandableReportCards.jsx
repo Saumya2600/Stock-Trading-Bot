@@ -1,243 +1,215 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { formatAtlanticDate, formatAtlanticTime } from '../lib/dateTime';
-import { 
-  ChevronDown, 
-  ChevronUp, 
-  Calendar, 
-  TrendingUp, 
-  TrendingDown, 
-  AlertTriangle, 
-  Lightbulb, 
-  ShieldCheck, 
+import Reveal from './motion/Reveal';
+import {
+  ChevronDown,
+  ChevronUp,
+  Calendar,
+  TrendingUp,
+  TrendingDown,
+  Lightbulb,
+  ShieldCheck,
   Zap,
-  Target,
-  ArrowRight
 } from 'lucide-react';
 
 const ReportCard = ({ symbol, data }) => {
   const [isExpanded, setIsExpanded] = useState(false);
-  
+
   const aiGrade = data.ai_grade || 50;
-  const gradeColor = aiGrade > 80 ? 'var(--primary)' : aiGrade < 40 ? 'var(--secondary)' : '#ffd60a';
+  const gradeColor = aiGrade > 80 ? 'var(--primary)' : aiGrade < 40 ? 'var(--secondary)' : 'var(--warning)';
   const price = typeof data.price === 'number' ? data.price : 0;
   const targetPrice = typeof data.target_price === 'number' ? data.target_price : 0;
   const stopLoss = typeof data.stop_loss === 'number' ? data.stop_loss : 0;
-  const catalysts = typeof data.key_catalysts === 'string' ? data.key_catalysts.split(';') : [];
-  
+  const catalysts = typeof data.key_catalysts === 'string' ? data.key_catalysts.split(';').filter(Boolean) : [];
+  const upside = price > 0 ? ((targetPrice / price - 1) * 100).toFixed(1) : '0.0';
+
   return (
-    <div className={`glass-card ${isExpanded ? 'expanded' : ''}`} style={{ 
-      transition: 'all 0.5s cubic-bezier(0.4, 0, 0.2, 1)',
-      cursor: 'default',
-      marginBottom: '1rem',
-      overflow: 'hidden'
-    }}>
-      <div className="glass-card-inner-shadow" />
-      
-      {/* Header / Summary View */}
-      <div className="report-card-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', cursor: 'pointer' }} onClick={() => setIsExpanded(!isExpanded)}>
-        <div className="report-card-summary" style={{ display: 'flex', alignItems: 'center', gap: '1.5rem', flex: 1 }}>
-          <div style={{ position: 'relative' }}>
-             <div className="ticker" style={{ fontSize: '2rem' }}>{symbol}</div>
-             <div style={{ 
-               position: 'absolute', top: '-10px', right: '-15px', 
-               background: gradeColor, color: '#000', fontSize: '0.6rem', 
-               padding: '2px 6px', borderRadius: '4px', fontWeight: '900',
-               boxShadow: `0 0 10px ${gradeColor}66`
-             }}>
-               {aiGrade}
-             </div>
+    <article className="glass-card report-card">
+      <button
+        className="report-card-header"
+        onClick={() => setIsExpanded(open => !open)}
+        aria-expanded={isExpanded}
+        aria-controls={`report-body-${symbol}`}
+      >
+        <div className="report-card-summary">
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', flexShrink: 0 }}>
+            <span className="ticker" style={{ fontSize: '1.3rem' }}>{symbol}</span>
+            <span className="report-grade" style={{ background: gradeColor }}>{aiGrade}</span>
           </div>
-          
-          <div style={{ flex: 1 }}>
-            <div className="headline-md" style={{ marginBottom: '0.25rem' }}>{data.name || symbol}</div>
-            <div className="label-sm" style={{ opacity: 0.6, display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <Calendar size={12} /> {formatAtlanticDate(data.updated_at)} at {formatAtlanticTime(data.updated_at)} ADT/AST
+
+          <div style={{ flex: 1, minWidth: 0 }}>
+            <div className="headline-md" style={{ marginBottom: '0.2rem', overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
+              {data.name || symbol}
+            </div>
+            <div className="label-sm" style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', textTransform: 'none', letterSpacing: 0 }}>
+              <Calendar size={11} aria-hidden="true" />
+              {formatAtlanticDate(data.updated_at)} · {formatAtlanticTime(data.updated_at)} ADT/AST
             </div>
           </div>
 
-          <div className="report-card-metrics" style={{ display: 'flex', gap: '2rem', marginRight: '2rem' }}>
-             <div style={{ textAlign: 'right' }}>
-                <div className="label-sm">Current</div>
-                <div className="headline-sm" style={{ fontSize: '1rem' }}>${price.toFixed(2)}</div>
-             </div>
-             <div style={{ textAlign: 'right' }}>
-                <div className="label-sm" style={{ color: 'var(--primary)' }}>Target</div>
-                <div className="headline-sm" style={{ fontSize: '1rem', color: 'var(--primary)' }}>${targetPrice.toFixed(2)}</div>
-             </div>
-             <div style={{ textAlign: 'right' }}>
-                <div className="label-sm" style={{ color: 'var(--on-surface-variant)' }}>Risk</div>
-                <div className={`chip ${data.risk_level === 'High' ? 'negative' : 'positive'}`} style={{ fontSize: '0.6rem', padding: '2px 8px' }}>
+          <div className="report-card-metrics">
+            <div className="report-metric">
+              <div className="label-sm">Price</div>
+              <div style={{ fontSize: '0.95rem', fontWeight: 600, marginTop: '0.15rem' }}>${price.toFixed(2)}</div>
+            </div>
+            <div className="report-metric">
+              <div className="label-sm">Target</div>
+              <div style={{ fontSize: '0.95rem', fontWeight: 600, marginTop: '0.15rem', color: 'var(--primary)' }}>${targetPrice.toFixed(2)}</div>
+            </div>
+            <div className="report-metric">
+              <div className="label-sm">Risk</div>
+              <div style={{ marginTop: '0.15rem' }}>
+                <span className={`chip ${data.risk_level === 'High' ? 'negative' : data.risk_level === 'Low' ? 'positive' : 'hold'}`} style={{ fontSize: '0.7rem', padding: '2px 8px' }}>
                   {data.risk_level || 'Medium'}
-                </div>
-             </div>
+                </span>
+              </div>
+            </div>
           </div>
         </div>
 
-        <button style={{ 
-          background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)', 
-          borderRadius: '50%', width: '40px', height: '40px', display: 'flex', 
-          alignItems: 'center', justifyContent: 'center', color: '#fff', cursor: 'pointer',
-          transition: 'transform 0.3s'
-        }}>
-          {isExpanded ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
-        </button>
-      </div>
+        <span className="report-toggle" aria-hidden="true">
+          {isExpanded ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+        </span>
+      </button>
 
-      {/* Expanded Details */}
-      <div style={{ 
-        maxHeight: isExpanded ? '2500px' : '0', 
-        opacity: isExpanded ? 1 : 0,
-        transition: 'all 0.5s ease-in-out',
-        marginTop: isExpanded ? '2rem' : '0',
-        borderTop: isExpanded ? '1px solid rgba(255,255,255,0.05)' : 'none',
-        paddingTop: isExpanded ? '2rem' : '0'
-      }}>
-        <div className="responsive-grid" style={{ display: 'grid', gridTemplateColumns: '1.5fr 1fr', gap: '2rem' }}>
-          
-          {/* Left Column: Analysis */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-            <section>
-              <h4 className="label-md" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem', color: 'var(--on-surface)' }}>
-                <Zap size={14} className="text-primary" /> Executive Reasoning
-              </h4>
-              <p style={{ fontSize: '0.95rem', lineHeight: '1.6', color: 'var(--on-surface-variant)', background: 'rgba(255,255,255,0.02)', padding: '1.5rem', borderRadius: '16px', border: '1px solid rgba(255,255,255,0.05)' }}>
-                {data.reasoning}
-              </p>
-            </section>
+      <div className={`report-body ${isExpanded ? 'open' : ''}`} id={`report-body-${symbol}`}>
+        <div className="report-body__inner">
+          <div className="report-body__content">
+            <div className="report-columns">
+              <div className="report-stack">
+                <section>
+                  <h3 className="label-md" style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', marginBottom: '0.6rem', color: 'var(--on-surface)' }}>
+                    <Zap size={13} color="var(--primary)" aria-hidden="true" /> Executive reasoning
+                  </h3>
+                  <p className="report-prose">{data.reasoning || 'No reasoning was recorded for this scan.'}</p>
+                </section>
 
-            <div className="responsive-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-              <div className="glass-card" style={{ background: 'rgba(63, 255, 139, 0.03)', border: '1px solid rgba(63, 255, 139, 0.1)' }}>
-                <h4 className="label-sm" style={{ color: 'var(--primary)', marginBottom: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-                  <TrendingUp size={12} /> Bull Thesis
-                </h4>
-                <p style={{ fontSize: '0.85rem', color: 'var(--on-surface-variant)', lineHeight: '1.4' }}>{data.bull_case}</p>
+                <div className="mini-grid">
+                  <div className="sub-panel sub-panel--bull">
+                    <h4 className="label-sm" style={{ color: 'var(--primary)' }}>
+                      <TrendingUp size={12} aria-hidden="true" /> Bull thesis
+                    </h4>
+                    <p>{data.bull_case || 'Not provided.'}</p>
+                  </div>
+                  <div className="sub-panel sub-panel--bear">
+                    <h4 className="label-sm" style={{ color: 'var(--secondary)' }}>
+                      <TrendingDown size={12} aria-hidden="true" /> Bear risks
+                    </h4>
+                    <p>{data.bear_case || 'Not provided.'}</p>
+                  </div>
+                </div>
               </div>
-              <div className="glass-card" style={{ background: 'rgba(255, 113, 108, 0.03)', border: '1px solid rgba(255, 113, 108, 0.1)' }}>
-                <h4 className="label-sm" style={{ color: 'var(--secondary)', marginBottom: '0.75rem', display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
-                  <TrendingDown size={12} /> Bear Risks
-                </h4>
-                <p style={{ fontSize: '0.85rem', color: 'var(--on-surface-variant)', lineHeight: '1.4' }}>{data.bear_case}</p>
+
+              <div className="report-stack">
+                {data.fundamentals && (
+                  <div className="sub-panel">
+                    <h4 className="label-md" style={{ color: 'var(--on-surface)' }}>Fundamental ledger</h4>
+                    <div className="mini-grid">
+                      {[
+                        ['P/E', data.fundamentals.pe],
+                        ['PEG', data.fundamentals.peg],
+                        ['Debt / equity', data.fundamentals.debt_to_equity],
+                        ['Sector', data.fundamentals.sector],
+                      ].map(([label, value]) => (
+                        <div key={label}>
+                          <div className="label-sm">{label}</div>
+                          <div style={{ fontSize: '0.88rem', fontWeight: 600, marginTop: '0.1rem' }}>{value || 'N/A'}</div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {catalysts.length > 0 && (
+                  <div className="sub-panel">
+                    <h4 className="label-md" style={{ color: 'var(--on-surface)' }}>Key catalysts</h4>
+                    <ul style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', flexDirection: 'column', gap: '0.55rem' }}>
+                      {catalysts.map((catalyst, i) => (
+                        <li key={i} style={{ display: 'flex', gap: '0.55rem', alignItems: 'flex-start' }}>
+                          <span style={{ marginTop: '6px', width: 5, height: 5, borderRadius: '50%', background: 'var(--primary)', flexShrink: 0 }} aria-hidden="true" />
+                          <span style={{ fontSize: '0.84rem', lineHeight: 1.5, color: 'var(--on-surface-muted)' }}>{catalyst.trim()}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                <div className="mini-grid">
+                  <div className="mini-cell">
+                    <div className="label-sm">Entry limit</div>
+                    <strong>${price.toFixed(2)}</strong>
+                  </div>
+                  <div className="mini-cell">
+                    <div className="label-sm">Stop loss (ATR)</div>
+                    <strong style={{ color: 'var(--secondary)' }}>${stopLoss.toFixed(2)}</strong>
+                  </div>
+                  {(data.support_level || data.resistance_level) && (
+                    <>
+                      <div className="mini-cell" style={{ background: 'rgba(63,255,139,0.05)', borderColor: 'rgba(63,255,139,0.14)' }}>
+                        <div className="label-sm">Support</div>
+                        <strong style={{ color: 'var(--primary)' }}>${Number(data.support_level || 0).toFixed(2)}</strong>
+                      </div>
+                      <div className="mini-cell" style={{ background: 'rgba(255,113,108,0.05)', borderColor: 'rgba(255,113,108,0.14)' }}>
+                        <div className="label-sm">Resistance</div>
+                        <strong style={{ color: 'var(--secondary)' }}>${Number(data.resistance_level || 0).toFixed(2)}</strong>
+                      </div>
+                    </>
+                  )}
+                </div>
+
+                <div className="alpha-strip">
+                  <div>
+                    <div className="label-sm" style={{ color: 'var(--primary)' }}>Projected upside</div>
+                    <div className="alpha-strip__value">+{upside}%</div>
+                  </div>
+                  <ShieldCheck size={26} style={{ color: 'var(--primary)', opacity: 0.5 }} aria-hidden="true" />
+                </div>
               </div>
             </div>
           </div>
-
-          {/* Right Column: Key Metrics & Catalysts */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-            {/* Fundamentals Block */}
-            {data.fundamentals && (
-              <div className="glass-card" style={{ background: 'rgba(255,255,255,0.03)' }}>
-                <h4 className="label-md" style={{ marginBottom: '1.25rem', color: 'var(--on-surface)' }}>Fundamental Ledger</h4>
-                <div className="responsive-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-                  <div>
-                    <div className="label-sm" style={{ opacity: 0.5 }}>P/E Ratio</div>
-                    <div className="headline-sm">{data.fundamentals.pe || 'N/A'}</div>
-                  </div>
-                  <div>
-                    <div className="label-sm" style={{ opacity: 0.5 }}>PEG Ratio</div>
-                    <div className="headline-sm">{data.fundamentals.peg || 'N/A'}</div>
-                  </div>
-                  <div>
-                    <div className="label-sm" style={{ opacity: 0.5 }}>Debt / Equity</div>
-                    <div className="headline-sm">{data.fundamentals.debt_to_equity || 'N/A'}</div>
-                  </div>
-                  <div>
-                    <div className="label-sm" style={{ opacity: 0.5 }}>Sector</div>
-                    <div className="headline-sm" style={{ fontSize: '0.8rem' }}>{data.fundamentals.sector || 'Unknown'}</div>
-                  </div>
-                </div>
-              </div>
-            )}
-
-            <div className="glass-card" style={{ background: 'rgba(255,255,255,0.03)' }}>
-              <h4 className="label-md" style={{ marginBottom: '1.25rem', color: 'var(--on-surface)' }}>Key Catalysts</h4>
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                {catalysts.map((catalyst, i) => (
-                  <div key={i} style={{ display: 'flex', gap: '0.75rem', alignItems: 'flex-start' }}>
-                    <div style={{ marginTop: '4px', minWidth: '6px', height: '6px', borderRadius: '50%', background: 'var(--primary)' }} />
-                    <span style={{ fontSize: '0.85rem', color: 'var(--on-surface-variant)' }}>{catalyst.trim()}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-               <div style={{ padding: '1rem', background: 'rgba(255,255,255,0.02)', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
-                  <div className="label-sm">Entry Limit</div>
-                  <div className="headline-md" style={{ marginTop: '0.25rem' }}>${price.toFixed(2)}</div>
-               </div>
-               <div style={{ padding: '1rem', background: 'rgba(255,255,255,0.02)', borderRadius: '12px', border: '1px solid rgba(255,255,255,0.05)' }}>
-                  <div className="label-sm">Stop Loss (ATR)</div>
-                  <div className="headline-md" style={{ marginTop: '0.25rem', color: 'var(--secondary)' }}>${stopLoss.toFixed(2)}</div>
-               </div>
-            </div>
-
-            {(data.support_level || data.resistance_level) && (
-              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
-                <div style={{ padding: '1rem', background: 'rgba(63,255,139,0.04)', borderRadius: '12px', border: '1px solid rgba(63,255,139,0.12)' }}>
-                  <div className="label-sm" style={{ color: '#3fff8b' }}>Support Level</div>
-                  <div className="headline-md" style={{ marginTop: '0.25rem', color: '#3fff8b' }}>${(data.support_level || 0).toFixed(2)}</div>
-                </div>
-                <div style={{ padding: '1rem', background: 'rgba(255,113,108,0.04)', borderRadius: '12px', border: '1px solid rgba(255,113,108,0.12)' }}>
-                  <div className="label-sm" style={{ color: '#ff716c' }}>Resistance Level</div>
-                  <div className="headline-md" style={{ marginTop: '0.25rem', color: '#ff716c' }}>${(data.resistance_level || 0).toFixed(2)}</div>
-                </div>
-              </div>
-            )}
-
-            <div style={{ 
-              marginTop: 'auto', padding: '1.5rem', 
-              background: 'linear-gradient(135deg, rgba(63, 255, 139, 0.1), transparent)', 
-              borderRadius: '16px', border: '1px solid rgba(63, 255, 139, 0.2)',
-              display: 'flex', justifyContent: 'space-between', alignItems: 'center'
-            }}>
-              <div>
-                <div className="label-sm" style={{ color: 'var(--primary)' }}>Projected Alpha</div>
-                <div className="display-lg" style={{ fontSize: '1.75rem', marginTop: '0.25rem' }}>
-                  +{price > 0 ? ((targetPrice / price - 1) * 100).toFixed(1) : '0.0'}%
-                </div>
-              </div>
-              <ShieldCheck size={32} style={{ opacity: 0.2, color: 'var(--primary)' }} />
-            </div>
-          </div>
-
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 
 const ExpandableReportCards = ({ reports = {} }) => {
   const symbols = Object.keys(reports).filter(k => !k.startsWith('_'));
-  
+
   if (symbols.length === 0) {
     return (
-      <div style={{ padding: '4rem', textAlign: 'center', opacity: 0.5 }}>
-        <Lightbulb size={48} style={{ marginBottom: '1.5rem' }} />
-        <h2 className="headline-sm">No Intelligence Reports Found</h2>
-        <p>Run the research engine to generate deep-tech insights.</p>
+      <div className="glass-card state-block">
+        <Lightbulb size={30} aria-hidden="true" />
+        <p className="state-block__title">No research reports yet</p>
+        <p className="state-block__body">
+          Run the research engine from the Intelligence Hub and each graded setup lands here with its full thesis.
+        </p>
       </div>
     );
   }
 
+  const sorted = [...symbols].sort((a, b) => (reports[b].ai_grade || 0) - (reports[a].ai_grade || 0));
+
   return (
-    <div style={{ animation: 'fadeIn 0.8s ease-out' }}>
-      <header className="responsive-grid" style={{ marginBottom: '3rem', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: '1.5rem' }}>
+    <div className="page-enter">
+      <header className="page-head">
         <div>
-          <div className="label-md" style={{ color: 'var(--primary)', marginBottom: '0.5rem' }}>Market Intelligence</div>
-          <h2 className="display-lg" style={{ lineHeight: 1.1 }}>Neural Research Reports</h2>
-          <p className="headline-sm" style={{ marginTop: '0.5rem', opacity: 0.7 }}>Autonomous multi-factor discovery and risk assessment</p>
+          <h1 className="display-lg">Deep Research</h1>
+          <p className="headline-sm" style={{ marginTop: '0.4rem' }}>
+            Autonomous multi-factor discovery and risk assessment
+          </p>
         </div>
-        <div style={{ textAlign: 'right', minWidth: 'fit-content' }}>
-           <div className="label-sm">Total Reports</div>
-           <div className="headline-md" style={{ fontSize: '1.5rem' }}>{symbols.length}</div>
+        <div style={{ textAlign: 'right' }}>
+          <div className="label-sm">Live reports</div>
+          <div className="headline-md" style={{ fontSize: '1.35rem', marginTop: '0.15rem' }}>{symbols.length}</div>
         </div>
       </header>
 
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-        {symbols.sort((a, b) => (reports[b].ai_grade || 0) - (reports[a].ai_grade || 0)).map(symbol => (
+      <Reveal className="report-list" y={24} stagger={0.06}>
+        {sorted.map(symbol => (
           <ReportCard key={symbol} symbol={symbol} data={reports[symbol]} />
         ))}
-      </div>
+      </Reveal>
     </div>
   );
 };
