@@ -33,7 +33,9 @@ async def disable_api_cache(request, call_next):
     response.headers["Pragma"] = "no-cache"
     return response
 
-@api.get("/")
+# Uptime monitors probe with HEAD, not GET. A GET-only route answers 405, which
+# reads as "down" while the service is perfectly healthy.
+@api.api_route("/", methods=["GET", "HEAD"])
 def health_check():
     return {"status": "online", "message": "Autonomous Alpha Trading Bot API"}
 
