@@ -71,8 +71,8 @@ function Sidebar({ isOpen, onClose }) {
     <nav className={`sidebar ${isOpen ? 'open' : ''}`} aria-label="Primary">
       <div className="sidebar-header">
         <h1 className="sidebar-logo">
-          <img className="brand-mark" src="/favicon.svg" alt="" width="24" height="24" />
-          SamAlpha
+          <img className="brand-mark" src="/favicon.svg" alt="" width="26" height="26" />
+          <span className="brand-word">Sam&rsquo;s Lab</span>
         </h1>
         <button className="sidebar-close-btn" onClick={onClose} title="Collapse sidebar" aria-label="Collapse sidebar">
           <PanelLeftClose size={19} />

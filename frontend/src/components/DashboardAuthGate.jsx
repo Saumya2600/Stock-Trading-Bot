@@ -133,7 +133,10 @@ export default function DashboardAuthGate({ children }) {
     return (
       <div className="auth-shell">
         <form onSubmit={login} className="glass-card auth-card" noValidate>
-          <div className="auth-brand">SamAlpha</div>
+          <div className="auth-brand">
+            <img className="brand-mark" src="/favicon.svg" alt="" width="26" height="26" />
+            <span className="brand-word">Sam&rsquo;s Lab</span>
+          </div>
           <h1 className="auth-title">Dashboard sign-in</h1>
           <p className="auth-sub">Use your approved Supabase account to open the trading dashboard.</p>
 
