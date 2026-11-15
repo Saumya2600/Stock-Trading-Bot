@@ -329,6 +329,12 @@ function StockModal() {
 /* ── App shell ── */
 function AppShell() {
   const { sidebarOpen, setSidebarOpen } = useApp();
+  const { pathname } = useLocation();
+
+  /* The sidebar is an overlay on phones, so picking a destination dismisses it. */
+  useEffect(() => {
+    if (window.matchMedia('(max-width: 768px)').matches) setSidebarOpen(false);
+  }, [pathname, setSidebarOpen]);
 
   return (
     <div className={`app-container ${!sidebarOpen ? 'sidebar-collapsed' : ''}`}>
@@ -343,6 +349,16 @@ function AppShell() {
       </button>
 
       <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
+
+      {sidebarOpen && (
+        <button
+          type="button"
+          className="sidebar-scrim"
+          aria-label="Close navigation"
+          tabIndex={-1}
+          onClick={() => setSidebarOpen(false)}
+        />
+      )}
 
       <main className="main-content" id="main-content" tabIndex={-1}>
         <PageTransition>

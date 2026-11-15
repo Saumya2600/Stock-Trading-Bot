@@ -229,6 +229,11 @@ a { color: inherit; text-underline-offset: 3px; text-decoration-thickness: 1px; 
 ═══════════════════════════════════════════════════════════════ */
 .app-container { display: flex; min-height: 100vh; min-width: 0; overflow-x: hidden; }
 
+/* Overlay dismiss target for the phone drawer; never rendered on desktop. */
+.sidebar-scrim { display: none; }
+
+img, svg, canvas, video, pre { max-width: 100%; }
+
 .sidebar {
   width: 262px;
   flex-shrink: 0;
@@ -791,6 +796,7 @@ a { color: inherit; text-underline-offset: 3px; text-decoration-thickness: 1px; 
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1rem;
+  align-items: stretch;
 }
 .intel-card {
   padding: 1.35rem 1.4rem;
@@ -798,15 +804,41 @@ a { color: inherit; text-underline-offset: 3px; text-decoration-thickness: 1px; 
   flex-direction: column;
   gap: 1rem;
   overflow: hidden;
+  height: 100%;
 }
 .intel-card-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; }
 .intel-brief {
+  position: relative;
   background: rgba(255, 255, 255, 0.032);
   border: 1px solid rgba(255, 255, 255, 0.05);
   padding: 0.85rem 0.95rem;
   border-radius: var(--radius-md);
 }
-.intel-brief-text { font-size: 0.84rem; line-height: 1.62; color: var(--on-surface-muted); max-width: 60ch; }
+
+/* Briefs arrive as long prose. The card shows a consistent six-line window and
+   the full text lives behind Details, so no two tiles disagree about height. */
+.intel-brief-text {
+  font-size: 0.84rem;
+  line-height: 1.62;
+  color: var(--on-surface-muted);
+  max-width: 60ch;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+  line-clamp: 6;
+  overflow: hidden;
+  text-wrap: pretty;
+}
+.intel-brief::after {
+  content: "";
+  position: absolute;
+  inset: auto 1px 1px 1px;
+  height: 2.5rem;
+  border-radius: 0 0 calc(var(--radius-md) - 1px) calc(var(--radius-md) - 1px);
+  background: linear-gradient(180deg, rgba(14, 15, 16, 0), rgba(14, 15, 16, 0.94));
+  pointer-events: none;
+}
+.intel-card-footer { margin-top: auto; }
 .intel-card-footer { margin-top: auto; display: flex; justify-content: space-between; align-items: center; gap: 0.75rem; flex-wrap: wrap; }
 
 .supa-badge {
@@ -984,7 +1016,7 @@ a.supa-badge:hover { color: var(--on-surface); border-color: var(--hairline-stro
 
 .stock-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(272px, 1fr)); gap: 1rem; }
 .stock-grid > .state-block { grid-column: 1 / -1; border: 1px dashed var(--hairline-strong); border-radius: var(--radius-lg); }
-.stock-card { padding: 1.2rem 1.25rem; }
+.stock-card { padding: 1.2rem 1.25rem; height: 100%; }
 .card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 0.75rem; margin-bottom: 0.85rem; }
 .stock-card .ticker { font-size: 1.2rem; }
 .stock-card .price { font-size: 1.7rem; }
@@ -1590,13 +1622,17 @@ a.supa-badge:hover { color: var(--on-surface); border-color: var(--hairline-stro
   .sidebar.open { transform: translateX(0); }
   .sidebar-collapsed .sidebar { width: 272px; padding: 1.5rem 1rem; border-right-color: var(--hairline); }
 
-  .app-container:not(.sidebar-collapsed)::after {
-    content: "";
+  .sidebar-scrim {
+    display: block;
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.55);
+    border: 0;
+    padding: 0;
+    background: rgba(2, 3, 3, 0.62);
     backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
     z-index: 95;
+    cursor: pointer;
   }
 
   .sidebar-toggle-btn { display: flex; opacity: 1; pointer-events: auto; }
@@ -1686,6 +1722,45 @@ a.supa-badge:hover { color: var(--on-surface); border-color: var(--hairline-stro
   .overnight-section-heading { align-items: baseline; }
 
   .page-head { flex-direction: column; align-items: flex-start; }
+
+  /* ── Touch reach ──────────────────────────────────────────────
+     Every control clears 44px so it is hittable with a thumb, and no
+     field sits under 16px, which is what makes iOS zoom on focus. */
+  .nav-item { min-height: 46px; }
+  .apple-btn { min-height: 44px; }
+  .supa-badge { min-height: 40px; }
+  .sidebar-toggle-btn { top: 0.95rem; left: 0.95rem; padding: 0.8rem; }
+  .sidebar-close-btn { min-width: 44px; min-height: 44px; }
+  .sidebar-search-input { padding: 11px 12px 11px 36px; font-size: 16px; }
+  .details-btn { min-height: 38px; padding: 8px 14px; }
+  .report-card-header { min-height: 58px; padding: 0.15rem 0; }
+  .report-toggle { min-width: 40px; min-height: 40px; }
+  .sector-pill { min-height: 40px; }
+  .modal-close { min-width: 44px; min-height: 44px; }
+  input, select, textarea { font-size: 16px; }
+
+  /* Scrolling surfaces respect the notch and stay inside the viewport. */
+  .main-content { padding-bottom: calc(2.75rem + env(safe-area-inset-bottom)); }
+  .sidebar { padding-bottom: calc(1.5rem + env(safe-area-inset-bottom)); }
+  .modal-content {
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: calc(1.5rem + env(safe-area-inset-bottom));
+  }
+
+  /* Six lines is a desktop window; four keeps the hub single-column scannable. */
+  .intel-brief-text { -webkit-line-clamp: 4; line-clamp: 4; }
+  .intel-card { padding: 1.1rem; }
+  .stock-card { padding: 1.05rem; }
+  .timeline-card { padding: 0.85rem 0.9rem; }
+  .hero-stat-card { min-height: 92px; }
+}
+
+@media (hover: none) {
+  /* No pointer, no tilt: the shine and 3D plane only ever fire on hover. */
+  .glass-card.is-clickable.tilt-card:hover { transform: none; }
+  .tilt-card__shine { display: none; }
 }
 
 @media (max-width: 480px) {
