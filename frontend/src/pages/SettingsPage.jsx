@@ -65,7 +65,7 @@ export default function SettingsPage() {
           <h3 className="headline-sm" style={{ fontSize: '1.1rem', marginBottom: '1rem' }}>About</h3>
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem' }}>
             {[
-              ['App', 'Deep Tech — AI Stock Trading Bot'],
+              ['App', 'SamAlpha — AI Stock Trading Bot'],
               ['Frontend', 'React + Vite'],
               ['Backend', 'FastAPI + Python'],
               ['Data', 'Alpaca Markets API'],

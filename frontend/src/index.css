@@ -279,14 +279,12 @@ img, svg, canvas, video, pre { max-width: 100%; }
   margin: 0;
   white-space: nowrap;
 }
-.sidebar-logo::before {
-  content: "";
-  width: 9px;
-  height: 9px;
+.brand-mark {
+  width: 24px;
+  height: 24px;
   flex-shrink: 0;
-  border-radius: 3px;
-  background: var(--primary);
-  box-shadow: 0 0 0 3px rgba(63, 255, 139, 0.16);
+  display: block;
+  border-radius: 7px;
 }
 
 .sidebar-close-btn {

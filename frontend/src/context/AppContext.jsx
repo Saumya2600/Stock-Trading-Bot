@@ -15,7 +15,7 @@ export function AppProvider({ children }) {
   const [selectedStock, setSelectedStock] = useState(null);
   const [chartData, setChartData] = useState([]);
   const [loadingChart, setLoadingChart] = useState(false);
-  const [chartRange, setChartRange] = useState('1M');
+  const [chartRange, setChartRange] = useState('1W');
   const [rangePercentChange, setRangePercentChange] = useState(0);
 
   const [sectorFilter, setSectorFilter] = useState('All');
@@ -315,21 +315,26 @@ export function AppProvider({ children }) {
     setChartRange(range);
     const end = new Date();
     const start = new Date();
+    if (range === '1D') start.setDate(end.getDate() - 1);
     if (range === '1W') start.setDate(end.getDate() - 7);
     if (range === '1M') start.setDate(end.getDate() - 30);
     if (range === '6M') start.setMonth(end.getMonth() - 6);
     if (range === 'YTD') { start.setMonth(0); start.setDate(1); }
+    /* A week of daily bars is 5 candles; intraday bars make the move readable. */
+    const timeframe = range === '1D' ? '15Min' : range === '1W' ? '1Hour' : '1Day';
     try {
       const data = await alpacaRequest('bars', {
         symbols: stock.symbol,
-        timeframe: '1Day',
+        timeframe,
         feed: 'iex',
         start: start.toISOString(),
         end: end.toISOString(),
       });
       if (data.bars && data.bars[stock.symbol]) {
         const formattedData = data.bars[stock.symbol].map(bar => ({
-          name: new Date(bar.t).toLocaleDateString(undefined, { month: 'short', day: 'numeric' }),
+          name: range === '1D'
+            ? new Date(bar.t).toLocaleTimeString(undefined, { hour: 'numeric', minute: '2-digit' })
+            : new Date(bar.t).toLocaleDateString(undefined, { month: 'short', day: 'numeric' }),
           Price: bar.c
         }));
         setChartData(formattedData);
@@ -350,7 +355,7 @@ export function AppProvider({ children }) {
     const intelligence = researchReports[stock.symbol];
     const enrichedStock = intelligence ? { ...stock, ...intelligence } : stock;
     setSelectedStock(enrichedStock);
-    fetchChartDataForRange(enrichedStock, '1M');
+    fetchChartDataForRange(enrichedStock, '1W');
   };
 
   const closeModal = () => setSelectedStock(null);

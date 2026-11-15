@@ -70,7 +70,10 @@ function Sidebar({ isOpen, onClose }) {
   return (
     <nav className={`sidebar ${isOpen ? 'open' : ''}`} aria-label="Primary">
       <div className="sidebar-header">
-        <h1 className="sidebar-logo">Deep Tech</h1>
+        <h1 className="sidebar-logo">
+          <img className="brand-mark" src="/favicon.svg" alt="" width="24" height="24" />
+          SamAlpha
+        </h1>
         <button className="sidebar-close-btn" onClick={onClose} title="Collapse sidebar" aria-label="Collapse sidebar">
           <PanelLeftClose size={19} />
         </button>
@@ -208,11 +211,12 @@ function StockModal() {
 
   const isPositive = rangePercentChange >= 0;
   const tradingViewRange = {
+    '1D': '1D',
     '1W': '5D',
     '1M': '1M',
     '6M': '6M',
     YTD: 'YTD',
-  }[chartRange] || '1M';
+  }[chartRange] || '5D';
 
   const price = parseFloat(selectedStock.price || 0);
   const entry = parseFloat(selectedStock.entry_price || selectedStock.price || 0);
@@ -242,7 +246,7 @@ function StockModal() {
               {selectedStock.name && <span className="modal-company">{selectedStock.name}</span>}
             </div>
             <div className="modal-range-pills" role="group" aria-label="Chart range">
-              {['1W', '1M', '6M', 'YTD'].map(range => (
+              {['1D', '1W', '1M', '6M', 'YTD'].map(range => (
                 <button
                   key={range}
                   className={`range-pill ${chartRange === range ? 'active' : ''}`}
@@ -256,7 +260,11 @@ function StockModal() {
           </div>
           <div className="modal-price-block">
             <div className="modal-price">${price.toFixed(2)}</div>
-            <div className={`chip gain-indicator ${isPositive ? 'positive' : 'negative'}`}>
+            <div
+              className={`chip gain-indicator ${isPositive ? 'positive' : 'negative'}`}
+              title={`${chartRange} change`}
+            >
+              <span style={{ opacity: 0.65, marginRight: '0.35rem' }}>{chartRange}</span>
               {isPositive ? '+' : ''}{parseFloat(rangePercentChange || 0).toFixed(2)}%
             </div>
           </div>
@@ -264,6 +272,8 @@ function StockModal() {
 
         <div className="modal-chart">
           <Suspense fallback={<div className="chart-skeleton skeleton" aria-label="Loading chart" role="status" />}>
+            {/* The widget's own interval picker and bottom range bar duplicated the
+                pills above; one control set, one window. */}
             <AdvancedRealTimeChart
               theme="dark"
               symbol={selectedStock.symbol}
@@ -271,7 +281,11 @@ function StockModal() {
               width="100%"
               height="100%"
               allow_symbol_change={false}
+              hide_top_toolbar={true}
               hide_side_toolbar={true}
+              withdateranges={false}
+              save_image={false}
+              details={false}
               timezone="America/New_York"
               style="1"
             />

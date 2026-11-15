@@ -1,4 +1,4 @@
-# Deep Tech · Trading Intelligence
+# SamAlpha · Trading Intelligence
 
 An autonomous deep-research stock bot running against an Alpaca **paper** account, with a
 React dashboard that surfaces its reasoning, picks and portfolio state.
