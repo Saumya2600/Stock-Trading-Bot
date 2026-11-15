@@ -11,3 +11,13 @@ build/
 # app_state.json
 node_modules/
 .next/
+
+# Agent tooling (installed locally, not part of the project)
+.agents/
+.codex/
+.freebuff/
+.impeccable/
+.github/agents/
+.github/hooks/
+.github/skills/
+skills-lock.json
