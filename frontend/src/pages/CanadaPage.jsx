@@ -24,6 +24,45 @@ function Premium({ value }) {
   );
 }
 
+const STATE_LABEL = {
+  in_zone: 'In buy zone',
+  below_zone: 'Below zone',
+  stretched: 'Stretched',
+  wait: 'Wait for pullback',
+};
+
+function Levels({ row }) {
+  const levels = row.levels;
+  if (!levels) return null;
+
+  return (
+    <div className="cad-levels">
+      <div className={`cad-state is-${levels.tone}`}>
+        <span className="cad-state__label">{STATE_LABEL[levels.state] || levels.state}</span>
+        <span className="cad-state__detail">{levels.detail}</span>
+      </div>
+      <dl className="cad-level-grid">
+        <div>
+          <dt>Buy zone</dt>
+          <dd>${levels.zone_low} to ${levels.zone_high}</dd>
+        </div>
+        <div>
+          <dt>Stop</dt>
+          <dd>${levels.stop}</dd>
+        </div>
+        <div>
+          <dt>Target 1</dt>
+          <dd>${levels.target_one}</dd>
+        </div>
+        <div>
+          <dt>Reward / risk</dt>
+          <dd>{levels.reward_risk != null ? `${levels.reward_risk}:1` : '—'}</dd>
+        </div>
+      </dl>
+    </div>
+  );
+}
+
 function EquityCard({ row }) {
   return (
     <article className="glass-card cad-card">
@@ -52,6 +91,8 @@ function EquityCard({ row }) {
           <Change value={row.change_3mo} />
         </div>
       </div>
+
+      <Levels row={row} />
 
       <footer className="cad-card__foot">
         <span className="chip">View only</span>
@@ -123,6 +164,8 @@ function EtfCard({ row }) {
         </div>
       )}
 
+      <Levels row={row} />
+
       <footer className="cad-card__foot">
         <span className="chip">View only</span>
         <span className="cad-card__stamp">{row.as_of}</span>
@@ -137,35 +180,38 @@ export default function CanadaPage() {
   const [tab, setTab] = useState('equities');
 
   useEffect(() => {
-    let cancelled = false;
-
+    // The committed snapshot ships with the site, so it is tried first. A
+    // half-open backend port would otherwise hold the page on skeletons
+    // forever, which is exactly what an unreachable localhost:8001 does.
     const load = async () => {
       const stamp = Date.now();
-      const urls = API_BASE
-        ? [`${API_BASE}/canada.json?t=${stamp}`, `/canada.json?t=${stamp}`]
-        : [`/canada.json?t=${stamp}`];
+      const urls = [`/canada.json?t=${stamp}`];
+      if (API_BASE) urls.push(`${API_BASE}/canada.json?t=${stamp}`);
 
       for (const url of urls) {
+        const controller = new AbortController();
+        const timer = setTimeout(() => controller.abort(), 5000);
         try {
-          const response = await fetch(url);
+          const response = await fetch(url, { signal: controller.signal });
           if (!response.ok) continue;
           const data = await response.json();
           const hasRows = data && ((data.equities || []).length || (data.etfs || []).length);
-          if (!cancelled && hasRows) {
+          if (hasRows) {
             setSnapshot(data);
             setStatus('ready');
             return;
           }
         } catch {
           /* try the next source */
+        } finally {
+          clearTimeout(timer);
         }
       }
 
-      if (!cancelled) setStatus('empty');
+      setStatus('empty');
     };
 
     load();
-    return () => { cancelled = true; };
   }, []);
 
   const rows = snapshot ? (tab === 'equities' ? snapshot.equities || [] : snapshot.etfs || []) : [];

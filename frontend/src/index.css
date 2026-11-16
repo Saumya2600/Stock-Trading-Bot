@@ -1234,6 +1234,39 @@ a.supa-badge:hover { color: var(--on-surface); border-color: var(--hairline-stro
 .cad-disclaimer { margin-top: 1.5rem; font-size: 0.74rem; line-height: 1.6; color: var(--on-surface-faint); }
 .cad-skeleton { height: 210px; border-radius: 16px; }
 
+.cad-levels { display: flex; flex-direction: column; gap: 0.6rem; }
+.cad-state {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.55rem 0.7rem;
+  border-radius: 10px;
+  border: 1px solid var(--hairline);
+  background: rgba(255, 255, 255, 0.03);
+}
+.cad-state__label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+.cad-state__detail { font-size: 0.74rem; line-height: 1.45; color: var(--on-surface-variant); }
+.cad-state.is-positive { border-color: rgba(63, 255, 139, 0.28); background: rgba(63, 255, 139, 0.06); }
+.cad-state.is-positive .cad-state__label { color: var(--primary); }
+.cad-state.is-warning { border-color: rgba(255, 196, 87, 0.28); background: rgba(255, 196, 87, 0.06); }
+.cad-state.is-warning .cad-state__label { color: var(--warning); }
+.cad-state.is-negative { border-color: rgba(255, 113, 108, 0.26); background: rgba(255, 113, 108, 0.06); }
+.cad-state.is-negative .cad-state__label { color: var(--secondary); }
+.cad-level-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.55rem 0.9rem; margin: 0; }
+.cad-level-grid dt {
+  font-size: 0.64rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--on-surface-variant);
+}
+.cad-level-grid dd {
+  margin: 0.1rem 0 0;
+  font-size: 0.84rem;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
 .report-card { padding: 1.5rem 1.6rem; }
 .report-card-header {
   display: flex;

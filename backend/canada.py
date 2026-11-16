@@ -1,12 +1,16 @@
 """Canadian research snapshot — free data only, no model calls.
 
 Everything here comes from Yahoo Finance through yfinance: prices, NAV, yield,
-holdings. That matters because the Gemini free tier allows roughly twenty
-requests per day per project, and the US research cycle already spends most of
-it. Canadian coverage therefore costs zero tokens.
+holdings, and the technical levels used for buy zones. That matters because the
+Gemini free tier allows roughly twenty requests per day per project, and the US
+research cycle already spends most of it.
 
 Symbols carry their exchange suffix (.TO for TSX, .V for TSX Venture). A bare
 ticker is always the US listing, which is a different instrument.
+
+The levels are mechanical: a moving-average pullback zone, an ATR-sized stop,
+nearest resistance and an ATR projection. They are structure, not advice, and
+they say nothing about whether the business is worth owning.
 """
 
 import json
@@ -50,26 +54,123 @@ def _pct(current, previous):
         return None
 
 
+def _rsi(closes, length=14):
+    if len(closes) < length + 1:
+        return None
+    delta = closes.diff()
+    gain = delta.clip(lower=0).rolling(length).mean()
+    loss = (-delta.clip(upper=0)).rolling(length).mean()
+    last_loss = float(loss.iloc[-1])
+    if last_loss == 0:
+        return 100.0
+    rs = float(gain.iloc[-1]) / last_loss
+    return round(100 - (100 / (1 + rs)), 1)
+
+
+def _atr(frame, length=14):
+    try:
+        high = frame["High"]
+        low = frame["Low"]
+        close = frame["Close"]
+        previous_close = close.shift()
+        true_range = (high - low).to_frame("a")
+        true_range["b"] = (high - previous_close).abs()
+        true_range["c"] = (low - previous_close).abs()
+        tr = true_range.max(axis=1)
+        value = float(tr.rolling(length).mean().iloc[-1])
+        return round(value, 2) if value == value else None
+    except Exception:
+        return None
+
+
+def _levels(frame, price):
+    """Mechanical buy structure. Zones are entries, not predictions."""
+    try:
+        closes = frame["Close"].dropna()
+        highs = frame["High"].dropna()
+        lows = frame["Low"].dropna()
+    except Exception:
+        return None
+
+    if len(closes) < 30:
+        return None
+
+    sma20 = float(closes.rolling(20).mean().iloc[-1])
+    sma50 = float(closes.rolling(50).mean().iloc[-1]) if len(closes) >= 50 else None
+    atr = _atr(frame)
+    if not atr or atr <= 0:
+        return None
+
+    support = float(lows.tail(20).min())
+    resistance = float(highs.tail(20).max())
+    rsi = _rsi(closes)
+
+    zone_low = round(sma20 - 0.5 * atr, 2)
+    zone_high = round(sma20 + 0.3 * atr, 2)
+    stop = round(min(support - 0.25 * atr, zone_low - 0.75 * atr), 2)
+
+    target_one = round(resistance, 2)
+    if target_one <= price:
+        target_one = round(price + 2 * atr, 2)
+    target_two = round(price + 4 * atr, 2)
+
+    entry_mid = round((zone_low + zone_high) / 2, 2)
+    reward = target_one - entry_mid
+    risk = entry_mid - stop
+    reward_risk = round(reward / risk, 2) if risk > 0 else None
+
+    distance_atr = (price - sma20) / atr if atr else 0
+    if zone_low <= price <= zone_high:
+        state, tone = "in_zone", "positive"
+        detail = "Price is inside the pullback zone."
+    elif price < zone_low:
+        state, tone = "below_zone", "negative"
+        detail = "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
+    elif distance_atr >= 2:
+        state, tone = "stretched", "negative"
+        detail = f"Price sits {distance_atr:.1f} ATR above the 20-day average. Chasing here is late."
+    else:
+        state, tone = "wait", "warning"
+        detail = "Above the zone but not stretched. A pullback toward the 20-day is the better entry."
+
+    return {
+        "sma20": round(sma20, 2),
+        "sma50": round(sma50, 2) if sma50 else None,
+        "rsi14": rsi,
+        "atr14": atr,
+        "support": round(support, 2),
+        "resistance": round(resistance, 2),
+        "zone_low": zone_low,
+        "zone_high": zone_high,
+        "stop": stop,
+        "target_one": target_one,
+        "target_two": target_two,
+        "reward_risk": reward_risk,
+        "state": state,
+        "tone": tone,
+        "detail": detail,
+    }
+
+
 def _history_map():
     """One batched download for every symbol — a request per symbol invites 429s."""
     symbols = CANADIAN_EQUITIES + CANADIAN_ETFS
-    frames = yf.download(
+    return yf.download(
         tickers=" ".join(symbols),
-        period="3mo",
+        period="1y",
         interval="1d",
         group_by="ticker",
         progress=False,
         threads=True,
         auto_adjust=True,
     )
-    return frames
 
 
-def _series_for(frames, symbol):
+def _frame_for(frames, symbol):
     try:
         frame = frames[symbol] if hasattr(frames.columns, "levels") else frames
-        closes = frame["Close"].dropna()
-        return closes
+        frame = frame.dropna(subset=["Close"])
+        return frame if len(frame) else None
     except Exception:
         return None
 
@@ -77,8 +178,7 @@ def _series_for(frames, symbol):
 def _fund_details(symbol, with_fund_data):
     details = {"nav": None, "yield_pct": None, "name": None, "holdings": [], "mix": {}}
     try:
-        ticker = yf.Ticker(symbol)
-        info = ticker.info or {}
+        info = yf.Ticker(symbol).info or {}
         details["name"] = info.get("longName") or info.get("shortName")
         nav = info.get("navPrice")
         details["nav"] = round(float(nav), 2) if nav else None
@@ -113,14 +213,15 @@ def _fund_details(symbol, with_fund_data):
     return details
 
 
-def _row(symbol, closes, is_etf):
-    if closes is None or len(closes) < 2:
+def _row(symbol, frame, is_etf):
+    if frame is None or len(frame) < 2:
         return None
 
+    closes = frame["Close"].dropna()
     price = float(closes.iloc[-1])
     previous = float(closes.iloc[-2])
     month_ago = float(closes.iloc[-21]) if len(closes) >= 21 else float(closes.iloc[0])
-    quarter_ago = float(closes.iloc[0])
+    quarter_ago = float(closes.iloc[-63]) if len(closes) >= 63 else float(closes.iloc[0])
 
     row = {
         "symbol": symbol,
@@ -132,6 +233,7 @@ def _row(symbol, closes, is_etf):
         "change_3mo": _pct(price, quarter_ago),
         "as_of": str(closes.index[-1].date()),
         "tradable": False,
+        "levels": _levels(frame, price),
     }
 
     details = _fund_details(symbol, with_fund_data=is_etf)
@@ -153,24 +255,28 @@ def build_snapshot():
     etfs = []
 
     for symbol in CANADIAN_EQUITIES:
-        row = _row(symbol, _series_for(frames, symbol), is_etf=False)
+        row = _row(symbol, _frame_for(frames, symbol), is_etf=False)
         if row:
             equities.append(row)
 
     for symbol in CANADIAN_ETFS:
-        row = _row(symbol, _series_for(frames, symbol), is_etf=True)
+        row = _row(symbol, _frame_for(frames, symbol), is_etf=True)
         if row:
             etfs.append(row)
 
-    snapshot = {
+    return {
         "generated_at": datetime.now(timezone.utc).isoformat(),
         "source": "Yahoo Finance via yfinance",
         "currency": "CAD",
         "note": "Research only. Alpaca paper accounts cannot trade TSX or TSXV listings.",
+        "levels_note": (
+            "Buy zones are mechanical: 20-day average plus or minus a fraction of ATR, "
+            "stop under recent support, targets at resistance and an ATR projection. "
+            "Structure only, not a recommendation."
+        ),
         "equities": equities,
         "etfs": etfs,
     }
-    return snapshot
 
 
 def write_snapshot(snapshot):
