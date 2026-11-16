@@ -11,6 +11,13 @@ on:
     - cron: '7 13 * * 1-5'
     - cron: '19 21 * * 1-5'
   workflow_dispatch:
+    inputs:
+      # An external scheduler (cron-job.org) dispatches this same workflow, so a
+      # manual run stays guarded unless you explicitly ask for a full re-grade.
+      force:
+        description: 'Ignore the 3-hour "already ran" guard'
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -53,6 +60,7 @@ jobs:
           VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
           VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
           SEC_USER_AGENT: ${{ secrets.SEC_USER_AGENT }}
+          RESEARCH_FORCE: ${{ inputs.force }}
         timeout-minutes: 15
         run: |
           cd backend

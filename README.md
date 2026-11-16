@@ -86,6 +86,60 @@ deliberately tracked — do not add them to `.gitignore`.
 | `trade_bot.yml` | every 5 min, 13:00–21:00, Mon–Fri | Executes qualifying signals on the paper account |
 | `reset_paper_account.yml` | manual | Closes every position and resets tracked metrics |
 
+### External trigger (cron-job.org)
+
+GitHub's scheduler is unreliable: the same workflows have landed three to seven
+hours after their slot, and on 2026-11-16 they stopped firing entirely while
+Actions reported `degraded_performance`. cron-job.org dispatches the same
+workflows instead, so the run still commits state — unlike triggering Render,
+whose disk is ephemeral.
+
+One-time setup: create a **fine-grained personal access token** scoped to this
+repository with the single permission **Actions: Read and write**. Paste it into
+cron-job.org, never into this repo.
+
+Both jobs are `POST`, no body type needed beyond JSON:
+
+| Job | URL | Body |
+| --- | --- | --- |
+| Pre-market research | `https://api.github.com/repos/Saumya2600/Stock-Trading-Bot/actions/workflows/research_bot.yml/dispatches` | `{"ref":"main"}` |
+| Paper execution | `https://api.github.com/repos/Saumya2600/Stock-Trading-Bot/actions/workflows/trade_bot.yml/dispatches` | `{"ref":"main"}` |
+
+Headers on both:
+
+```
+Authorization: Bearer <fine-grained PAT>
+Accept: application/vnd.github+json
+X-GitHub-Api-Version: 2022-11-28
+Content-Type: application/json
+```
+
+Success is **204 No Content** — cron-job.org shows it as an empty 204, not 200.
+
+Schedules (set the account timezone to `America/Halifax`):
+
+- research: `08:30` and `17:30`, Monday–Friday
+- trades: every 15 minutes, `09:30`–`16:00`, Monday–Friday
+
+Replace the old `stock-trading-bot-bo95.onrender.com/scheduled/trigger_research`
+job rather than adding a second one. Both paths spend the same Gemini quota, and
+`run_research.py` only skips a duplicate within three hours — two sources firing
+the 8:30 slot at once would still grade the day twice.
+
+Verify a dispatch worked:
+
+```bash
+curl -s -o /dev/null -w '%{http_code}\n' -X POST \
+  -H "Authorization: Bearer $PAT" \
+  -H "Accept: application/vnd.github+json" \
+  https://api.github.com/repos/Saumya2600/Stock-Trading-Bot/actions/workflows/trade_bot.yml/dispatches \
+  -d '{"ref":"main"}'   # expect 204
+```
+
+Extra trade cycles are safe: Alpaca positions are the source of truth and
+`MAX_OPEN_POSITIONS` caps exposure, so a duplicate cycle finds the position
+already open instead of doubling it.
+
 ## Local setup
 
 ### Backend
