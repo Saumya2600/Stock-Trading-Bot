@@ -78,7 +78,7 @@ deliberately tracked — do not add them to `.gitignore`.
 ### Backend
 
 ```bash
-pip install -r requirements.txt      # root file — this is what CI installs
+pip install -r backend/requirements.txt   # what the workflows install
 # create .env with the variables below
 python backend/main.py               # serves on :8001
 ```

@@ -6,8 +6,10 @@ on:
     # right hours in both DST seasons:
     #   13:00 UTC = 09:00 ET (EDT) / 08:00 ET (EST) → pre-open both ways
     #   21:15 UTC = 17:15 ET (EDT) / 16:15 ET (EST) → after the close both ways
-    - cron: '0 13 * * 1-5'
-    - cron: '15 21 * * 1-5'
+    # Off the hour on purpose: GitHub's scheduler is most congested at :00 and
+    # can delay those runs by 15+ minutes.
+    - cron: '7 13 * * 1-5'
+    - cron: '19 21 * * 1-5'
   workflow_dispatch:
 
 permissions:

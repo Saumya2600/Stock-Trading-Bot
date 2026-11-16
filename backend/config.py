@@ -7,7 +7,9 @@ ALPACA_API_KEY = os.getenv('VITE_ALPACA_API_KEY')
 ALPACA_SECRET_KEY = os.getenv('VITE_ALPACA_SECRET_KEY')
 GOOGLE_API_KEY = os.getenv('GOOGLE_API_KEY')
 GOOGLE_API_KEY_FALLBACK = os.getenv('GOOGLE_API_KEY_FALLBACK')
-FMP_API_KEY = os.getenv('fmp')
+# Render sets `fmp`, GitHub Actions sets `FMP_API_KEY`. Reading only one name
+# silently left fundamentals empty inside the research workflow.
+FMP_API_KEY = os.getenv('FMP_API_KEY') or os.getenv('fmp')
 FINNHUB_KEY = os.getenv('FINNHUB_KEY')
 ALPACA_CREDS = {
     'API_KEY': ALPACA_API_KEY,
