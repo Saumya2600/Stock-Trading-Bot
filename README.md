@@ -50,6 +50,18 @@ The runtime is deliberately conservative about *when* and *how much* it buys:
 - **Stable benchmark.** `bot_start_value` and `spy_start_price` are only seeded when absent,
   so alpha is measured since inception rather than since the last restart.
 
+## Canadian coverage
+
+`backend/canada.py` builds `canada.json` from free Yahoo Finance data — TSX equities, TSX/TSXV
+ETFs, NAV, premium/discount to NAV, distribution yield, top holdings and asset mix. It runs in
+the research workflow and makes **no model calls**, so Canadian research costs nothing against
+the Gemini quota.
+
+Canadian listings are research-only by construction: the Alpaca paper account settles US
+listings, so the Canada page labels every row *View only* and the trader never sees those
+symbols. For tradable exposure, use the US cross-listing (`SHOP`, `RY`, `TD`, `CNQ`, `ENB`,
+`CP`).
+
 The JSON files at the repo root are written by the backend and re-committed by CI. They are
 the reason the dashboard has data to show when the Render service is asleep, so they are
 deliberately tracked — do not add them to `.gitignore`.
@@ -57,8 +69,9 @@ deliberately tracked — do not add them to `.gitignore`.
 ## How data reaches the dashboard
 
 1. A GitHub Actions job runs `backend/run_research.py` or `backend/run_trades.py`.
-2. The script writes `reports.json`, `app_state.json`, `longterm_picks.json` and
-   `overnight_analysis.json` in the repo root (and mirrors them into `frontend/public/`).
+2. The script writes `reports.json`, `app_state.json`, `longterm_picks.json`,
+   `overnight_analysis.json` and `canada.json` in the repo root (and mirrors them into
+   `frontend/public/`).
 3. The job commits and pushes those files.
 4. The dashboard fetches live endpoints from Render when `VITE_API_BASE_URL` is set
    (`/reports.json`, `/app_state.json`, `/longterm_picks`, `/trade_history`), and falls back

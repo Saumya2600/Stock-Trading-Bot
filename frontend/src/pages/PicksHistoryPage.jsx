@@ -55,7 +55,7 @@ function RiskChip({ level }) {
   );
 }
 
-export default function PicksHistoryPage() {
+export default function PicksHistoryPage({ embedded = false }) {
   const [picks, setPicks] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -87,10 +87,12 @@ export default function PicksHistoryPage() {
   return (
     <div className="page-enter" aria-busy={loading} style={{ display: 'flex', flexDirection: 'column', gap: '1.75rem' }}>
       <header className="hub-hero">
-        <div>
-          <h1 className="hub-title">Picks history</h1>
-          <p className="hub-subtitle">Every daily research pick, stored in Supabase</p>
-        </div>
+        {!embedded && (
+          <div>
+            <h1 className="hub-title">Picks history</h1>
+            <p className="hub-subtitle">Every daily research pick, stored in Supabase</p>
+          </div>
+        )}
         <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', flexWrap: 'wrap' }}>
           <div
             role="group"

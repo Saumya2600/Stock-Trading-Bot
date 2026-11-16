@@ -1,6 +1,6 @@
 import { lazy, Suspense, useEffect, useRef, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
-import { X, PanelLeftClose, PanelLeft, Search, LineChart as ChartIcon, Brain, FileText, Globe, Database, LogOut, Moon } from 'lucide-react';
+import { BrowserRouter as Router, Routes, Route, Link, Navigate, useLocation } from 'react-router-dom';
+import { X, PanelLeftClose, PanelLeft, Search, LineChart as ChartIcon, Brain, FileText, Globe, Flag, History, LogOut, Moon } from 'lucide-react';
 
 /* The chart widget is ~half the bundle and only ever appears in the modal. */
 const AdvancedRealTimeChart = lazy(() =>
@@ -10,9 +10,9 @@ const AdvancedRealTimeChart = lazy(() =>
 import { AppProvider, useApp } from './context/AppContext';
 import HubPage from './pages/HubPage';
 import MarketPage from './pages/MarketPage';
-import TradeHistoryPage from './pages/TradeHistoryPage';
+import HistoryPage from './pages/HistoryPage';
+import CanadaPage from './pages/CanadaPage';
 import SearchPage from './pages/SearchPage';
-import PicksHistoryPage from './pages/PicksHistoryPage';
 import OvernightPage from './pages/OvernightPage';
 import ExpandableReportCards from '@/components/ExpandableReportCards';
 import DashboardAuthGate from './components/DashboardAuthGate';
@@ -31,10 +31,10 @@ const NAV_ITEMS = [
   { to: '/', icon: <Brain {...ICON} />, label: 'Intelligence Hub' },
   { to: '/search', icon: <Search {...ICON} />, label: 'Search' },
   { to: '/reports', icon: <FileText {...ICON} />, label: 'Deep Research' },
-  { to: '/picks', icon: <Database {...ICON} />, label: 'Picks History' },
+  { to: '/canada', icon: <Flag {...ICON} />, label: 'Canada' },
   { to: '/overnight', icon: <Moon {...ICON} />, label: 'Overnight Earnings' },
   { to: '/market', icon: <Globe {...ICON} />, label: 'Market' },
-  { to: '/history', icon: <ChartIcon {...ICON} />, label: 'Trade History' },
+  { to: '/history', icon: <History {...ICON} />, label: 'History' },
 ];
 
 /* ── Sidebar ── */
@@ -380,10 +380,11 @@ function AppShell() {
           <Route path="/" element={<HubPage />} />
           <Route path="/search" element={<SearchPage />} />
           <Route path="/reports" element={<ReportsPage />} />
-          <Route path="/picks" element={<PicksHistoryPage />} />
+          <Route path="/canada" element={<CanadaPage />} />
+          <Route path="/picks" element={<Navigate to="/history?tab=picks" replace />} />
           <Route path="/overnight" element={<OvernightPage />} />
           <Route path="/market" element={<MarketPage />} />
-          <Route path="/history" element={<TradeHistoryPage />} />
+          <Route path="/history" element={<HistoryPage />} />
         </Routes>
         </PageTransition>
       </main>

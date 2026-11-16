@@ -60,6 +60,10 @@ jobs:
           python run_research.py
           echo "Running OVERNIGHT ANALYSIS..."
           python run_overnight.py
+          # Free Yahoo data, no model calls — keeps Canadian coverage off the
+          # Gemini quota entirely.
+          echo "Running CANADA SNAPSHOT..."
+          python run_canada.py || echo "Canada snapshot skipped"
 
       - name: Sync and Push Results
         run: |
@@ -74,6 +78,7 @@ jobs:
           cp backend/longterm_picks.json ./longterm_picks.json || true
           cp backend/longterm_picks.json frontend/public/longterm_picks.json || true
           cp overnight_analysis.json frontend/public/overnight_analysis.json || true
+          cp canada.json frontend/public/canada.json || true
 
           git add backend/*.json
           git add frontend/public/*.json

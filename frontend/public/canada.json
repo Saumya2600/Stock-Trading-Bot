@@ -1,0 +1,424 @@
+{
+  "generated_at": "2026-11-16T02:48:12.948462+00:00",
+  "source": "Yahoo Finance via yfinance",
+  "currency": "CAD",
+  "note": "Research only. Alpaca paper accounts cannot trade TSX or TSXV listings.",
+  "equities": [
+    {
+      "symbol": "SHOP.TO",
+      "ticker": "SHOP",
+      "exchange": "TSX",
+      "price": 209.74,
+      "change_1d": 0.16,
+      "change_1mo": -12.5,
+      "change_3mo": -5.08,
+      "as_of": "2026-11-13",
+      "tradable": false,
+      "name": "Shopify Inc."
+    },
+    {
+      "symbol": "RY.TO",
+      "ticker": "RY",
+      "exchange": "TSX",
+      "price": 288.37,
+      "change_1d": -0.35,
+      "change_1mo": 3.63,
+      "change_3mo": -3.09,
+      "as_of": "2026-11-13",
+      "tradable": false,
+      "name": "Royal Bank of Canada"
+    },
+    {
+      "symbol": "TD.TO",
+      "ticker": "TD",
+      "exchange": "TSX",
+      "price": 176.42,
+      "change_1d": -0.15,
+      "change_1mo": 3.62,
+      "change_3mo": 3.54,
+      "as_of": "2026-11-13",
+      "tradable": false,
+      "name": "The Toronto-Dominion Bank"
+    },
+    {
+      "symbol": "CNQ.TO",
+      "ticker": "CNQ",
+      "exchange": "TSX",
+      "price": 70.91,
+      "change_1d": 1.24,
+      "change_1mo": -6.82,
+      "change_3mo": 7.83,
+      "as_of": "2026-11-13",
+      "tradable": false,
+      "name": "Canadian Natural Resources Limited"
+    },
+    {
+      "symbol": "ENB.TO",
+      "ticker": "ENB",
+      "exchange": "TSX",
+      "price": 67.96,
+      "change_1d": 0.53,
+      "change_1mo": 1.32,
+      "change_3mo": -2.22,
+      "as_of": "2026-11-13",
+      "tradable": false,
+      "name": "Enbridge Inc."
+    },
+    {
+      "symbol": "CP.TO",
+      "ticker": "CP",
+      "exchange": "TSX",
+      "price": 134.18,
+      "change_1d": -0.42,
+      "change_1mo": 8.67,
+      "change_3mo": 2.82,
+      "as_of": "2026-11-13",
+      "tradable": false,
+      "name": "Canadian Pacific Kansas City Limited"
+    },
+    {
+      "symbol": "SU.TO",
+      "ticker": "SU",
+      "exchange": "TSX",
+      "price": 99.66,
+      "change_1d": 0.87,
+      "change_1mo": -9.61,
+      "change_3mo": 9.94,
+      "as_of": "2026-11-13",
+      "tradable": false,
+      "name": "Suncor Energy Inc."
+    },
+    {
+      "symbol": "MFC.TO",
+      "ticker": "MFC",
+      "exchange": "TSX",
+      "price": 62.89,
+      "change_1d": 0.38,
+      "change_1mo": 0.35,
+      "change_3mo": 3.57,
+      "as_of": "2026-11-13",
+      "tradable": false,
+      "name": "Manulife Financial Corporation"
+    }
+  ],
+  "etfs": [
+    {
+      "symbol": "XEQT.TO",
+      "ticker": "XEQT",
+      "exchange": "TSX",
+      "price": 45.52,
+      "change_1d": -0.13,
+      "change_1mo": 0.13,
+      "change_3mo": -1.61,
+      "as_of": "2026-11-13",
+      "tradable": false,
+      "name": "iShares Core Equity ETF Portfolio",
+      "nav": 45.51,
+      "premium_pct": 0.02,
+      "yield_pct": 1.61,
+      "holdings": [
+        {
+          "symbol": "XTOT.TO",
+          "name": "iShares Core S&P Total U.S. Stk Mktt ETF",
+          "weight_pct": 31.26
+        },
+        {
+          "symbol": "XIC.TO",
+          "name": "iShares Core S&P/TSX Cap Composite ETF",
+          "weight_pct": 25.72
+        },
+        {
+          "symbol": "XEF.TO",
+          "name": "iShares Core MSCI EAFE IMI ETF",
+          "weight_pct": 24.14
+        },
+        {
+          "symbol": "ITOT",
+          "name": "iShares Core S&P Total US Stock Mkt ETF",
+          "weight_pct": 14.32
+        },
+        {
+          "symbol": "XEC.TO",
+          "name": "iShares Core MSCI Emer Mkts IMI ETF",
+          "weight_pct": 4.48
+        }
+      ],
+      "mix": {
+        "stock": 99.5,
+        "cash": 0.5
+      }
+    },
+    {
+      "symbol": "VEQT.TO",
+      "ticker": "VEQT",
+      "exchange": "TSX",
+      "price": 61.95,
+      "change_1d": -0.16,
+      "change_1mo": 0.0,
+      "change_3mo": -1.7,
+      "as_of": "2026-11-13",
+      "tradable": false,
+      "name": "Vanguard All-Equity ETF Portfolio",
+      "nav": 61.98,
+      "premium_pct": -0.05,
+      "yield_pct": 1.25,
+      "holdings": [
+        {
+          "symbol": "VUN.TO",
+          "name": "Vanguard MStar US Total Market Index ETF",
+          "weight_pct": 45.52
+        },
+        {
+          "symbol": "VCN.TO",
+          "name": "Vanguard FTSE Canada All Cap ETF",
+          "weight_pct": 29.66
+        },
+        {
+          "symbol": "VIU.TO",
+          "name": "Vanguard FTSE Dev AC ex Nrth Amer ETF",
+          "weight_pct": 17.64
+        },
+        {
+          "symbol": "VEE.TO",
+          "name": "Vanguard FTSE Emerging Mkts All Cap ETF",
+          "weight_pct": 7.18
+        }
+      ],
+      "mix": {
+        "stock": 99.5,
+        "cash": 0.4
+      }
+    },
+    {
+      "symbol": "QQC.TO",
+      "ticker": "QQC",
+      "exchange": "TSX",
+      "price": 47.39,
+      "change_1d": -1.09,
+      "change_1mo": -3.36,
+      "change_3mo": -4.8,
+      "as_of": "2026-11-13",
+      "tradable": false,
+      "name": "CI Invesco NASDAQ 100 Index ETF CAD Units",
+      "nav": 47.39,
+      "premium_pct": -0.0,
+      "yield_pct": 0.32,
+      "holdings": [
+        {
+          "symbol": "QQQM",
+          "name": "Invesco NASDAQ 100 ETF",
+          "weight_pct": 99.34
+        }
+      ],
+      "mix": {
+        "stock": 99.2,
+        "cash": 0.8
+      }
+    },
+    {
+      "symbol": "ZWC.TO",
+      "ticker": "ZWC",
+      "exchange": "TSX",
+      "price": 22.98,
+      "change_1d": 0.22,
+      "change_1mo": 1.37,
+      "change_3mo": 1.29,
+      "as_of": "2026-11-13",
+      "tradable": false,
+      "name": "BMO CA High Dividend Covered Call ETF",
+      "nav": 22.97,
+      "premium_pct": 0.04,
+      "yield_pct": 5.96,
+      "holdings": [
+        {
+          "symbol": "RY",
+          "name": "Royal Bank of Canada",
+          "weight_pct": 7.67
+        },
+        {
+          "symbol": "TD",
+          "name": "The Toronto-Dominion Bank",
+          "weight_pct": 6.32
+        },
+        {
+          "symbol": "CNQ.TO",
+          "name": "Canadian Natural Resources Ltd",
+          "weight_pct": 5.71
+        },
+        {
+          "symbol": "BNS.TO",
+          "name": "Bank of Nova Scotia",
+          "weight_pct": 5.7
+        },
+        {
+          "symbol": "SU.TO",
+          "name": "Suncor Energy Inc",
+          "weight_pct": 5.46
+        },
+        {
+          "symbol": "CM.TO",
+          "name": "Canadian Imperial Bank of Commerce",
+          "weight_pct": 5.41
+        }
+      ],
+      "mix": {
+        "stock": 99.9,
+        "cash": 0.1
+      }
+    },
+    {
+      "symbol": "XEI.TO",
+      "ticker": "XEI",
+      "exchange": "TSX",
+      "price": 40.69,
+      "change_1d": 0.42,
+      "change_1mo": 1.09,
+      "change_3mo": 1.73,
+      "as_of": "2026-11-13",
+      "tradable": false,
+      "name": "iShares S&P/TSX Composite High Dividend Index ETF",
+      "nav": 40.67,
+      "premium_pct": 0.05,
+      "yield_pct": 3.36,
+      "holdings": [
+        {
+          "symbol": "SU.TO",
+          "name": "Suncor Energy Inc",
+          "weight_pct": 5.7
+        },
+        {
+          "symbol": "CNQ.TO",
+          "name": "Canadian Natural Resources Ltd",
+          "weight_pct": 5.4
+        },
+        {
+          "symbol": "TD",
+          "name": "The Toronto-Dominion Bank",
+          "weight_pct": 5.16
+        },
+        {
+          "symbol": "ENB.TO",
+          "name": "Enbridge Inc",
+          "weight_pct": 4.96
+        },
+        {
+          "symbol": "RY",
+          "name": "Royal Bank of Canada",
+          "weight_pct": 4.86
+        },
+        {
+          "symbol": "TRP.TO",
+          "name": "TC Energy Corp",
+          "weight_pct": 4.56
+        }
+      ],
+      "mix": {
+        "stock": 99.8,
+        "cash": 0.2
+      }
+    },
+    {
+      "symbol": "XGRO.TO",
+      "ticker": "XGRO",
+      "exchange": "TSX",
+      "price": 38.61,
+      "change_1d": -0.08,
+      "change_1mo": 0.16,
+      "change_3mo": -1.4,
+      "as_of": "2026-11-13",
+      "tradable": false,
+      "name": "iShares Core Growth ETF Portfolio",
+      "nav": 38.59,
+      "premium_pct": 0.05,
+      "yield_pct": 1.95,
+      "holdings": [
+        {
+          "symbol": "ITOT",
+          "name": "iShares Core S&P Total US Stock Mkt ETF",
+          "weight_pct": 36.44
+        },
+        {
+          "symbol": "XIC.TO",
+          "name": "iShares Core S&P/TSX Cap Composite ETF",
+          "weight_pct": 20.47
+        },
+        {
+          "symbol": "XEF.TO",
+          "name": "iShares Core MSCI EAFE IMI ETF",
+          "weight_pct": 19.7
+        },
+        {
+          "symbol": "XBB.TO",
+          "name": "iShares Core Canadian Universe Bond ETF",
+          "weight_pct": 12.71
+        },
+        {
+          "symbol": "XEC.TO",
+          "name": "iShares Core MSCI Emer Mkts IMI ETF",
+          "weight_pct": 3.56
+        },
+        {
+          "symbol": "XSH.TO",
+          "name": "iShares Core Canadian ST Corp Bd ETF",
+          "weight_pct": 2.99
+        }
+      ],
+      "mix": {
+        "stock": 79.8,
+        "bond": 19.4,
+        "cash": 0.7
+      }
+    },
+    {
+      "symbol": "ZSP.TO",
+      "ticker": "ZSP",
+      "exchange": "TSX",
+      "price": 118.18,
+      "change_1d": -0.33,
+      "change_1mo": -0.38,
+      "change_3mo": -0.49,
+      "as_of": "2026-11-13",
+      "tradable": false,
+      "name": "BMO S&P 500 Index ETF (CAD)",
+      "nav": 118.18,
+      "premium_pct": 0.0,
+      "yield_pct": 0.79,
+      "holdings": [
+        {
+          "symbol": "NVDA",
+          "name": "NVIDIA Corp",
+          "weight_pct": 8.06
+        },
+        {
+          "symbol": "AAPL",
+          "name": "Apple Inc",
+          "weight_pct": 7.53
+        },
+        {
+          "symbol": "MSFT",
+          "name": "Microsoft Corp",
+          "weight_pct": 5.96
+        },
+        {
+          "symbol": "AMZN",
+          "name": "Amazon.com Inc",
+          "weight_pct": 3.75
+        },
+        {
+          "symbol": "GOOGL",
+          "name": "Alphabet Inc Class A",
+          "weight_pct": 3.07
+        },
+        {
+          "symbol": "AVGO",
+          "name": "Broadcom Inc",
+          "weight_pct": 2.48
+        }
+      ],
+      "mix": {
+        "stock": 100.0,
+        "cash": 0.0
+      }
+    }
+  ]
+}

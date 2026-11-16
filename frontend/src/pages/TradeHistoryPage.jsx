@@ -4,7 +4,7 @@ import { useApp } from '../context/AppContext';
 import { formatAtlanticDate, formatAtlanticTime } from '../lib/dateTime';
 import Reveal from '../components/motion/Reveal';
 
-export default function TradeHistoryPage() {
+export default function TradeHistoryPage({ embedded = false }) {
   const { tradeHistory } = useApp();
   const [filter, setFilter] = useState('ALL');
 
@@ -16,12 +16,14 @@ export default function TradeHistoryPage() {
 
   return (
     <div className="page-enter">
-      <header className="page-head">
-        <div>
-          <h1 className="display-lg">Trade history</h1>
-          <p className="headline-sm" style={{ marginTop: '0.4rem' }}>Every buy and sell the bot has executed</p>
-        </div>
-      </header>
+      {!embedded && (
+        <header className="page-head">
+          <div>
+            <h1 className="display-lg">Trade history</h1>
+            <p className="headline-sm" style={{ marginTop: '0.4rem' }}>Every buy and sell the bot has executed</p>
+          </div>
+        </header>
+      )}
 
       <div className="stat-grid" style={{ marginBottom: '1.5rem' }}>
         <div className="glass-card stat-tile">
