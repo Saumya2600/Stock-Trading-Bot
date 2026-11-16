@@ -30,3 +30,5 @@ services:
         sync: false
       - key: TRADING_ENGINE
         value: actions
+      - key: RESEARCH_SCHEDULER
+        value: off

@@ -1,4 +1,7 @@
 import hmac
+import json
+import os
+import time
 from fastapi import FastAPI, Header, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 import threading
@@ -39,13 +42,50 @@ async def disable_api_cache(request, call_next):
 def health_check():
     return {"status": "online", "message": "Autonomous Alpha Trading Bot API"}
 
+# The GitHub workflow writes these files and commits them. This container is
+# never redeployed for a data commit, so its checkout (and its memory) drifts.
+# Reading the committed copy keeps the dashboard honest without a paid disk.
+_DATA_SOURCE = os.getenv(
+    "DATA_SOURCE_URL",
+    "https://raw.githubusercontent.com/Saumya2600/Stock-Trading-Bot/main",
+)
+_CACHE_TTL_SECONDS = 60
+_remote_cache = {}
+
+
+def _committed_json(filename):
+    cached = _remote_cache.get(filename)
+    now = time.time()
+    if cached and now - cached[0] < _CACHE_TTL_SECONDS:
+        return cached[1]
+    try:
+        response = requests.get(f"{_DATA_SOURCE.rstrip('/')}/{filename}", timeout=5)
+        if response.ok:
+            data = response.json()
+            _remote_cache[filename] = (now, data)
+            return data
+        print(f"[DATA] {filename}: HTTP {response.status_code} from data source")
+    except Exception as error:
+        print(f"[DATA] {filename}: {error}")
+
+    # Last resort: the copy in this checkout, which a redeploy keeps fresh.
+    try:
+        local = os.path.join(
+            os.path.dirname(os.path.dirname(os.path.abspath(__file__))), filename
+        )
+        with open(local, "r", encoding="utf-8") as handle:
+            return json.load(handle)
+    except Exception as error:
+        print(f"[DATA] {filename}: local read failed: {error}")
+    return None
+
+
 @api.get("/app_state.json")
 def get_app_state_json():
-    """Same shape as the committed app_state.json, but live.
-
-    Runtime trades used to exist only in this container and never reached the
-    dashboard, because the frontend had no route to ask for them.
-    """
+    """Same shape as the committed app_state.json, but live."""
+    committed = _committed_json("app_state.json")
+    if isinstance(committed, dict) and committed:
+        return committed
     return {
         "trade_history": state.trade_history,
         "portfolio_performance": state.portfolio_performance,
@@ -54,6 +94,9 @@ def get_app_state_json():
 
 @api.get("/reports.json")
 def get_reports_json():
+    committed = _committed_json("reports.json")
+    if isinstance(committed, dict) and committed:
+        return committed
     return state.research_reports
 
 

@@ -44,7 +44,13 @@ if __name__ == "__main__":
     state.load_overnight_analysis()
 
     # Render web service handles pre-market and close research scans.
-    threading.Thread(target=research_scheduler, daemon=True).start()
+    # The GitHub workflow is the canonical research runner: it commits what it
+    # finds, so both the trader and the dashboard see the same reports. Running
+    # this scheduler too means paying Gemini twice for one prescan.
+    if os.getenv("RESEARCH_SCHEDULER", "on").strip().lower() in ("off", "false", "0"):
+        print("[SCHEDULER] In-process research scheduler disabled; GitHub Actions runs it.")
+    else:
+        threading.Thread(target=research_scheduler, daemon=True).start()
     threading.Thread(target=overnight_scheduler, daemon=True).start()
 
     # Only one host may submit orders. Both Render and GitHub Actions can run a

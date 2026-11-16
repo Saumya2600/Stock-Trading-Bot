@@ -69,7 +69,7 @@ deliberately tracked — do not add them to `.gitignore`.
 
 | Workflow | Schedule (UTC) | Purpose |
 | --- | --- | --- |
-| `research_bot.yml` | 12:30 and 20:00, Mon–Fri | Full research cycle: candidates → filings → grading → picks |
+| `research_bot.yml` | 13:00 and 21:15 UTC, Mon–Fri | Full research cycle: candidates → filings → grading → picks |
 | `trade_bot.yml` | every 5 min, 13:00–21:00, Mon–Fri | Executes qualifying signals on the paper account |
 | `reset_paper_account.yml` | manual | Closes every position and resets tracked metrics |
 
@@ -86,6 +86,14 @@ python backend/main.py               # serves on :8001
 Environment: `VITE_ALPACA_API_KEY`, `VITE_ALPACA_SECRET_KEY`, `GOOGLE_API_KEY`,
 `GOOGLE_API_KEY_FALLBACK`, `fmp`, `FINNHUB_KEY`, `SEC_USER_AGENT`, `RESEARCH_TRIGGER_TOKEN`.
 The `VITE_` prefix on the Alpaca pair is historical — the backend reads the same names.
+
+Two switches decide who does the work, so neither job runs twice:
+
+| Variable | Default | Meaning |
+| --- | --- | --- |
+| `TRADING_ENGINE` | `actions` | `render` moves order execution into this process |
+| `RESEARCH_SCHEDULER` | `on` | `off` disables the in-process 8:30/16:00 scheduler (Render sets `off`) |
+| `DATA_SOURCE_URL` | this repo's `raw.githubusercontent.com` root | where `/reports.json` and `/app_state.json` read committed state from |
 
 ### Frontend
 
