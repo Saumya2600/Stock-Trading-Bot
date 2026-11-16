@@ -1,359 +1,6 @@
 {
     "events": [
         {
-            "symbol": "ARMK",
-            "earnings_date": "2026-11-16",
-            "session": "BMO",
-            "eps_estimate": 0.7693,
-            "eps_actual": 0.78,
-            "eps_surprise_pct": 1.39,
-            "revenue_estimate": 5407671035.0,
-            "revenue_actual": 5293210000.0,
-            "revenue_surprise_pct": -2.12,
-            "finnhub_surprise_pct": null,
-            "name": "Aramark",
-            "market_cap_millions": 14219.934428144768,
-            "market_cap_category": "Large Cap",
-            "status": "released",
-            "detected_at": "2026-11-16T16:09:02.060821+00:00",
-            "sec_filing": {
-                "status": "found",
-                "form": "8-K",
-                "filed_at": "2026-11-16",
-                "accession": "0001584509-26-000152",
-                "url": "https://www.sec.gov/Archives/edgar/data/1584509/000158450926000152/cik0-20261116.htm"
-            },
-            "news": [
-                {
-                    "headline": "Aramark (NYSE:ARMK) Slides Premarket as Mixed Q4 Revenue Miss and Conservative Outlook Weigh on Shares",
-                    "source": "ChartMill",
-                    "url": "https://finnhub.io/api/news?id=9dd62494b99ae89b561111b0da2c89f7b086ad22de742df8754978aa1fe49c7d",
-                    "published_at": 1794831669
-                },
-                {
-                    "headline": "Aramark: Fiscal Q4 Earnings Snapshot",
-                    "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=b4ba044a15f5809dc95ebc4de8b4adfee52f5552dc9df5175118f6ae8e53b558",
-                    "published_at": 1794829902
-                },
-                {
-                    "headline": "Aramark (ARMK) Q4 Earnings and Revenues Beat Estimates",
-                    "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=affe2ca62d867ab1fae24f5b2dead4cb0778b048d52fd669e7bf16bb96df0051",
-                    "published_at": 1794829501
-                },
-                {
-                    "headline": "Aramark Reports Earnings Results for Fiscal 2026",
-                    "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=cd29802b24c710b7023c892f231bc134e3f1cb0feb76a2e66e99fcda440cc77b",
-                    "published_at": 1794828600
-                },
-                {
-                    "headline": "Aramark Hikes Dividend, Unveils $1 Billion Stock Buyback",
-                    "source": "Benzinga",
-                    "url": "https://finnhub.io/api/news?id=b9bc87b852e227448e253c8555c13566a6496cdcf13a950ff7744f3d0bf76f40",
-                    "published_at": 1794824863
-                }
-            ],
-            "guidance_direction": "UNKNOWN",
-            "after_hours_price": 54.19,
-            "regular_close_price": 54.19,
-            "after_hours_change_pct": 0.0,
-            "volume": 155595.0,
-            "volume_ratio": 0.78,
-            "quote_timestamp": "2026-11-16T16:08:36.568373982Z",
-            "score": 49,
-            "signal": "MIXED",
-            "summary": "EPS surprise +1.4%; revenue surprise -2.1%; extended move +0.0%"
-        },
-        {
-            "symbol": "BIDU",
-            "earnings_date": "2026-11-16",
-            "session": "BMO",
-            "eps_estimate": 6.8564,
-            "eps_actual": 6.733771,
-            "eps_surprise_pct": -1.79,
-            "revenue_estimate": 31475280972.0,
-            "revenue_actual": 30635324499.0,
-            "revenue_surprise_pct": -2.67,
-            "finnhub_surprise_pct": null,
-            "name": "Baidu, Inc.",
-            "market_cap_millions": 25935.580196851086,
-            "market_cap_category": "Large Cap",
-            "status": "released",
-            "detected_at": "2026-11-16T16:09:02.480695+00:00",
-            "sec_filing": {
-                "status": "not_found",
-                "url": null
-            },
-            "news": [
-                {
-                    "headline": "Baidu (NASDAQ:BIDU) Shares Slide After Q3 Revenue Miss Despite In-Line EPS",
-                    "source": "ChartMill",
-                    "url": "https://finnhub.io/api/news?id=b7941e4d5dca332642919a3c20ea6209bbc19b13c874c5c482819b7873425b53",
-                    "published_at": 1794831718
-                },
-                {
-                    "headline": "Stock Market Today: Dow Jones, S&P 500, Nasdaq 100 Futures Trade Fall as Scott Bessent Presses Nvidia Over China Chips \u2014 BIDU, RKLB, MSTR in Focus (UPDATED)",
-                    "source": "Benzinga",
-                    "url": "https://finnhub.io/api/news?id=b9ea5a6be58bd55efc3d94d4fb9d72d32c900094d9dfdaef732a3e08563015dd",
-                    "published_at": 1794821157
-                },
-                {
-                    "headline": "Baidu CEO Robin Li Says In Earnings Conference Call The Company Aims To Accelerate Pace Of Model Iteration, Looks Forward To Sharing More Progress Soon",
-                    "source": "Benzinga",
-                    "url": "https://finnhub.io/api/news?id=25f5063e92bab3768a682e90212fb27333d68010e881b80c52c98ecb053abe5b",
-                    "published_at": 1794820280
-                },
-                {
-                    "headline": "Baidu Q3 Adj. EPS $1.01 Beats $0.71 Estimate, Sales $4.595B Miss $4.610B Estimate",
-                    "source": "Benzinga",
-                    "url": "https://finnhub.io/api/news?id=2037a4b61a04e9dc709c85f45bcce23048202de4e25ce7ca8ac8f5646b31b159",
-                    "published_at": 1794805523
-                },
-                {
-                    "headline": "Nasdaq Falls Over 200 Points but Still Posts Weekly Gain; Investor Sentiment Weakens as Fear & Greed Index Remains in 'Fear' Zone",
-                    "source": "Benzinga",
-                    "url": "https://finnhub.io/api/news?id=3bd9b9abe6982d44c25d79bb12345a28b489a741008a7efdf90903f909568f53",
-                    "published_at": 1794791929
-                }
-            ],
-            "guidance_direction": "UNKNOWN",
-            "after_hours_price": 75.4,
-            "regular_close_price": 75.4,
-            "after_hours_change_pct": 0.0,
-            "volume": 36615.0,
-            "volume_ratio": 0.38,
-            "quote_timestamp": "2026-11-16T16:08:49.838459245Z",
-            "score": 41,
-            "signal": "MIXED",
-            "summary": "EPS surprise -1.8%; revenue surprise -2.7%; extended move +0.0%"
-        },
-        {
-            "symbol": "ACM",
-            "earnings_date": "2026-11-16",
-            "session": "AMC",
-            "eps_estimate": 1.5938,
-            "eps_actual": null,
-            "eps_surprise_pct": null,
-            "revenue_estimate": 1944146576.0,
-            "revenue_actual": null,
-            "revenue_surprise_pct": null,
-            "finnhub_surprise_pct": null,
-            "name": "AECOM",
-            "market_cap_millions": 9073.098139730422,
-            "market_cap_category": "Mid Cap",
-            "status": "upcoming",
-            "detected_at": "2026-11-16T16:09:02.480925+00:00",
-            "sec_filing": {
-                "status": "not_checked",
-                "url": null
-            },
-            "news": [],
-            "guidance_direction": "UNKNOWN",
-            "after_hours_price": null,
-            "regular_close_price": null,
-            "after_hours_change_pct": null,
-            "volume": null,
-            "volume_ratio": null,
-            "quote_timestamp": null,
-            "score": null,
-            "signal": "SCHEDULED",
-            "summary": "Upcoming earnings; no released results yet."
-        },
-        {
-            "symbol": "BZ",
-            "earnings_date": "2026-11-16",
-            "session": "BMO",
-            "eps_estimate": 2.3352,
-            "eps_actual": null,
-            "eps_surprise_pct": null,
-            "revenue_estimate": 2543431427.0,
-            "revenue_actual": null,
-            "revenue_surprise_pct": null,
-            "finnhub_surprise_pct": null,
-            "name": "KANZHUN LIMITED",
-            "market_cap_millions": 7823.6735244703095,
-            "market_cap_category": "Mid Cap",
-            "status": "upcoming",
-            "detected_at": "2026-11-16T16:09:02.480930+00:00",
-            "sec_filing": {
-                "status": "not_checked",
-                "url": null
-            },
-            "news": [],
-            "guidance_direction": "UNKNOWN",
-            "after_hours_price": null,
-            "regular_close_price": null,
-            "after_hours_change_pct": null,
-            "volume": null,
-            "volume_ratio": null,
-            "quote_timestamp": null,
-            "score": null,
-            "signal": "SCHEDULED",
-            "summary": "Upcoming earnings; no released results yet."
-        },
-        {
-            "symbol": "QXO",
-            "earnings_date": "2026-11-17",
-            "session": "UNKNOWN",
-            "eps_estimate": 0.1337,
-            "eps_actual": null,
-            "eps_surprise_pct": null,
-            "revenue_estimate": 4909753490.0,
-            "revenue_actual": null,
-            "revenue_surprise_pct": null,
-            "finnhub_surprise_pct": null,
-            "name": "QXO, Inc.",
-            "market_cap_millions": 13072.38353409836,
-            "market_cap_category": "Large Cap",
-            "status": "upcoming",
-            "detected_at": "2026-11-16T16:09:02.480900+00:00",
-            "sec_filing": {
-                "status": "not_checked",
-                "url": null
-            },
-            "news": [],
-            "guidance_direction": "UNKNOWN",
-            "after_hours_price": null,
-            "regular_close_price": null,
-            "after_hours_change_pct": null,
-            "volume": null,
-            "volume_ratio": null,
-            "quote_timestamp": null,
-            "score": null,
-            "signal": "SCHEDULED",
-            "summary": "Upcoming earnings; no released results yet."
-        },
-        {
-            "symbol": "SR",
-            "earnings_date": "2026-11-17",
-            "session": "BMO",
-            "eps_estimate": -1.0661,
-            "eps_actual": null,
-            "eps_surprise_pct": null,
-            "revenue_estimate": 282901860.0,
-            "revenue_actual": null,
-            "revenue_surprise_pct": null,
-            "finnhub_surprise_pct": null,
-            "name": "Spire Inc",
-            "market_cap_millions": 5251.9359949258005,
-            "market_cap_category": "Mid Cap",
-            "status": "upcoming",
-            "detected_at": "2026-11-16T16:09:02.480905+00:00",
-            "sec_filing": {
-                "status": "not_checked",
-                "url": null
-            },
-            "news": [],
-            "guidance_direction": "UNKNOWN",
-            "after_hours_price": null,
-            "regular_close_price": null,
-            "after_hours_change_pct": null,
-            "volume": null,
-            "volume_ratio": null,
-            "quote_timestamp": null,
-            "score": null,
-            "signal": "SCHEDULED",
-            "summary": "Upcoming earnings; no released results yet."
-        },
-        {
-            "symbol": "TME",
-            "earnings_date": "2026-11-17",
-            "session": "BMO",
-            "eps_estimate": 1.5022,
-            "eps_actual": null,
-            "eps_surprise_pct": null,
-            "revenue_estimate": 9231371518.0,
-            "revenue_actual": null,
-            "revenue_surprise_pct": null,
-            "finnhub_surprise_pct": null,
-            "name": "Tencent Music Entertainment Group",
-            "market_cap_millions": 13350.04381534536,
-            "market_cap_category": "Large Cap",
-            "status": "upcoming",
-            "detected_at": "2026-11-16T16:09:02.480910+00:00",
-            "sec_filing": {
-                "status": "not_checked",
-                "url": null
-            },
-            "news": [],
-            "guidance_direction": "UNKNOWN",
-            "after_hours_price": null,
-            "regular_close_price": null,
-            "after_hours_change_pct": null,
-            "volume": null,
-            "volume_ratio": null,
-            "quote_timestamp": null,
-            "score": null,
-            "signal": "SCHEDULED",
-            "summary": "Upcoming earnings; no released results yet."
-        },
-        {
-            "symbol": "VIK",
-            "earnings_date": "2026-11-17",
-            "session": "BMO",
-            "eps_estimate": 1.2842,
-            "eps_actual": null,
-            "eps_surprise_pct": null,
-            "revenue_estimate": 2232163438.0,
-            "revenue_actual": null,
-            "revenue_surprise_pct": null,
-            "finnhub_surprise_pct": null,
-            "name": "Viking Holdings Ltd",
-            "market_cap_millions": 39067.43,
-            "market_cap_category": "Large Cap",
-            "status": "upcoming",
-            "detected_at": "2026-11-16T16:09:02.480915+00:00",
-            "sec_filing": {
-                "status": "not_checked",
-                "url": null
-            },
-            "news": [],
-            "guidance_direction": "UNKNOWN",
-            "after_hours_price": null,
-            "regular_close_price": null,
-            "after_hours_change_pct": null,
-            "volume": null,
-            "volume_ratio": null,
-            "quote_timestamp": null,
-            "score": null,
-            "signal": "SCHEDULED",
-            "summary": "Upcoming earnings; no released results yet."
-        },
-        {
-            "symbol": "WSM",
-            "earnings_date": "2026-11-17",
-            "session": "BMO",
-            "eps_estimate": 2.2008,
-            "eps_actual": null,
-            "eps_surprise_pct": null,
-            "revenue_estimate": 2017797190.0,
-            "revenue_actual": null,
-            "revenue_surprise_pct": null,
-            "finnhub_surprise_pct": null,
-            "name": "Williams-Sonoma Inc",
-            "market_cap_millions": 29765.15,
-            "market_cap_category": "Large Cap",
-            "status": "upcoming",
-            "detected_at": "2026-11-16T16:09:02.480920+00:00",
-            "sec_filing": {
-                "status": "not_checked",
-                "url": null
-            },
-            "news": [],
-            "guidance_direction": "UNKNOWN",
-            "after_hours_price": null,
-            "regular_close_price": null,
-            "after_hours_change_pct": null,
-            "volume": null,
-            "volume_ratio": null,
-            "quote_timestamp": null,
-            "score": null,
-            "signal": "SCHEDULED",
-            "summary": "Upcoming earnings; no released results yet."
-        },
-        {
             "symbol": "BABA",
             "earnings_date": "2026-11-19",
             "session": "BMO",
@@ -368,7 +15,7 @@
             "market_cap_millions": 237886.83329604036,
             "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-16T16:09:02.480890+00:00",
+            "detected_at": "2026-11-16T16:25:04.404011+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -400,7 +47,7 @@
             "market_cap_millions": 2245.9419696313157,
             "market_cap_category": "Mid Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-16T16:09:02.480895+00:00",
+            "detected_at": "2026-11-16T16:25:04.404017+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -432,7 +79,7 @@
             "market_cap_millions": 13937.563351165585,
             "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-16T16:09:02.480875+00:00",
+            "detected_at": "2026-11-16T16:25:04.403994+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -464,7 +111,7 @@
             "market_cap_millions": 26978.84516214152,
             "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-16T16:09:02.480881+00:00",
+            "detected_at": "2026-11-16T16:25:04.404000+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -496,7 +143,7 @@
             "market_cap_millions": 10758.7318,
             "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-16T16:09:02.480885+00:00",
+            "detected_at": "2026-11-16T16:25:04.404005+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -528,7 +175,7 @@
             "market_cap_millions": 49044.3382328536,
             "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-16T16:09:02.480786+00:00",
+            "detected_at": "2026-11-16T16:25:04.403872+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -560,7 +207,7 @@
             "market_cap_millions": 5366.9155781060945,
             "market_cap_category": "Mid Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-16T16:09:02.480799+00:00",
+            "detected_at": "2026-11-16T16:25:04.403897+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -592,7 +239,7 @@
             "market_cap_millions": 6317.630662383414,
             "market_cap_category": "Mid Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-16T16:09:02.480805+00:00",
+            "detected_at": "2026-11-16T16:25:04.403905+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -624,7 +271,7 @@
             "market_cap_millions": 15255.29844509763,
             "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-16T16:09:02.480811+00:00",
+            "detected_at": "2026-11-16T16:25:04.403911+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -656,7 +303,7 @@
             "market_cap_millions": 2732.7191467949137,
             "market_cap_category": "Mid Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-16T16:09:02.480817+00:00",
+            "detected_at": "2026-11-16T16:25:04.403918+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -688,7 +335,7 @@
             "market_cap_millions": 13312.360091315391,
             "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-16T16:09:02.480829+00:00",
+            "detected_at": "2026-11-16T16:25:04.403933+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -720,7 +367,7 @@
             "market_cap_millions": 64103.271215006585,
             "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-16T16:09:02.480839+00:00",
+            "detected_at": "2026-11-16T16:25:04.403940+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -752,7 +399,7 @@
             "market_cap_millions": 18519.019919483646,
             "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-16T16:09:02.480845+00:00",
+            "detected_at": "2026-11-16T16:25:04.403952+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -784,7 +431,7 @@
             "market_cap_millions": 2721.0346069787233,
             "market_cap_category": "Mid Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-16T16:09:02.480850+00:00",
+            "detected_at": "2026-11-16T16:25:04.403964+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -816,7 +463,7 @@
             "market_cap_millions": 10694.183307348794,
             "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-16T16:09:02.480855+00:00",
+            "detected_at": "2026-11-16T16:25:04.403971+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -848,7 +495,7 @@
             "market_cap_millions": 21065.183999999997,
             "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-16T16:09:02.480860+00:00",
+            "detected_at": "2026-11-16T16:25:04.403977+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -880,7 +527,7 @@
             "market_cap_millions": 7771.091555999999,
             "market_cap_category": "Mid Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-16T16:09:02.480866+00:00",
+            "detected_at": "2026-11-16T16:25:04.403983+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -912,7 +559,7 @@
             "market_cap_millions": 27865.34,
             "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-16T16:09:02.480870+00:00",
+            "detected_at": "2026-11-16T16:25:04.403989+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -931,8 +578,8 @@
         }
     ],
     "status": "complete",
-    "last_refresh": "2026-11-16T16:09:02.480942+00:00",
-    "last_attempt": "2026-11-16T16:07:25.431735+00:00",
+    "last_refresh": "2026-11-16T16:25:04.404026+00:00",
+    "last_attempt": "2026-11-16T16:24:08.997622+00:00",
     "error": null,
     "sources": {
         "finnhub": "earnings calendar and headlines",
@@ -942,7 +589,7 @@
     },
     "diagnostics": {
         "calendar_rows": 414,
-        "eligible_rows": 27,
-        "excluded_rows": 387
+        "eligible_rows": 18,
+        "excluded_rows": 396
     }
 }
