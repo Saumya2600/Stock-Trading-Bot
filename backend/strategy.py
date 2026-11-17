@@ -7,6 +7,9 @@ import state
 
 MAX_LONGTERM_PICK_AGE_DAYS = 14
 MAX_OPEN_POSITIONS = 5
+# Matches the research liquidity gate: a name under five dollars is a shell, and
+# a report written before the gate existed can still be sitting on disk.
+MIN_TRADE_PRICE = 5.0
 
 class DeepResearchBot(Strategy):
     def initialize(self, one_shot=False):
@@ -215,6 +218,11 @@ class DeepResearchBot(Strategy):
                 )
                 if last_price <= 0:
                     self.log_message(f"[SKIP] {symbol}: price=0")
+                    continue
+                if float(last_price) < MIN_TRADE_PRICE:
+                    self.log_message(
+                        f"[SKIP] {symbol}: PENNY price=${float(last_price):.2f} < ${MIN_TRADE_PRICE:.2f} floor"
+                    )
                     continue
 
                 signal_data = state.latest_signals.get(symbol, {})
