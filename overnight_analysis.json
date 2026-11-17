@@ -1,6 +1,174 @@
 {
     "events": [
         {
+            "symbol": "PAGS",
+            "earnings_date": "2026-11-16",
+            "session": "AMC",
+            "eps_estimate": 2.1419,
+            "eps_actual": 2.4870769999999998,
+            "eps_surprise_pct": 16.12,
+            "revenue_estimate": 5297158350.0,
+            "revenue_actual": 5725829644.0,
+            "revenue_surprise_pct": 8.09,
+            "finnhub_surprise_pct": null,
+            "name": "PagSeguro Digital Ltd",
+            "market_cap_millions": 2217.3589630000006,
+            "market_cap_category": "Mid Cap",
+            "status": "released",
+            "detected_at": "2026-11-17T21:51:00.353069+00:00",
+            "sec_filing": {
+                "status": "not_found",
+                "url": null
+            },
+            "news": [
+                {
+                    "headline": "PagBank Maintains Consistent Performance in 3Q26, with Net Income of R$ 611 Million",
+                    "source": "Yahoo",
+                    "url": "https://finnhub.io/api/news?id=056af0bab748e8885b3e5df4be5074b499a25363e39367480722df82f0ef8570",
+                    "published_at": 1794913200
+                },
+                {
+                    "headline": "PagSeguro Digital Ltd. Reports Net Income of 583,822 Thousand Reais for the Three-Month Period Ended September 30, 2026",
+                    "source": "Fintel",
+                    "url": "https://finnhub.io/api/news?id=ed45bd59e56eeeadde869cf10478bd4995302294abc4a0a442af87f858f9f1ef",
+                    "published_at": 1794901116
+                },
+                {
+                    "headline": "PagSeguro Digital Ltd. Reports Third Quarter 2026 Results",
+                    "source": "Fintel",
+                    "url": "https://finnhub.io/api/news?id=643321c6726f1a60a2ed11e65b9bec91c834220896ef7ea2959321b009c744ae",
+                    "published_at": 1794899909
+                },
+                {
+                    "headline": "PagSeguro Digital Ltd. Announces Cash Dividend of US$0.26 Per Common Share",
+                    "source": "Fintel",
+                    "url": "https://finnhub.io/api/news?id=e01f88dea7259d1dbbcdc955acbc4f170b3b2be0aafb8ca59f00306e70276b3b",
+                    "published_at": 1794898105
+                },
+                {
+                    "headline": "What PagSeguro Digital (PAGS) Said on Its Q3 Earnings Call",
+                    "source": "Yahoo",
+                    "url": "https://finnhub.io/api/news?id=4122fc408b609026eef50fc690d2b9bffaf4d2030a91a1d3d187d5de2dd5f0bf",
+                    "published_at": 1794881665
+                }
+            ],
+            "guidance_direction": "UNKNOWN",
+            "after_hours_price": 7.845,
+            "regular_close_price": 7.845,
+            "after_hours_change_pct": 0.0,
+            "volume": 305031.0,
+            "volume_ratio": 1.0,
+            "quote_timestamp": "2026-11-17T20:59:59.968742792Z",
+            "score": 91,
+            "signal": "STRONG BULLISH",
+            "summary": "EPS surprise +16.1%; revenue surprise +8.1%; extended move +0.0%"
+        },
+        {
+            "symbol": "PDD",
+            "earnings_date": "2026-11-16",
+            "session": "BMO",
+            "eps_estimate": 19.213,
+            "eps_actual": null,
+            "eps_surprise_pct": null,
+            "revenue_estimate": 117133197205.0,
+            "revenue_actual": null,
+            "revenue_surprise_pct": null,
+            "finnhub_surprise_pct": null,
+            "name": "PDD Holdings Inc.",
+            "market_cap_millions": 111181.498516,
+            "market_cap_category": "Large Cap",
+            "status": "released",
+            "detected_at": "2026-11-17T21:51:00.556526+00:00",
+            "sec_filing": {
+                "status": "not_found",
+                "url": null
+            },
+            "news": [
+                {
+                    "headline": "Alibaba Q2 Earnings Preview: Why Should You Hold the Stock Now?",
+                    "source": "Yahoo",
+                    "url": "https://finnhub.io/api/news?id=926e32ba0759d6d3c3a12a12eb520151897531414dc043a1327403849802382a",
+                    "published_at": 1794923640
+                }
+            ],
+            "guidance_direction": "UNKNOWN",
+            "after_hours_price": 77.35,
+            "regular_close_price": 77.35,
+            "after_hours_change_pct": 0.0,
+            "volume": 123941.0,
+            "volume_ratio": 0.89,
+            "quote_timestamp": "2026-11-17T20:59:57.327324535Z",
+            "score": 50,
+            "signal": "MIXED",
+            "summary": "extended move +0.0%"
+        },
+        {
+            "symbol": "POWL",
+            "earnings_date": "2026-11-16",
+            "session": "AMC",
+            "eps_estimate": 1.5893,
+            "eps_actual": 2.23,
+            "eps_surprise_pct": 40.31,
+            "revenue_estimate": 341813046.0,
+            "revenue_actual": 396710000.0,
+            "revenue_surprise_pct": 16.06,
+            "finnhub_surprise_pct": null,
+            "name": "Powell Industries Inc",
+            "market_cap_millions": 5508.603532999999,
+            "market_cap_category": "Mid Cap",
+            "status": "released",
+            "detected_at": "2026-11-17T21:51:00.652080+00:00",
+            "sec_filing": {
+                "status": "found",
+                "form": "10-K",
+                "filed_at": "2026-11-17",
+                "accession": "0000080420-26-000143",
+                "url": "https://www.sec.gov/Archives/edgar/data/80420/000008042026000143/powl-20260930.htm"
+            },
+            "news": [
+                {
+                    "headline": "Powell Industries, Inc. (POWL) Q4 2026 Earnings Call Transcript",
+                    "source": "SeekingAlpha",
+                    "url": "https://finnhub.io/api/news?id=d074e66bbf3b1db0d021481a14a44511d2ce32a53749b50eea7d0e95a00fae38",
+                    "published_at": 1794931383
+                },
+                {
+                    "headline": "Powell Industries beats estimates on strong order growth",
+                    "source": "Yahoo",
+                    "url": "https://finnhub.io/api/news?id=9ddef676eae02a99e9fb57b5b1ea8afaf20d0ad31e923b71ec26611d0e2f9200",
+                    "published_at": 1794866716
+                },
+                {
+                    "headline": "Powell Industries: Fiscal Q4 Earnings Snapshot",
+                    "source": "Yahoo",
+                    "url": "https://finnhub.io/api/news?id=e0d8ce78f01c6bf6cc83c249d8d9ddef468ce172e52579d07816ddbd7d913cd7",
+                    "published_at": 1794866239
+                },
+                {
+                    "headline": "Powell Industries (POWL) Q4 Earnings and Revenues Top Estimates",
+                    "source": "Yahoo",
+                    "url": "https://finnhub.io/api/news?id=f21764d0828fcfa033580bcd337f8dd33f1e2b06e4fe514bd5dc6ea94c47641f",
+                    "published_at": 1794865802
+                },
+                {
+                    "headline": "Powell Industries Announces Fourth Quarter and Full Year Fiscal 2026 Results",
+                    "source": "Yahoo",
+                    "url": "https://finnhub.io/api/news?id=6aa71add0649fb87e0d66e3c4f960495553ab6866a2e4d44b30bce23660c0ef8",
+                    "published_at": 1794863100
+                }
+            ],
+            "guidance_direction": "UNKNOWN",
+            "after_hours_price": 150.845,
+            "regular_close_price": 150.845,
+            "after_hours_change_pct": 0.0,
+            "volume": 115282.0,
+            "volume_ratio": 1.32,
+            "quote_timestamp": "2026-11-17T20:59:55.521974889Z",
+            "score": 100,
+            "signal": "STRONG BULLISH",
+            "summary": "EPS surprise +40.3%; revenue surprise +16.1%; extended move +0.0%"
+        },
+        {
             "symbol": "A",
             "earnings_date": "2026-11-23",
             "session": "AMC",
@@ -12,10 +180,10 @@
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
             "name": "Agilent Technologies Inc",
-            "market_cap_millions": 48751.13568535501,
+            "market_cap_millions": 48751.13328699999,
             "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-17T12:36:20.168970+00:00",
+            "detected_at": "2026-11-17T21:51:00.652278+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -44,10 +212,10 @@
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
             "name": "Amentum Holdings, Inc.",
-            "market_cap_millions": 5249.552776755809,
+            "market_cap_millions": 5249.552427,
             "market_cap_category": "Mid Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-17T12:36:20.168975+00:00",
+            "detected_at": "2026-11-17T21:51:00.652283+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -76,10 +244,10 @@
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
             "name": "Abercrombie & Fitch Co.",
-            "market_cap_millions": 6185.659714179407,
+            "market_cap_millions": 6185.659692,
             "market_cap_category": "Mid Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-17T12:36:20.168980+00:00",
+            "detected_at": "2026-11-17T21:51:00.652289+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -108,10 +276,10 @@
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
             "name": "Burlington Stores, Inc.",
-            "market_cap_millions": 14771.62176194021,
+            "market_cap_millions": 14771.621954,
             "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-17T12:36:20.168996+00:00",
+            "detected_at": "2026-11-17T21:51:00.652294+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -140,10 +308,10 @@
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
             "name": "Danaos Corporation",
-            "market_cap_millions": 2687.574337780176,
+            "market_cap_millions": 2687.574414,
             "market_cap_category": "Mid Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-17T12:36:20.169001+00:00",
+            "detected_at": "2026-11-17T21:51:00.652299+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -172,10 +340,10 @@
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
             "name": "DICK'S Sporting Goods, Inc.",
-            "market_cap_millions": 13073.146079070539,
+            "market_cap_millions": 13073.145856999998,
             "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-17T12:36:20.169006+00:00",
+            "detected_at": "2026-11-17T21:51:00.652304+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -204,10 +372,10 @@
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
             "name": "Hewlett Packard Enterprise Company",
-            "market_cap_millions": 61820.03326043176,
+            "market_cap_millions": 61820.03168400001,
             "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-17T12:36:20.169012+00:00",
+            "detected_at": "2026-11-17T21:51:00.652310+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -236,10 +404,10 @@
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
             "name": "Jacobs Solutions Inc",
-            "market_cap_millions": 18705.1105236409,
+            "market_cap_millions": 18705.111885999995,
             "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-17T12:36:20.169017+00:00",
+            "detected_at": "2026-11-17T21:51:00.652316+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -268,10 +436,10 @@
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
             "name": "Analog Devices, Inc.",
-            "market_cap_millions": 185670.9479559794,
+            "market_cap_millions": 185670.95389299997,
             "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-17T12:36:20.168841+00:00",
+            "detected_at": "2026-11-17T21:51:00.652173+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -300,10 +468,10 @@
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
             "name": "Autodesk, Inc.",
-            "market_cap_millions": 55495.772817779216,
+            "market_cap_millions": 55495.769745,
             "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-17T12:36:20.168867+00:00",
+            "detected_at": "2026-11-17T21:51:00.652183+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -332,10 +500,10 @@
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
             "name": "Ambarella, Inc.",
-            "market_cap_millions": 2429.0776537914176,
+            "market_cap_millions": 2429.077643,
             "market_cap_category": "Mid Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-17T12:36:20.168875+00:00",
+            "detected_at": "2026-11-17T21:51:00.652190+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -364,10 +532,10 @@
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
             "name": "Best Buy Co., Inc.",
-            "market_cap_millions": 21675.35844546844,
+            "market_cap_millions": 21675.358188999995,
             "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-17T12:36:20.168881+00:00",
+            "detected_at": "2026-11-17T21:51:00.652197+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -396,10 +564,10 @@
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
             "name": "Bilibili Inc",
-            "market_cap_millions": 5369.194877659201,
+            "market_cap_millions": 5353.34583317439,
             "market_cap_category": "Mid Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-17T12:36:20.168887+00:00",
+            "detected_at": "2026-11-17T21:51:00.652210+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -428,10 +596,10 @@
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
             "name": "Dell Technologies Inc",
-            "market_cap_millions": 203809.7791826532,
+            "market_cap_millions": 203809.772143,
             "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-17T12:36:20.168896+00:00",
+            "detected_at": "2026-11-17T21:51:00.652220+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -460,10 +628,10 @@
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
             "name": "Dycom Industries Inc",
-            "market_cap_millions": 6496.368403997201,
+            "market_cap_millions": 6496.368582000001,
             "market_cap_category": "Mid Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-17T12:36:20.168903+00:00",
+            "detected_at": "2026-11-17T21:51:00.652227+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -492,10 +660,10 @@
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
             "name": "HP Inc",
-            "market_cap_millions": 25719.080300132155,
+            "market_cap_millions": 25719.080178,
             "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-17T12:36:20.168919+00:00",
+            "detected_at": "2026-11-17T21:51:00.652232+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -524,10 +692,10 @@
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
             "name": "Kingsoft Cloud Holdings Ltd",
-            "market_cap_millions": 2327.0835814646002,
+            "market_cap_millions": 2237.4046436268,
             "market_cap_category": "Mid Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-17T12:36:20.168932+00:00",
+            "detected_at": "2026-11-17T21:51:00.652238+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -556,10 +724,10 @@
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
             "name": "Medtronic PLC",
-            "market_cap_millions": 131601.00234358935,
+            "market_cap_millions": 131600.998049,
             "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-17T12:36:20.168939+00:00",
+            "detected_at": "2026-11-17T21:51:00.652244+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -588,10 +756,10 @@
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
             "name": "MiniMed Group Inc",
-            "market_cap_millions": 5247.1764083685375,
+            "market_cap_millions": 5247.176368000001,
             "market_cap_category": "Mid Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-17T12:36:20.168944+00:00",
+            "detected_at": "2026-11-17T21:51:00.652249+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -620,10 +788,10 @@
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
             "name": "Nutanix, Inc.",
-            "market_cap_millions": 16074.84023627592,
+            "market_cap_millions": 16074.839577,
             "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-17T12:36:20.168949+00:00",
+            "detected_at": "2026-11-17T21:51:00.652255+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -652,10 +820,10 @@
             "revenue_surprise_pct": null,
             "finnhub_surprise_pct": null,
             "name": "The J. M. Smucker Company",
-            "market_cap_millions": 14478.814239887859,
+            "market_cap_millions": 14478.813255999998,
             "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-17T12:36:20.168955+00:00",
+            "detected_at": "2026-11-17T21:51:00.652261+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -687,7 +855,7 @@
             "market_cap_millions": 47674.62,
             "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-17T12:36:20.168960+00:00",
+            "detected_at": "2026-11-17T21:51:00.652267+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -719,7 +887,7 @@
             "market_cap_millions": 7383.32,
             "market_cap_category": "Mid Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-17T12:36:20.168965+00:00",
+            "detected_at": "2026-11-17T21:51:00.652272+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -738,8 +906,8 @@
         }
     ],
     "status": "complete",
-    "last_refresh": "2026-11-17T12:36:20.169029+00:00",
-    "last_attempt": "2026-11-17T12:35:48.386757+00:00",
+    "last_refresh": "2026-11-17T21:51:00.652330+00:00",
+    "last_attempt": "2026-11-17T21:49:44.082589+00:00",
     "error": null,
     "sources": {
         "finnhub": "earnings calendar and headlines",
@@ -749,7 +917,7 @@
     },
     "diagnostics": {
         "calendar_rows": 520,
-        "eligible_rows": 23,
-        "excluded_rows": 497
+        "eligible_rows": 26,
+        "excluded_rows": 494
     }
 }
