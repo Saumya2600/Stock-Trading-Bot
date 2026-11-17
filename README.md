@@ -198,3 +198,27 @@ python tools/test.py                 # scratch script for the research pipeline
 
 Run them from the repository root — they resolve `backend/`, `.env` and the JSON state
 relative to it.
+
+## Trade execution dispatch (cron-job.org)
+
+GitHub's own `*/5` schedule drops most runs, so the paper trader gets the same
+external trigger the research job uses. Create a second cron-job.org job:
+
+| Field | Value |
+| --- | --- |
+| URL | `https://api.github.com/repos/Saumya2600/Stock-Trading-Bot/actions/workflows/trade_bot.yml/dispatches` |
+| Method | `POST` |
+| Schedule | every 10 minutes, `09:30`-`16:00`, timezone `America/Halifax` |
+| Header | `Authorization: Bearer <fine-grained PAT with Actions: Read and write>` |
+| Header | `Accept: application/vnd.github+json` |
+| Header | `X-GitHub-Api-Version: 2022-11-28` |
+| Header | `Content-Type: application/json` |
+| Body | `{"ref":"main"}` |
+
+Success is `204 No Content`. The literal word `Bearer ` must be part of the
+header value, followed by a single space and the token; without it GitHub
+answers `401 Unauthorized`. `run_trades.py` exits by itself outside market
+hours, so a fixed 09:30-16:00 window is safe on early-close days.
+
+Retire the old Render `/scheduled/trigger_research` job once this works: two
+research triggers on the same day means two Gemini cycles against a free quota.

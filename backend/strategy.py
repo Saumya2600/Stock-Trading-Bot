@@ -40,6 +40,30 @@ class DeepResearchBot(Strategy):
         state.save_app_state()
         self.log_message(f"[TRADE] Recorded. Total trades: {len(state.trade_history)}")
 
+    def _benchmark_price(self, symbol):
+        """SPY mark straight from Alpaca's data API.
+
+        Lumibot can hand back 0 for a symbol it never subscribed to, and a zero
+        SPY seed turns every alpha number on the dashboard into a fake 0.00%.
+        """
+        try:
+            import requests as _req
+            from config import ALPACA_API_KEY, ALPACA_SECRET_KEY
+            res = _req.get(
+                f"https://data.alpaca.markets/v2/stocks/{symbol}/snapshot",
+                headers={
+                    "Apca-Api-Key-Id": ALPACA_API_KEY,
+                    "Apca-Api-Secret-Key": ALPACA_SECRET_KEY,
+                },
+                timeout=5,
+            )
+            payload = res.json() if res.ok else {}
+            price = (payload.get("latestTrade") or {}).get("p") or (payload.get("dailyBar") or {}).get("c") or 0
+            return float(price or 0)
+        except Exception as e:
+            self.log_message(f"[BENCHMARK] {symbol} price lookup failed: {e}")
+            return 0.0
+
     def _trading_candidates(self):
         """Return research reports plus eligible long-term picks not in reports."""
         candidates = dict(state.research_reports)
@@ -103,29 +127,37 @@ class DeepResearchBot(Strategy):
                 return
 
         if not self.benchmark_initialized:
+            stored_value = float(state.portfolio_performance.get("bot_start_value") or 0)
+            stored_spy = float(state.portfolio_performance.get("spy_start_price") or 0)
             try:
-                # A restart must not reset "since inception": both engines load
-                # these from app_state, so only seed them when they are empty.
-                stored_value = float(state.portfolio_performance.get("bot_start_value") or 0)
-                stored_spy = float(state.portfolio_performance.get("spy_start_price") or 0)
-                if stored_value <= 0:
-                    state.portfolio_performance["bot_start_value"] = float(self.get_portfolio_value())
-                if stored_spy <= 0:
-                    state.portfolio_performance["spy_start_price"] = float(self.get_last_price("SPY"))
-                self.benchmark_initialized = True
-                seeded = stored_value <= 0 or stored_spy <= 0
-                if seeded:
-                    # Persist immediately, otherwise every restart re-seeds and
-                    # "since inception" silently becomes "since last boot".
-                    state.save_app_state()
-                self.log_message(
-                    f"[BENCHMARK] Value: ${state.portfolio_performance['bot_start_value']:.2f} | "
-                    f"SPY: ${state.portfolio_performance['spy_start_price']:.2f} "
-                    f"({'seeded' if seeded else 'restored'})"
-                )
+                portfolio_value = float(self.get_portfolio_value() or 0)
             except Exception as e:
-                self.log_message(f"[BENCHMARK ERROR] {e}")
+                self.log_message(f"[BENCHMARK ERROR] portfolio value unavailable: {e}")
+                portfolio_value = 0.0
+            spy_price = self._benchmark_price("SPY") if stored_spy <= 0 else 0.0
+            if stored_value <= 0 and portfolio_value > 0:
+                state.portfolio_performance["bot_start_value"] = portfolio_value
+            if stored_spy <= 0 and spy_price > 0:
+                state.portfolio_performance["spy_start_price"] = spy_price
+            seeded = stored_value <= 0 or stored_spy <= 0
+            if seeded:
+                # Persist immediately, otherwise every restart re-seeds and
+                # "since inception" silently becomes "since last boot".
+                state.save_app_state()
+            self.log_message(
+                f"[BENCHMARK] Value: ${state.portfolio_performance['bot_start_value']:.2f} | "
+                f"SPY: ${state.portfolio_performance['spy_start_price']:.2f} "
+                f"({'seeded' if seeded else 'restored'})"
+            )
+            # Half a benchmark is worse than none: every alpha number would be
+            # fiction. Leave it unseeded and try again next cycle.
+            if (
+                float(state.portfolio_performance.get("bot_start_value") or 0) <= 0
+                or float(state.portfolio_performance.get("spy_start_price") or 0) <= 0
+            ):
+                self.log_message("[BENCHMARK] Benchmark incomplete; skipping trade evaluation this cycle")
                 return
+            self.benchmark_initialized = True
 
         candidates = self._trading_candidates()
         if not candidates:

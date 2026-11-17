@@ -8,6 +8,41 @@ from utils import safe_print
 from config import ALPACA_API_KEY, ALPACA_SECRET_KEY, FMP_API_KEY, FINNHUB_KEY
 from state import reddit_cache, low_cache, fmp_cache, save_reddit_cache, save_low_cache, save_fmp_cache
 
+
+def fetch_daily_bars(symbols, days_back, limit=1000):
+    """Daily bars for a list of symbols, following Alpaca page tokens.
+
+    Omitting `start` returns exactly one bar, and `limit` is a page size across
+    the whole batch rather than per symbol. Both were silently degrading every
+    scan in this file, so the window and the token loop are mandatory.
+    """
+    headers = {"Apca-Api-Key-Id": ALPACA_API_KEY, "Apca-Api-Secret-Key": ALPACA_SECRET_KEY}
+    start = (date.today() - timedelta(days=days_back)).isoformat()
+    collected = {}
+    page_token = None
+    for _ in range(15):
+        params = {"symbols": ",".join(symbols), "timeframe": "1Day", "start": start, "limit": limit}
+        if page_token:
+            params["page_token"] = page_token
+        try:
+            res = requests.get(
+                "https://data.alpaca.markets/v2/stocks/bars", params=params, headers=headers, timeout=15
+            )
+        except Exception as e:
+            safe_print(f"[BARS] request failed: {e}")
+            break
+        if res.status_code != 200:
+            safe_print(f"[BARS] batch failed: HTTP {res.status_code}")
+            break
+        payload = res.json()
+        for symbol, rows in (payload.get("bars") or {}).items():
+            collected.setdefault(symbol, []).extend(rows)
+        page_token = payload.get("next_page_token")
+        if not page_token:
+            break
+    return collected
+
+
 def fetch_reddit_trending():
     today = str(date.today())
     if reddit_cache.get("date") == today:
@@ -55,9 +90,7 @@ def fetch_52_week_lows():
             chunk = universe[i:i+100]
             try:
                 sym_str = ",".join(chunk)
-                url = f"https://data.alpaca.markets/v2/stocks/bars?symbols={sym_str}&timeframe=1Day&limit=252"
-                res = requests.get(url, headers=headers, timeout=10).json()
-                bars_dict = res.get('bars', {})
+                bars_dict = fetch_daily_bars(chunk, days_back=400)
                 
                 for symbol, bars in bars_dict.items():
                     if not bars: continue
@@ -292,9 +325,7 @@ def fetch_rvol_breakouts():
         try:
             sym_str = ",".join(chunk)
             # Fetch 60 days of daily bars
-            url = f"https://data.alpaca.markets/v2/stocks/bars?symbols={sym_str}&timeframe=1Day&limit=60"
-            res = requests.get(url, headers=headers, timeout=8).json()
-            bars_dict = res.get("bars", {})
+            bars_dict = fetch_daily_bars(chunk, days_back=120)
             
             for symbol, bars in bars_dict.items():
                 if len(bars) < 30:

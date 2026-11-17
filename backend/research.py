@@ -4,7 +4,7 @@ import json
 import random
 import requests
 import pandas as pd
-from datetime import datetime
+from datetime import datetime, timedelta
 import time
 import pytz
 
@@ -339,30 +339,6 @@ def run_research_cycle(force=False, manual_reason=None):
         else:
             target_meta[s]["source"] += " + " + item.get('source', 'rvol_breakout')
 
-    # Prioritize multi-signal stocks (appear in 2+ sources)
-    multi_signal = [s for s, m in target_meta.items() if " + " in m.get("source", "")]
-    single_signal = [s for s in target_meta if s not in multi_signal]
-    random.shuffle(multi_signal)
-    random.shuffle(single_signal)
-    # Deduplicate ticker aliases: GOOG and GOOGL are the same company (Class A vs Class C)
-    # Prefer GOOGL (voting shares); remove GOOG if both appear
-    TICKER_ALIASES = {"GOOG": "GOOGL"}
-    seen_canonical = set()
-    deduped_targets = []
-    for s in (multi_signal + single_signal):
-        if s in BLACKLIST:
-            continue
-        canonical = TICKER_ALIASES.get(s, s)
-        if canonical in seen_canonical:
-            safe_print(f"[RESEARCH] Deduped {s} -> same company as {canonical}, skipping")
-            continue
-        seen_canonical.add(canonical)
-        deduped_targets.append(s)
-        if len(deduped_targets) >= 8:
-            break
-
-    all_targets = deduped_targets
-    safe_print(f"[RESEARCH] Targets ({len(all_targets)}): blacklisted={len(BLACKLIST)}, pool={len(target_meta)} unique")
     headers = {"Apca-Api-Key-Id": ALPACA_API_KEY, "Apca-Api-Secret-Key": ALPACA_SECRET_KEY}
     temp_reports = {}
     temp_signals = {}
@@ -384,25 +360,142 @@ def run_research_cycle(force=False, manual_reason=None):
         except ValueError:
             return default
 
-    sym_str = ",".join(all_targets)
+    def chunks(items, size=100):
+        for start in range(0, len(items), size):
+            yield items[start:start + size]
+
+    # ------------------------------------------------------------------
+    # Liquidity gate. Trending lists are full of shells and micro-caps that
+    # Alpaca has no usable history for. Grading one of those spends a Gemini
+    # call to invent numbers nobody can trade, so a symbol now needs a real
+    # price and real turnover, measured from its own bars, before it is
+    # allowed anywhere near the analyst.
+    # ------------------------------------------------------------------
+    MIN_PRICE = 5.0                 # no sub-$5 names
+    MIN_AVG_DOLLAR_VOLUME = 5e6     # $5M traded per session, 20-day average
+    MIN_HISTORY_BARS = 21           # enough bars for SMA21 / RSI14 / MACD
+    TARGET_COUNT = 8
+
+    pool = [s for s in target_meta if s not in BLACKLIST]
+    # Alpaca silently returns a single bar when `start` is omitted, which is
+    # what turned every technical reading into 0.0. Ask for the window.
+    bars_start = (datetime.now() - timedelta(days=120)).date().isoformat()
     all_bars = {}
     all_snapshots = {}
-    for _ in range(3): # 3 retries for Alpaca rate limit
-        # Get Snapshots for latest price
-        s_res = requests.get(f"https://data.alpaca.markets/v2/stocks/snapshots?symbols={sym_str}", headers=headers, timeout=10)
-        if s_res.status_code == 200:
-            all_snapshots = safe_response_json(s_res, {})
+    base_bars_url = "https://data.alpaca.markets/v2/stocks/bars"
 
-        # Get Bars for technicals
-        b_res = requests.get(f"https://data.alpaca.markets/v2/stocks/bars?symbols={sym_str}&timeframe=1Day&limit=30", headers=headers, timeout=10)
-        if b_res.status_code == 200:
-            all_bars = safe_response_json(b_res, {}).get('bars', {})
-            if all_bars or all_snapshots:
+    def fetch_daily_bars(chunk):
+        """Daily bars for a chunk of symbols, following Alpaca page tokens.
+
+        `limit` is the page size across the whole chunk, not per symbol, so a
+        single request silently truncates the tail of the list — which is how
+        whole symbols ended up with no history at all.
+        """
+        collected = {}
+        page_token = None
+        for _ in range(15):
+            params = {
+                "symbols": ",".join(chunk),
+                "timeframe": "1Day",
+                "start": bars_start,
+                "limit": 1000,
+            }
+            if page_token:
+                params["page_token"] = page_token
+            b_res = None
+            for attempt in range(3):  # Alpaca 429 retry
+                b_res = requests.get(base_bars_url, params=params, headers=headers, timeout=20)
+                if b_res.status_code == 200:
+                    break
+                if b_res.status_code == 429:
+                    time.sleep(2.0 * (attempt + 1))
+                    continue
+                safe_print(f"[RESEARCH] bar batch failed: HTTP {b_res.status_code}")
+                return collected
+            if b_res is None or b_res.status_code != 200:
+                return collected
+            payload = safe_response_json(b_res, {})
+            for symbol, rows in (payload.get("bars") or {}).items():
+                collected.setdefault(symbol, []).extend(rows)
+            page_token = payload.get("next_page_token")
+            if not page_token:
                 break
-        elif b_res.status_code == 429:
-            time.sleep(2.0)
-        else:
+        return collected
+
+    for chunk in chunks(pool):
+        all_bars.update(fetch_daily_bars(chunk))
+        s_res = requests.get(
+            f"https://data.alpaca.markets/v2/stocks/snapshots?symbols={','.join(chunk)}",
+            headers=headers,
+            timeout=15,
+        )
+        if s_res.status_code == 200:
+            all_snapshots.update(safe_response_json(s_res, {}))
+
+    def liquidity_of(symbol):
+        """(last close, average daily dollar volume) or None when unusable."""
+        bars = all_bars.get(symbol) or []
+        if len(bars) < MIN_HISTORY_BARS:
+            return None
+        window = bars[-20:]
+        try:
+            closes = [float(b["c"]) for b in window if b.get("c")]
+            volumes = [float(b.get("v") or 0) for b in window]
+        except (KeyError, TypeError, ValueError):
+            return None
+        if not closes:
+            return None
+        avg_dollar = sum(c * v for c, v in zip(closes, volumes)) / len(closes)
+        return closes[-1], avg_dollar
+
+    qualified = []
+    rejected = []
+    for symbol in pool:
+        stats = liquidity_of(symbol)
+        if stats is None:
+            rejected.append(f"{symbol}: no history")
+            continue
+        price, avg_dollar = stats
+        if price < MIN_PRICE:
+            rejected.append(f"{symbol}: ${price:.2f}")
+            continue
+        if avg_dollar < MIN_AVG_DOLLAR_VOLUME:
+            rejected.append(f"{symbol}: ${avg_dollar / 1e6:.1f}M/day")
+            continue
+        qualified.append(symbol)
+
+    safe_print(
+        f"[RESEARCH] Liquidity gate: pool={len(pool)} kept={len(qualified)} "
+        f"dropped={len(rejected)}"
+    )
+    if rejected:
+        safe_print(f"[RESEARCH] Dropped: {', '.join(rejected)}")
+
+    # Prefer names flagged by two or more scanners, then fill from the rest.
+    multi_signal = [s for s in qualified if " + " in target_meta[s].get("source", "")]
+    single_signal = [s for s in qualified if s not in multi_signal]
+    random.shuffle(multi_signal)
+    random.shuffle(single_signal)
+    # Deduplicate ticker aliases: GOOG and GOOGL are the same company (Class A vs Class C)
+    # Prefer GOOGL (voting shares); remove GOOG if both appear
+    TICKER_ALIASES = {"GOOG": "GOOGL"}
+    seen_canonical = set()
+    deduped_targets = []
+    for s in (multi_signal + single_signal):
+        canonical = TICKER_ALIASES.get(s, s)
+        if canonical in seen_canonical:
+            safe_print(f"[RESEARCH] Deduped {s} -> same company as {canonical}, skipping")
+            continue
+        seen_canonical.add(canonical)
+        deduped_targets.append(s)
+        if len(deduped_targets) >= TARGET_COUNT:
             break
+
+    all_targets = deduped_targets
+    if not all_targets:
+        safe_print("[RESEARCH] Nothing passed the liquidity gate; keeping existing reports.")
+        return
+    safe_print(f"[RESEARCH] Targets ({len(all_targets)}): {all_targets}")
 
     for symbol in all_targets:
         try:
@@ -431,12 +524,13 @@ def run_research_cycle(force=False, manual_reason=None):
             bars = all_bars.get(symbol, [])
             snap = all_snapshots.get(symbol, {})
             last_price = 0
-            
+            technicals = {}
+
             # 1. Get latest price from Snapshot
             if snap:
                 # Use latest trade or daily bar close
                 last_price = snap.get('latestTrade', {}).get('p') or snap.get('dailyBar', {}).get('c') or 0
-                
+
             if bars:
                 df_tech = pd.DataFrame(bars)
                 if last_price == 0:
@@ -459,15 +553,20 @@ def run_research_cycle(force=False, manual_reason=None):
                     "bb_lower": safe_float(lower.iloc[-1]),
                     "volume_trend": safe_float(volume_trend)
                 }
-            elif snap and snap.get('dailyBar'):
-                # Minimal technicals if only snapshot available
-                last_price = snap['dailyBar']['c']
-                technicals = {"sma_fast": 0.0, "sma_slow": 0.0, "rsi": 0.0, "macd": 0.0, "atr": 0.0, "bb_upper": 0.0, "bb_lower": 0.0, "volume_trend": snap['dailyBar']['v']}
-            else:
-                safe_print(f"[RESEARCH] ⚠️  {symbol}: No bars or snapshot data found.")
-                last_price = 0
-                technicals = {}
-            
+
+            # Zeroed indicators mean the bars did not cover the lookback. A model
+            # asked to grade on nothing answers with confident nonsense (grade 90
+            # on an all-zero technical block is how that happened), so the symbol
+            # is dropped here instead, which also saves the Gemini call.
+            required_indicators = ("sma_fast", "sma_slow", "rsi", "macd", "atr", "bb_upper", "bb_lower")
+            missing = [k for k in required_indicators if not technicals.get(k)]
+            if last_price <= 0 or missing:
+                safe_print(
+                    f"[RESEARCH] WARNING {symbol}: skipped, incomplete indicators "
+                    f"({', '.join(missing) or 'no bars'}, price={last_price}). No Gemini call."
+                )
+                continue
+
             fundamentals = fetch_fmp_data(symbol)
             news_sentiment = fetch_news_sentiment(symbol)
             
