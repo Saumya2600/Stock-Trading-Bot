@@ -1,90 +1,90 @@
 {
-    "BX": {
+    "DC": {
+        "data": {
+            "sector": "Basic Materials",
+            "industry": "Gold",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 0.01,
+            "description": "Dakota Gold Corp. engages in the acquisition, exploration, and development of mineral properties in the United States. The company primarily explores for gold deposits. The company was incorporated in..."
+        },
+        "updated_at": "2026-11-17T12:31:42.541964"
+    },
+    "ALL": {
+        "data": {
+            "sector": "Financial Services",
+            "industry": "Insurance - Property & Casualty",
+            "pe": 6.13,
+            "peg": 1.97,
+            "debt_to_equity": 0.23,
+            "description": "The Allstate Corporation, together with its subsidiaries, provides property and casualty, and other insurance products in the United States and Canada. It operates in four segments: Allstate Protectio..."
+        },
+        "updated_at": "2026-11-17T12:32:05.322037"
+    },
+    "BE": {
+        "data": {
+            "sector": "Industrials",
+            "industry": "Electrical Equipment & Parts",
+            "pe": 116.63,
+            "peg": 0.36,
+            "debt_to_equity": 1.42,
+            "description": "Bloom Energy Corporation designs, manufactures, sells, and installs solid oxide fuel cell systems for on-site power generation in the United States and internationally. It offers Bloom Energy Server, ..."
+        },
+        "updated_at": "2026-11-17T12:32:44.521974"
+    },
+    "HR": {
+        "data": {
+            "sector": "Real Estate",
+            "industry": "REIT - Healthcare Facilities",
+            "pe": 0,
+            "peg": 8.82,
+            "debt_to_equity": 1.09,
+            "description": "Healthcare Realty Trust Incorporated is a real estate investment trust (REIT) that owns and operates medical outpatient buildings primarily located around market-leading hospital campuses. The Company..."
+        },
+        "updated_at": "2026-11-17T12:33:11.331645"
+    },
+    "EU": {
+        "data": {
+            "sector": "Energy",
+            "industry": "Uranium",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 0.55,
+            "description": "enCore Energy Corp., together with its subsidiaries, engages in the acquisition, exploration, development, and extraction of uranium resource properties in the United States. The company is headquarte..."
+        },
+        "updated_at": "2026-11-17T12:34:00.184984"
+    },
+    "YOU": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Software - Application",
+            "pe": 33.05,
+            "peg": 0,
+            "debt_to_equity": 0.83,
+            "description": "Clear Secure, Inc. operates a secure identity platform under the CLEAR brand name primarily in the United States. It provides secure identity platform, a multi-layered infrastructure consisting of fro..."
+        },
+        "updated_at": "2026-11-17T12:34:27.354109"
+    },
+    "PS": {
         "data": {
             "sector": "Financial Services",
             "industry": "Asset Management",
-            "pe": 26.78,
-            "peg": 1.19,
-            "debt_to_equity": 0.74,
-            "description": "Blackstone Inc. is an alternative asset management firm specializing in private equity, venture capital, real estate, hedge fund solutions, credit, secondary funds of funds, public debt and equity and..."
-        },
-        "updated_at": "2026-11-17T04:01:20.293130"
-    },
-    "SNDK": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Computer Hardware",
-            "pe": 7.07,
-            "peg": 0,
-            "debt_to_equity": 0.01,
-            "description": "Sandisk Corporation develops, manufactures, and sells data storage devices and solutions using NAND flash technology in the Americas, Europe, the Middle East, Africa, Asia, and internationally. The co..."
-        },
-        "updated_at": "2026-11-17T04:01:52.861941"
-    },
-    "CRWV": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Infrastructure",
             "pe": 0,
             "peg": 0,
-            "debt_to_equity": 16.45,
-            "description": "CoreWeave, Inc. operates as a cloud infrastructure technology company in the United States, Denmark, Middle East and Asia Pacific. The company offers CoreWeave Cloud platform that comprises proprietar..."
+            "debt_to_equity": 0.22,
+            "description": "Pershing Square Inc. operates as an alternative asset manager. The company was formerly known as Pershing Square Holdco, L.P. The company was incorporated in 2024 and is based in New York, New York. P..."
         },
-        "updated_at": "2026-11-17T04:02:25.117452"
+        "updated_at": "2026-11-17T12:34:49.778896"
     },
-    "GME": {
-        "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Specialty Retail",
-            "pe": 16.95,
-            "peg": 0.31,
-            "debt_to_equity": 0.71,
-            "description": "GameStop Corp., a specialty retailer, provides games, collectibles, and entertainment products through its stores and e-commerce platforms in United States, Australia and Europe. The company sells new..."
-        },
-        "updated_at": "2026-11-17T04:02:33.601014"
-    },
-    "AMD": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Semiconductors",
-            "pe": 114.09,
-            "peg": 0.48,
-            "debt_to_equity": 0.13,
-            "description": "Advanced Micro Devices, Inc. operates as a semiconductor company internationally. It operates in three segments: Data Center, Client and Gaming, and Embedded. The company offers artificial intelligenc..."
-        },
-        "updated_at": "2026-11-17T04:02:34.461248"
-    },
-    "CCL": {
-        "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Travel Services",
-            "pe": 12.9,
-            "peg": 1.0,
-            "debt_to_equity": 1.77,
-            "description": "Carnival Corporation Ltd., a cruise company, provides leisure travel services. The company operates through four segments: North America Cruise Operations, Europe Cruise Operations, Cruise Support, an..."
-        },
-        "updated_at": "2026-11-17T04:02:35.372065"
-    },
-    "SOXL": {
+    "TQQQ": {
         "data": {
             "sector": "Unknown",
             "industry": "Unknown",
-            "pe": 18.36,
+            "pe": 24.34,
             "peg": 0,
             "debt_to_equity": 0,
-            "description": "The fund invests at least 80% of its net assets in financial instruments, such as swap agreements, securities of the index, and ETFs that track the index, that, in combination, provide 3X daily levera..."
+            "description": "The fund invests in financial instruments that ProShare Advisors believes, in combination, should produce daily returns consistent with the Daily Target. The index is designed to measure the performan..."
         },
-        "updated_at": "2026-11-17T04:02:36.214278"
-    },
-    "NVDA": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Semiconductors",
-            "pe": 20.6,
-            "peg": 0.2,
-            "debt_to_equity": 0.17,
-            "description": "NVIDIA Corporation operates as a data center scale AI infrastructure company in the United States, Taiwan, China, Hong Kong, Europe, and internationally. It operates through Compute & Networking, and ..."
-        },
-        "updated_at": "2026-11-17T04:02:37.114628"
+        "updated_at": "2026-11-17T12:35:16.546253"
     }
 }
