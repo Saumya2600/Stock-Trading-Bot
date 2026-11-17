@@ -92,6 +92,16 @@ def main():
         trader.run_all()
 
         safe_print(f"[{datetime.now()}] TRADE RUNNER: Trading cycle completed.")
+
+        # A green run that never seeded the benchmark means the strategy never
+        # reached on_trading_iteration: Lumibot tends to swallow a broker start
+        # failure and simply return. Fail loudly instead of reporting a healthy
+        # cycle that did nothing at all.
+        if float(state.portfolio_performance.get("spy_start_price") or 0) <= 0:
+            raise RuntimeError(
+                "TRADE_ERROR: strategy never reached a trading iteration "
+                "(SPY benchmark unseeded). Read the Lumibot/broker lines above."
+            )
     except Exception as e:
         safe_print(f"[{datetime.now()}] TRADE RUNNER ERROR: {e}")
         import traceback

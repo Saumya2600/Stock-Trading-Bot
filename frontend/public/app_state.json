@@ -1,10 +1,71 @@
 {
-  "trade_history": [],
-  "portfolio_performance": {
-    "bot_roi": 0.0,
-    "spy_roi": 0.0,
-    "trades_count": 0,
-    "bot_start_value": 78387.47,
-    "spy_start_price": 0.0
-  }
+    "trade_history": [
+        {
+            "timestamp": "2026-11-17T12:17:13.991425",
+            "symbol": "GTLB",
+            "side": "SELL",
+            "quantity": 6287.0,
+            "price": 44.5,
+            "ai_grade": 50,
+            "signal": "Hold",
+            "stop_loss": 0.0
+        },
+        {
+            "timestamp": "2026-11-17T12:17:14.346844",
+            "symbol": "DDOG",
+            "side": "SELL",
+            "quantity": 1718.0,
+            "price": 163.78,
+            "ai_grade": 50,
+            "signal": "Hold",
+            "stop_loss": 0.0
+        },
+        {
+            "timestamp": "2026-11-17T12:17:14.734085",
+            "symbol": "MDB",
+            "side": "SELL",
+            "quantity": 545.0,
+            "price": 296.01,
+            "ai_grade": 50,
+            "signal": "Hold",
+            "stop_loss": 0.0
+        },
+        {
+            "timestamp": "2026-11-17T12:17:15.349100",
+            "symbol": "AI",
+            "side": "SELL",
+            "quantity": 7586.0,
+            "price": 9.89,
+            "ai_grade": 50,
+            "signal": "Hold",
+            "stop_loss": 0.0
+        },
+        {
+            "timestamp": "2026-11-17T12:17:16.135943",
+            "symbol": "SCHW",
+            "side": "SELL",
+            "quantity": 590.0,
+            "price": 91.19,
+            "ai_grade": 50,
+            "signal": "Hold",
+            "stop_loss": 0.0
+        },
+        {
+            "timestamp": "2026-11-17T12:17:17.184096",
+            "symbol": "GOOGL",
+            "side": "SELL",
+            "quantity": 14.0,
+            "price": 280.2,
+            "ai_grade": 50,
+            "signal": "Hold",
+            "stop_loss": 0.0
+        }
+    ],
+    "portfolio_performance": {
+        "bot_roi": 0.0,
+        "spy_roi": 0.0,
+        "trades_count": 6,
+        "bot_start_value": 434431.34,
+        "spy_start_price": 731.75
+    }
 }
