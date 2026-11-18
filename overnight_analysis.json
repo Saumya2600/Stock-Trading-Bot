@@ -1,610 +1,6 @@
 {
     "events": [
         {
-            "symbol": "AS",
-            "earnings_date": "2026-11-17",
-            "session": "BMO",
-            "eps_estimate": 0.3583,
-            "eps_actual": 0.42,
-            "eps_surprise_pct": 17.22,
-            "revenue_estimate": 2202800878.0,
-            "revenue_actual": 2169200000.0,
-            "revenue_surprise_pct": -1.53,
-            "finnhub_surprise_pct": null,
-            "name": "Amer Sports Inc",
-            "market_cap_millions": 17594.29816018144,
-            "market_cap_category": "Large Cap",
-            "status": "released",
-            "detected_at": "2026-11-18T03:08:49.667321+00:00",
-            "sec_filing": {
-                "status": "not_found",
-                "url": null
-            },
-            "news": [
-                {
-                    "headline": "Learn Why The Bull Case For Amer Sports Stock Could Change Following Raised 2026 Guidance",
-                    "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=2e88a9258184bef3b1042f11d6e9af068f21fb042a14e4840fc830fc7886d51c",
-                    "published_at": 1794957892
-                },
-                {
-                    "headline": "Alpine Sports Gear Maker Lifts Outlook. Ski Vacations Are in Hot Demand.",
-                    "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=7a74f3c77fdeca77f5339ee09ebd603b2221abb55ddbf14cc176a791dd0fdf12",
-                    "published_at": 1794955380
-                },
-                {
-                    "headline": "Amer Sports, Inc. Q3 2026 Earnings Call Summary",
-                    "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=9c340e78a1334f07090fdb9dc4887a5de02f55abf47627e98b2b60c288f2cf7e",
-                    "published_at": 1794952238
-                },
-                {
-                    "headline": "Amer Sports: Unbeatable Momentum, Stock Remains Attractive",
-                    "source": "SeekingAlpha",
-                    "url": "https://finnhub.io/api/news?id=6186395e093d7764916d1e1bb3406a18103db7088bda8813ea6094be69e9b920",
-                    "published_at": 1794951897
-                },
-                {
-                    "headline": "Amer\u2019s Raised Guidance on Outlook Could Prove Conservative",
-                    "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=93e9446a76cc2baae088bf6b7b717ef5c1b0075bf48e1a803176bf6f642f99e5",
-                    "published_at": 1794951797
-                }
-            ],
-            "guidance_direction": "RAISED",
-            "after_hours_price": 30.235,
-            "regular_close_price": 30.235,
-            "after_hours_change_pct": 0.0,
-            "volume": 1392181.0,
-            "volume_ratio": 1.12,
-            "quote_timestamp": "2026-11-17T20:59:56.199040346Z",
-            "score": 92,
-            "signal": "STRONG BULLISH",
-            "summary": "EPS surprise +17.2%; revenue surprise -1.5%; guidance raised; extended move +0.0%"
-        },
-        {
-            "symbol": "CAAP",
-            "earnings_date": "2026-11-17",
-            "session": "AMC",
-            "eps_estimate": 0.5953,
-            "eps_actual": 0.48,
-            "eps_surprise_pct": -19.37,
-            "revenue_estimate": 558108636.0,
-            "revenue_actual": 614100000.0,
-            "revenue_surprise_pct": 10.03,
-            "finnhub_surprise_pct": null,
-            "name": "Corporacion America Airports SA",
-            "market_cap_millions": 3929.3340751324304,
-            "market_cap_category": "Mid Cap",
-            "status": "released",
-            "detected_at": "2026-11-18T03:08:50.219935+00:00",
-            "sec_filing": {
-                "status": "not_found",
-                "url": null
-            },
-            "news": [
-                {
-                    "headline": "Corp America Airports (NYSE:CAAP) Posts Mixed Q3: Revenue Beat, EPS Miss",
-                    "source": "ChartMill",
-                    "url": "https://finnhub.io/api/news?id=7979266016b4896905a8a72a7495cf77abbeef50fed0ff3fac94bd6d760612c5",
-                    "published_at": 1794957111
-                },
-                {
-                    "headline": "Corporacion America Airports S.A. (CAAP) Lags Q3 Earnings Estimates",
-                    "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=68c7799bd2e40519f81ec30fc05c0a37f998c9506bf74cb25b5fce534cd2d9e2",
-                    "published_at": 1794952202
-                },
-                {
-                    "headline": "Corporaci\u00f3n Am\u00e9rica Airports S.A. Reports October 2026 Passenger Traffic",
-                    "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=f2ffbecd457d7582b2b990e2a66b1f64aee74045366e4ef994bf12b33e521684",
-                    "published_at": 1794951060
-                },
-                {
-                    "headline": "Corporacion America Airports Reports Third Quarter 2026 Results",
-                    "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=c93fd9aea4b52850d51ed9338552d1803d5a07fd5e5e9b7aa82cc4b64a891491",
-                    "published_at": 1794951060
-                }
-            ],
-            "guidance_direction": "UNKNOWN",
-            "after_hours_price": 24.07,
-            "regular_close_price": 24.07,
-            "after_hours_change_pct": 0.0,
-            "volume": 5241.0,
-            "volume_ratio": 1.39,
-            "quote_timestamp": "2026-11-17T20:59:44.299738211Z",
-            "score": 45,
-            "signal": "MIXED",
-            "summary": "EPS surprise -19.4%; revenue surprise +10.0%; extended move +0.0%"
-        },
-        {
-            "symbol": "DIS",
-            "earnings_date": "2026-11-17",
-            "session": "BMO",
-            "eps_estimate": 1.6909,
-            "eps_actual": 1.77,
-            "eps_surprise_pct": 4.68,
-            "revenue_estimate": 25434389599.0,
-            "revenue_actual": 25947000000.0,
-            "revenue_surprise_pct": 2.02,
-            "finnhub_surprise_pct": null,
-            "name": "The Walt Disney Company",
-            "market_cap_millions": 201918.75968434778,
-            "market_cap_category": "Large Cap",
-            "status": "released",
-            "detected_at": "2026-11-18T03:08:50.598804+00:00",
-            "sec_filing": {
-                "status": "found",
-                "form": "8-K",
-                "filed_at": "2026-11-17",
-                "accession": "0001744489-26-000065",
-                "url": "https://www.sec.gov/Archives/edgar/data/1744489/000174448926000065/dis-20261117.htm"
-            },
-            "news": [
-                {
-                    "headline": "Disney: 3 Key Takeaways for Long-Term Investors",
-                    "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=50f53dce0a8300604109d35fcadac500c0aaed2023e05530d864bf7661741b95",
-                    "published_at": 1794959920
-                },
-                {
-                    "headline": "Earnings Beat Might Change The Bull Case For Disney Stock (DIS)",
-                    "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=1b8ec98a7c4f54f0331963d338dbe6015ac8099997381bfeee4d358674c0b00f",
-                    "published_at": 1794953288
-                },
-                {
-                    "headline": "Disney earnings analysis: questions answered and next catalysts",
-                    "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=490a2903e4acc6340fcfdc18fc254d1d5719b614ec7ac1025ac1a6188aec7d8d",
-                    "published_at": 1794948698
-                },
-                {
-                    "headline": "Disney Stock Hits New Highs After Strong Q4 Earnings: Time to Buy DIS?",
-                    "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=5986decabed5a0f84fe84ccb55ac20fc9f49fd8a3b16395c7329e2850538191d",
-                    "published_at": 1794948180
-                },
-                {
-                    "headline": "Disney Stocks Rise 1.57% as Streaming Profit Doubles and Buybacks Reach $9 Billion",
-                    "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=7a3183750ff76c930bb0d3e6c1025eef83dff349b62103387e451ce7999c333e",
-                    "published_at": 1794941864
-                }
-            ],
-            "guidance_direction": "UNKNOWN",
-            "after_hours_price": 116.96,
-            "regular_close_price": 116.96,
-            "after_hours_change_pct": 0.0,
-            "volume": 1327492.0,
-            "volume_ratio": 1.67,
-            "quote_timestamp": "2026-11-17T20:59:58.224121236Z",
-            "score": 63,
-            "signal": "BULLISH",
-            "summary": "EPS surprise +4.7%; revenue surprise +2.0%; extended move +0.0%"
-        },
-        {
-            "symbol": "DLB",
-            "earnings_date": "2026-11-17",
-            "session": "AMC",
-            "eps_estimate": 1.207,
-            "eps_actual": 1.25,
-            "eps_surprise_pct": 3.56,
-            "revenue_estimate": 376487852.0,
-            "revenue_actual": 373540000.0,
-            "revenue_surprise_pct": -0.78,
-            "finnhub_surprise_pct": null,
-            "name": "Dolby Laboratories, Inc.",
-            "market_cap_millions": 5509.5984495771745,
-            "market_cap_category": "Mid Cap",
-            "status": "released",
-            "detected_at": "2026-11-18T03:08:51.108013+00:00",
-            "sec_filing": {
-                "status": "found",
-                "form": "8-K",
-                "filed_at": "2026-11-17",
-                "accession": "0001193125-26-465542",
-                "url": "https://www.sec.gov/Archives/edgar/data/1308547/000119312526465542/d144812d8k.htm"
-            },
-            "news": [
-                {
-                    "headline": "Dolby Laboratories (NYSE:DLB) Posts Mixed Fiscal Q4 2026 Results as Shares Fall After Hours",
-                    "source": "ChartMill",
-                    "url": "https://finnhub.io/api/news?id=e27512c96aab0929599b552935bf61128b4c0762016d0d591e9b2e48afdd30e5",
-                    "published_at": 1794956589
-                },
-                {
-                    "headline": "Dolby Labs falls on weak first quarter guidance",
-                    "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=954964d34b929d9cb388f450f444f06f4ec212588e9dc5ddc2106aa6bea8dda4",
-                    "published_at": 1794952958
-                },
-                {
-                    "headline": "Dolby Laboratories (DLB) Q4 Earnings: Taking a Look at Key Metrics Versus Estimates",
-                    "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=e00729bd8153ff9459d4a2c3b440370b3580d9acf3be91efaead13b0ab4c4f22",
-                    "published_at": 1794952801
-                },
-                {
-                    "headline": "Dolby Laboratories: Fiscal Q4 Earnings Snapshot",
-                    "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=8034eb50bf4693f81e8d7cbda00a505d6c7e83c57fed9ca6abf7227b63fbaefe",
-                    "published_at": 1794952294
-                },
-                {
-                    "headline": "Dolby Laboratories (DLB) Q4 Earnings and Revenues Surpass Estimates",
-                    "source": "Yahoo",
-                    "url": "https://finnhub.io/api/news?id=7370b6508ca6ed4baf469e63ec26532e814bf05531f91fb97faadd272f7371ca",
-                    "published_at": 1794951902
-                }
-            ],
-            "guidance_direction": "UNKNOWN",
-            "after_hours_price": 58.6,
-            "regular_close_price": 58.6,
-            "after_hours_change_pct": 0.0,
-            "volume": 99928.0,
-            "volume_ratio": 0.96,
-            "quote_timestamp": "2026-11-17T20:59:47.855606581Z",
-            "score": 56,
-            "signal": "MIXED",
-            "summary": "EPS surprise +3.6%; revenue surprise -0.8%; extended move +0.0%"
-        },
-        {
-            "symbol": "ALM",
-            "earnings_date": "2026-11-17",
-            "session": "UNKNOWN",
-            "eps_estimate": 0.1818,
-            "eps_actual": null,
-            "eps_surprise_pct": null,
-            "revenue_estimate": 123669450.0,
-            "revenue_actual": null,
-            "revenue_surprise_pct": null,
-            "finnhub_surprise_pct": null,
-            "name": "Almonty Industries Inc",
-            "market_cap_millions": 2316.500261407362,
-            "market_cap_category": "Mid Cap",
-            "status": "upcoming",
-            "detected_at": "2026-11-18T03:08:51.108298+00:00",
-            "sec_filing": {
-                "status": "not_checked",
-                "url": null
-            },
-            "news": [],
-            "guidance_direction": "UNKNOWN",
-            "after_hours_price": null,
-            "regular_close_price": null,
-            "after_hours_change_pct": null,
-            "volume": null,
-            "volume_ratio": null,
-            "quote_timestamp": null,
-            "score": null,
-            "signal": "SCHEDULED",
-            "summary": "Upcoming earnings; no released results yet."
-        },
-        {
-            "symbol": "ATKR",
-            "earnings_date": "2026-11-17",
-            "session": "BMO",
-            "eps_estimate": 1.8421,
-            "eps_actual": null,
-            "eps_surprise_pct": null,
-            "revenue_estimate": 802461030.0,
-            "revenue_actual": null,
-            "revenue_surprise_pct": null,
-            "finnhub_surprise_pct": null,
-            "name": "Atkore Inc.",
-            "market_cap_millions": 3207.09,
-            "market_cap_category": "Mid Cap",
-            "status": "upcoming",
-            "detected_at": "2026-11-18T03:08:51.108304+00:00",
-            "sec_filing": {
-                "status": "not_checked",
-                "url": null
-            },
-            "news": [],
-            "guidance_direction": "UNKNOWN",
-            "after_hours_price": null,
-            "regular_close_price": null,
-            "after_hours_change_pct": null,
-            "volume": null,
-            "volume_ratio": null,
-            "quote_timestamp": null,
-            "score": null,
-            "signal": "SCHEDULED",
-            "summary": "Upcoming earnings; no released results yet."
-        },
-        {
-            "symbol": "ROST",
-            "earnings_date": "2026-11-18",
-            "session": "UNKNOWN",
-            "eps_estimate": 1.9138,
-            "eps_actual": null,
-            "eps_surprise_pct": null,
-            "revenue_estimate": 6402829863.0,
-            "revenue_actual": null,
-            "revenue_surprise_pct": null,
-            "finnhub_surprise_pct": null,
-            "name": "Ross Stores Inc",
-            "market_cap_millions": 70423.44314150656,
-            "market_cap_category": "Large Cap",
-            "status": "upcoming",
-            "detected_at": "2026-11-18T03:08:51.108245+00:00",
-            "sec_filing": {
-                "status": "not_checked",
-                "url": null
-            },
-            "news": [],
-            "guidance_direction": "UNKNOWN",
-            "after_hours_price": null,
-            "regular_close_price": null,
-            "after_hours_change_pct": null,
-            "volume": null,
-            "volume_ratio": null,
-            "quote_timestamp": null,
-            "score": null,
-            "signal": "SCHEDULED",
-            "summary": "Upcoming earnings; no released results yet."
-        },
-        {
-            "symbol": "SBLK",
-            "earnings_date": "2026-11-18",
-            "session": "AMC",
-            "eps_estimate": 1.2441,
-            "eps_actual": null,
-            "eps_surprise_pct": null,
-            "revenue_estimate": 309473946.0,
-            "revenue_actual": null,
-            "revenue_surprise_pct": null,
-            "finnhub_surprise_pct": null,
-            "name": "Star Bulk Carriers Corp.",
-            "market_cap_millions": 3041.5202414759124,
-            "market_cap_category": "Mid Cap",
-            "status": "upcoming",
-            "detected_at": "2026-11-18T03:08:51.108251+00:00",
-            "sec_filing": {
-                "status": "not_checked",
-                "url": null
-            },
-            "news": [],
-            "guidance_direction": "UNKNOWN",
-            "after_hours_price": null,
-            "regular_close_price": null,
-            "after_hours_change_pct": null,
-            "volume": null,
-            "volume_ratio": null,
-            "quote_timestamp": null,
-            "score": null,
-            "signal": "SCHEDULED",
-            "summary": "Upcoming earnings; no released results yet."
-        },
-        {
-            "symbol": "SNEX",
-            "earnings_date": "2026-11-18",
-            "session": "AMC",
-            "eps_estimate": 0.8986,
-            "eps_actual": null,
-            "eps_surprise_pct": null,
-            "revenue_estimate": 697702950.0,
-            "revenue_actual": null,
-            "revenue_surprise_pct": null,
-            "finnhub_surprise_pct": null,
-            "name": "StoneX Group Inc",
-            "market_cap_millions": 6623.0649059880225,
-            "market_cap_category": "Mid Cap",
-            "status": "upcoming",
-            "detected_at": "2026-11-18T03:08:51.108257+00:00",
-            "sec_filing": {
-                "status": "not_checked",
-                "url": null
-            },
-            "news": [],
-            "guidance_direction": "UNKNOWN",
-            "after_hours_price": null,
-            "regular_close_price": null,
-            "after_hours_change_pct": null,
-            "volume": null,
-            "volume_ratio": null,
-            "quote_timestamp": null,
-            "score": null,
-            "signal": "SCHEDULED",
-            "summary": "Upcoming earnings; no released results yet."
-        },
-        {
-            "symbol": "TGT",
-            "earnings_date": "2026-11-18",
-            "session": "BMO",
-            "eps_estimate": 2.0923,
-            "eps_actual": null,
-            "eps_surprise_pct": null,
-            "revenue_estimate": 26816116968.0,
-            "revenue_actual": null,
-            "revenue_surprise_pct": null,
-            "finnhub_surprise_pct": null,
-            "name": "Target Corp",
-            "market_cap_millions": 72473.96430578973,
-            "market_cap_category": "Large Cap",
-            "status": "upcoming",
-            "detected_at": "2026-11-18T03:08:51.108263+00:00",
-            "sec_filing": {
-                "status": "not_checked",
-                "url": null
-            },
-            "news": [],
-            "guidance_direction": "UNKNOWN",
-            "after_hours_price": null,
-            "regular_close_price": null,
-            "after_hours_change_pct": null,
-            "volume": null,
-            "volume_ratio": null,
-            "quote_timestamp": null,
-            "score": null,
-            "signal": "SCHEDULED",
-            "summary": "Upcoming earnings; no released results yet."
-        },
-        {
-            "symbol": "TJX",
-            "earnings_date": "2026-11-18",
-            "session": "BMO",
-            "eps_estimate": 1.3513,
-            "eps_actual": null,
-            "eps_surprise_pct": null,
-            "revenue_estimate": 15997206240.0,
-            "revenue_actual": null,
-            "revenue_surprise_pct": null,
-            "finnhub_surprise_pct": null,
-            "name": "The TJX Companies, Inc.",
-            "market_cap_millions": 142831.61978331223,
-            "market_cap_category": "Large Cap",
-            "status": "upcoming",
-            "detected_at": "2026-11-18T03:08:51.108269+00:00",
-            "sec_filing": {
-                "status": "not_checked",
-                "url": null
-            },
-            "news": [],
-            "guidance_direction": "UNKNOWN",
-            "after_hours_price": null,
-            "regular_close_price": null,
-            "after_hours_change_pct": null,
-            "volume": null,
-            "volume_ratio": null,
-            "quote_timestamp": null,
-            "score": null,
-            "signal": "SCHEDULED",
-            "summary": "Upcoming earnings; no released results yet."
-        },
-        {
-            "symbol": "UGI",
-            "earnings_date": "2026-11-18",
-            "session": "AMC",
-            "eps_estimate": -0.3487,
-            "eps_actual": null,
-            "eps_surprise_pct": null,
-            "revenue_estimate": 1361985000.0,
-            "revenue_actual": null,
-            "revenue_surprise_pct": null,
-            "finnhub_surprise_pct": null,
-            "name": "UGI Corporation",
-            "market_cap_millions": 8278.432766417378,
-            "market_cap_category": "Mid Cap",
-            "status": "upcoming",
-            "detected_at": "2026-11-18T03:08:51.108274+00:00",
-            "sec_filing": {
-                "status": "not_checked",
-                "url": null
-            },
-            "news": [],
-            "guidance_direction": "UNKNOWN",
-            "after_hours_price": null,
-            "regular_close_price": null,
-            "after_hours_change_pct": null,
-            "volume": null,
-            "volume_ratio": null,
-            "quote_timestamp": null,
-            "score": null,
-            "signal": "SCHEDULED",
-            "summary": "Upcoming earnings; no released results yet."
-        },
-        {
-            "symbol": "VIPS",
-            "earnings_date": "2026-11-18",
-            "session": "UNKNOWN",
-            "eps_estimate": 2.8254,
-            "eps_actual": null,
-            "eps_surprise_pct": null,
-            "revenue_estimate": 20848107868.0,
-            "revenue_actual": null,
-            "revenue_surprise_pct": null,
-            "finnhub_surprise_pct": null,
-            "name": "Vipshop Holdings Limited",
-            "market_cap_millions": 6185.88,
-            "market_cap_category": "Mid Cap",
-            "status": "upcoming",
-            "detected_at": "2026-11-18T03:08:51.108281+00:00",
-            "sec_filing": {
-                "status": "not_checked",
-                "url": null
-            },
-            "news": [],
-            "guidance_direction": "UNKNOWN",
-            "after_hours_price": null,
-            "regular_close_price": null,
-            "after_hours_change_pct": null,
-            "volume": null,
-            "volume_ratio": null,
-            "quote_timestamp": null,
-            "score": null,
-            "signal": "SCHEDULED",
-            "summary": "Upcoming earnings; no released results yet."
-        },
-        {
-            "symbol": "WWD",
-            "earnings_date": "2026-11-18",
-            "session": "AMC",
-            "eps_estimate": 2.5351,
-            "eps_actual": null,
-            "eps_surprise_pct": null,
-            "revenue_estimate": 1152631270.0,
-            "revenue_actual": null,
-            "revenue_surprise_pct": null,
-            "finnhub_surprise_pct": null,
-            "name": "Woodward, Inc.",
-            "market_cap_millions": 17988.31,
-            "market_cap_category": "Large Cap",
-            "status": "upcoming",
-            "detected_at": "2026-11-18T03:08:51.108286+00:00",
-            "sec_filing": {
-                "status": "not_checked",
-                "url": null
-            },
-            "news": [],
-            "guidance_direction": "UNKNOWN",
-            "after_hours_price": null,
-            "regular_close_price": null,
-            "after_hours_change_pct": null,
-            "volume": null,
-            "volume_ratio": null,
-            "quote_timestamp": null,
-            "score": null,
-            "signal": "SCHEDULED",
-            "summary": "Upcoming earnings; no released results yet."
-        },
-        {
-            "symbol": "ZIM",
-            "earnings_date": "2026-11-18",
-            "session": "BMO",
-            "eps_estimate": 3.8456,
-            "eps_actual": null,
-            "eps_surprise_pct": null,
-            "revenue_estimate": 2536528342.0,
-            "revenue_actual": null,
-            "revenue_surprise_pct": null,
-            "finnhub_surprise_pct": null,
-            "name": "ZIM Integrated Shipping Services Ltd",
-            "market_cap_millions": 3424.02,
-            "market_cap_category": "Mid Cap",
-            "status": "upcoming",
-            "detected_at": "2026-11-18T03:08:51.108292+00:00",
-            "sec_filing": {
-                "status": "not_checked",
-                "url": null
-            },
-            "news": [],
-            "guidance_direction": "UNKNOWN",
-            "after_hours_price": null,
-            "regular_close_price": null,
-            "after_hours_change_pct": null,
-            "volume": null,
-            "volume_ratio": null,
-            "quote_timestamp": null,
-            "score": null,
-            "signal": "SCHEDULED",
-            "summary": "Upcoming earnings; no released results yet."
-        },
-        {
             "symbol": "A",
             "earnings_date": "2026-11-23",
             "session": "AMC",
@@ -619,7 +15,7 @@
             "market_cap_millions": 48553.78310598624,
             "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-18T03:08:51.108199+00:00",
+            "detected_at": "2026-11-18T12:35:45.837235+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -651,7 +47,7 @@
             "market_cap_millions": 5188.425826778761,
             "market_cap_category": "Mid Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-18T03:08:51.108204+00:00",
+            "detected_at": "2026-11-18T12:35:45.837241+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -683,7 +79,7 @@
             "market_cap_millions": 6063.0243314328045,
             "market_cap_category": "Mid Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-18T03:08:51.108210+00:00",
+            "detected_at": "2026-11-18T12:35:45.837246+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -715,7 +111,39 @@
             "market_cap_millions": 14770.365650040652,
             "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-18T03:08:51.108216+00:00",
+            "detected_at": "2026-11-18T12:35:45.837252+00:00",
+            "sec_filing": {
+                "status": "not_checked",
+                "url": null
+            },
+            "news": [],
+            "guidance_direction": "UNKNOWN",
+            "after_hours_price": null,
+            "regular_close_price": null,
+            "after_hours_change_pct": null,
+            "volume": null,
+            "volume_ratio": null,
+            "quote_timestamp": null,
+            "score": null,
+            "signal": "SCHEDULED",
+            "summary": "Upcoming earnings; no released results yet."
+        },
+        {
+            "symbol": "CENT",
+            "earnings_date": "2026-11-23",
+            "session": "AMC",
+            "eps_estimate": -0.0592,
+            "eps_actual": null,
+            "eps_surprise_pct": null,
+            "revenue_estimate": 611510400.0,
+            "revenue_actual": null,
+            "revenue_surprise_pct": null,
+            "finnhub_surprise_pct": null,
+            "name": "Central Garden & Pet Co",
+            "market_cap_millions": 2574.961945126523,
+            "market_cap_category": "Mid Cap",
+            "status": "upcoming",
+            "detected_at": "2026-11-18T12:35:45.837258+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -747,7 +175,7 @@
             "market_cap_millions": 2672.283418959632,
             "market_cap_category": "Mid Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-18T03:08:51.108221+00:00",
+            "detected_at": "2026-11-18T12:35:45.837263+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -779,71 +207,7 @@
             "market_cap_millions": 12527.134595439697,
             "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-18T03:08:51.108227+00:00",
-            "sec_filing": {
-                "status": "not_checked",
-                "url": null
-            },
-            "news": [],
-            "guidance_direction": "UNKNOWN",
-            "after_hours_price": null,
-            "regular_close_price": null,
-            "after_hours_change_pct": null,
-            "volume": null,
-            "volume_ratio": null,
-            "quote_timestamp": null,
-            "score": null,
-            "signal": "SCHEDULED",
-            "summary": "Upcoming earnings; no released results yet."
-        },
-        {
-            "symbol": "HPE",
-            "earnings_date": "2026-11-23",
-            "session": "AMC",
-            "eps_estimate": 1.291,
-            "eps_actual": null,
-            "eps_surprise_pct": null,
-            "revenue_estimate": 14553130339.0,
-            "revenue_actual": null,
-            "revenue_surprise_pct": null,
-            "finnhub_surprise_pct": null,
-            "name": "Hewlett Packard Enterprise Company",
-            "market_cap_millions": 61182.848621764235,
-            "market_cap_category": "Large Cap",
-            "status": "upcoming",
-            "detected_at": "2026-11-18T03:08:51.108233+00:00",
-            "sec_filing": {
-                "status": "not_checked",
-                "url": null
-            },
-            "news": [],
-            "guidance_direction": "UNKNOWN",
-            "after_hours_price": null,
-            "regular_close_price": null,
-            "after_hours_change_pct": null,
-            "volume": null,
-            "volume_ratio": null,
-            "quote_timestamp": null,
-            "score": null,
-            "signal": "SCHEDULED",
-            "summary": "Upcoming earnings; no released results yet."
-        },
-        {
-            "symbol": "J",
-            "earnings_date": "2026-11-23",
-            "session": "AMC",
-            "eps_estimate": 2.1671,
-            "eps_actual": null,
-            "eps_surprise_pct": null,
-            "revenue_estimate": 2606261955.0,
-            "revenue_actual": null,
-            "revenue_surprise_pct": null,
-            "finnhub_surprise_pct": null,
-            "name": "Jacobs Solutions Inc",
-            "market_cap_millions": 18519.020483805405,
-            "market_cap_category": "Large Cap",
-            "status": "upcoming",
-            "detected_at": "2026-11-18T03:08:51.108239+00:00",
+            "detected_at": "2026-11-18T12:35:45.837269+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -875,7 +239,7 @@
             "market_cap_millions": 185913.2366315925,
             "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-18T03:08:51.108089+00:00",
+            "detected_at": "2026-11-18T12:35:45.837129+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -907,7 +271,7 @@
             "market_cap_millions": 53340.97975490115,
             "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-18T03:08:51.108101+00:00",
+            "detected_at": "2026-11-18T12:35:45.837135+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -939,7 +303,7 @@
             "market_cap_millions": 2363.307595969835,
             "market_cap_category": "Mid Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-18T03:08:51.108110+00:00",
+            "detected_at": "2026-11-18T12:35:45.837144+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -971,7 +335,7 @@
             "market_cap_millions": 20637.20605512917,
             "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-18T03:08:51.108122+00:00",
+            "detected_at": "2026-11-18T12:35:45.837151+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -1003,7 +367,7 @@
             "market_cap_millions": 5353.34583317439,
             "market_cap_category": "Mid Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-18T03:08:51.108133+00:00",
+            "detected_at": "2026-11-18T12:35:45.837167+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -1035,7 +399,7 @@
             "market_cap_millions": 205233.992668972,
             "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-18T03:08:51.108140+00:00",
+            "detected_at": "2026-11-18T12:35:45.837178+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -1067,7 +431,7 @@
             "market_cap_millions": 6658.332922430569,
             "market_cap_category": "Mid Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-18T03:08:51.108147+00:00",
+            "detected_at": "2026-11-18T12:35:45.837185+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -1099,7 +463,7 @@
             "market_cap_millions": 25890.420473715993,
             "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-18T03:08:51.108152+00:00",
+            "detected_at": "2026-11-18T12:35:45.837191+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -1131,7 +495,7 @@
             "market_cap_millions": 2237.4046436268,
             "market_cap_category": "Mid Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-18T03:08:51.108158+00:00",
+            "detected_at": "2026-11-18T12:35:45.837197+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -1163,7 +527,7 @@
             "market_cap_millions": 130884.66291187478,
             "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-18T03:08:51.108164+00:00",
+            "detected_at": "2026-11-18T12:35:45.837202+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -1195,7 +559,7 @@
             "market_cap_millions": 5002.401920806436,
             "market_cap_category": "Mid Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-18T03:08:51.108170+00:00",
+            "detected_at": "2026-11-18T12:35:45.837208+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -1227,7 +591,7 @@
             "market_cap_millions": 15414.827500713269,
             "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-18T03:08:51.108176+00:00",
+            "detected_at": "2026-11-18T12:35:45.837213+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -1259,7 +623,7 @@
             "market_cap_millions": 14254.484586694998,
             "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-18T03:08:51.108181+00:00",
+            "detected_at": "2026-11-18T12:35:45.837218+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -1291,7 +655,7 @@
             "market_cap_millions": 47674.62,
             "market_cap_category": "Large Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-18T03:08:51.108187+00:00",
+            "detected_at": "2026-11-18T12:35:45.837224+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -1323,7 +687,103 @@
             "market_cap_millions": 7383.32,
             "market_cap_category": "Mid Cap",
             "status": "upcoming",
-            "detected_at": "2026-11-18T03:08:51.108193+00:00",
+            "detected_at": "2026-11-18T12:35:45.837230+00:00",
+            "sec_filing": {
+                "status": "not_checked",
+                "url": null
+            },
+            "news": [],
+            "guidance_direction": "UNKNOWN",
+            "after_hours_price": null,
+            "regular_close_price": null,
+            "after_hours_change_pct": null,
+            "volume": null,
+            "volume_ratio": null,
+            "quote_timestamp": null,
+            "score": null,
+            "signal": "SCHEDULED",
+            "summary": "Upcoming earnings; no released results yet."
+        },
+        {
+            "symbol": "BZ",
+            "earnings_date": "2026-11-25",
+            "session": "BMO",
+            "eps_estimate": 1.9289,
+            "eps_actual": null,
+            "eps_surprise_pct": null,
+            "revenue_estimate": 2529260099.0,
+            "revenue_actual": null,
+            "revenue_surprise_pct": null,
+            "finnhub_surprise_pct": null,
+            "name": "KANZHUN LIMITED",
+            "market_cap_millions": 6132.10952026446,
+            "market_cap_category": "Mid Cap",
+            "status": "upcoming",
+            "detected_at": "2026-11-18T12:35:45.837091+00:00",
+            "sec_filing": {
+                "status": "not_checked",
+                "url": null
+            },
+            "news": [],
+            "guidance_direction": "UNKNOWN",
+            "after_hours_price": null,
+            "regular_close_price": null,
+            "after_hours_change_pct": null,
+            "volume": null,
+            "volume_ratio": null,
+            "quote_timestamp": null,
+            "score": null,
+            "signal": "SCHEDULED",
+            "summary": "Upcoming earnings; no released results yet."
+        },
+        {
+            "symbol": "DE",
+            "earnings_date": "2026-11-25",
+            "session": "AMC",
+            "eps_estimate": 4.1688,
+            "eps_actual": null,
+            "eps_surprise_pct": null,
+            "revenue_estimate": 10677445374.0,
+            "revenue_actual": null,
+            "revenue_surprise_pct": null,
+            "finnhub_surprise_pct": null,
+            "name": "Deere & Co",
+            "market_cap_millions": 175048.89370373977,
+            "market_cap_category": "Large Cap",
+            "status": "upcoming",
+            "detected_at": "2026-11-18T12:35:45.837113+00:00",
+            "sec_filing": {
+                "status": "not_checked",
+                "url": null
+            },
+            "news": [],
+            "guidance_direction": "UNKNOWN",
+            "after_hours_price": null,
+            "regular_close_price": null,
+            "after_hours_change_pct": null,
+            "volume": null,
+            "volume_ratio": null,
+            "quote_timestamp": null,
+            "score": null,
+            "signal": "SCHEDULED",
+            "summary": "Upcoming earnings; no released results yet."
+        },
+        {
+            "symbol": "DIDIY",
+            "earnings_date": "2026-11-25",
+            "session": "UNKNOWN",
+            "eps_estimate": -0.3502,
+            "eps_actual": null,
+            "eps_surprise_pct": null,
+            "revenue_estimate": 66724743120.0,
+            "revenue_actual": null,
+            "revenue_surprise_pct": null,
+            "finnhub_surprise_pct": null,
+            "name": "DiDi Global Inc",
+            "market_cap_millions": 14333.605644,
+            "market_cap_category": "Large Cap",
+            "status": "upcoming",
+            "detected_at": "2026-11-18T12:35:45.837122+00:00",
             "sec_filing": {
                 "status": "not_checked",
                 "url": null
@@ -1342,8 +802,8 @@
         }
     ],
     "status": "complete",
-    "last_refresh": "2026-11-18T03:08:51.108320+00:00",
-    "last_attempt": "2026-11-18T03:05:48.278587+00:00",
+    "last_refresh": "2026-11-18T12:35:45.837281+00:00",
+    "last_attempt": "2026-11-18T12:35:27.051387+00:00",
     "error": null,
     "sources": {
         "finnhub": "earnings calendar and headlines",
@@ -1352,8 +812,8 @@
         "scoring": "local deterministic rules; no trade execution"
     },
     "diagnostics": {
-        "calendar_rows": 520,
-        "eligible_rows": 38,
-        "excluded_rows": 482
+        "calendar_rows": 331,
+        "eligible_rows": 25,
+        "excluded_rows": 306
     }
 }
