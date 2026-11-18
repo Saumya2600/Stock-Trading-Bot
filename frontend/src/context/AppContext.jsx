@@ -64,9 +64,17 @@ export function AppProvider({ children }) {
           ]);
           if (resReports.ok) {
             const reportsData = await resReports.json();
-            setBotSignals({ signals: Object.keys(reportsData).filter(k => !k.startsWith('_')) });
+            const reportSymbols = Object.keys(reportsData).filter(k => !k.startsWith('_'));
+            setBotSignals({ signals: reportSymbols });
             setResearchReports(reportsData);
-            setResearchStatus({ status: "idle" });
+            // The static snapshot carries the run metadata; without it the
+            // Research engine card reads "None yet" / 0 even after a real cycle.
+            setResearchStatus({
+              status: "idle",
+              last_run: reportsData._last_run || null,
+              research_count: reportSymbols.length,
+              research_symbols: reportSymbols,
+            });
             setBotOnline(true);
           }
           if (resState.ok) {
@@ -140,8 +148,16 @@ export function AppProvider({ children }) {
               const fallbackReports = await fallbackRes.json();
               const hasPicks = Object.keys(fallbackReports).filter(k => !k.startsWith('_')).length > 0;
               if (hasPicks) {
+                const fallbackSymbols = Object.keys(fallbackReports).filter(k => !k.startsWith('_'));
                 setResearchReports(fallbackReports);
-                setBotSignals(prev => prev || { signals: Object.keys(fallbackReports).filter(k => !k.startsWith('_')) });
+                setBotSignals(prev => prev || { signals: fallbackSymbols });
+                setResearchStatus(prev => (prev?.last_run ? prev : {
+                  ...(prev || {}),
+                  status: prev?.status || 'idle',
+                  last_run: fallbackReports._last_run || null,
+                  research_count: fallbackSymbols.length,
+                  research_symbols: fallbackSymbols,
+                }));
                 gotFreshData = true;
               }
             }
