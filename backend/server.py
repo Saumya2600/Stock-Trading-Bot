@@ -106,13 +106,24 @@ def get_signals():
 
 @api.get("/research")
 def get_research():
+    """Committed snapshot first.
+
+    This process loads reports at boot and never sees the workflow's later
+    commits, so serving ``state.research_reports`` shows yesterday's picks
+    under today's run count. Read the same committed copy ``/reports.json``
+    uses and only fall back to memory when that read fails.
+    """
+    committed = _committed_json("reports.json")
+    if isinstance(committed, dict) and committed:
+        return committed
     return state.research_reports
 
 @api.get("/research_status")
 def get_research_status():
-    symbol_keys = [key for key in state.research_reports.keys() if not key.startswith("_")]
+    reports = get_research()
+    symbol_keys = [key for key in reports.keys() if not key.startswith("_")]
     return {
-        "last_run": state.research_reports.get("_last_run"),
+        "last_run": reports.get("_last_run"),
         "market_open": is_market_open(),
         "next_market_open_sec": seconds_until_market_open(),
         "research_symbols": symbol_keys,
