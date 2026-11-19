@@ -1,0 +1,105 @@
+name: CAD Zone Watch
+
+# Runs through the North American day in UTC; the script itself decides whether
+# the Toronto session is actually open and does nothing when it is not.
+#   13:00 UTC = 09:00 ET, 21:00 UTC = 17:00 ET (EDT) / 16:00 ET (EST)
+# Offset from :00 so GitHub's congested scheduler does not bunch the runs.
+on:
+  schedule:
+    - cron: '4,19,34,49 13-21 * * 1-5'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  # Shares the data-sync group: research, trades and this watcher all commit.
+  group: stock-bot-data-sync
+  cancel-in-progress: false
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+        with:
+          ref: main
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install Dependencies
+        run: |
+          cd backend
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Watch Buy Zones
+        env:
+          ALERT_EMAIL_TO: ${{ secrets.ALERT_EMAIL_TO }}
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+        run: |
+          cd backend
+          python zone_watch.py
+
+      - name: Commit zone state
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          # checked_at changes every run, so a plain diff would commit every 15
+          # minutes. Commit when the in-zone list changes, and otherwise only
+          # twice an hour so the published quotes stay reasonably fresh.
+          python - <<'PY'
+          import json, os, subprocess
+
+          def read(path):
+              try:
+                  with open(path, encoding="utf-8") as handle:
+                      return json.load(handle)
+              except Exception:
+                  return {}
+
+          new = read("zone_alerts.json")
+          try:
+              old = json.loads(subprocess.run(
+                  ["git", "show", "HEAD:zone_alerts.json"],
+                  capture_output=True, text=True,
+              ).stdout or "{}")
+          except Exception:
+              old = {}
+
+          tickers = lambda data: [item.get("ticker") for item in (data.get("entries") or [])]
+          changed = tickers(new) != tickers(old)
+          minute = int((new.get("checked_at") or "00:00")[14:16] or 0)
+          hourly = minute < 20
+
+          if not (changed or hourly):
+              for path in ("zone_alerts.json", "frontend/public/zone_alerts.json"):
+                  subprocess.run(["git", "checkout", "--", path], check=False)
+              print("Zone list unchanged; skipping commit")
+              raise SystemExit(3)
+          PY
+          status=$?
+          if [ "$status" = "3" ]; then
+            exit 0
+          fi
+          git add zone_alerts.json frontend/public/zone_alerts.json || true
+          if git diff --cached --quiet; then
+            echo "No zone change to commit"
+            exit 0
+          fi
+          git commit -m "Automated Zone Watch: $(date -u '+%a %b %d %H:%M:%S UTC %Y')"
+          for attempt in 1 2 3; do
+            if git push; then
+              exit 0
+            fi
+            git pull --rebase --autostash origin main
+          done
+          echo "Push failed after retries"
+          exit 1

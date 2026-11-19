@@ -137,7 +137,7 @@ function LongTermPlan({ row }) {
   );
 }
 
-function EquityCard({ row }) {
+function EquityCard({ row, livePrice }) {
   return (
     <article className="glass-card cad-card">
       <header className="cad-card__head">
@@ -149,6 +149,9 @@ function EquityCard({ row }) {
           <div className="cad-card__name">{row.name}</div>
         </div>
         <div className="cad-card__price">${row.price.toLocaleString('en-US', { minimumFractionDigits: 2 })}</div>
+        {livePrice != null && (
+          <div className="cad-now">now ${livePrice.toLocaleString('en-US', { minimumFractionDigits: 2 })}</div>
+        )}
       </header>
 
       <div className="cad-metrics">
@@ -176,7 +179,7 @@ function EquityCard({ row }) {
   );
 }
 
-function EtfCard({ row }) {
+function EtfCard({ row, livePrice }) {
   const mix = [
     ['stock', row.mix?.stock, 'var(--primary)'],
     ['bond', row.mix?.bond, 'var(--warning)'],
@@ -195,6 +198,9 @@ function EtfCard({ row }) {
         </div>
         <div style={{ textAlign: 'right' }}>
           <div className="cad-card__price">${row.price.toLocaleString('en-US', { minimumFractionDigits: 2 })}</div>
+          {livePrice != null && (
+            <div className="cad-now">now ${livePrice.toLocaleString('en-US', { minimumFractionDigits: 2 })}</div>
+          )}
           <div style={{ marginTop: '0.35rem' }}><Premium value={row.premium_pct} /></div>
         </div>
       </header>
@@ -246,6 +252,43 @@ function EtfCard({ row }) {
         <span className="cad-card__stamp">{row.as_of}</span>
       </footer>
     </article>
+  );
+}
+
+/* Written by the intraday workflow. Only rendered while the Toronto session
+   is open, so a stale file never pretends to be a live price. */
+function LiveStrip({ watch }) {
+  if (!watch || !watch.session_open) return null;
+
+  const checked = watch.checked_at ? new Date(watch.checked_at) : null;
+  const when = checked
+    ? checked.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })
+    : 'just now';
+  const entries = watch.entries || [];
+
+  return (
+    <div className={`cad-live ${entries.length ? 'is-hot' : ''}`} role="status">
+      <div className="cad-live__head">
+        <span className="cad-live__dot" aria-hidden="true" />
+        <span className="cad-live__title">Live check · {when}</span>
+        <span className="cad-live__count">
+          {entries.length ? `${entries.length} in buy zone` : 'nothing in a zone'}
+        </span>
+      </div>
+      {entries.length > 0 && (
+        <ul className="cad-live__list">
+          {entries.map(entry => (
+            <li key={entry.ticker}>
+              <span className="ticker">{entry.ticker}</span>
+              <span className="cad-live__price">${entry.price.toFixed(2)}</span>
+              <span className="cad-live__zone">
+                zone ${entry.zone_low.toFixed(2)}–${entry.zone_high.toFixed(2)}
+              </span>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
   );
 }
 
@@ -312,6 +355,33 @@ export default function CanadaPage() {
   const [snapshot, setSnapshot] = useState(null);
   const [status, setStatus] = useState('loading');
   const [tab, setTab] = useState('equities');
+  const [watch, setWatch] = useState(null);
+
+  useEffect(() => {
+    // Missing file is normal before the first intraday run, so a 404 is not
+    // an error here.
+    const loadWatch = async () => {
+      const stamp = Date.now();
+      const urls = [`/zone_alerts.json?t=${stamp}`];
+      if (API_BASE) urls.push(`${API_BASE}/zone_alerts.json?t=${stamp}`);
+
+      for (const url of urls) {
+        try {
+          const response = await fetch(url);
+          if (!response.ok) continue;
+          const data = await response.json();
+          if (data && data.checked_at) {
+            setWatch(data);
+            return;
+          }
+        } catch {
+          /* try the next source */
+        }
+      }
+    };
+
+    loadWatch();
+  }, []);
 
   useEffect(() => {
     // The committed snapshot ships with the site, so it is tried first. A
@@ -381,6 +451,8 @@ export default function CanadaPage() {
         </div>
       </div>
 
+      <LiveStrip watch={watch} />
+
       {status === 'ready' && snapshot?.picks && <PicksSummary picks={snapshot.picks} />}
 
       <div className="segmented" role="group" aria-label="Canadian universe">
@@ -429,8 +501,8 @@ export default function CanadaPage() {
         <Reveal className="cad-grid" y={26} stagger={0.05}>
           {rows.map(row => (
             tab === 'etfs'
-              ? <EtfCard key={row.symbol} row={row} />
-              : <EquityCard key={row.symbol} row={row} />
+              ? <EtfCard key={row.symbol} row={row} livePrice={watch?.quotes?.[row.symbol]?.price} />
+              : <EquityCard key={row.symbol} row={row} livePrice={watch?.quotes?.[row.symbol]?.price} />
           ))}
         </Reveal>
       )}

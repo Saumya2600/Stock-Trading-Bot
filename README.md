@@ -62,6 +62,27 @@ listings, so the Canada page labels every row *View only* and the trader never s
 symbols. For tradable exposure, use the US cross-listing (`SHOP`, `RY`, `TD`, `CNQ`, `ENB`,
 `CP`).
 
+### Intraday buy-zone alerts
+
+`backend/zone_watch.py` re-reads the zones from `canada.json`, pulls one batched
+15-minute quote download for the whole Canadian list during the Toronto
+session, and writes `zone_alerts.json` with the current price of every name and
+the rows sitting inside their buy zone. The Canada page renders that file as a
+live strip and shows `now $x` beside each daily price.
+
+`zone_watch.yml` runs it every 15 minutes through the trading day. A name alerts
+once per day, so a price that hovers in the zone does not spam you. Set three
+repository secrets to get email, all optional:
+
+| Secret | Value |
+| --- | --- |
+| `ALERT_EMAIL_TO` | where the alert should land |
+| `GMAIL_USER` | the sending Gmail address |
+| `GMAIL_APP_PASSWORD` | a Gmail **app password** (Google Account → Security → 2-Step Verification → App passwords) |
+
+Without them the watcher still runs: alerts appear in the workflow log, in
+`zone_alerts.json`, and on the dashboard. Never use the account password.
+
 The JSON files at the repo root are written by the backend and re-committed by CI. They are
 the reason the dashboard has data to show when the Render service is asleep, so they are
 deliberately tracked — do not add them to `.gitignore`.
@@ -84,6 +105,7 @@ deliberately tracked — do not add them to `.gitignore`.
 | --- | --- | --- |
 | `research_bot.yml` | 13:00 and 21:15 UTC, Mon–Fri | Full research cycle: candidates → filings → grading → picks |
 | `trade_bot.yml` | every 5 min, 13:00–21:00, Mon–Fri | Executes qualifying signals on the paper account |
+| `zone_watch.yml` | every 15 min, 13:00–21:00, Mon–Fri | Live CAD quotes, buy-zone entry alerts and optional email |
 | `reset_paper_account.yml` | manual | Closes every position and resets tracked metrics |
 
 ### External trigger (cron-job.org)
