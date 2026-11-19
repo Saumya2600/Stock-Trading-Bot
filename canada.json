@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-19T02:48:29.687343+00:00",
+  "generated_at": "2026-11-19T12:38:17.034363+00:00",
   "source": "Yahoo Finance via yfinance",
   "currency": "CAD",
   "note": "Research only. Alpaca paper accounts cannot trade TSX or TSXV listings.",
@@ -32,7 +32,26 @@
         "tone": "negative",
         "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
       },
-      "name": "Royal Bank of Canada"
+      "name": "Royal Bank of Canada",
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Long trend intact, short term soft. No reason to pause contributions.",
+        "sma50": 281.8,
+        "sma200": 263.53,
+        "above_sma50": false,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -9.9,
+        "max_drawdown_1y_pct": -10.9,
+        "volatility_pct": 16.1,
+        "return_1y_pct": 34.1,
+        "reasons": [
+          "3.3% above its 200-day average.",
+          "3.4% below its 50-day average.",
+          "9.9% off its one-year high.",
+          "About 16% annualized volatility over the past year."
+        ]
+      }
     },
     {
       "symbol": "TD.TO",
@@ -61,7 +80,26 @@
         "tone": "negative",
         "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
       },
-      "name": "The Toronto-Dominion Bank"
+      "name": "The Toronto-Dominion Bank",
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Long trend intact, short term soft. No reason to pause contributions.",
+        "sma50": 170.62,
+        "sma200": 154.82,
+        "above_sma50": false,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -7.3,
+        "max_drawdown_1y_pct": -8.0,
+        "volatility_pct": 18.0,
+        "return_1y_pct": 48.6,
+        "reasons": [
+          "7.1% above its 200-day average.",
+          "2.8% below its 50-day average.",
+          "7.3% off its one-year high.",
+          "About 18% annualized volatility over the past year."
+        ]
+      }
     },
     {
       "symbol": "BNS.TO",
@@ -78,11 +116,11 @@
         "sma50": 129.63,
         "rsi14": 33.7,
         "atr14": 2.64,
-        "support": 124.83,
+        "support": 124.84,
         "resistance": 135.4,
         "zone_low": 129.57,
         "zone_high": 131.68,
-        "stop": 124.17,
+        "stop": 124.18,
         "target_one": 135.4,
         "target_two": 135.71,
         "reward_risk": 0.74,
@@ -90,7 +128,26 @@
         "tone": "negative",
         "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
       },
-      "name": "The Bank of Nova Scotia"
+      "name": "The Bank of Nova Scotia",
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Long trend intact, short term soft. No reason to pause contributions.",
+        "sma50": 129.63,
+        "sma200": 114.61,
+        "above_sma50": false,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -7.0,
+        "max_drawdown_1y_pct": -11.5,
+        "volatility_pct": 19.1,
+        "return_1y_pct": 37.4,
+        "reasons": [
+          "9.2% above its 200-day average.",
+          "3.5% below its 50-day average.",
+          "7.0% off its one-year high.",
+          "About 19% annualized volatility over the past year."
+        ]
+      }
     },
     {
       "symbol": "BMO.TO",
@@ -119,7 +176,26 @@
         "tone": "negative",
         "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
       },
-      "name": "Bank of Montreal"
+      "name": "Bank of Montreal",
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Long trend intact, short term soft. No reason to pause contributions.",
+        "sma50": 238.91,
+        "sma200": 222.96,
+        "above_sma50": false,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -9.3,
+        "max_drawdown_1y_pct": -11.4,
+        "volatility_pct": 19.8,
+        "return_1y_pct": 40.8,
+        "reasons": [
+          "4.2% above its 200-day average.",
+          "2.8% below its 50-day average.",
+          "9.3% off its one-year high.",
+          "About 20% annualized volatility over the past year."
+        ]
+      }
     },
     {
       "symbol": "NA.TO",
@@ -148,7 +224,26 @@
         "tone": "negative",
         "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
       },
-      "name": "National Bank of Canada"
+      "name": "National Bank of Canada",
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Long trend intact, short term soft. No reason to pause contributions.",
+        "sma50": 208.65,
+        "sma200": 203.91,
+        "above_sma50": false,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -12.1,
+        "max_drawdown_1y_pct": -16.4,
+        "volatility_pct": 20.1,
+        "return_1y_pct": 30.6,
+        "reasons": [
+          "0.8% above its 200-day average.",
+          "1.5% below its 50-day average.",
+          "12.1% off its one-year high.",
+          "About 20% annualized volatility over the past year."
+        ]
+      }
     },
     {
       "symbol": "MFC.TO",
@@ -177,7 +272,26 @@
         "tone": "negative",
         "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
       },
-      "name": "Manulife Financial Corporation"
+      "name": "Manulife Financial Corporation",
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Long trend intact, short term soft. No reason to pause contributions.",
+        "sma50": 61.88,
+        "sma200": 55.7,
+        "above_sma50": false,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -3.9,
+        "max_drawdown_1y_pct": -12.7,
+        "volatility_pct": 19.9,
+        "return_1y_pct": 36.2,
+        "reasons": [
+          "10.7% above its 200-day average.",
+          "0.3% below its 50-day average.",
+          "3.9% off its one-year high.",
+          "About 20% annualized volatility over the past year."
+        ]
+      }
     },
     {
       "symbol": "IFC.TO",
@@ -206,7 +320,26 @@
         "tone": "warning",
         "detail": "Above the zone but not stretched. A pullback toward the 20-day is the better entry."
       },
-      "name": "Intact Financial Corporation"
+      "name": "Intact Financial Corporation",
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Above both averages. Keep buying on your normal schedule.",
+        "sma50": 259.5,
+        "sma200": 264.36,
+        "above_sma50": true,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -7.1,
+        "max_drawdown_1y_pct": -21.3,
+        "volatility_pct": 22.1,
+        "return_1y_pct": 1.5,
+        "reasons": [
+          "6.6% above its 200-day average.",
+          "8.6% above its 50-day average.",
+          "7.1% off its one-year high.",
+          "About 22% annualized volatility over the past year."
+        ]
+      }
     },
     {
       "symbol": "CNQ.TO",
@@ -235,7 +368,26 @@
         "tone": "negative",
         "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
       },
-      "name": "Canadian Natural Resources Limited"
+      "name": "Canadian Natural Resources Limited",
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Long trend intact, short term soft. No reason to pause contributions.",
+        "sma50": 71.06,
+        "sma200": 64.22,
+        "above_sma50": false,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -16.8,
+        "max_drawdown_1y_pct": -18.7,
+        "volatility_pct": 32.1,
+        "return_1y_pct": 43.0,
+        "reasons": [
+          "1.6% above its 200-day average.",
+          "8.2% below its 50-day average.",
+          "16.8% off its one-year high.",
+          "About 32% annualized volatility over the past year."
+        ]
+      }
     },
     {
       "symbol": "SU.TO",
@@ -264,7 +416,26 @@
         "tone": "negative",
         "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
       },
-      "name": "Suncor Energy Inc."
+      "name": "Suncor Energy Inc.",
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Long trend intact, short term soft. No reason to pause contributions.",
+        "sma50": 100.91,
+        "sma200": 89.05,
+        "above_sma50": false,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -16.5,
+        "max_drawdown_1y_pct": -19.8,
+        "volatility_pct": 29.6,
+        "return_1y_pct": 51.9,
+        "reasons": [
+          "4.5% above its 200-day average.",
+          "7.7% below its 50-day average.",
+          "16.5% off its one-year high.",
+          "About 30% annualized volatility over the past year."
+        ]
+      }
     },
     {
       "symbol": "CVE.TO",
@@ -293,7 +464,26 @@
         "tone": "negative",
         "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
       },
-      "name": "Cenovus Energy Inc."
+      "name": "Cenovus Energy Inc.",
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Long trend intact, short term soft. No reason to pause contributions.",
+        "sma50": 44.04,
+        "sma200": 38.77,
+        "above_sma50": false,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -17.3,
+        "max_drawdown_1y_pct": -20.4,
+        "volatility_pct": 37.3,
+        "return_1y_pct": 54.6,
+        "reasons": [
+          "0.8% above its 200-day average.",
+          "11.3% below its 50-day average.",
+          "17.3% off its one-year high.",
+          "About 37% annualized volatility over the past year."
+        ]
+      }
     },
     {
       "symbol": "ENB.TO",
@@ -322,7 +512,26 @@
         "tone": "positive",
         "detail": "Price is inside the pullback zone."
       },
-      "name": "Enbridge Inc."
+      "name": "Enbridge Inc.",
+      "long_term": {
+        "verdict": "wait",
+        "tone": "warning",
+        "action": "Trading under its 200-day average. New money waits, or goes in smaller chunks until it reclaims.",
+        "sma50": 66.4,
+        "sma200": 70.63,
+        "above_sma50": true,
+        "above_sma200": false,
+        "drawdown_from_high_pct": -14.2,
+        "max_drawdown_1y_pct": -17.3,
+        "volatility_pct": 17.6,
+        "return_1y_pct": 4.6,
+        "reasons": [
+          "5.2% below its 200-day average.",
+          "0.8% above its 50-day average.",
+          "14.2% off its one-year high.",
+          "About 18% annualized volatility over the past year."
+        ]
+      }
     },
     {
       "symbol": "TRP.TO",
@@ -351,7 +560,26 @@
         "tone": "warning",
         "detail": "Above the zone but not stretched. A pullback toward the 20-day is the better entry."
       },
-      "name": "TC Energy Corporation"
+      "name": "TC Energy Corporation",
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Above both averages. Keep buying on your normal schedule.",
+        "sma50": 86.62,
+        "sma200": 88.01,
+        "above_sma50": true,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -7.2,
+        "max_drawdown_1y_pct": -16.5,
+        "volatility_pct": 18.6,
+        "return_1y_pct": 25.8,
+        "reasons": [
+          "3.9% above its 200-day average.",
+          "5.5% above its 50-day average.",
+          "7.2% off its one-year high.",
+          "About 19% annualized volatility over the past year."
+        ]
+      }
     },
     {
       "symbol": "CP.TO",
@@ -380,7 +608,26 @@
         "tone": "warning",
         "detail": "Above the zone but not stretched. A pullback toward the 20-day is the better entry."
       },
-      "name": "Canadian Pacific Kansas City Limited"
+      "name": "Canadian Pacific Kansas City Limited",
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Above both averages. Keep buying on your normal schedule.",
+        "sma50": 125.52,
+        "sma200": 121.1,
+        "above_sma50": true,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -1.3,
+        "max_drawdown_1y_pct": -12.0,
+        "volatility_pct": 21.9,
+        "return_1y_pct": 38.7,
+        "reasons": [
+          "10.3% above its 200-day average.",
+          "6.4% above its 50-day average.",
+          "1.3% off its one-year high.",
+          "About 22% annualized volatility over the past year."
+        ]
+      }
     },
     {
       "symbol": "CNR.TO",
@@ -409,7 +656,26 @@
         "tone": "warning",
         "detail": "Above the zone but not stretched. A pullback toward the 20-day is the better entry."
       },
-      "name": "Canadian National Railway Company"
+      "name": "Canadian National Railway Company",
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Above both averages. Keep buying on your normal schedule.",
+        "sma50": 172.48,
+        "sma200": 161.98,
+        "above_sma50": true,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -2.0,
+        "max_drawdown_1y_pct": -11.8,
+        "volatility_pct": 21.4,
+        "return_1y_pct": 39.8,
+        "reasons": [
+          "10.7% above its 200-day average.",
+          "4.0% above its 50-day average.",
+          "2.0% off its one-year high.",
+          "About 21% annualized volatility over the past year."
+        ]
+      }
     },
     {
       "symbol": "WCN.TO",
@@ -438,7 +704,26 @@
         "tone": "positive",
         "detail": "Price is inside the pullback zone."
       },
-      "name": "Waste Connections, Inc."
+      "name": "Waste Connections, Inc.",
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Above both averages. Keep buying on your normal schedule.",
+        "sma50": 239.08,
+        "sma200": 228.49,
+        "above_sma50": true,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -7.5,
+        "max_drawdown_1y_pct": -17.0,
+        "volatility_pct": 26.8,
+        "return_1y_pct": 9.3,
+        "reasons": [
+          "14.2% above its 200-day average.",
+          "9.1% above its 50-day average.",
+          "7.5% off its one-year high.",
+          "About 27% annualized volatility over the past year."
+        ]
+      }
     },
     {
       "symbol": "ATD.TO",
@@ -467,7 +752,26 @@
         "tone": "positive",
         "detail": "Price is inside the pullback zone."
       },
-      "name": "Alimentation Couche-Tard Inc."
+      "name": "Alimentation Couche-Tard Inc.",
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Above both averages. Keep buying on your normal schedule.",
+        "sma50": 80.81,
+        "sma200": 82.43,
+        "above_sma50": true,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -11.0,
+        "max_drawdown_1y_pct": -17.6,
+        "volatility_pct": 26.1,
+        "return_1y_pct": 20.7,
+        "reasons": [
+          "0.7% above its 200-day average.",
+          "2.7% above its 50-day average.",
+          "11.0% off its one-year high.",
+          "About 26% annualized volatility over the past year."
+        ]
+      }
     },
     {
       "symbol": "QSR.TO",
@@ -496,7 +800,26 @@
         "tone": "positive",
         "detail": "Price is inside the pullback zone."
       },
-      "name": "Restaurant Brands International Inc."
+      "name": "Restaurant Brands International Inc.",
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Above both averages. Keep buying on your normal schedule.",
+        "sma50": 104.09,
+        "sma200": 102.46,
+        "above_sma50": true,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -5.4,
+        "max_drawdown_1y_pct": -11.4,
+        "volatility_pct": 24.5,
+        "return_1y_pct": 16.5,
+        "reasons": [
+          "3.3% above its 200-day average.",
+          "1.7% above its 50-day average.",
+          "5.4% off its one-year high.",
+          "About 24% annualized volatility over the past year."
+        ]
+      }
     },
     {
       "symbol": "L.TO",
@@ -525,7 +848,26 @@
         "tone": "warning",
         "detail": "Above the zone but not stretched. A pullback toward the 20-day is the better entry."
       },
-      "name": "Loblaw Companies Limited"
+      "name": "Loblaw Companies Limited",
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Above both averages. Keep buying on your normal schedule.",
+        "sma50": 65.91,
+        "sma200": 63.84,
+        "above_sma50": true,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -0.7,
+        "max_drawdown_1y_pct": -14.5,
+        "volatility_pct": 21.8,
+        "return_1y_pct": 17.3,
+        "reasons": [
+          "10.5% above its 200-day average.",
+          "7.1% above its 50-day average.",
+          "0.7% off its one-year high.",
+          "About 22% annualized volatility over the past year."
+        ]
+      }
     },
     {
       "symbol": "SHOP.TO",
@@ -554,7 +896,26 @@
         "tone": "negative",
         "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
       },
-      "name": "Shopify Inc."
+      "name": "Shopify Inc.",
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Long trend intact, short term soft. No reason to pause contributions.",
+        "sma50": 214.71,
+        "sma200": 181.14,
+        "above_sma50": false,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -20.9,
+        "max_drawdown_1y_pct": -44.1,
+        "volatility_pct": 58.1,
+        "return_1y_pct": 1.8,
+        "reasons": [
+          "10.3% above its 200-day average.",
+          "7.0% below its 50-day average.",
+          "20.9% off its one-year high.",
+          "About 58% annualized volatility over the past year."
+        ]
+      }
     },
     {
       "symbol": "CSU.TO",
@@ -583,7 +944,26 @@
         "tone": "negative",
         "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
       },
-      "name": "Constellation Software Inc."
+      "name": "Constellation Software Inc.",
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Above both averages. Keep buying on your normal schedule.",
+        "sma50": 3135.44,
+        "sma200": 2817.22,
+        "above_sma50": true,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -5.8,
+        "max_drawdown_1y_pct": -34.0,
+        "volatility_pct": 43.7,
+        "return_1y_pct": 2.8,
+        "reasons": [
+          "18.0% above its 200-day average.",
+          "6.0% above its 50-day average.",
+          "5.8% off its one-year high.",
+          "About 44% annualized volatility over the past year."
+        ]
+      }
     },
     {
       "symbol": "TRI.TO",
@@ -612,7 +992,26 @@
         "tone": "negative",
         "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
       },
-      "name": "Thomson Reuters Corporation"
+      "name": "Thomson Reuters Corporation",
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Above both averages. Keep buying on your normal schedule.",
+        "sma50": 148.84,
+        "sma200": 131.13,
+        "above_sma50": true,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -18.3,
+        "max_drawdown_1y_pct": -41.7,
+        "volatility_pct": 52.5,
+        "return_1y_pct": -18.0,
+        "reasons": [
+          "13.6% above its 200-day average.",
+          "0.1% above its 50-day average.",
+          "18.3% off its one-year high.",
+          "About 52% annualized volatility over the past year."
+        ]
+      }
     },
     {
       "symbol": "NTR.TO",
@@ -641,7 +1040,26 @@
         "tone": "negative",
         "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
       },
-      "name": "Nutrien Ltd."
+      "name": "Nutrien Ltd.",
+      "long_term": {
+        "verdict": "wait",
+        "tone": "warning",
+        "action": "Trading under its 200-day average. New money waits, or goes in smaller chunks until it reclaims.",
+        "sma50": 101.0,
+        "sma200": 97.77,
+        "above_sma50": false,
+        "above_sma200": false,
+        "drawdown_from_high_pct": -15.4,
+        "max_drawdown_1y_pct": -24.3,
+        "volatility_pct": 32.0,
+        "return_1y_pct": 21.9,
+        "reasons": [
+          "3.3% below its 200-day average.",
+          "6.4% below its 50-day average.",
+          "15.4% off its one-year high.",
+          "About 32% annualized volatility over the past year."
+        ]
+      }
     },
     {
       "symbol": "AEM.TO",
@@ -670,7 +1088,26 @@
         "tone": "negative",
         "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
       },
-      "name": "Agnico Eagle Mines Limited"
+      "name": "Agnico Eagle Mines Limited",
+      "long_term": {
+        "verdict": "wait",
+        "tone": "warning",
+        "action": "Trading under its 200-day average. New money waits, or goes in smaller chunks until it reclaims.",
+        "sma50": 261.97,
+        "sma200": 260.18,
+        "above_sma50": false,
+        "above_sma200": false,
+        "drawdown_from_high_pct": -32.4,
+        "max_drawdown_1y_pct": -44.3,
+        "volatility_pct": 49.5,
+        "return_1y_pct": 0.5,
+        "reasons": [
+          "10.8% below its 200-day average.",
+          "11.4% below its 50-day average.",
+          "32.4% off its one-year high.",
+          "About 50% annualized volatility over the past year."
+        ]
+      }
     },
     {
       "symbol": "BCE.TO",
@@ -699,7 +1136,26 @@
         "tone": "negative",
         "detail": "Price sits 2.8 ATR above the 20-day average. Chasing here is late."
       },
-      "name": "BCE Inc."
+      "name": "BCE Inc.",
+      "long_term": {
+        "verdict": "wait",
+        "tone": "warning",
+        "action": "Trading under its 200-day average. New money waits, or goes in smaller chunks until it reclaims.",
+        "sma50": 29.6,
+        "sma200": 31.73,
+        "above_sma50": true,
+        "above_sma200": false,
+        "drawdown_from_high_pct": -8.9,
+        "max_drawdown_1y_pct": -22.9,
+        "volatility_pct": 20.4,
+        "return_1y_pct": 3.5,
+        "reasons": [
+          "0.3% below its 200-day average.",
+          "6.9% above its 50-day average.",
+          "8.9% off its one-year high.",
+          "About 20% annualized volatility over the past year."
+        ]
+      }
     },
     {
       "symbol": "T.TO",
@@ -728,7 +1184,26 @@
         "tone": "negative",
         "detail": "Price sits 2.1 ATR above the 20-day average. Chasing here is late."
       },
-      "name": "TELUS Corporation"
+      "name": "TELUS Corporation",
+      "long_term": {
+        "verdict": "wait",
+        "tone": "warning",
+        "action": "Trading under its 200-day average. New money waits, or goes in smaller chunks until it reclaims.",
+        "sma50": 12.19,
+        "sma200": 14.95,
+        "above_sma50": true,
+        "above_sma200": false,
+        "drawdown_from_high_pct": -25.9,
+        "max_drawdown_1y_pct": -40.0,
+        "volatility_pct": 28.0,
+        "return_1y_pct": -21.9,
+        "reasons": [
+          "8.8% below its 200-day average.",
+          "11.9% above its 50-day average.",
+          "25.9% off its one-year high.",
+          "About 28% annualized volatility over the past year."
+        ]
+      }
     }
   ],
   "etfs": [
@@ -760,8 +1235,27 @@
         "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
       },
       "name": "iShares Core Equity ETF Portfolio",
-      "nav": 44.33,
-      "premium_pct": -0.72,
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Long trend intact, short term soft. No reason to pause contributions.",
+        "sma50": 45.36,
+        "sma200": 43.58,
+        "above_sma50": false,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -4.9,
+        "max_drawdown_1y_pct": -8.3,
+        "volatility_pct": 13.6,
+        "return_1y_pct": 15.2,
+        "reasons": [
+          "1.0% above its 200-day average.",
+          "3.0% below its 50-day average.",
+          "4.9% off its one-year high.",
+          "About 14% annualized volatility over the past year."
+        ]
+      },
+      "nav": 44.0,
+      "premium_pct": 0.02,
       "yield_pct": 1.61,
       "mer_pct": 0.2,
       "aum": 23418476544,
@@ -795,25 +1289,6 @@
       "mix": {
         "stock": 99.5,
         "cash": 0.4
-      },
-      "long_term": {
-        "verdict": "accumulate",
-        "tone": "positive",
-        "action": "Long trend intact, short term soft. No reason to pause contributions.",
-        "sma50": 45.36,
-        "sma200": 43.58,
-        "above_sma50": false,
-        "above_sma200": true,
-        "drawdown_from_high_pct": -4.9,
-        "max_drawdown_1y_pct": -8.3,
-        "volatility_pct": 13.6,
-        "return_1y_pct": 15.2,
-        "reasons": [
-          "1.0% above its 200-day average.",
-          "3.0% below its 50-day average.",
-          "4.9% off its one-year high.",
-          "About 14% annualized volatility over the past year."
-        ]
       }
     },
     {
@@ -844,22 +1319,6 @@
         "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
       },
       "name": "Vanguard S&P 500 Index ETF",
-      "nav": 186.25,
-      "premium_pct": -0.03,
-      "yield_pct": 0.86,
-      "mer_pct": 0.09,
-      "aum": 35908136960,
-      "holdings": [
-        {
-          "symbol": "VOO",
-          "name": "Vanguard S&P 500 ETF",
-          "weight_pct": 100.0
-        }
-      ],
-      "mix": {
-        "stock": 100.0,
-        "cash": -0.1
-      },
       "long_term": {
         "verdict": "accumulate",
         "tone": "positive",
@@ -878,6 +1337,22 @@
           "5.8% off its one-year high.",
           "About 14% annualized volatility over the past year."
         ]
+      },
+      "nav": 186.15,
+      "premium_pct": 0.03,
+      "yield_pct": 0.86,
+      "mer_pct": 0.09,
+      "aum": 35908136960,
+      "holdings": [
+        {
+          "symbol": "VOO",
+          "name": "Vanguard S&P 500 ETF",
+          "weight_pct": 100.0
+        }
+      ],
+      "mix": {
+        "stock": 100.0,
+        "cash": -0.1
       }
     },
     {
@@ -908,22 +1383,6 @@
         "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
       },
       "name": "CI Invesco NASDAQ 100 Index ETF CAD Units",
-      "nav": 45.86,
-      "premium_pct": 0.63,
-      "yield_pct": 0.32,
-      "mer_pct": 0.21,
-      "aum": 3940676096,
-      "holdings": [
-        {
-          "symbol": "QQQM",
-          "name": "Invesco NASDAQ 100 ETF",
-          "weight_pct": 99.34
-        }
-      ],
-      "mix": {
-        "stock": 99.2,
-        "cash": 0.8
-      },
       "long_term": {
         "verdict": "wait",
         "tone": "warning",
@@ -942,6 +1401,22 @@
           "12.6% off its one-year high.",
           "About 22% annualized volatility over the past year."
         ]
+      },
+      "nav": 46.15,
+      "premium_pct": 0.0,
+      "yield_pct": 0.32,
+      "mer_pct": 0.21,
+      "aum": 3940676096,
+      "holdings": [
+        {
+          "symbol": "QQQM",
+          "name": "Invesco NASDAQ 100 ETF",
+          "weight_pct": 99.34
+        }
+      ],
+      "mix": {
+        "stock": 99.2,
+        "cash": 0.8
       }
     },
     {
@@ -972,8 +1447,27 @@
         "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
       },
       "name": "iShares Core Growth ETF Portfolio",
-      "nav": 37.8,
-      "premium_pct": -0.53,
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Long trend intact, short term soft. No reason to pause contributions.",
+        "sma50": 38.48,
+        "sma200": 37.31,
+        "above_sma50": false,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -4.0,
+        "max_drawdown_1y_pct": -7.1,
+        "volatility_pct": 12.2,
+        "return_1y_pct": 12.2,
+        "reasons": [
+          "0.8% above its 200-day average.",
+          "2.3% below its 50-day average.",
+          "4.0% off its one-year high.",
+          "About 12% annualized volatility over the past year."
+        ]
+      },
+      "nav": 37.59,
+      "premium_pct": 0.03,
       "yield_pct": 1.95,
       "mer_pct": 0.2,
       "aum": 5242861568,
@@ -1013,25 +1507,6 @@
         "stock": 79.9,
         "bond": 19.5,
         "cash": 0.6
-      },
-      "long_term": {
-        "verdict": "accumulate",
-        "tone": "positive",
-        "action": "Long trend intact, short term soft. No reason to pause contributions.",
-        "sma50": 38.48,
-        "sma200": 37.31,
-        "above_sma50": false,
-        "above_sma200": true,
-        "drawdown_from_high_pct": -4.0,
-        "max_drawdown_1y_pct": -7.1,
-        "volatility_pct": 12.2,
-        "return_1y_pct": 12.2,
-        "reasons": [
-          "0.8% above its 200-day average.",
-          "2.3% below its 50-day average.",
-          "4.0% off its one-year high.",
-          "About 12% annualized volatility over the past year."
-        ]
       }
     },
     {
@@ -1062,8 +1537,27 @@
         "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
       },
       "name": "iShares Core Balanced ETF Portfolio",
-      "nav": 35.28,
-      "premium_pct": -0.4,
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Long trend intact, short term soft. No reason to pause contributions.",
+        "sma50": 35.72,
+        "sma200": 34.93,
+        "above_sma50": false,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -3.6,
+        "max_drawdown_1y_pct": -6.1,
+        "volatility_pct": 10.1,
+        "return_1y_pct": 9.1,
+        "reasons": [
+          "0.6% above its 200-day average.",
+          "1.6% below its 50-day average.",
+          "3.6% off its one-year high.",
+          "About 10% annualized volatility over the past year."
+        ]
+      },
+      "nav": 35.13,
+      "premium_pct": 0.03,
       "yield_pct": 2.27,
       "mer_pct": 0.19,
       "aum": 3520407808,
@@ -1103,25 +1597,6 @@
         "stock": 59.3,
         "bond": 40.0,
         "cash": 0.6
-      },
-      "long_term": {
-        "verdict": "accumulate",
-        "tone": "positive",
-        "action": "Long trend intact, short term soft. No reason to pause contributions.",
-        "sma50": 35.72,
-        "sma200": 34.93,
-        "above_sma50": false,
-        "above_sma200": true,
-        "drawdown_from_high_pct": -3.6,
-        "max_drawdown_1y_pct": -6.1,
-        "volatility_pct": 10.1,
-        "return_1y_pct": 9.1,
-        "reasons": [
-          "0.6% above its 200-day average.",
-          "1.6% below its 50-day average.",
-          "3.6% off its one-year high.",
-          "About 10% annualized volatility over the past year."
-        ]
       }
     },
     {
@@ -1152,8 +1627,27 @@
         "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
       },
       "name": "iShares Core S&P/TSX Capped Composite Index ETF",
-      "nav": 56.46,
-      "premium_pct": -2.11,
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Long trend intact, short term soft. No reason to pause contributions.",
+        "sma50": 57.12,
+        "sma200": 55.16,
+        "above_sma50": false,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -6.0,
+        "max_drawdown_1y_pct": -9.3,
+        "volatility_pct": 14.1,
+        "return_1y_pct": 17.5,
+        "reasons": [
+          "0.2% above its 200-day average.",
+          "3.2% below its 50-day average.",
+          "6.0% off its one-year high.",
+          "About 14% annualized volatility over the past year."
+        ]
+      },
+      "nav": 55.29,
+      "premium_pct": -0.04,
       "yield_pct": 1.98,
       "mer_pct": 0.06,
       "aum": 36402282496,
@@ -1192,25 +1686,6 @@
       "mix": {
         "stock": 99.8,
         "cash": 0.2
-      },
-      "long_term": {
-        "verdict": "accumulate",
-        "tone": "positive",
-        "action": "Long trend intact, short term soft. No reason to pause contributions.",
-        "sma50": 57.12,
-        "sma200": 55.16,
-        "above_sma50": false,
-        "above_sma200": true,
-        "drawdown_from_high_pct": -6.0,
-        "max_drawdown_1y_pct": -9.3,
-        "volatility_pct": 14.1,
-        "return_1y_pct": 17.5,
-        "reasons": [
-          "0.2% above its 200-day average.",
-          "3.2% below its 50-day average.",
-          "6.0% off its one-year high.",
-          "About 14% annualized volatility over the past year."
-        ]
       }
     },
     {
@@ -1241,8 +1716,27 @@
         "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
       },
       "name": "iShares Core MSCI All Country World ex Canada Index ETF",
-      "nav": 56.95,
-      "premium_pct": -0.16,
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Long trend intact, short term soft. No reason to pause contributions.",
+        "sma50": 58.7,
+        "sma200": 56.27,
+        "above_sma50": false,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -5.9,
+        "max_drawdown_1y_pct": -8.2,
+        "volatility_pct": 14.8,
+        "return_1y_pct": 14.2,
+        "reasons": [
+          "1.1% above its 200-day average.",
+          "3.1% below its 50-day average.",
+          "5.9% off its one-year high.",
+          "About 15% annualized volatility over the past year."
+        ]
+      },
+      "nav": 56.83,
+      "premium_pct": 0.05,
       "yield_pct": 1.23,
       "mer_pct": 0.22,
       "aum": null,
@@ -1281,25 +1775,6 @@
       "mix": {
         "stock": 99.4,
         "cash": 0.5
-      },
-      "long_term": {
-        "verdict": "accumulate",
-        "tone": "positive",
-        "action": "Long trend intact, short term soft. No reason to pause contributions.",
-        "sma50": 58.7,
-        "sma200": 56.27,
-        "above_sma50": false,
-        "above_sma200": true,
-        "drawdown_from_high_pct": -5.9,
-        "max_drawdown_1y_pct": -8.2,
-        "volatility_pct": 14.8,
-        "return_1y_pct": 14.2,
-        "reasons": [
-          "1.1% above its 200-day average.",
-          "3.1% below its 50-day average.",
-          "5.9% off its one-year high.",
-          "About 15% annualized volatility over the past year."
-        ]
       }
     },
     {
@@ -1330,22 +1805,6 @@
         "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
       },
       "name": "Vanguard Morningstar U.S. Total Market Index ETF",
-      "nav": 139.85,
-      "premium_pct": 0.05,
-      "yield_pct": 0.79,
-      "mer_pct": 0.17,
-      "aum": 20070359040,
-      "holdings": [
-        {
-          "symbol": "VTI",
-          "name": "Vanguard MStar Total Stk Mkt ETF",
-          "weight_pct": 100.0
-        }
-      ],
-      "mix": {
-        "stock": 99.8,
-        "cash": 0.2
-      },
       "long_term": {
         "verdict": "accumulate",
         "tone": "positive",
@@ -1364,6 +1823,22 @@
           "5.6% off its one-year high.",
           "About 14% annualized volatility over the past year."
         ]
+      },
+      "nav": 139.89,
+      "premium_pct": 0.02,
+      "yield_pct": 0.79,
+      "mer_pct": 0.17,
+      "aum": 20070359040,
+      "holdings": [
+        {
+          "symbol": "VTI",
+          "name": "Vanguard MStar Total Stk Mkt ETF",
+          "weight_pct": 100.0
+        }
+      ],
+      "mix": {
+        "stock": 99.8,
+        "cash": 0.2
       }
     },
     {
@@ -1394,6 +1869,25 @@
         "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
       },
       "name": "BMO S&P 500 Index ETF (CAD)",
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Long trend intact, short term soft. No reason to pause contributions.",
+        "sma50": 118.07,
+        "sma200": 111.63,
+        "above_sma50": false,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -5.8,
+        "max_drawdown_1y_pct": -8.6,
+        "volatility_pct": 13.8,
+        "return_1y_pct": 14.4,
+        "reasons": [
+          "3.0% above its 200-day average.",
+          "2.7% below its 50-day average.",
+          "5.8% off its one-year high.",
+          "About 14% annualized volatility over the past year."
+        ]
+      },
       "nav": 114.95,
       "premium_pct": -0.02,
       "yield_pct": 0.79,
@@ -1434,25 +1928,6 @@
       "mix": {
         "stock": 100.0,
         "cash": 0.0
-      },
-      "long_term": {
-        "verdict": "accumulate",
-        "tone": "positive",
-        "action": "Long trend intact, short term soft. No reason to pause contributions.",
-        "sma50": 118.07,
-        "sma200": 111.63,
-        "above_sma50": false,
-        "above_sma200": true,
-        "drawdown_from_high_pct": -5.8,
-        "max_drawdown_1y_pct": -8.6,
-        "volatility_pct": 13.8,
-        "return_1y_pct": 14.4,
-        "reasons": [
-          "3.0% above its 200-day average.",
-          "2.7% below its 50-day average.",
-          "5.8% off its one-year high.",
-          "About 14% annualized volatility over the past year."
-        ]
       }
     },
     {
@@ -1483,8 +1958,27 @@
         "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
       },
       "name": "BMO Nasdaq 100 Equity Hedged to CAD Index ETF",
-      "nav": 181.47,
-      "premium_pct": 0.38,
+      "long_term": {
+        "verdict": "wait",
+        "tone": "warning",
+        "action": "Trading under its 200-day average. New money waits, or goes in smaller chunks until it reclaims.",
+        "sma50": 197.71,
+        "sma200": 189.79,
+        "above_sma50": false,
+        "above_sma200": false,
+        "drawdown_from_high_pct": -13.5,
+        "max_drawdown_1y_pct": -14.7,
+        "volatility_pct": 21.8,
+        "return_1y_pct": 8.5,
+        "reasons": [
+          "4.0% below its 200-day average.",
+          "7.9% below its 50-day average.",
+          "13.5% off its one-year high.",
+          "About 22% annualized volatility over the past year."
+        ]
+      },
+      "nav": 182.22,
+      "premium_pct": -0.03,
       "yield_pct": 0.24,
       "mer_pct": 0.39,
       "aum": 3069006848,
@@ -1523,25 +2017,6 @@
       "mix": {
         "stock": 100.0,
         "cash": 0.0
-      },
-      "long_term": {
-        "verdict": "wait",
-        "tone": "warning",
-        "action": "Trading under its 200-day average. New money waits, or goes in smaller chunks until it reclaims.",
-        "sma50": 197.71,
-        "sma200": 189.79,
-        "above_sma50": false,
-        "above_sma200": false,
-        "drawdown_from_high_pct": -13.5,
-        "max_drawdown_1y_pct": -14.7,
-        "volatility_pct": 21.8,
-        "return_1y_pct": 8.5,
-        "reasons": [
-          "4.0% below its 200-day average.",
-          "7.9% below its 50-day average.",
-          "13.5% off its one-year high.",
-          "About 22% annualized volatility over the past year."
-        ]
       }
     },
     {
@@ -1572,8 +2047,27 @@
         "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
       },
       "name": "iShares S&P/TSX Composite High Dividend Index ETF",
-      "nav": 40.12,
-      "premium_pct": -1.52,
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Long trend intact, short term soft. No reason to pause contributions.",
+        "sma50": 39.72,
+        "sma200": 38.02,
+        "above_sma50": false,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -2.9,
+        "max_drawdown_1y_pct": -4.9,
+        "volatility_pct": 8.6,
+        "return_1y_pct": 28.7,
+        "reasons": [
+          "3.9% above its 200-day average.",
+          "0.5% below its 50-day average.",
+          "2.9% off its one-year high.",
+          "About 9% annualized volatility over the past year."
+        ]
+      },
+      "nav": 39.51,
+      "premium_pct": -0.0,
       "yield_pct": 3.36,
       "mer_pct": 0.22,
       "aum": 4484783616,
@@ -1612,25 +2106,6 @@
       "mix": {
         "stock": 99.8,
         "cash": 0.2
-      },
-      "long_term": {
-        "verdict": "accumulate",
-        "tone": "positive",
-        "action": "Long trend intact, short term soft. No reason to pause contributions.",
-        "sma50": 39.72,
-        "sma200": 38.02,
-        "above_sma50": false,
-        "above_sma200": true,
-        "drawdown_from_high_pct": -2.9,
-        "max_drawdown_1y_pct": -4.9,
-        "volatility_pct": 8.6,
-        "return_1y_pct": 28.7,
-        "reasons": [
-          "3.9% above its 200-day average.",
-          "0.5% below its 50-day average.",
-          "2.9% off its one-year high.",
-          "About 9% annualized volatility over the past year."
-        ]
       }
     },
     {
@@ -1661,8 +2136,27 @@
         "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
       },
       "name": "Vanguard FTSE Canadian High Dividend Yield Index ETF",
-      "nav": 76.97,
-      "premium_pct": -2.3,
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Long trend intact, short term soft. No reason to pause contributions.",
+        "sma50": 77.0,
+        "sma200": 72.71,
+        "above_sma50": false,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -5.4,
+        "max_drawdown_1y_pct": -5.4,
+        "volatility_pct": 10.5,
+        "return_1y_pct": 30.5,
+        "reasons": [
+          "3.4% above its 200-day average.",
+          "2.3% below its 50-day average.",
+          "5.4% off its one-year high.",
+          "About 10% annualized volatility over the past year."
+        ]
+      },
+      "nav": 75.2,
+      "premium_pct": -0.0,
       "yield_pct": 2.99,
       "mer_pct": 0.22,
       "aum": 9454489600,
@@ -1700,25 +2194,6 @@
       ],
       "mix": {
         "stock": 100.0
-      },
-      "long_term": {
-        "verdict": "accumulate",
-        "tone": "positive",
-        "action": "Long trend intact, short term soft. No reason to pause contributions.",
-        "sma50": 77.0,
-        "sma200": 72.71,
-        "above_sma50": false,
-        "above_sma200": true,
-        "drawdown_from_high_pct": -5.4,
-        "max_drawdown_1y_pct": -5.4,
-        "volatility_pct": 10.5,
-        "return_1y_pct": 30.5,
-        "reasons": [
-          "3.4% above its 200-day average.",
-          "2.3% below its 50-day average.",
-          "5.4% off its one-year high.",
-          "About 10% annualized volatility over the past year."
-        ]
       }
     },
     {
@@ -1749,8 +2224,27 @@
         "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
       },
       "name": "BMO CA High Dividend Covered Call ETF",
-      "nav": 22.56,
-      "premium_pct": -2.13,
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Long trend intact, short term soft. No reason to pause contributions.",
+        "sma50": 22.46,
+        "sma200": 21.76,
+        "above_sma50": false,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -4.1,
+        "max_drawdown_1y_pct": -6.0,
+        "volatility_pct": 9.7,
+        "return_1y_pct": 16.8,
+        "reasons": [
+          "1.5% above its 200-day average.",
+          "1.7% below its 50-day average.",
+          "4.1% off its one-year high.",
+          "About 10% annualized volatility over the past year."
+        ]
+      },
+      "nav": 22.08,
+      "premium_pct": -0.0,
       "yield_pct": 5.96,
       "mer_pct": 0.65,
       "aum": 2508714240,
@@ -1789,25 +2283,6 @@
       "mix": {
         "stock": 99.8,
         "cash": 0.2
-      },
-      "long_term": {
-        "verdict": "accumulate",
-        "tone": "positive",
-        "action": "Long trend intact, short term soft. No reason to pause contributions.",
-        "sma50": 22.46,
-        "sma200": 21.76,
-        "above_sma50": false,
-        "above_sma200": true,
-        "drawdown_from_high_pct": -4.1,
-        "max_drawdown_1y_pct": -6.0,
-        "volatility_pct": 9.7,
-        "return_1y_pct": 16.8,
-        "reasons": [
-          "1.5% above its 200-day average.",
-          "1.7% below its 50-day average.",
-          "4.1% off its one-year high.",
-          "About 10% annualized volatility over the past year."
-        ]
       }
     },
     {
@@ -1838,8 +2313,27 @@
         "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
       },
       "name": "BMO Equal Weight Banks Index ETF",
-      "nav": 74.33,
-      "premium_pct": -2.69,
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Long trend intact, short term soft. No reason to pause contributions.",
+        "sma50": 74.54,
+        "sma200": 69.33,
+        "above_sma50": false,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -7.4,
+        "max_drawdown_1y_pct": -9.3,
+        "volatility_pct": 17.1,
+        "return_1y_pct": 37.0,
+        "reasons": [
+          "4.3% above its 200-day average.",
+          "3.0% below its 50-day average.",
+          "7.4% off its one-year high.",
+          "About 17% annualized volatility over the past year."
+        ]
+      },
+      "nav": 72.34,
+      "premium_pct": -0.01,
       "yield_pct": 2.34,
       "mer_pct": 0.28,
       "aum": 7964981760,
@@ -1878,25 +2372,6 @@
       "mix": {
         "stock": 100.0,
         "cash": 0.0
-      },
-      "long_term": {
-        "verdict": "accumulate",
-        "tone": "positive",
-        "action": "Long trend intact, short term soft. No reason to pause contributions.",
-        "sma50": 74.54,
-        "sma200": 69.33,
-        "above_sma50": false,
-        "above_sma200": true,
-        "drawdown_from_high_pct": -7.4,
-        "max_drawdown_1y_pct": -9.3,
-        "volatility_pct": 17.1,
-        "return_1y_pct": 37.0,
-        "reasons": [
-          "4.3% above its 200-day average.",
-          "3.0% below its 50-day average.",
-          "7.4% off its one-year high.",
-          "About 17% annualized volatility over the past year."
-        ]
       }
     },
     {
@@ -1927,8 +2402,27 @@
         "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
       },
       "name": "iShares S&P/TSX Capped Information Technology Index ETF",
-      "nav": 78.29,
-      "premium_pct": 0.51,
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Long trend intact, short term soft. No reason to pause contributions.",
+        "sma50": 80.29,
+        "sma200": 72.59,
+        "above_sma50": false,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -9.0,
+        "max_drawdown_1y_pct": -28.4,
+        "volatility_pct": 33.3,
+        "return_1y_pct": 3.2,
+        "reasons": [
+          "8.4% above its 200-day average.",
+          "2.0% below its 50-day average.",
+          "9.0% off its one-year high.",
+          "About 33% annualized volatility over the past year."
+        ]
+      },
+      "nav": 78.59,
+      "premium_pct": 0.13,
       "yield_pct": null,
       "mer_pct": 0.6,
       "aum": 755442624,
@@ -1966,25 +2460,6 @@
       ],
       "mix": {
         "stock": 100.0
-      },
-      "long_term": {
-        "verdict": "accumulate",
-        "tone": "positive",
-        "action": "Long trend intact, short term soft. No reason to pause contributions.",
-        "sma50": 80.29,
-        "sma200": 72.59,
-        "above_sma50": false,
-        "above_sma200": true,
-        "drawdown_from_high_pct": -9.0,
-        "max_drawdown_1y_pct": -28.4,
-        "volatility_pct": 33.3,
-        "return_1y_pct": 3.2,
-        "reasons": [
-          "8.4% above its 200-day average.",
-          "2.0% below its 50-day average.",
-          "9.0% off its one-year high.",
-          "About 33% annualized volatility over the past year."
-        ]
       }
     },
     {
@@ -2015,8 +2490,27 @@
         "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
       },
       "name": "iShares S&P/TSX Capped Energy Index ETF",
-      "nav": 28.01,
-      "premium_pct": -3.86,
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Long trend intact, short term soft. No reason to pause contributions.",
+        "sma50": 29.17,
+        "sma200": 26.54,
+        "above_sma50": false,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -14.7,
+        "max_drawdown_1y_pct": -16.5,
+        "volatility_pct": 27.6,
+        "return_1y_pct": 39.5,
+        "reasons": [
+          "1.5% above its 200-day average.",
+          "7.7% below its 50-day average.",
+          "14.7% off its one-year high.",
+          "About 28% annualized volatility over the past year."
+        ]
+      },
+      "nav": 26.94,
+      "premium_pct": -0.04,
       "yield_pct": 2.12,
       "mer_pct": 0.6,
       "aum": 2715801600,
@@ -2055,41 +2549,22 @@
       "mix": {
         "stock": 100.0,
         "cash": 0.0
-      },
-      "long_term": {
-        "verdict": "accumulate",
-        "tone": "positive",
-        "action": "Long trend intact, short term soft. No reason to pause contributions.",
-        "sma50": 29.17,
-        "sma200": 26.54,
-        "above_sma50": false,
-        "above_sma200": true,
-        "drawdown_from_high_pct": -14.7,
-        "max_drawdown_1y_pct": -16.5,
-        "volatility_pct": 27.6,
-        "return_1y_pct": 39.5,
-        "reasons": [
-          "1.5% above its 200-day average.",
-          "7.7% below its 50-day average.",
-          "14.7% off its one-year high.",
-          "About 28% annualized volatility over the past year."
-        ]
       }
     },
     {
       "symbol": "ZAG.TO",
       "ticker": "ZAG",
       "exchange": "TSX",
-      "price": 13.49,
-      "change_1d": 0.11,
-      "change_1mo": 0.62,
-      "change_3mo": 0.6,
+      "price": 13.5,
+      "change_1d": 0.15,
+      "change_1mo": 0.66,
+      "change_3mo": 0.63,
       "as_of": "2026-11-18",
       "tradable": false,
       "levels": {
         "sma20": 13.5,
         "sma50": 13.41,
-        "rsi14": 54.6,
+        "rsi14": 55.1,
         "atr14": 0.05,
         "support": 13.4,
         "resistance": 13.64,
@@ -2097,23 +2572,13 @@
         "zone_high": 13.52,
         "stop": 13.39,
         "target_one": 13.64,
-        "target_two": 13.69,
+        "target_two": 13.7,
         "reward_risk": 1.27,
         "state": "in_zone",
         "tone": "positive",
         "detail": "Price is inside the pullback zone."
       },
       "name": "BMO Aggregate Bond Index ETF",
-      "nav": 13.48,
-      "premium_pct": 0.11,
-      "yield_pct": 3.45,
-      "mer_pct": 0.09,
-      "aum": 13241412608,
-      "holdings": [],
-      "mix": {
-        "bond": 99.9,
-        "cash": 0.1
-      },
       "long_term": {
         "verdict": "accumulate",
         "tone": "positive",
@@ -2132,6 +2597,16 @@
           "1.5% off its one-year high.",
           "About 5% annualized volatility over the past year."
         ]
+      },
+      "nav": 13.49,
+      "premium_pct": 0.07,
+      "yield_pct": 3.45,
+      "mer_pct": 0.09,
+      "aum": 13241412608,
+      "holdings": [],
+      "mix": {
+        "bond": 99.9,
+        "cash": 0.1
       }
     },
     {
@@ -2162,15 +2637,6 @@
         "detail": "Price sits 4.3 ATR above the 20-day average. Chasing here is late."
       },
       "name": "Global X High Interest Savings ETF",
-      "nav": 50.06,
-      "premium_pct": 0.01,
-      "yield_pct": 2.01,
-      "mer_pct": 0.11,
-      "aum": 6656797184,
-      "holdings": [],
-      "mix": {
-        "cash": 100.0
-      },
       "long_term": {
         "verdict": "accumulate",
         "tone": "positive",
@@ -2189,6 +2655,15 @@
           "0.0% off its one-year high.",
           "About 0% annualized volatility over the past year."
         ]
+      },
+      "nav": 50.07,
+      "premium_pct": -0.01,
+      "yield_pct": 2.01,
+      "mer_pct": 0.11,
+      "aum": 6656797184,
+      "holdings": [],
+      "mix": {
+        "cash": 100.0
       }
     }
   ],
@@ -2198,10 +2673,10 @@
       {
         "ticker": "ZAG",
         "kind": "etf",
-        "price": 13.49,
-        "change_1d": 0.11,
+        "price": 13.5,
+        "change_1d": 0.15,
         "score": 85,
-        "reason": "Buy ZAG at $13.49 \u2014 inside its $13.48\u2013$13.52 buy zone. Stop $13.39, first target $13.64.",
+        "reason": "Buy ZAG at $13.50 \u2014 inside its $13.48\u2013$13.52 buy zone. Stop $13.39, first target $13.64.",
         "state": "in_zone",
         "verdict": "accumulate",
         "call": "Buy now"
@@ -2214,7 +2689,7 @@
         "score": 70,
         "reason": "Buy ENB at $66.94 \u2014 inside its $66.53\u2013$67.37 buy zone. Stop $64.21, first target $68.41.",
         "state": "in_zone",
-        "verdict": null,
+        "verdict": "wait",
         "call": "Buy now"
       },
       {
@@ -2225,11 +2700,33 @@
         "score": 70,
         "reason": "Buy WCN at $260.90 \u2014 inside its $260.73\u2013$266.73 buy zone. Stop $240.64, first target $282.18.",
         "state": "in_zone",
-        "verdict": null,
+        "verdict": "accumulate",
         "call": "Buy now"
       }
     ],
     "long_term": [
+      {
+        "ticker": "CNR",
+        "kind": "equity",
+        "price": 179.36,
+        "change_1d": -0.65,
+        "score": 100,
+        "reason": "Keep buying CNR monthly at $179.36 \u2014 above its 200-day ($161.98). Daily noise does not change a long hold.",
+        "state": "wait",
+        "verdict": "accumulate",
+        "call": "Keep buying"
+      },
+      {
+        "ticker": "CP",
+        "kind": "equity",
+        "price": 133.59,
+        "change_1d": 0.22,
+        "score": 100,
+        "reason": "Keep buying CP monthly at $133.59 \u2014 above its 200-day ($121.10). Daily noise does not change a long hold.",
+        "state": "wait",
+        "verdict": "accumulate",
+        "call": "Keep buying"
+      },
       {
         "ticker": "ZEB",
         "kind": "etf",
@@ -2237,28 +2734,6 @@
         "change_1d": -2.68,
         "score": 100,
         "reason": "Keep buying ZEB monthly at $72.33 \u2014 long trend intact, short term soft, MER 0.28%. No reason to pause contributions.",
-        "state": "below_zone",
-        "verdict": "accumulate",
-        "call": "Keep buying"
-      },
-      {
-        "ticker": "VDY",
-        "kind": "etf",
-        "price": 75.2,
-        "change_1d": -2.3,
-        "score": 100,
-        "reason": "Keep buying VDY monthly at $75.20 \u2014 long trend intact, short term soft, MER 0.22%. No reason to pause contributions.",
-        "state": "below_zone",
-        "verdict": "accumulate",
-        "call": "Keep buying"
-      },
-      {
-        "ticker": "XEI",
-        "kind": "etf",
-        "price": 39.51,
-        "change_1d": -1.57,
-        "score": 100,
-        "reason": "Keep buying XEI monthly at $39.51 \u2014 long trend intact, short term soft, MER 0.22%. No reason to pause contributions.",
         "state": "below_zone",
         "verdict": "accumulate",
         "call": "Keep buying"
