@@ -7,6 +7,34 @@ import { alpacaRequest } from '../lib/alpaca';
 const COMMITTED_REPORTS_URL =
   'https://raw.githubusercontent.com/Saumya2600/Stock-Trading-Bot/main/reports.json';
 
+// Those snapshots only change when the bot commits (a couple of times a day),
+// while the dashboard polls every 5 s. Poll the snapshots on their own slow
+// clock: pounding raw.githubusercontent.com every tick earns rate limits and
+// buys nothing. A manual refresh still bypasses the cache.
+const SNAPSHOT_REFRESH_MS = 5 * 60 * 1000;
+let snapshotCache = { at: 0, snapshotReports: null, remoteReports: null };
+
+async function loadReportSnapshots(force = false) {
+  const now = Date.now();
+  if (!force && now - snapshotCache.at < SNAPSHOT_REFRESH_MS) return snapshotCache;
+
+  const bust = `?t=${now}`;
+  const [staticRes, remoteRes] = await Promise.all([
+    fetch(`/reports.json${bust}`, { cache: 'no-store' }).catch(() => null),
+    // Plain GET: a custom Cache-Control header would force a CORS preflight
+    // that raw.githubusercontent.com does not answer.
+    fetch(`${COMMITTED_REPORTS_URL}${bust}`, { cache: 'no-store' }).catch(() => null),
+  ]);
+  const readJson = async (res) => (res && res.ok ? res.json().catch(() => null) : null);
+
+  snapshotCache = {
+    at: now,
+    snapshotReports: await readJson(staticRes),
+    remoteReports: await readJson(remoteRes),
+  };
+  return snapshotCache;
+}
+
 const AppContext = createContext(null);
 
 export const useApp = () => useContext(AppContext);
@@ -54,7 +82,7 @@ export function AppProvider({ children }) {
   }, []);
 
   useEffect(() => {
-    const fetchBotData = async () => {
+    const fetchBotData = async (force = false) => {
       try {
         const cacheBuster = `?t=${Date.now()}`;
         const fetchFresh = (url) => fetch(`${url}${url.includes('?') ? '&' : '?'}t=${Date.now()}`, {
@@ -142,19 +170,7 @@ export function AppProvider({ children }) {
           // The backend keeps reports in memory from boot, so a warm process
           // can serve last week's picks under today's run count. Read the
           // committed snapshots too and keep whichever set is newest.
-          const [snapshotRes, remoteRes] = await Promise.all([
-            fetchFresh(`/reports.json${cacheBuster}`).catch(() => ({ ok: false })),
-            // Plain GET: a custom Cache-Control header would force a CORS
-            // preflight that raw.githubusercontent.com does not answer.
-            fetch(`${COMMITTED_REPORTS_URL}${cacheBuster}`, { cache: 'no-store' })
-              .catch(() => ({ ok: false })),
-          ]);
-          const snapshotReports = snapshotRes.ok
-            ? await snapshotRes.json().catch(() => null)
-            : null;
-          const remoteReports = remoteRes.ok
-            ? await remoteRes.json().catch(() => null)
-            : null;
+          const { snapshotReports, remoteReports } = await loadReportSnapshots(force);
 
           const pickSymbols = (reports) => (reports && typeof reports === 'object')
             ? Object.keys(reports).filter(k => !k.startsWith('_'))
@@ -236,12 +252,18 @@ export function AppProvider({ children }) {
         }
       }
     };
-    window.addEventListener('refresh-dashboard-data', fetchBotData);
+    function handleManualRefresh() {
+      // Run research / Ctrl-R style refresh: skip the snapshot cache so a new
+      // commit shows up immediately.
+      fetchBotData(true);
+    }
+
+    window.addEventListener('refresh-dashboard-data', handleManualRefresh);
     fetchBotData();
     const interval = setInterval(fetchBotData, 5000);
     return () => {
       clearInterval(interval);
-      window.removeEventListener('refresh-dashboard-data', fetchBotData);
+      window.removeEventListener('refresh-dashboard-data', handleManualRefresh);
     };
   }, [API_BASE, isServerless, API_BASE_RAW]);
 
