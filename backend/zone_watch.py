@@ -200,8 +200,8 @@ def build_state(snapshot, forced=False):
         if notified.get(row["ticker"]) != today:
             fresh.append(entry)
 
-    for entry in fresh:
-        notified[entry["ticker"]] = today
+    # Deliberately not recorded here: a run without email configured, or a
+    # failed send, must not swallow the alert for the rest of the day.
 
     return {
         "checked_at": now.isoformat(),
@@ -210,6 +210,9 @@ def build_state(snapshot, forced=False):
         "entries": sorted(entries, key=lambda item: item["ticker"]),
         "notified": notified,
         "fresh": [entry["ticker"] for entry in fresh],
+        "already_alerted": sorted(
+            entry["ticker"] for entry in entries if notified.get(entry["ticker"]) == today
+        ),
     }
 
 
@@ -238,7 +241,11 @@ def main():
     fresh = state.get("fresh") or []
 
     if not fresh:
-        print("[WATCH] no new zone entries, no email sent")
+        already = state.get("already_alerted") or []
+        print(
+            "[WATCH] nothing new to send "
+            f"(in zone: {len(state.get('entries') or [])}, already alerted today: {', '.join(already) or 'none'})"
+        )
         return 0
     if not os.getenv("ALERT_EMAIL_TO"):
         print("[WATCH] no ALERT_EMAIL_TO set; alerts stay in zone_alerts.json and this log")
@@ -260,6 +267,15 @@ def main():
     if not channel:
         print("[WATCH] email not configured (RESEND_API_KEY or GMAIL_USER + GMAIL_APP_PASSWORD)")
         return 0
+
+    # Only now is it true that these names were announced today.
+    today = (state.get("checked_at") or "")[:10]
+    notified = state.get("notified") or {}
+    for ticker in fresh:
+        notified[ticker] = today
+    state["notified"] = notified
+    write_state(state)
+
     print(f"[WATCH] emailed {len(fresh)} new entries via {channel}")
     return 0
 
