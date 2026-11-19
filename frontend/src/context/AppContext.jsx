@@ -2,6 +2,11 @@ import { createContext, useContext, useState, useEffect, useRef, useCallback } f
 import { savePicksToSupabase, fetchPicksFromSupabase } from '../lib/supabase';
 import { alpacaRequest } from '../lib/alpaca';
 
+// The research workflow commits reports.json after every cycle. Read that
+// copy directly so a warm-but-stale backend process cannot hide a fresh run.
+const COMMITTED_REPORTS_URL =
+  'https://raw.githubusercontent.com/Saumya2600/Stock-Trading-Bot/main/reports.json';
+
 const AppContext = createContext(null);
 
 export const useApp = () => useContext(AppContext);
@@ -102,7 +107,6 @@ export function AppProvider({ children }) {
           let liveResearch = null;
           if (resResearch.ok) {
             liveResearch = await resResearch.json();
-            setResearchReports(liveResearch);
           }
           if (resPerf.ok) setPerformance(await resPerf.json());
           if (resPositions.ok) {
@@ -135,51 +139,82 @@ export function AppProvider({ children }) {
           }
           setBotOnline(Boolean(resSignals.ok));
 
-          // Render can return an empty in-memory state after restart. Use the
-          // GitHub Actions snapshot when live API has no report rows.
-          const liveResearchSymbols = liveResearch && typeof liveResearch === 'object'
-            ? Object.keys(liveResearch).filter(k => !k.startsWith('_'))
+          // The backend keeps reports in memory from boot, so a warm process
+          // can serve last week's picks under today's run count. Read the
+          // committed snapshots too and keep whichever set is newest.
+          const [snapshotRes, remoteRes] = await Promise.all([
+            fetchFresh(`/reports.json${cacheBuster}`).catch(() => ({ ok: false })),
+            // Plain GET: a custom Cache-Control header would force a CORS
+            // preflight that raw.githubusercontent.com does not answer.
+            fetch(`${COMMITTED_REPORTS_URL}${cacheBuster}`, { cache: 'no-store' })
+              .catch(() => ({ ok: false })),
+          ]);
+          const snapshotReports = snapshotRes.ok
+            ? await snapshotRes.json().catch(() => null)
+            : null;
+          const remoteReports = remoteRes.ok
+            ? await remoteRes.json().catch(() => null)
+            : null;
+
+          const pickSymbols = (reports) => (reports && typeof reports === 'object')
+            ? Object.keys(reports).filter(k => !k.startsWith('_'))
             : [];
-          if (!resResearch.ok || liveResearchSymbols.length === 0) {
-            let gotFreshData = false;
-            // Tier 1 fallback: static /reports.json (committed by GitHub Actions)
-            const fallbackRes = await fetch(`/reports.json${cacheBuster}`).catch(() => ({ ok: false }));
-            if (fallbackRes.ok) {
-              const fallbackReports = await fallbackRes.json();
-              const hasPicks = Object.keys(fallbackReports).filter(k => !k.startsWith('_')).length > 0;
-              if (hasPicks) {
-                const fallbackSymbols = Object.keys(fallbackReports).filter(k => !k.startsWith('_'));
-                setResearchReports(fallbackReports);
-                setBotSignals(prev => prev || { signals: fallbackSymbols });
-                setResearchStatus(prev => (prev?.last_run ? prev : {
-                  ...(prev || {}),
-                  status: prev?.status || 'idle',
-                  last_run: fallbackReports._last_run || null,
-                  research_count: fallbackSymbols.length,
-                  research_symbols: fallbackSymbols,
-                }));
-                gotFreshData = true;
-              }
+
+          const reportsStamp = (reports) => {
+            if (!reports || typeof reports !== 'object') return 0;
+            const run = Date.parse(reports._last_run || '');
+            if (Number.isFinite(run)) return run;
+            return pickSymbols(reports)
+              .map(sym => Date.parse((reports[sym] && reports[sym].updated_at) || ''))
+              .filter(Number.isFinite)
+              .reduce((max, ts) => Math.max(max, ts), 0);
+          };
+
+          const reportSources = [
+            { label: 'live API', reports: liveResearch },
+            { label: 'committed snapshot', reports: snapshotReports },
+            { label: 'github snapshot', reports: remoteReports },
+          ].filter(source => pickSymbols(source.reports).length > 0);
+
+          const freshest = reportSources.reduce(
+            (best, source) => (!best || reportsStamp(source.reports) > reportsStamp(best.reports) ? source : best),
+            null
+          );
+          const freshestSymbols = pickSymbols(freshest && freshest.reports);
+
+          if (freshest) {
+            if (freshest.label !== 'live API') {
+              console.log('[Reports] Using', freshest.label, 'over live API', liveResearch && liveResearch._last_run);
             }
-            // Tier 2 fallback: Supabase DB (Python pushes here after every research cycle)
-            if (!gotFreshData) {
-              try {
-                const { data: sbPicks, error: sbErr } = await fetchPicksFromSupabase({ days: 7, limit: 50 });
-                if (!sbErr && sbPicks && sbPicks.length > 0) {
-                  // Convert Supabase rows back to reports dict keyed by symbol (latest per symbol)
-                  const sbReports = {};
-                  sbPicks.forEach(p => {
-                    if (!sbReports[p.symbol] || p.run_date > (sbReports[p.symbol].updated_at || '').split('T')[0]) {
-                      sbReports[p.symbol] = p;
-                    }
-                  });
-                  setResearchReports(prev => (Object.keys(prev || {}).length ? prev : sbReports));
-                  setBotSignals(prev => prev || { signals: Object.keys(sbReports) });
-                  console.log('[Supabase fallback] Loaded', Object.keys(sbReports).length, 'picks from Supabase');
-                }
-              } catch (sbEx) {
-                console.warn('[Supabase fallback] Error:', sbEx);
+            setResearchReports(freshest.reports);
+            setBotSignals(prev => prev || { signals: freshestSymbols });
+            // Run time, count and symbols come from the same object the cards
+            // render, so a stale backend cannot label fresh picks with an old
+            // run time (or the other way round).
+            setResearchStatus(prev => ({
+              ...(prev || { status: 'idle' }),
+              last_run: freshest.reports._last_run || null,
+              research_count: freshestSymbols.length,
+              research_symbols: freshestSymbols,
+            }));
+          } else {
+            // Last resort: Supabase DB (Python pushes here after every cycle).
+            try {
+              const { data: sbPicks, error: sbErr } = await fetchPicksFromSupabase({ days: 7, limit: 50 });
+              if (!sbErr && sbPicks && sbPicks.length > 0) {
+                // Convert Supabase rows back to a reports dict keyed by symbol.
+                const sbReports = {};
+                sbPicks.forEach(p => {
+                  if (!sbReports[p.symbol] || p.run_date > (sbReports[p.symbol].updated_at || '').split('T')[0]) {
+                    sbReports[p.symbol] = p;
+                  }
+                });
+                setResearchReports(sbReports);
+                setBotSignals(prev => prev || { signals: Object.keys(sbReports) });
+                console.log('[Supabase fallback] Loaded', Object.keys(sbReports).length, 'picks from Supabase');
               }
+            } catch (sbEx) {
+              console.warn('[Supabase fallback] Error:', sbEx);
             }
             const fallbackState = await fetch(`/app_state.json${cacheBuster}`).catch(() => ({ ok: false }));
             if (fallbackState.ok) {
