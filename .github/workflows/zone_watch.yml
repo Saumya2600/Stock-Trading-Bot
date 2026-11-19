@@ -7,12 +7,23 @@ name: CAD Zone Watch
 on:
   schedule:
     - cron: '4,19,34,49 13-21 * * 1-5'
+  # GitHub's scheduler fired this once in 21 hours, leaving the open
+  # unwatched. The trading bot runs every few minutes through the session,
+  # so each of its completions re-checks zones. The session check still
+  # guards it, and a duplicate alert is impossible: notified is per day.
+  workflow_run:
+    workflows: ["Trading Bot (Paper Execution)"]
+    types: [completed]
   workflow_dispatch:
     inputs:
       # Manual runs land outside session hours, so a test email needs the
       # session check bypassed. Scheduled runs never set this.
       force:
         description: 'Run even when the Toronto session is closed (email test)'
+        type: boolean
+        default: false
+      test_email:
+        description: 'Send one test email and exit (checks Resend setup)'
         type: boolean
         default: false
 
@@ -50,6 +61,7 @@ jobs:
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           WATCH_FORCE: ${{ github.event.inputs.force == 'true' && '1' || '' }}
+          WATCH_TEST: ${{ github.event.inputs.test_email == 'true' && '1' || '' }}
           ALERT_EMAIL_TO: ${{ secrets.ALERT_EMAIL_TO }}
           ALERT_EMAIL_FROM: ${{ secrets.ALERT_EMAIL_FROM }}
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
@@ -88,7 +100,14 @@ jobs:
               old = {}
 
           tickers = lambda data: [item.get("ticker") for item in (data.get("entries") or [])]
-          changed = tickers(new) != tickers(old)
+          # notified must persist, or the same name is emailed on every run.
+          # An email outcome is worth keeping even when nothing else moved.
+          status = (new.get("email") or {}).get("status") or ""
+          changed = (
+              tickers(new) != tickers(old)
+              or (new.get("notified") or {}) != (old.get("notified") or {})
+              or status in ("sent", "test sent", "failed")
+          )
           minute = int((new.get("checked_at") or "00:00")[14:16] or 0)
           hourly = minute < 20
 

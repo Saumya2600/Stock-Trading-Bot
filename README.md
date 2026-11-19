@@ -70,7 +70,8 @@ session, and writes `zone_alerts.json` with the current price of every name and
 the rows sitting inside their buy zone. The Canada page renders that file as a
 live strip and shows `now $x` beside each daily price.
 
-`zone_watch.yml` runs it every 15 minutes through the trading day. A name alerts
+`zone_watch.yml` runs on every completion of the trading bot plus its own cron,
+so a busy scheduler cannot leave the open unwatched. A name alerts
 once per day, so a price that hovers in the zone does not spam you. Set three
 repository secrets to get email, all optional:
 
@@ -85,6 +86,11 @@ Gmail SMTP still works as a fallback when no Resend key is present: set
 → Security → 2-Step Verification → App passwords). Never the account password.
 With `onboarding@resend.dev` Resend only delivers to the address that owns the
 account, which is exactly what an alert needs.
+
+To confirm the email setup without waiting for a zone entry: Actions → **CAD Zone Watch**
+→ **Run workflow**, tick **test_email**, run. The outcome is recorded in `email` inside
+`zone_alerts.json` (`test sent`, `failed` with the provider error, or the missing setting).
+
 
 Without them the watcher still runs: alerts appear in the workflow log, in
 `zone_alerts.json`, and on the dashboard. Never use the account password.
@@ -111,7 +117,7 @@ deliberately tracked — do not add them to `.gitignore`.
 | --- | --- | --- |
 | `research_bot.yml` | 13:00 and 21:15 UTC, Mon–Fri | Full research cycle: candidates → filings → grading → picks |
 | `trade_bot.yml` | every 5 min, 13:00–21:00, Mon–Fri | Executes qualifying signals on the paper account |
-| `zone_watch.yml` | every 15 min, 13:00–21:00, Mon–Fri | Live CAD quotes, buy-zone entry alerts and optional email |
+| `zone_watch.yml` | after every trading-bot run, plus 13:00–21:00 Mon–Fri | Live CAD quotes, buy-zone entry alerts and optional email |
 | `reset_paper_account.yml` | manual | Closes every position and resets tracked metrics |
 
 ### External trigger (cron-job.org)

@@ -14,7 +14,8 @@ Environment (all optional):
     ALERT_EMAIL_FROM     sender; defaults to onboarding@resend.dev
     GMAIL_USER           fallback sender when no Resend key is set
     GMAIL_APP_PASSWORD   Gmail app password, never an account password
-    WATCH_FORCE=1        run outside session hours (used for manual testing)
+    WATCH_FORCE=1        run the zone check outside session hours
+    WATCH_TEST=1         send one test email and exit, zones ignored
 """
 
 import json
@@ -225,8 +226,9 @@ def write_state(state):
 
 
 def main():
+    forced = os.getenv("WATCH_FORCE") == "1"
     snapshot = _load_snapshot()
-    state = build_state(snapshot, forced=os.getenv("WATCH_FORCE") == "1")
+    state = build_state(snapshot, forced=forced)
     write_state(state)
 
     print(
@@ -238,7 +240,54 @@ def main():
     for entry in state.get("entries") or []:
         print(f"[WATCH] {entry['sentence']}")
 
+    if os.getenv("WATCH_TEST") == "1":
+        test_email = {
+            "at": state["checked_at"],
+            "tickers": [],
+            "status": "test",
+            "channel": None,
+            "error": None,
+        }
+        try:
+            test_email["channel"] = send_alert(
+                "CAD Zone Watch test",
+                "Test message from the buy-zone watcher. If this arrived, the email channel works.",
+            )
+        except Exception as error:
+            test_email["status"] = "failed"
+            test_email["error"] = str(error)[:400]
+            print(f"[WATCH] test email failed: {error}")
+        else:
+            if test_email["channel"]:
+                test_email["status"] = "test sent"
+                print(f"[WATCH] test email sent via {test_email['channel']}")
+            else:
+                test_email["status"] = "no email credentials"
+                print("[WATCH] test email skipped: no credentials")
+        state["email"] = test_email
+        write_state(state)
+        return 0 if test_email["status"] == "test sent" else 1
+
     fresh = state.get("fresh") or []
+    # Persisted in zone_alerts.json so the last attempt is readable without
+    # the Actions log, which needs a token.
+    email = {
+        "at": state["checked_at"],
+        "tickers": list(fresh),
+        "status": "",
+        "channel": None,
+        "error": None,
+    }
+
+    def finish(status, code=0):
+        email["status"] = status
+        state["email"] = email
+        write_state(state)
+        return code
+
+    if not state.get("session_open") and not forced:
+        print("[WATCH] session closed; nothing to send")
+        return finish("session closed")
 
     if not fresh:
         already = state.get("already_alerted") or []
@@ -246,27 +295,33 @@ def main():
             "[WATCH] nothing new to send "
             f"(in zone: {len(state.get('entries') or [])}, already alerted today: {', '.join(already) or 'none'})"
         )
-        return 0
+        return finish("nothing new in zone")
+
     if not os.getenv("ALERT_EMAIL_TO"):
         print("[WATCH] no ALERT_EMAIL_TO set; alerts stay in zone_alerts.json and this log")
-        return 0
+        return finish("ALERT_EMAIL_TO missing")
 
-    lines = [entry["sentence"] for entry in state["entries"] if entry["ticker"] in fresh]
+    nl = chr(10)
+    lines_in_zone = [entry["sentence"] for entry in state["entries"] if entry["ticker"] in fresh]
     body = (
-        "Canadian names inside their buy zone:\n\n"
-        + "\n".join(lines)
-        + "\n\nZones are mechanical: 20-day average plus or minus ATR. "
-        "Structure, not advice. One alert per name per day.\n"
+        "Canadian names inside their buy zone:"
+        + nl * 2
+        + nl.join(lines_in_zone)
+        + nl * 2
+        + "Zones are mechanical: 20-day average plus or minus ATR. "
+        "Structure, not advice. One alert per name per day."
+        + nl
     )
     try:
         channel = send_alert(f"CAD buy zone: {', '.join(fresh)}", body)
     except Exception as error:
         print(f"[WATCH] email failed: {error}")
-        return 1
+        email["error"] = str(error)[:400]
+        return finish("failed", 1)
 
     if not channel:
         print("[WATCH] email not configured (RESEND_API_KEY or GMAIL_USER + GMAIL_APP_PASSWORD)")
-        return 0
+        return finish("no email credentials")
 
     # Only now is it true that these names were announced today.
     today = (state.get("checked_at") or "")[:10]
@@ -274,11 +329,11 @@ def main():
     for ticker in fresh:
         notified[ticker] = today
     state["notified"] = notified
-    write_state(state)
+    email["channel"] = channel
+    finish("sent")
 
     print(f"[WATCH] emailed {len(fresh)} new entries via {channel}")
     return 0
-
 
 if __name__ == "__main__":
     sys.exit(main())
