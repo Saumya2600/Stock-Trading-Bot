@@ -58,27 +58,22 @@ CANADIAN_EQUITIES = [
 ]
 
 CANADIAN_ETFS = [
-    # Asset-allocation portfolios
     "XEQT.TO",   # iShares all-equity
+    "VFV.TO",    # Vanguard S&P 500, CAD
+    "QQC.TO",    # Invesco NASDAQ 100
     "XGRO.TO",   # iShares growth (80/20)
     "XBAL.TO",   # iShares balanced (60/40)
-    # Broad market
     "XIC.TO",    # iShares S&P/TSX composite
     "XAW.TO",    # iShares all-country ex-Canada
-    "VFV.TO",    # Vanguard S&P 500, CAD
     "VUN.TO",    # Vanguard US total market, CAD
     "ZSP.TO",    # BMO S&P 500
-    "QQC.TO",    # Invesco NASDAQ 100
     "ZQQ.TO",    # BMO NASDAQ 100
-    # Dividends and income
     "XEI.TO",    # iShares TSX high dividend
     "VDY.TO",    # Vanguard FTSE Canadian high dividend
     "ZWC.TO",    # BMO covered call high dividend
-    # Sectors
     "ZEB.TO",    # BMO equal-weight banks
     "XIT.TO",    # iShares TSX capped info tech
     "XEG.TO",    # iShares TSX capped energy
-    # Fixed income and cash
     "ZAG.TO",    # BMO aggregate bond
     "CASH.TO",   # Global X high-interest savings
 ]

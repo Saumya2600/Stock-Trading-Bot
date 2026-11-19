@@ -817,6 +817,134 @@
       }
     },
     {
+      "symbol": "VFV.TO",
+      "ticker": "VFV",
+      "exchange": "TSX",
+      "price": 186.2,
+      "change_1d": 0.03,
+      "change_1mo": -3.66,
+      "change_3mo": -0.26,
+      "as_of": "2026-11-18",
+      "tradable": false,
+      "levels": {
+        "sma20": 189.15,
+        "sma50": 191.21,
+        "rsi14": 41.6,
+        "atr14": 3.45,
+        "support": 182.71,
+        "resistance": 193.55,
+        "zone_low": 187.43,
+        "zone_high": 190.19,
+        "stop": 181.85,
+        "target_one": 193.55,
+        "target_two": 200.0,
+        "reward_risk": 0.68,
+        "state": "below_zone",
+        "tone": "negative",
+        "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
+      },
+      "name": "Vanguard S&P 500 Index ETF",
+      "nav": 186.25,
+      "premium_pct": -0.03,
+      "yield_pct": 0.86,
+      "mer_pct": 0.09,
+      "aum": 35908136960,
+      "holdings": [
+        {
+          "symbol": "VOO",
+          "name": "Vanguard S&P 500 ETF",
+          "weight_pct": 100.0
+        }
+      ],
+      "mix": {
+        "stock": 100.0,
+        "cash": -0.1
+      },
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Long trend intact, short term soft. No reason to pause contributions.",
+        "sma50": 191.21,
+        "sma200": 180.78,
+        "above_sma50": false,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -5.8,
+        "max_drawdown_1y_pct": -8.6,
+        "volatility_pct": 13.8,
+        "return_1y_pct": 14.4,
+        "reasons": [
+          "3.0% above its 200-day average.",
+          "2.6% below its 50-day average.",
+          "5.8% off its one-year high.",
+          "About 14% annualized volatility over the past year."
+        ]
+      }
+    },
+    {
+      "symbol": "QQC.TO",
+      "ticker": "QQC",
+      "exchange": "TSX",
+      "price": 46.15,
+      "change_1d": 0.61,
+      "change_1mo": -7.29,
+      "change_3mo": -3.59,
+      "as_of": "2026-11-18",
+      "tradable": false,
+      "levels": {
+        "sma20": 47.28,
+        "sma50": 49.17,
+        "rsi14": 38.7,
+        "atr14": 1.33,
+        "support": 44.28,
+        "resistance": 49.78,
+        "zone_low": 46.62,
+        "zone_high": 47.68,
+        "stop": 43.95,
+        "target_one": 49.78,
+        "target_two": 51.47,
+        "reward_risk": 0.82,
+        "state": "below_zone",
+        "tone": "negative",
+        "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
+      },
+      "name": "CI Invesco NASDAQ 100 Index ETF CAD Units",
+      "nav": 45.86,
+      "premium_pct": 0.63,
+      "yield_pct": 0.32,
+      "mer_pct": 0.21,
+      "aum": 3940676096,
+      "holdings": [
+        {
+          "symbol": "QQQM",
+          "name": "Invesco NASDAQ 100 ETF",
+          "weight_pct": 99.34
+        }
+      ],
+      "mix": {
+        "stock": 99.2,
+        "cash": 0.8
+      },
+      "long_term": {
+        "verdict": "wait",
+        "tone": "warning",
+        "action": "Trading under its 200-day average. New money waits, or goes in smaller chunks until it reclaims.",
+        "sma50": 49.17,
+        "sma200": 46.35,
+        "above_sma50": false,
+        "above_sma200": false,
+        "drawdown_from_high_pct": -12.6,
+        "max_drawdown_1y_pct": -16.0,
+        "volatility_pct": 21.7,
+        "return_1y_pct": 13.6,
+        "reasons": [
+          "0.4% below its 200-day average.",
+          "6.1% below its 50-day average.",
+          "12.6% off its one-year high.",
+          "About 22% annualized volatility over the past year."
+        ]
+      }
+    },
+    {
       "symbol": "XGRO.TO",
       "ticker": "XGRO",
       "exchange": "TSX",
@@ -1175,70 +1303,6 @@
       }
     },
     {
-      "symbol": "VFV.TO",
-      "ticker": "VFV",
-      "exchange": "TSX",
-      "price": 186.2,
-      "change_1d": 0.03,
-      "change_1mo": -3.66,
-      "change_3mo": -0.26,
-      "as_of": "2026-11-18",
-      "tradable": false,
-      "levels": {
-        "sma20": 189.15,
-        "sma50": 191.21,
-        "rsi14": 41.6,
-        "atr14": 3.45,
-        "support": 182.71,
-        "resistance": 193.55,
-        "zone_low": 187.43,
-        "zone_high": 190.19,
-        "stop": 181.85,
-        "target_one": 193.55,
-        "target_two": 200.0,
-        "reward_risk": 0.68,
-        "state": "below_zone",
-        "tone": "negative",
-        "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
-      },
-      "name": "Vanguard S&P 500 Index ETF",
-      "nav": 186.25,
-      "premium_pct": -0.03,
-      "yield_pct": 0.86,
-      "mer_pct": 0.09,
-      "aum": 35908136960,
-      "holdings": [
-        {
-          "symbol": "VOO",
-          "name": "Vanguard S&P 500 ETF",
-          "weight_pct": 100.0
-        }
-      ],
-      "mix": {
-        "stock": 100.0,
-        "cash": -0.1
-      },
-      "long_term": {
-        "verdict": "accumulate",
-        "tone": "positive",
-        "action": "Long trend intact, short term soft. No reason to pause contributions.",
-        "sma50": 191.21,
-        "sma200": 180.78,
-        "above_sma50": false,
-        "above_sma200": true,
-        "drawdown_from_high_pct": -5.8,
-        "max_drawdown_1y_pct": -8.6,
-        "volatility_pct": 13.8,
-        "return_1y_pct": 14.4,
-        "reasons": [
-          "3.0% above its 200-day average.",
-          "2.6% below its 50-day average.",
-          "5.8% off its one-year high.",
-          "About 14% annualized volatility over the past year."
-        ]
-      }
-    },
-    {
       "symbol": "VUN.TO",
       "ticker": "VUN",
       "exchange": "TSX",
@@ -1388,70 +1452,6 @@
           "2.7% below its 50-day average.",
           "5.8% off its one-year high.",
           "About 14% annualized volatility over the past year."
-        ]
-      }
-    },
-    {
-      "symbol": "QQC.TO",
-      "ticker": "QQC",
-      "exchange": "TSX",
-      "price": 46.15,
-      "change_1d": 0.61,
-      "change_1mo": -7.29,
-      "change_3mo": -3.59,
-      "as_of": "2026-11-18",
-      "tradable": false,
-      "levels": {
-        "sma20": 47.28,
-        "sma50": 49.17,
-        "rsi14": 38.7,
-        "atr14": 1.33,
-        "support": 44.28,
-        "resistance": 49.78,
-        "zone_low": 46.62,
-        "zone_high": 47.68,
-        "stop": 43.95,
-        "target_one": 49.78,
-        "target_two": 51.47,
-        "reward_risk": 0.82,
-        "state": "below_zone",
-        "tone": "negative",
-        "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
-      },
-      "name": "CI Invesco NASDAQ 100 Index ETF CAD Units",
-      "nav": 45.86,
-      "premium_pct": 0.63,
-      "yield_pct": 0.32,
-      "mer_pct": 0.21,
-      "aum": 3940676096,
-      "holdings": [
-        {
-          "symbol": "QQQM",
-          "name": "Invesco NASDAQ 100 ETF",
-          "weight_pct": 99.34
-        }
-      ],
-      "mix": {
-        "stock": 99.2,
-        "cash": 0.8
-      },
-      "long_term": {
-        "verdict": "wait",
-        "tone": "warning",
-        "action": "Trading under its 200-day average. New money waits, or goes in smaller chunks until it reclaims.",
-        "sma50": 49.17,
-        "sma200": 46.35,
-        "above_sma50": false,
-        "above_sma200": false,
-        "drawdown_from_high_pct": -12.6,
-        "max_drawdown_1y_pct": -16.0,
-        "volatility_pct": 21.7,
-        "return_1y_pct": 13.6,
-        "reasons": [
-          "0.4% below its 200-day average.",
-          "6.1% below its 50-day average.",
-          "12.6% off its one-year high.",
-          "About 22% annualized volatility over the past year."
         ]
       }
     },
