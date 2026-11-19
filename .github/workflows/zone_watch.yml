@@ -55,6 +55,9 @@ jobs:
           # checked_at changes every run, so a plain diff would commit every 15
           # minutes. Commit when the in-zone list changes, and otherwise only
           # twice an hour so the published quotes stay reasonably fresh.
+          # `run` uses bash -e, and this block exits 3 to mean "skip";
+          # don't let that kill the step before the status is read.
+          set +e
           python - <<'PY'
           import json, os, subprocess
 
