@@ -152,6 +152,82 @@ def _levels(frame, price):
     }
 
 
+def _long_term(frame, price, details):
+    """Long-hold read for a registered account: trend, drawdown, cost.
+
+    A TFSA contribution is not a trade. It is judged by whether the long trend
+    is intact, how deep the worst recent hole was, and what the fund charges —
+    not by a 20-day entry zone or a stop loss. Everything here is arithmetic on
+    the same free bars, so it adds no model calls.
+    """
+    try:
+        closes = frame["Close"].dropna()
+    except Exception:
+        return None
+    if len(closes) < 60:
+        return None
+
+    sma50 = float(closes.rolling(50).mean().iloc[-1]) if len(closes) >= 50 else None
+    sma200 = float(closes.rolling(200).mean().iloc[-1]) if len(closes) >= 200 else None
+
+    year_high = float(closes.max())
+    drawdown = round((price / year_high - 1) * 100, 1) if year_high else None
+
+    peak = closes.cummax()
+    max_drawdown = round(float((closes / peak - 1).min()) * 100, 1)
+
+    daily = closes.pct_change().dropna()
+    volatility = round(float(daily.std()) * (252 ** 0.5) * 100, 1) if len(daily) > 20 else None
+
+    year_ago = float(closes.iloc[0])
+    return_1y = round((price / year_ago - 1) * 100, 1) if year_ago else None
+
+    above50 = bool(sma50 and price >= sma50)
+    above200 = bool(sma200 and price >= sma200)
+
+    if sma200 is None:
+        verdict, tone = "hold", "warning"
+        action = "Not enough history for a 200-day trend. Buy in small, even chunks instead of one lump."
+    elif above200 and above50:
+        verdict, tone = "accumulate", "positive"
+        action = "Above both averages. Keep buying on your normal schedule."
+    elif above200:
+        verdict, tone = "accumulate", "positive"
+        action = "Long trend intact, short term soft. No reason to pause contributions."
+    else:
+        verdict, tone = "wait", "warning"
+        action = "Trading under its 200-day average. New money waits, or goes in smaller chunks until it reclaims."
+
+    reasons = []
+    if sma200:
+        gap = (price / sma200 - 1) * 100
+        reasons.append(f"{abs(gap):.1f}% {'above' if gap >= 0 else 'below'} its 200-day average.")
+    if sma50:
+        gap50 = (price / sma50 - 1) * 100
+        reasons.append(f"{abs(gap50):.1f}% {'above' if gap50 >= 0 else 'below'} its 50-day average.")
+    if drawdown is not None:
+        reasons.append(f"{abs(drawdown):.1f}% off its one-year high.")
+    if volatility is not None:
+        reasons.append(f"About {volatility:.0f}% annualized volatility over the past year.")
+    if details.get("mer_pct") is not None:
+        reasons.append(f"MER {details['mer_pct']:.2f}% — that cost compounds against a long hold.")
+
+    return {
+        "verdict": verdict,
+        "tone": tone,
+        "action": action,
+        "sma50": round(sma50, 2) if sma50 else None,
+        "sma200": round(sma200, 2) if sma200 else None,
+        "above_sma50": above50,
+        "above_sma200": above200,
+        "drawdown_from_high_pct": drawdown,
+        "max_drawdown_1y_pct": max_drawdown,
+        "volatility_pct": volatility,
+        "return_1y_pct": return_1y,
+        "reasons": reasons[:4],
+    }
+
+
 def _history_map():
     """One batched download for every symbol — a request per symbol invites 429s."""
     symbols = CANADIAN_EQUITIES + CANADIAN_ETFS
@@ -176,7 +252,15 @@ def _frame_for(frames, symbol):
 
 
 def _fund_details(symbol, with_fund_data):
-    details = {"nav": None, "yield_pct": None, "name": None, "holdings": [], "mix": {}}
+    details = {
+        "nav": None,
+        "yield_pct": None,
+        "name": None,
+        "mer_pct": None,
+        "aum": None,
+        "holdings": [],
+        "mix": {},
+    }
     try:
         info = yf.Ticker(symbol).info or {}
         details["name"] = info.get("longName") or info.get("shortName")
@@ -185,6 +269,11 @@ def _fund_details(symbol, with_fund_data):
         distribution = info.get("yield")
         if distribution:
             details["yield_pct"] = round(float(distribution) * 100, 2)
+        # Cost matters more than any entry point when the hold is decades long.
+        mer = info.get("netExpenseRatio") or info.get("annualReportExpenseRatio")
+        details["mer_pct"] = round(float(mer), 2) if mer else None
+        assets = info.get("totalAssets")
+        details["aum"] = int(assets) if assets else None
     except Exception as error:
         print(f"[CANADA] info failed for {symbol}: {error}")
 
@@ -243,8 +332,11 @@ def _row(symbol, frame, is_etf):
         row["nav"] = details["nav"]
         row["premium_pct"] = _pct(price, details["nav"]) if details["nav"] else None
         row["yield_pct"] = details["yield_pct"]
+        row["mer_pct"] = details["mer_pct"]
+        row["aum"] = details["aum"]
         row["holdings"] = details["holdings"]
         row["mix"] = details["mix"]
+        row["long_term"] = _long_term(frame, price, details)
 
     return row
 
@@ -270,9 +362,10 @@ def build_snapshot():
         "currency": "CAD",
         "note": "Research only. Alpaca paper accounts cannot trade TSX or TSXV listings.",
         "levels_note": (
-            "Buy zones are mechanical: 20-day average plus or minus a fraction of ATR, "
+            "Equity buy zones are mechanical: 20-day average plus or minus a fraction of ATR, "
             "stop under recent support, targets at resistance and an ATR projection. "
-            "Structure only, not a recommendation."
+            "ETFs are scored for a long-term registered-account hold instead: 50/200-day "
+            "trend, one-year drawdown, volatility and MER. Structure only, not a recommendation."
         ),
         "equities": equities,
         "etfs": etfs,

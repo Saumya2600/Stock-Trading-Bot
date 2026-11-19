@@ -1266,6 +1266,8 @@ a.supa-badge:hover { color: var(--on-surface); border-color: var(--hairline-stro
   font-weight: 600;
   font-variant-numeric: tabular-nums;
 }
+.cad-reasons { margin: 0; padding-left: 1.05rem; display: grid; gap: 0.22rem; font-size: 0.76rem; line-height: 1.5; color: var(--on-surface-muted); }
+.cad-levels__note { margin: 0; font-size: 0.7rem; line-height: 1.5; color: var(--on-surface-faint); }
 
 .report-card { padding: 1.5rem 1.6rem; }
 .report-card-header {

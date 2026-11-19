@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-11-18T21:28:15.862975+00:00",
+  "generated_at": "2026-11-19T02:22:35.252907+00:00",
   "source": "Yahoo Finance via yfinance",
   "currency": "CAD",
   "note": "Research only. Alpaca paper accounts cannot trade TSX or TSXV listings.",
-  "levels_note": "Buy zones are mechanical: 20-day average plus or minus a fraction of ATR, stop under recent support, targets at resistance and an ATR projection. Structure only, not a recommendation.",
+  "levels_note": "Equity buy zones are mechanical: 20-day average plus or minus a fraction of ATR, stop under recent support, targets at resistance and an ATR projection. ETFs are scored for a long-term registered-account hold instead: 50/200-day trend, one-year drawdown, volatility and MER. Structure only, not a recommendation.",
   "equities": [
     {
       "symbol": "SHOP.TO",
@@ -270,6 +270,8 @@
       "nav": 44.33,
       "premium_pct": -0.72,
       "yield_pct": 1.61,
+      "mer_pct": 0.2,
+      "aum": 23418476544,
       "holdings": [
         {
           "symbol": "XTOT.TO",
@@ -300,6 +302,25 @@
       "mix": {
         "stock": 99.5,
         "cash": 0.4
+      },
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Long trend intact, short term soft. No reason to pause contributions.",
+        "sma50": 45.36,
+        "sma200": 43.58,
+        "above_sma50": false,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -4.9,
+        "max_drawdown_1y_pct": -8.3,
+        "volatility_pct": 13.6,
+        "return_1y_pct": 15.2,
+        "reasons": [
+          "1.0% above its 200-day average.",
+          "3.0% below its 50-day average.",
+          "4.9% off its one-year high.",
+          "About 14% annualized volatility over the past year."
+        ]
       }
     },
     {
@@ -333,6 +354,8 @@
       "nav": 60.29,
       "premium_pct": -0.76,
       "yield_pct": 1.25,
+      "mer_pct": 0.22,
+      "aum": 17636964352,
       "holdings": [
         {
           "symbol": "VUN.TO",
@@ -358,6 +381,25 @@
       "mix": {
         "stock": 99.5,
         "cash": 0.4
+      },
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Long trend intact, short term soft. No reason to pause contributions.",
+        "sma50": 61.81,
+        "sma200": 59.41,
+        "above_sma50": false,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -5.1,
+        "max_drawdown_1y_pct": -8.1,
+        "volatility_pct": 13.6,
+        "return_1y_pct": 14.9,
+        "reasons": [
+          "0.7% above its 200-day average.",
+          "3.2% below its 50-day average.",
+          "5.1% off its one-year high.",
+          "About 14% annualized volatility over the past year."
+        ]
       }
     },
     {
@@ -391,6 +433,8 @@
       "nav": 45.86,
       "premium_pct": 0.63,
       "yield_pct": 0.32,
+      "mer_pct": 0.21,
+      "aum": 3940676096,
       "holdings": [
         {
           "symbol": "QQQM",
@@ -401,6 +445,25 @@
       "mix": {
         "stock": 99.2,
         "cash": 0.8
+      },
+      "long_term": {
+        "verdict": "wait",
+        "tone": "warning",
+        "action": "Trading under its 200-day average. New money waits, or goes in smaller chunks until it reclaims.",
+        "sma50": 49.17,
+        "sma200": 46.35,
+        "above_sma50": false,
+        "above_sma200": false,
+        "drawdown_from_high_pct": -12.6,
+        "max_drawdown_1y_pct": -16.0,
+        "volatility_pct": 21.7,
+        "return_1y_pct": 13.6,
+        "reasons": [
+          "0.4% below its 200-day average.",
+          "6.1% below its 50-day average.",
+          "12.6% off its one-year high.",
+          "About 22% annualized volatility over the past year."
+        ]
       }
     },
     {
@@ -434,6 +497,8 @@
       "nav": 22.56,
       "premium_pct": -2.13,
       "yield_pct": 5.96,
+      "mer_pct": 0.65,
+      "aum": 2508714240,
       "holdings": [
         {
           "symbol": "RY",
@@ -469,6 +534,25 @@
       "mix": {
         "stock": 99.8,
         "cash": 0.2
+      },
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Long trend intact, short term soft. No reason to pause contributions.",
+        "sma50": 22.46,
+        "sma200": 21.76,
+        "above_sma50": false,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -4.1,
+        "max_drawdown_1y_pct": -6.0,
+        "volatility_pct": 9.7,
+        "return_1y_pct": 16.8,
+        "reasons": [
+          "1.5% above its 200-day average.",
+          "1.7% below its 50-day average.",
+          "4.1% off its one-year high.",
+          "About 10% annualized volatility over the past year."
+        ]
       }
     },
     {
@@ -502,6 +586,8 @@
       "nav": 40.12,
       "premium_pct": -1.52,
       "yield_pct": 3.36,
+      "mer_pct": 0.22,
+      "aum": 4484783616,
       "holdings": [
         {
           "symbol": "SU.TO",
@@ -537,6 +623,25 @@
       "mix": {
         "stock": 99.8,
         "cash": 0.2
+      },
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Long trend intact, short term soft. No reason to pause contributions.",
+        "sma50": 39.72,
+        "sma200": 38.02,
+        "above_sma50": false,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -2.9,
+        "max_drawdown_1y_pct": -4.9,
+        "volatility_pct": 8.6,
+        "return_1y_pct": 28.7,
+        "reasons": [
+          "3.9% above its 200-day average.",
+          "0.5% below its 50-day average.",
+          "2.9% off its one-year high.",
+          "About 9% annualized volatility over the past year."
+        ]
       }
     },
     {
@@ -570,6 +675,8 @@
       "nav": 37.8,
       "premium_pct": -0.53,
       "yield_pct": 1.95,
+      "mer_pct": 0.2,
+      "aum": 5242861568,
       "holdings": [
         {
           "symbol": "ITOT",
@@ -606,6 +713,25 @@
         "stock": 79.9,
         "bond": 19.5,
         "cash": 0.6
+      },
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Long trend intact, short term soft. No reason to pause contributions.",
+        "sma50": 38.48,
+        "sma200": 37.31,
+        "above_sma50": false,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -4.0,
+        "max_drawdown_1y_pct": -7.1,
+        "volatility_pct": 12.2,
+        "return_1y_pct": 12.2,
+        "reasons": [
+          "0.8% above its 200-day average.",
+          "2.3% below its 50-day average.",
+          "4.0% off its one-year high.",
+          "About 12% annualized volatility over the past year."
+        ]
       }
     },
     {
@@ -639,6 +765,8 @@
       "nav": 114.95,
       "premium_pct": -0.02,
       "yield_pct": 0.79,
+      "mer_pct": 0.09,
+      "aum": null,
       "holdings": [
         {
           "symbol": "NVDA",
@@ -674,6 +802,25 @@
       "mix": {
         "stock": 100.0,
         "cash": 0.0
+      },
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Long trend intact, short term soft. No reason to pause contributions.",
+        "sma50": 118.07,
+        "sma200": 111.63,
+        "above_sma50": false,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -5.8,
+        "max_drawdown_1y_pct": -8.6,
+        "volatility_pct": 13.8,
+        "return_1y_pct": 14.4,
+        "reasons": [
+          "3.0% above its 200-day average.",
+          "2.7% below its 50-day average.",
+          "5.8% off its one-year high.",
+          "About 14% annualized volatility over the past year."
+        ]
       }
     }
   ]

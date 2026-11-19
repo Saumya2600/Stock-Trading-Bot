@@ -63,6 +63,80 @@ function Levels({ row }) {
   );
 }
 
+const VERDICT_LABEL = {
+  accumulate: 'Keep buying',
+  hold: 'Buy slowly',
+  wait: 'Wait for trend',
+};
+
+function money(value) {
+  if (value == null) return '—';
+  if (Math.abs(value) >= 1e9) return `$${(value / 1e9).toFixed(1)}B`;
+  if (Math.abs(value) >= 1e6) return `$${(value / 1e6).toFixed(0)}M`;
+  return `$${value}`;
+}
+
+function signed(value) {
+  if (value == null) return '—';
+  return `${value >= 0 ? '+' : ''}${value.toFixed(1)}%`;
+}
+
+/* An ETF in a TFSA is a decade-long hold, so a 20-day entry zone and a stop
+   loss answer the wrong question. Show the long trend, the worst hole and the
+   cost instead, and say plainly whether new money should keep going in. */
+function LongTermPlan({ row }) {
+  const plan = row.long_term;
+  if (!plan) return null;
+
+  return (
+    <div className="cad-levels">
+      <div className={`cad-state is-${plan.tone}`}>
+        <span className="cad-state__label">
+          Long-term TFSA · {VERDICT_LABEL[plan.verdict] || plan.verdict}
+        </span>
+        <span className="cad-state__detail">{plan.action}</span>
+      </div>
+
+      <dl className="cad-level-grid">
+        <div>
+          <dt>1 year</dt>
+          <dd>{signed(plan.return_1y_pct)}</dd>
+        </div>
+        <div>
+          <dt>From 1y high</dt>
+          <dd>{signed(plan.drawdown_from_high_pct)}</dd>
+        </div>
+        <div>
+          <dt>Worst 1y drop</dt>
+          <dd>{signed(plan.max_drawdown_1y_pct)}</dd>
+        </div>
+        <div>
+          <dt>Volatility</dt>
+          <dd>{plan.volatility_pct != null ? `${plan.volatility_pct.toFixed(0)}%` : '—'}</dd>
+        </div>
+        <div>
+          <dt>MER</dt>
+          <dd>{row.mer_pct != null ? `${row.mer_pct.toFixed(2)}%` : '—'}</dd>
+        </div>
+        <div>
+          <dt>Fund size</dt>
+          <dd>{money(row.aum)}</dd>
+        </div>
+      </dl>
+
+      {plan.reasons?.length > 0 && (
+        <ul className="cad-reasons">
+          {plan.reasons.map(reason => <li key={reason}>{reason}</li>)}
+        </ul>
+      )}
+
+      <p className="cad-levels__note">
+        No stop loss applies to a long hold. Trend and cost decide, not a 20-day entry zone.
+      </p>
+    </div>
+  );
+}
+
 function EquityCard({ row }) {
   return (
     <article className="glass-card cad-card">
@@ -164,7 +238,7 @@ function EtfCard({ row }) {
         </div>
       )}
 
-      <Levels row={row} />
+      <LongTermPlan row={row} />
 
       <footer className="cad-card__foot">
         <span className="chip">View only</span>
@@ -301,7 +375,8 @@ export default function CanadaPage() {
 
       <p className="cad-disclaimer">
         Prices from Yahoo Finance, delayed. Premium/discount compares the last price with the fund's published NAV.
-        No model calls are made on this page.
+        ETFs are scored for a long-term registered-account hold — 50/200-day trend, one-year drawdown, volatility and
+        MER — while equities keep a mechanical trade structure. No model calls are made on this page.
       </p>
     </div>
   );
