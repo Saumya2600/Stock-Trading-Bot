@@ -77,8 +77,14 @@ repository secrets to get email, all optional:
 | Secret | Value |
 | --- | --- |
 | `ALERT_EMAIL_TO` | where the alert should land |
-| `GMAIL_USER` | the sending Gmail address |
-| `GMAIL_APP_PASSWORD` | a Gmail **app password** (Google Account → Security → 2-Step Verification → App passwords) |
+| `RESEND_API_KEY` | Resend key from <https://resend.com/api-keys> — free tier sends 100 emails/day |
+| `ALERT_EMAIL_FROM` | optional sender; defaults to `onboarding@resend.dev` until a domain is verified |
+
+Gmail SMTP still works as a fallback when no Resend key is present: set
+`GMAIL_USER` plus `GMAIL_APP_PASSWORD` (a Gmail **app password**, Google Account
+→ Security → 2-Step Verification → App passwords). Never the account password.
+With `onboarding@resend.dev` Resend only delivers to the address that owns the
+account, which is exactly what an alert needs.
 
 Without them the watcher still runs: alerts appear in the workflow log, in
 `zone_alerts.json`, and on the dashboard. Never use the account password.

@@ -9,8 +9,10 @@ so the page can show live quotes and the names currently in a zone. If a Gmail
 app password is configured, newly entered names are also emailed once per day.
 
 Environment (all optional):
+    RESEND_API_KEY       Resend key; preferred channel, no SMTP involved
     ALERT_EMAIL_TO       destination address
-    GMAIL_USER           the sending Gmail address
+    ALERT_EMAIL_FROM     sender; defaults to onboarding@resend.dev
+    GMAIL_USER           fallback sender when no Resend key is set
     GMAIL_APP_PASSWORD   Gmail app password, never an account password
     WATCH_FORCE=1        run outside session hours (used for manual testing)
 """
@@ -23,6 +25,7 @@ from datetime import datetime, timezone
 from email.mime.text import MIMEText
 
 import pytz
+import requests
 import yfinance as yf
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -93,7 +96,23 @@ def _load_state():
         return {}
 
 
-def _email(to_addr, user, password, subject, body):
+def _email_via_resend(api_key, to_addr, sender, subject, body):
+    response = requests.post(
+        "https://api.resend.com/emails",
+        headers={"Authorization": f"Bearer {api_key}"},
+        json={
+            "from": sender,
+            "to": [to_addr],
+            "subject": subject,
+            "text": body,
+        },
+        timeout=20,
+    )
+    if not response.ok:
+        raise RuntimeError(f"Resend HTTP {response.status_code}: {response.text[:200]}")
+
+
+def _email_via_gmail(to_addr, user, password, subject, body):
     message = MIMEText(body, "plain", "utf-8")
     message["Subject"] = subject
     message["From"] = user
@@ -102,6 +121,25 @@ def _email(to_addr, user, password, subject, body):
         server.starttls()
         server.login(user, password)
         server.sendmail(user, [to_addr], message.as_string())
+
+
+def send_alert(subject, body):
+    """Resend when configured, otherwise Gmail SMTP. Returns a channel name."""
+    to_addr = os.getenv("ALERT_EMAIL_TO")
+    resend_key = os.getenv("RESEND_API_KEY")
+    user = os.getenv("GMAIL_USER")
+    password = os.getenv("GMAIL_APP_PASSWORD")
+
+    if not to_addr:
+        return None
+    if resend_key:
+        sender = os.getenv("ALERT_EMAIL_FROM") or "onboarding@resend.dev"
+        _email_via_resend(resend_key, to_addr, sender, subject, body)
+        return "resend"
+    if user and password:
+        _email_via_gmail(to_addr, user, password, subject, body)
+        return "gmail"
+    return None
 
 
 def _sentence(row, price):
@@ -198,15 +236,12 @@ def main():
         print(f"[WATCH] {entry['sentence']}")
 
     fresh = state.get("fresh") or []
-    to_addr = os.getenv("ALERT_EMAIL_TO")
-    user = os.getenv("GMAIL_USER")
-    password = os.getenv("GMAIL_APP_PASSWORD")
 
     if not fresh:
         print("[WATCH] no new zone entries, no email sent")
         return 0
-    if not (to_addr and user and password):
-        print("[WATCH] email not configured (ALERT_EMAIL_TO / GMAIL_USER / GMAIL_APP_PASSWORD)")
+    if not os.getenv("ALERT_EMAIL_TO"):
+        print("[WATCH] no ALERT_EMAIL_TO set; alerts stay in zone_alerts.json and this log")
         return 0
 
     lines = [entry["sentence"] for entry in state["entries"] if entry["ticker"] in fresh]
@@ -217,11 +252,15 @@ def main():
         "Structure, not advice. One alert per name per day.\n"
     )
     try:
-        _email(to_addr, user, password, f"CAD buy zone: {', '.join(fresh)}", body)
-        print(f"[WATCH] emailed {len(fresh)} new entries to {to_addr}")
+        channel = send_alert(f"CAD buy zone: {', '.join(fresh)}", body)
     except Exception as error:
         print(f"[WATCH] email failed: {error}")
         return 1
+
+    if not channel:
+        print("[WATCH] email not configured (RESEND_API_KEY or GMAIL_USER + GMAIL_APP_PASSWORD)")
+        return 0
+    print(f"[WATCH] emailed {len(fresh)} new entries via {channel}")
     return 0
 
 
