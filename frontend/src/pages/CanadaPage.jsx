@@ -81,9 +81,9 @@ function signed(value) {
   return `${value >= 0 ? '+' : ''}${value.toFixed(1)}%`;
 }
 
-/* An ETF in a TFSA is a decade-long hold, so a 20-day entry zone and a stop
-   loss answer the wrong question. Show the long trend, the worst hole and the
-   cost instead, and say plainly whether new money should keep going in. */
+/* The mechanical levels answer "where is the pullback entry". This block adds
+   the slower read a long hold needs: trend on the 50/200-day, how deep the
+   recent hole was, and what the fund charges. */
 function LongTermPlan({ row }) {
   const plan = row.long_term;
   if (!plan) return null;
@@ -92,7 +92,7 @@ function LongTermPlan({ row }) {
     <div className="cad-levels">
       <div className={`cad-state is-${plan.tone}`}>
         <span className="cad-state__label">
-          Long-term TFSA · {VERDICT_LABEL[plan.verdict] || plan.verdict}
+          Long-term · {VERDICT_LABEL[plan.verdict] || plan.verdict}
         </span>
         <span className="cad-state__detail">{plan.action}</span>
       </div>
@@ -131,7 +131,7 @@ function LongTermPlan({ row }) {
       )}
 
       <p className="cad-levels__note">
-        No stop loss applies to a long hold. Trend and cost decide, not a 20-day entry zone.
+        Buy zone is a 20-day pullback entry. The line above reads the 50/200-day trend and cost instead.
       </p>
     </div>
   );
@@ -238,6 +238,7 @@ function EtfCard({ row }) {
         </div>
       )}
 
+      <Levels row={row} />
       <LongTermPlan row={row} />
 
       <footer className="cad-card__foot">
@@ -375,8 +376,8 @@ export default function CanadaPage() {
 
       <p className="cad-disclaimer">
         Prices from Yahoo Finance, delayed. Premium/discount compares the last price with the fund's published NAV.
-        ETFs are scored for a long-term registered-account hold — 50/200-day trend, one-year drawdown, volatility and
-        MER — while equities keep a mechanical trade structure. No model calls are made on this page.
+        Every card also carries a mechanical buy zone, stop and target. ETFs add a long-term read from the 50/200-day
+        trend, one-year drawdown, volatility and MER. No model calls are made on this page.
       </p>
     </div>
   );

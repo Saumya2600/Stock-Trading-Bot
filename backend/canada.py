@@ -153,12 +153,12 @@ def _levels(frame, price):
 
 
 def _long_term(frame, price, details):
-    """Long-hold read for a registered account: trend, drawdown, cost.
+    """Long-hold read: trend, drawdown, cost.
 
-    A TFSA contribution is not a trade. It is judged by whether the long trend
-    is intact, how deep the worst recent hole was, and what the fund charges —
-    not by a 20-day entry zone or a stop loss. Everything here is arithmetic on
-    the same free bars, so it adds no model calls.
+    The levels answer where a pullback entry sits. This adds whether the long
+    trend is intact, how deep the worst recent hole was, and what the fund
+    charges. Everything here is arithmetic on the same free bars, so it adds no
+    model calls.
     """
     try:
         closes = frame["Close"].dropna()
@@ -364,8 +364,8 @@ def build_snapshot():
         "levels_note": (
             "Equity buy zones are mechanical: 20-day average plus or minus a fraction of ATR, "
             "stop under recent support, targets at resistance and an ATR projection. "
-            "ETFs are scored for a long-term registered-account hold instead: 50/200-day "
-            "trend, one-year drawdown, volatility and MER. Structure only, not a recommendation."
+            "ETFs additionally report a long-term read: 50/200-day trend, one-year "
+            "drawdown, volatility and MER. Structure only, not a recommendation."
         ),
         "equities": equities,
         "etfs": etfs,

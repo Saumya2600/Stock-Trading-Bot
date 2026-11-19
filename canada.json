@@ -3,7 +3,7 @@
   "source": "Yahoo Finance via yfinance",
   "currency": "CAD",
   "note": "Research only. Alpaca paper accounts cannot trade TSX or TSXV listings.",
-  "levels_note": "Equity buy zones are mechanical: 20-day average plus or minus a fraction of ATR, stop under recent support, targets at resistance and an ATR projection. ETFs are scored for a long-term registered-account hold instead: 50/200-day trend, one-year drawdown, volatility and MER. Structure only, not a recommendation.",
+  "levels_note": "Buy zones are mechanical: 20-day average plus or minus a fraction of ATR, stop under recent support, targets at resistance and an ATR projection. ETFs add a long-term read: 50/200-day trend, one-year drawdown, volatility and MER. Structure only, not a recommendation.",
   "equities": [
     {
       "symbol": "SHOP.TO",
