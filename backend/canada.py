@@ -24,24 +24,63 @@ PUBLIC_DIR = os.path.join(BASE_DIR, "frontend", "public")
 OUTPUT_NAME = "canada.json"
 
 CANADIAN_EQUITIES = [
-    "SHOP.TO",   # Shopify
+    # Financials
     "RY.TO",     # Royal Bank of Canada
     "TD.TO",     # Toronto-Dominion
-    "CNQ.TO",    # Canadian Natural Resources
-    "ENB.TO",    # Enbridge
-    "CP.TO",     # Canadian Pacific Kansas City
-    "SU.TO",     # Suncor
+    "BNS.TO",    # Bank of Nova Scotia
+    "BMO.TO",    # Bank of Montreal
+    "NA.TO",     # National Bank of Canada
     "MFC.TO",    # Manulife
+    "IFC.TO",    # Intact Financial
+    # Energy
+    "CNQ.TO",    # Canadian Natural Resources
+    "SU.TO",     # Suncor
+    "CVE.TO",    # Cenovus
+    "ENB.TO",    # Enbridge
+    "TRP.TO",    # TC Energy
+    # Rail and industrials
+    "CP.TO",     # Canadian Pacific Kansas City
+    "CNR.TO",    # Canadian National Railway
+    "WCN.TO",    # Waste Connections
+    # Consumer
+    "ATD.TO",    # Alimentation Couche-Tard
+    "QSR.TO",    # Restaurant Brands International
+    "L.TO",      # Loblaw
+    # Technology
+    "SHOP.TO",   # Shopify
+    "CSU.TO",    # Constellation Software
+    "TRI.TO",    # Thomson Reuters
+    # Materials and telecom
+    "NTR.TO",    # Nutrien
+    "AEM.TO",    # Agnico Eagle Mines
+    "BCE.TO",    # BCE
+    "T.TO",      # Telus
 ]
 
 CANADIAN_ETFS = [
-    "XEQT.TO",   # iShares All-Equity
-    "VEQT.TO",   # Vanguard All-Equity
-    "QQC.TO",    # Invesco NASDAQ 100
-    "ZWC.TO",    # BMO covered call high dividend
-    "XEI.TO",    # iShares TSX high dividend
-    "XGRO.TO",   # iShares growth portfolio
+    # Asset-allocation portfolios
+    "XEQT.TO",   # iShares all-equity
+    "XGRO.TO",   # iShares growth (80/20)
+    "XBAL.TO",   # iShares balanced (60/40)
+    # Broad market
+    "XIC.TO",    # iShares S&P/TSX composite
+    "XAW.TO",    # iShares all-country ex-Canada
+    "VFV.TO",    # Vanguard S&P 500, CAD
+    "VUN.TO",    # Vanguard US total market, CAD
     "ZSP.TO",    # BMO S&P 500
+    "QQC.TO",    # Invesco NASDAQ 100
+    "ZQQ.TO",    # BMO NASDAQ 100
+    # Dividends and income
+    "XEI.TO",    # iShares TSX high dividend
+    "VDY.TO",    # Vanguard FTSE Canadian high dividend
+    "ZWC.TO",    # BMO covered call high dividend
+    # Sectors
+    "ZEB.TO",    # BMO equal-weight banks
+    "XIT.TO",    # iShares TSX capped info tech
+    "XEG.TO",    # iShares TSX capped energy
+    # Fixed income and cash
+    "ZAG.TO",    # BMO aggregate bond
+    "CASH.TO",   # Global X high-interest savings
 ]
 
 

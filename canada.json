@@ -1,39 +1,10 @@
 {
-  "generated_at": "2026-11-19T02:22:35.252907+00:00",
+  "generated_at": "2026-11-19T02:30:50.267108+00:00",
   "source": "Yahoo Finance via yfinance",
   "currency": "CAD",
   "note": "Research only. Alpaca paper accounts cannot trade TSX or TSXV listings.",
-  "levels_note": "Buy zones are mechanical: 20-day average plus or minus a fraction of ATR, stop under recent support, targets at resistance and an ATR projection. ETFs add a long-term read: 50/200-day trend, one-year drawdown, volatility and MER. Structure only, not a recommendation.",
+  "levels_note": "Equity buy zones are mechanical: 20-day average plus or minus a fraction of ATR, stop under recent support, targets at resistance and an ATR projection. ETFs additionally report a long-term read: 50/200-day trend, one-year drawdown, volatility and MER. Structure only, not a recommendation.",
   "equities": [
-    {
-      "symbol": "SHOP.TO",
-      "ticker": "SHOP",
-      "exchange": "TSX",
-      "price": 199.78,
-      "change_1d": -1.5,
-      "change_1mo": -18.43,
-      "change_3mo": -1.77,
-      "as_of": "2026-11-18",
-      "tradable": false,
-      "levels": {
-        "sma20": 217.1,
-        "sma50": 214.71,
-        "rsi14": 32.9,
-        "atr14": 12.51,
-        "support": 190.87,
-        "resistance": 248.28,
-        "zone_low": 210.85,
-        "zone_high": 220.85,
-        "stop": 187.74,
-        "target_one": 248.28,
-        "target_two": 249.82,
-        "reward_risk": 1.15,
-        "state": "below_zone",
-        "tone": "negative",
-        "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
-      },
-      "name": "Shopify Inc."
-    },
     {
       "symbol": "RY.TO",
       "ticker": "RY",
@@ -93,6 +64,151 @@
       "name": "The Toronto-Dominion Bank"
     },
     {
+      "symbol": "BNS.TO",
+      "ticker": "BNS",
+      "exchange": "TSX",
+      "price": 125.15,
+      "change_1d": -1.79,
+      "change_1mo": -5.12,
+      "change_3mo": 5.79,
+      "as_of": "2026-11-18",
+      "tradable": false,
+      "levels": {
+        "sma20": 130.89,
+        "sma50": 129.63,
+        "rsi14": 33.7,
+        "atr14": 2.64,
+        "support": 124.83,
+        "resistance": 135.4,
+        "zone_low": 129.57,
+        "zone_high": 131.68,
+        "stop": 124.17,
+        "target_one": 135.4,
+        "target_two": 135.71,
+        "reward_risk": 0.74,
+        "state": "below_zone",
+        "tone": "negative",
+        "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
+      },
+      "name": "The Bank of Nova Scotia"
+    },
+    {
+      "symbol": "BMO.TO",
+      "ticker": "BMO",
+      "exchange": "TSX",
+      "price": 232.33,
+      "change_1d": -2.37,
+      "change_1mo": -2.24,
+      "change_3mo": -2.03,
+      "as_of": "2026-11-18",
+      "tradable": false,
+      "levels": {
+        "sma20": 241.73,
+        "sma50": 238.91,
+        "rsi14": 36.8,
+        "atr14": 5.14,
+        "support": 231.66,
+        "resistance": 249.75,
+        "zone_low": 239.16,
+        "zone_high": 243.27,
+        "stop": 230.38,
+        "target_one": 249.75,
+        "target_two": 252.89,
+        "reward_risk": 0.79,
+        "state": "below_zone",
+        "tone": "negative",
+        "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
+      },
+      "name": "Bank of Montreal"
+    },
+    {
+      "symbol": "NA.TO",
+      "ticker": "NA",
+      "exchange": "TSX",
+      "price": 205.5,
+      "change_1d": -2.16,
+      "change_1mo": -0.95,
+      "change_3mo": -4.62,
+      "as_of": "2026-11-18",
+      "tradable": false,
+      "levels": {
+        "sma20": 212.51,
+        "sma50": 208.65,
+        "rsi14": 39.6,
+        "atr14": 4.66,
+        "support": 203.6,
+        "resistance": 220.52,
+        "zone_low": 210.18,
+        "zone_high": 213.91,
+        "stop": 202.44,
+        "target_one": 220.52,
+        "target_two": 224.14,
+        "reward_risk": 0.88,
+        "state": "below_zone",
+        "tone": "negative",
+        "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
+      },
+      "name": "National Bank of Canada"
+    },
+    {
+      "symbol": "MFC.TO",
+      "ticker": "MFC",
+      "exchange": "TSX",
+      "price": 61.67,
+      "change_1d": -1.6,
+      "change_1mo": -2.9,
+      "change_3mo": 6.04,
+      "as_of": "2026-11-18",
+      "tradable": false,
+      "levels": {
+        "sma20": 62.67,
+        "sma50": 61.88,
+        "rsi14": 42.3,
+        "atr14": 1.17,
+        "support": 60.4,
+        "resistance": 64.6,
+        "zone_low": 62.08,
+        "zone_high": 63.02,
+        "stop": 60.11,
+        "target_one": 64.6,
+        "target_two": 66.35,
+        "reward_risk": 0.84,
+        "state": "below_zone",
+        "tone": "negative",
+        "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
+      },
+      "name": "Manulife Financial Corporation"
+    },
+    {
+      "symbol": "IFC.TO",
+      "ticker": "IFC",
+      "exchange": "TSX",
+      "price": 281.89,
+      "change_1d": 0.13,
+      "change_1mo": 7.16,
+      "change_3mo": 7.85,
+      "as_of": "2026-11-18",
+      "tradable": false,
+      "levels": {
+        "sma20": 272.04,
+        "sma50": 259.5,
+        "rsi14": 70.6,
+        "atr14": 6.62,
+        "support": 259.25,
+        "resistance": 285.63,
+        "zone_low": 268.73,
+        "zone_high": 274.02,
+        "stop": 257.6,
+        "target_one": 285.63,
+        "target_two": 308.37,
+        "reward_risk": 1.03,
+        "state": "wait",
+        "tone": "warning",
+        "detail": "Above the zone but not stretched. A pullback toward the 20-day is the better entry."
+      },
+      "name": "Intact Financial Corporation"
+    },
+    {
       "symbol": "CNQ.TO",
       "ticker": "CNQ",
       "exchange": "TSX",
@@ -120,64 +236,6 @@
         "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
       },
       "name": "Canadian Natural Resources Limited"
-    },
-    {
-      "symbol": "ENB.TO",
-      "ticker": "ENB",
-      "exchange": "TSX",
-      "price": 66.94,
-      "change_1d": -0.67,
-      "change_1mo": 0.7,
-      "change_3mo": -3.65,
-      "as_of": "2026-11-18",
-      "tradable": false,
-      "levels": {
-        "sma20": 67.05,
-        "sma50": 66.4,
-        "rsi14": 42.9,
-        "atr14": 1.05,
-        "support": 64.47,
-        "resistance": 68.41,
-        "zone_low": 66.53,
-        "zone_high": 67.37,
-        "stop": 64.21,
-        "target_one": 68.41,
-        "target_two": 71.14,
-        "reward_risk": 0.53,
-        "state": "in_zone",
-        "tone": "positive",
-        "detail": "Price is inside the pullback zone."
-      },
-      "name": "Enbridge Inc."
-    },
-    {
-      "symbol": "CP.TO",
-      "ticker": "CP",
-      "exchange": "TSX",
-      "price": 133.59,
-      "change_1d": 0.22,
-      "change_1mo": 8.04,
-      "change_3mo": 2.35,
-      "as_of": "2026-11-18",
-      "tradable": false,
-      "levels": {
-        "sma20": 130.01,
-        "sma50": 125.52,
-        "rsi14": 76.0,
-        "atr14": 2.43,
-        "support": 120.82,
-        "resistance": 136.04,
-        "zone_low": 128.79,
-        "zone_high": 130.74,
-        "stop": 120.21,
-        "target_one": 136.04,
-        "target_two": 143.31,
-        "reward_risk": 0.66,
-        "state": "wait",
-        "tone": "warning",
-        "detail": "Above the zone but not stretched. A pullback toward the 20-day is the better entry."
-      },
-      "name": "Canadian Pacific Kansas City Limited"
     },
     {
       "symbol": "SU.TO",
@@ -209,33 +267,468 @@
       "name": "Suncor Energy Inc."
     },
     {
-      "symbol": "MFC.TO",
-      "ticker": "MFC",
+      "symbol": "CVE.TO",
+      "ticker": "CVE",
       "exchange": "TSX",
-      "price": 61.67,
-      "change_1d": -1.6,
-      "change_1mo": -2.9,
-      "change_3mo": 6.04,
+      "price": 39.06,
+      "change_1d": -3.2,
+      "change_1mo": -16.07,
+      "change_3mo": -12.51,
       "as_of": "2026-11-18",
       "tradable": false,
       "levels": {
-        "sma20": 62.67,
-        "sma50": 61.88,
-        "rsi14": 42.3,
-        "atr14": 1.17,
-        "support": 60.4,
-        "resistance": 64.6,
-        "zone_low": 62.08,
-        "zone_high": 63.02,
-        "stop": 60.11,
-        "target_one": 64.6,
-        "target_two": 66.35,
-        "reward_risk": 0.84,
+        "sma20": 42.12,
+        "sma50": 44.04,
+        "rsi14": 27.3,
+        "atr14": 1.54,
+        "support": 37.59,
+        "resistance": 47.14,
+        "zone_low": 41.35,
+        "zone_high": 42.58,
+        "stop": 37.21,
+        "target_one": 47.14,
+        "target_two": 45.22,
+        "reward_risk": 1.09,
         "state": "below_zone",
         "tone": "negative",
         "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
       },
-      "name": "Manulife Financial Corporation"
+      "name": "Cenovus Energy Inc."
+    },
+    {
+      "symbol": "ENB.TO",
+      "ticker": "ENB",
+      "exchange": "TSX",
+      "price": 66.94,
+      "change_1d": -0.67,
+      "change_1mo": 0.7,
+      "change_3mo": -3.65,
+      "as_of": "2026-11-18",
+      "tradable": false,
+      "levels": {
+        "sma20": 67.05,
+        "sma50": 66.4,
+        "rsi14": 42.9,
+        "atr14": 1.05,
+        "support": 64.47,
+        "resistance": 68.41,
+        "zone_low": 66.53,
+        "zone_high": 67.37,
+        "stop": 64.21,
+        "target_one": 68.41,
+        "target_two": 71.14,
+        "reward_risk": 0.53,
+        "state": "in_zone",
+        "tone": "positive",
+        "detail": "Price is inside the pullback zone."
+      },
+      "name": "Enbridge Inc."
+    },
+    {
+      "symbol": "TRP.TO",
+      "ticker": "TRP",
+      "exchange": "TSX",
+      "price": 91.42,
+      "change_1d": -0.8,
+      "change_1mo": 4.55,
+      "change_3mo": 6.19,
+      "as_of": "2026-11-18",
+      "tradable": false,
+      "levels": {
+        "sma20": 89.46,
+        "sma50": 86.62,
+        "rsi14": 57.0,
+        "atr14": 1.8,
+        "support": 85.6,
+        "resistance": 92.77,
+        "zone_low": 88.56,
+        "zone_high": 90.0,
+        "stop": 85.15,
+        "target_one": 92.77,
+        "target_two": 98.62,
+        "reward_risk": 0.85,
+        "state": "wait",
+        "tone": "warning",
+        "detail": "Above the zone but not stretched. A pullback toward the 20-day is the better entry."
+      },
+      "name": "TC Energy Corporation"
+    },
+    {
+      "symbol": "CP.TO",
+      "ticker": "CP",
+      "exchange": "TSX",
+      "price": 133.59,
+      "change_1d": 0.22,
+      "change_1mo": 8.04,
+      "change_3mo": 2.35,
+      "as_of": "2026-11-18",
+      "tradable": false,
+      "levels": {
+        "sma20": 130.01,
+        "sma50": 125.52,
+        "rsi14": 76.0,
+        "atr14": 2.43,
+        "support": 120.82,
+        "resistance": 136.04,
+        "zone_low": 128.79,
+        "zone_high": 130.74,
+        "stop": 120.21,
+        "target_one": 136.04,
+        "target_two": 143.31,
+        "reward_risk": 0.66,
+        "state": "wait",
+        "tone": "warning",
+        "detail": "Above the zone but not stretched. A pullback toward the 20-day is the better entry."
+      },
+      "name": "Canadian Pacific Kansas City Limited"
+    },
+    {
+      "symbol": "CNR.TO",
+      "ticker": "CNR",
+      "exchange": "TSX",
+      "price": 179.36,
+      "change_1d": -0.65,
+      "change_1mo": 4.56,
+      "change_3mo": 1.97,
+      "as_of": "2026-11-18",
+      "tradable": false,
+      "levels": {
+        "sma20": 177.58,
+        "sma50": 172.48,
+        "rsi14": 60.6,
+        "atr14": 3.6,
+        "support": 170.22,
+        "resistance": 183.8,
+        "zone_low": 175.78,
+        "zone_high": 178.66,
+        "stop": 169.32,
+        "target_one": 183.8,
+        "target_two": 193.76,
+        "reward_risk": 0.83,
+        "state": "wait",
+        "tone": "warning",
+        "detail": "Above the zone but not stretched. A pullback toward the 20-day is the better entry."
+      },
+      "name": "Canadian National Railway Company"
+    },
+    {
+      "symbol": "WCN.TO",
+      "ticker": "WCN",
+      "exchange": "TSX",
+      "price": 260.9,
+      "change_1d": 0.7,
+      "change_1mo": 10.56,
+      "change_3mo": 12.47,
+      "as_of": "2026-11-18",
+      "tradable": false,
+      "levels": {
+        "sma20": 264.48,
+        "sma50": 239.08,
+        "rsi14": 55.8,
+        "atr14": 7.5,
+        "support": 242.51,
+        "resistance": 282.18,
+        "zone_low": 260.73,
+        "zone_high": 266.73,
+        "stop": 240.64,
+        "target_one": 282.18,
+        "target_two": 290.9,
+        "reward_risk": 0.8,
+        "state": "in_zone",
+        "tone": "positive",
+        "detail": "Price is inside the pullback zone."
+      },
+      "name": "Waste Connections, Inc."
+    },
+    {
+      "symbol": "ATD.TO",
+      "ticker": "ATD",
+      "exchange": "TSX",
+      "price": 83.0,
+      "change_1d": -0.78,
+      "change_1mo": -0.43,
+      "change_3mo": -3.28,
+      "as_of": "2026-11-18",
+      "tradable": false,
+      "levels": {
+        "sma20": 82.64,
+        "sma50": 80.81,
+        "rsi14": 61.0,
+        "atr14": 1.74,
+        "support": 79.56,
+        "resistance": 85.29,
+        "zone_low": 81.77,
+        "zone_high": 83.16,
+        "stop": 79.12,
+        "target_one": 85.29,
+        "target_two": 89.96,
+        "reward_risk": 0.84,
+        "state": "in_zone",
+        "tone": "positive",
+        "detail": "Price is inside the pullback zone."
+      },
+      "name": "Alimentation Couche-Tard Inc."
+    },
+    {
+      "symbol": "QSR.TO",
+      "ticker": "QSR",
+      "exchange": "TSX",
+      "price": 105.87,
+      "change_1d": 0.37,
+      "change_1mo": 1.58,
+      "change_3mo": -2.73,
+      "as_of": "2026-11-18",
+      "tradable": false,
+      "levels": {
+        "sma20": 106.42,
+        "sma50": 104.09,
+        "rsi14": 60.6,
+        "atr14": 2.56,
+        "support": 100.21,
+        "resistance": 111.0,
+        "zone_low": 105.14,
+        "zone_high": 107.19,
+        "stop": 99.57,
+        "target_one": 111.0,
+        "target_two": 116.11,
+        "reward_risk": 0.73,
+        "state": "in_zone",
+        "tone": "positive",
+        "detail": "Price is inside the pullback zone."
+      },
+      "name": "Restaurant Brands International Inc."
+    },
+    {
+      "symbol": "L.TO",
+      "ticker": "L",
+      "exchange": "TSX",
+      "price": 70.57,
+      "change_1d": -0.73,
+      "change_1mo": 3.08,
+      "change_3mo": 16.03,
+      "as_of": "2026-11-18",
+      "tradable": false,
+      "levels": {
+        "sma20": 69.46,
+        "sma50": 65.91,
+        "rsi14": 63.7,
+        "atr14": 1.25,
+        "support": 67.61,
+        "resistance": 71.75,
+        "zone_low": 68.84,
+        "zone_high": 69.84,
+        "stop": 67.3,
+        "target_one": 71.75,
+        "target_two": 75.57,
+        "reward_risk": 1.18,
+        "state": "wait",
+        "tone": "warning",
+        "detail": "Above the zone but not stretched. A pullback toward the 20-day is the better entry."
+      },
+      "name": "Loblaw Companies Limited"
+    },
+    {
+      "symbol": "SHOP.TO",
+      "ticker": "SHOP",
+      "exchange": "TSX",
+      "price": 199.78,
+      "change_1d": -1.5,
+      "change_1mo": -18.43,
+      "change_3mo": -1.77,
+      "as_of": "2026-11-18",
+      "tradable": false,
+      "levels": {
+        "sma20": 217.1,
+        "sma50": 214.71,
+        "rsi14": 32.9,
+        "atr14": 12.51,
+        "support": 190.87,
+        "resistance": 248.28,
+        "zone_low": 210.85,
+        "zone_high": 220.85,
+        "stop": 187.74,
+        "target_one": 248.28,
+        "target_two": 249.82,
+        "reward_risk": 1.15,
+        "state": "below_zone",
+        "tone": "negative",
+        "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
+      },
+      "name": "Shopify Inc."
+    },
+    {
+      "symbol": "CSU.TO",
+      "ticker": "CSU",
+      "exchange": "TSX",
+      "price": 3323.15,
+      "change_1d": 0.19,
+      "change_1mo": 2.69,
+      "change_3mo": 8.09,
+      "as_of": "2026-11-18",
+      "tradable": false,
+      "levels": {
+        "sma20": 3414.99,
+        "sma50": 3135.44,
+        "rsi14": 46.2,
+        "atr14": 121.73,
+        "support": 3200.0,
+        "resistance": 3565.0,
+        "zone_low": 3354.12,
+        "zone_high": 3451.51,
+        "stop": 3169.57,
+        "target_one": 3565.0,
+        "target_two": 3810.07,
+        "reward_risk": 0.7,
+        "state": "below_zone",
+        "tone": "negative",
+        "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
+      },
+      "name": "Constellation Software Inc."
+    },
+    {
+      "symbol": "TRI.TO",
+      "ticker": "TRI",
+      "exchange": "TSX",
+      "price": 148.98,
+      "change_1d": 0.64,
+      "change_1mo": -7.39,
+      "change_3mo": 2.69,
+      "as_of": "2026-11-18",
+      "tradable": false,
+      "levels": {
+        "sma20": 159.51,
+        "sma50": 148.84,
+        "rsi14": 38.6,
+        "atr14": 6.73,
+        "support": 147.51,
+        "resistance": 174.05,
+        "zone_low": 156.14,
+        "zone_high": 161.53,
+        "stop": 145.83,
+        "target_one": 174.05,
+        "target_two": 175.9,
+        "reward_risk": 1.17,
+        "state": "below_zone",
+        "tone": "negative",
+        "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
+      },
+      "name": "Thomson Reuters Corporation"
+    },
+    {
+      "symbol": "NTR.TO",
+      "ticker": "NTR",
+      "exchange": "TSX",
+      "price": 94.52,
+      "change_1d": -4.54,
+      "change_1mo": -1.18,
+      "change_3mo": -5.57,
+      "as_of": "2026-11-18",
+      "tradable": false,
+      "levels": {
+        "sma20": 98.81,
+        "sma50": 101.0,
+        "rsi14": 46.6,
+        "atr14": 3.1,
+        "support": 94.43,
+        "resistance": 103.87,
+        "zone_low": 97.26,
+        "zone_high": 99.74,
+        "stop": 93.66,
+        "target_one": 103.87,
+        "target_two": 106.92,
+        "reward_risk": 1.11,
+        "state": "below_zone",
+        "tone": "negative",
+        "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
+      },
+      "name": "Nutrien Ltd."
+    },
+    {
+      "symbol": "AEM.TO",
+      "ticker": "AEM",
+      "exchange": "TSX",
+      "price": 232.0,
+      "change_1d": -6.26,
+      "change_1mo": -11.84,
+      "change_3mo": -20.4,
+      "as_of": "2026-11-18",
+      "tradable": false,
+      "levels": {
+        "sma20": 251.93,
+        "sma50": 261.97,
+        "rsi14": 44.9,
+        "atr14": 12.56,
+        "support": 225.44,
+        "resistance": 285.55,
+        "zone_low": 245.65,
+        "zone_high": 255.7,
+        "stop": 222.3,
+        "target_one": 285.55,
+        "target_two": 282.24,
+        "reward_risk": 1.23,
+        "state": "below_zone",
+        "tone": "negative",
+        "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
+      },
+      "name": "Agnico Eagle Mines Limited"
+    },
+    {
+      "symbol": "BCE.TO",
+      "ticker": "BCE",
+      "exchange": "TSX",
+      "price": 31.64,
+      "change_1d": 0.51,
+      "change_1mo": 12.68,
+      "change_3mo": -2.13,
+      "as_of": "2026-11-18",
+      "tradable": false,
+      "levels": {
+        "sma20": 29.76,
+        "sma50": 29.6,
+        "rsi14": 81.9,
+        "atr14": 0.68,
+        "support": 27.67,
+        "resistance": 32.04,
+        "zone_low": 29.42,
+        "zone_high": 29.96,
+        "stop": 27.5,
+        "target_one": 32.04,
+        "target_two": 34.36,
+        "reward_risk": 1.07,
+        "state": "stretched",
+        "tone": "negative",
+        "detail": "Price sits 2.8 ATR above the 20-day average. Chasing here is late."
+      },
+      "name": "BCE Inc."
+    },
+    {
+      "symbol": "T.TO",
+      "ticker": "T",
+      "exchange": "TSX",
+      "price": 13.63,
+      "change_1d": 2.87,
+      "change_1mo": 15.7,
+      "change_3mo": 0.14,
+      "as_of": "2026-11-18",
+      "tradable": false,
+      "levels": {
+        "sma20": 12.58,
+        "sma50": 12.19,
+        "rsi14": 65.8,
+        "atr14": 0.5,
+        "support": 11.82,
+        "resistance": 13.91,
+        "zone_low": 12.33,
+        "zone_high": 12.73,
+        "stop": 11.69,
+        "target_one": 13.91,
+        "target_two": 15.63,
+        "reward_risk": 1.64,
+        "state": "stretched",
+        "tone": "negative",
+        "detail": "Price sits 2.1 ATR above the 20-day average. Chasing here is late."
+      },
+      "name": "TELUS Corporation"
     }
   ],
   "etfs": [
@@ -320,327 +813,6 @@
           "3.0% below its 50-day average.",
           "4.9% off its one-year high.",
           "About 14% annualized volatility over the past year."
-        ]
-      }
-    },
-    {
-      "symbol": "VEQT.TO",
-      "ticker": "VEQT",
-      "exchange": "TSX",
-      "price": 59.83,
-      "change_1d": -0.8,
-      "change_1mo": -3.86,
-      "change_3mo": -3.02,
-      "as_of": "2026-11-18",
-      "tradable": false,
-      "levels": {
-        "sma20": 61.26,
-        "sma50": 61.81,
-        "rsi14": 39.4,
-        "atr14": 0.96,
-        "support": 59.69,
-        "resistance": 62.57,
-        "zone_low": 60.78,
-        "zone_high": 61.54,
-        "stop": 59.45,
-        "target_one": 62.57,
-        "target_two": 63.67,
-        "reward_risk": 0.82,
-        "state": "below_zone",
-        "tone": "negative",
-        "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
-      },
-      "name": "Vanguard All-Equity ETF Portfolio",
-      "nav": 60.29,
-      "premium_pct": -0.76,
-      "yield_pct": 1.25,
-      "mer_pct": 0.22,
-      "aum": 17636964352,
-      "holdings": [
-        {
-          "symbol": "VUN.TO",
-          "name": "Vanguard MStar US Total Market Index ETF",
-          "weight_pct": 45.27
-        },
-        {
-          "symbol": "VCN.TO",
-          "name": "Vanguard FTSE Canada All Cap ETF",
-          "weight_pct": 30.73
-        },
-        {
-          "symbol": "VIU.TO",
-          "name": "Vanguard FTSE Dev AC ex Nrth Amer ETF",
-          "weight_pct": 17.27
-        },
-        {
-          "symbol": "VEE.TO",
-          "name": "Vanguard FTSE Emerging Mkts All Cap ETF",
-          "weight_pct": 6.73
-        }
-      ],
-      "mix": {
-        "stock": 99.5,
-        "cash": 0.4
-      },
-      "long_term": {
-        "verdict": "accumulate",
-        "tone": "positive",
-        "action": "Long trend intact, short term soft. No reason to pause contributions.",
-        "sma50": 61.81,
-        "sma200": 59.41,
-        "above_sma50": false,
-        "above_sma200": true,
-        "drawdown_from_high_pct": -5.1,
-        "max_drawdown_1y_pct": -8.1,
-        "volatility_pct": 13.6,
-        "return_1y_pct": 14.9,
-        "reasons": [
-          "0.7% above its 200-day average.",
-          "3.2% below its 50-day average.",
-          "5.1% off its one-year high.",
-          "About 14% annualized volatility over the past year."
-        ]
-      }
-    },
-    {
-      "symbol": "QQC.TO",
-      "ticker": "QQC",
-      "exchange": "TSX",
-      "price": 46.15,
-      "change_1d": 0.61,
-      "change_1mo": -7.29,
-      "change_3mo": -3.59,
-      "as_of": "2026-11-18",
-      "tradable": false,
-      "levels": {
-        "sma20": 47.28,
-        "sma50": 49.17,
-        "rsi14": 38.7,
-        "atr14": 1.33,
-        "support": 44.28,
-        "resistance": 49.78,
-        "zone_low": 46.62,
-        "zone_high": 47.68,
-        "stop": 43.95,
-        "target_one": 49.78,
-        "target_two": 51.47,
-        "reward_risk": 0.82,
-        "state": "below_zone",
-        "tone": "negative",
-        "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
-      },
-      "name": "CI Invesco NASDAQ 100 Index ETF CAD Units",
-      "nav": 45.86,
-      "premium_pct": 0.63,
-      "yield_pct": 0.32,
-      "mer_pct": 0.21,
-      "aum": 3940676096,
-      "holdings": [
-        {
-          "symbol": "QQQM",
-          "name": "Invesco NASDAQ 100 ETF",
-          "weight_pct": 99.34
-        }
-      ],
-      "mix": {
-        "stock": 99.2,
-        "cash": 0.8
-      },
-      "long_term": {
-        "verdict": "wait",
-        "tone": "warning",
-        "action": "Trading under its 200-day average. New money waits, or goes in smaller chunks until it reclaims.",
-        "sma50": 49.17,
-        "sma200": 46.35,
-        "above_sma50": false,
-        "above_sma200": false,
-        "drawdown_from_high_pct": -12.6,
-        "max_drawdown_1y_pct": -16.0,
-        "volatility_pct": 21.7,
-        "return_1y_pct": 13.6,
-        "reasons": [
-          "0.4% below its 200-day average.",
-          "6.1% below its 50-day average.",
-          "12.6% off its one-year high.",
-          "About 22% annualized volatility over the past year."
-        ]
-      }
-    },
-    {
-      "symbol": "ZWC.TO",
-      "ticker": "ZWC",
-      "exchange": "TSX",
-      "price": 22.08,
-      "change_1d": -2.13,
-      "change_1mo": -2.69,
-      "change_3mo": -1.91,
-      "as_of": "2026-11-18",
-      "tradable": false,
-      "levels": {
-        "sma20": 22.73,
-        "sma50": 22.46,
-        "rsi14": 36.6,
-        "atr14": 0.29,
-        "support": 22.08,
-        "resistance": 23.15,
-        "zone_low": 22.59,
-        "zone_high": 22.82,
-        "stop": 22.01,
-        "target_one": 23.15,
-        "target_two": 23.24,
-        "reward_risk": 0.65,
-        "state": "below_zone",
-        "tone": "negative",
-        "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
-      },
-      "name": "BMO CA High Dividend Covered Call ETF",
-      "nav": 22.56,
-      "premium_pct": -2.13,
-      "yield_pct": 5.96,
-      "mer_pct": 0.65,
-      "aum": 2508714240,
-      "holdings": [
-        {
-          "symbol": "RY",
-          "name": "Royal Bank of Canada",
-          "weight_pct": 7.62
-        },
-        {
-          "symbol": "TD",
-          "name": "The Toronto-Dominion Bank",
-          "weight_pct": 6.29
-        },
-        {
-          "symbol": "CNQ.TO",
-          "name": "Canadian Natural Resources Ltd",
-          "weight_pct": 5.77
-        },
-        {
-          "symbol": "BNS.TO",
-          "name": "Bank of Nova Scotia",
-          "weight_pct": 5.64
-        },
-        {
-          "symbol": "SU.TO",
-          "name": "Suncor Energy Inc",
-          "weight_pct": 5.47
-        },
-        {
-          "symbol": "CM.TO",
-          "name": "Canadian Imperial Bank of Commerce",
-          "weight_pct": 5.35
-        }
-      ],
-      "mix": {
-        "stock": 99.8,
-        "cash": 0.2
-      },
-      "long_term": {
-        "verdict": "accumulate",
-        "tone": "positive",
-        "action": "Long trend intact, short term soft. No reason to pause contributions.",
-        "sma50": 22.46,
-        "sma200": 21.76,
-        "above_sma50": false,
-        "above_sma200": true,
-        "drawdown_from_high_pct": -4.1,
-        "max_drawdown_1y_pct": -6.0,
-        "volatility_pct": 9.7,
-        "return_1y_pct": 16.8,
-        "reasons": [
-          "1.5% above its 200-day average.",
-          "1.7% below its 50-day average.",
-          "4.1% off its one-year high.",
-          "About 10% annualized volatility over the past year."
-        ]
-      }
-    },
-    {
-      "symbol": "XEI.TO",
-      "ticker": "XEI",
-      "exchange": "TSX",
-      "price": 39.51,
-      "change_1d": -1.57,
-      "change_1mo": -1.91,
-      "change_3mo": -0.41,
-      "as_of": "2026-11-18",
-      "tradable": false,
-      "levels": {
-        "sma20": 40.37,
-        "sma50": 39.72,
-        "rsi14": 31.9,
-        "atr14": 0.41,
-        "support": 39.5,
-        "resistance": 40.88,
-        "zone_low": 40.17,
-        "zone_high": 40.5,
-        "stop": 39.4,
-        "target_one": 40.88,
-        "target_two": 41.15,
-        "reward_risk": 0.57,
-        "state": "below_zone",
-        "tone": "negative",
-        "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
-      },
-      "name": "iShares S&P/TSX Composite High Dividend Index ETF",
-      "nav": 40.12,
-      "premium_pct": -1.52,
-      "yield_pct": 3.36,
-      "mer_pct": 0.22,
-      "aum": 4484783616,
-      "holdings": [
-        {
-          "symbol": "SU.TO",
-          "name": "Suncor Energy Inc",
-          "weight_pct": 5.7
-        },
-        {
-          "symbol": "CNQ.TO",
-          "name": "Canadian Natural Resources Ltd",
-          "weight_pct": 5.4
-        },
-        {
-          "symbol": "TD",
-          "name": "The Toronto-Dominion Bank",
-          "weight_pct": 5.16
-        },
-        {
-          "symbol": "ENB.TO",
-          "name": "Enbridge Inc",
-          "weight_pct": 4.96
-        },
-        {
-          "symbol": "RY",
-          "name": "Royal Bank of Canada",
-          "weight_pct": 4.86
-        },
-        {
-          "symbol": "TRP.TO",
-          "name": "TC Energy Corp",
-          "weight_pct": 4.56
-        }
-      ],
-      "mix": {
-        "stock": 99.8,
-        "cash": 0.2
-      },
-      "long_term": {
-        "verdict": "accumulate",
-        "tone": "positive",
-        "action": "Long trend intact, short term soft. No reason to pause contributions.",
-        "sma50": 39.72,
-        "sma200": 38.02,
-        "above_sma50": false,
-        "above_sma200": true,
-        "drawdown_from_high_pct": -2.9,
-        "max_drawdown_1y_pct": -4.9,
-        "volatility_pct": 8.6,
-        "return_1y_pct": 28.7,
-        "reasons": [
-          "3.9% above its 200-day average.",
-          "0.5% below its 50-day average.",
-          "2.9% off its one-year high.",
-          "About 9% annualized volatility over the past year."
         ]
       }
     },
@@ -735,6 +907,402 @@
       }
     },
     {
+      "symbol": "XBAL.TO",
+      "ticker": "XBAL",
+      "exchange": "TSX",
+      "price": 35.14,
+      "change_1d": -0.34,
+      "change_1mo": -1.95,
+      "change_3mo": -1.59,
+      "as_of": "2026-11-18",
+      "tradable": false,
+      "levels": {
+        "sma20": 35.64,
+        "sma50": 35.72,
+        "rsi14": 42.6,
+        "atr14": 0.38,
+        "support": 35.1,
+        "resistance": 36.13,
+        "zone_low": 35.45,
+        "zone_high": 35.75,
+        "stop": 35.0,
+        "target_one": 36.13,
+        "target_two": 36.66,
+        "reward_risk": 0.88,
+        "state": "below_zone",
+        "tone": "negative",
+        "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
+      },
+      "name": "iShares Core Balanced ETF Portfolio",
+      "nav": 35.28,
+      "premium_pct": -0.4,
+      "yield_pct": 2.27,
+      "mer_pct": 0.19,
+      "aum": 3520407808,
+      "holdings": [
+        {
+          "symbol": "ITOT",
+          "name": "iShares Core S&P Total US Stock Mkt ETF",
+          "weight_pct": 26.79
+        },
+        {
+          "symbol": "XBB.TO",
+          "name": "iShares Core Canadian Universe Bond ETF",
+          "weight_pct": 26.22
+        },
+        {
+          "symbol": "XIC.TO",
+          "name": "iShares Core S&P/TSX Cap Composite ETF",
+          "weight_pct": 15.17
+        },
+        {
+          "symbol": "XEF.TO",
+          "name": "iShares Core MSCI EAFE IMI ETF",
+          "weight_pct": 14.79
+        },
+        {
+          "symbol": "XSH.TO",
+          "name": "iShares Core Canadian ST Corp Bd ETF",
+          "weight_pct": 5.74
+        },
+        {
+          "symbol": "GOVT",
+          "name": "iShares US Treasury Bond ETF",
+          "weight_pct": 4.07
+        }
+      ],
+      "mix": {
+        "stock": 59.3,
+        "bond": 40.0,
+        "cash": 0.6
+      },
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Long trend intact, short term soft. No reason to pause contributions.",
+        "sma50": 35.72,
+        "sma200": 34.93,
+        "above_sma50": false,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -3.6,
+        "max_drawdown_1y_pct": -6.1,
+        "volatility_pct": 10.1,
+        "return_1y_pct": 9.1,
+        "reasons": [
+          "0.6% above its 200-day average.",
+          "1.6% below its 50-day average.",
+          "3.6% off its one-year high.",
+          "About 10% annualized volatility over the past year."
+        ]
+      }
+    },
+    {
+      "symbol": "XIC.TO",
+      "ticker": "XIC",
+      "exchange": "TSX",
+      "price": 55.27,
+      "change_1d": -2.14,
+      "change_1mo": -4.69,
+      "change_3mo": -4.4,
+      "as_of": "2026-11-18",
+      "tradable": false,
+      "levels": {
+        "sma20": 57.36,
+        "sma50": 57.12,
+        "rsi14": 36.5,
+        "atr14": 0.94,
+        "support": 55.25,
+        "resistance": 58.44,
+        "zone_low": 56.89,
+        "zone_high": 57.64,
+        "stop": 55.02,
+        "target_one": 58.44,
+        "target_two": 59.03,
+        "reward_risk": 0.52,
+        "state": "below_zone",
+        "tone": "negative",
+        "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
+      },
+      "name": "iShares Core S&P/TSX Capped Composite Index ETF",
+      "nav": 56.46,
+      "premium_pct": -2.11,
+      "yield_pct": 1.98,
+      "mer_pct": 0.06,
+      "aum": 36402282496,
+      "holdings": [
+        {
+          "symbol": "RY",
+          "name": "Royal Bank of Canada",
+          "weight_pct": 7.76
+        },
+        {
+          "symbol": "TD",
+          "name": "The Toronto-Dominion Bank",
+          "weight_pct": 5.64
+        },
+        {
+          "symbol": "SHOP",
+          "name": "Shopify Inc Registered Shs -A- Subord Vtg",
+          "weight_pct": 5.25
+        },
+        {
+          "symbol": "BMO.TO",
+          "name": "Bank of Montreal",
+          "weight_pct": 3.3
+        },
+        {
+          "symbol": "CNQ.TO",
+          "name": "Canadian Natural Resources Ltd",
+          "weight_pct": 3.19
+        },
+        {
+          "symbol": "BNS.TO",
+          "name": "Bank of Nova Scotia",
+          "weight_pct": 3.15
+        }
+      ],
+      "mix": {
+        "stock": 99.8,
+        "cash": 0.2
+      },
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Long trend intact, short term soft. No reason to pause contributions.",
+        "sma50": 57.12,
+        "sma200": 55.16,
+        "above_sma50": false,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -6.0,
+        "max_drawdown_1y_pct": -9.3,
+        "volatility_pct": 14.1,
+        "return_1y_pct": 17.5,
+        "reasons": [
+          "0.2% above its 200-day average.",
+          "3.2% below its 50-day average.",
+          "6.0% off its one-year high.",
+          "About 14% annualized volatility over the past year."
+        ]
+      }
+    },
+    {
+      "symbol": "XAW.TO",
+      "ticker": "XAW",
+      "exchange": "TSX",
+      "price": 56.86,
+      "change_1d": -0.12,
+      "change_1mo": -3.46,
+      "change_3mo": -2.17,
+      "as_of": "2026-11-18",
+      "tradable": false,
+      "levels": {
+        "sma20": 57.85,
+        "sma50": 58.7,
+        "rsi14": 42.5,
+        "atr14": 0.97,
+        "support": 56.05,
+        "resistance": 59.19,
+        "zone_low": 57.36,
+        "zone_high": 58.14,
+        "stop": 55.81,
+        "target_one": 59.19,
+        "target_two": 60.74,
+        "reward_risk": 0.74,
+        "state": "below_zone",
+        "tone": "negative",
+        "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
+      },
+      "name": "iShares Core MSCI All Country World ex Canada Index ETF",
+      "nav": 56.95,
+      "premium_pct": -0.16,
+      "yield_pct": 1.23,
+      "mer_pct": 0.22,
+      "aum": null,
+      "holdings": [
+        {
+          "symbol": "IVV",
+          "name": "iShares Core S&P 500 ETF",
+          "weight_pct": 51.94
+        },
+        {
+          "symbol": "XEF.TO",
+          "name": "iShares Core MSCI EAFE IMI ETF",
+          "weight_pct": 22.45
+        },
+        {
+          "symbol": "XEC.TO",
+          "name": "iShares Core MSCI Emer Mkts IMI ETF",
+          "weight_pct": 11.98
+        },
+        {
+          "symbol": "ITOT",
+          "name": "iShares Core S&P Total US Stock Mkt ETF",
+          "weight_pct": 8.35
+        },
+        {
+          "symbol": "IJH",
+          "name": "iShares Core S&P Mid-Cap ETF",
+          "weight_pct": 3.21
+        },
+        {
+          "symbol": "IJR",
+          "name": "iShares Core S&P Small-Cap ETF",
+          "weight_pct": 1.9
+        }
+      ],
+      "mix": {
+        "stock": 99.4,
+        "cash": 0.5
+      },
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Long trend intact, short term soft. No reason to pause contributions.",
+        "sma50": 58.7,
+        "sma200": 56.27,
+        "above_sma50": false,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -5.9,
+        "max_drawdown_1y_pct": -8.2,
+        "volatility_pct": 14.8,
+        "return_1y_pct": 14.2,
+        "reasons": [
+          "1.1% above its 200-day average.",
+          "3.1% below its 50-day average.",
+          "5.9% off its one-year high.",
+          "About 15% annualized volatility over the past year."
+        ]
+      }
+    },
+    {
+      "symbol": "VFV.TO",
+      "ticker": "VFV",
+      "exchange": "TSX",
+      "price": 186.2,
+      "change_1d": 0.03,
+      "change_1mo": -3.66,
+      "change_3mo": -0.26,
+      "as_of": "2026-11-18",
+      "tradable": false,
+      "levels": {
+        "sma20": 189.15,
+        "sma50": 191.21,
+        "rsi14": 41.6,
+        "atr14": 3.45,
+        "support": 182.71,
+        "resistance": 193.55,
+        "zone_low": 187.43,
+        "zone_high": 190.19,
+        "stop": 181.85,
+        "target_one": 193.55,
+        "target_two": 200.0,
+        "reward_risk": 0.68,
+        "state": "below_zone",
+        "tone": "negative",
+        "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
+      },
+      "name": "Vanguard S&P 500 Index ETF",
+      "nav": 186.25,
+      "premium_pct": -0.03,
+      "yield_pct": 0.86,
+      "mer_pct": 0.09,
+      "aum": 35908136960,
+      "holdings": [
+        {
+          "symbol": "VOO",
+          "name": "Vanguard S&P 500 ETF",
+          "weight_pct": 100.0
+        }
+      ],
+      "mix": {
+        "stock": 100.0,
+        "cash": -0.1
+      },
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Long trend intact, short term soft. No reason to pause contributions.",
+        "sma50": 191.21,
+        "sma200": 180.78,
+        "above_sma50": false,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -5.8,
+        "max_drawdown_1y_pct": -8.6,
+        "volatility_pct": 13.8,
+        "return_1y_pct": 14.4,
+        "reasons": [
+          "3.0% above its 200-day average.",
+          "2.6% below its 50-day average.",
+          "5.8% off its one-year high.",
+          "About 14% annualized volatility over the past year."
+        ]
+      }
+    },
+    {
+      "symbol": "VUN.TO",
+      "ticker": "VUN",
+      "exchange": "TSX",
+      "price": 139.92,
+      "change_1d": 0.09,
+      "change_1mo": -3.33,
+      "change_3mo": -0.69,
+      "as_of": "2026-11-18",
+      "tradable": false,
+      "levels": {
+        "sma20": 142.07,
+        "sma50": 143.53,
+        "rsi14": 41.8,
+        "atr14": 2.49,
+        "support": 137.16,
+        "resistance": 145.51,
+        "zone_low": 140.82,
+        "zone_high": 142.82,
+        "stop": 136.54,
+        "target_one": 145.51,
+        "target_two": 149.88,
+        "reward_risk": 0.7,
+        "state": "below_zone",
+        "tone": "negative",
+        "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
+      },
+      "name": "Vanguard Morningstar U.S. Total Market Index ETF",
+      "nav": 139.85,
+      "premium_pct": 0.05,
+      "yield_pct": 0.79,
+      "mer_pct": 0.17,
+      "aum": 20070359040,
+      "holdings": [
+        {
+          "symbol": "VTI",
+          "name": "Vanguard MStar Total Stk Mkt ETF",
+          "weight_pct": 100.0
+        }
+      ],
+      "mix": {
+        "stock": 99.8,
+        "cash": 0.2
+      },
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Long trend intact, short term soft. No reason to pause contributions.",
+        "sma50": 143.53,
+        "sma200": 136.1,
+        "above_sma50": false,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -5.6,
+        "max_drawdown_1y_pct": -8.5,
+        "volatility_pct": 14.0,
+        "return_1y_pct": 14.6,
+        "reasons": [
+          "2.8% above its 200-day average.",
+          "2.5% below its 50-day average.",
+          "5.6% off its one-year high.",
+          "About 14% annualized volatility over the past year."
+        ]
+      }
+    },
+    {
       "symbol": "ZSP.TO",
       "ticker": "ZSP",
       "exchange": "TSX",
@@ -820,6 +1388,806 @@
           "2.7% below its 50-day average.",
           "5.8% off its one-year high.",
           "About 14% annualized volatility over the past year."
+        ]
+      }
+    },
+    {
+      "symbol": "QQC.TO",
+      "ticker": "QQC",
+      "exchange": "TSX",
+      "price": 46.15,
+      "change_1d": 0.61,
+      "change_1mo": -7.29,
+      "change_3mo": -3.59,
+      "as_of": "2026-11-18",
+      "tradable": false,
+      "levels": {
+        "sma20": 47.28,
+        "sma50": 49.17,
+        "rsi14": 38.7,
+        "atr14": 1.33,
+        "support": 44.28,
+        "resistance": 49.78,
+        "zone_low": 46.62,
+        "zone_high": 47.68,
+        "stop": 43.95,
+        "target_one": 49.78,
+        "target_two": 51.47,
+        "reward_risk": 0.82,
+        "state": "below_zone",
+        "tone": "negative",
+        "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
+      },
+      "name": "CI Invesco NASDAQ 100 Index ETF CAD Units",
+      "nav": 45.86,
+      "premium_pct": 0.63,
+      "yield_pct": 0.32,
+      "mer_pct": 0.21,
+      "aum": 3940676096,
+      "holdings": [
+        {
+          "symbol": "QQQM",
+          "name": "Invesco NASDAQ 100 ETF",
+          "weight_pct": 99.34
+        }
+      ],
+      "mix": {
+        "stock": 99.2,
+        "cash": 0.8
+      },
+      "long_term": {
+        "verdict": "wait",
+        "tone": "warning",
+        "action": "Trading under its 200-day average. New money waits, or goes in smaller chunks until it reclaims.",
+        "sma50": 49.17,
+        "sma200": 46.35,
+        "above_sma50": false,
+        "above_sma200": false,
+        "drawdown_from_high_pct": -12.6,
+        "max_drawdown_1y_pct": -16.0,
+        "volatility_pct": 21.7,
+        "return_1y_pct": 13.6,
+        "reasons": [
+          "0.4% below its 200-day average.",
+          "6.1% below its 50-day average.",
+          "12.6% off its one-year high.",
+          "About 22% annualized volatility over the past year."
+        ]
+      }
+    },
+    {
+      "symbol": "ZQQ.TO",
+      "ticker": "ZQQ",
+      "exchange": "TSX",
+      "price": 182.16,
+      "change_1d": 0.39,
+      "change_1mo": -9.37,
+      "change_3mo": -7.56,
+      "as_of": "2026-11-18",
+      "tradable": false,
+      "levels": {
+        "sma20": 189.97,
+        "sma50": 197.71,
+        "rsi14": 33.4,
+        "atr14": 5.34,
+        "support": 178.68,
+        "resistance": 201.0,
+        "zone_low": 187.3,
+        "zone_high": 191.58,
+        "stop": 177.34,
+        "target_one": 201.0,
+        "target_two": 203.52,
+        "reward_risk": 0.96,
+        "state": "below_zone",
+        "tone": "negative",
+        "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
+      },
+      "name": "BMO Nasdaq 100 Equity Hedged to CAD Index ETF",
+      "nav": 181.47,
+      "premium_pct": 0.38,
+      "yield_pct": 0.24,
+      "mer_pct": 0.39,
+      "aum": 3069006848,
+      "holdings": [
+        {
+          "symbol": "NVDA",
+          "name": "NVIDIA Corp",
+          "weight_pct": 8.16
+        },
+        {
+          "symbol": "AAPL",
+          "name": "Apple Inc",
+          "weight_pct": 7.93
+        },
+        {
+          "symbol": "MSFT",
+          "name": "Microsoft Corp",
+          "weight_pct": 6.21
+        },
+        {
+          "symbol": "MU",
+          "name": "Micron Technology Inc",
+          "weight_pct": 4.33
+        },
+        {
+          "symbol": "AMZN",
+          "name": "Amazon.com Inc",
+          "weight_pct": 4.26
+        },
+        {
+          "symbol": "AMD",
+          "name": "Advanced Micro Devices Inc",
+          "weight_pct": 3.76
+        }
+      ],
+      "mix": {
+        "stock": 100.0,
+        "cash": 0.0
+      },
+      "long_term": {
+        "verdict": "wait",
+        "tone": "warning",
+        "action": "Trading under its 200-day average. New money waits, or goes in smaller chunks until it reclaims.",
+        "sma50": 197.71,
+        "sma200": 189.79,
+        "above_sma50": false,
+        "above_sma200": false,
+        "drawdown_from_high_pct": -13.5,
+        "max_drawdown_1y_pct": -14.7,
+        "volatility_pct": 21.8,
+        "return_1y_pct": 8.5,
+        "reasons": [
+          "4.0% below its 200-day average.",
+          "7.9% below its 50-day average.",
+          "13.5% off its one-year high.",
+          "About 22% annualized volatility over the past year."
+        ]
+      }
+    },
+    {
+      "symbol": "XEI.TO",
+      "ticker": "XEI",
+      "exchange": "TSX",
+      "price": 39.51,
+      "change_1d": -1.57,
+      "change_1mo": -1.91,
+      "change_3mo": -0.41,
+      "as_of": "2026-11-18",
+      "tradable": false,
+      "levels": {
+        "sma20": 40.37,
+        "sma50": 39.72,
+        "rsi14": 31.9,
+        "atr14": 0.41,
+        "support": 39.5,
+        "resistance": 40.88,
+        "zone_low": 40.17,
+        "zone_high": 40.5,
+        "stop": 39.4,
+        "target_one": 40.88,
+        "target_two": 41.15,
+        "reward_risk": 0.57,
+        "state": "below_zone",
+        "tone": "negative",
+        "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
+      },
+      "name": "iShares S&P/TSX Composite High Dividend Index ETF",
+      "nav": 40.12,
+      "premium_pct": -1.52,
+      "yield_pct": 3.36,
+      "mer_pct": 0.22,
+      "aum": 4484783616,
+      "holdings": [
+        {
+          "symbol": "SU.TO",
+          "name": "Suncor Energy Inc",
+          "weight_pct": 5.7
+        },
+        {
+          "symbol": "CNQ.TO",
+          "name": "Canadian Natural Resources Ltd",
+          "weight_pct": 5.4
+        },
+        {
+          "symbol": "TD",
+          "name": "The Toronto-Dominion Bank",
+          "weight_pct": 5.16
+        },
+        {
+          "symbol": "ENB.TO",
+          "name": "Enbridge Inc",
+          "weight_pct": 4.96
+        },
+        {
+          "symbol": "RY",
+          "name": "Royal Bank of Canada",
+          "weight_pct": 4.86
+        },
+        {
+          "symbol": "TRP.TO",
+          "name": "TC Energy Corp",
+          "weight_pct": 4.56
+        }
+      ],
+      "mix": {
+        "stock": 99.8,
+        "cash": 0.2
+      },
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Long trend intact, short term soft. No reason to pause contributions.",
+        "sma50": 39.72,
+        "sma200": 38.02,
+        "above_sma50": false,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -2.9,
+        "max_drawdown_1y_pct": -4.9,
+        "volatility_pct": 8.6,
+        "return_1y_pct": 28.7,
+        "reasons": [
+          "3.9% above its 200-day average.",
+          "0.5% below its 50-day average.",
+          "2.9% off its one-year high.",
+          "About 9% annualized volatility over the past year."
+        ]
+      }
+    },
+    {
+      "symbol": "VDY.TO",
+      "ticker": "VDY",
+      "exchange": "TSX",
+      "price": 75.2,
+      "change_1d": -2.3,
+      "change_1mo": -4.03,
+      "change_3mo": -0.97,
+      "as_of": "2026-11-18",
+      "tradable": false,
+      "levels": {
+        "sma20": 78.09,
+        "sma50": 77.0,
+        "rsi14": 26.9,
+        "atr14": 1.06,
+        "support": 75.19,
+        "resistance": 79.76,
+        "zone_low": 77.56,
+        "zone_high": 78.41,
+        "stop": 74.93,
+        "target_one": 79.76,
+        "target_two": 79.44,
+        "reward_risk": 0.58,
+        "state": "below_zone",
+        "tone": "negative",
+        "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
+      },
+      "name": "Vanguard FTSE Canadian High Dividend Yield Index ETF",
+      "nav": 76.97,
+      "premium_pct": -2.3,
+      "yield_pct": 2.99,
+      "mer_pct": 0.22,
+      "aum": 9454489600,
+      "holdings": [
+        {
+          "symbol": "RY",
+          "name": "Royal Bank of Canada",
+          "weight_pct": 15.35
+        },
+        {
+          "symbol": "TD",
+          "name": "The Toronto-Dominion Bank",
+          "weight_pct": 11.07
+        },
+        {
+          "symbol": "BMO.TO",
+          "name": "Bank of Montreal",
+          "weight_pct": 6.53
+        },
+        {
+          "symbol": "BNS.TO",
+          "name": "Bank of Nova Scotia",
+          "weight_pct": 6.24
+        },
+        {
+          "symbol": "CNQ.TO",
+          "name": "Canadian Natural Resources Ltd",
+          "weight_pct": 6.19
+        },
+        {
+          "symbol": "ENB.TO",
+          "name": "Enbridge Inc",
+          "weight_pct": 5.93
+        }
+      ],
+      "mix": {
+        "stock": 100.0
+      },
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Long trend intact, short term soft. No reason to pause contributions.",
+        "sma50": 77.0,
+        "sma200": 72.71,
+        "above_sma50": false,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -5.4,
+        "max_drawdown_1y_pct": -5.4,
+        "volatility_pct": 10.5,
+        "return_1y_pct": 30.5,
+        "reasons": [
+          "3.4% above its 200-day average.",
+          "2.3% below its 50-day average.",
+          "5.4% off its one-year high.",
+          "About 10% annualized volatility over the past year."
+        ]
+      }
+    },
+    {
+      "symbol": "ZWC.TO",
+      "ticker": "ZWC",
+      "exchange": "TSX",
+      "price": 22.08,
+      "change_1d": -2.13,
+      "change_1mo": -2.69,
+      "change_3mo": -1.91,
+      "as_of": "2026-11-18",
+      "tradable": false,
+      "levels": {
+        "sma20": 22.73,
+        "sma50": 22.46,
+        "rsi14": 36.6,
+        "atr14": 0.29,
+        "support": 22.08,
+        "resistance": 23.15,
+        "zone_low": 22.59,
+        "zone_high": 22.82,
+        "stop": 22.01,
+        "target_one": 23.15,
+        "target_two": 23.24,
+        "reward_risk": 0.65,
+        "state": "below_zone",
+        "tone": "negative",
+        "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
+      },
+      "name": "BMO CA High Dividend Covered Call ETF",
+      "nav": 22.56,
+      "premium_pct": -2.13,
+      "yield_pct": 5.96,
+      "mer_pct": 0.65,
+      "aum": 2508714240,
+      "holdings": [
+        {
+          "symbol": "RY",
+          "name": "Royal Bank of Canada",
+          "weight_pct": 7.62
+        },
+        {
+          "symbol": "TD",
+          "name": "The Toronto-Dominion Bank",
+          "weight_pct": 6.29
+        },
+        {
+          "symbol": "CNQ.TO",
+          "name": "Canadian Natural Resources Ltd",
+          "weight_pct": 5.77
+        },
+        {
+          "symbol": "BNS.TO",
+          "name": "Bank of Nova Scotia",
+          "weight_pct": 5.64
+        },
+        {
+          "symbol": "SU.TO",
+          "name": "Suncor Energy Inc",
+          "weight_pct": 5.47
+        },
+        {
+          "symbol": "CM.TO",
+          "name": "Canadian Imperial Bank of Commerce",
+          "weight_pct": 5.35
+        }
+      ],
+      "mix": {
+        "stock": 99.8,
+        "cash": 0.2
+      },
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Long trend intact, short term soft. No reason to pause contributions.",
+        "sma50": 22.46,
+        "sma200": 21.76,
+        "above_sma50": false,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -4.1,
+        "max_drawdown_1y_pct": -6.0,
+        "volatility_pct": 9.7,
+        "return_1y_pct": 16.8,
+        "reasons": [
+          "1.5% above its 200-day average.",
+          "1.7% below its 50-day average.",
+          "4.1% off its one-year high.",
+          "About 10% annualized volatility over the past year."
+        ]
+      }
+    },
+    {
+      "symbol": "ZEB.TO",
+      "ticker": "ZEB",
+      "exchange": "TSX",
+      "price": 72.33,
+      "change_1d": -2.68,
+      "change_1mo": -3.67,
+      "change_3mo": -0.54,
+      "as_of": "2026-11-18",
+      "tradable": false,
+      "levels": {
+        "sma20": 75.73,
+        "sma50": 74.54,
+        "rsi14": 34.3,
+        "atr14": 1.45,
+        "support": 72.28,
+        "resistance": 78.24,
+        "zone_low": 75.01,
+        "zone_high": 76.17,
+        "stop": 71.92,
+        "target_one": 78.24,
+        "target_two": 78.13,
+        "reward_risk": 0.72,
+        "state": "below_zone",
+        "tone": "negative",
+        "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
+      },
+      "name": "BMO Equal Weight Banks Index ETF",
+      "nav": 74.33,
+      "premium_pct": -2.69,
+      "yield_pct": 2.34,
+      "mer_pct": 0.28,
+      "aum": 7964981760,
+      "holdings": [
+        {
+          "symbol": "TD",
+          "name": "The Toronto-Dominion Bank",
+          "weight_pct": 17.27
+        },
+        {
+          "symbol": "BNS.TO",
+          "name": "Bank of Nova Scotia",
+          "weight_pct": 17.05
+        },
+        {
+          "symbol": "CM.TO",
+          "name": "Canadian Imperial Bank of Commerce",
+          "weight_pct": 16.66
+        },
+        {
+          "symbol": "BMO.TO",
+          "name": "Bank of Montreal",
+          "weight_pct": 16.62
+        },
+        {
+          "symbol": "RY",
+          "name": "Royal Bank of Canada",
+          "weight_pct": 16.4
+        },
+        {
+          "symbol": "NA.TO",
+          "name": "National Bank of Canada",
+          "weight_pct": 15.99
+        }
+      ],
+      "mix": {
+        "stock": 100.0,
+        "cash": 0.0
+      },
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Long trend intact, short term soft. No reason to pause contributions.",
+        "sma50": 74.54,
+        "sma200": 69.33,
+        "above_sma50": false,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -7.4,
+        "max_drawdown_1y_pct": -9.3,
+        "volatility_pct": 17.1,
+        "return_1y_pct": 37.0,
+        "reasons": [
+          "4.3% above its 200-day average.",
+          "3.0% below its 50-day average.",
+          "7.4% off its one-year high.",
+          "About 17% annualized volatility over the past year."
+        ]
+      }
+    },
+    {
+      "symbol": "XIT.TO",
+      "ticker": "XIT",
+      "exchange": "TSX",
+      "price": 78.69,
+      "change_1d": 0.47,
+      "change_1mo": -7.7,
+      "change_3mo": 3.06,
+      "as_of": "2026-11-18",
+      "tradable": false,
+      "levels": {
+        "sma20": 80.86,
+        "sma50": 80.29,
+        "rsi14": 36.9,
+        "atr14": 2.21,
+        "support": 75.5,
+        "resistance": 85.21,
+        "zone_low": 79.76,
+        "zone_high": 81.53,
+        "stop": 74.95,
+        "target_one": 85.21,
+        "target_two": 87.53,
+        "reward_risk": 0.8,
+        "state": "below_zone",
+        "tone": "negative",
+        "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
+      },
+      "name": "iShares S&P/TSX Capped Information Technology Index ETF",
+      "nav": 78.29,
+      "premium_pct": 0.51,
+      "yield_pct": null,
+      "mer_pct": 0.6,
+      "aum": 755442624,
+      "holdings": [
+        {
+          "symbol": "CSU.TO",
+          "name": "Constellation Software Inc",
+          "weight_pct": 29.3
+        },
+        {
+          "symbol": "SHOP",
+          "name": "Shopify Inc Registered Shs -A- Subord Vtg",
+          "weight_pct": 26.44
+        },
+        {
+          "symbol": "CLS.TO",
+          "name": "Celestica Inc Ordinary Shares (Subordinate Voting)",
+          "weight_pct": 17.39
+        },
+        {
+          "symbol": "GIB-A.TO",
+          "name": "CGI Inc Class A",
+          "weight_pct": 9.66
+        },
+        {
+          "symbol": "DSG.TO",
+          "name": "The Descartes Systems Group Inc",
+          "weight_pct": 5.1
+        },
+        {
+          "symbol": "OTEX.TO",
+          "name": "Open Text Corp",
+          "weight_pct": 4.22
+        }
+      ],
+      "mix": {
+        "stock": 100.0
+      },
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Long trend intact, short term soft. No reason to pause contributions.",
+        "sma50": 80.29,
+        "sma200": 72.59,
+        "above_sma50": false,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -9.0,
+        "max_drawdown_1y_pct": -28.4,
+        "volatility_pct": 33.3,
+        "return_1y_pct": 3.2,
+        "reasons": [
+          "8.4% above its 200-day average.",
+          "2.0% below its 50-day average.",
+          "9.0% off its one-year high.",
+          "About 33% annualized volatility over the past year."
+        ]
+      }
+    },
+    {
+      "symbol": "XEG.TO",
+      "ticker": "XEG",
+      "exchange": "TSX",
+      "price": 26.93,
+      "change_1d": -3.82,
+      "change_1mo": -14.02,
+      "change_3mo": -5.69,
+      "as_of": "2026-11-18",
+      "tradable": false,
+      "levels": {
+        "sma20": 29.22,
+        "sma50": 29.17,
+        "rsi14": 25.1,
+        "atr14": 0.85,
+        "support": 26.74,
+        "resistance": 31.68,
+        "zone_low": 28.8,
+        "zone_high": 29.48,
+        "stop": 26.53,
+        "target_one": 31.68,
+        "target_two": 30.33,
+        "reward_risk": 0.97,
+        "state": "below_zone",
+        "tone": "negative",
+        "detail": "Price is under its 20-day average, below the zone. Wait for it to reclaim the average."
+      },
+      "name": "iShares S&P/TSX Capped Energy Index ETF",
+      "nav": 28.01,
+      "premium_pct": -3.86,
+      "yield_pct": 2.12,
+      "mer_pct": 0.6,
+      "aum": 2715801600,
+      "holdings": [
+        {
+          "symbol": "SU.TO",
+          "name": "Suncor Energy Inc",
+          "weight_pct": 26.94
+        },
+        {
+          "symbol": "CNQ.TO",
+          "name": "Canadian Natural Resources Ltd",
+          "weight_pct": 25.13
+        },
+        {
+          "symbol": "CVE.TO",
+          "name": "Cenovus Energy Inc",
+          "weight_pct": 13.57
+        },
+        {
+          "symbol": "IMO.TO",
+          "name": "Imperial Oil Ltd",
+          "weight_pct": 6.55
+        },
+        {
+          "symbol": "TOU.TO",
+          "name": "Tourmaline Oil Corp",
+          "weight_pct": 5.72
+        },
+        {
+          "symbol": "WCP.TO",
+          "name": "Whitecap Resources Inc",
+          "weight_pct": 5.38
+        }
+      ],
+      "mix": {
+        "stock": 100.0,
+        "cash": 0.0
+      },
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Long trend intact, short term soft. No reason to pause contributions.",
+        "sma50": 29.17,
+        "sma200": 26.54,
+        "above_sma50": false,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -14.7,
+        "max_drawdown_1y_pct": -16.5,
+        "volatility_pct": 27.6,
+        "return_1y_pct": 39.5,
+        "reasons": [
+          "1.5% above its 200-day average.",
+          "7.7% below its 50-day average.",
+          "14.7% off its one-year high.",
+          "About 28% annualized volatility over the past year."
+        ]
+      }
+    },
+    {
+      "symbol": "ZAG.TO",
+      "ticker": "ZAG",
+      "exchange": "TSX",
+      "price": 13.49,
+      "change_1d": 0.11,
+      "change_1mo": 0.62,
+      "change_3mo": 0.6,
+      "as_of": "2026-11-18",
+      "tradable": false,
+      "levels": {
+        "sma20": 13.5,
+        "sma50": 13.41,
+        "rsi14": 54.6,
+        "atr14": 0.05,
+        "support": 13.4,
+        "resistance": 13.64,
+        "zone_low": 13.48,
+        "zone_high": 13.52,
+        "stop": 13.39,
+        "target_one": 13.64,
+        "target_two": 13.69,
+        "reward_risk": 1.27,
+        "state": "in_zone",
+        "tone": "positive",
+        "detail": "Price is inside the pullback zone."
+      },
+      "name": "BMO Aggregate Bond Index ETF",
+      "nav": 13.48,
+      "premium_pct": 0.11,
+      "yield_pct": 3.45,
+      "mer_pct": 0.09,
+      "aum": 13241412608,
+      "holdings": [],
+      "mix": {
+        "bond": 99.9,
+        "cash": 0.1
+      },
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Above both averages. Keep buying on your normal schedule.",
+        "sma50": 13.41,
+        "sma200": 13.49,
+        "above_sma50": true,
+        "above_sma200": true,
+        "drawdown_from_high_pct": -1.5,
+        "max_drawdown_1y_pct": -3.2,
+        "volatility_pct": 4.8,
+        "return_1y_pct": 0.3,
+        "reasons": [
+          "0.1% above its 200-day average.",
+          "0.7% above its 50-day average.",
+          "1.5% off its one-year high.",
+          "About 5% annualized volatility over the past year."
+        ]
+      }
+    },
+    {
+      "symbol": "CASH.TO",
+      "ticker": "CASH",
+      "exchange": "TSX",
+      "price": 50.06,
+      "change_1d": 0.01,
+      "change_1mo": 0.18,
+      "change_3mo": 0.5,
+      "as_of": "2026-11-18",
+      "tradable": false,
+      "levels": {
+        "sma20": 50.02,
+        "sma50": 49.96,
+        "rsi14": 93.3,
+        "atr14": 0.01,
+        "support": 49.98,
+        "resistance": 50.07,
+        "zone_low": 50.02,
+        "zone_high": 50.03,
+        "stop": 49.97,
+        "target_one": 50.07,
+        "target_two": 50.1,
+        "reward_risk": 0.67,
+        "state": "stretched",
+        "tone": "negative",
+        "detail": "Price sits 4.3 ATR above the 20-day average. Chasing here is late."
+      },
+      "name": "Global X High Interest Savings ETF",
+      "nav": 50.06,
+      "premium_pct": 0.01,
+      "yield_pct": 2.01,
+      "mer_pct": 0.11,
+      "aum": 6656797184,
+      "holdings": [],
+      "mix": {
+        "cash": 100.0
+      },
+      "long_term": {
+        "verdict": "accumulate",
+        "tone": "positive",
+        "action": "Above both averages. Keep buying on your normal schedule.",
+        "sma50": 49.96,
+        "sma200": 49.66,
+        "above_sma50": true,
+        "above_sma200": true,
+        "drawdown_from_high_pct": 0.0,
+        "max_drawdown_1y_pct": -0.0,
+        "volatility_pct": 0.2,
+        "return_1y_pct": 2.1,
+        "reasons": [
+          "0.8% above its 200-day average.",
+          "0.2% above its 50-day average.",
+          "0.0% off its one-year high.",
+          "About 0% annualized volatility over the past year."
         ]
       }
     }
