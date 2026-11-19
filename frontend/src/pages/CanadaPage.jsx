@@ -250,18 +250,28 @@ function EtfCard({ row }) {
 }
 
 const PICK_GROUPS = [
-  { key: 'today', title: 'Best entry today', caption: 'Short-term setup score' },
-  { key: 'long_term', title: 'Best long-term holds', caption: 'Trend, drawdown, cost' },
+  { key: 'today', title: 'Today', caption: 'Entry, from the buy zone' },
+  { key: 'long_term', title: 'Long term', caption: 'Hold, from trend and cost' },
 ];
 
-/* One screen answer to "out of everything here, what would I buy, and which
-   names would I keep for years". Two different questions, two different lists,
-   both scored from the same arithmetic as the cards below. */
+const CALL_TONE = {
+  'Buy now': 'positive',
+  'Keep buying': 'positive',
+  Wait: 'warning',
+  Pause: 'warning',
+  'Small chunks': 'warning',
+  "Don't buy yet": 'negative',
+  'Too late': 'negative',
+};
+
+/* One plain sentence per name instead of a score: what the price is doing and
+   whether that means buy, wait, or leave it alone. */
 function PicksSummary({ picks }) {
   if (!picks) return null;
 
   return (
     <section className="glass-card cad-picks" aria-label="Canadian summary">
+      {picks.headline && <p className="cad-picks__headline">{picks.headline}</p>}
       <div className="cad-picks__grid">
         {PICK_GROUPS.map(group => {
           const rows = picks[group.key] || [];
@@ -272,11 +282,7 @@ function PicksSummary({ picks }) {
                 <span className="label-sm cad-picks__caption">{group.caption}</span>
               </div>
               {rows.length === 0 ? (
-                <p className="cad-picks__empty">
-                  {group.key === 'today'
-                    ? 'Nothing clears the entry bar today. Sitting out is the trade.'
-                    : 'Nothing clears the hold bar today.'}
-                </p>
+                <p className="cad-picks__empty">No data for this snapshot yet.</p>
               ) : (
                 <ul className="cad-picks__list">
                   {rows.map(pick => (
@@ -284,9 +290,11 @@ function PicksSummary({ picks }) {
                       <div className="cad-picks__row">
                         <span className="ticker">{pick.ticker}</span>
                         <span className="cad-picks__kind">{pick.kind === 'etf' ? 'ETF' : 'Stock'}</span>
-                        <span className="cad-picks__score">{pick.score}</span>
+                        <span className={`cad-picks__call is-${CALL_TONE[pick.call] || 'neutral'}`}>
+                          {pick.call}
+                        </span>
                       </div>
-                      <div className="cad-picks__meta">${pick.price.toFixed(2)} · {pick.reason}</div>
+                      <div className="cad-picks__meta">{pick.reason}</div>
                     </li>
                   ))}
                 </ul>

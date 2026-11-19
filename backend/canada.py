@@ -264,12 +264,83 @@ def _long_score(row):
     return max(0, min(100, round(score)))
 
 
-TRADE_TEXT = {
-    "in_zone": "sitting in the buy zone",
-    "wait": "above the zone, pullback pending",
-    "below_zone": "under the 20-day, needs to reclaim it",
-    "stretched": "stretched, late to chase",
-}
+def _entry_call(row):
+    """Plain sentence for today: buy, wait, or do not buy, with real prices."""
+    levels = row.get("levels") or {}
+    ticker = row["ticker"]
+    price = row["price"]
+    state = levels.get("state")
+    low = levels.get("zone_low")
+    high = levels.get("zone_high")
+
+    if state == "in_zone":
+        call = "Buy now"
+        sentence = (
+            f"Buy {ticker} at ${price:.2f} — inside its ${low:.2f}–${high:.2f} buy zone. "
+            f"Stop ${levels['stop']:.2f}, first target ${levels['target_one']:.2f}."
+        )
+    elif state == "wait":
+        call = "Wait"
+        sentence = (
+            f"Wait on {ticker} at ${price:.2f} — already above the ${low:.2f} buy zone. "
+            f"Buy only if it dips to ${low:.2f}–${high:.2f}."
+        )
+    elif state == "below_zone":
+        call = "Don't buy yet"
+        sentence = (
+            f"Don't buy {ticker} yet — ${price:.2f} sits under its 20-day average "
+            f"(${levels['sma20']:.2f}). Wait for a close back above ${low:.2f}."
+        )
+    elif state == "stretched":
+        call = "Too late"
+        sentence = (
+            f"Don't chase {ticker} — ${price:.2f} is stretched above its 20-day "
+            f"(${levels['sma20']:.2f}). Wait for a pullback to ${low:.2f}–${high:.2f}."
+        )
+    else:
+        call = "No setup"
+        sentence = f"No clean setup on {ticker} at ${price:.2f}."
+
+    return call, sentence
+
+
+def _hold_call(row):
+    """Plain sentence for the long hold: keep buying, pause, or go slow."""
+    plan = row.get("long_term") or {}
+    ticker = row["ticker"]
+    price = row["price"]
+    verdict = plan.get("verdict")
+    sma200 = plan.get("sma200")
+    mer = row.get("mer_pct")
+    fee = f", MER {mer:.2f}%" if mer is not None else ""
+
+    if verdict == "accumulate" and plan.get("above_sma50"):
+        call = "Keep buying"
+        sentence = (
+            f"Keep buying {ticker} monthly at ${price:.2f} — above its 200-day "
+            f"(${sma200:.2f}){fee}. Daily noise does not change a long hold."
+        )
+    elif verdict == "accumulate":
+        call = "Keep buying"
+        sentence = (
+            f"Keep buying {ticker} monthly at ${price:.2f} — long trend intact, "
+            f"short term soft{fee}. No reason to pause contributions."
+        )
+    elif verdict == "wait":
+        call = "Pause"
+        line = f" (${sma200:.2f})" if sma200 else ""
+        sentence = (
+            f"Hold new money on {ticker} for now — ${price:.2f} is under its 200-day"
+            f"{line}{fee}. Resume when it reclaims that line."
+        )
+    else:
+        call = "Small chunks"
+        sentence = (
+            f"Buy {ticker} in small, even chunks at ${price:.2f} — not enough history "
+            f"for a 200-day trend{fee}."
+        )
+
+    return call, sentence
 
 
 def _picks(equities, etfs):
@@ -301,35 +372,22 @@ def _picks(equities, etfs):
 
     today = []
     for entry in entries:
-        if entry["trade"] is None or entry["trade"] < 60:
+        if entry["trade"] is None:
             continue
-        levels = entry["row"].get("levels") or {}
-        # Risking more than the target pays is not an entry, whatever the
-        # zone says. Keep sub-1 reward/risk setups out of the list entirely.
-        if (levels.get("reward_risk") or 0) < 1:
-            continue
-        reason = TRADE_TEXT.get(levels.get("state"), "no clean setup")
-        reason += f", R/R {levels['reward_risk']}:1"
-        today.append(brief(entry, entry["trade"], reason))
+        call, sentence = _entry_call(entry["row"])
+        pick = brief(entry, entry["trade"], sentence)
+        pick["call"] = call
+        today.append(pick)
     today = sorted(today, key=lambda pick: pick["score"], reverse=True)[:3]
 
     holds = []
     for entry in entries:
-        if entry["hold"] is None or entry["hold"] < 65:
+        if entry["hold"] is None:
             continue
-        plan = entry["row"].get("long_term") or {}
-        bits = []
-        sma200 = plan.get("sma200")
-        if sma200:
-            gap = (entry["row"]["price"] / sma200 - 1) * 100
-            bits.append(f"{gap:+.1f}% vs 200-day")
-        if plan.get("return_1y_pct") is not None:
-            bits.append(f"{plan['return_1y_pct']:+.1f}% past year")
-        if plan.get("volatility_pct") is not None:
-            bits.append(f"{plan['volatility_pct']:.0f}% volatility")
-        if entry["row"].get("mer_pct") is not None:
-            bits.append(f"MER {entry['row']['mer_pct']:.2f}%")
-        holds.append(brief(entry, entry["hold"], ", ".join(bits[:3])))
+        call, sentence = _hold_call(entry["row"])
+        pick = brief(entry, entry["hold"], sentence)
+        pick["call"] = call
+        holds.append(pick)
     # Score ties are common near the ceiling; one-year return breaks them.
     holds = sorted(
         holds,
@@ -344,7 +402,15 @@ def _picks(equities, etfs):
         reverse=True,
     )[:3]
 
+    buy_today = [pick["ticker"] for pick in today if pick["call"] == "Buy now"]
+    headline = (
+        f"Buy {', '.join(buy_today)} today — price sits inside the buy zone."
+        if buy_today
+        else "Nothing is a buy today — the best setups are still a wait."
+    )
+
     return {
+        "headline": headline,
         "today": today,
         "long_term": holds,
         "note": (

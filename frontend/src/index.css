@@ -1239,7 +1239,22 @@ a.supa-badge:hover { color: var(--on-surface); border-color: var(--hairline-stro
 .cad-picks__list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.5rem; }
 .cad-picks__row { display: flex; align-items: center; gap: 0.5rem; }
 .cad-picks__kind { font-size: 0.64rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--on-surface-faint); }
-.cad-picks__score { margin-left: auto; font-size: 0.74rem; font-weight: 700; color: var(--primary); font-variant-numeric: tabular-nums; }
+.cad-picks__headline { margin: 0; font-size: 0.95rem; font-weight: 600; line-height: 1.4; }
+.cad-picks__call {
+  margin-left: auto;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--hairline);
+  color: var(--on-surface-muted);
+  white-space: nowrap;
+}
+.cad-picks__call.is-positive { color: var(--primary); border-color: rgba(63, 255, 139, 0.35); background: rgba(63, 255, 139, 0.08); }
+.cad-picks__call.is-warning { color: var(--warning); border-color: rgba(255, 196, 87, 0.35); background: rgba(255, 196, 87, 0.08); }
+.cad-picks__call.is-negative { color: var(--secondary); border-color: rgba(255, 113, 108, 0.32); background: rgba(255, 113, 108, 0.08); }
 .cad-picks__meta { margin-top: 0.15rem; font-size: 0.74rem; line-height: 1.45; color: var(--on-surface-muted); }
 .cad-picks__empty { margin: 0; font-size: 0.76rem; line-height: 1.5; color: var(--on-surface-muted); }
 .cad-picks__note { margin: 0; font-size: 0.68rem; line-height: 1.5; color: var(--on-surface-faint); }

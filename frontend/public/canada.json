@@ -2193,6 +2193,7 @@
     }
   ],
   "picks": {
+    "headline": "Buy ZAG, ENB, WCN today \u2014 price sits inside the buy zone.",
     "today": [
       {
         "ticker": "ZAG",
@@ -2200,19 +2201,32 @@
         "price": 13.49,
         "change_1d": 0.11,
         "score": 85,
-        "reason": "sitting in the buy zone, R/R 1.27:1",
+        "reason": "Buy ZAG at $13.49 \u2014 inside its $13.48\u2013$13.52 buy zone. Stop $13.39, first target $13.64.",
         "state": "in_zone",
-        "verdict": "accumulate"
+        "verdict": "accumulate",
+        "call": "Buy now"
       },
       {
-        "ticker": "L",
+        "ticker": "ENB",
         "kind": "equity",
-        "price": 70.57,
-        "change_1d": -0.73,
-        "score": 60,
-        "reason": "above the zone, pullback pending, R/R 1.18:1",
-        "state": "wait",
-        "verdict": null
+        "price": 66.94,
+        "change_1d": -0.67,
+        "score": 70,
+        "reason": "Buy ENB at $66.94 \u2014 inside its $66.53\u2013$67.37 buy zone. Stop $64.21, first target $68.41.",
+        "state": "in_zone",
+        "verdict": null,
+        "call": "Buy now"
+      },
+      {
+        "ticker": "WCN",
+        "kind": "equity",
+        "price": 260.9,
+        "change_1d": 0.7,
+        "score": 70,
+        "reason": "Buy WCN at $260.90 \u2014 inside its $260.73\u2013$266.73 buy zone. Stop $240.64, first target $282.18.",
+        "state": "in_zone",
+        "verdict": null,
+        "call": "Buy now"
       }
     ],
     "long_term": [
@@ -2222,9 +2236,10 @@
         "price": 72.33,
         "change_1d": -2.68,
         "score": 100,
-        "reason": "+4.3% vs 200-day, +37.0% past year, 17% volatility",
+        "reason": "Keep buying ZEB monthly at $72.33 \u2014 long trend intact, short term soft, MER 0.28%. No reason to pause contributions.",
         "state": "below_zone",
-        "verdict": "accumulate"
+        "verdict": "accumulate",
+        "call": "Keep buying"
       },
       {
         "ticker": "VDY",
@@ -2232,9 +2247,10 @@
         "price": 75.2,
         "change_1d": -2.3,
         "score": 100,
-        "reason": "+3.4% vs 200-day, +30.5% past year, 10% volatility",
+        "reason": "Keep buying VDY monthly at $75.20 \u2014 long trend intact, short term soft, MER 0.22%. No reason to pause contributions.",
         "state": "below_zone",
-        "verdict": "accumulate"
+        "verdict": "accumulate",
+        "call": "Keep buying"
       },
       {
         "ticker": "XEI",
@@ -2242,9 +2258,10 @@
         "price": 39.51,
         "change_1d": -1.57,
         "score": 100,
-        "reason": "+3.9% vs 200-day, +28.7% past year, 9% volatility",
+        "reason": "Keep buying XEI monthly at $39.51 \u2014 long trend intact, short term soft, MER 0.22%. No reason to pause contributions.",
         "state": "below_zone",
-        "verdict": "accumulate"
+        "verdict": "accumulate",
+        "call": "Keep buying"
       }
     ],
     "note": "Rankings, not recommendations. Entry score weighs the 20-day zone, reward/risk and RSI; hold score weighs the 50/200-day trend, one-year return, volatility, drawdown and MER. All of it is arithmetic on the same free daily bars, so nothing here is a model opinion."
