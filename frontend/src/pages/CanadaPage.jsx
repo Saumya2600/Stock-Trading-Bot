@@ -249,6 +249,57 @@ function EtfCard({ row }) {
   );
 }
 
+const PICK_GROUPS = [
+  { key: 'today', title: 'Best entry today', caption: 'Short-term setup score' },
+  { key: 'long_term', title: 'Best long-term holds', caption: 'Trend, drawdown, cost' },
+];
+
+/* One screen answer to "out of everything here, what would I buy, and which
+   names would I keep for years". Two different questions, two different lists,
+   both scored from the same arithmetic as the cards below. */
+function PicksSummary({ picks }) {
+  if (!picks) return null;
+
+  return (
+    <section className="glass-card cad-picks" aria-label="Canadian summary">
+      <div className="cad-picks__grid">
+        {PICK_GROUPS.map(group => {
+          const rows = picks[group.key] || [];
+          return (
+            <div key={group.key} className="cad-picks__col">
+              <div className="cad-picks__head">
+                <h2 className="headline-sm">{group.title}</h2>
+                <span className="label-sm cad-picks__caption">{group.caption}</span>
+              </div>
+              {rows.length === 0 ? (
+                <p className="cad-picks__empty">
+                  {group.key === 'today'
+                    ? 'Nothing clears the entry bar today. Sitting out is the trade.'
+                    : 'Nothing clears the hold bar today.'}
+                </p>
+              ) : (
+                <ul className="cad-picks__list">
+                  {rows.map(pick => (
+                    <li key={pick.ticker}>
+                      <div className="cad-picks__row">
+                        <span className="ticker">{pick.ticker}</span>
+                        <span className="cad-picks__kind">{pick.kind === 'etf' ? 'ETF' : 'Stock'}</span>
+                        <span className="cad-picks__score">{pick.score}</span>
+                      </div>
+                      <div className="cad-picks__meta">${pick.price.toFixed(2)} · {pick.reason}</div>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          );
+        })}
+      </div>
+      <p className="cad-picks__note">{picks.note}</p>
+    </section>
+  );
+}
+
 export default function CanadaPage() {
   const [snapshot, setSnapshot] = useState(null);
   const [status, setStatus] = useState('loading');
@@ -321,6 +372,8 @@ export default function CanadaPage() {
           </p>
         </div>
       </div>
+
+      {status === 'ready' && snapshot?.picks && <PicksSummary picks={snapshot.picks} />}
 
       <div className="segmented" role="group" aria-label="Canadian universe">
         <button

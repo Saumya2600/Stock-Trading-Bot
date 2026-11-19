@@ -2191,5 +2191,62 @@
         ]
       }
     }
-  ]
+  ],
+  "picks": {
+    "today": [
+      {
+        "ticker": "ZAG",
+        "kind": "etf",
+        "price": 13.49,
+        "change_1d": 0.11,
+        "score": 85,
+        "reason": "sitting in the buy zone, R/R 1.27:1",
+        "state": "in_zone",
+        "verdict": "accumulate"
+      },
+      {
+        "ticker": "L",
+        "kind": "equity",
+        "price": 70.57,
+        "change_1d": -0.73,
+        "score": 60,
+        "reason": "above the zone, pullback pending, R/R 1.18:1",
+        "state": "wait",
+        "verdict": null
+      }
+    ],
+    "long_term": [
+      {
+        "ticker": "ZEB",
+        "kind": "etf",
+        "price": 72.33,
+        "change_1d": -2.68,
+        "score": 100,
+        "reason": "+4.3% vs 200-day, +37.0% past year, 17% volatility",
+        "state": "below_zone",
+        "verdict": "accumulate"
+      },
+      {
+        "ticker": "VDY",
+        "kind": "etf",
+        "price": 75.2,
+        "change_1d": -2.3,
+        "score": 100,
+        "reason": "+3.4% vs 200-day, +30.5% past year, 10% volatility",
+        "state": "below_zone",
+        "verdict": "accumulate"
+      },
+      {
+        "ticker": "XEI",
+        "kind": "etf",
+        "price": 39.51,
+        "change_1d": -1.57,
+        "score": 100,
+        "reason": "+3.9% vs 200-day, +28.7% past year, 9% volatility",
+        "state": "below_zone",
+        "verdict": "accumulate"
+      }
+    ],
+    "note": "Rankings, not recommendations. Entry score weighs the 20-day zone, reward/risk and RSI; hold score weighs the 50/200-day trend, one-year return, volatility, drawdown and MER. All of it is arithmetic on the same free daily bars, so nothing here is a model opinion."
+  }
 }

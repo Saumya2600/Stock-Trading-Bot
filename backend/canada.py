@@ -186,6 +186,176 @@ def _levels(frame, price):
     }
 
 
+def _trade_score(row):
+    """Short-term entry score, 0-100, from the mechanical levels only."""
+    levels = row.get("levels") or {}
+    if not levels:
+        return None
+
+    score = 50
+    score += {"in_zone": 20, "wait": 5, "below_zone": -10, "stretched": -25}.get(
+        levels.get("state"), 0
+    )
+
+    reward_risk = levels.get("reward_risk")
+    if reward_risk is not None:
+        if reward_risk >= 2:
+            score += 20
+        elif reward_risk >= 1.5:
+            score += 12
+        elif reward_risk >= 1:
+            score += 5
+        else:
+            score -= 10
+
+    rsi = levels.get("rsi14")
+    if rsi is not None:
+        if 40 <= rsi <= 60:
+            score += 10
+        elif rsi > 70:
+            score -= 15
+        elif rsi < 30:
+            score -= 5
+
+    return max(0, min(100, round(score)))
+
+
+def _long_score(row):
+    """Hold score, 0-100: trend first, then volatility, drawdown and cost."""
+    plan = row.get("long_term") or {}
+    if not plan:
+        return None
+
+    score = 50
+    score += 30 if plan.get("above_sma200") else -30
+    score += 15 if plan.get("above_sma50") else -10
+
+    gain = plan.get("return_1y_pct")
+    if gain is not None:
+        score += max(-15, min(15, gain / 2))
+
+    vol = plan.get("volatility_pct")
+    if vol is not None:
+        if vol < 12:
+            score += 15
+        elif vol < 18:
+            score += 8
+        elif vol < 25:
+            score += 0
+        else:
+            score -= 10
+
+    drawdown = plan.get("drawdown_from_high_pct")
+    if drawdown is not None:
+        if drawdown > -10:
+            score += 10
+        elif drawdown <= -20:
+            score -= 5
+
+    mer = row.get("mer_pct")
+    if mer is not None:
+        if mer <= 0.15:
+            score += 10
+        elif mer <= 0.3:
+            score += 5
+        elif mer > 0.5:
+            score -= 5
+
+    return max(0, min(100, round(score)))
+
+
+TRADE_TEXT = {
+    "in_zone": "sitting in the buy zone",
+    "wait": "above the zone, pullback pending",
+    "below_zone": "under the 20-day, needs to reclaim it",
+    "stretched": "stretched, late to chase",
+}
+
+
+def _picks(equities, etfs):
+    """Top names per question, from the same arithmetic as the cards."""
+    entries = []
+    for kind, rows in (("equity", equities), ("etf", etfs)):
+        for row in rows:
+            entries.append(
+                {
+                    "kind": kind,
+                    "row": row,
+                    "trade": _trade_score(row),
+                    "hold": _long_score(row),
+                }
+            )
+
+    def brief(entry, score, reason):
+        row = entry["row"]
+        return {
+            "ticker": row["ticker"],
+            "kind": entry["kind"],
+            "price": row["price"],
+            "change_1d": row.get("change_1d"),
+            "score": score,
+            "reason": reason,
+            "state": (row.get("levels") or {}).get("state"),
+            "verdict": (row.get("long_term") or {}).get("verdict"),
+        }
+
+    today = []
+    for entry in entries:
+        if entry["trade"] is None or entry["trade"] < 60:
+            continue
+        levels = entry["row"].get("levels") or {}
+        # Risking more than the target pays is not an entry, whatever the
+        # zone says. Keep sub-1 reward/risk setups out of the list entirely.
+        if (levels.get("reward_risk") or 0) < 1:
+            continue
+        reason = TRADE_TEXT.get(levels.get("state"), "no clean setup")
+        reason += f", R/R {levels['reward_risk']}:1"
+        today.append(brief(entry, entry["trade"], reason))
+    today = sorted(today, key=lambda pick: pick["score"], reverse=True)[:3]
+
+    holds = []
+    for entry in entries:
+        if entry["hold"] is None or entry["hold"] < 65:
+            continue
+        plan = entry["row"].get("long_term") or {}
+        bits = []
+        sma200 = plan.get("sma200")
+        if sma200:
+            gap = (entry["row"]["price"] / sma200 - 1) * 100
+            bits.append(f"{gap:+.1f}% vs 200-day")
+        if plan.get("return_1y_pct") is not None:
+            bits.append(f"{plan['return_1y_pct']:+.1f}% past year")
+        if plan.get("volatility_pct") is not None:
+            bits.append(f"{plan['volatility_pct']:.0f}% volatility")
+        if entry["row"].get("mer_pct") is not None:
+            bits.append(f"MER {entry['row']['mer_pct']:.2f}%")
+        holds.append(brief(entry, entry["hold"], ", ".join(bits[:3])))
+    # Score ties are common near the ceiling; one-year return breaks them.
+    holds = sorted(
+        holds,
+        key=lambda pick: (
+            pick["score"],
+            next(
+                (e["row"].get("long_term") or {}).get("return_1y_pct") or 0
+                for e in entries
+                if e["row"]["ticker"] == pick["ticker"]
+            ),
+        ),
+        reverse=True,
+    )[:3]
+
+    return {
+        "today": today,
+        "long_term": holds,
+        "note": (
+            "Rankings, not recommendations. Entry score weighs the 20-day zone, "
+            "reward/risk and RSI; hold score weighs the 50/200-day trend, one-year "
+            "return, volatility, drawdown and MER. All of it is arithmetic on the "
+            "same free daily bars, so nothing here is a model opinion."
+        ),
+    }
+
+
 def _long_term(frame, price, details):
     """Long-hold read: trend, drawdown, cost.
 
@@ -362,6 +532,8 @@ def _row(symbol, frame, is_etf):
     details = _fund_details(symbol, with_fund_data=is_etf)
     row["name"] = details["name"] or row["ticker"]
 
+    row["long_term"] = _long_term(frame, price, details)
+
     if is_etf:
         row["nav"] = details["nav"]
         row["premium_pct"] = _pct(price, details["nav"]) if details["nav"] else None
@@ -370,7 +542,6 @@ def _row(symbol, frame, is_etf):
         row["aum"] = details["aum"]
         row["holdings"] = details["holdings"]
         row["mix"] = details["mix"]
-        row["long_term"] = _long_term(frame, price, details)
 
     return row
 
@@ -403,6 +574,7 @@ def build_snapshot():
         ),
         "equities": equities,
         "etfs": etfs,
+        "picks": _picks(equities, etfs),
     }
 
 
