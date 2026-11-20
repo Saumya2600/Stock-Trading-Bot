@@ -8,62 +8,7 @@
             "debt_to_equity": 0.14,
             "description": "NVIDIA Corporation operates as a data center scale AI infrastructure company in the United States, Taiwan, China, Hong Kong, Europe, and internationally. It operates through Compute & Networking, and ..."
         },
-        "updated_at": "2026-11-19T21:26:07.687295"
-    },
-    "GOOGL": {
-        "data": {
-            "sector": "Communication Services",
-            "industry": "Internet Content & Information",
-            "pe": 14.24,
-            "peg": 1.0,
-            "debt_to_equity": 0.22,
-            "description": "Alphabet Inc. offers various products and platforms in the United States, Europe, the Middle East, Africa, the Asia-Pacific, Canada, and Latin America. It operates through Google Services, Google Clou..."
-        },
-        "updated_at": "2026-11-19T21:26:35.221425"
-    },
-    "BA": {
-        "data": {
-            "sector": "Industrials",
-            "industry": "Aerospace & Defense",
-            "pe": 16.56,
-            "peg": 3.51,
-            "debt_to_equity": 7.39,
-            "description": "The Boeing Company, together with its subsidiaries, designs, develops, manufactures, sells, services, and supports commercial jetliners, military aircraft, satellites, missile defense, human space fli..."
-        },
-        "updated_at": "2026-11-19T21:27:02.722015"
-    },
-    "NOW": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Application",
-            "pe": 63.94,
-            "peg": 0.71,
-            "debt_to_equity": 0.64,
-            "description": "ServiceNow, Inc. provides cloud-based solution for digital workflows in the North America, Brazil, Europe, the Middle East and Africa, Asia Pacific, and internationally. The company provides asset man..."
-        },
-        "updated_at": "2026-11-19T21:27:33.849296"
-    },
-    "DOW": {
-        "data": {
-            "sector": "Basic Materials",
-            "industry": "Chemicals",
-            "pe": 0,
-            "peg": 38.89,
-            "debt_to_equity": 1.08,
-            "description": "Dow Inc., through its subsidiaries, provides various materials science solutions for packaging, infrastructure, mobility, and consumer applications in the United States, Canada, Europe, the Middle Eas..."
-        },
-        "updated_at": "2026-11-19T21:28:06.769692"
-    },
-    "MU": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Semiconductors",
-            "pe": 9.29,
-            "peg": 0.16,
-            "debt_to_equity": 0.04,
-            "description": "Micron Technology, Inc. engages in the provision of semiconductor memory and storage products in the United States, Taiwan, Mainland China, other Asia Pacific countries, Japan, Europe, and internation..."
-        },
-        "updated_at": "2026-11-19T21:28:43.349542"
+        "updated_at": "2026-11-20T02:27:42.257991"
     },
     "F": {
         "data": {
@@ -74,17 +19,72 @@
             "debt_to_equity": 4.48,
             "description": "Ford Motor Company develops, delivers, and services Ford trucks, sport utility vehicles, commercial vans and cars, and Lincoln luxury vehicles in the United States, Canada, the United Kingdom, Mexico,..."
         },
-        "updated_at": "2026-11-19T21:29:10.386407"
+        "updated_at": "2026-11-20T02:28:16.997702"
     },
-    "SNOW": {
+    "BA": {
         "data": {
-            "sector": "Technology",
-            "industry": "Software - Application",
-            "pe": 0,
-            "peg": 4.89,
-            "debt_to_equity": 1.29,
-            "description": "Snowflake Inc. provides a cloud-based data platform for various organizations in the United States and internationally. The company's platform includes artificial intelligence (AI) Data Cloud, which e..."
+            "sector": "Industrials",
+            "industry": "Aerospace & Defense",
+            "pe": 16.56,
+            "peg": 3.51,
+            "debt_to_equity": 7.39,
+            "description": "The Boeing Company, together with its subsidiaries, designs, develops, manufactures, sells, services, and supports commercial jetliners, military aircraft, satellites, missile defense, human space fli..."
         },
-        "updated_at": "2026-11-19T21:29:36.915114"
+        "updated_at": "2026-11-20T02:28:38.920312"
+    },
+    "NFLX": {
+        "data": {
+            "sector": "Communication Services",
+            "industry": "Entertainment",
+            "pe": 16.9,
+            "peg": 0.95,
+            "debt_to_equity": 0.6,
+            "description": "Netflix, Inc. provides entertainment services worldwide. The company offers television (TV) series, documentaries, feature films, games, and live programming across various genres and languages. It al..."
+        },
+        "updated_at": "2026-11-20T02:29:11.396499"
+    },
+    "TQQQ": {
+        "data": {
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 22.49,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "The fund invests in financial instruments that ProShare Advisors believes, in combination, should produce daily returns consistent with the Daily Target. The index is designed to measure the performan..."
+        },
+        "updated_at": "2026-11-20T02:29:35.739783"
+    },
+    "SO": {
+        "data": {
+            "sector": "Utilities",
+            "industry": "Utilities - Regulated Electric",
+            "pe": 21.3,
+            "peg": 2.23,
+            "debt_to_equity": 1.68,
+            "description": "The Southern Company, through its subsidiaries, engages in the sale of electricity. The company offers electric service to retail customers and wholesale customers; and energy-related products and ser..."
+        },
+        "updated_at": "2026-11-20T02:30:02.481889"
+    },
+    "TSLA": {
+        "data": {
+            "sector": "Consumer Cyclical",
+            "industry": "Auto Manufacturers",
+            "pe": 411.44,
+            "peg": 4.47,
+            "debt_to_equity": 0.18,
+            "description": "Tesla, Inc. designs, develops, manufactures, leases, and sells electric vehicles, and energy generation and storage systems in the United States, China, and internationally. The company operates in tw..."
+        },
+        "updated_at": "2026-11-20T02:30:54.435509"
+    },
+    "ET": {
+        "data": {
+            "sector": "Energy",
+            "industry": "Oil & Gas Midstream",
+            "pe": 12.66,
+            "peg": 0.54,
+            "debt_to_equity": 1.42,
+            "description": "Energy Transfer LP, together with its subsidiaries, provides energy-related services in the United States. It operates through Intrastate Transportation and Storage; Interstate Transportation and Stor..."
+        },
+        "updated_at": "2026-11-20T02:31:20.945698"
     }
 }
