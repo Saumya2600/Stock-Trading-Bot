@@ -1,6 +1,6 @@
 {
-  "checked_at": "2026-11-20T15:58:14.494176-05:00",
-  "session_open": true,
+  "checked_at": "2026-11-20T16:04:02.882167-05:00",
+  "session_open": false,
   "quotes": {
     "RY.TO": {
       "price": 263.28,
@@ -206,15 +206,11 @@
     "CNR": "2026-11-20",
     "CP": "2026-11-20"
   },
-  "fresh": [],
-  "already_alerted": [
-    "ATD",
-    "TRP"
-  ],
+  "note": "Session closed. Nothing was fetched; last quotes and alerts kept.",
   "email": {
-    "at": "2026-11-20T15:58:14.494176-05:00",
+    "at": "2026-11-20T16:04:02.882167-05:00",
     "tickers": [],
-    "status": "nothing new in zone",
+    "status": "session closed",
     "channel": null,
     "error": null
   }
