@@ -1,37 +1,4 @@
 {
-    "NVDA": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Semiconductors",
-            "pe": 15.68,
-            "peg": 0.18,
-            "debt_to_equity": 0.14,
-            "description": "NVIDIA Corporation operates as a data center scale AI infrastructure company in the United States, Taiwan, China, Hong Kong, Europe, and internationally. It operates through Compute & Networking, and ..."
-        },
-        "updated_at": "2026-11-20T12:32:26.886848"
-    },
-    "BA": {
-        "data": {
-            "sector": "Industrials",
-            "industry": "Aerospace & Defense",
-            "pe": 16.56,
-            "peg": 3.51,
-            "debt_to_equity": 7.39,
-            "description": "The Boeing Company, together with its subsidiaries, designs, develops, manufactures, sells, services, and supports commercial jetliners, military aircraft, satellites, missile defense, human space fli..."
-        },
-        "updated_at": "2026-11-20T12:33:00.216351"
-    },
-    "COIN": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Financial Data & Stock Exchanges",
-            "pe": 0,
-            "peg": 0.49,
-            "debt_to_equity": 0.49,
-            "description": "Coinbase Global, Inc. operates platform for crypto assets in the United States and internationally. It provides the primary financial account in the crypto economy for consumers; a brokerage platform ..."
-        },
-        "updated_at": "2026-11-20T12:33:37.592431"
-    },
     "F": {
         "data": {
             "sector": "Consumer Cyclical",
@@ -41,50 +8,83 @@
             "debt_to_equity": 4.48,
             "description": "Ford Motor Company develops, delivers, and services Ford trucks, sport utility vehicles, commercial vans and cars, and Lincoln luxury vehicles in the United States, Canada, the United Kingdom, Mexico,..."
         },
-        "updated_at": "2026-11-20T12:34:08.806239"
+        "updated_at": "2026-11-21T02:33:09.600040"
     },
-    "NFLX": {
+    "GO": {
         "data": {
-            "sector": "Communication Services",
-            "industry": "Entertainment",
-            "pe": 16.9,
-            "peg": 0.95,
-            "debt_to_equity": 0.6,
-            "description": "Netflix, Inc. provides entertainment services worldwide. The company offers television (TV) series, documentaries, feature films, games, and live programming across various genres and languages. It al..."
-        },
-        "updated_at": "2026-11-20T12:34:43.600980"
-    },
-    "ASTS": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Communication Equipment",
+            "sector": "Consumer Defensive",
+            "industry": "Grocery Stores",
             "pe": 0,
             "peg": 0,
-            "debt_to_equity": 1.9,
-            "description": "AST SpaceMobile, Inc., together with its subsidiaries, designs and develops the constellation of BlueBird satellites in the United States. The company provides a cellular broadband network in space to..."
+            "debt_to_equity": 2.18,
+            "description": "Grocery Outlet Holding Corp. operates as a retailer of consumables and fresh products sold through independently operated stores in the United States. It offers perishable department products, includi..."
         },
-        "updated_at": "2026-11-20T12:35:11.995283"
+        "updated_at": "2026-11-21T02:33:40.025124"
     },
-    "INTC": {
+    "MU": {
         "data": {
             "sector": "Technology",
             "industry": "Semiconductors",
-            "pe": 0,
-            "peg": 1.36,
-            "debt_to_equity": 0.38,
-            "description": "Intel Corporation designs, develops, manufactures, markets, sells, and services computing and related end products and services in the United States, Ireland, Israel, and internationally. It operates ..."
+            "pe": 8.0,
+            "peg": 0.16,
+            "debt_to_equity": 0.04,
+            "description": "Micron Technology, Inc. engages in the provision of semiconductor memory and storage products in the United States, Taiwan, Mainland China, other Asia Pacific countries, Japan, Europe, and internation..."
         },
-        "updated_at": "2026-11-20T12:35:40.475681"
+        "updated_at": "2026-11-21T02:34:12.530073"
     },
-    "TSLA": {
+    "AMZN": {
         "data": {
             "sector": "Consumer Cyclical",
-            "industry": "Auto Manufacturers",
-            "pe": 411.44,
-            "peg": 4.47,
-            "debt_to_equity": 0.18,
-            "description": "Tesla, Inc. designs, develops, manufactures, leases, and sells electric vehicles, and energy generation and storage systems in the United States, China, and internationally. The company operates in tw..."
+            "industry": "Internet Retail",
+            "pe": 19.95,
+            "peg": 1.19,
+            "debt_to_equity": 0.5,
+            "description": "Amazon.com, Inc. engages in the retail sale of consumer products, advertising, and subscriptions service through online and physical stores in North America and internationally. The company operates t..."
         },
-        "updated_at": "2026-11-20T12:36:38.556177"
+        "updated_at": "2026-11-21T02:34:39.042125"
+    },
+    "HOOD": {
+        "data": {
+            "sector": "Financial Services",
+            "industry": "Capital Markets",
+            "pe": 28.65,
+            "peg": 1.11,
+            "debt_to_equity": 2.24,
+            "description": "Robinhood Markets, Inc. operates financial services platform in the United States. The company's platform allows users to invest in stocks, exchange-traded funds (ETFs), and American depository receip..."
+        },
+        "updated_at": "2026-11-21T02:35:12.930582"
+    },
+    "BAC": {
+        "data": {
+            "sector": "Financial Services",
+            "industry": "Banks - Diversified",
+            "pe": 11.23,
+            "peg": 0.88,
+            "debt_to_equity": 0,
+            "description": "Bank of America Corporation, through its subsidiaries, provides various financial products and services for individual consumers, small and middle-market businesses, institutional investors, large cor..."
+        },
+        "updated_at": "2026-11-21T02:35:43.297821"
+    },
+    "PS": {
+        "data": {
+            "sector": "Financial Services",
+            "industry": "Asset Management",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 0.22,
+            "description": "Pershing Square Inc. operates as an alternative asset manager. The company was formerly known as Pershing Square Holdco, L.P. The company was incorporated in 2024 and is based in New York, New York. P..."
+        },
+        "updated_at": "2026-11-21T02:36:09.973489"
+    },
+    "MA": {
+        "data": {
+            "sector": "Financial Services",
+            "industry": "Credit Services",
+            "pe": 32.74,
+            "peg": 1.63,
+            "debt_to_equity": 3.55,
+            "description": "Mastercard Incorporated, a technology company, provides transaction processing and other payment-related products and services in the United States and internationally. The company offers products and..."
+        },
+        "updated_at": "2026-11-21T02:36:35.150640"
     }
 }
