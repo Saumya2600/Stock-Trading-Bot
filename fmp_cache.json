@@ -1,4 +1,81 @@
 {
+    "RDDT": {
+        "data": {
+            "sector": "Communication Services",
+            "industry": "Internet Content & Information",
+            "pe": 17.41,
+            "peg": 0.42,
+            "debt_to_equity": 0.01,
+            "description": "Reddit, Inc. operates a digital community in the United States and internationally. The company's platform enables user to engage in conversations, explore passions, research new hobbies, exchange goo..."
+        },
+        "updated_at": "2026-11-23T12:32:18.560177"
+    },
+    "IREN": {
+        "data": {
+            "sector": "Financial Services",
+            "industry": "Capital Markets",
+            "pe": 0,
+            "peg": 3.11,
+            "debt_to_equity": 2.0,
+            "description": "IREN Limited operates as a vertically integrated AI cloud services platform in Australia and Canada. It develops, owns, and operates data centers, including the associated land, grid connections, and ..."
+        },
+        "updated_at": "2026-11-23T12:32:47.848499"
+    },
+    "CAT": {
+        "data": {
+            "sector": "Industrials",
+            "industry": "Farm & Heavy Construction Machinery",
+            "pe": 20.03,
+            "peg": 0.9,
+            "debt_to_equity": 2.1,
+            "description": "Caterpillar Inc. provides construction and mining equipment, off-highway diesel and natural gas engines, industrial gas turbines, and diesel-electric locomotives in the United States and international..."
+        },
+        "updated_at": "2026-11-23T12:33:13.681929"
+    },
+    "MSFT": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Software - Infrastructure",
+            "pe": 25.29,
+            "peg": 1.43,
+            "debt_to_equity": 0.28,
+            "description": "Microsoft Corporation, a technology company, develops and supports a portfolio of technology solutions for individuals and businesses worldwide. Its products include operating systems, server applicat..."
+        },
+        "updated_at": "2026-11-23T12:33:45.560893"
+    },
+    "GME": {
+        "data": {
+            "sector": "Consumer Cyclical",
+            "industry": "Specialty Retail",
+            "pe": 17.54,
+            "peg": 0.31,
+            "debt_to_equity": 0.71,
+            "description": "GameStop Corp., a specialty retailer, provides games, collectibles, and entertainment products through its stores and e-commerce platforms in United States, Australia and Europe. The company sells new..."
+        },
+        "updated_at": "2026-11-23T12:34:20.164600"
+    },
+    "CRWV": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Software - Infrastructure",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 16.45,
+            "description": "CoreWeave, Inc. operates as a cloud infrastructure technology company in the United States, Denmark, Middle East and Asia Pacific. The company offers CoreWeave Cloud platform that comprises proprietar..."
+        },
+        "updated_at": "2026-11-23T12:34:42.487853"
+    },
+    "NKE": {
+        "data": {
+            "sector": "Consumer Cyclical",
+            "industry": "Footwear & Accessories",
+            "pe": 15.83,
+            "peg": 2.85,
+            "debt_to_equity": 0.73,
+            "description": "NIKE, Inc., together with its subsidiaries, designs, develops, markets, and sells athletic footwear, apparel, equipment, accessories, and services for men, women, and kids in North America, Europe, th..."
+        },
+        "updated_at": "2026-11-23T12:35:11.193324"
+    },
     "F": {
         "data": {
             "sector": "Consumer Cyclical",
@@ -8,83 +85,6 @@
             "debt_to_equity": 4.48,
             "description": "Ford Motor Company develops, delivers, and services Ford trucks, sport utility vehicles, commercial vans and cars, and Lincoln luxury vehicles in the United States, Canada, the United Kingdom, Mexico,..."
         },
-        "updated_at": "2026-11-21T02:33:09.600040"
-    },
-    "GO": {
-        "data": {
-            "sector": "Consumer Defensive",
-            "industry": "Grocery Stores",
-            "pe": 0,
-            "peg": 0,
-            "debt_to_equity": 2.18,
-            "description": "Grocery Outlet Holding Corp. operates as a retailer of consumables and fresh products sold through independently operated stores in the United States. It offers perishable department products, includi..."
-        },
-        "updated_at": "2026-11-21T02:33:40.025124"
-    },
-    "MU": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Semiconductors",
-            "pe": 8.0,
-            "peg": 0.16,
-            "debt_to_equity": 0.04,
-            "description": "Micron Technology, Inc. engages in the provision of semiconductor memory and storage products in the United States, Taiwan, Mainland China, other Asia Pacific countries, Japan, Europe, and internation..."
-        },
-        "updated_at": "2026-11-21T02:34:12.530073"
-    },
-    "AMZN": {
-        "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Internet Retail",
-            "pe": 19.95,
-            "peg": 1.19,
-            "debt_to_equity": 0.5,
-            "description": "Amazon.com, Inc. engages in the retail sale of consumer products, advertising, and subscriptions service through online and physical stores in North America and internationally. The company operates t..."
-        },
-        "updated_at": "2026-11-21T02:34:39.042125"
-    },
-    "HOOD": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Capital Markets",
-            "pe": 28.65,
-            "peg": 1.11,
-            "debt_to_equity": 2.24,
-            "description": "Robinhood Markets, Inc. operates financial services platform in the United States. The company's platform allows users to invest in stocks, exchange-traded funds (ETFs), and American depository receip..."
-        },
-        "updated_at": "2026-11-21T02:35:12.930582"
-    },
-    "BAC": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Banks - Diversified",
-            "pe": 11.23,
-            "peg": 0.88,
-            "debt_to_equity": 0,
-            "description": "Bank of America Corporation, through its subsidiaries, provides various financial products and services for individual consumers, small and middle-market businesses, institutional investors, large cor..."
-        },
-        "updated_at": "2026-11-21T02:35:43.297821"
-    },
-    "PS": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Asset Management",
-            "pe": 0,
-            "peg": 0,
-            "debt_to_equity": 0.22,
-            "description": "Pershing Square Inc. operates as an alternative asset manager. The company was formerly known as Pershing Square Holdco, L.P. The company was incorporated in 2024 and is based in New York, New York. P..."
-        },
-        "updated_at": "2026-11-21T02:36:09.973489"
-    },
-    "MA": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Credit Services",
-            "pe": 32.74,
-            "peg": 1.63,
-            "debt_to_equity": 3.55,
-            "description": "Mastercard Incorporated, a technology company, provides transaction processing and other payment-related products and services in the United States and internationally. The company offers products and..."
-        },
-        "updated_at": "2026-11-21T02:36:35.150640"
+        "updated_at": "2026-11-23T12:35:40.648699"
     }
 }
