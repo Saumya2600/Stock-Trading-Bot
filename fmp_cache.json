@@ -1,90 +1,79 @@
 {
-    "RDDT": {
-        "data": {
-            "sector": "Communication Services",
-            "industry": "Internet Content & Information",
-            "pe": 17.41,
-            "peg": 0.42,
-            "debt_to_equity": 0.01,
-            "description": "Reddit, Inc. operates a digital community in the United States and internationally. The company's platform enables user to engage in conversations, explore passions, research new hobbies, exchange goo..."
-        },
-        "updated_at": "2026-11-23T12:32:18.560177"
-    },
-    "IREN": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Capital Markets",
-            "pe": 0,
-            "peg": 3.11,
-            "debt_to_equity": 2.0,
-            "description": "IREN Limited operates as a vertically integrated AI cloud services platform in Australia and Canada. It develops, owns, and operates data centers, including the associated land, grid connections, and ..."
-        },
-        "updated_at": "2026-11-23T12:32:47.848499"
-    },
-    "CAT": {
-        "data": {
-            "sector": "Industrials",
-            "industry": "Farm & Heavy Construction Machinery",
-            "pe": 20.03,
-            "peg": 0.9,
-            "debt_to_equity": 2.1,
-            "description": "Caterpillar Inc. provides construction and mining equipment, off-highway diesel and natural gas engines, industrial gas turbines, and diesel-electric locomotives in the United States and international..."
-        },
-        "updated_at": "2026-11-23T12:33:13.681929"
-    },
-    "MSFT": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 25.29,
-            "peg": 1.43,
-            "debt_to_equity": 0.28,
-            "description": "Microsoft Corporation, a technology company, develops and supports a portfolio of technology solutions for individuals and businesses worldwide. Its products include operating systems, server applicat..."
-        },
-        "updated_at": "2026-11-23T12:33:45.560893"
-    },
     "GME": {
         "data": {
             "sector": "Consumer Cyclical",
             "industry": "Specialty Retail",
-            "pe": 17.54,
+            "pe": 17.96,
             "peg": 0.31,
             "debt_to_equity": 0.71,
             "description": "GameStop Corp., a specialty retailer, provides games, collectibles, and entertainment products through its stores and e-commerce platforms in United States, Australia and Europe. The company sells new..."
         },
-        "updated_at": "2026-11-23T12:34:20.164600"
+        "updated_at": "2026-11-24T00:46:18.337982"
     },
-    "CRWV": {
+    "SNDK": {
         "data": {
             "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 0,
+            "industry": "Computer Hardware",
+            "pe": 0.09,
             "peg": 0,
-            "debt_to_equity": 16.45,
-            "description": "CoreWeave, Inc. operates as a cloud infrastructure technology company in the United States, Denmark, Middle East and Asia Pacific. The company offers CoreWeave Cloud platform that comprises proprietar..."
+            "debt_to_equity": 0.01,
+            "description": "Sandisk Corporation develops, manufactures, and sells data storage devices and solutions using NAND flash technology in the Americas, Europe, the Middle East, Africa, Asia, and internationally. The co..."
         },
-        "updated_at": "2026-11-23T12:34:42.487853"
+        "updated_at": "2026-11-24T00:46:45.699477"
     },
-    "NKE": {
+    "DTE": {
         "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Footwear & Accessories",
-            "pe": 15.83,
-            "peg": 2.85,
-            "debt_to_equity": 0.73,
-            "description": "NIKE, Inc., together with its subsidiaries, designs, develops, markets, and sells athletic footwear, apparel, equipment, accessories, and services for men, women, and kids in North America, Europe, th..."
+            "sector": "Utilities",
+            "industry": "Utilities - Regulated Electric",
+            "pe": 20.91,
+            "peg": 1.75,
+            "debt_to_equity": 2.27,
+            "description": "DTE Energy Company engages in energy-related businesses and services. The company operates through four segments: Electric, Gas, DTE Vantage, and Energy Trading. The company's Electric segment generat..."
         },
-        "updated_at": "2026-11-23T12:35:11.193324"
+        "updated_at": "2026-11-24T00:47:16.341491"
     },
-    "F": {
+    "NFLX": {
         "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Auto Manufacturers",
-            "pe": 0,
-            "peg": 8.48,
-            "debt_to_equity": 4.48,
-            "description": "Ford Motor Company develops, delivers, and services Ford trucks, sport utility vehicles, commercial vans and cars, and Lincoln luxury vehicles in the United States, Canada, the United Kingdom, Mexico,..."
+            "sector": "Communication Services",
+            "industry": "Entertainment",
+            "pe": 16.79,
+            "peg": 0.91,
+            "debt_to_equity": 0.6,
+            "description": "Netflix, Inc. provides entertainment services worldwide. The company offers television (TV) series, documentaries, feature films, games, and live programming across various genres and languages. It al..."
         },
-        "updated_at": "2026-11-23T12:35:40.648699"
+        "updated_at": "2026-11-24T00:47:40.546623"
+    },
+    "NVDA": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Semiconductors",
+            "pe": 17.73,
+            "peg": 0.15,
+            "debt_to_equity": 0.14,
+            "description": "NVIDIA Corporation operates as a data center scale AI infrastructure company in the United States, Taiwan, China, Hong Kong, Europe, and internationally. It operates through Compute & Networking, and ..."
+        },
+        "updated_at": "2026-11-24T00:48:10.317330"
+    },
+    "SMH": {
+        "data": {
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 24.85,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "The fund normally invests at least 80% of its total assets in securities that comprise the fund's benchmark index. The index includes common stocks and depositary receipts of U.S. exchange-listed comp..."
+        },
+        "updated_at": "2026-11-24T00:48:45.630733"
+    },
+    "UNH": {
+        "data": {
+            "sector": "Healthcare",
+            "industry": "Healthcare Plans",
+            "pe": 19.18,
+            "peg": 0.86,
+            "debt_to_equity": 0.7,
+            "description": "UnitedHealth Group Incorporated operates as a health care company in the United States and internationally. It operates through four segments: Optum Health, Optum Insight, Optum Rx; and UnitedHealthca..."
+        },
+        "updated_at": "2026-11-24T00:49:10.027653"
     }
 }
