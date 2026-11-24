@@ -1,79 +1,90 @@
 {
-    "GME": {
+    "GOOG": {
         "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Specialty Retail",
-            "pe": 17.96,
-            "peg": 0.31,
-            "debt_to_equity": 0.71,
-            "description": "GameStop Corp., a specialty retailer, provides games, collectibles, and entertainment products through its stores and e-commerce platforms in United States, Australia and Europe. The company sells new..."
+            "sector": "Communication Services",
+            "industry": "Internet Content & Information",
+            "pe": 14.6,
+            "peg": 0.93,
+            "debt_to_equity": 0.22,
+            "description": "Alphabet Inc. offers various products and platforms in the United States, Europe, the Middle East, Africa, the Asia-Pacific, Canada, and Latin America. It operates through Google Services, Google Clou..."
         },
-        "updated_at": "2026-11-24T00:46:18.337982"
+        "updated_at": "2026-11-24T05:24:13.936943"
     },
-    "SNDK": {
+    "VTI": {
         "data": {
-            "sector": "Technology",
-            "industry": "Computer Hardware",
-            "pe": 0.09,
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 21.8,
             "peg": 0,
-            "debt_to_equity": 0.01,
-            "description": "Sandisk Corporation develops, manufactures, and sells data storage devices and solutions using NAND flash technology in the Americas, Europe, the Middle East, Africa, Asia, and internationally. The co..."
+            "debt_to_equity": 0,
+            "description": "The fund manager employs an indexing investment approach designed to track the performance of the CRSP U.S. Total Market Index (the \u201cTarget Index\u201d), which represents 100% of the investable U.S. stock ..."
         },
-        "updated_at": "2026-11-24T00:46:45.699477"
+        "updated_at": "2026-11-24T05:25:22.360780"
     },
-    "DTE": {
+    "PR": {
         "data": {
-            "sector": "Utilities",
-            "industry": "Utilities - Regulated Electric",
-            "pe": 20.91,
-            "peg": 1.75,
-            "debt_to_equity": 2.27,
-            "description": "DTE Energy Company engages in energy-related businesses and services. The company operates through four segments: Electric, Gas, DTE Vantage, and Energy Trading. The company's Electric segment generat..."
+            "sector": "Energy",
+            "industry": "Oil & Gas E&P",
+            "pe": 10.79,
+            "peg": 0.59,
+            "debt_to_equity": 0.26,
+            "description": "Permian Resources Corporation, an independent oil and natural gas company, focuses on the development of crude oil and associated liquids-rich natural gas reserves in the United States. The company's ..."
         },
-        "updated_at": "2026-11-24T00:47:16.341491"
+        "updated_at": "2026-11-24T05:25:43.972986"
     },
     "NFLX": {
         "data": {
             "sector": "Communication Services",
             "industry": "Entertainment",
-            "pe": 16.79,
+            "pe": 16.37,
             "peg": 0.91,
             "debt_to_equity": 0.6,
             "description": "Netflix, Inc. provides entertainment services worldwide. The company offers television (TV) series, documentaries, feature films, games, and live programming across various genres and languages. It al..."
         },
-        "updated_at": "2026-11-24T00:47:40.546623"
+        "updated_at": "2026-11-24T05:26:11.307979"
     },
     "NVDA": {
         "data": {
             "sector": "Technology",
             "industry": "Semiconductors",
-            "pe": 17.73,
+            "pe": 13.48,
             "peg": 0.15,
             "debt_to_equity": 0.14,
             "description": "NVIDIA Corporation operates as a data center scale AI infrastructure company in the United States, Taiwan, China, Hong Kong, Europe, and internationally. It operates through Compute & Networking, and ..."
         },
-        "updated_at": "2026-11-24T00:48:10.317330"
+        "updated_at": "2026-11-24T05:26:38.749397"
     },
-    "SMH": {
-        "data": {
-            "sector": "Unknown",
-            "industry": "Unknown",
-            "pe": 24.85,
-            "peg": 0,
-            "debt_to_equity": 0,
-            "description": "The fund normally invests at least 80% of its total assets in securities that comprise the fund's benchmark index. The index includes common stocks and depositary receipts of U.S. exchange-listed comp..."
-        },
-        "updated_at": "2026-11-24T00:48:45.630733"
-    },
-    "UNH": {
+    "WAY": {
         "data": {
             "sector": "Healthcare",
-            "industry": "Healthcare Plans",
-            "pe": 19.18,
-            "peg": 0.86,
-            "debt_to_equity": 0.7,
-            "description": "UnitedHealth Group Incorporated operates as a health care company in the United States and internationally. It operates through four segments: Optum Health, Optum Insight, Optum Rx; and UnitedHealthca..."
+            "industry": "Health Information Services",
+            "pe": 38.49,
+            "peg": 0,
+            "debt_to_equity": 0.37,
+            "description": "Waystar Holding Corp. develops a cloud-based software solution for healthcare payments. Its platform offers financial clearance, patient financial care, claim and payer payment management, denials pre..."
         },
-        "updated_at": "2026-11-24T00:49:10.027653"
+        "updated_at": "2026-11-24T05:27:06.011573"
+    },
+    "NYT": {
+        "data": {
+            "sector": "Communication Services",
+            "industry": "Publishing",
+            "pe": 27.33,
+            "peg": 3.79,
+            "debt_to_equity": 0,
+            "description": "The New York Times Company, together with its subsidiaries, creates, collects, and distributes news and information worldwide. It operates through two segments, The New York Times Group and The Athlet..."
+        },
+        "updated_at": "2026-11-24T05:27:46.320980"
+    },
+    "ALL": {
+        "data": {
+            "sector": "Financial Services",
+            "industry": "Insurance - Property & Casualty",
+            "pe": 6.02,
+            "peg": 1.96,
+            "debt_to_equity": 0.23,
+            "description": "The Allstate Corporation, together with its subsidiaries, provides property and casualty, and other insurance products in the United States and Canada. It operates in four segments: Allstate Protectio..."
+        },
+        "updated_at": "2026-11-24T05:28:15.424630"
     }
 }
