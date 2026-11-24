@@ -1,90 +1,90 @@
 {
-    "GOOG": {
-        "data": {
-            "sector": "Communication Services",
-            "industry": "Internet Content & Information",
-            "pe": 14.6,
-            "peg": 0.93,
-            "debt_to_equity": 0.22,
-            "description": "Alphabet Inc. offers various products and platforms in the United States, Europe, the Middle East, Africa, the Asia-Pacific, Canada, and Latin America. It operates through Google Services, Google Clou..."
-        },
-        "updated_at": "2026-11-24T05:24:13.936943"
-    },
-    "VTI": {
-        "data": {
-            "sector": "Unknown",
-            "industry": "Unknown",
-            "pe": 21.8,
-            "peg": 0,
-            "debt_to_equity": 0,
-            "description": "The fund manager employs an indexing investment approach designed to track the performance of the CRSP U.S. Total Market Index (the \u201cTarget Index\u201d), which represents 100% of the investable U.S. stock ..."
-        },
-        "updated_at": "2026-11-24T05:25:22.360780"
-    },
-    "PR": {
-        "data": {
-            "sector": "Energy",
-            "industry": "Oil & Gas E&P",
-            "pe": 10.79,
-            "peg": 0.59,
-            "debt_to_equity": 0.26,
-            "description": "Permian Resources Corporation, an independent oil and natural gas company, focuses on the development of crude oil and associated liquids-rich natural gas reserves in the United States. The company's ..."
-        },
-        "updated_at": "2026-11-24T05:25:43.972986"
-    },
-    "NFLX": {
-        "data": {
-            "sector": "Communication Services",
-            "industry": "Entertainment",
-            "pe": 16.37,
-            "peg": 0.91,
-            "debt_to_equity": 0.6,
-            "description": "Netflix, Inc. provides entertainment services worldwide. The company offers television (TV) series, documentaries, feature films, games, and live programming across various genres and languages. It al..."
-        },
-        "updated_at": "2026-11-24T05:26:11.307979"
-    },
     "NVDA": {
         "data": {
             "sector": "Technology",
             "industry": "Semiconductors",
-            "pe": 13.48,
+            "pe": 17.73,
             "peg": 0.15,
             "debt_to_equity": 0.14,
             "description": "NVIDIA Corporation operates as a data center scale AI infrastructure company in the United States, Taiwan, China, Hong Kong, Europe, and internationally. It operates through Compute & Networking, and ..."
         },
-        "updated_at": "2026-11-24T05:26:38.749397"
+        "updated_at": "2026-11-24T12:32:04.346639"
     },
-    "WAY": {
-        "data": {
-            "sector": "Healthcare",
-            "industry": "Health Information Services",
-            "pe": 38.49,
-            "peg": 0,
-            "debt_to_equity": 0.37,
-            "description": "Waystar Holding Corp. develops a cloud-based software solution for healthcare payments. Its platform offers financial clearance, patient financial care, claim and payer payment management, denials pre..."
-        },
-        "updated_at": "2026-11-24T05:27:06.011573"
-    },
-    "NYT": {
+    "BILI": {
         "data": {
             "sector": "Communication Services",
-            "industry": "Publishing",
-            "pe": 27.33,
-            "peg": 3.79,
-            "debt_to_equity": 0,
-            "description": "The New York Times Company, together with its subsidiaries, creates, collects, and distributes news and information worldwide. It operates through two segments, The New York Times Group and The Athlet..."
+            "industry": "Internet Content & Information",
+            "pe": 21.35,
+            "peg": 0.25,
+            "debt_to_equity": 0.6,
+            "description": "Bilibili Inc. provides online entertainment services for the young generations in the People's Republic of China. It offers a range of digital content, including professional user generated videos (PU..."
         },
-        "updated_at": "2026-11-24T05:27:46.320980"
+        "updated_at": "2026-11-24T12:32:50.270752"
     },
-    "ALL": {
+    "WH": {
+        "data": {
+            "sector": "Consumer Cyclical",
+            "industry": "Lodging",
+            "pe": 29.41,
+            "peg": 0.52,
+            "debt_to_equity": 5.74,
+            "description": "Wyndham Hotels & Resorts, Inc. is the world's largest hotel franchising company by the number of franchised properties, with approximately 8,300 hotels across approximately 100 countries on six contin..."
+        },
+        "updated_at": "2026-11-24T12:33:16.440123"
+    },
+    "DTE": {
+        "data": {
+            "sector": "Utilities",
+            "industry": "Utilities - Regulated Electric",
+            "pe": 20.91,
+            "peg": 1.75,
+            "debt_to_equity": 2.27,
+            "description": "DTE Energy Company engages in energy-related businesses and services. The company operates through four segments: Electric, Gas, DTE Vantage, and Energy Trading. The company's Electric segment generat..."
+        },
+        "updated_at": "2026-11-24T12:33:45.638877"
+    },
+    "META": {
+        "data": {
+            "sector": "Communication Services",
+            "industry": "Internet Content & Information",
+            "pe": 20.39,
+            "peg": 0.73,
+            "debt_to_equity": 0.42,
+            "description": "Meta Platforms, Inc. engages in the development of products that enable people to connect and share with friends and family through mobile devices, personal computers, virtual reality (VR) headsets, a..."
+        },
+        "updated_at": "2026-11-24T12:34:13.211877"
+    },
+    "VREX": {
+        "data": {
+            "sector": "Healthcare",
+            "industry": "Medical Devices",
+            "pe": 34.25,
+            "peg": 4.98,
+            "debt_to_equity": 0.74,
+            "description": "Varex Imaging Corporation designs, manufactures, and sells X-ray imaging components. It operates through two segments, Medical and Industrial. The Medical segment designs, manufactures, sells, and ser..."
+        },
+        "updated_at": "2026-11-24T12:34:47.203556"
+    },
+    "ITRN": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Scientific & Technical Instruments",
+            "pe": 14.42,
+            "peg": 3.41,
+            "debt_to_equity": 0.02,
+            "description": "Ituran Location and Control Ltd., together with its subsidiaries, provides location-based telematics services and machine-to-machine telematics products in Israel, Brazil, and internationally. It oper..."
+        },
+        "updated_at": "2026-11-24T12:35:22.101161"
+    },
+    "IREN": {
         "data": {
             "sector": "Financial Services",
-            "industry": "Insurance - Property & Casualty",
-            "pe": 6.02,
-            "peg": 1.96,
-            "debt_to_equity": 0.23,
-            "description": "The Allstate Corporation, together with its subsidiaries, provides property and casualty, and other insurance products in the United States and Canada. It operates in four segments: Allstate Protectio..."
+            "industry": "Capital Markets",
+            "pe": 0,
+            "peg": 3.11,
+            "debt_to_equity": 2.0,
+            "description": "IREN Limited operates as a vertically integrated AI cloud services platform in Australia and Canada. It develops, owns, and operates data centers, including the associated land, grid connections, and ..."
         },
-        "updated_at": "2026-11-24T05:28:15.424630"
+        "updated_at": "2026-11-24T12:35:53.904066"
     }
 }
