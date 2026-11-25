@@ -1,69 +1,25 @@
 {
+    "TSLA": {
+        "data": {
+            "sector": "Consumer Cyclical",
+            "industry": "Auto Manufacturers",
+            "pe": 422.73,
+            "peg": 34.09,
+            "debt_to_equity": 0.18,
+            "description": "Tesla, Inc. designs, develops, manufactures, leases, and sells electric vehicles, and energy generation and storage systems in the United States, China, and internationally. The company operates in tw..."
+        },
+        "updated_at": "2026-11-25T12:32:09.285566"
+    },
     "NVDA": {
         "data": {
             "sector": "Technology",
             "industry": "Semiconductors",
-            "pe": 17.74,
+            "pe": 16.69,
             "peg": 0.14,
             "debt_to_equity": 0.14,
             "description": "NVIDIA Corporation operates as a data center scale AI infrastructure company in the United States, Taiwan, China, Hong Kong, Europe, and internationally. It operates through Compute & Networking, and ..."
         },
-        "updated_at": "2026-11-25T04:22:27.206427"
-    },
-    "INTC": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Semiconductors",
-            "pe": 0,
-            "peg": 0,
-            "debt_to_equity": 0.38,
-            "description": "Intel Corporation designs, develops, manufactures, markets, sells, and services computing and related end products and services in the United States, Ireland, Israel, and internationally. It operates ..."
-        },
-        "updated_at": "2026-11-25T04:23:07.514465"
-    },
-    "AG": {
-        "data": {
-            "sector": "Basic Materials",
-            "industry": "Silver",
-            "pe": 13.62,
-            "peg": 0.36,
-            "debt_to_equity": 0.1,
-            "description": "First Majestic Silver Corp. engages in the acquisition, exploration, development, and production of mineral properties in North America. The company explores for silver and gold deposits. Its projects..."
-        },
-        "updated_at": "2026-11-25T04:23:37.833745"
-    },
-    "MS": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Capital Markets",
-            "pe": 13.39,
-            "peg": 1.33,
-            "debt_to_equity": 4.9,
-            "description": "Morgan Stanley, a financial holding company, provides various financial products and services to corporations, governments, financial institutions, and individuals in the Americas, Asia, Europe, the M..."
-        },
-        "updated_at": "2026-11-25T04:24:08.510827"
-    },
-    "GOOG": {
-        "data": {
-            "sector": "Communication Services",
-            "industry": "Internet Content & Information",
-            "pe": 14.44,
-            "peg": 0.46,
-            "debt_to_equity": 0.22,
-            "description": "Alphabet Inc. offers various products and platforms in the United States, Europe, the Middle East, Africa, the Asia-Pacific, Canada, and Latin America. It operates through Google Services, Google Clou..."
-        },
-        "updated_at": "2026-11-25T04:24:39.888483"
-    },
-    "QQQ": {
-        "data": {
-            "sector": "Unknown",
-            "industry": "Unknown",
-            "pe": 26.28,
-            "peg": 0,
-            "debt_to_equity": 0,
-            "description": "To maintain the correspondence between the composition and weights of the securities in the trust (the \"securities\") and the stocks in the NASDAQ-100 Index\u00ae, the adviser adjusts the securities from ti..."
-        },
-        "updated_at": "2026-11-25T04:25:14.330329"
+        "updated_at": "2026-11-25T12:32:59.049550"
     },
     "IREN": {
         "data": {
@@ -74,17 +30,61 @@
             "debt_to_equity": 2.0,
             "description": "IREN Limited operates as a vertically integrated AI cloud services platform in Australia and Canada. It develops, owns, and operates data centers, including the associated land, grid connections, and ..."
         },
-        "updated_at": "2026-11-25T04:25:50.066686"
+        "updated_at": "2026-11-25T12:33:28.181375"
     },
-    "ES": {
+    "PR": {
         "data": {
-            "sector": "Utilities",
-            "industry": "Utilities - Regulated Electric",
-            "pe": 19.17,
-            "peg": 9.58,
-            "debt_to_equity": 1.76,
-            "description": "Eversource Energy, a public utility holding company, engages in the energy delivery business. The company operates through Electric Distribution, Electric Transmission, Natural Gas Distribution, and W..."
+            "sector": "Energy",
+            "industry": "Oil & Gas E&P",
+            "pe": 10.88,
+            "peg": 0.37,
+            "debt_to_equity": 0.26,
+            "description": "Permian Resources Corporation, an independent oil and natural gas company, focuses on the development of crude oil and associated liquids-rich natural gas reserves in the United States. The company's ..."
         },
-        "updated_at": "2026-11-25T04:26:19.134696"
+        "updated_at": "2026-11-25T12:34:03.527217"
+    },
+    "COIN": {
+        "data": {
+            "sector": "Financial Services",
+            "industry": "Financial Data & Stock Exchanges",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 0.49,
+            "description": "Coinbase Global, Inc. operates platform for crypto assets in the United States and internationally. It provides the primary financial account in the crypto economy for consumers; a brokerage platform ..."
+        },
+        "updated_at": "2026-11-25T12:34:35.816901"
+    },
+    "RKLB": {
+        "data": {
+            "sector": "Industrials",
+            "industry": "Aerospace & Defense",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 0.02,
+            "description": "Rocket Lab Corporation, a space company, provides launch services and space systems solutions in the United States, Canada, Japan, and internationally. The company operates through launch services and..."
+        },
+        "updated_at": "2026-11-25T12:35:05.677842"
+    },
+    "ALL": {
+        "data": {
+            "sector": "Financial Services",
+            "industry": "Insurance - Property & Casualty",
+            "pe": 6.13,
+            "peg": 0.36,
+            "debt_to_equity": 0.23,
+            "description": "The Allstate Corporation, together with its subsidiaries, provides property and casualty, and other insurance products in the United States and Canada. It operates in four segments: Allstate Protectio..."
+        },
+        "updated_at": "2026-11-25T12:35:35.889093"
+    },
+    "AAPL": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Consumer Electronics",
+            "pe": 39.43,
+            "peg": 3.87,
+            "debt_to_equity": 0.84,
+            "description": "Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories. The company offers iPhone, a line of smartphones; Mac, a line of personal computers;..."
+        },
+        "updated_at": "2026-11-25T12:36:02.544295"
     }
 }
