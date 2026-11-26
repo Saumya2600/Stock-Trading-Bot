@@ -1,90 +1,90 @@
 {
-    "DTE": {
+    "ES": {
         "data": {
             "sector": "Utilities",
             "industry": "Utilities - Regulated Electric",
-            "pe": 21.0,
-            "peg": 1.66,
-            "debt_to_equity": 2.27,
-            "description": "DTE Energy Company engages in energy-related businesses and services. The company operates through four segments: Electric, Gas, DTE Vantage, and Energy Trading. The company's Electric segment generat..."
+            "pe": 19.14,
+            "peg": 9.63,
+            "debt_to_equity": 1.76,
+            "description": "Eversource Energy, a public utility holding company, engages in the energy delivery business. The company operates through Electric Distribution, Electric Transmission, Natural Gas Distribution, and W..."
         },
-        "updated_at": "2026-11-25T22:26:58.724862"
-    },
-    "SO": {
-        "data": {
-            "sector": "Utilities",
-            "industry": "Utilities - Regulated Electric",
-            "pe": 21.69,
-            "peg": 2.27,
-            "debt_to_equity": 1.68,
-            "description": "The Southern Company, through its subsidiaries, engages in the sale of electricity. The company offers electric service to retail customers and wholesale customers; and energy-related products and ser..."
-        },
-        "updated_at": "2026-11-25T22:28:02.928485"
-    },
-    "ORCL": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Infrastructure",
-            "pe": 16.28,
-            "peg": 2.52,
-            "debt_to_equity": 2.52,
-            "description": "Oracle Corporation offers products and services that build, run and support enterprise information technology frameworks worldwide. Its Oracle cloud software as a service offering includes various clo..."
-        },
-        "updated_at": "2026-11-25T22:28:32.219921"
-    },
-    "GOOG": {
-        "data": {
-            "sector": "Communication Services",
-            "industry": "Internet Content & Information",
-            "pe": 14.15,
-            "peg": 0.49,
-            "debt_to_equity": 0.22,
-            "description": "Alphabet Inc. offers various products and platforms in the United States, Europe, the Middle East, Africa, the Asia-Pacific, Canada, and Latin America. It operates through Google Services, Google Clou..."
-        },
-        "updated_at": "2026-11-25T22:29:01.371965"
+        "updated_at": "2026-11-26T03:41:28.367087"
     },
     "NVDA": {
         "data": {
             "sector": "Technology",
             "industry": "Semiconductors",
-            "pe": 16.04,
+            "pe": 16.68,
             "peg": 0.19,
             "debt_to_equity": 0.14,
             "description": "NVIDIA Corporation operates as a data center scale AI infrastructure company in the United States, Taiwan, China, Hong Kong, Europe, and internationally. It operates through Compute & Networking, and ..."
         },
-        "updated_at": "2026-11-25T22:29:28.908218"
+        "updated_at": "2026-11-26T03:42:28.269294"
     },
-    "NYT": {
+    "AAPL": {
         "data": {
-            "sector": "Communication Services",
-            "industry": "Publishing",
-            "pe": 28.68,
-            "peg": 1.29,
-            "debt_to_equity": 0,
-            "description": "The New York Times Company, together with its subsidiaries, creates, collects, and distributes news and information worldwide. It operates through two segments, The New York Times Group and The Athlet..."
+            "sector": "Technology",
+            "industry": "Consumer Electronics",
+            "pe": 39.6,
+            "peg": 3.94,
+            "debt_to_equity": 0.84,
+            "description": "Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories. The company offers iPhone, a line of smartphones; Mac, a line of personal computers;..."
         },
-        "updated_at": "2026-11-25T22:30:54.039193"
+        "updated_at": "2026-11-26T03:43:06.942932"
     },
-    "SOXX": {
+    "ASTS": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Communication Equipment",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 1.9,
+            "description": "AST SpaceMobile, Inc., together with its subsidiaries, designs and develops the constellation of BlueBird satellites in the United States. The company provides a cellular broadband network in space to..."
+        },
+        "updated_at": "2026-11-26T03:44:03.085862"
+    },
+    "SOXS": {
         "data": {
             "sector": "Unknown",
             "industry": "Unknown",
-            "pe": 27.09,
+            "pe": 0,
             "peg": 0,
             "debt_to_equity": 0,
-            "description": "The fund generally will invest at least 80% of its assets in the component securities of its index and in investments that have economic characteristics that are substantially identical to the compone..."
+            "description": "The fund invests at least 80% of the fund\u2019s net assets in financial instruments, that, in combination, provide 3X daily inverse (opposite) or short exposure to the index or to ETFs that track the inde..."
         },
-        "updated_at": "2026-11-25T22:31:39.922128"
+        "updated_at": "2026-11-26T03:44:34.400402"
     },
-    "FOR": {
+    "IREN": {
         "data": {
-            "sector": "Real Estate",
-            "industry": "Real Estate - Development",
-            "pe": 8.37,
-            "peg": 1.85,
-            "debt_to_equity": 0.42,
-            "description": "Forestar Group Inc. operates as a residential lot development company in the United States. It acquires land and develops finished residential lots for single-family residential homes. The company sel..."
+            "sector": "Financial Services",
+            "industry": "Capital Markets",
+            "pe": 0,
+            "peg": 0,
+            "debt_to_equity": 2.0,
+            "description": "IREN Limited operates as a vertically integrated AI cloud services platform in Australia and Canada. It develops, owns, and operates data centers, including the associated land, grid connections, and ..."
         },
-        "updated_at": "2026-11-25T22:32:10.483249"
+        "updated_at": "2026-11-26T03:45:02.731823"
+    },
+    "ALL": {
+        "data": {
+            "sector": "Financial Services",
+            "industry": "Insurance - Property & Casualty",
+            "pe": 6.16,
+            "peg": 0.36,
+            "debt_to_equity": 0.23,
+            "description": "The Allstate Corporation, together with its subsidiaries, provides property and casualty, and other insurance products in the United States and Canada. It operates in four segments: Allstate Protectio..."
+        },
+        "updated_at": "2026-11-26T03:45:40.938255"
+    },
+    "ET": {
+        "data": {
+            "sector": "Energy",
+            "industry": "Oil & Gas Midstream",
+            "pe": 12.46,
+            "peg": 8.62,
+            "debt_to_equity": 1.42,
+            "description": "Energy Transfer LP, together with its subsidiaries, provides energy-related services in the United States. It operates through Intrastate Transportation and Storage; Interstate Transportation and Stor..."
+        },
+        "updated_at": "2026-11-26T03:46:16.521639"
     }
 }
