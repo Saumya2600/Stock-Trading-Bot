@@ -1,90 +1,79 @@
 {
-    "ES": {
+    "VOO": {
         "data": {
-            "sector": "Utilities",
-            "industry": "Utilities - Regulated Electric",
-            "pe": 19.14,
-            "peg": 9.63,
-            "debt_to_equity": 1.76,
-            "description": "Eversource Energy, a public utility holding company, engages in the energy delivery business. The company operates through Electric Distribution, Electric Transmission, Natural Gas Distribution, and W..."
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 22.26,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "The fund manager employs an indexing investment approach designed to track the performance of the Standard & Poor's 500 Index, a widely recognized benchmark of U.S. stock market performance that is do..."
         },
-        "updated_at": "2026-11-26T03:41:28.367087"
+        "updated_at": "2026-11-27T12:32:14.815616"
+    },
+    "GME": {
+        "data": {
+            "sector": "Consumer Cyclical",
+            "industry": "Specialty Retail",
+            "pe": 17.29,
+            "peg": 0.19,
+            "debt_to_equity": 0.71,
+            "description": "GameStop Corp., a specialty retailer, provides games, collectibles, and entertainment products through its stores and e-commerce platforms in United States, Australia and Europe. The company sells new..."
+        },
+        "updated_at": "2026-11-27T12:32:43.980535"
+    },
+    "SCHD": {
+        "data": {
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 18.98,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "To pursue its goal, the fund generally invests in stocks that are included in the index. The index is designed to measure the performance of high dividend yielding stocks issued by U.S. companies that..."
+        },
+        "updated_at": "2026-11-27T12:33:04.298536"
+    },
+    "SNDK": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Computer Hardware",
+            "pe": 4.71,
+            "peg": 0,
+            "debt_to_equity": 0.01,
+            "description": "Sandisk Corporation develops, manufactures, and sells data storage devices and solutions using NAND flash technology in the Americas, Europe, the Middle East, Africa, Asia, and internationally. The co..."
+        },
+        "updated_at": "2026-11-27T12:33:37.068513"
     },
     "NVDA": {
         "data": {
             "sector": "Technology",
             "industry": "Semiconductors",
-            "pe": 16.68,
+            "pe": 16.04,
             "peg": 0.19,
             "debt_to_equity": 0.14,
             "description": "NVIDIA Corporation operates as a data center scale AI infrastructure company in the United States, Taiwan, China, Hong Kong, Europe, and internationally. It operates through Compute & Networking, and ..."
         },
-        "updated_at": "2026-11-26T03:42:28.269294"
+        "updated_at": "2026-11-27T12:34:05.964734"
     },
-    "AAPL": {
+    "IT": {
         "data": {
             "sector": "Technology",
-            "industry": "Consumer Electronics",
-            "pe": 39.6,
-            "peg": 3.94,
-            "debt_to_equity": 0.84,
-            "description": "Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories. The company offers iPhone, a line of smartphones; Mac, a line of personal computers;..."
-        },
-        "updated_at": "2026-11-26T03:43:06.942932"
-    },
-    "ASTS": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Communication Equipment",
-            "pe": 0,
-            "peg": 0,
-            "debt_to_equity": 1.9,
-            "description": "AST SpaceMobile, Inc., together with its subsidiaries, designs and develops the constellation of BlueBird satellites in the United States. The company provides a cellular broadband network in space to..."
-        },
-        "updated_at": "2026-11-26T03:44:03.085862"
-    },
-    "SOXS": {
-        "data": {
-            "sector": "Unknown",
-            "industry": "Unknown",
-            "pe": 0,
-            "peg": 0,
+            "industry": "Information Technology Services",
+            "pe": 13.24,
+            "peg": 1.08,
             "debt_to_equity": 0,
-            "description": "The fund invests at least 80% of the fund\u2019s net assets in financial instruments, that, in combination, provide 3X daily inverse (opposite) or short exposure to the index or to ETFs that track the inde..."
+            "description": "Gartner, Inc. provides business and technology insights to support decision-making and performance on an organization's mission-critical priorities in the United States, Canada, Europe, the Middle Eas..."
         },
-        "updated_at": "2026-11-26T03:44:34.400402"
+        "updated_at": "2026-11-27T12:34:36.570959"
     },
-    "IREN": {
+    "SPCX": {
         "data": {
-            "sector": "Financial Services",
-            "industry": "Capital Markets",
-            "pe": 0,
+            "sector": "Industrials",
+            "industry": "Aerospace & Defense",
+            "pe": 554.09,
             "peg": 0,
-            "debt_to_equity": 2.0,
-            "description": "IREN Limited operates as a vertically integrated AI cloud services platform in Australia and Canada. It develops, owns, and operates data centers, including the associated land, grid connections, and ..."
+            "debt_to_equity": 0.22,
+            "description": "Space Exploration Technologies Corp. provides satellite-based broadband services in the United States, Ireland, Canada, and internationally. It operates through three operating segments: Space, Connec..."
         },
-        "updated_at": "2026-11-26T03:45:02.731823"
-    },
-    "ALL": {
-        "data": {
-            "sector": "Financial Services",
-            "industry": "Insurance - Property & Casualty",
-            "pe": 6.16,
-            "peg": 0.36,
-            "debt_to_equity": 0.23,
-            "description": "The Allstate Corporation, together with its subsidiaries, provides property and casualty, and other insurance products in the United States and Canada. It operates in four segments: Allstate Protectio..."
-        },
-        "updated_at": "2026-11-26T03:45:40.938255"
-    },
-    "ET": {
-        "data": {
-            "sector": "Energy",
-            "industry": "Oil & Gas Midstream",
-            "pe": 12.46,
-            "peg": 8.62,
-            "debt_to_equity": 1.42,
-            "description": "Energy Transfer LP, together with its subsidiaries, provides energy-related services in the United States. It operates through Intrastate Transportation and Storage; Interstate Transportation and Stor..."
-        },
-        "updated_at": "2026-11-26T03:46:16.521639"
+        "updated_at": "2026-11-27T12:35:04.965366"
     }
 }
