@@ -1,15 +1,4 @@
 {
-    "TSLA": {
-        "data": {
-            "sector": "Consumer Cyclical",
-            "industry": "Auto Manufacturers",
-            "pe": 439.56,
-            "peg": 38.0,
-            "debt_to_equity": 0.18,
-            "description": "Tesla, Inc. designs, develops, manufactures, leases, and sells electric vehicles, and energy generation and storage systems in the United States, China, and internationally. The company operates in tw..."
-        },
-        "updated_at": "2026-11-27T21:57:05.655173"
-    },
     "DTE": {
         "data": {
             "sector": "Utilities",
@@ -19,18 +8,62 @@
             "debt_to_equity": 2.27,
             "description": "DTE Energy Company engages in energy-related businesses and services. The company operates through four segments: Electric, Gas, DTE Vantage, and Energy Trading. The company's Electric segment generat..."
         },
-        "updated_at": "2026-11-27T21:57:33.064496"
+        "updated_at": "2026-11-28T03:23:59.916059"
     },
-    "ALL": {
+    "QQQ": {
         "data": {
-            "sector": "Financial Services",
-            "industry": "Insurance - Property & Casualty",
-            "pe": 6.18,
-            "peg": 0.36,
-            "debt_to_equity": 0.23,
-            "description": "The Allstate Corporation, together with its subsidiaries, provides property and casualty, and other insurance products in the United States and Canada. It operates in four segments: Allstate Protectio..."
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 26.81,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "To maintain the correspondence between the composition and weights of the securities in the trust (the \"securities\") and the stocks in the NASDAQ-100 Index\u00ae, the adviser adjusts the securities from ti..."
         },
-        "updated_at": "2026-11-27T21:58:00.876869"
+        "updated_at": "2026-11-28T03:24:25.315997"
+    },
+    "MU": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Semiconductors",
+            "pe": 8.7,
+            "peg": 0.13,
+            "debt_to_equity": 0.04,
+            "description": "Micron Technology, Inc. engages in the provision of semiconductor memory and storage products in the United States, Taiwan, Mainland China, other Asia Pacific countries, Japan, Europe, and internation..."
+        },
+        "updated_at": "2026-11-28T03:24:53.202602"
+    },
+    "SPCX": {
+        "data": {
+            "sector": "Industrials",
+            "industry": "Aerospace & Defense",
+            "pe": 580.83,
+            "peg": 0,
+            "debt_to_equity": 0.22,
+            "description": "Space Exploration Technologies Corp. provides satellite-based broadband services in the United States, Ireland, Canada, and internationally. It operates through three operating segments: Space, Connec..."
+        },
+        "updated_at": "2026-11-28T03:25:29.392296"
+    },
+    "SOXL": {
+        "data": {
+            "sector": "Unknown",
+            "industry": "Unknown",
+            "pe": 13.77,
+            "peg": 0,
+            "debt_to_equity": 0,
+            "description": "The fund invests at least 80% of its net assets in financial instruments, such as swap agreements, securities of the index, and ETFs that track the index, that, in combination, provide 3X daily levera..."
+        },
+        "updated_at": "2026-11-28T03:26:02.989975"
+    },
+    "SNDK": {
+        "data": {
+            "sector": "Technology",
+            "industry": "Computer Hardware",
+            "pe": 5.46,
+            "peg": 0,
+            "debt_to_equity": 0.01,
+            "description": "Sandisk Corporation develops, manufactures, and sells data storage devices and solutions using NAND flash technology in the Americas, Europe, the Middle East, Africa, Asia, and internationally. The co..."
+        },
+        "updated_at": "2026-11-28T03:26:33.376566"
     },
     "AMD": {
         "data": {
@@ -41,29 +74,7 @@
             "debt_to_equity": 0.13,
             "description": "Advanced Micro Devices, Inc. operates as a semiconductor company internationally. It operates in three segments: Data Center, Client and Gaming, and Embedded. The company offers artificial intelligenc..."
         },
-        "updated_at": "2026-11-27T21:58:30.586306"
-    },
-    "GOOGL": {
-        "data": {
-            "sector": "Communication Services",
-            "industry": "Internet Content & Information",
-            "pe": 14.36,
-            "peg": 0.49,
-            "debt_to_equity": 0.22,
-            "description": "Alphabet Inc. offers various products and platforms in the United States, Europe, the Middle East, Africa, the Asia-Pacific, Canada, and Latin America. It operates through Google Services, Google Clou..."
-        },
-        "updated_at": "2026-11-27T21:58:58.277495"
-    },
-    "YOU": {
-        "data": {
-            "sector": "Technology",
-            "industry": "Software - Application",
-            "pe": 32.77,
-            "peg": 0.71,
-            "debt_to_equity": 0.83,
-            "description": "Clear Secure, Inc. operates a secure identity platform under the CLEAR brand name primarily in the United States. It provides secure identity platform, a multi-layered infrastructure consisting of fro..."
-        },
-        "updated_at": "2026-11-27T21:59:22.198558"
+        "updated_at": "2026-11-28T03:27:10.804968"
     },
     "NVDA": {
         "data": {
@@ -74,6 +85,6 @@
             "debt_to_equity": 0.14,
             "description": "NVIDIA Corporation operates as a data center scale AI infrastructure company in the United States, Taiwan, China, Hong Kong, Europe, and internationally. It operates through Compute & Networking, and ..."
         },
-        "updated_at": "2026-11-27T21:59:47.228927"
+        "updated_at": "2026-11-28T03:27:49.213046"
     }
 }
